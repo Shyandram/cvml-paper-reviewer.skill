@@ -73,6 +73,10 @@ The rows describe lines of work, never specific papers.
 - **New template, `templates/ledger_review_template.md`:** the full-mode output layout, from the header with the aspect ratio through the Roadmap.
 - **Revised:** the quick format and the re-review notes in `agents/eic_agent.md`. The split-pipeline prompts and `evals/review_prompt.md` now read `references/panel_mode.md`.
 
+### Neighbors and reviewer types are generated, not picked from a list
+
+`references/task_neighbors.md`, the roster examples and the reason-aspect list are rough guidance only. The agent generates the paper's neighboring fields, reviewer types and their distrusts from the paper itself: its methods, data, evaluation and citations. Fields, types and aspects not listed are expected whenever the paper calls for them, and the header marks the neighbors the agent added.
+
 ### Scripts and evaluation
 
 - `scripts/aggregate_scores.py`:

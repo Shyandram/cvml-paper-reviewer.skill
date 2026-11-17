@@ -18,12 +18,12 @@ All ten Hard Rules of `SKILL.md` apply. Hard Rule 5 here is traceability: every 
 
 - Run `scripts/integrity_scan.py --paper <paper> --redact <reviewer_copy>`. Review the redacted copy. Report any findings under *Integrity signals* at the end; they never change a score (Hard Rule 9).
 - Identify the paper type, field, sub-area and target venue. If the venue is not stated, infer it as in `SKILL.md`, *Input Handling*.
-- Identify the paper's **task** or tasks and their **neighboring fields** from `references/task_neighbors.md`. For each task, record:
+- Identify the paper's **task** or tasks and **generate** their **neighboring fields** from the paper itself: its methods, data, evaluation, and the fields it cites and borrows from. `references/task_neighbors.md` is only a rough starting point. Use it to check that nothing obvious is missed, not as a list to copy. Fields, reviewer backgrounds and kinds of prior art that are not in that file are expected whenever the paper calls for them. For each task, record:
   - the fields that share its data, methods or evaluation;
   - the reviewer backgrounds a venue assigns to it;
   - where cross-field prior art usually hides.
 
-  A paper on two tasks takes the union, weighted toward the task of its main claim. For a task not listed, adapt the closest row and say so.
+  A paper on two tasks takes the union, weighted toward the task of its main claim. Mark which neighbors you generated beyond the file, so a reader can see where the roster came from.
 - Get the venue's **aspect ratio**: `python3 scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`. It prints each aspect's share of the decision at this venue for this paper type: the paper-type weights from `references/quality_rubrics.md` times the venue's emphasis in `scripts/venues.json`, renormalized. For example, an empirical paper at ICLR puts about 23% on technical rigor and 16% on novelty, while at TMLR it puts about 29% on technical rigor and 6% on novelty. For a venue without a profile, use the closest profile (`references/venue_profiles.md`) and say so. Record the ratio in the header; it fixes how much each aspect counts before any review is written.
 - Write the **paper memory** (`references/error_audit.md`, Section 3). It has four parts:
   - the claims C1, C2, … with their locations;
@@ -40,7 +40,7 @@ Read the whole paper, appendix included. Then list the reasons. A reason is an a
 | Column | Content |
 |---|---|
 | ID | A1, A2, … |
-| Aspect | novelty, soundness, empirical strength, significance, clarity, reproducibility, resource (data, code, benchmark), or theory |
+| Aspect | the aspect the reason bears on, in your own words: e.g., novelty, soundness, empirical strength, significance, clarity, reproducibility, resource (data, code, benchmark), theory, or any other aspect the paper raises (societal impact, efficiency, human-study design, …) |
 | Reason | the argument, stated at its strongest |
 | Evidence | location plus a number or a short quote |
 | Strength | strong / moderate / weak, as the evidence stands |
@@ -138,8 +138,8 @@ Rules for the roster:
 - **Follow the aspect ratio.** Every aspect with at least 12% of the ratio gets at least one type whose primary aspect it is. Give the heavier aspects more types when the paper raises distinct questions there (for example, a theory type and an evaluation-methodology type both under `technical_rigor`). The number of types never changes an aspect's weight: the script splits each aspect's share equally among its types.
 - **Coverage.** Every aspect that has an accept or reject reason is covered by at least one type, and every ledger item is in some type's "Weighs most".
 - **Mix.** Include at least one specialist in the paper's own task and at least one reviewer from outside it.
-  - **Draw the outside types from the task's neighboring fields** in `references/task_neighbors.md`, most often assigned first. For example, a Gaussian-splatting paper draws a graphics or rendering researcher and a SLAM researcher; a restoration paper draws a signal-processing researcher and a generative-modeling researcher; a VLM paper draws an NLP/LLM researcher and an evaluation researcher.
-  - Give each outside type its field's typical objections as its "Distrusts".
+  - **Generate the outside types from the neighboring fields you identified in Step 0**, the most likely to be assigned first. Design each type for this paper: its expertise, values and distrusts come from what that field would actually notice here. `references/task_neighbors.md` and the examples below are rough guidance only. A type from a field not listed there is fine whenever the paper draws on that field. For example, a Gaussian-splatting paper draws a graphics or rendering researcher and a SLAM researcher; a restoration paper draws a signal-processing researcher and a generative-modeling researcher; a VLM paper draws an NLP/LLM researcher and an evaluation researcher.
+  - Give each outside type the objections its field would raise about this paper as its "Distrusts".
   - The venue's actual reviewer pool sets the rest of the mix: a paper on benchmark methodology draws evaluation experts, and an applied paper draws practitioners.
 - **Personas.** Types are archetypes. Never name or describe a real person (Hard Rule 3).
 

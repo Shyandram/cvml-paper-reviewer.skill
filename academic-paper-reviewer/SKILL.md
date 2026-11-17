@@ -43,7 +43,7 @@ These concepts are shared by every mode except `panel`. The procedure is in `age
 | **Paper memory** | The factual record of the paper: claims C1, C2, … with their locations, setup facts, headline numbers, and what could not be read | `references/error_audit.md` §3 |
 | **Ledger** | Every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list. | `agents/ledger_reviewer_agent.md`, Step 1 |
 | **Probe** | A detailed check (P1, P2, …) of a reason the decision could turn on: re-read, recompute and cross-check, trace the evidence chain, or a targeted literature query. It settles a fact, never a value, and updates the ledger. | Step 2 |
-| **Task neighbors** | Each task has its own neighboring fields: where its reviewers come from, where its prior art hides, and what those reviewers question | `references/task_neighbors.md` |
+| **Task neighbors** | The paper's own neighboring fields: where its reviewers come from, where its prior art hides, and what those reviewers question. You generate them from the paper; the file gives rough starting points only, and fields not in it are expected. | `references/task_neighbors.md` (rough guide) |
 | **Aspect ratio** | Each aspect's share of the decision at the target venue: the paper-type weights times the venue's emphasis. Novelty counts more at ICLR than at TMLR, and evaluation more at CVPR. | `scripts/aggregate_scores.py ratio`, `scripts/venues.json` |
 | **Reviewer types** | The 4–8 kinds of reviewer the venue would assign. Each is defined by expertise and values, never by verdict, and speaks for one primary aspect. Outside types come from the task's neighbors. | Step 3 |
 | **Pool position** | The share of the venue's submissions the paper beats. It is stated before the scores, which must fall in its band. | `references/quality_rubrics.md` |
@@ -143,7 +143,7 @@ Follow `agents/ledger_reviewer_agent.md`, and write the output with `templates/l
 0. **Setup.**
    - Run the integrity scan and write the reviewers' copy.
    - Write the paper memory.
-   - Identify the paper's task and its **neighboring fields** (`references/task_neighbors.md`).
+   - Identify the paper's task and generate its **neighboring fields** from the paper. `references/task_neighbors.md` is a rough guide, and fields not listed in it are fine.
    - Get the venue's **aspect ratio** (`python3 scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`).
 1. **Ledger.** List every accept reason and every reject reason, each at its strongest.
    - Walk every aspect of `references/review_criteria_framework.md` and, for CV/ML papers, the task checklist in `references/cv_review_checklist.md`.
@@ -152,7 +152,7 @@ Follow `agents/ledger_reviewer_agent.md`, and write the output with `templates/l
    - Merge duplicates, group the reasons by claim, and mark each `checked` or `open`.
    - Rank the reasons by swing: how far the decision could move if the reason turned out differently.
    - Probe every high-swing open reason in detail. Refuted reasons go to *Answered*; confirmed suspicions become errors; unsettled ones stay questions.
-3. **Roster.** List 4–8 reviewer types, each with a field (the task or a neighbor) and one primary aspect.
+3. **Roster.** Generate 4–8 reviewer types for this paper, each with a field (the task or a neighbor, listed or not) and one primary aspect. The examples in the agent file are rough guidance, not a menu.
    - Every aspect with at least 12% of the ratio has a type.
    - The roster includes a specialist in the task, and outside types from the neighbors.
 4. **Reviews.** Write one review per type.
@@ -297,7 +297,7 @@ Confidence and the likelihood of a type being assigned are reported, but they do
 | Specificity | "Table 3 compares against Mask2Former at 512² but the proposed method at 640²", not "baselines may be unfair" |
 | Precision | Every error has a location, a quote and a concrete check; suspicions are questions until a probe settles them (Hard Rule 10) |
 | Depth where it matters | Every high-swing open reason is probed, and every fatal worst case is probed; each probe records its question, method, result and ledger change |
-| Field-aware roster | Types come from the task and its neighboring fields (`references/task_neighbors.md`); every aspect with ≥ 12% of the ratio has a type; no type is defined by a verdict |
+| Field-aware roster | Types are generated for this paper from its task and its neighboring fields, listed in `references/task_neighbors.md` or not; every aspect with ≥ 12% of the ratio has a type; no type is defined by a verdict |
 | Traceability | Every grade, decisive item, top concern and Roadmap entry names its ledger ID (Hard Rule 5) |
 | Calibration | Each type states a pool position with its deciding IDs, and scores within its band (a typical accepted paper 62–72, a typical rejected submission 42–54) |
 | Prioritization | The Roadmap follows the grades: Priority 1 is fatal, or major for most types; cosmetic issues are grouped as minor |
@@ -333,7 +333,7 @@ Confidence and the likelihood of a type being assigned are reported, but they do
 |------|-----------|
 | `agents/ledger_reviewer_agent.md` | Every mode except panel: the procedure (Steps 0–5) |
 | `templates/ledger_review_template.md` | Full mode output |
-| `references/task_neighbors.md` | Step 0, novelty, roster: each task's neighboring fields |
+| `references/task_neighbors.md` | Step 0, novelty, roster: rough starting points for neighboring fields (generate your own) |
 | `references/review_criteria_framework.md` | Step 1: the aspects to walk, by paper type |
 | `references/cv_review_checklist.md` | Any CV / ML / multimodal paper: task-specific expectations |
 | `references/error_audit.md` | Paper memory, error categories E1–E9, omission sweep, precision rules |

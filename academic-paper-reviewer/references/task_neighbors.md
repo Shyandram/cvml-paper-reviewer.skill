@@ -6,7 +6,7 @@ Each task has its own neighboring fields: the fields whose reviewers a venue als
 - **Step 1.** Check novelty against the neighbors as well as the task itself. A mechanism new to the task may be standard in a neighbor. A transfer is still a contribution, but only if the paper says it is one and shows what the transfer required.
 - **Step 3.** Draw the roster's outside types from the task's neighbors, not from a generic "adjacent field".
 
-For a task not listed, take the closest row and adapt it. Then write the neighbors you used on the roster. The rows describe **lines of work**, not specific papers. Name a specific prior work only under Hard Rule 2, or after a literature query finds it.
+**These rows are rough starting points, not a closed list.** Generate the neighbors, reviewer backgrounds and objections for the paper in front of you, from its own methods, data, evaluation and citations. Use the table only to check that nothing obvious is missing. Add fields that are not listed whenever the paper draws on them, such as a hardware field for a sensor paper or law for a data-licensing paper, and drop listed ones that do not apply. For a task not listed, generate the row yourself; the closest row can help. Write the neighbors you used in the review header, and mark those you added. The rows describe **lines of work**, not specific papers. Name a specific prior work only under Hard Rule 2, or after a literature query finds it.
 
 Each row has four columns:
 
