@@ -39,7 +39,7 @@ Rules for this evaluation:
                  "location": "...", "change": "before -> after", "after_reviews": false}],
      "types": [{"id": "T1", "name": "...", "likelihood": "high|medium|low",
                 "grades": {"R1": "fatal|major|minor|not a concern"}, "held": ["A1"], "discounted": ["A3"],
-                "aspect": "technical_rigor", "decisive": ["R2", "A1"], "pool_position": 0, "overall": 0, "confidence": 0}]
+                "aspect": "technical_rigor", "field": "the task, or the neighboring field it comes from", "decisive": ["R2", "A1"], "pool_position": 0, "overall": 0, "confidence": 0}]
    }
    ```
    For a reason added during a type's review or found by a probe, set `added_by` to that type's or probe's ID. Every accept and reject entry also carries `"claim"` (C1, …, or "general") and `"status"` (`checked` or `open`) after Step 2. A grade updated after a post-review probe is the updated grade, and its probe has `"after_reviews": true`.
@@ -74,6 +74,8 @@ Rules for this evaluation:
      "paper_type": "<empirical|theoretical|dataset|system|benchmark|analysis|position>",
      "final_overall": "<integer 1-6>",
      "venue_recommendation": "label from aggregate.json",
+     "task": ["<task row(s) of references/task_neighbors.md>"],
+     "neighboring_fields": ["<fields used for the novelty check and the roster>"],
      "aspect_ratio": "<the ratio printed by aggregate_scores.py ratio, as an object>",
      "ledger_rating": "<ledger.venue_rating from aggregate.json>",
      "ledger_pool_position": "<ledger.venue_pool_position from aggregate.json>",

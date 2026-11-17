@@ -19,7 +19,7 @@ The default review changes. One agent does the whole review in one context, work
    - Refuted reasons go to *Answered*. Confirmed suspicions become errors. What stays unsettled is a question no type may grade above minor.
    - Probes settle facts, never values, and never assign grades.
    - After the reviews, a split between types that rests on a fact gets one more probe, and the affected grades are updated and logged. Splits on values stay.
-4. **Roster.** The 4–8 reviewer types the venue could plausibly assign.
+4. **Roster.** The 4–8 reviewer types the venue could plausibly assign. Outside types come from the task's neighboring fields (below).
    - Each type is defined by expertise and values, never by verdict, and speaks for one primary aspect.
    - Every aspect with at least 12% of the ratio has a type, and every ledger item is in some type's "weighs most".
    - The roster includes a specialist in the paper's sub-area and a reviewer from outside it.
@@ -33,6 +33,23 @@ The default review changes. One agent does the whole review in one context, work
    - The top concerns and the Revision Roadmap come from the most severely graded reject reasons.
 
 Delegation is only for information the context cannot reach, such as a literature search.
+
+### Each task has its own neighboring fields (`references/task_neighbors.md`)
+
+A new reference with one row per task: 12 CV tasks, matching `references/cv_review_checklist.md`, and 9 ML tasks (LLMs, RL, graph learning, generative modeling, optimization and theory, time series, AI for science, robustness and safety, federated learning). Each row gives four things:
+
+- the neighboring fields;
+- the reviewer backgrounds a venue assigns;
+- where cross-field prior art hides;
+- what reviewers from those fields question.
+
+Full mode uses it in three places:
+
+- **Step 0.** Name the task and its neighbors.
+- **Step 1.** Check novelty in the neighbors too, in their own vocabulary. A mechanism new to the task may be standard in a neighbor. A disclosed and argued transfer is an accept reason.
+- **Step 3.** Draw the outside reviewer types from the neighbors, with their typical objections. For example, Gaussian splatting draws graphics and SLAM, restoration draws signal processing and generative modeling, and VLMs draw NLP and evaluation.
+
+The rows describe lines of work, never specific papers.
 
 ### Scripts and evaluation
 

@@ -104,10 +104,10 @@ If the request is ambiguous, use `full` before submission, `rebuttal` when the u
 ## Full Mode (default): Ledger Review
 
 One agent reviews the paper in one context; follow `agents/ledger_reviewer_agent.md`.
-0. **Setup.** Integrity scan and reviewers' copy, paper memory, and the venue's **aspect ratio** (`scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`): each aspect's share of the decision at this venue, from the paper-type weights and the venue's emphasis.
-1. **Ledger.** List every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list. With network access, the literature check runs here and feeds novelty reasons.
+0. **Setup.** Integrity scan and reviewers' copy, paper memory, the paper's task and its **neighboring fields** (`references/task_neighbors.md`: each task has its own similar fields, reviewer backgrounds and places where cross-field prior art hides), and the venue's **aspect ratio** (`scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`): each aspect's share of the decision at this venue, from the paper-type weights and the venue's emphasis.
+1. **Ledger.** List every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list. With network access, the literature check runs here and feeds novelty reasons; it also searches the task's neighboring fields, in their vocabulary.
 2. **Reorganize and probe.** Merge duplicates, group the reasons by claim, mark each `checked` or `open`, and rank them by swing (how far the decision could move if the reason turned out differently). Then examine each high-swing open reason in detail: re-read the sections, recompute and cross-check the numbers, trace the claim's evidence chain, or run a targeted literature query. Each probe (P1, P2, …) settles a fact, never a value, and updates the ledger: refuted reasons go to *Answered*, confirmed suspicions become errors, and what stays unsettled is a question no type may grade above minor.
-3. **Roster.** List the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict, each speaking for one primary aspect. Every aspect with at least 12% of the ratio has a type.
+3. **Roster.** List the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict, each speaking for one primary aspect. Every aspect with at least 12% of the ratio has a type. Outside types come from the task's neighboring fields.
 4. **Reviews.** Review as each type: grade the ledger items it weighs, give an opinion that names the deciding IDs, then a pool position, dimension scores, Overall and Confidence. A new point enters the ledger before any review may use it. When types split on a reason because of a fact (not a value), one more probe settles the fact and the affected grades are updated, logged.
 5. **Average.** `scripts/aggregate_scores.py` with one entry per type (with its `aspect`) and the target venue. Each aspect's share of the ratio is split equally among its types; the final rating is that weighted mean of the types' Overall ratings, with no override. The top concerns and the Revision Roadmap come from the reject reasons the types graded most severe.
 
@@ -323,6 +323,7 @@ In full (ledger) mode every reviewer type gives the same scores as a panel revie
 | `references/quality_rubrics.md` | Before scoring: 0–100 rubrics, weights, scale mappings |
 | `references/editorial_decision_standards.md` | Before deciding: Overall definitions, DA cap, journal mapping |
 | `references/statistical_reporting_standards.md` | Methodology review of quantitative work |
+| `references/task_neighbors.md` | Full mode (Step 0, novelty and roster): each task's neighboring fields, reviewer backgrounds, cross-field prior art, typical objections |
 | `references/cv_review_checklist.md` | Any CV / ML / multimodal paper |
 | `references/venue_profiles.md` | Always in Phase 0 and Phase 2: venue forms, scales (with verification status), emphasis, rebuttal rules |
 | `references/submission_readiness_checklist.md` | Quick mode; pre-submission checks |

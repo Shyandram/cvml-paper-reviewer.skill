@@ -10,7 +10,7 @@ One agent does the whole review in one context, in five steps:
 
 There are no separate reviewer agents, no Editor-in-Chief and no override. The only weighting is the aspect ratio. Delegate only to get information this context cannot reach, such as a literature search the host can run only in a subagent. Never delegate to obtain a reviewer's judgment.
 
-Hard Rules 1–4 and 6–10 of `SKILL.md` apply. Hard Rule 5, the Devil's Advocate cap, has no counterpart: a fatal reason lowers the rating of every type that judges it fatal, and the average carries it. Read `references/quality_rubrics.md`, `references/review_criteria_framework.md`, `references/error_audit.md` and `references/venue_profiles.md` before Step 1. For a CV or ML paper, also read `references/cv_review_checklist.md`. Read `references/statistical_reporting_standards.md` when the paper reports quantitative comparisons.
+Hard Rules 1–4 and 6–10 of `SKILL.md` apply. Hard Rule 5, the Devil's Advocate cap, has no counterpart: a fatal reason lowers the rating of every type that judges it fatal, and the average carries it. Read `references/quality_rubrics.md`, `references/review_criteria_framework.md`, `references/error_audit.md` and `references/venue_profiles.md` before Step 1. For a CV or ML paper, also read `references/cv_review_checklist.md`. Always read `references/task_neighbors.md`: each task has its own neighboring fields. Read `references/statistical_reporting_standards.md` when the paper reports quantitative comparisons.
 
 ---
 
@@ -18,6 +18,12 @@ Hard Rules 1–4 and 6–10 of `SKILL.md` apply. Hard Rule 5, the Devil's Advoca
 
 - Run `scripts/integrity_scan.py --paper <paper> --redact <reviewer_copy>`. Review the redacted copy. Report any findings under *Integrity signals* at the end; they never change a score (Hard Rule 9).
 - Identify the paper type, field, sub-area and target venue. If the venue is not stated, infer it as in `SKILL.md`, *Input Handling*.
+- Identify the paper's **task** or tasks and their **neighboring fields** from `references/task_neighbors.md`. For each task, record:
+  - the fields that share its data, methods or evaluation;
+  - the reviewer backgrounds a venue assigns to it;
+  - where cross-field prior art usually hides.
+
+  A paper on two tasks takes the union, weighted toward the task of its main claim. For a task not listed, adapt the closest row and say so.
 - Get the venue's **aspect ratio**: `python3 scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`. It prints each aspect's share of the decision at this venue for this paper type: the paper-type weights from `references/quality_rubrics.md` times the venue's emphasis in `scripts/venues.json`, renormalized. For example, an empirical paper at ICLR puts about 23% on technical rigor and 16% on novelty, while at TMLR it puts about 29% on technical rigor and 6% on novelty. For a venue without a profile, use the closest profile (`references/venue_profiles.md`) and say so. Record the ratio in the header; it fixes how much each aspect counts before any review is written.
 - Write the **paper memory** (`references/error_audit.md`, Section 3). It has four parts:
   - the claims C1, C2, … with their locations;
@@ -62,7 +68,7 @@ Rules for the ledger:
   - It must be consistent with the text.
   - It must criticize the work, never the authors.
 - **Pair the reasons.** When an accept reason and a reject reason bear on the same claim, cross-reference them, e.g. "A2 ↔ R4". Most decisions turn on these pairs.
-- **Literature.** With network access and the literature check on, run `references/literature_search.md` here, inline: the fingerprint, the claim and benchmark queries, the similarity check and the novelty profile. Its findings become accept reasons (a verified delta over the closest prior work) or reject reasons (`judgment`, naming the work). Without network access, skip it, say so, and mark novelty reasons that rest on memory with `[verify]`.
+- **Literature.** With network access and the literature check on, run `references/literature_search.md` here, inline: the fingerprint, the claim and benchmark queries, the similarity check and the novelty profile. Search the task's neighboring fields too, in their own vocabulary: a mechanism new to the task may be standard in a neighbor. Its findings become accept reasons (a verified delta over the closest prior work, or a disclosed and argued transfer from a neighbor) or reject reasons (`judgment`, naming the work and the field it comes from). Without network access, skip it, say so, and mark novelty reasons that rest on memory with `[verify]`.
 
 ## Step 2: Reorganize, then probe
 
@@ -119,6 +125,7 @@ Write one row per type, with these columns:
 |---|---|
 | Type | T1, T2, … with a descriptive name |
 | Aspect | the primary aspect this type speaks for, one of the seven keys: `technical_rigor`, `clarity`, `novelty`, `significance`, `experimental_validation`, `reproducibility`, `ethics` |
+| Field | the task itself, or the neighboring field it comes from |
 | Expertise | e.g. "3D reconstruction specialist", "learning-theory reviewer", "practitioner deploying on edge devices", "evaluation and benchmark methodologist", "adjacent-field reviewer from robotics" |
 | Values | what makes a paper good in this type's eyes |
 | Distrusts | what it usually catches or objects to |
@@ -130,7 +137,10 @@ Rules for the roster:
 - **Use 4–8 types.** Use more when the paper spans several areas.
 - **Follow the aspect ratio.** Every aspect with at least 12% of the ratio gets at least one type whose primary aspect it is. Give the heavier aspects more types when the paper raises distinct questions there (for example, a theory type and an evaluation-methodology type both under `technical_rigor`). The number of types never changes an aspect's weight: the script splits each aspect's share equally among its types.
 - **Coverage.** Every aspect that has an accept or reject reason is covered by at least one type, and every ledger item is in some type's "Weighs most".
-- **Mix.** Include at least one specialist in the paper's own sub-area and at least one reviewer from outside it. The venue's actual reviewer pool sets the mix: a paper on benchmark methodology draws evaluation experts, and an applied paper draws practitioners.
+- **Mix.** Include at least one specialist in the paper's own task and at least one reviewer from outside it.
+  - **Draw the outside types from the task's neighboring fields** in `references/task_neighbors.md`, most often assigned first. For example, a Gaussian-splatting paper draws a graphics or rendering researcher and a SLAM researcher; a restoration paper draws a signal-processing researcher and a generative-modeling researcher; a VLM paper draws an NLP/LLM researcher and an evaluation researcher.
+  - Give each outside type its field's typical objections as its "Distrusts".
+  - The venue's actual reviewer pool sets the rest of the mix: a paper on benchmark methodology draws evaluation experts, and an applied paper draws practitioners.
 - **Personas.** Types are archetypes. Never name or describe a real person (Hard Rule 3).
 
 ## Step 4: One review per type
@@ -192,7 +202,7 @@ Then derive the summary from the ledger and the reviews:
 
 ## Output (`review.md`)
 
-1. **Header.** Paper, paper type, field, target venue and its aspect ratio, date, mode `full` (ledger review), and the line "One context: the reviewer types share one model and one reading, so their judgments are not independent."
+1. **Header.** Paper, paper type, field, task and its neighboring fields, target venue and its aspect ratio, date, mode `full` (ledger review), and the line "One context: the reviewer types share one model and one reading, so their judgments are not independent."
 2. **Paper memory.**
 3. **Ledger.** The accept table, the reject table, the Answered list, the aspect coverage lines and the pairs.
 4. **Reorganized ledger and probes.** The reasons grouped by claim, with status and swing; the probe table P1, P2, … with each result and ledger change.
