@@ -53,5 +53,146 @@
   "n_answered": 7,
   "n_probes": 13,
   "recognized": false
+ },
+ "severity_test": {
+  "note": "Held-out A/B of the severity-test grading rule (commit a745147, reverted): 3 ICLR 2026 papers not used to write the rule, each reviewed once with the previous rules (old) and once with the rule (new), local subagents, ICLR target, no network. AI outputs and paper IDs only. Result: no rating change beyond run-to-run noise; the rejected paper still scored above both accepted ones in both arms; rule reverted.",
+  "runs": [
+   {
+    "paper_id": "Dud8FtScW7",
+    "arm": "old",
+    "ledger_rating": 2.629,
+    "pool_position": 37.3,
+    "final_overall": 3,
+    "type_overall": [
+     3,
+     2,
+     2,
+     3,
+     3,
+     2,
+     3
+    ],
+    "grades": {
+     "major": 23,
+     "minor": 26
+    },
+    "gap_major": 7,
+    "recognized": false,
+    "paper_type": "benchmark"
+   },
+   {
+    "paper_id": "Dud8FtScW7",
+    "arm": "new",
+    "ledger_rating": 2.727,
+    "pool_position": 34.2,
+    "final_overall": 3,
+    "type_overall": [
+     3,
+     2,
+     3,
+     3,
+     2,
+     3,
+     3
+    ],
+    "grades": {
+     "major": 27,
+     "minor": 32
+    },
+    "gap_major": 9,
+    "recognized": false,
+    "paper_type": "benchmark"
+   },
+   {
+    "paper_id": "FmvBrKubtw",
+    "arm": "old",
+    "ledger_rating": 2.707,
+    "pool_position": 38.4,
+    "final_overall": 3,
+    "type_overall": [
+     3,
+     2,
+     3,
+     2,
+     3,
+     3,
+     3
+    ],
+    "grades": {
+     "major": 18,
+     "minor": 23
+    },
+    "gap_major": 7,
+    "recognized": true,
+    "paper_type": "theoretical"
+   },
+   {
+    "paper_id": "FmvBrKubtw",
+    "arm": "new",
+    "ledger_rating": 2.527,
+    "pool_position": 33.7,
+    "final_overall": 3,
+    "type_overall": [
+     2,
+     3,
+     2,
+     3,
+     3,
+     2
+    ],
+    "grades": {
+     "major": 20,
+     "minor": 19
+    },
+    "gap_major": 11,
+    "recognized": false,
+    "paper_type": "theoretical"
+   },
+   {
+    "paper_id": "RgOHRYHX5L",
+    "arm": "old",
+    "ledger_rating": 3.482,
+    "pool_position": 59.0,
+    "final_overall": 3,
+    "type_overall": [
+     4,
+     3,
+     4,
+     3,
+     3,
+     4
+    ],
+    "grades": {
+     "major": 10,
+     "minor": 24,
+     "not a concern": 1
+    },
+    "gap_major": 7,
+    "recognized": true,
+    "paper_type": "empirical"
+   },
+   {
+    "paper_id": "RgOHRYHX5L",
+    "arm": "new",
+    "ledger_rating": 3.419,
+    "pool_position": 59.2,
+    "final_overall": 3,
+    "type_overall": [
+     4,
+     3,
+     3,
+     4,
+     4,
+     3
+    ],
+    "grades": {
+     "major": 5,
+     "minor": 36
+    },
+    "gap_major": 4,
+    "recognized": true,
+    "paper_type": "empirical"
+   }
+  ]
  }
 }
