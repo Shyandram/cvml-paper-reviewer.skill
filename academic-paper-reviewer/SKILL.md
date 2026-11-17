@@ -300,7 +300,7 @@ Confidence and the likelihood of a type being assigned are reported, but they do
 | Field-aware roster | Types are generated for this paper from its task and its neighboring fields, listed in `references/task_neighbors.md` or not; every aspect with ≥ 12% of the ratio has a type; no type is defined by a verdict |
 | Traceability | Every grade, decisive item, top concern and Roadmap entry names its ledger ID (Hard Rule 5) |
 | Calibration | Each type states a pool position with its deciding IDs, and scores within its band (a typical accepted paper 62–72, a typical rejected submission 42–54) |
-| Prioritization | The Roadmap follows the grades: Priority 1 is fatal, or major for most types; cosmetic issues are grouped as minor |
+| Prioritization | The Roadmap follows the grades: Priority 1 is fatal for any type, or major for at least half of all types; cosmetic issues are grouped as minor |
 | Actionability | Every reject reason has a concrete fix and, where relevant, its effort or compute cost |
 | Honesty about independence | The output says the types share one context; agreement between types is never reported as independent confirmation |
 | Professional tone | Critique the work, never the authors; no sarcasm |

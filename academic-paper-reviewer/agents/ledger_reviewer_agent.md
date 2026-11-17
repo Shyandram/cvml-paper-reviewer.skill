@@ -136,7 +136,7 @@ Rules for the roster:
 
 - **Use 4–8 types.** Use more when the paper spans several areas.
 - **Follow the aspect ratio.** Every aspect with at least 12% of the ratio gets at least one type whose primary aspect it is. Give the heavier aspects more types when the paper raises distinct questions there (for example, a theory type and an evaluation-methodology type both under `technical_rigor`). The number of types never changes an aspect's weight: the script splits each aspect's share equally among its types.
-- **Coverage.** Every aspect that has an accept or reject reason is covered by at least one type, and every ledger item is in some type's "Weighs most".
+- **Coverage.** Every ledger item is in some type's "Weighs most". An aspect below 12% of the ratio needs no type of its own: its reasons can sit in another type's "Weighs most" (the script then renormalizes that aspect's share away). Add a type for it only when the paper raises distinct questions there.
 - **Mix.** Include at least one specialist in the paper's own task and at least one reviewer from outside it.
   - **Generate the outside types from the neighboring fields you identified in Step 0**, the most likely to be assigned first. Design each type for this paper: its expertise, values and distrusts come from what that field would actually notice here. `references/task_neighbors.md` and the examples below are rough guidance only. A type from a field not listed there is fine whenever the paper draws on that field. For example, a Gaussian-splatting paper draws a graphics or rendering researcher and a SLAM researcher; a restoration paper draws a signal-processing researcher and a generative-modeling researcher; a VLM paper draws an NLP/LLM researcher and an evaluation researcher.
   - Give each outside type the objections its field would raise about this paper as its "Distrusts".
@@ -193,7 +193,7 @@ Then derive the summary from the ledger and the reviews:
 - **Key strengths.** The accept reasons most types relied on.
 - **Top concerns.** Rank the reject reasons by how many types graded them fatal or major, then by their worst grade. Give at most five, each with its ID, location and fix.
 - **Revision roadmap.** Turn the reject reasons into revisions:
-  - Priority 1: reasons any type graded fatal, or that most types graded major.
+  - Priority 1: reasons any type graded fatal, or that at least half of **all** types graded major (types that did not name the reason count as not major). If none qualifies, Priority 1 is empty; say so rather than promoting a reason.
   - Priority 2: other reasons graded major.
   - Priority 3: reasons graded minor.
   - Each entry gives the fix, its cost, and the ledger ID it resolves.

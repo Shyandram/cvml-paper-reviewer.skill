@@ -1,0 +1,42 @@
+{
+ "note": "Skill 3.0 ledger review (full mode), simulated by local Claude Code subagents (paper-review-eval), one context per paper, ICLR 2026 target, no network, isolated root with blinded text only. AI outputs and paper IDs only; human scores come from the public ICLR 2026 dataset.",
+ "date": "2026-11-17",
+ "papers": [
+  {
+   "paper_id": "97Qk741ih6",
+   "ledger_rating": 2.335,
+   "final_overall": 2,
+   "pool_position": 32.1,
+   "plain_mean": 2.43,
+   "n_types": 7,
+   "n_accept": 13,
+   "n_reject": 26,
+   "n_probes": 13,
+   "recognized": false
+  },
+  {
+   "paper_id": "Jw7khYzYzl",
+   "ledger_rating": 3.824,
+   "final_overall": 4,
+   "pool_position": 67.3,
+   "plain_mean": 3.71,
+   "n_types": 7,
+   "n_accept": 14,
+   "n_reject": 23,
+   "n_probes": 12,
+   "recognized": true
+  },
+  {
+   "paper_id": "QN0PplUVdt",
+   "ledger_rating": 2.168,
+   "final_overall": 2,
+   "pool_position": 20.1,
+   "plain_mean": 2.14,
+   "n_types": 7,
+   "n_accept": 12,
+   "n_reject": 22,
+   "n_probes": 10,
+   "recognized": false
+  }
+ ]
+}

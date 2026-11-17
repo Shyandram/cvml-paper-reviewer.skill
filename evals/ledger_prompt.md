@@ -22,6 +22,7 @@ Rules for this evaluation:
    - read files;
    - write files inside `{ROOT}/evals/work/results/{ID}/`;
    - run the skill's `scripts/aggregate_scores.py` (including `ratio`);
+   - run `python3` to read, check or recompute numbers from files you wrote or from the paper text (no network, no package installs);
    - run the skill's offline `scripts/integrity_scan.py` on the paper.
 
    Do **not** create sessions, send messages to other sessions or agents, launch subagents, schedule anything, or access the web. Your final reply is your only report.
