@@ -1,17 +1,18 @@
 # Academic Paper Reviewer for Codex and Claude
 
-A multi-perspective peer-review skill for Codex and Claude, tuned for **computer vision, deep learning and ML** papers but usable in any field. It simulates a full editorial process: five reviewers with separate roles, then an Editor-in-Chief who acts as area chair. The EIC reads every review, checks the decisive points against the paper, weights each reviewer by the quality of their review, and makes the final decision. Scores are aggregated reproducibly as two lists (the reviewers' official scores and the EIC's internal weighted assessment), and the skill turns the result into a prioritized revision plan, a rebuttal draft, or a verification of your revisions.
+A peer-review skill for Codex and Claude, tuned for **computer vision, deep learning and ML** papers but usable in any field. Since 3.0 the default review is done by one agent, working from a ledger of reasons: it lists every reason to accept and to reject the paper, with locations and evidence; lists the reviewer types the venue would assign, each speaking for one aspect; reviews as each type, grading the listed reasons by ID; and averages their ratings weighted by the venue's **aspect ratio** (novelty counts more at ICLR than at TMLR, evaluation more at CVPR). Every concern and score traces back to a ledger item. The 2.x panel (five reviewers and an Editor-in-Chief) stays available as `panel` mode. The skill also turns a review into a prioritized revision plan, a rebuttal draft, or a verification of your revisions.
 
 ```
 You:    Review this paper for CVPR: [attach PDF]
-Agent:  📋 Paper analysis + 5-reviewer configuration card → 5 separate reports
-        → EIC meta-review: reviewer weights, official scores and the EIC's internal weighted assessment, final decision
-        → Editorial decision letter, consensus map, Revision Roadmap
+Agent:  📋 Paper memory + CVPR's aspect ratio (evaluation 25%, rigor 19%, novelty 16%, …)
+        → Ledger: accept reasons A1…A12, reject reasons R1…R18, answered points
+        → Roster: 6 reviewer types, each with an aspect → one review per type, citing A/R IDs
+        → Aspect-weighted rating and decision, top concerns, Revision Roadmap
 ```
 
 > The output is a **simulation** to help you strengthen a paper. It is not a prediction of any venue's decision.
 
-**Project page:** <https://shyandram.github.io/cvml-paper-reviewer.skill/> · **Current version:** 2.10.1 ([changelog](CHANGELOG.md)) · Adapted from [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) ([origin](#origin-and-license))
+**Project page:** <https://shyandram.github.io/cvml-paper-reviewer.skill/> · **Current version:** 3.0 ([changelog](CHANGELOG.md)) · Adapted from [academic-research-skills](https://github.com/Imbad0202/academic-research-skills) ([origin](#origin-and-license))
 
 ---
 
@@ -19,8 +20,8 @@ Agent:  📋 Paper analysis + 5-reviewer configuration card → 5 separate repor
 
 | Mode | Say something like | You get |
 |------|-------------------|---------|
-| **full** (default) | "Review this paper" | 5 reports (Methodology, Domain, Perspective, Generalist, Devil's Advocate) + EIC meta-review + Editorial Decision + Revision Roadmap |
-| **ledger** (single agent, not yet evaluated) | "Ledger review of this paper" | One agent lists every reason to accept and to reject, lists the reviewer types the venue could assign, reviews as each type citing those reasons by ID, and averages their scores |
+| **full** (default, 3.0; not yet evaluated) | "Review this paper" | One agent: a ledger of every accept and reject reason, the reviewer types the venue would assign, one review per type citing those reasons by ID, and their ratings averaged with the venue's aspect ratio; top concerns + Revision Roadmap |
+| **panel** (the 2.x review) | "Panel review of this paper" | 5 reports (Methodology, Domain, Perspective, Generalist, Devil's Advocate) + EIC meta-review + Editorial Decision + Revision Roadmap |
 | **quick** | "Is my paper ready for submission?" | EIC quick assessment + submission-readiness check (anonymity, page limit, checklists…) |
 | **methodology-focus** | "Are my baselines fair?" / "Check my experiments" | Claim-to-evidence map, fairness-of-comparison audit, statistics audit, prioritized fixes with compute estimates |
 | **guided** | "Walk me through the review" | Socratic, one-issue-at-a-time dialogue |
@@ -208,7 +209,7 @@ academic-paper-reviewer/               ← skill source
 │   ├── domain_reviewer_agent.md       (R2)
 │   ├── perspective_reviewer_agent.md  (R3)
 │   ├── devils_advocate_reviewer_agent.md
-│   ├── ledger_reviewer_agent.md       (ledger mode: one agent, reasons ledger, reviewer types, mean)
+│   ├── ledger_reviewer_agent.md       (full mode: ledger, aspect ratio, reviewer types, weighted mean)
 │   ├── gap_scout_agent.md             (post-review analysis: anticipated reviewer concerns)
 │   ├── editorial_synthesizer_agent.md (Phase 2)
 │   └── rebuttal_strategist_agent.md   (rebuttal mode)

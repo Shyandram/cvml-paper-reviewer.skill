@@ -26,6 +26,13 @@ not have to do weighted averages by hand:
     Overall ratings (rounded half up); the 0-100 composite band is a
     cross-check, flagged when it disagrees
   * --final N renders venue labels from the EIC's actual decision
+  * ledger mode (every reviewer entry has an "aspect", one of the seven
+    dimension keys): the venue's aspect ratio (paper-type weights x the target
+    venue's emphasis, renormalized) weights the reviewer types. Each aspect's
+    share is split equally among the types whose primary aspect it is; the
+    final rating is that weighted mean of the types' Overall ratings
+  * `ratio --paper-type T --venue V` prints the aspect ratio alone, to size
+    the reviewer roster before any review is written
   * optional venue views (--venue / --all-venues): venue-emphasis weights,
     the venue's own score fields and scale, and a cross-venue outlook, using
     the profiles in scripts/venues.json
@@ -35,6 +42,7 @@ Usage:
     python3 scripts/aggregate_scores.py scores.json --json     # machine-readable
     python3 scripts/aggregate_scores.py scores.json --venue cvpr --venue iclr
     python3 scripts/aggregate_scores.py scores.json --all-venues
+    python3 scripts/aggregate_scores.py ratio --paper-type empirical --venue iclr
 
 Input format: see scripts/example_scores.json. Standard library only.
 """
@@ -296,6 +304,69 @@ def load_venues(path=VENUES_FILE):
 MIN_SHIFT_GAP = 2.0   # emphasis-only composite differences smaller than this are noise
 
 
+ASPECT_COVERAGE_MIN = 0.12   # an aspect with at least this share needs a reviewer type
+
+
+def aspect_ratio(paper_type, venue=None):
+    """Share of each aspect at this venue: paper-type weights x venue emphasis, renormalized."""
+    paper_type = PAPER_TYPE_ALIASES.get(paper_type, paper_type)
+    if paper_type not in PAPER_TYPE_WEIGHTS:
+        fail(f"unknown paper_type '{paper_type}'; choose from {sorted(PAPER_TYPE_WEIGHTS)}")
+    base = PAPER_TYPE_WEIGHTS[paper_type]
+    emph = venue["emphasis"] if venue else [1.0] * len(base)
+    raw = [b * e for b, e in zip(base, emph)]
+    return {k: round(w / sum(raw), 4) for (k, _), w in zip(DIMENSIONS, raw)}
+
+
+def ledger_average(res, data, venue_key=None, venue=None):
+    """Ledger mode: weight each reviewer type by its aspect's share at the venue."""
+    reviewers = data["reviewers"]
+    keys = [k for k, _ in DIMENSIONS]
+    for r in reviewers:
+        if r.get("aspect") not in keys:
+            fail(f"reviewer {r.get('role', '?')}: aspect must be one of {keys}")
+        if r.get("overall") is None:
+            fail(f"reviewer {r.get('role', '?')}: ledger mode needs an Overall rating")
+    ratio = aspect_ratio(res["paper_type"], venue)
+    counts = {}
+    for r in reviewers:
+        counts[r["aspect"]] = counts.get(r["aspect"], 0) + 1
+    covered = sum(ratio[a] for a in counts)
+    weights = [ratio[r["aspect"]] / counts[r["aspect"]] / covered for r in reviewers]
+    rating = sum(w * r["overall"] for w, r in zip(weights, reviewers))
+    pools = [r.get("pool_position") for r in reviewers]
+    pool = (sum(w * p for w, p in zip(weights, pools)) if all(isinstance(p, (int, float)) for p in pools)
+            else None)
+    uncovered = [k for k in keys if k not in counts and ratio[k] >= ASPECT_COVERAGE_MIN]
+    warnings = [f"aspect '{k}' has {ratio[k]:.0%} of the weight at this venue but no reviewer type; "
+                f"its share went to the covered aspects. Add a type for it." for k in uncovered]
+    return {
+        "venue": venue_key,
+        "aspect_ratio": ratio,
+        "types_per_aspect": counts,
+        "uncovered_aspects": uncovered,
+        "type_weights": [{"role": r.get("role", "?"), "aspect": r["aspect"], "weight": round(w, 4)}
+                         for r, w in zip(reviewers, weights)],
+        "venue_rating": round(rating, 3),
+        "venue_pool_position": round(pool, 1) if pool is not None else None,
+        "plain_rating": res["official_rating"],
+        "suggested_overall": max(1, min(6, int(rating + 0.5))),   # round half up
+        "warnings": warnings,
+    }
+
+
+def ledger_markdown(L):
+    lines = ["", f"#### Ledger mode: aspect-weighted average ({L['venue'] or 'no venue: paper-type weights'})", "",
+             "| Reviewer type | Aspect | Aspect share | Weight |", "|---|---|---|---|"]
+    for t in L["type_weights"]:
+        lines.append(f"| {t['role']} | {t['aspect']} | {L['aspect_ratio'][t['aspect']]:.0%} | {t['weight']:.3f} |")
+    lines += ["", f"**Final rating (aspect-weighted mean)**: **{L['venue_rating']:.2f}** → "
+                  f"**{L['suggested_overall']} ({DECISIONS[L['suggested_overall']]})** · plain mean {L['plain_rating']:.2f}"
+                  + (f" · weighted pool position {L['venue_pool_position']}" if L["venue_pool_position"] is not None else "")]
+    lines.extend(f"- ⚠ {w}" for w in L["warnings"])
+    return "\n".join(lines)
+
+
 def venue_view(res, key, venue, final=None, is_target=False):
     """Re-score the panel's dimension averages through one venue's lens."""
     dims = {d["key"]: d["weighted_avg"] for d in res["dimensions"]}
@@ -449,7 +520,18 @@ def main():
                     help="add views for every venue in scripts/venues.json")
     ap.add_argument("--out", metavar="FILE",
                     help="write the output to FILE instead of stdout (no shell redirect needed)")
+    ap.add_argument("--paper-type", help="with path 'ratio': the paper type whose aspect ratio to print")
     args = ap.parse_args()
+    if args.path == "ratio":
+        venues = load_venues()
+        key = args.venue[0].lower() if args.venue else None
+        if key and key not in venues:
+            fail(f"unknown venue '{key}'; choose from {sorted(venues)}")
+        ratio = aspect_ratio(str(args.paper_type or "empirical").lower(), venues.get(key))
+        text = (json.dumps({"venue": key, "paper_type": args.paper_type or "empirical", "aspect_ratio": ratio}, indent=2)
+                if args.json else "\n".join(f"{k:24s} {v:.0%}" for k, v in sorted(ratio.items(), key=lambda kv: -kv[1])))
+        print(text)
+        return
     try:
         if args.path == "-":
             data = json.load(sys.stdin)
@@ -472,12 +554,16 @@ def main():
         res["final_overall"] = args.final
     ordered = list(dict.fromkeys(keys))
     target = ordered[0] if args.venue or data.get("venues") else None   # first --venue = target
+    if any("aspect" in r for r in data["reviewers"]):
+        res["ledger"] = ledger_average(res, data, target, venues.get(target) if target else None)
+        res["suggested_overall"] = res["ledger"]["suggested_overall"]
     views = [venue_view(res, k, venues[k], args.final, is_target=(k == target)) for k in ordered]
     if args.json:
         res["venue_views"] = views
         text = json.dumps(res, indent=2, ensure_ascii=False)
     else:
-        text = to_markdown(res) + (venue_markdown(views) if views else "")
+        text = (to_markdown(res) + (ledger_markdown(res["ledger"]) if "ledger" in res else "")
+                + (venue_markdown(views) if views else ""))
     if args.out:
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(text + "\n")

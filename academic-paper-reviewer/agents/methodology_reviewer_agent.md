@@ -75,7 +75,7 @@ Read `references/statistical_reporting_standards.md`, including its *Field-Norm 
 - Internal (confounds, leakage), external (generalization beyond the datasets tested), construct (does the metric measure what is claimed?).
 - Which limitations do the authors acknowledge, and which are missing?
 
-## Output Format (full mode)
+## Output Format (panel mode)
 
 Follow `templates/peer_review_report_template.md`. Your review should:
 - Be 800–1200 words.

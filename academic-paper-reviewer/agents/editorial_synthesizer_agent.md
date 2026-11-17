@@ -84,7 +84,7 @@ For each item, give the source IDs, the location, the concern, a concrete fix, a
 
 ## Output Format
 
-Assemble `templates/editorial_decision_template.md` (full review section): the score tables (official/EIC-assessment from the script), the EIC's meta-review, the Editorial Decision Letter, the consensus map, DA highlights and rulings, the Revision Roadmap and the effort estimate.
+Assemble `templates/editorial_decision_template.md` (panel review section): the score tables (official/EIC-assessment from the script), the EIC's meta-review, the Editorial Decision Letter, the consensus map, DA highlights and rulings, the Revision Roadmap and the effort estimate.
 
 ## Important Rules
 

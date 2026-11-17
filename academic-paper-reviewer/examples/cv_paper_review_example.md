@@ -1,4 +1,4 @@
-# Example: Full Review of a Computer Vision Paper
+# Example: Panel Review of a Computer Vision Paper (panel mode)
 
 > **Illustrative example.** The paper, reviewers, numbers and findings below are entirely fictional. They demonstrate format, depth and calibration. Baselines are described generically on purpose, so no real method's results are misrepresented. The score tables are the actual output of `scripts/aggregate_scores.py` on `examples/cv_example_scores.json`. The EIC weights there are this example's own, justified in the reviewer-weights table below. They are not defaults: every reviewer starts at 1.0.
 

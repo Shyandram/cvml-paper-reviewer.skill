@@ -1,21 +1,49 @@
 # Changelog
 
-## Unreleased (after 2.10.1)
+## 3.0
 
-Changes on the development branch since 2.10.1. The version number and the skill's name are set when the maintainer approves the release; until then the skill is still `academic-paper-reviewer` 2.10.1. (A rename to `cvml-paper-reviewer` was committed and then reverted, pending that approval.)
+The default review changes. One agent does the whole review in one context, working from a ledger of reasons, and the venue sets how much each aspect counts. The five-reviewer panel with an Editor-in-Chief of 2.x stays available as `panel` mode, unchanged. The skill keeps its name, `academic-paper-reviewer`. Not yet evaluated against the 2.10.1 panel on the ICLR 2026 set.
 
-### Ledger mode: one agent, reasons first (not yet evaluated)
+### Full mode is now the ledger review (`agents/ledger_reviewer_agent.md`, `SKILL.md`)
 
-A new review mode, `ledger`, done by one agent in one context (`agents/ledger_reviewer_agent.md`, `SKILL.md`). Full mode is unchanged and stays the default until ledger mode has been evaluated against it.
+1. **Setup.** Integrity scan, paper memory, and the venue's **aspect ratio**: each aspect's share of the decision at the target venue, the paper-type weights times the venue's emphasis in `scripts/venues.json`, renormalized (`aggregate_scores.py ratio --paper-type T --venue V`). For an empirical paper, ICLR puts 23% on technical rigor, 19% on experimental validation and 16% each on novelty and significance. TMLR puts 29% on rigor, 25% on validation and 6% on novelty. CVPR puts 25% on validation.
+2. **Ledger.** Every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each stated at its strongest.
+   - Every reason carries its aspect, location and evidence. Accept reasons add a strength. Reject reasons add a kind (error / gap / judgment / question), a worst case and a fix.
+   - A walk over the review-criteria aspects records, for each aspect, its reasons or "none".
+   - A reject reason the paper already answers goes to an *Answered* list.
+   - Accept and reject reasons on the same claim are paired.
+   - With network access, the literature check runs here and feeds the novelty reasons.
+3. **Roster.** The 4–8 reviewer types the venue could plausibly assign.
+   - Each type is defined by expertise and values, never by verdict, and speaks for one primary aspect.
+   - Every aspect with at least 12% of the ratio has a type, and every ledger item is in some type's "weighs most".
+   - The roster includes a specialist in the paper's sub-area and a reviewer from outside it.
+4. **Reviews.** One review per type.
+   - It grades the ledger items it weighs: fatal / major / minor / not a concern, never above the reason's worst case.
+   - It gives an opinion naming the deciding IDs, then a pool position, the seven dimension scores, Overall and Confidence.
+   - A point not in the ledger is added to the ledger first.
+5. **Average.** `aggregate_scores.py` with one entry per type, each with its `aspect`, and the target venue.
+   - Each aspect's share is split equally among its types.
+   - The final rating is that weighted mean of the types' Overall ratings. There is no override and no Devil's Advocate cap.
+   - The top concerns and the Revision Roadmap come from the most severely graded reject reasons.
 
-1. **Ledger.** The agent reads the paper and lists every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …). Each reason has an aspect, a location, evidence and a strength, or for reject reasons a kind (error / gap / judgment / question), a worst case and a fix. A walk over the review-criteria aspects records each aspect's reasons or "none". A reject reason the paper already answers goes to an *Answered* list. Accept and reject reasons on the same claim are paired.
-2. **Roster.** The agent lists 4–8 reviewer types the venue could plausibly assign, defined by expertise and values, never by verdict. The roster covers every aspect and ledger item and includes a sub-area specialist and an outsider.
-3. **Reviews.** One review per type. It grades the ledger items it weighs (fatal / major / minor / not a concern, never above the reason's worst case), gives an opinion naming the deciding IDs, then a pool position, the seven dimension scores, Overall and Confidence. A point not in the ledger is added to it first.
-4. **Average.** `aggregate_scores.py` with one entry per type and no EIC weights. The final rating is the plain mean of the types' Overall ratings, with no override and no Devil's Advocate cap. The top concerns and the revision roadmap come from the most severely graded reject reasons.
+Delegation is only for information the context cannot reach, such as a literature search.
 
-Delegation only for information the context cannot reach, such as a literature search. Evaluation: pipeline `ledger` in `.github/workflows/iclr-calibration.yml` with `evals/ledger_prompt.md` (same outputs as full mode, plus `ledger.json`). The workflow's push trigger now lists only `claude/next-independent-check`, so bringing the earlier run configs onto the development branch starts no run.
+### Scripts and evaluation
 
-### 2.13 withdrawn (never released)
+- `scripts/aggregate_scores.py`:
+  - `ratio` prints a venue's aspect ratio.
+  - When the reviewer entries carry an `aspect`, the output gains `ledger`: aspect ratio, type weights, the aspect-weighted rating and pool position, the plain mean, and a warning for a heavy aspect without a type. The starting point and venue labels follow the aspect-weighted rating.
+  - Panel-mode input, which has no `aspect`, aggregates exactly as before.
+- `evals/iclr_calibration.py features` records `ledger_rating` and `ledger_pool`, and `pilot` reports them as stages.
+- `.github/workflows/iclr-calibration.yml`:
+  - New pipeline `ledger`, with `evals/ledger_prompt.md`. It writes the panel's outputs plus `ledger.json`.
+  - `evals/review_prompt.md` now asks for `panel` mode, so pipeline `single` still runs the 2.x panel.
+  - The push trigger lists only `claude/next-independent-check`, so bringing the earlier run configs onto the development branch starts no run.
+- Renamed headings: "Full Review" becomes "Panel" in the EIC, methodology and synthesizer agents, the decision template and the CV example.
+
+### Since 2.10.1, also in 3.0
+
+#### 2.13 withdrawn (never released)
 
 The review rules return to 2.10.1. On six ICLR 2026 papers with GPT-6.1 Terra (`high`), 2.13 ranked no better than 2.10.1 (reviewer-pool Spearman +0.32 vs +0.38) and compressed the panel's pool positions into an 8-point range (2.10.1: 28 points), smaller than run-to-run noise (`evals/REPORT_iclr2026_pilots.md`, "Where 2.13 stands"). Fixing the primary claim in Phase 0 also locked the review into its first reading: the control paper fell because its primary claim was judged incremental.
 
@@ -23,7 +51,7 @@ The review rules return to 2.10.1. On six ICLR 2026 papers with GPT-6.1 Terra (`
 - **Kept:** the arXiv User-Agent, request spacing and Retry-After backoff in `scripts/related_search.py` (a6d10c3); the origin notice (`NOTICE.md`, README "Origin and license"); the 2.15 re-review steps and the "separate, not independent" wording. Evaluation tooling stays (per-paper budget guard, 3-paper cap, `evals/validation_compare.py`, `evals/codex_read_coverage.py`).
 - The 2.13 design and its validation stay in `docs/design_2.13.md` and the report as history.
 
-### Re-review and wording
+#### Re-review and wording
 
 Re-review that the response letter cannot steer, and no claim that the five reviewers are independent judges. Both adapted from the upstream academic-research-skills reviewer (its re-review gates and its note that role separation is not independence). Prompt changes only; full-mode scoring is unchanged. Re-review mode has not yet been evaluated.
 

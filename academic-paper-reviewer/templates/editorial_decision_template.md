@@ -1,6 +1,6 @@
 # Editorial Decision Template
 
-## Full Review Decision
+## Panel Review Decision
 
 ```markdown
 # Editorial Decision

@@ -840,6 +840,9 @@ def cmd_features(a):
                                   "overall": res.get("final_overall"),
                                   "official_rating": res.get("official_rating"),
                                   "eic_rating": res.get("eic_rating"),
+                                  # 3.0 ledger review: the aspect-ratio-weighted mean of the types
+                                  "ledger_rating": (res.get("ledger") or {}).get("venue_rating"),
+                                  "ledger_pool": (res.get("ledger") or {}).get("venue_pool_position"),
                                   "reviewer_pool": statistics.mean(pools) if pools else None,
                                   "eic_pool": summ.get("eic_pool_position"),
                                   **panel_variants(res, summ),
@@ -885,6 +888,10 @@ def pilot(rows, feats, reps=2000, scale=(0, 10), year=2026):
     # Stages of the pipeline, ranking only (pool positions are not on the rating scale).
     # Used to see where signal is lost between the reviewers and the EIC's decision.
     stages = {
+        "aspect-weighted rating (ledger)": [None if num(feats[r["paper_id"]].get("ledger_rating")) is None
+                                            else to_iclr(feats[r["paper_id"]]["ledger_rating"], year)
+                                            for r in rows],
+        "aspect-weighted pool position (ledger)": [num(feats[r["paper_id"]].get("ledger_pool")) for r in rows],
         "EIC-weighted rating": [None if num(feats[r["paper_id"]].get("eic_rating")) is None
                                 else to_iclr(feats[r["paper_id"]]["eic_rating"], year)
                                 for r in rows],
@@ -939,7 +946,9 @@ def pilot(rows, feats, reps=2000, scale=(0, 10), year=2026):
              "value": r3(auc([v[i] for i in idx], [lab[i] for i in idx]))}]
     base = preds["panel rating"]
     out["stages"] = []
-    for label, v in [("EIC-weighted rating", stages["EIC-weighted rating"]),
+    for label, v in [("aspect-weighted rating (ledger)", stages["aspect-weighted rating (ledger)"]),
+                     ("aspect-weighted pool position (ledger)", stages["aspect-weighted pool position (ledger)"]),
+                     ("EIC-weighted rating", stages["EIC-weighted rating"]),
                      ("reviewers' pool position", stages["reviewers' pool position"]),
                      ("EIC pool position", stages["EIC pool position"]),
                      ("panel rating without DA", stages["panel rating without DA"]),

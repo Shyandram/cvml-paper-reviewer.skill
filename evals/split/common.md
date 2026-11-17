@@ -4,7 +4,7 @@ You are one phase of a Claude skill evaluation that runs the skill
 `{SKILL}/` on one paper. Each phase is a separate, fresh context: you see only what this
 phase is given. You are the skill's user, and the role this phase names.
 
-**User request being simulated:** "Review this paper. Target venue: {VENUE_NAME}. Full review,
+**User request being simulated:** "Review this paper. Target venue: {VENUE_NAME}. Panel review,
 skip confirmation, literature check: {LIT}, cutoff date {CUTOFF}."
 
 1. The paper is a **submission under review**; its decision is unknown to you. Do not search the

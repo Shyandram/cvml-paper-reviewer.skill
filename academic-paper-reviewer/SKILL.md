@@ -1,14 +1,14 @@
 ---
 name: academic-paper-reviewer
-description: "Multi-perspective peer review of academic papers (strongest in computer vision, deep learning and ML) with five configured reviewers (Methodology, Domain, Perspective, Generalist, Devil's Advocate) and an Editor-in-Chief meta-reviewer who weights them and decides. Modes: full review with editorial decision and revision roadmap, single-agent ledger review (accept/reject reasons, reviewer types, mean score), quick and submission-readiness checks, methodology-focus audit, Socratic guided review, rebuttal drafting, and re-review of revised manuscripts. Use to review, critique or score a paper, simulate referee reports, check whether a paper is ready for CVPR, ICCV, ECCV, NeurIPS, ICLR, ICML, AAAI, ACM MM, TMLR, TPAMI or TIP, compare venues, audit experiments or statistics, write a rebuttal, or verify that revisions address earlier comments. Triggers: review my paper, peer review, referee report, is my paper ready, which venue, rebuttal, respond to reviewers, check my experiments, re-review, ledger review."
+description: "Peer review of academic papers (strongest in computer vision, deep learning and ML). Default: one agent lists every reason to accept and to reject, the reviewer types the venue would assign, reviews as each type citing those reasons, and averages the scores weighted by the venue's aspect ratio (e.g. novelty counts more at ICLR than at TMLR). Also a five-reviewer panel with an Editor-in-Chief, quick and submission-readiness checks, methodology audit, Socratic guided review, rebuttal drafting, and re-review of revisions. Use to review, critique or score a paper, simulate referee reports, check whether a paper is ready for CVPR, ICCV, ECCV, NeurIPS, ICLR, ICML, AAAI, ACM MM, TMLR, TPAMI or TIP, compare venues, audit experiments or statistics, write a rebuttal, or verify that revisions address earlier comments. Triggers: review my paper, peer review, referee report, is my paper ready, which venue, rebuttal, respond to reviewers, check my experiments, re-review, panel review."
 metadata:
-  version: "2.10.1"
-  last_updated: "2026-11-06"
+  version: "3.0"
+  last_updated: "2026-11-17"
 ---
 
-# Academic Paper Reviewer v2.10.1
+# Academic Paper Reviewer v3.0
 
-Simulates a complete conference or journal peer review. The skill identifies the paper's field, configures five reviewers who look at the paper from non-overlapping angles (methodology, domain positioning, cross-disciplinary impact, venue fit and presentation, and adversarial challenge to the core claim). An Editor-in-Chief then acts as area chair: it reads all five reports, checks the decisive points against the paper, weights each reviewer by the quality of their review, and makes the final decision, reporting two score lists: the reviewers' official raw scores (what authors see, never modified) and the EIC's internal weighted assessment, which can be higher or lower. The decision starts from the EIC-weighted mean of the reviewers' recommendations. The result is an Editorial Decision and a prioritized Revision Roadmap. It also drafts rebuttals and verifies revisions. After the review, one optional analysis, off by default, can be run on request: a list of concrete concerns reviewers are likely to raise (Gap Scout). It is not part of the review and never changes it.
+Simulates a conference or journal peer review. Since 3.0 the default review is done by one agent in one context, the way a careful senior reviewer would work it through: it reads the paper and lists every reason to accept and every reason to reject it, with locations and evidence; lists the types of reviewer the venue would plausibly assign, each speaking for one aspect (rigor, evaluation, novelty, significance, clarity, …); reviews the paper as each type, grading the listed reasons by ID; and averages the types' ratings, weighted by the venue's **aspect ratio**, so novelty counts more at ICLR than at TMLR and evaluation more at CVPR. The result is a decision, the top concerns and a prioritized Revision Roadmap, all traceable to the reason ledger. The 2.x five-reviewer panel with an Editor-in-Chief stays available as `panel` mode. The skill also drafts rebuttals and verifies revisions. After the review, one optional analysis, off by default, can be run on request: a list of concrete concerns reviewers are likely to raise (Gap Scout). It is not part of the review and never changes it.
 
 ## Runtime and Resource Loading
 
@@ -53,12 +53,12 @@ You are a senior professor in Computer Vision and Deep Learning who has publishe
 Review this paper: [paste text, attach PDF, or give a path / arXiv ID]
 ```
 
-Default output (`full` mode):
-1. Paper analysis and Reviewer Configuration Card (Phase 0)
-2. Five separate review reports (Phase 1)
-3. EIC meta-review: verification of decisive points, reviewer weights, official scores and the EIC's internal weighted assessment and the final decision (Phase 2)
-4. Editorial Decision Letter, consensus map and Revision Roadmap (Phase 2)
-5. Optional Socratic revision coaching (Phase 2.5)
+Default output (`full` mode, the ledger review):
+1. Paper memory and the venue's aspect ratio
+2. The ledger: every accept reason (A1, …) and reject reason (R1, …), with locations and evidence
+3. The reviewer roster: the types the venue would assign, each with its aspect
+4. One review per type, grading the ledger items by ID, with scores
+5. The aspect-weighted rating and decision, consensus map, top concerns and Revision Roadmap
 
 Not part of the default output: the post-review Gap Scout checklist, run only when asked. See *Post-Review Analysis*.
 
@@ -88,8 +88,8 @@ If the target venue is not stated, infer it from the template and formatting (e.
 
 | Mode | Trigger phrases | What you get | Main files |
 |------|-----------------|--------------|-----------|
-| `full` (default) | "review this paper", "full review" | 5 reports + EIC meta-review + Editorial Decision + Revision Roadmap | all agents |
-| `ledger` | "ledger review", "single-agent review", "one-agent review" | One agent: a ledger of every accept and reject reason, a roster of plausible reviewer types, one review per type citing the ledger, and the plain average of their scores | `agents/ledger_reviewer_agent.md` |
+| `full` (default) | "review this paper", "full review", "ledger review" | One agent: a ledger of every accept and reject reason, a roster of the reviewer types the venue would assign, one review per type citing the ledger, and their ratings averaged with the venue's aspect ratio; top concerns and Revision Roadmap | `agents/ledger_reviewer_agent.md` |
+| `panel` | "panel review", "five reviewers", "with an editor" | The 2.x review: 5 reports + EIC meta-review + Editorial Decision + Revision Roadmap | the reviewer, EIC and synthesizer agents |
 | `quick` | "quick look", "is my paper ready", "sanity check" | EIC quick assessment + Submission Readiness Check | `agents/eic_agent.md`, `references/submission_readiness_checklist.md` |
 | `methodology-focus` | "check my experiments", "methodology issues", "are my baselines fair" | In-depth methodology and experiment audit | `agents/methodology_reviewer_agent.md` |
 | `guided` | "guide me", "walk me through", "teach me to review" | Socratic, issue-by-issue dialogue | this file + all agents |
@@ -100,7 +100,20 @@ If the request is ambiguous, use `full` before submission, `rebuttal` when the u
 
 ---
 
-## Full Mode Workflow
+## Full Mode (default): Ledger Review
+
+One agent reviews the paper in one context; follow `agents/ledger_reviewer_agent.md`.
+0. **Setup.** Integrity scan and reviewers' copy, paper memory, and the venue's **aspect ratio** (`scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`): each aspect's share of the decision at this venue, from the paper-type weights and the venue's emphasis.
+1. **Ledger.** List every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list. With network access, the literature check runs here and feeds novelty reasons.
+2. **Roster.** List the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict, each speaking for one primary aspect. Every aspect with at least 12% of the ratio has a type.
+3. **Reviews.** Review as each type: grade the ledger items it weighs, give an opinion that names the deciding IDs, then a pool position, dimension scores, Overall and Confidence. A new point enters the ledger before any review may use it.
+4. **Average.** `scripts/aggregate_scores.py` with one entry per type (with its `aspect`) and the target venue. Each aspect's share of the ratio is split equally among its types; the final rating is that weighted mean of the types' Overall ratings, with no override. The top concerns and the Revision Roadmap come from the reject reasons the types graded most severe.
+
+Delegate only to get information this context cannot reach (for example a literature search), never a judgment. Hard Rule 5 (the Devil's Advocate cap) belongs to panel mode; here a fatal reason lowers the rating of every type that grades it fatal. Not yet evaluated against panel mode on the ICLR 2026 set.
+
+---
+
+## Panel Mode Workflow (the 2.x review)
 
 ### Phase 0: Field Analysis and Reviewer Configuration
 
@@ -158,7 +171,7 @@ Then order each report's weaknesses by severity and move cosmetic issues into on
 ### Phase 2: EIC Meta-Review and Decision
 
 1. **Synthesizer, part A** (`agents/editorial_synthesizer_agent.md`): deduplicate issues, classify them (CONSENSUS-4/5, CONSENSUS-3, CONSENSUS-2, SPLIT, SOLO, DA-CRITICAL), mark the issues the outcome may hinge on, and compute the **official** score (plain mean of the reviewers' raw scores) with `scripts/aggregate_scores.py`.
-2. **EIC meta-review** (`agents/eic_agent.md`, full mode):
+2. **EIC meta-review** (`agents/eic_agent.md`, panel mode):
    1. Read all five reports and the package **first**.
    2. Read the paper briefly, checking every decisive point against the text.
    3. Give each reviewer a **quality weight** (0.5–1.5) for how much their comments and scores should count.
@@ -195,17 +208,7 @@ Evidence: on 20 ICLR 2026 submissions, judged against the human reviewers' main 
 
 ## Quick Mode
 
-The EIC alone reads the paper and produces the Quick Assessment (format in `agents/eic_agent.md`) plus a **Submission Readiness Check** built from `references/submission_readiness_checklist.md`: anonymization, page limit, required checklists and statements, reproducibility artifacts, and figure legibility. Target 400–700 words. End by offering a `full` or `methodology-focus` review.
-
-## Ledger Mode (single agent)
-
-One agent reviews the paper in one context; follow `agents/ledger_reviewer_agent.md`. It replaces the five-reviewer panel and the EIC with four steps:
-1. **Ledger.** List every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list.
-2. **Roster.** From the paper's aspects, list the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict.
-3. **Reviews.** Review as each type: grade the ledger items it weighs, give an opinion that names the deciding IDs, then a pool position, dimension scores, Overall and Confidence. A new point enters the ledger before any review may use it.
-4. **Average.** `scripts/aggregate_scores.py` with one entry per type and no EIC weights. The final rating is the plain mean of the types' Overall ratings; there is no override. The top concerns and the revision roadmap come from the reject reasons the types graded most severe.
-
-Delegate only to get information this context cannot reach (for example a literature search), never a judgment. The integrity scan, the paper memory and the literature check run as in full mode, inside the one context. This mode has not yet been evaluated against full mode.
+The EIC alone reads the paper and produces the Quick Assessment (format in `agents/eic_agent.md`) plus a **Submission Readiness Check** built from `references/submission_readiness_checklist.md`: anonymization, page limit, required checklists and statements, reproducibility artifacts, and figure legibility. Target 400–700 words. End by offering a `full`, `panel` or `methodology-focus` review.
 
 ## Methodology-Focus Mode
 
@@ -247,7 +250,7 @@ Rules: 200–400 words per turn. Ask more than you tell. Affirm correct reasonin
 
 ## Scoring System (summary)
 
-Every non-DA reviewer gives two complementary sets of scores, and the DA gives the 0–100 set. The full rubrics and mappings are in `references/quality_rubrics.md`.
+In full (ledger) mode every reviewer type gives the same scores as a panel reviewer (pool position, the seven 0–100 dimensions, Overall 1–6, Confidence 1–5) plus its primary aspect, and the final rating is the aspect-ratio-weighted mean of the types' Overall ratings. In panel mode every non-DA reviewer gives the two complementary sets of scores below, and the DA gives the 0–100 set. The full rubrics and mappings are in `references/quality_rubrics.md`.
 
 | Scale | Dimensions | Purpose |
 |-------|-----------|---------|
@@ -283,7 +286,7 @@ Every non-DA reviewer gives two complementary sets of scores, and the DA gives t
 ## Output Conventions
 
 - **Language:** follow the paper's language and keep technical terms in English. The user can override (e.g., "review this Chinese paper in English").
-- **Length:** full mode is long. Present Phase 0, then each phase as a clearly headed section. If the user asks to "save to file", or the output would exceed roughly 6,000 words, write the reports to a Markdown file (e.g., `review_<short-title>.md`) and give a summary in chat.
+- **Length:** full and panel modes are long. Present each step or phase as a clearly headed section. If the user asks to "save to file", or the output would exceed roughly 6,000 words, write the reports to a Markdown file (e.g., `review_<short-title>.md`) and give a summary in chat.
 - **Markdown and LaTeX** are fine in reports (OpenReview renders both).
 - **Dates:** use today's date in report headers.
 
@@ -302,16 +305,16 @@ Every non-DA reviewer gives two complementary sets of scores, and the DA gives t
 
 | File | Read when |
 |------|-----------|
-| `agents/field_analyst_agent.md` | Phase 0 of full and guided modes |
-| `agents/eic_agent.md` | Full (Phase 2 meta-review and decision), quick, re-review, coaching |
-| `agents/generalist_reviewer_agent.md` | Full |
-| `agents/methodology_reviewer_agent.md` | Full, methodology-focus |
-| `agents/domain_reviewer_agent.md` | Full |
-| `agents/perspective_reviewer_agent.md` | Full |
-| `agents/devils_advocate_reviewer_agent.md` | Full, guided |
+| `agents/field_analyst_agent.md` | Phase 0 of panel and guided modes |
+| `agents/eic_agent.md` | Panel (Phase 2 meta-review and decision), quick, re-review, coaching |
+| `agents/generalist_reviewer_agent.md` | Panel |
+| `agents/methodology_reviewer_agent.md` | Panel, methodology-focus |
+| `agents/domain_reviewer_agent.md` | Panel |
+| `agents/perspective_reviewer_agent.md` | Panel |
+| `agents/devils_advocate_reviewer_agent.md` | Panel, guided |
 | `agents/editorial_synthesizer_agent.md` | Phase 2 |
 | `agents/rebuttal_strategist_agent.md` | Rebuttal mode |
-| `agents/ledger_reviewer_agent.md` | Ledger mode: ledger, reviewer roster, per-type reviews, average |
+| `agents/ledger_reviewer_agent.md` | Full (default): ledger, aspect ratio, reviewer roster, per-type reviews, weighted average |
 | `agents/gap_scout_agent.md` | Post-review analysis, on request: Gap Scout |
 | `references/codex_runtime.md` | Codex runtime, input tools, permissions and output paths |
 | `references/review_criteria_framework.md` | Before any review: criteria by paper type |
@@ -331,7 +334,7 @@ Every non-DA reviewer gives two complementary sets of scores, and the DA gives t
 | `scripts/venues.json` | Venue profiles used by the script (emphasis, bar offset, scale, form fields) |
 | `scripts/integrity_scan.py` | Phase 0 scan for reviewer-directed text (prompt injection) and hidden characters; `--redact` writes the reviewers' copy |
 | `scripts/related_search.py` | Literature check: `fingerprint`, `search`, `filter`, `verify`, `benchmarks`, `scout`, `coverage`, `similarity`, `novelty` (arXiv API; logs to `search_ledger.jsonl`) |
-| `examples/cv_paper_review_example.md` | Worked full-mode example (CV) |
+| `examples/cv_paper_review_example.md` | Worked panel-mode example (CV) |
 | `examples/interdisciplinary_review_example.md` | Worked example (medical imaging × clinical practice) |
 
 ## Working With Other Tools

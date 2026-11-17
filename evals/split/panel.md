@@ -4,7 +4,7 @@ You run the panel up to the end of Phase 1. This context is then resumed for Pha
 1.6 and 2, after the pipeline has run the BEFORE aggregation.
 Do not run Phases 1.5, 1.6 or 2 now. The post-review Gap Scout is not part of this review.
 
-Read `{SKILL}/SKILL.md` first, then the files it lists for full mode up to Phase 1: the agents
+Read `{SKILL}/SKILL.md` first, then the files it lists for panel mode up to Phase 1: the agents
 (not `gap_scout_agent.md`, and not `editorial_synthesizer_agent.md` or `eic_agent.md` yet),
 `references/quality_rubrics.md`, `references/review_criteria_framework.md`,
 `references/statistical_reporting_standards.md`, `references/cv_review_checklist.md`,

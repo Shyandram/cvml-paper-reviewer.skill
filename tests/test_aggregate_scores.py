@@ -47,6 +47,65 @@ class AggregateTests(unittest.TestCase):
         self.assertEqual(res["final_overall_ceiling"], 6)
         self.assertEqual(len(res["per_reviewer"]), 6)
 
+    def test_aspect_ratio_follows_the_venue(self):
+        iclr = agg.aspect_ratio("empirical", agg.load_venues()["iclr"])
+        tmlr = agg.aspect_ratio("empirical", agg.load_venues()["tmlr"])
+        self.assertAlmostEqual(sum(iclr.values()), 1.0, places=3)
+        self.assertGreater(iclr["novelty"], tmlr["novelty"])     # TMLR does not weigh novelty
+        self.assertGreater(tmlr["technical_rigor"], iclr["technical_rigor"])
+        self.assertEqual(agg.aspect_ratio("empirical"),
+                         {k: w for (k, _), w in zip(agg.DIMENSIONS, agg.PAPER_TYPE_WEIGHTS["empirical"])})
+
+    def test_ledger_average_weights_types_by_aspect_share(self):
+        venue = agg.load_venues()["iclr"]
+        types = []
+        for aspect, overall, pool in [("technical_rigor", 3, 40), ("technical_rigor", 5, 70),
+                                      ("novelty", 2, 30), ("experimental_validation", 4, 60),
+                                      ("significance", 4, 55)]:
+            t = uniform(60, overall=overall)
+            t.update(aspect=aspect, pool_position=pool)
+            types.append(t)
+        data = {"paper_type": "empirical", "reviewers": types}
+        res = agg.aggregate(copy.deepcopy(data))
+        L = agg.ledger_average(res, data, "iclr", venue)
+        ratio = agg.aspect_ratio("empirical", venue)
+        covered = sum(ratio[a] for a in ("technical_rigor", "novelty", "experimental_validation", "significance"))
+        w = [ratio["technical_rigor"] / 2 / covered] * 2 + [ratio[a] / covered for a in
+                                                            ("novelty", "experimental_validation", "significance")]
+        self.assertAlmostEqual(sum(x["weight"] for x in L["type_weights"]), 1.0, places=3)
+        self.assertAlmostEqual(L["venue_rating"], sum(wi * o for wi, o in zip(w, [3, 5, 2, 4, 4])), places=3)
+        self.assertAlmostEqual(L["venue_pool_position"], sum(wi * p for wi, p in zip(w, [40, 70, 30, 60, 55])), places=1)
+        self.assertEqual(L["uncovered_aspects"], [])            # clarity (10%) is below the coverage line
+        self.assertEqual(L["plain_rating"], 3.6)
+
+    def test_ledger_average_flags_a_heavy_uncovered_aspect(self):
+        t = uniform(60, overall=4)
+        t["aspect"] = "clarity"
+        data = {"paper_type": "empirical", "reviewers": [t]}
+        L = agg.ledger_average(agg.aggregate(copy.deepcopy(data)), data, "iclr", agg.load_venues()["iclr"])
+        self.assertIn("technical_rigor", L["uncovered_aspects"])
+        self.assertEqual(L["venue_rating"], 4.0)
+
+    def test_ledger_cli_uses_the_target_venue(self):
+        import subprocess, sys, tempfile
+        types = []
+        for aspect, overall in [("technical_rigor", 3), ("novelty", 5)]:
+            t = uniform(60, overall=overall)
+            t["aspect"] = aspect
+            types.append(t)
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
+            json.dump({"paper_type": "empirical", "reviewers": types}, f)
+        out = {}
+        for v in ("iclr", "tmlr"):
+            r = subprocess.run([sys.executable, str(SKILL / "scripts" / "aggregate_scores.py"), f.name,
+                                "--venue", v, "--json"], capture_output=True, text=True, check=True)
+            out[v] = json.loads(r.stdout)["ledger"]["venue_rating"]
+        self.assertLess(out["tmlr"], out["iclr"])   # TMLR weighs the rigor type (rating 3) more
+        r = subprocess.run([sys.executable, str(SKILL / "scripts" / "aggregate_scores.py"), "ratio",
+                            "--paper-type", "empirical", "--venue", "tmlr", "--json"],
+                           capture_output=True, text=True, check=True)
+        self.assertEqual(json.loads(r.stdout)["venue"], "tmlr")
+
     def test_pool_position_band_and_warning(self):
         self.assertEqual(agg.pool_band(50), (42, 54))   # the median submission
         self.assertEqual(agg.pool_band(75), (62, 72))   # a typical accepted paper

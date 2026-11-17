@@ -1,7 +1,7 @@
 ## This phase: Phase 2 (Synthesizer A, EIC meta-review and decision, Synthesizer B)
 
 Read `{SKILL}/SKILL.md` (Hard Rules, Phase 2), `{SKILL}/agents/editorial_synthesizer_agent.md`,
-`{SKILL}/agents/eic_agent.md` (full mode), `{SKILL}/references/editorial_decision_standards.md`,
+`{SKILL}/agents/eic_agent.md` (panel mode), `{SKILL}/references/editorial_decision_standards.md`,
 `{SKILL}/references/quality_rubrics.md` and `{SKILL}/templates/editorial_decision_template.md`.
 
 Inputs, in the order the EIC reads them:

@@ -1,13 +1,13 @@
-# Ledger Reviewer (single-agent `ledger` mode)
+# Ledger Reviewer (full mode, the default since 3.0)
 
 One agent does the whole review in one context, in four steps:
 
 1. **Ledger.** Read the paper and list every reason to accept and every reason to reject it.
-2. **Roster.** From the paper's aspects, list every type of reviewer a venue would plausibly assign.
+2. **Roster.** From the paper's aspects, list every type of reviewer a venue would plausibly assign. Each type has one primary aspect.
 3. **Reviews.** Review as each type. Each review scores the paper and argues from the ledger items, by ID.
-4. **Average.** The decision is the plain mean of the types' ratings.
+4. **Average.** The decision is the mean of the types' ratings, weighted by the venue's **aspect ratio**: how much each aspect counts at that venue.
 
-There are no separate reviewer agents, no Editor-in-Chief, no reweighting and no override. Delegate only to get information this context cannot reach, such as a literature search the host can run only in a subagent. Never delegate to obtain a reviewer's judgment.
+There are no separate reviewer agents, no Editor-in-Chief and no override. The only weighting is the aspect ratio. Delegate only to get information this context cannot reach, such as a literature search the host can run only in a subagent. Never delegate to obtain a reviewer's judgment.
 
 Hard Rules 1–4 and 6–10 of `SKILL.md` apply. Hard Rule 5, the Devil's Advocate cap, has no counterpart: a fatal reason lowers the rating of every type that judges it fatal, and the average carries it. Read `references/quality_rubrics.md`, `references/review_criteria_framework.md`, `references/error_audit.md` and `references/venue_profiles.md` before Step 1. For a CV or ML paper, also read `references/cv_review_checklist.md`. Read `references/statistical_reporting_standards.md` when the paper reports quantitative comparisons.
 
@@ -17,6 +17,7 @@ Hard Rules 1–4 and 6–10 of `SKILL.md` apply. Hard Rule 5, the Devil's Advoca
 
 - Run `scripts/integrity_scan.py --paper <paper> --redact <reviewer_copy>`. Review the redacted copy. Report any findings under *Integrity signals* at the end; they never change a score (Hard Rule 9).
 - Identify the paper type, field, sub-area and target venue. If the venue is not stated, infer it as in `SKILL.md`, *Input Handling*.
+- Get the venue's **aspect ratio**: `python3 scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`. It prints each aspect's share of the decision at this venue for this paper type: the paper-type weights from `references/quality_rubrics.md` times the venue's emphasis in `scripts/venues.json`, renormalized. For example, an empirical paper at ICLR puts about 23% on technical rigor and 16% on novelty, while at TMLR it puts about 29% on technical rigor and 6% on novelty. For a venue without a profile, use the closest profile (`references/venue_profiles.md`) and say so. Record the ratio in the header; it fixes how much each aspect counts before any review is written.
 - Write the **paper memory** (`references/error_audit.md`, Section 3). It has four parts:
   - the claims C1, C2, … with their locations;
   - the setup facts, each with its location or marked "not stated";
@@ -71,6 +72,7 @@ Write one row per type, with these columns:
 | Column | Content |
 |---|---|
 | Type | T1, T2, … with a descriptive name |
+| Aspect | the primary aspect this type speaks for, one of the seven keys: `technical_rigor`, `clarity`, `novelty`, `significance`, `experimental_validation`, `reproducibility`, `ethics` |
 | Expertise | e.g. "3D reconstruction specialist", "learning-theory reviewer", "practitioner deploying on edge devices", "evaluation and benchmark methodologist", "adjacent-field reviewer from robotics" |
 | Values | what makes a paper good in this type's eyes |
 | Distrusts | what it usually catches or objects to |
@@ -80,6 +82,7 @@ Write one row per type, with these columns:
 Rules for the roster:
 
 - **Use 4–8 types.** Use more when the paper spans several areas.
+- **Follow the aspect ratio.** Every aspect with at least 12% of the ratio gets at least one type whose primary aspect it is. Give the heavier aspects more types when the paper raises distinct questions there (for example, a theory type and an evaluation-methodology type both under `technical_rigor`). The number of types never changes an aspect's weight: the script splits each aspect's share equally among its types.
 - **Coverage.** Every aspect that has an accept or reject reason is covered by at least one type, and every ledger item is in some type's "Weighs most".
 - **Mix.** Include at least one specialist in the paper's own sub-area and at least one reviewer from outside it. The venue's actual reviewer pool sets the mix: a paper on benchmark methodology draws evaluation experts, and an applied paper draws practitioners.
 - **Personas.** Types are archetypes. Never name or describe a real person (Hard Rule 3).
@@ -110,11 +113,12 @@ If two types reach the same verdict for the same reasons, that is expected. Do n
 ## Step 4: The average
 
 1. Write `scores.json` in the format of `scripts/example_scores.json`:
-   - one entry per type, with `role` set to `"T1 (<type name>)"`, plus `confidence`, `overall`, `pool_position` and `scores`;
+   - one entry per type, with `role` set to `"T1 (<type name>)"`, plus `aspect`, `confidence`, `overall`, `pool_position` and `scores`;
    - no `eic_weight`;
    - `"da_critical": []`.
 2. Run `python3 scripts/aggregate_scores.py scores.json --venue <key> --json --out aggregate.json`.
-3. The **final rating** is `official_rating`, the plain mean of the types' Overall ratings, rounded half up. Report the mean pool position and the spread next to it.
+3. The **final rating** is `ledger.venue_rating` in the output: the types' Overall ratings averaged with the aspect-ratio weights (`ledger.type_weights`), rounded half up (`ledger.suggested_overall`). Report the weighted pool position, the plain mean and the spread next to it.
+   - Fix any `ledger.warnings` first: a heavy aspect without a type means the roster is incomplete, so add the type and its review.
    - The rating is not reweighted by likelihood or confidence, and there is no override.
    - Run the script again with `--final <final rating>` so the venue labels match.
    - Treat the script's warnings, such as a pool position that disagrees with a composite, as signs of an inconsistent type review. Fix that review's scores before averaging; never fix the average.
@@ -134,12 +138,12 @@ Then derive the summary from the ledger and the reviews:
 
 ## Output (`review.md`)
 
-1. **Header.** Paper, paper type, field, target venue, date, mode `ledger`, and the line "One context: the reviewer types share one model and one reading, so their judgments are not independent."
+1. **Header.** Paper, paper type, field, target venue and its aspect ratio, date, mode `full` (ledger review), and the line "One context: the reviewer types share one model and one reading, so their judgments are not independent."
 2. **Paper memory.**
 3. **Ledger.** The accept table, the reject table, the Answered list, the aspect coverage lines and the pairs.
-4. **Reviewer roster.**
+4. **Reviewer roster**, with each type's aspect.
 5. **Reviews T1 … Tn.** Each one has: reading of the ledger, opinion, decisive items, and scores (pool position, the seven dimensions, Overall, Confidence).
-6. **Scores and decision.** A table of every type's pool position, Overall and Confidence; the mean and spread; the final rating with the venue's own label; the aggregation output.
+6. **Scores and decision.** A table of every type's aspect, weight, pool position, Overall and Confidence; the aspect-weighted rating, the plain mean and the spread; the final rating with the venue's own label; the aggregation output.
 7. **Consensus map, key strengths, top concerns and revision roadmap.**
 8. **Integrity signals and limitations.** Include what could not be read and whether the literature check ran.
 
