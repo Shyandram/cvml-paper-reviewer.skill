@@ -8,7 +8,7 @@ metadata:
 
 # Academic Paper Reviewer v3.0
 
-Simulates a conference or journal peer review. Since 3.0 the default review is done by one agent in one context, the way a careful senior reviewer would work it through: it reads the paper and lists every reason to accept and every reason to reject it, with locations and evidence; lists the types of reviewer the venue would plausibly assign, each speaking for one aspect (rigor, evaluation, novelty, significance, clarity, …); reviews the paper as each type, grading the listed reasons by ID; and averages the types' ratings, weighted by the venue's **aspect ratio**, so novelty counts more at ICLR than at TMLR and evaluation more at CVPR. The result is a decision, the top concerns and a prioritized Revision Roadmap, all traceable to the reason ledger. The 2.x five-reviewer panel with an Editor-in-Chief stays available as `panel` mode. The skill also drafts rebuttals and verifies revisions. After the review, one optional analysis, off by default, can be run on request: a list of concrete concerns reviewers are likely to raise (Gap Scout). It is not part of the review and never changes it.
+Simulates a conference or journal peer review. Since 3.0 the default review is done by one agent in one context, the way a careful senior reviewer would work it through: it reads the paper and lists every reason to accept and every reason to reject it, with locations and evidence; reorganizes them by claim and examines in detail the ones the decision could turn on; lists the types of reviewer the venue would plausibly assign, each speaking for one aspect (rigor, evaluation, novelty, significance, clarity, …); reviews the paper as each type, grading the listed reasons by ID; and averages the types' ratings, weighted by the venue's **aspect ratio**, so novelty counts more at ICLR than at TMLR and evaluation more at CVPR. The result is a decision, the top concerns and a prioritized Revision Roadmap, all traceable to the reason ledger. The 2.x five-reviewer panel with an Editor-in-Chief stays available as `panel` mode. The skill also drafts rebuttals and verifies revisions. After the review, one optional analysis, off by default, can be run on request: a list of concrete concerns reviewers are likely to raise (Gap Scout). It is not part of the review and never changes it.
 
 ## Runtime and Resource Loading
 
@@ -56,9 +56,10 @@ Review this paper: [paste text, attach PDF, or give a path / arXiv ID]
 Default output (`full` mode, the ledger review):
 1. Paper memory and the venue's aspect ratio
 2. The ledger: every accept reason (A1, …) and reject reason (R1, …), with locations and evidence
-3. The reviewer roster: the types the venue would assign, each with its aspect
-4. One review per type, grading the ledger items by ID, with scores
-5. The aspect-weighted rating and decision, consensus map, top concerns and Revision Roadmap
+3. The reorganized ledger and the probes: the reasons the decision could turn on, examined in detail
+4. The reviewer roster: the types the venue would assign, each with its aspect
+5. One review per type, grading the ledger items by ID, with scores
+6. The aspect-weighted rating and decision, consensus map, top concerns and Revision Roadmap
 
 Not part of the default output: the post-review Gap Scout checklist, run only when asked. See *Post-Review Analysis*.
 
@@ -105,9 +106,10 @@ If the request is ambiguous, use `full` before submission, `rebuttal` when the u
 One agent reviews the paper in one context; follow `agents/ledger_reviewer_agent.md`.
 0. **Setup.** Integrity scan and reviewers' copy, paper memory, and the venue's **aspect ratio** (`scripts/aggregate_scores.py ratio --paper-type <type> --venue <key>`): each aspect's share of the decision at this venue, from the paper-type weights and the venue's emphasis.
 1. **Ledger.** List every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list. With network access, the literature check runs here and feeds novelty reasons.
-2. **Roster.** List the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict, each speaking for one primary aspect. Every aspect with at least 12% of the ratio has a type.
-3. **Reviews.** Review as each type: grade the ledger items it weighs, give an opinion that names the deciding IDs, then a pool position, dimension scores, Overall and Confidence. A new point enters the ledger before any review may use it.
-4. **Average.** `scripts/aggregate_scores.py` with one entry per type (with its `aspect`) and the target venue. Each aspect's share of the ratio is split equally among its types; the final rating is that weighted mean of the types' Overall ratings, with no override. The top concerns and the Revision Roadmap come from the reject reasons the types graded most severe.
+2. **Reorganize and probe.** Merge duplicates, group the reasons by claim, mark each `checked` or `open`, and rank them by swing (how far the decision could move if the reason turned out differently). Then examine each high-swing open reason in detail: re-read the sections, recompute and cross-check the numbers, trace the claim's evidence chain, or run a targeted literature query. Each probe (P1, P2, …) settles a fact, never a value, and updates the ledger: refuted reasons go to *Answered*, confirmed suspicions become errors, and what stays unsettled is a question no type may grade above minor.
+3. **Roster.** List the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict, each speaking for one primary aspect. Every aspect with at least 12% of the ratio has a type.
+4. **Reviews.** Review as each type: grade the ledger items it weighs, give an opinion that names the deciding IDs, then a pool position, dimension scores, Overall and Confidence. A new point enters the ledger before any review may use it. When types split on a reason because of a fact (not a value), one more probe settles the fact and the affected grades are updated, logged.
+5. **Average.** `scripts/aggregate_scores.py` with one entry per type (with its `aspect`) and the target venue. Each aspect's share of the ratio is split equally among its types; the final rating is that weighted mean of the types' Overall ratings, with no override. The top concerns and the Revision Roadmap come from the reject reasons the types graded most severe.
 
 Delegate only to get information this context cannot reach (for example a literature search), never a judgment. Hard Rule 5 (the Devil's Advocate cap) belongs to panel mode; here a fatal reason lowers the rating of every type that grades it fatal. Not yet evaluated against panel mode on the ICLR 2026 set.
 

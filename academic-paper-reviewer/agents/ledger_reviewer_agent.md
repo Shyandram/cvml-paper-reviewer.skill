@@ -1,11 +1,12 @@
 # Ledger Reviewer (full mode, the default since 3.0)
 
-One agent does the whole review in one context, in four steps:
+One agent does the whole review in one context, in five steps:
 
 1. **Ledger.** Read the paper and list every reason to accept and every reason to reject it.
-2. **Roster.** From the paper's aspects, list every type of reviewer a venue would plausibly assign. Each type has one primary aspect.
-3. **Reviews.** Review as each type. Each review scores the paper and argues from the ledger items, by ID.
-4. **Average.** The decision is the mean of the types' ratings, weighted by the venue's **aspect ratio**: how much each aspect counts at that venue.
+2. **Reorganize and probe.** Group the reasons by claim, rank them by how much they could move the decision, and examine the uncertain ones in detail until each is settled or marked unsettled.
+3. **Roster.** From the paper's aspects, list every type of reviewer a venue would plausibly assign. Each type has one primary aspect.
+4. **Reviews.** Review as each type. Each review scores the paper and argues from the ledger items, by ID.
+5. **Average.** The decision is the mean of the types' ratings, weighted by the venue's **aspect ratio**: how much each aspect counts at that venue.
 
 There are no separate reviewer agents, no Editor-in-Chief and no override. The only weighting is the aspect ratio. Delegate only to get information this context cannot reach, such as a literature search the host can run only in a subagent. Never delegate to obtain a reviewer's judgment.
 
@@ -63,7 +64,52 @@ Rules for the ledger:
 - **Pair the reasons.** When an accept reason and a reject reason bear on the same claim, cross-reference them, e.g. "A2 ↔ R4". Most decisions turn on these pairs.
 - **Literature.** With network access and the literature check on, run `references/literature_search.md` here, inline: the fingerprint, the claim and benchmark queries, the similarity check and the novelty profile. Its findings become accept reasons (a verified delta over the closest prior work) or reject reasons (`judgment`, naming the work). Without network access, skip it, say so, and mark novelty reasons that rest on memory with `[verify]`.
 
-## Step 2: The reviewer roster
+## Step 2: Reorganize, then probe
+
+The first ledger comes from one reading. Before any reviewer type judges it, reorganize it and examine the reasons the decision could turn on.
+
+**Reorganize.**
+
+- **Merge duplicates.** Keep the lowest ID and list the merged IDs next to it.
+- **Group by claim.** Put each reason under the claim (C1, C2, … from the paper memory) it supports or undercuts, with its pairs. Reasons tied to no claim go under *General*.
+- **Mark each reason's status.**
+  - `checked`: its evidence is already verified (a quote read in place, a number recomputed).
+  - `open`: it rests on an unverified reading, an assumption, a suspicion, or a "Depends on" condition not yet checked.
+- **Rank by swing**, meaning how far the decision could move if the reason turned out differently. A reason has high swing when it is `open` and also bears on a central claim, or has worst case fatal or major, or decides a pair.
+
+**Probe.** Examine each high-swing `open` reason in detail, in order of swing. Probe every reason whose worst case is fatal; a typical paper needs 5–12 probes. Record each probe as P1, P2, …:
+
+| Field | Content |
+|---|---|
+| Item | the ledger ID, or IDs for a pair |
+| Question | one precise question the paper can answer, e.g. "Is the baseline in Table 3 trained with the same schedule as the method (§4.1, App. B)?" |
+| Method | what was done (see below) |
+| Result | confirmed / refuted / partly / cannot be settled from the paper, with the location and the quote or computation |
+| Change | the ledger update, before → after |
+
+Methods, as the reason requires:
+
+- Re-read the specific sections, appendix and supplement included, rather than relying on the first reading.
+- Recompute numbers: sums, averages, gains, error bars, percentages. Cross-check each table against the text and against the other tables.
+- Trace the evidence chain: claim → experiment → table or figure → number. Note where it breaks.
+- Check a derivation step, or that a definition is used consistently.
+- For novelty, run a targeted literature query, inline (`references/literature_search.md`). Delegate only when the host can search only from a subagent.
+
+Update the ledger from each probe:
+
+- A refuted reject reason moves to *Answered*.
+- A confirmed suspicion becomes an `error`, with the check as its evidence.
+- An accept reason whose condition fails loses strength.
+- A new reason the probe uncovers enters the ledger with the next ID, marked "found by P3".
+- Every reason probed becomes `checked`, or stays `open` with the result "cannot be settled from the paper".
+
+**Rules for probes.**
+
+- A probe settles facts ("does the paper do X?"), never values ("does X matter?"), and never assigns a grade.
+- A reason that stays unsettled is a `question` (Hard Rule 10). No type may grade it above minor.
+- Stop when every high-swing reason is `checked` or unsettled. The probes cover the reasons that can move the decision, not every reason.
+
+## Step 3: The reviewer roster
 
 List the types of reviewer this paper could plausibly get at the target venue. A type is defined by its **expertise and what it values**. It is never defined by a verdict: "harsh reviewer", "champion" and "skeptic" are not types.
 
@@ -87,13 +133,13 @@ Rules for the roster:
 - **Mix.** Include at least one specialist in the paper's own sub-area and at least one reviewer from outside it. The venue's actual reviewer pool sets the mix: a paper on benchmark methodology draws evaluation experts, and an applied paper draws practitioners.
 - **Personas.** Types are archetypes. Never name or describe a real person (Hard Rule 3).
 
-## Step 3: One review per type
+## Step 4: One review per type
 
 Write the reviews in roster order. Each review argues from the ledger:
 
 1. **Reading of the ledger.** Name the items that matter to this type, by ID.
    - For each accept reason it relies on, say why it holds, or why it is discounted from this type's expertise.
-   - For each reject reason it weighs, grade it **fatal / major / minor / not a concern**, with one line on why. The grade can never exceed that reason's worst case.
+   - For each reject reason it weighs, grade it **fatal / major / minor / not a concern**, with one line on why. The grade can never exceed that reason's worst case, and an unsettled `question` is never graded above minor.
    - Items the review does not name count as neutral.
 2. **New reasons.** If this type sees a reason missing from the ledger, it first adds the reason to the ledger as the next A or R, marked "added in T3 review", with the same evidence requirements. Only then may it use the reason. Later types see the addition. A review never raises a point that is not in the ledger.
 3. **Opinion.** Write 120–250 words in the type's voice: its overall judgment and what would change its mind. End with a line naming the deciding items, for example: `Decisive: R2 (major), A1 (strong), A4 ↔ R6 (A4 holds)`.
@@ -110,7 +156,15 @@ Write the reviews in roster order. Each review argues from the ledger:
 
 If two types reach the same verdict for the same reasons, that is expected. Do not report it as independent confirmation.
 
-## Step 4: The average
+**Settle factual splits.** After all reviews are written, look for splits: one type grades a reason fatal or major while another grades it minor or not a concern.
+
+- When a split rests on a **fact**, run one more probe on that fact and record it like the others. For example, T2 assumed the baselines were retuned and T5 assumed they were not.
+  - Each type whose grade depended on the fact updates that one grade, logged as "updated after P9: major → minor".
+  - If the reason was among the type's decisive items, the type's scores are updated too.
+- When a split rests on **values** (how much the point matters to that expertise), it stays. That is the disagreement the roster exists to show.
+- Run at most one such round.
+
+## Step 5: The average
 
 1. Write `scores.json` in the format of `scripts/example_scores.json`:
    - one entry per type, with `role` set to `"T1 (<type name>)"`, plus `aspect`, `confidence`, `overall`, `pool_position` and `scores`;
@@ -141,10 +195,11 @@ Then derive the summary from the ledger and the reviews:
 1. **Header.** Paper, paper type, field, target venue and its aspect ratio, date, mode `full` (ledger review), and the line "One context: the reviewer types share one model and one reading, so their judgments are not independent."
 2. **Paper memory.**
 3. **Ledger.** The accept table, the reject table, the Answered list, the aspect coverage lines and the pairs.
-4. **Reviewer roster**, with each type's aspect.
-5. **Reviews T1 … Tn.** Each one has: reading of the ledger, opinion, decisive items, and scores (pool position, the seven dimensions, Overall, Confidence).
-6. **Scores and decision.** A table of every type's aspect, weight, pool position, Overall and Confidence; the aspect-weighted rating, the plain mean and the spread; the final rating with the venue's own label; the aggregation output.
-7. **Consensus map, key strengths, top concerns and revision roadmap.**
-8. **Integrity signals and limitations.** Include what could not be read and whether the literature check ran.
+4. **Reorganized ledger and probes.** The reasons grouped by claim, with status and swing; the probe table P1, P2, … with each result and ledger change.
+5. **Reviewer roster**, with each type's aspect.
+6. **Reviews T1 … Tn.** Each one has: reading of the ledger, opinion, decisive items, and scores (pool position, the seven dimensions, Overall, Confidence). Then the post-review probes and the grades they updated.
+7. **Scores and decision.** A table of every type's aspect, weight, pool position, Overall and Confidence; the aspect-weighted rating, the plain mean and the spread; the final rating with the venue's own label; the aggregation output.
+8. **Consensus map, key strengths, top concerns and revision roadmap.**
+9. **Integrity signals and limitations.** Include what could not be read and whether the literature check ran.
 
 For a journal target, add the journal-style recommendation from `references/editorial_decision_standards.md`, mapped from the final rating.

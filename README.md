@@ -1,11 +1,12 @@
 # Academic Paper Reviewer for Codex and Claude
 
-A peer-review skill for Codex and Claude, tuned for **computer vision, deep learning and ML** papers but usable in any field. Since 3.0 the default review is done by one agent, working from a ledger of reasons: it lists every reason to accept and to reject the paper, with locations and evidence; lists the reviewer types the venue would assign, each speaking for one aspect; reviews as each type, grading the listed reasons by ID; and averages their ratings weighted by the venue's **aspect ratio** (novelty counts more at ICLR than at TMLR, evaluation more at CVPR). Every concern and score traces back to a ledger item. The 2.x panel (five reviewers and an Editor-in-Chief) stays available as `panel` mode. The skill also turns a review into a prioritized revision plan, a rebuttal draft, or a verification of your revisions.
+A peer-review skill for Codex and Claude, tuned for **computer vision, deep learning and ML** papers but usable in any field. Since 3.0 the default review is done by one agent, working from a ledger of reasons: it lists every reason to accept and to reject the paper, with locations and evidence; reorganizes them by claim and probes the uncertain ones in detail; lists the reviewer types the venue would assign, each speaking for one aspect; reviews as each type, grading the listed reasons by ID; and averages their ratings weighted by the venue's **aspect ratio** (novelty counts more at ICLR than at TMLR, evaluation more at CVPR). Every concern and score traces back to a ledger item. The 2.x panel (five reviewers and an Editor-in-Chief) stays available as `panel` mode. The skill also turns a review into a prioritized revision plan, a rebuttal draft, or a verification of your revisions.
 
 ```
 You:    Review this paper for CVPR: [attach PDF]
 Agent:  📋 Paper memory + CVPR's aspect ratio (evaluation 25%, rigor 19%, novelty 16%, …)
         → Ledger: accept reasons A1…A12, reject reasons R1…R18, answered points
+        → Reorganized by claim; probes P1…P8 re-check the reasons the decision could turn on
         → Roster: 6 reviewer types, each with an aspect → one review per type, citing A/R IDs
         → Aspect-weighted rating and decision, top concerns, Revision Roadmap
 ```

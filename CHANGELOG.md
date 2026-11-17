@@ -13,15 +13,21 @@ The default review changes. One agent does the whole review in one context, work
    - A reject reason the paper already answers goes to an *Answered* list.
    - Accept and reject reasons on the same claim are paired.
    - With network access, the literature check runs here and feeds the novelty reasons.
-3. **Roster.** The 4–8 reviewer types the venue could plausibly assign.
+3. **Reorganize and probe.** The first ledger comes from one reading, so it is reorganized and its uncertain reasons are examined before any type judges them.
+   - Duplicates are merged. Reasons are grouped by claim and marked `checked` or `open`, then ranked by swing: how far the decision could move if the reason turned out differently.
+   - Each high-swing open reason gets a probe (P1, P2, …): one precise question, a method (re-read the sections, recompute and cross-check numbers, trace the claim's evidence chain, check a derivation, or run a targeted literature query), a result, and the ledger change.
+   - Refuted reasons go to *Answered*. Confirmed suspicions become errors. What stays unsettled is a question no type may grade above minor.
+   - Probes settle facts, never values, and never assign grades.
+   - After the reviews, a split between types that rests on a fact gets one more probe, and the affected grades are updated and logged. Splits on values stay.
+4. **Roster.** The 4–8 reviewer types the venue could plausibly assign.
    - Each type is defined by expertise and values, never by verdict, and speaks for one primary aspect.
    - Every aspect with at least 12% of the ratio has a type, and every ledger item is in some type's "weighs most".
    - The roster includes a specialist in the paper's sub-area and a reviewer from outside it.
-4. **Reviews.** One review per type.
+5. **Reviews.** One review per type.
    - It grades the ledger items it weighs: fatal / major / minor / not a concern, never above the reason's worst case.
    - It gives an opinion naming the deciding IDs, then a pool position, the seven dimension scores, Overall and Confidence.
    - A point not in the ledger is added to the ledger first.
-5. **Average.** `aggregate_scores.py` with one entry per type, each with its `aspect`, and the target venue.
+6. **Average.** `aggregate_scores.py` with one entry per type, each with its `aspect`, and the target venue.
    - Each aspect's share is split equally among its types.
    - The final rating is that weighted mean of the types' Overall ratings. There is no override and no Devil's Advocate cap.
    - The top concerns and the Revision Roadmap come from the most severely graded reject reasons.
