@@ -36,6 +36,17 @@ class AggregateTests(unittest.TestCase):
         tr = next(d for d in res["dimensions"] if d["key"] == "technical_rigor")
         self.assertEqual((tr["before_avg"], tr["weighted_avg"]), (62.0, 61.0))
 
+    def test_ledger_mode_plain_mean_of_any_number_of_types(self):
+        # ledger mode: one entry per reviewer type, no eic_weight, no DA issues;
+        # the final rating is the plain mean of the types' Overall ratings
+        types = [uniform(60, confidence=c, overall=o)
+                 for c, o in [(5, 4), (2, 3), (4, 4), (3, 5), (5, 3), (1, 4)]]
+        res = agg.aggregate({"paper_type": "empirical", "reviewers": types, "da_critical": []})
+        self.assertEqual(res["official_rating"], round(23 / 6, 2))
+        self.assertFalse(res["eic_weighted"])
+        self.assertEqual(res["final_overall_ceiling"], 6)
+        self.assertEqual(len(res["per_reviewer"]), 6)
+
     def test_pool_position_band_and_warning(self):
         self.assertEqual(agg.pool_band(50), (42, 54))   # the median submission
         self.assertEqual(agg.pool_band(75), (62, 72))   # a typical accepted paper

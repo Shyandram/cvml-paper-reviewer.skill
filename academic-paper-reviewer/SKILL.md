@@ -1,6 +1,6 @@
 ---
 name: academic-paper-reviewer
-description: "Multi-perspective peer review of academic papers (strongest in computer vision, deep learning and ML) with five configured reviewers (Methodology, Domain, Perspective, Generalist, Devil's Advocate) and an Editor-in-Chief meta-reviewer who weights them and decides; optional post-review Gap Scout checklist. Modes: full review with editorial decision and revision roadmap, quick and submission-readiness checks, methodology-focus audit, Socratic guided review, rebuttal drafting, and re-review of revised manuscripts. Use when the user wants to review, critique or score a paper, simulate referee reports, check whether a paper is ready for CVPR, ICCV, ECCV, NeurIPS, ICLR, ICML, AAAI, ACM MM, TMLR, TPAMI or TIP, compare venues, audit experiments or statistics, write a rebuttal or response to reviewers, or verify that revisions address earlier comments. Triggers: review my paper, peer review, referee report, is my paper ready, which venue, rebuttal, respond to reviewers, check my experiments, re-review."
+description: "Multi-perspective peer review of academic papers (strongest in computer vision, deep learning and ML) with five configured reviewers (Methodology, Domain, Perspective, Generalist, Devil's Advocate) and an Editor-in-Chief meta-reviewer who weights them and decides. Modes: full review with editorial decision and revision roadmap, single-agent ledger review (accept/reject reasons, reviewer types, mean score), quick and submission-readiness checks, methodology-focus audit, Socratic guided review, rebuttal drafting, and re-review of revised manuscripts. Use to review, critique or score a paper, simulate referee reports, check whether a paper is ready for CVPR, ICCV, ECCV, NeurIPS, ICLR, ICML, AAAI, ACM MM, TMLR, TPAMI or TIP, compare venues, audit experiments or statistics, write a rebuttal, or verify that revisions address earlier comments. Triggers: review my paper, peer review, referee report, is my paper ready, which venue, rebuttal, respond to reviewers, check my experiments, re-review, ledger review."
 metadata:
   version: "2.10.1"
   last_updated: "2026-11-06"
@@ -89,6 +89,7 @@ If the target venue is not stated, infer it from the template and formatting (e.
 | Mode | Trigger phrases | What you get | Main files |
 |------|-----------------|--------------|-----------|
 | `full` (default) | "review this paper", "full review" | 5 reports + EIC meta-review + Editorial Decision + Revision Roadmap | all agents |
+| `ledger` | "ledger review", "single-agent review", "one-agent review" | One agent: a ledger of every accept and reject reason, a roster of plausible reviewer types, one review per type citing the ledger, and the plain average of their scores | `agents/ledger_reviewer_agent.md` |
 | `quick` | "quick look", "is my paper ready", "sanity check" | EIC quick assessment + Submission Readiness Check | `agents/eic_agent.md`, `references/submission_readiness_checklist.md` |
 | `methodology-focus` | "check my experiments", "methodology issues", "are my baselines fair" | In-depth methodology and experiment audit | `agents/methodology_reviewer_agent.md` |
 | `guided` | "guide me", "walk me through", "teach me to review" | Socratic, issue-by-issue dialogue | this file + all agents |
@@ -196,6 +197,16 @@ Evidence: on 20 ICLR 2026 submissions, judged against the human reviewers' main 
 
 The EIC alone reads the paper and produces the Quick Assessment (format in `agents/eic_agent.md`) plus a **Submission Readiness Check** built from `references/submission_readiness_checklist.md`: anonymization, page limit, required checklists and statements, reproducibility artifacts, and figure legibility. Target 400–700 words. End by offering a `full` or `methodology-focus` review.
 
+## Ledger Mode (single agent)
+
+One agent reviews the paper in one context; follow `agents/ledger_reviewer_agent.md`. It replaces the five-reviewer panel and the EIC with four steps:
+1. **Ledger.** List every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …), each with its aspect, location and evidence, at its strongest. Reject reasons the paper already answers go to an *Answered* list.
+2. **Roster.** From the paper's aspects, list the types of reviewer the venue could plausibly assign (4–8), defined by expertise and values, never by verdict.
+3. **Reviews.** Review as each type: grade the ledger items it weighs, give an opinion that names the deciding IDs, then a pool position, dimension scores, Overall and Confidence. A new point enters the ledger before any review may use it.
+4. **Average.** `scripts/aggregate_scores.py` with one entry per type and no EIC weights. The final rating is the plain mean of the types' Overall ratings; there is no override. The top concerns and the revision roadmap come from the reject reasons the types graded most severe.
+
+Delegate only to get information this context cannot reach (for example a literature search), never a judgment. The integrity scan, the paper memory and the literature check run as in full mode, inside the one context. This mode has not yet been evaluated against full mode.
+
 ## Methodology-Focus Mode
 
 Only Reviewer 1 is activated, at greater depth. Follow the *Methodology-Focus Mode* section of `agents/methodology_reviewer_agent.md`. It produces a claim-to-evidence map, a fairness-of-comparison audit, a statistical-reporting audit, a reproducibility checklist, and a prioritized fix list with estimated compute cost.
@@ -300,6 +311,7 @@ Every non-DA reviewer gives two complementary sets of scores, and the DA gives t
 | `agents/devils_advocate_reviewer_agent.md` | Full, guided |
 | `agents/editorial_synthesizer_agent.md` | Phase 2 |
 | `agents/rebuttal_strategist_agent.md` | Rebuttal mode |
+| `agents/ledger_reviewer_agent.md` | Ledger mode: ledger, reviewer roster, per-type reviews, average |
 | `agents/gap_scout_agent.md` | Post-review analysis, on request: Gap Scout |
 | `references/codex_runtime.md` | Codex runtime, input tools, permissions and output paths |
 | `references/review_criteria_framework.md` | Before any review: criteria by paper type |

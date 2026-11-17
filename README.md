@@ -20,6 +20,7 @@ Agent:  📋 Paper analysis + 5-reviewer configuration card → 5 separate repor
 | Mode | Say something like | You get |
 |------|-------------------|---------|
 | **full** (default) | "Review this paper" | 5 reports (Methodology, Domain, Perspective, Generalist, Devil's Advocate) + EIC meta-review + Editorial Decision + Revision Roadmap |
+| **ledger** (single agent, not yet evaluated) | "Ledger review of this paper" | One agent lists every reason to accept and to reject, lists the reviewer types the venue could assign, reviews as each type citing those reasons by ID, and averages their scores |
 | **quick** | "Is my paper ready for submission?" | EIC quick assessment + submission-readiness check (anonymity, page limit, checklists…) |
 | **methodology-focus** | "Are my baselines fair?" / "Check my experiments" | Claim-to-evidence map, fairness-of-comparison audit, statistics audit, prioritized fixes with compute estimates |
 | **guided** | "Walk me through the review" | Socratic, one-issue-at-a-time dialogue |
@@ -207,6 +208,7 @@ academic-paper-reviewer/               ← skill source
 │   ├── domain_reviewer_agent.md       (R2)
 │   ├── perspective_reviewer_agent.md  (R3)
 │   ├── devils_advocate_reviewer_agent.md
+│   ├── ledger_reviewer_agent.md       (ledger mode: one agent, reasons ledger, reviewer types, mean)
 │   ├── gap_scout_agent.md             (post-review analysis: anticipated reviewer concerns)
 │   ├── editorial_synthesizer_agent.md (Phase 2)
 │   └── rebuttal_strategist_agent.md   (rebuttal mode)

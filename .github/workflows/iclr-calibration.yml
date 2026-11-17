@@ -12,6 +12,8 @@ name: ICLR calibration (paperreview.ai protocol)
 # pipeline "check" (skill 2.10.1) runs the review in one context, as "single" does.
 # pipeline "bare" is the control: the same model, effort and paper with evals/bare_prompt.md and
 # no skill (the review job deletes everything but the paper and that prompt before it runs).
+# pipeline "ledger" runs the skill's single-agent ledger mode in one context with
+# evals/ledger_prompt.md: ledger of accept and reject reasons, reviewer types, plain mean.
 # Both then run the optional post-review Gap Scout in a fresh context that cannot read or
 # change the review.
 # budget is then the cap per phase. auth "subscription" uses CLAUDE_CODE_OAUTH_TOKEN.
@@ -42,7 +44,7 @@ on:
         description: "Concurrent review jobs"
         default: "2"
       pipeline:
-        description: "single (one context, evals/review_prompt.md), split (one fresh context per phase, evals/split/) or check (one context plus a fresh check context)"
+        description: "single (one context, evals/review_prompt.md), split (one fresh context per phase, evals/split/) check (one context plus a fresh check context), bare (no skill) or ledger (single-agent ledger mode, evals/ledger_prompt.md)"
         default: "single"
       auth:
         description: "api (ANTHROPIC_API_KEY, billed per token) or subscription (CLAUDE_CODE_OAUTH_TOKEN)"
@@ -52,7 +54,7 @@ on:
   # {"mode": "evaluate", "runs": [<run ids>]} only collects earlier runs' results
   # and computes the metrics.
   push:
-    branches: [claude/youthful-einstein-mpsrkh, claude/next-independent-check]
+    branches: [claude/next-independent-check]
     paths: [evals/iclr_run.json]
 
 permissions:
@@ -116,10 +118,10 @@ jobs:
           assert cfg["runner"] in ("claude", "codex")
           assert re.fullmatch(r"claude-[a-z0-9.-]+" if cfg["runner"] == "claude"
                               else r"gpt-[a-z0-9.-]+", cfg["model"])
-          assert cfg["runner"] == "claude" or cfg["pipeline"] == "single"
+          assert cfg["runner"] == "claude" or cfg["pipeline"] in ("single", "ledger")
           assert all(re.fullmatch(r"[0-9]+(\.[0-9]+)?", cfg[k])
                      for k in ("price_in", "price_cached", "price_out"))
-          assert cfg["pipeline"] in ("single", "split", "check", "bare")
+          assert cfg["pipeline"] in ("single", "split", "check", "bare", "ledger")
           assert cfg["pipeline"] != "bare" or cfg["runner"] == "claude"
           assert cfg["auth"] in ("api", "subscription")
           assert cfg["effort"] in ("", "minimal", "low", "medium", "high", "xhigh", "max")
@@ -190,7 +192,7 @@ jobs:
     needs: [config, prepare]
     if: needs.prepare.outputs.ids != '[]'
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ (needs.config.outputs.pipeline == 'single' || needs.config.outputs.pipeline == 'bare') && needs.config.outputs.runner == 'claude' && 90 || 180 }}
+    timeout-minutes: ${{ (needs.config.outputs.pipeline == 'single' || needs.config.outputs.pipeline == 'bare' || needs.config.outputs.pipeline == 'ledger') && needs.config.outputs.runner == 'claude' && 90 || 180 }}
     strategy:
       fail-fast: false
       max-parallel: ${{ fromJSON(needs.config.outputs.max_parallel) }}
@@ -205,7 +207,7 @@ jobs:
         # the skill, the prompt and its own paper.
         run: |
           cp evals/codex_budget_guard.py "$RUNNER_TEMP/"  # runs outside the reviewer's workspace
-          find evals -mindepth 1 -maxdepth 1 ! -name split ! -name work ! -name review_prompt.md ! -name bare_prompt.md -exec rm -rf {} +
+          find evals -mindepth 1 -maxdepth 1 ! -name split ! -name work ! -name review_prompt.md ! -name bare_prompt.md ! -name ledger_prompt.md -exec rm -rf {} +
           if [ "${{ needs.config.outputs.pipeline }}" = bare ]; then
             # The control sees no skill: only the paper and its prompt stay in the workspace.
             find . -mindepth 1 -maxdepth 1 ! -name evals ! -name .git -exec rm -rf {} +
@@ -231,7 +233,7 @@ jobs:
       - run: npm install -g @openai/codex@0.167.0 && codex --version
         if: needs.config.outputs.runner == 'codex'
       - name: Review (single context)
-        if: needs.config.outputs.pipeline == 'single' || needs.config.outputs.pipeline == 'bare'
+        if: needs.config.outputs.pipeline == 'single' || needs.config.outputs.pipeline == 'bare' || needs.config.outputs.pipeline == 'ledger'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ID: ${{ matrix.id }}
@@ -244,12 +246,14 @@ jobs:
           import os
           root, pid = os.getcwd(), os.environ["ID"]
           bare = os.environ["PIPELINE"] == "bare"
-          t = open("evals/bare_prompt.md" if bare else "evals/review_prompt.md").read().split("---", 1)[1]
+          prompt = {"bare": "bare_prompt.md", "ledger": "ledger_prompt.md"}.get(os.environ["PIPELINE"], "review_prompt.md")
+          t = open("evals/" + prompt).read().split("---", 1)[1]
           t = (t.replace("{ID}", pid).replace("{ROOT}", root)
                 .replace("{VENUE_NAME}", "ICLR").replace("{VENUE_KEY}", "iclr"))
           if not bare:
-            t = t.replace("Full review, skip confirmation.",
-                        "Full review, skip confirmation, literature check: strict, "
+            assert t.count("skip confirmation.") == 1
+            t = t.replace("skip confirmation.",
+                        "skip confirmation, literature check: strict, "
                         "cutoff date " + os.environ["CUTOFF"] + ".")
             t = t.replace("or access the web.",
                           "or access the web, except through the skill's own "
@@ -380,7 +384,7 @@ jobs:
           PY
           ls -la "$R"
       - name: Review (split or check, evals/split/)
-        if: needs.config.outputs.pipeline != 'single' && needs.config.outputs.pipeline != 'bare'
+        if: needs.config.outputs.pipeline != 'single' && needs.config.outputs.pipeline != 'bare' && needs.config.outputs.pipeline != 'ledger'
         env:
           ANTHROPIC_API_KEY: ${{ needs.config.outputs.auth == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ needs.config.outputs.auth == 'subscription' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}

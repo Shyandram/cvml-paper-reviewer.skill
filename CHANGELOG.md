@@ -4,6 +4,17 @@
 
 Changes on the development branch since 2.10.1. The version number and the skill's name are set when the maintainer approves the release; until then the skill is still `academic-paper-reviewer` 2.10.1. (A rename to `cvml-paper-reviewer` was committed and then reverted, pending that approval.)
 
+### Ledger mode: one agent, reasons first (not yet evaluated)
+
+A new review mode, `ledger`, done by one agent in one context (`agents/ledger_reviewer_agent.md`, `SKILL.md`). Full mode is unchanged and stays the default until ledger mode has been evaluated against it.
+
+1. **Ledger.** The agent reads the paper and lists every reason to accept (A1, A2, …) and every reason to reject (R1, R2, …). Each reason has an aspect, a location, evidence and a strength, or for reject reasons a kind (error / gap / judgment / question), a worst case and a fix. A walk over the review-criteria aspects records each aspect's reasons or "none". A reject reason the paper already answers goes to an *Answered* list. Accept and reject reasons on the same claim are paired.
+2. **Roster.** The agent lists 4–8 reviewer types the venue could plausibly assign, defined by expertise and values, never by verdict. The roster covers every aspect and ledger item and includes a sub-area specialist and an outsider.
+3. **Reviews.** One review per type. It grades the ledger items it weighs (fatal / major / minor / not a concern, never above the reason's worst case), gives an opinion naming the deciding IDs, then a pool position, the seven dimension scores, Overall and Confidence. A point not in the ledger is added to it first.
+4. **Average.** `aggregate_scores.py` with one entry per type and no EIC weights. The final rating is the plain mean of the types' Overall ratings, with no override and no Devil's Advocate cap. The top concerns and the revision roadmap come from the most severely graded reject reasons.
+
+Delegation only for information the context cannot reach, such as a literature search. Evaluation: pipeline `ledger` in `.github/workflows/iclr-calibration.yml` with `evals/ledger_prompt.md` (same outputs as full mode, plus `ledger.json`). The workflow's push trigger now lists only `claude/next-independent-check`, so bringing the earlier run configs onto the development branch starts no run.
+
 ### 2.13 withdrawn (never released)
 
 The review rules return to 2.10.1. On six ICLR 2026 papers with GPT-6.1 Terra (`high`), 2.13 ranked no better than 2.10.1 (reviewer-pool Spearman +0.32 vs +0.38) and compressed the panel's pool positions into an 8-point range (2.10.1: 28 points), smaller than run-to-run noise (`evals/REPORT_iclr2026_pilots.md`, "Where 2.13 stands"). Fixing the primary claim in Phase 0 also locked the review into its first reading: the control paper fell because its primary claim was judged incremental.
