@@ -10,7 +10,7 @@ One agent does the whole review in one context, in five steps:
 
 There are no separate reviewer agents, no Editor-in-Chief and no override. The only weighting is the aspect ratio. Delegate only to get information this context cannot reach, such as a literature search the host can run only in a subagent. Never delegate to obtain a reviewer's judgment.
 
-Hard Rules 1–4 and 6–10 of `SKILL.md` apply. Hard Rule 5, the Devil's Advocate cap, has no counterpart: a fatal reason lowers the rating of every type that judges it fatal, and the average carries it. Read `references/quality_rubrics.md`, `references/review_criteria_framework.md`, `references/error_audit.md` and `references/venue_profiles.md` before Step 1. For a CV or ML paper, also read `references/cv_review_checklist.md`. Always read `references/task_neighbors.md`: each task has its own neighboring fields. Read `references/statistical_reporting_standards.md` when the paper reports quantitative comparisons.
+All ten Hard Rules of `SKILL.md` apply. Hard Rule 5 here is traceability: every grade, score and revision item names its ledger ID. Panel mode's Devil's Advocate cap has no counterpart: a fatal reason lowers the rating of every type that judges it fatal, and the average carries it. Read `references/quality_rubrics.md`, `references/review_criteria_framework.md`, `references/error_audit.md` and `references/venue_profiles.md` before Step 1. For a CV or ML paper, also read `references/cv_review_checklist.md`. Always read `references/task_neighbors.md`: each task has its own neighboring fields. Read `references/statistical_reporting_standards.md` when the paper reports quantitative comparisons.
 
 ---
 
@@ -201,6 +201,8 @@ Then derive the summary from the ledger and the reviews:
 ---
 
 ## Output (`review.md`)
+
+Lay the output out with `templates/ledger_review_template.md`, in this order:
 
 1. **Header.** Paper, paper type, field, task and its neighboring fields, target venue and its aspect ratio, date, mode `full` (ledger review), and the line "One context: the reviewer types share one model and one reading, so their judgments are not independent."
 2. **Paper memory.**

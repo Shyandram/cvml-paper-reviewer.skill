@@ -1,6 +1,6 @@
 ## This phase: literature check (Phase 1.5) and report check (Phase 1.6)
 
-The five reports are written. Read `{SKILL}/SKILL.md` (Hard Rules, Phases 1.5 and 1.6),
+The five reports are written. Read `{SKILL}/SKILL.md` (Hard Rules), Phases 1.5 and 1.6 in `{SKILL}/references/panel_mode.md`,
 `{SKILL}/references/literature_search.md` and Step 0 of
 `{SKILL}/agents/editorial_synthesizer_agent.md`. The paper (redacted copy) is `{COPY}`; the
 paper memory is `{RES}/phase0/paper_memory.md`; the reports are

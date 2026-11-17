@@ -8,7 +8,7 @@ Your context already holds everything you need: the skill text, the paper memory
 card and the redacted paper (in the system prompt). The paper is also at `{COPY}` if you want
 to search it with Grep. Do not read any other file under `{RES}/`.
 
-Follow `SKILL.md` Phase 1 and your role file below. Use
+Follow Phase 1 of `references/panel_mode.md` and your role file below. Use
 `templates/peer_review_report_template.md` (the Devil's Advocate uses the format in its role
 file). Before scoring, apply `references/quality_rubrics.md`: state the paper's **pool
 position** first, then score within the matching band.

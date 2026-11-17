@@ -97,7 +97,7 @@ Length: 600–1000 words, excluding tables.
 
 ## Quick Review Mode
 
-In quick mode you are the only one reading the paper: you give a streamlined assessment yourself, and the five reviewers are not activated. Read the whole paper anyway. Quick refers to the length of the output, not to how carefully you read.
+Since 3.0, quick mode runs the ledger review's Steps 0–2 in short form (`SKILL.md`, *Quick mode*; `agents/ledger_reviewer_agent.md`): only the reasons that could decide the outcome, and at most three probes. No reviewer types and no panel are used. Read the whole paper anyway. Quick refers to the length of the output, not to how carefully you read. This section gives the output format; its strengths and concerns are the top accept and reject reasons, with their ledger IDs.
 
 If the manuscript is partial (an abstract or outline only), say which sections could not be assessed and leave the Overall verdict as "not assessable" rather than guessing.
 
@@ -114,14 +114,14 @@ If the manuscript is partial (an abstract or outline only), say which sections c
 [Your gut reaction as a senior reviewer]
 
 ### Key Strengths (top 3)
-1. [strength]
-2. [strength]
-3. [strength]
+1. A[n]: [strength] ([location])
+2. A[n]: [strength]
+3. A[n]: [strength]
 
 ### Key Concerns (top 3)
-1. [concern + suggestion]
-2. [concern + suggestion]
-3. [concern + suggestion]
+1. R[n]: [concern + suggestion] ([location]; probed in P[n] / open)
+2. R[n]: [concern + suggestion]
+3. R[n]: [concern + suggestion]
 
 ### Preliminary Scores
 | Dimension | Score (1–4) | Brief Rationale |
@@ -132,11 +132,11 @@ If the manuscript is partial (an abstract or outline only), say which sections c
 | Originality | [score] | [1 sentence] |
 
 ### Overall Verdict
-**[Score 1–6]**: [1–2 sentence justification]
+**Likely outcome band: [e.g., Overall 3–4 at ICLR]**, from pool position [band]: [1–2 sentences naming the deciding IDs]
 
 ### What Would Move This Paper Up or Down?
-- **To raise the score**: [specific actions]
-- **What would lower it further**: [specific risks]
+- **To raise the score**: [specific actions, with the R IDs they resolve]
+- **What would lower it further**: [the open reasons that, if confirmed, would move it down]
 
 ### Submission Readiness Check
 *From `references/submission_readiness_checklist.md`: list only the items that fail or are uncertain.*
@@ -146,7 +146,7 @@ If the manuscript is partial (an abstract or outline only), say which sections c
 
 **Readiness verdict**: [Ready / Ready after quick fixes (< 1 day) / Needs substantive work]
 
-*Want a full five-reviewer review (with an EIC meta-review) or a methodology audit next?*
+*Want a full review (ledger, reviewer types and an aspect-weighted decision) or a methodology audit next?*
 ```
 
 ---
@@ -154,6 +154,8 @@ If the manuscript is partial (an abstract or outline only), say which sections c
 ## Re-Review Mode
 
 In re-review mode, you verify whether revisions adequately address the original review comments.
+
+Since 3.0, the items are the earlier review's reject reasons, by ledger ID (R1, R2, …). Each verification is a probe against the revised manuscript. Afterwards, the ledger is updated and the reviewer types re-score it (`SKILL.md`, *Re-review mode*). For a 2.x panel review, the items are its Roadmap entries, as below.
 
 ### Re-Review Process
 

@@ -49,6 +49,7 @@ ROLES = {  # key -> (role label used by aggregate_scores.py, agent file, title)
 # Skill files every reviewer reads, in a fixed order (the cached prefix).
 SHARED_SKILL_FILES = [
     "SKILL.md",
+    "references/panel_mode.md",
     "references/quality_rubrics.md",
     "references/review_criteria_framework.md",
     "references/statistical_reporting_standards.md",

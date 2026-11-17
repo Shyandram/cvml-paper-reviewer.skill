@@ -201,23 +201,21 @@ Then push `evals/iclr_run.json` on a branch listed in the workflow's `push` trig
 ```
 academic-paper-reviewer.skill          ← packaged skill (zip), the file you install
 academic-paper-reviewer/               ← skill source
-├── SKILL.md                           ← entry point: modes, workflow, hard rules
-├── agents/                            ← one file per role
-│   ├── field_analyst_agent.md         (Phase 0: panel configuration)
-│   ├── eic_agent.md                   (EIC meta-reviewer: final decision; quick, re-review, coaching)
-│   ├── generalist_reviewer_agent.md   (R4: venue fit, presentation)
-│   ├── methodology_reviewer_agent.md  (R1; methodology-focus mode)
-│   ├── domain_reviewer_agent.md       (R2)
-│   ├── perspective_reviewer_agent.md  (R3)
-│   ├── devils_advocate_reviewer_agent.md
-│   ├── ledger_reviewer_agent.md       (full mode: ledger, aspect ratio, reviewer types, weighted mean)
-│   ├── gap_scout_agent.md             (post-review analysis: anticipated reviewer concerns)
-│   ├── editorial_synthesizer_agent.md (Phase 2)
-│   └── rebuttal_strategist_agent.md   (rebuttal mode)
-├── references/                        ← rubrics, standards, checklists, venue profiles
-├── templates/                         ← report, decision, rebuttal, response-letter formats
-├── scripts/aggregate_scores.py        ← score aggregation + venue views (+ example_scores.json)
-├── scripts/integrity_scan.py          ← Phase 0 scan for text addressed to reviewers/AI (prompt injection)
+├── SKILL.md                           ← entry point: core concepts, hard rules, modes, file map
+├── agents/
+│   ├── ledger_reviewer_agent.md       (full mode and the modes built on it: ledger, probes, roster, types, weighted mean)
+│   ├── methodology_reviewer_agent.md  (methodology-focus audit tables; panel R1)
+│   ├── eic_agent.md                   (quick format, re-review protocol; panel EIC meta-review)
+│   ├── rebuttal_strategist_agent.md   (rebuttal mode)
+│   ├── gap_scout_agent.md             (optional post-review analysis)
+│   └── field_analyst, domain, perspective, generalist, devils_advocate, editorial_synthesizer  (panel mode only)
+├── references/
+│   ├── task_neighbors.md              (each task's neighboring fields: roster, cross-field novelty)
+│   ├── panel_mode.md                  (the 2.x five-reviewer workflow and its DA cap)
+│   └── …                              (rubrics, criteria, error audit, statistics, CV checklist, venues, literature search)
+├── templates/                         ← ledger review, panel report, decision, rebuttal, response-letter formats
+├── scripts/aggregate_scores.py        ← aspect ratio, aspect-weighted mean, venue views; panel aggregation
+├── scripts/integrity_scan.py          ← setup scan for text addressed to reviewers/AI (prompt injection)
 ├── scripts/related_search.py          ← literature check: fingerprint, concept search, self-exclusion filter, verify, baseline scout, coverage, similarity, claim-level novelty profile
 ├── scripts/venues.json                ← venue profiles (emphasis, bar, scale, form fields)
 └── examples/                          ← worked, fully fictional examples

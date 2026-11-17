@@ -1,6 +1,6 @@
 ## This phase: Phase 0 (field analysis, panel, paper memory)
 
-Read `{SKILL}/SKILL.md` (the Hard Rules and "Phase 0"), `{SKILL}/agents/field_analyst_agent.md`
+Read `{SKILL}/SKILL.md` (the Hard Rules), "Phase 0" in `{SKILL}/references/panel_mode.md`, `{SKILL}/agents/field_analyst_agent.md`
 and Section 3 of `{SKILL}/references/error_audit.md`. Then read the complete paper:
 `{PAPER}`.
 

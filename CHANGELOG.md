@@ -51,6 +51,28 @@ Full mode uses it in three places:
 
 The rows describe lines of work, never specific papers.
 
+### The whole skill is reorganized around the ledger (`SKILL.md`, `references/panel_mode.md`)
+
+- **`SKILL.md` is rebuilt.** It now has:
+  - a *Core Concepts* table: paper memory, ledger, probe, task neighbors, aspect ratio, reviewer types, pool position, final rating;
+  - mode-neutral Hard Rules;
+  - one section per mode;
+  - a file map grouped by mode.
+
+  The 2.x Phase 0–2.5 workflow, the Configuration Card and the panel scoring and quality rules moved, unchanged, to the new `references/panel_mode.md`.
+- **Hard Rule 5** is now traceability: every grade, score, top concern and Roadmap entry names its ledger ID. The Devil's Advocate cap is panel mode's own rule, in `references/panel_mode.md`.
+- **Hard Rule 3** covers reviewer types as well as panel personas.
+- **Hard Rule 9** places the integrity scan in setup for every mode.
+- **Every other mode is built on the ledger:**
+  - **quick:** Steps 0–2 in short form, at most three probes and a likely outcome band. Strengths and concerns carry their ledger IDs.
+  - **methodology-focus:** the ledger on rigor, validation and reproducibility, with every open reason probed. It fills the audit tables.
+  - **guided:** the ledger and the types revealed one step at a time.
+  - **rebuttal:** the ledger is built before the reviews are read. Each received point is mapped to a ledger item, and the probes decide its triage.
+  - **re-review:** the earlier reject reasons are the checklist. Each is probed against the revision before the letter is read, then the ledger is updated and re-scored.
+- **`compare venues`** re-averages the same types with each venue's aspect ratio.
+- **New template, `templates/ledger_review_template.md`:** the full-mode output layout, from the header with the aspect ratio through the Roadmap.
+- **Revised:** the quick format and the re-review notes in `agents/eic_agent.md`. The split-pipeline prompts and `evals/review_prompt.md` now read `references/panel_mode.md`.
+
 ### Scripts and evaluation
 
 - `scripts/aggregate_scores.py`:
