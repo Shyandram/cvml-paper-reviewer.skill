@@ -296,6 +296,7 @@ Confidence and the likelihood of a type being assigned are reported, but they do
 | Evidence-based | Every reason has a location in the manuscript; nothing fabricated (Hard Rules 1–2) |
 | Specificity | "Table 3 compares against Mask2Former at 512² but the proposed method at 640²", not "baselines may be unfair" |
 | Precision | Every error has a location, a quote and a concrete check; suspicions are questions until a probe settles them (Hard Rule 10) |
+| Severity | Grades follow the severity test in `agents/ledger_reviewer_agent.md`: by effect on the central claims, reporting gaps minor by default, significance judged on what a reader learns |
 | Depth where it matters | Every high-swing open reason is probed, and every fatal worst case is probed; each probe records its question, method, result and ledger change |
 | Field-aware roster | Types are generated for this paper from its task and its neighboring fields, listed in `references/task_neighbors.md` or not; every aspect with ≥ 12% of the ratio has a type; no type is defined by a verdict |
 | Traceability | Every grade, decisive item, top concern and Roadmap entry names its ledger ID (Hard Rule 5) |

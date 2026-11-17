@@ -150,6 +150,7 @@ Write the reviews in roster order. Each review argues from the ledger:
 1. **Reading of the ledger.** Name the items that matter to this type, by ID.
    - For each accept reason it relies on, say why it holds, or why it is discounted from this type's expertise.
    - For each reject reason it weighs, grade it **fatal / major / minor / not a concern**, with one line on why. The grade can never exceed that reason's worst case, and an unsettled `question` is never graded above minor.
+   - Grade by the **severity test** below, never by how many items are missing.
    - Items the review does not name count as neutral.
 2. **New reasons.** If this type sees a reason missing from the ledger, it first adds the reason to the ledger as the next A or R, marked "added in T3 review", with the same evidence requirements. Only then may it use the reason. Later types see the addition. A review never raises a point that is not in the ledger.
 3. **Opinion.** Write 120–250 words in the type's voice: its overall judgment and what would change its mind. End with a line naming the deciding items, for example: `Decisive: R2 (major), A1 (strong), A4 ↔ R6 (A4 holds)`.
@@ -173,6 +174,32 @@ If two types reach the same verdict for the same reasons, that is expected. Do n
   - If the reason was among the type's decisive items, the type's scores are updated too.
 - When a split rests on **values** (how much the point matters to that expertise), it stays. That is the disagreement the roster exists to show.
 - Run at most one such round.
+
+### Severity test (applies to every grade)
+
+A grade measures what the reason does to the paper's **central claims**, as the venue's reviewers would see it. It does not measure how far the paper falls short of an ideal paper.
+
+| Grade | The reason, if upheld, … |
+|---|---|
+| **fatal** | shows a central claim is false, or that its evidence is invalid (leakage, a wrong metric, an error that reverses the main result) |
+| **major** | leaves a central claim unsupported: the evidence offered cannot carry it, or a plausible alternative explanation could reverse it, and nothing else in the paper supports it |
+| **minor** | leaves the claims standing but less well reported, less general or less convincing than they could be |
+| **not a concern** | does not bear on any claim at this venue |
+
+Rules for applying the test:
+
+- **Reporting gaps are minor by default.** Missing seeds or variance, an unstated split or hyperparameter, a missing training detail, unreleased code, a single backbone, or a missing ablation are minor unless the type shows, from the ledger, both of these:
+  - the central claim rests on the missing item;
+  - the item could plausibly reverse it. For example, a margin within the plausible run-to-run noise of that setup, or a baseline that is plausibly untuned while the method is tuned.
+
+  Most accepted papers at top venues have several such gaps. Their count does not add up to a major reason, and many minor reasons never make a fatal one.
+- **An untested claim is major only if it is central.** A headline claim the experiments never test is major. A secondary claim in the introduction that is never tested is minor; it is an overclaim to fix in wording.
+- **Weigh what the evidence does show.** Before grading a gap major, the type names the accept reasons that bear on the same claim (the pairs). Where large, consistent results across several settings support the claim, a missing variance estimate is minor.
+- **Significance is judged on what a reader learns.** This matters most for benchmark, analysis and empirical-study papers, but applies to all:
+  - The significance type asks what a researcher could not have known or guessed before reading the paper.
+  - It also asks whether the setting is realistic enough for the conclusions to transfer, for example in scale, sequence length or data.
+  - Thorough, careful execution is technical rigor, not significance. A benchmark that confirms what practitioners expected, in a setting smaller than the one they use, has modest significance however rigorous it is.
+- **Calibrate the voice to the venue.** Each type asks: "Would most reviewers at this venue, with my expertise, call this a reason to reject?" If not, the reason is minor for that type, even if the type would fix it in its own paper.
 
 ## Step 5: The average
 
