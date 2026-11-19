@@ -1,0 +1,191 @@
+{
+ "note": "Pairwise pilot: one bare judge (no skill) per ordered pair reads both blinded papers and picks the stronger ICLR submission, with an ICLR rating for each. 3 test papers vs anchors C and D and vs each other, both orders. Single runs; ids, winners and ratings only.",
+ "papers": {
+  "Jw7khYzYzl": "anchor C (reject 2,4,4,6)",
+  "E7YpL4L4Xh": "anchor D (accept 4,4,6,6)",
+  "RBktryANQ9": "test reject 2,2,4,4",
+  "9R2iUHhVfr": "test reject 4,4,4,6",
+  "xxYPqm1qWz": "test accept 4,6,8,8"
+ },
+ "pairs": [
+  {
+   "paper1": "Jw7khYzYzl",
+   "paper2": "9R2iUHhVfr",
+   "winner": "Jw7khYzYzl",
+   "margin": "clear",
+   "rating1": 6,
+   "rating2": 4,
+   "recognized_any": true
+  },
+  {
+   "paper1": "Jw7khYzYzl",
+   "paper2": "RBktryANQ9",
+   "winner": "Jw7khYzYzl",
+   "margin": "strong",
+   "rating1": 6,
+   "rating2": 2,
+   "recognized_any": true
+  },
+  {
+   "paper1": "Jw7khYzYzl",
+   "paper2": "xxYPqm1qWz",
+   "winner": "Jw7khYzYzl",
+   "margin": "clear",
+   "rating1": 6,
+   "rating2": 4,
+   "recognized_any": true
+  },
+  {
+   "paper1": "E7YpL4L4Xh",
+   "paper2": "9R2iUHhVfr",
+   "winner": "E7YpL4L4Xh",
+   "margin": "slight",
+   "rating1": 6,
+   "rating2": 4,
+   "recognized_any": true
+  },
+  {
+   "paper1": "E7YpL4L4Xh",
+   "paper2": "RBktryANQ9",
+   "winner": "E7YpL4L4Xh",
+   "margin": "strong",
+   "rating1": 6,
+   "rating2": 2,
+   "recognized_any": true
+  },
+  {
+   "paper1": "E7YpL4L4Xh",
+   "paper2": "xxYPqm1qWz",
+   "winner": "xxYPqm1qWz",
+   "margin": "slight",
+   "rating1": 4,
+   "rating2": 6,
+   "recognized_any": false
+  },
+  {
+   "paper1": "9R2iUHhVfr",
+   "paper2": "Jw7khYzYzl",
+   "winner": "Jw7khYzYzl",
+   "margin": "slight",
+   "rating1": 4,
+   "rating2": 6,
+   "recognized_any": true
+  },
+  {
+   "paper1": "9R2iUHhVfr",
+   "paper2": "E7YpL4L4Xh",
+   "winner": "E7YpL4L4Xh",
+   "margin": "slight",
+   "rating1": 4,
+   "rating2": 6,
+   "recognized_any": true
+  },
+  {
+   "paper1": "9R2iUHhVfr",
+   "paper2": "RBktryANQ9",
+   "winner": "9R2iUHhVfr",
+   "margin": "strong",
+   "rating1": 6,
+   "rating2": 2,
+   "recognized_any": true
+  },
+  {
+   "paper1": "9R2iUHhVfr",
+   "paper2": "xxYPqm1qWz",
+   "winner": "xxYPqm1qWz",
+   "margin": "slight",
+   "rating1": 4,
+   "rating2": 6,
+   "recognized_any": true
+  },
+  {
+   "paper1": "RBktryANQ9",
+   "paper2": "Jw7khYzYzl",
+   "winner": "Jw7khYzYzl",
+   "margin": "strong",
+   "rating1": 2,
+   "rating2": 6,
+   "recognized_any": false
+  },
+  {
+   "paper1": "RBktryANQ9",
+   "paper2": "E7YpL4L4Xh",
+   "winner": "E7YpL4L4Xh",
+   "margin": "strong",
+   "rating1": 2,
+   "rating2": 6,
+   "recognized_any": false
+  },
+  {
+   "paper1": "RBktryANQ9",
+   "paper2": "9R2iUHhVfr",
+   "winner": "9R2iUHhVfr",
+   "margin": "strong",
+   "rating1": 2,
+   "rating2": 6,
+   "recognized_any": true
+  },
+  {
+   "paper1": "RBktryANQ9",
+   "paper2": "xxYPqm1qWz",
+   "winner": "xxYPqm1qWz",
+   "margin": "strong",
+   "rating1": 2,
+   "rating2": 6,
+   "recognized_any": false
+  },
+  {
+   "paper1": "xxYPqm1qWz",
+   "paper2": "Jw7khYzYzl",
+   "winner": "xxYPqm1qWz",
+   "margin": "slight",
+   "rating1": 6,
+   "rating2": 4,
+   "recognized_any": true
+  },
+  {
+   "paper1": "xxYPqm1qWz",
+   "paper2": "E7YpL4L4Xh",
+   "winner": "xxYPqm1qWz",
+   "margin": "clear",
+   "rating1": 6,
+   "rating2": 4,
+   "recognized_any": true
+  },
+  {
+   "paper1": "xxYPqm1qWz",
+   "paper2": "9R2iUHhVfr",
+   "winner": "xxYPqm1qWz",
+   "margin": "slight",
+   "rating1": 6,
+   "rating2": 4,
+   "recognized_any": true
+  },
+  {
+   "paper1": "xxYPqm1qWz",
+   "paper2": "RBktryANQ9",
+   "winner": "xxYPqm1qWz",
+   "margin": "strong",
+   "rating1": 6,
+   "rating2": 2,
+   "recognized_any": true
+  }
+ ],
+ "summary": {
+  "first_position_wins": "10/18",
+  "order_split_pairs": 1,
+  "wins": {
+   "xxYPqm1qWz": "7/8",
+   "Jw7khYzYzl": "5/6",
+   "E7YpL4L4Xh": "4/6",
+   "9R2iUHhVfr": "2/8",
+   "RBktryANQ9": "0/8"
+  },
+  "placement": {
+   "xxYPqm1qWz": "above D (both orders) -> accept side, correct",
+   "9R2iUHhVfr": "below C and D (both orders) -> reject, correct (false accept in the 2.10.1 run)",
+   "RBktryANQ9": "below all -> reject, correct"
+  },
+  "anchor_order": "C beat D in neither direct comparison (not run); C beat W5 once and Q9 twice: the judge rates the rigorous benchmark C at 6 in 5 of 6 pairs"
+ }
+}
