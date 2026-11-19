@@ -1191,6 +1191,122 @@ them: every weakness tied to a location, evidence and a fix, more checks with a 
 against each other, selection on the test set), evaluated with seeded defects, at lower cost.
 Score calibration and repeated runs are not pursued: neither changes the review.
 
+## Score compression: diagnosis and four attempted fixes
+
+Neither the skill nor the bare model gives high scores. Of 430 skill reviewer Overalls on the 86
+papers only 4 are 5 (all from R3), and the final Overall is 3 on 67 papers. The bare model gives
+ICLR 8 to none of 85 and 4 to 68. The 336 human reviews give 8 to 23. The sections below locate
+the problem and test four fixes. The fixes ran on three test-split papers, one run each (Overall
+noise about 0.7), except the recalibration, which uses the existing 86 runs. Data:
+`evals/iclr2026_hit_conditional.json`, `_hit_scoring.json`, `_important_hits.json`,
+`_important_hits_bare.json`, `_recalibration.json`, `_anchor_ab.json`, `_pairwise_pilot.json`,
+`_advocate_pilot.json`.
+
+### Detection is not the problem
+
+- **Hit-conditional agreement** (`evals/hit_conditional.py`, 82 papers, 315 human reviewers). For
+  each human reviewer, is their first main point among the skill's issues? Hit reviewers agree
+  with the skill's score more often, but only because negative reviewers write more weaknesses
+  and are easier to hit. Within each human-rating stratum the skill's score is the same whether
+  it raised the point or not: it sits at 2.8–3.25 whatever the human rated.
+- **Oracle hit-only scoring** (`evals/hit_scoring.py`). Scoring each paper from only the skill
+  issues that match a human issue does not beat the panel: Spearman with the human mean 0.42
+  against the panel's 0.44. The hit fraction has AUC 0.74 against 0.62, but the difference's CI
+  (−0.04 to +0.27) includes 0. The 4 false accepts have hit fractions like the accepted papers'.
+- **Important-issue recall** (`evals/important_hits.py`). The skill finds 71% of the issues two or
+  more humans raised, and recall is unrelated to its score (|ρ| < 0.25 for every definition of
+  "important").
+- **The bare model behaves the same** (81 papers): 23.3 main issues per paper against 22.3,
+  recall 47% against 46%, consensus recall 75% against 72%, ρ with the human mean 0.42 against
+  0.44, and the same pile-up in the middle. The decoupling of detection from score comes from the
+  model, not from the skill's process.
+
+### Fix 1: post-hoc recalibration (no new runs)
+
+`evals/recalibrate.py` fits a monotone quantile map on the train split (45 papers) and scores
+the test split (41 papers, 11 accepted). The accept threshold is set on train to accept the
+train accept rate.
+
+| Signal | test ρ | accept AUC (95% CI) | accepted / correct / false | accept-side agreement |
+|---|---|---|---|---|
+| skill final Overall | 0.49 | 0.60 (0.49–0.72) | 4 / 1 / 3 | 0.68 |
+| skill reviewer pool | 0.51 | 0.69 (0.50–0.86) | 13 / 6 / 7 | 0.71 |
+| skill EIC pool | 0.51 | 0.68 (0.48–0.86) | 8 / 4 / 4 | 0.73 |
+| bare rating (+ confidence) | 0.51 | 0.69 (0.53–0.83) | 10 / 5 / 5 | 0.73 |
+
+The map doubles the spread (SD about 0.4 → 0.85; the test human mean has 1.39, the train human
+mean 0.84) but cannot change ranking or AUC. The best accept-side agreement, 0.73, equals
+rejecting every paper (30/41). It fixes how the scores look, not the judgment. If recalibration is
+used, it should map the continuous pool position, not the integer Overall.
+
+### Fix 2: calibration anchors (skill f3c7d36, `references/calibration_anchors.md`)
+
+Five train-split papers described without titles (A ≈ 10 … E ≈ 88 on the pool), and each type
+brackets the paper between two anchors before its pool position. A bare variant (bareA) reads the
+same file.
+
+| Arm | RBktryANQ9 (reject 2,2,4,4) | 9R2iUHhVfr (reject 4,4,4,6) | xxYPqm1qWz (accept 4,6,8,8) |
+|---|---|---|---|
+| bare (ICLR) | 2 | 4 | 6 |
+| bare + anchors | 2 | 4 | 4 |
+| skill, no anchors (Overall / mean type pool) | 2 / 19.8 | 3 / 48.6 | 3 / 47.2 |
+| skill + anchors | 2 / 19.5 | 3 / 44.0 | 3 / 51.8 |
+
+The anchors move the skill's pool positions in the right direction by about 5 points (the
+accepted paper now ranks above the false accept), but nowhere near the accept line (about 62), so
+no Overall changes. In the bare prompt they lower the accepted paper from 6 to 4. Described
+anchors do not spread the scores. They stay in the skill marked "under evaluation", and should
+not be relied on.
+
+### Fix 3: pairwise comparison (bare judge, full texts)
+
+One bare judge per ordered pair reads both blinded papers and picks the stronger ICLR
+submission, with an ICLR rating for each. The three test papers were compared with anchors C
+(Jw7khYzYzl, reject) and D (E7YpL4L4Xh, accept) and with each other, in both orders (18 judgments).
+
+| Paper | Human | Wins | Ratings given |
+|---|---|---|---|
+| xxYPqm1qWz | accept 4,6,8,8 | 7/8 | 6 seven times, 4 once |
+| anchor C | reject 2,4,4,6 | 5/6 | 6 five times |
+| anchor D | accept 4,4,6,6 | 4/6 | 6 or 4 |
+| 9R2iUHhVfr | reject 4,4,4,6 | 2/8 (beats RBkt only) | mostly 4 |
+| RBktryANQ9 | reject 2,2,4,4 | 0/8 | 2 every time |
+
+- **All three test papers are placed correctly.** xxYP beats D in both orders, on the accept
+  side. Scored alone, the same model gave it 4–6 and the skill gave 3. The former false accept
+  9R2 loses to C and D in both orders. RBkt loses every pair.
+- **High scores appear.** A judge that has just read a paper it finds clearly weaker gives 6.
+- **Position bias is small.** The first paper wins 10 of 18, and 1 of 9 pairs splits by order.
+- **The judge overrates anchor C,** the rigorous benchmark without an insight that ICLR rejected
+  (6 in 5 of 6 pairs). This is the failure the contribution check targets.
+- **Caveats.** The judges recognized most titles. The scale is three papers and single runs.
+
+### Fix 4: an advocate type (skill 7163a25 + one type, scratch copy only)
+
+The roster's last type, TA (aspect `significance`), sorts the other types' fatal and major
+reasons into answerable (a missing detail, a clarification, a toned-down claim) and blocking (a
+wrong result, an unsupported central claim, a missing experiment). It then scores the paper as
+if the answerable ones were answered, under the same evidence rules.
+
+| Paper | other types, mean pool | advocate pool (Overall) | final |
+|---|---|---|---|
+| RBktryANQ9 (reject) | 20.0 | 30 (3) | 2 |
+| 9R2iUHhVfr (reject) | 55.6 | 70 (4) | 3 |
+| xxYPqm1qWz (accept) | 50.0 | 65 (4) | 3 |
+
+The advocate does not separate the papers. It puts the rejected 9R2 above the accepted xxYP,
+because 9R2's weaknesses (contamination evidence, harness parity) look answerable. With it in
+the roster the other types also rose on 9R2 (48.6 → 55.6). One vote among 6–8 moves no final
+Overall. It is not merged.
+
+### Conclusion
+
+Only full-text pairwise comparison placed all three papers. Recalibration and described anchors
+change the scale, not the judgment, and the advocate adds noise in the wrong direction. Next
+step, pending approval because it exceeds the three-paper limit: pairwise comparison with anchor
+C and D full texts on 20–30 test papers, both orders, local agents. Before that, either replace
+anchor C or add a second reject anchor, and record recognition per judgment.
+
 ## Reading
 
 - Haiku has no signal: all scores sit near the acceptance bar (EIC pool position 38–50) whatever the paper.

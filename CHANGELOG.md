@@ -90,6 +90,10 @@ The rows describe lines of work, never specific papers.
   - The push trigger lists only `claude/next-independent-check`, so bringing the earlier run configs onto the development branch starts no run.
 - Renamed headings: "Full Review" becomes "Panel" in the EIC, methodology and synthesizer agents, the decision template and the CV example.
 
+### Calibration anchors (under evaluation, `references/calibration_anchors.md`)
+
+Five train-split ICLR 2026 papers, described without titles, from a clear reject (pool about 10) to a clear accept (about 88). Each reviewer type brackets the paper between two anchors, by ledger ID, before it writes its pool position. Placing a paper above the borderline-reject anchor C needs an accept reason that shows something new working or explained. On a three-paper A/B the anchors moved pool positions in the right direction by about 5 points but changed no Overall. In a bare prompt they lowered the accepted paper. Full-text pairwise comparison against the anchors placed all three papers correctly. Recalibration and an advocate type did not (`evals/REPORT_iclr2026_pilots.md`, *Score compression*). The anchors stay pending a larger pairwise evaluation.
+
 ### Since 2.10.1, also in 3.0
 
 #### 2.13 withdrawn (never released)
