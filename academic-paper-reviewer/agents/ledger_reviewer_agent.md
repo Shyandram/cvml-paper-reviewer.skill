@@ -154,7 +154,7 @@ Write the reviews in roster order. Each review argues from the ledger:
 2. **New reasons.** If this type sees a reason missing from the ledger, it first adds the reason to the ledger as the next A or R, marked "added in T3 review", with the same evidence requirements. Only then may it use the reason. Later types see the addition. A review never raises a point that is not in the ledger.
 3. **Opinion.** Write 120–250 words in the type's voice: its overall judgment and what would change its mind. End with a line naming the deciding items, for example: `Decisive: R2 (major), A1 (strong), A4 ↔ R6 (A4 holds)`.
 4. **Scores.** These follow from the decisive items. They do not follow from tone or from the previous type's numbers.
-   - First the **pool position**: the share of the venue's submissions this paper beats, in this type's view, with the decisive IDs as its basis.
+   - First the **pool position**: the share of the venue's submissions this paper beats, in this type's view, with the decisive IDs as its basis. Place it against the calibration anchors (`references/calibration_anchors.md`): name the anchor just below and the anchor just above, each with the ledger IDs that put the paper on that side, and keep the pool position between their positions. Write the bracket in the review, for example `Bracket: above B (A2, A5), below C (R3)`.
    - Then the seven dimension scores (0–100), inside the pool position's band (`references/quality_rubrics.md`).
    - Then **Overall** (1–6) and **Confidence** (1–5). Confidence reflects how well this type's expertise covers the paper.
 

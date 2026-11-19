@@ -47,6 +47,7 @@ These concepts are shared by every mode except `panel`. The procedure is in `age
 | **Aspect ratio** | Each aspect's share of the decision at the target venue: the paper-type weights times the venue's emphasis. Novelty counts more at ICLR than at TMLR, and evaluation more at CVPR. | `scripts/aggregate_scores.py ratio`, `scripts/venues.json` |
 | **Reviewer types** | The 4–8 kinds of reviewer the venue would assign. Each is defined by expertise and values, never by verdict, and speaks for one primary aspect. Outside types come from the task's neighbors. | Step 3 |
 | **Pool position** | The share of the venue's submissions the paper beats. It is stated before the scores, which must fall in its band. | `references/quality_rubrics.md` |
+| **Calibration anchors** | Five reference papers with known outcomes, from the reject end to a clear accept. Each type brackets the paper between two of them before stating its pool position, so scores spread across the pool instead of collecting in the middle. | `references/calibration_anchors.md` |
 | **Final rating** | The mean of the types' Overall ratings, weighted by the aspect ratio. There is no override. | Step 5, `scripts/aggregate_scores.py` |
 
 ---
@@ -340,6 +341,7 @@ Confidence and the likelihood of a type being assigned are reported, but they do
 | `references/error_audit.md` | Paper memory, error categories E1–E9, omission sweep, precision rules |
 | `references/statistical_reporting_standards.md` | Papers with quantitative comparisons |
 | `references/literature_search.md` | The literature check in Step 1 and novelty probes |
+| `references/calibration_anchors.md` | Before each pool position: the five anchors and how to bracket a paper |
 | `references/quality_rubrics.md` | Before scoring: pool-position bands, 0–100 rubrics, weights, mappings |
 | `references/venue_profiles.md` | Always: venue forms, scales (with verification status), emphasis, rebuttal rules |
 | `references/editorial_decision_standards.md` | Overall definitions, journal mapping |

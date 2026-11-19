@@ -1,0 +1,10 @@
+{
+ "note": "Paper ids behind references/calibration_anchors.md. All from the train split of evals/work/benchmarks/iclr2026/sample.jsonl; never use them as test papers. Ids and human ratings only.",
+ "anchors": {
+  "A": {"paper_id": "3OnJAvuxd3", "ratings": [2, 2, 2, 4], "decision": "Reject"},
+  "B": {"paper_id": "8xcmfwomnI", "ratings": [2, 2, 4, 4], "decision": "Reject"},
+  "C": {"paper_id": "Jw7khYzYzl", "ratings": [2, 4, 4, 6], "decision": "Reject"},
+  "D": {"paper_id": "E7YpL4L4Xh", "ratings": [4, 4, 6, 6], "decision": "Accept (Poster)"},
+  "E": {"paper_id": "rubeJmT1XM", "ratings": [4, 6, 6, 8], "decision": "Accept (Poster)"}
+ }
+}
