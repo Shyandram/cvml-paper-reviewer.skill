@@ -1,0 +1,53 @@
+{
+ "note": "False accepts of skill 2.10.1 (panel, Sonnet high) on the 86 ICLR 2026 papers, by human tier. reject_clear: not accepted and every human rating <= 4; reject_borderline: not accepted, some rating >= 6. False accept: final Overall >= 4. 'recognized' is the reviewing agent's own report that it knew the paper. Numbers and paper IDs only.",
+ "tiers": {
+  "reject_clear": {
+   "n": 25,
+   "final_ge4": 0,
+   "final_ge4_ids": []
+  },
+  "reject_borderline": {
+   "n": 38,
+   "final_ge4": 4,
+   "final_ge4_ids": [
+    "5p1Ucqfd1A",
+    "9R2iUHhVfr",
+    "Jw7khYzYzl",
+    "RgOHRYHX5L"
+   ]
+  },
+  "accept": {
+   "n": 23,
+   "final_ge4": 5,
+   "final_ge4_ids": [
+    "BDnOrExHmt",
+    "E7YpL4L4Xh",
+    "a6CVQpjbXq",
+    "euMVC1DO4k",
+    "qCaq3jGb0S"
+   ]
+  }
+ },
+ "by_recognized": {
+  "recognized=False,accepted=False": {
+   "n": 55,
+   "final_ge4": 0,
+   "mean_panel": 2.93
+  },
+  "recognized=False,accepted=True": {
+   "n": 20,
+   "final_ge4": 3,
+   "mean_panel": 3.17
+  },
+  "recognized=True,accepted=False": {
+   "n": 8,
+   "final_ge4": 4,
+   "mean_panel": 3.5
+  },
+  "recognized=True,accepted=True": {
+   "n": 3,
+   "final_ge4": 2,
+   "mean_panel": 3.6
+  }
+ }
+}
