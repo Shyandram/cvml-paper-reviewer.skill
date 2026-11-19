@@ -1,0 +1,171 @@
+{
+ "note": "Calibration-anchor A/B on 3 test papers, single runs each (noise ~0.7 Overall). Arms: bare = evals/bare_prompt.md; bareA = bare + anchors (calibration_anchors.md); old = skill 7163a25 (no anchors); new = skill f3c7d36 (anchors, bracketing in Step 4). Human: RBktryANQ9 reject 2,2,4,4; 9R2iUHhVfr reject 4,4,4,6; xxYPqm1qWz accept 4,6,8,8. Scores and ids only.",
+ "arms": {
+  "bare": {
+   "RBktryANQ9": {
+    "recognized": false,
+    "iclr_rating": 2
+   },
+   "9R2iUHhVfr": {
+    "recognized": true,
+    "iclr_rating": 4
+   },
+   "xxYPqm1qWz": {
+    "recognized": true,
+    "iclr_rating": 6
+   }
+  },
+  "bareA": {
+   "RBktryANQ9": {
+    "recognized": true,
+    "iclr_rating": 2
+   },
+   "9R2iUHhVfr": {
+    "recognized": true,
+    "iclr_rating": 4
+   },
+   "xxYPqm1qWz": {
+    "recognized": false,
+    "iclr_rating": 4
+   }
+  },
+  "old": {
+   "RBktryANQ9": {
+    "recognized": true,
+    "final_overall": 2,
+    "weighted_pool": null,
+    "type_overall": [
+     2,
+     3,
+     2,
+     2,
+     2,
+     2
+    ],
+    "type_pool": [
+     15,
+     30,
+     15,
+     15,
+     22,
+     22
+    ],
+    "mean_type_pool": 19.8
+   },
+   "9R2iUHhVfr": {
+    "recognized": true,
+    "final_overall": 3,
+    "weighted_pool": null,
+    "type_overall": [
+     4,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "type_pool": [
+     66,
+     40,
+     44,
+     45,
+     48,
+     50,
+     47
+    ],
+    "mean_type_pool": 48.6
+   },
+   "xxYPqm1qWz": {
+    "recognized": true,
+    "final_overall": 3,
+    "weighted_pool": null,
+    "type_overall": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "type_pool": [
+     45,
+     42,
+     47,
+     46,
+     57,
+     46
+    ],
+    "mean_type_pool": 47.2
+   }
+  },
+  "new": {
+   "RBktryANQ9": {
+    "recognized": false,
+    "final_overall": 2,
+    "weighted_pool": null,
+    "type_overall": [
+     2,
+     2,
+     2,
+     3,
+     2,
+     2
+    ],
+    "type_pool": [
+     15,
+     22,
+     15,
+     32,
+     18,
+     15
+    ],
+    "mean_type_pool": 19.5
+   },
+   "9R2iUHhVfr": {
+    "recognized": true,
+    "final_overall": 3,
+    "weighted_pool": null,
+    "type_overall": [
+     3,
+     2,
+     3,
+     3,
+     3,
+     3
+    ],
+    "type_pool": [
+     48,
+     36,
+     40,
+     44,
+     46,
+     50
+    ],
+    "mean_type_pool": 44
+   },
+   "xxYPqm1qWz": {
+    "recognized": false,
+    "final_overall": 3,
+    "weighted_pool": null,
+    "type_overall": [
+     3,
+     3,
+     3,
+     3,
+     4,
+     3
+    ],
+    "type_pool": [
+     56,
+     46,
+     50,
+     47,
+     64,
+     48
+    ],
+    "mean_type_pool": 51.8
+   }
+  }
+ }
+}
