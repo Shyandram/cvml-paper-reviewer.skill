@@ -1,0 +1,2129 @@
+{
+ "note": "Post-hoc monotone recalibration fitted on the train split, evaluated on the test split (sample.jsonl splits). Human target: mean ICLR rating. Numbers and paper ids only.",
+ "results": [
+  {
+   "signal": "skill.final_overall",
+   "n_train": 45,
+   "n_test": 41,
+   "train_spearman": 0.429,
+   "test_spearman": 0.489,
+   "test_spearman_ci": [
+    0.253,
+    0.662
+   ],
+   "test_auc_accept": 0.602,
+   "test_auc_ci": [
+    0.485,
+    0.72
+   ],
+   "distinct_raw_values_test": 3,
+   "accept_rule": {
+    "train_accept_rate": 0.267,
+    "threshold_signal": 4.0,
+    "test_predicted_accept": 4,
+    "test_true_accept": 11,
+    "true_accept_hit": 1,
+    "false_accept": 3,
+    "accept_side_agree": 0.683,
+    "accept_side_ci": [
+     0.537,
+     0.829
+    ]
+   },
+   "spread_sd": {
+    "human_mean": 1.385,
+    "quantile": 0.713,
+    "linear": 0.462
+   },
+   "mae_vs_human_mean": {
+    "quantile": 0.985,
+    "linear": 1.002
+   },
+   "hist_test": {
+    "human_mean": {
+     "0": 2,
+     "2": 11,
+     "4": 20,
+     "6": 8,
+     "8": 0,
+     "10": 0
+    },
+    "quantile": {
+     "0": 0,
+     "2": 7,
+     "4": 30,
+     "6": 4,
+     "8": 0,
+     "10": 0
+    },
+    "linear": {
+     "0": 0,
+     "2": 0,
+     "4": 37,
+     "6": 4,
+     "8": 0,
+     "10": 0
+    }
+   },
+   "test_papers": [
+    {
+     "pid": "9R2iUHhVfr",
+     "raw": 4.0,
+     "quantile": 5.78,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "BDnOrExHmt",
+     "raw": 4.0,
+     "quantile": 5.78,
+     "human_mean": 7.0,
+     "accepted": true
+    },
+    {
+     "pid": "RgOHRYHX5L",
+     "raw": 4.0,
+     "quantile": 5.78,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "5p1Ucqfd1A",
+     "raw": 4.0,
+     "quantile": 5.78,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "Xt6K4cw36l",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "C9p44r7o3z",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 5.333,
+     "accepted": false
+    },
+    {
+     "pid": "YD1P4DVtdk",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "65iFtHZ8Cu",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "xxYPqm1qWz",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "SzrQBJDYHn",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "SHAmQVifzK",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "5Y8PMEeAkv",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "sK06hYt75z",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "elztN9Y4qw",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 5.0,
+     "accepted": true
+    },
+    {
+     "pid": "97Qk741ih6",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 5.5,
+     "accepted": true
+    },
+    {
+     "pid": "AIKURJjxXT",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "rcmfu1ydAf",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": true
+    },
+    {
+     "pid": "oCkPzCR4f4",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "Q2bEFIk6Y5",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "tlYSbw5GXY",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 5.2,
+     "accepted": true
+    },
+    {
+     "pid": "ksxocXsFVh",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 2.0,
+     "accepted": false
+    },
+    {
+     "pid": "UsWTBvkTwf",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "Xs1CrA1kZQ",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "Dud8FtScW7",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "FmLGEJEvJ9",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "R7fv5NWfMm",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "Ix4WA6AXPe",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "gUw8n109ki",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "DqAeSBQckF",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "4fhbxglvYs",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "qfW4IrUuig",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "2Jyb1yu3nN",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.667,
+     "accepted": true
+    },
+    {
+     "pid": "KtocialdxS",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "ZwwFuVQv64",
+     "raw": 3.0,
+     "quantile": 4.4,
+     "human_mean": 4.5,
+     "accepted": true
+    },
+    {
+     "pid": "G4CN6xgQ3k",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "QN0PplUVdt",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 0.667,
+     "accepted": false
+    },
+    {
+     "pid": "RBktryANQ9",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "YTonAPBqI9",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "bVyCzNDNX8",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Uxn9hvPtiR",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "OPFE1zPYbU",
+     "raw": 2.0,
+     "quantile": 3.0,
+     "human_mean": 1.0,
+     "accepted": false
+    }
+   ]
+  },
+  {
+   "signal": "skill.panel_rating_1_6",
+   "n_train": 45,
+   "n_test": 41,
+   "train_spearman": 0.394,
+   "test_spearman": 0.501,
+   "test_spearman_ci": [
+    0.209,
+    0.718
+   ],
+   "test_auc_accept": 0.668,
+   "test_auc_ci": [
+    0.48,
+    0.843
+   ],
+   "distinct_raw_values_test": 9,
+   "accept_rule": {
+    "train_accept_rate": 0.267,
+    "threshold_signal": 3.6,
+    "test_predicted_accept": 4,
+    "test_true_accept": 11,
+    "true_accept_hit": 1,
+    "false_accept": 3,
+    "accept_side_agree": 0.683,
+    "accept_side_ci": [
+     0.537,
+     0.829
+    ]
+   },
+   "spread_sd": {
+    "human_mean": 1.385,
+    "quantile": 0.861,
+    "linear": 0.362
+   },
+   "mae_vs_human_mean": {
+    "quantile": 0.953,
+    "linear": 0.998
+   },
+   "hist_test": {
+    "human_mean": {
+     "0": 2,
+     "2": 11,
+     "4": 20,
+     "6": 8,
+     "8": 0,
+     "10": 0
+    },
+    "quantile": {
+     "0": 0,
+     "2": 6,
+     "4": 31,
+     "6": 4,
+     "8": 0,
+     "10": 0
+    },
+    "linear": {
+     "0": 0,
+     "2": 0,
+     "4": 41,
+     "6": 0,
+     "8": 0,
+     "10": 0
+    }
+   },
+   "test_papers": [
+    {
+     "pid": "RgOHRYHX5L",
+     "raw": 3.8,
+     "quantile": 5.78,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "9R2iUHhVfr",
+     "raw": 3.6,
+     "quantile": 5.44,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "BDnOrExHmt",
+     "raw": 3.6,
+     "quantile": 5.44,
+     "human_mean": 7.0,
+     "accepted": true
+    },
+    {
+     "pid": "5p1Ucqfd1A",
+     "raw": 3.6,
+     "quantile": 5.44,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "65iFtHZ8Cu",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "xxYPqm1qWz",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "sK06hYt75z",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "elztN9Y4qw",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 5.0,
+     "accepted": true
+    },
+    {
+     "pid": "tlYSbw5GXY",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 5.2,
+     "accepted": true
+    },
+    {
+     "pid": "ksxocXsFVh",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 2.0,
+     "accepted": false
+    },
+    {
+     "pid": "UsWTBvkTwf",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "R7fv5NWfMm",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "Ix4WA6AXPe",
+     "raw": 3.4,
+     "quantile": 4.86,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "Xt6K4cw36l",
+     "raw": 3.2,
+     "quantile": 4.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "SHAmQVifzK",
+     "raw": 3.2,
+     "quantile": 4.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "2Jyb1yu3nN",
+     "raw": 3.2,
+     "quantile": 4.5,
+     "human_mean": 4.667,
+     "accepted": true
+    },
+    {
+     "pid": "C9p44r7o3z",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 5.333,
+     "accepted": false
+    },
+    {
+     "pid": "YD1P4DVtdk",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Q2bEFIk6Y5",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "Xs1CrA1kZQ",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "FmLGEJEvJ9",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "DqAeSBQckF",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "KtocialdxS",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "ZwwFuVQv64",
+     "raw": 3.0,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": true
+    },
+    {
+     "pid": "SzrQBJDYHn",
+     "raw": 2.8,
+     "quantile": 3.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "5Y8PMEeAkv",
+     "raw": 2.8,
+     "quantile": 3.5,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "97Qk741ih6",
+     "raw": 2.6,
+     "quantile": 3.5,
+     "human_mean": 5.5,
+     "accepted": true
+    },
+    {
+     "pid": "AIKURJjxXT",
+     "raw": 2.8,
+     "quantile": 3.5,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "rcmfu1ydAf",
+     "raw": 2.8,
+     "quantile": 3.5,
+     "human_mean": 4.0,
+     "accepted": true
+    },
+    {
+     "pid": "oCkPzCR4f4",
+     "raw": 2.6,
+     "quantile": 3.5,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "YTonAPBqI9",
+     "raw": 2.6,
+     "quantile": 3.5,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "Dud8FtScW7",
+     "raw": 2.6,
+     "quantile": 3.5,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "gUw8n109ki",
+     "raw": 2.6,
+     "quantile": 3.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "4fhbxglvYs",
+     "raw": 2.6,
+     "quantile": 3.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "qfW4IrUuig",
+     "raw": 2.8,
+     "quantile": 3.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "G4CN6xgQ3k",
+     "raw": 2.4,
+     "quantile": 3.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "OPFE1zPYbU",
+     "raw": 2.4,
+     "quantile": 3.0,
+     "human_mean": 1.0,
+     "accepted": false
+    },
+    {
+     "pid": "QN0PplUVdt",
+     "raw": 2.2,
+     "quantile": 2.5,
+     "human_mean": 0.667,
+     "accepted": false
+    },
+    {
+     "pid": "RBktryANQ9",
+     "raw": 2.2,
+     "quantile": 2.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "bVyCzNDNX8",
+     "raw": 2.2,
+     "quantile": 2.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Uxn9hvPtiR",
+     "raw": 2.2,
+     "quantile": 2.5,
+     "human_mean": 2.667,
+     "accepted": false
+    }
+   ]
+  },
+  {
+   "signal": "skill.eic_rating_1_6",
+   "n_train": 45,
+   "n_test": 41,
+   "train_spearman": 0.385,
+   "test_spearman": 0.478,
+   "test_spearman_ci": [
+    0.174,
+    0.703
+   ],
+   "test_auc_accept": 0.659,
+   "test_auc_ci": [
+    0.468,
+    0.833
+   ],
+   "distinct_raw_values_test": 28,
+   "accept_rule": {
+    "train_accept_rate": 0.267,
+    "threshold_signal": 3.36,
+    "test_predicted_accept": 6,
+    "test_true_accept": 11,
+    "true_accept_hit": 1,
+    "false_accept": 5,
+    "accept_side_agree": 0.634,
+    "accept_side_ci": [
+     0.488,
+     0.78
+    ]
+   },
+   "spread_sd": {
+    "human_mean": 1.385,
+    "quantile": 0.844,
+    "linear": 0.347
+   },
+   "mae_vs_human_mean": {
+    "quantile": 0.949,
+    "linear": 1.003
+   },
+   "hist_test": {
+    "human_mean": {
+     "0": 2,
+     "2": 11,
+     "4": 20,
+     "6": 8,
+     "8": 0,
+     "10": 0
+    },
+    "quantile": {
+     "0": 0,
+     "2": 6,
+     "4": 31,
+     "6": 4,
+     "8": 0,
+     "10": 0
+    },
+    "linear": {
+     "0": 0,
+     "2": 0,
+     "4": 41,
+     "6": 0,
+     "8": 0,
+     "10": 0
+    }
+   },
+   "test_papers": [
+    {
+     "pid": "RgOHRYHX5L",
+     "raw": 3.69,
+     "quantile": 5.53,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "9R2iUHhVfr",
+     "raw": 3.56,
+     "quantile": 5.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "5p1Ucqfd1A",
+     "raw": 3.56,
+     "quantile": 5.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "BDnOrExHmt",
+     "raw": 3.54,
+     "quantile": 5.44,
+     "human_mean": 7.0,
+     "accepted": true
+    },
+    {
+     "pid": "ksxocXsFVh",
+     "raw": 3.36,
+     "quantile": 5.0,
+     "human_mean": 2.0,
+     "accepted": false
+    },
+    {
+     "pid": "Ix4WA6AXPe",
+     "raw": 3.36,
+     "quantile": 5.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "xxYPqm1qWz",
+     "raw": 3.34,
+     "quantile": 4.96,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "tlYSbw5GXY",
+     "raw": 3.34,
+     "quantile": 4.96,
+     "human_mean": 5.2,
+     "accepted": true
+    },
+    {
+     "pid": "elztN9Y4qw",
+     "raw": 3.33,
+     "quantile": 4.75,
+     "human_mean": 5.0,
+     "accepted": true
+    },
+    {
+     "pid": "R7fv5NWfMm",
+     "raw": 3.33,
+     "quantile": 4.75,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "Xt6K4cw36l",
+     "raw": 3.18,
+     "quantile": 4.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "65iFtHZ8Cu",
+     "raw": 3.29,
+     "quantile": 4.5,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "sK06hYt75z",
+     "raw": 3.32,
+     "quantile": 4.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "UsWTBvkTwf",
+     "raw": 3.31,
+     "quantile": 4.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "2Jyb1yu3nN",
+     "raw": 3.17,
+     "quantile": 4.5,
+     "human_mean": 4.667,
+     "accepted": true
+    },
+    {
+     "pid": "SHAmQVifzK",
+     "raw": 3.13,
+     "quantile": 4.45,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "C9p44r7o3z",
+     "raw": 2.92,
+     "quantile": 4.0,
+     "human_mean": 5.333,
+     "accepted": false
+    },
+    {
+     "pid": "YD1P4DVtdk",
+     "raw": 2.92,
+     "quantile": 4.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Q2bEFIk6Y5",
+     "raw": 2.97,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "Xs1CrA1kZQ",
+     "raw": 2.92,
+     "quantile": 4.0,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "FmLGEJEvJ9",
+     "raw": 2.92,
+     "quantile": 4.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "DqAeSBQckF",
+     "raw": 2.92,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "KtocialdxS",
+     "raw": 2.96,
+     "quantile": 4.0,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "ZwwFuVQv64",
+     "raw": 2.92,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": true
+    },
+    {
+     "pid": "SzrQBJDYHn",
+     "raw": 2.73,
+     "quantile": 3.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "5Y8PMEeAkv",
+     "raw": 2.75,
+     "quantile": 3.5,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "97Qk741ih6",
+     "raw": 2.56,
+     "quantile": 3.5,
+     "human_mean": 5.5,
+     "accepted": true
+    },
+    {
+     "pid": "AIKURJjxXT",
+     "raw": 2.84,
+     "quantile": 3.5,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "rcmfu1ydAf",
+     "raw": 2.65,
+     "quantile": 3.5,
+     "human_mean": 4.0,
+     "accepted": true
+    },
+    {
+     "pid": "YTonAPBqI9",
+     "raw": 2.54,
+     "quantile": 3.5,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "Dud8FtScW7",
+     "raw": 2.56,
+     "quantile": 3.5,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "4fhbxglvYs",
+     "raw": 2.56,
+     "quantile": 3.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "qfW4IrUuig",
+     "raw": 2.8,
+     "quantile": 3.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "oCkPzCR4f4",
+     "raw": 2.52,
+     "quantile": 3.49,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "gUw8n109ki",
+     "raw": 2.51,
+     "quantile": 3.4,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "G4CN6xgQ3k",
+     "raw": 2.33,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "OPFE1zPYbU",
+     "raw": 2.33,
+     "quantile": 2.99,
+     "human_mean": 1.0,
+     "accepted": false
+    },
+    {
+     "pid": "QN0PplUVdt",
+     "raw": 2.15,
+     "quantile": 2.5,
+     "human_mean": 0.667,
+     "accepted": false
+    },
+    {
+     "pid": "RBktryANQ9",
+     "raw": 2.17,
+     "quantile": 2.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "bVyCzNDNX8",
+     "raw": 2.15,
+     "quantile": 2.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Uxn9hvPtiR",
+     "raw": 2.16,
+     "quantile": 2.5,
+     "human_mean": 2.667,
+     "accepted": false
+    }
+   ]
+  },
+  {
+   "signal": "skill.reviewer_pool",
+   "n_train": 45,
+   "n_test": 41,
+   "train_spearman": 0.379,
+   "test_spearman": 0.514,
+   "test_spearman_ci": [
+    0.218,
+    0.739
+   ],
+   "test_auc_accept": 0.689,
+   "test_auc_ci": [
+    0.501,
+    0.861
+   ],
+   "distinct_raw_values_test": 36,
+   "accept_rule": {
+    "train_accept_rate": 0.267,
+    "threshold_signal": 55.2,
+    "test_predicted_accept": 13,
+    "test_true_accept": 11,
+    "true_accept_hit": 6,
+    "false_accept": 7,
+    "accept_side_agree": 0.707,
+    "accept_side_ci": [
+     0.561,
+     0.829
+    ]
+   },
+   "spread_sd": {
+    "human_mean": 1.385,
+    "quantile": 0.881,
+    "linear": 0.424
+   },
+   "mae_vs_human_mean": {
+    "quantile": 0.931,
+    "linear": 0.967
+   },
+   "hist_test": {
+    "human_mean": {
+     "0": 2,
+     "2": 11,
+     "4": 20,
+     "6": 8,
+     "8": 0,
+     "10": 0
+    },
+    "quantile": {
+     "0": 0,
+     "2": 6,
+     "4": 30,
+     "6": 5,
+     "8": 0,
+     "10": 0
+    },
+    "linear": {
+     "0": 0,
+     "2": 0,
+     "4": 41,
+     "6": 0,
+     "8": 0,
+     "10": 0
+    }
+   },
+   "test_papers": [
+    {
+     "pid": "RgOHRYHX5L",
+     "raw": 66.0,
+     "quantile": 6.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "5p1Ucqfd1A",
+     "raw": 62.0,
+     "quantile": 5.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "9R2iUHhVfr",
+     "raw": 60.4,
+     "quantile": 5.21,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "BDnOrExHmt",
+     "raw": 60.4,
+     "quantile": 5.21,
+     "human_mean": 7.0,
+     "accepted": true
+    },
+    {
+     "pid": "R7fv5NWfMm",
+     "raw": 58.2,
+     "quantile": 5.05,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "65iFtHZ8Cu",
+     "raw": 56.6,
+     "quantile": 5.0,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "xxYPqm1qWz",
+     "raw": 56.8,
+     "quantile": 5.0,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "sK06hYt75z",
+     "raw": 56.6,
+     "quantile": 5.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "elztN9Y4qw",
+     "raw": 56.0,
+     "quantile": 5.0,
+     "human_mean": 5.0,
+     "accepted": true
+    },
+    {
+     "pid": "tlYSbw5GXY",
+     "raw": 55.4,
+     "quantile": 5.0,
+     "human_mean": 5.2,
+     "accepted": true
+    },
+    {
+     "pid": "ksxocXsFVh",
+     "raw": 56.4,
+     "quantile": 5.0,
+     "human_mean": 2.0,
+     "accepted": false
+    },
+    {
+     "pid": "UsWTBvkTwf",
+     "raw": 55.4,
+     "quantile": 5.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "Ix4WA6AXPe",
+     "raw": 55.8,
+     "quantile": 5.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "2Jyb1yu3nN",
+     "raw": 51.6,
+     "quantile": 4.5,
+     "human_mean": 4.667,
+     "accepted": true
+    },
+    {
+     "pid": "Xt6K4cw36l",
+     "raw": 50.2,
+     "quantile": 4.4,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "YD1P4DVtdk",
+     "raw": 49.8,
+     "quantile": 4.21,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "C9p44r7o3z",
+     "raw": 48.0,
+     "quantile": 4.0,
+     "human_mean": 5.333,
+     "accepted": false
+    },
+    {
+     "pid": "SzrQBJDYHn",
+     "raw": 49.2,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "SHAmQVifzK",
+     "raw": 47.4,
+     "quantile": 4.0,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "rcmfu1ydAf",
+     "raw": 48.0,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": true
+    },
+    {
+     "pid": "Q2bEFIk6Y5",
+     "raw": 47.2,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "Xs1CrA1kZQ",
+     "raw": 48.4,
+     "quantile": 4.0,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "DqAeSBQckF",
+     "raw": 46.4,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "ZwwFuVQv64",
+     "raw": 46.4,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": true
+    },
+    {
+     "pid": "FmLGEJEvJ9",
+     "raw": 45.8,
+     "quantile": 3.86,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "KtocialdxS",
+     "raw": 44.8,
+     "quantile": 3.86,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "5Y8PMEeAkv",
+     "raw": 37.2,
+     "quantile": 3.5,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "97Qk741ih6",
+     "raw": 37.0,
+     "quantile": 3.5,
+     "human_mean": 5.5,
+     "accepted": true
+    },
+    {
+     "pid": "AIKURJjxXT",
+     "raw": 38.0,
+     "quantile": 3.5,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "oCkPzCR4f4",
+     "raw": 43.2,
+     "quantile": 3.5,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "Dud8FtScW7",
+     "raw": 39.6,
+     "quantile": 3.5,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "OPFE1zPYbU",
+     "raw": 40.8,
+     "quantile": 3.5,
+     "human_mean": 1.0,
+     "accepted": false
+    },
+    {
+     "pid": "gUw8n109ki",
+     "raw": 40.4,
+     "quantile": 3.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "4fhbxglvYs",
+     "raw": 41.0,
+     "quantile": 3.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "qfW4IrUuig",
+     "raw": 41.2,
+     "quantile": 3.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "G4CN6xgQ3k",
+     "raw": 29.6,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "YTonAPBqI9",
+     "raw": 33.0,
+     "quantile": 2.99,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "QN0PplUVdt",
+     "raw": 20.0,
+     "quantile": 2.5,
+     "human_mean": 0.667,
+     "accepted": false
+    },
+    {
+     "pid": "RBktryANQ9",
+     "raw": 25.4,
+     "quantile": 2.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "bVyCzNDNX8",
+     "raw": 26.8,
+     "quantile": 2.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Uxn9hvPtiR",
+     "raw": 19.8,
+     "quantile": 2.5,
+     "human_mean": 2.667,
+     "accepted": false
+    }
+   ]
+  },
+  {
+   "signal": "skill.eic_pool",
+   "n_train": 45,
+   "n_test": 41,
+   "train_spearman": 0.332,
+   "test_spearman": 0.508,
+   "test_spearman_ci": [
+    0.201,
+    0.744
+   ],
+   "test_auc_accept": 0.677,
+   "test_auc_ci": [
+    0.479,
+    0.859
+   ],
+   "distinct_raw_values_test": 20,
+   "accept_rule": {
+    "train_accept_rate": 0.267,
+    "threshold_signal": 54.0,
+    "test_predicted_accept": 8,
+    "test_true_accept": 11,
+    "true_accept_hit": 4,
+    "false_accept": 4,
+    "accept_side_agree": 0.732,
+    "accept_side_ci": [
+     0.585,
+     0.854
+    ]
+   },
+   "spread_sd": {
+    "human_mean": 1.385,
+    "quantile": 0.864,
+    "linear": 0.403
+   },
+   "mae_vs_human_mean": {
+    "quantile": 0.867,
+    "linear": 0.983
+   },
+   "hist_test": {
+    "human_mean": {
+     "0": 2,
+     "2": 11,
+     "4": 20,
+     "6": 8,
+     "8": 0,
+     "10": 0
+    },
+    "quantile": {
+     "0": 0,
+     "2": 6,
+     "4": 29,
+     "6": 6,
+     "8": 0,
+     "10": 0
+    },
+    "linear": {
+     "0": 0,
+     "2": 0,
+     "4": 40,
+     "6": 1,
+     "8": 0,
+     "10": 0
+    }
+   },
+   "test_papers": [
+    {
+     "pid": "RgOHRYHX5L",
+     "raw": 68.0,
+     "quantile": 5.78,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "9R2iUHhVfr",
+     "raw": 65.0,
+     "quantile": 5.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "BDnOrExHmt",
+     "raw": 63.0,
+     "quantile": 5.5,
+     "human_mean": 7.0,
+     "accepted": true
+    },
+    {
+     "pid": "5p1Ucqfd1A",
+     "raw": 65.0,
+     "quantile": 5.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "xxYPqm1qWz",
+     "raw": 57.0,
+     "quantile": 5.36,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "R7fv5NWfMm",
+     "raw": 57.0,
+     "quantile": 5.36,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "tlYSbw5GXY",
+     "raw": 55.0,
+     "quantile": 5.0,
+     "human_mean": 5.2,
+     "accepted": true
+    },
+    {
+     "pid": "ksxocXsFVh",
+     "raw": 54.0,
+     "quantile": 5.0,
+     "human_mean": 2.0,
+     "accepted": false
+    },
+    {
+     "pid": "65iFtHZ8Cu",
+     "raw": 52.0,
+     "quantile": 4.86,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "sK06hYt75z",
+     "raw": 52.0,
+     "quantile": 4.86,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "elztN9Y4qw",
+     "raw": 52.0,
+     "quantile": 4.86,
+     "human_mean": 5.0,
+     "accepted": true
+    },
+    {
+     "pid": "UsWTBvkTwf",
+     "raw": 52.0,
+     "quantile": 4.86,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "Ix4WA6AXPe",
+     "raw": 50.0,
+     "quantile": 4.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "2Jyb1yu3nN",
+     "raw": 50.0,
+     "quantile": 4.5,
+     "human_mean": 4.667,
+     "accepted": true
+    },
+    {
+     "pid": "Xt6K4cw36l",
+     "raw": 47.0,
+     "quantile": 4.02,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "YD1P4DVtdk",
+     "raw": 47.0,
+     "quantile": 4.02,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Q2bEFIk6Y5",
+     "raw": 47.0,
+     "quantile": 4.02,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "Xs1CrA1kZQ",
+     "raw": 47.0,
+     "quantile": 4.02,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "C9p44r7o3z",
+     "raw": 46.0,
+     "quantile": 4.0,
+     "human_mean": 5.333,
+     "accepted": false
+    },
+    {
+     "pid": "SzrQBJDYHn",
+     "raw": 46.0,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "SHAmQVifzK",
+     "raw": 45.0,
+     "quantile": 4.0,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "rcmfu1ydAf",
+     "raw": 45.0,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": true
+    },
+    {
+     "pid": "DqAeSBQckF",
+     "raw": 46.0,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "KtocialdxS",
+     "raw": 45.0,
+     "quantile": 4.0,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "ZwwFuVQv64",
+     "raw": 42.0,
+     "quantile": 3.86,
+     "human_mean": 4.5,
+     "accepted": true
+    },
+    {
+     "pid": "5Y8PMEeAkv",
+     "raw": 38.0,
+     "quantile": 3.5,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "AIKURJjxXT",
+     "raw": 40.0,
+     "quantile": 3.5,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "oCkPzCR4f4",
+     "raw": 40.0,
+     "quantile": 3.5,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "Dud8FtScW7",
+     "raw": 38.0,
+     "quantile": 3.5,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "FmLGEJEvJ9",
+     "raw": 40.0,
+     "quantile": 3.5,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "OPFE1zPYbU",
+     "raw": 38.0,
+     "quantile": 3.5,
+     "human_mean": 1.0,
+     "accepted": false
+    },
+    {
+     "pid": "gUw8n109ki",
+     "raw": 40.0,
+     "quantile": 3.5,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "4fhbxglvYs",
+     "raw": 40.0,
+     "quantile": 3.5,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "qfW4IrUuig",
+     "raw": 40.0,
+     "quantile": 3.5,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "97Qk741ih6",
+     "raw": 35.0,
+     "quantile": 3.4,
+     "human_mean": 5.5,
+     "accepted": true
+    },
+    {
+     "pid": "RBktryANQ9",
+     "raw": 25.0,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "YTonAPBqI9",
+     "raw": 25.0,
+     "quantile": 2.99,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "bVyCzNDNX8",
+     "raw": 24.0,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "G4CN6xgQ3k",
+     "raw": 22.0,
+     "quantile": 2.74,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "QN0PplUVdt",
+     "raw": 17.0,
+     "quantile": 2.5,
+     "human_mean": 0.667,
+     "accepted": false
+    },
+    {
+     "pid": "Uxn9hvPtiR",
+     "raw": 18.0,
+     "quantile": 2.5,
+     "human_mean": 2.667,
+     "accepted": false
+    }
+   ]
+  },
+  {
+   "signal": "bare.rating(+confidence)",
+   "n_train": 44,
+   "n_test": 41,
+   "train_spearman": 0.367,
+   "test_spearman": 0.506,
+   "test_spearman_ci": [
+    0.252,
+    0.693
+   ],
+   "test_auc_accept": 0.691,
+   "test_auc_ci": [
+    0.532,
+    0.833
+   ],
+   "distinct_raw_values_test": 4,
+   "accept_rule": {
+    "train_accept_rate": 0.273,
+    "threshold_signal": 4.0,
+    "test_predicted_accept": 10,
+    "test_true_accept": 11,
+    "true_accept_hit": 5,
+    "false_accept": 5,
+    "accept_side_agree": 0.732,
+    "accept_side_ci": [
+     0.585,
+     0.854
+    ]
+   },
+   "spread_sd": {
+    "human_mean": 1.385,
+    "quantile": 0.844,
+    "linear": 0.509
+   },
+   "mae_vs_human_mean": {
+    "quantile": 1.001,
+    "linear": 1.007
+   },
+   "hist_test": {
+    "human_mean": {
+     "0": 2,
+     "2": 11,
+     "4": 20,
+     "6": 8,
+     "8": 0,
+     "10": 0
+    },
+    "quantile": {
+     "0": 0,
+     "2": 6,
+     "4": 30,
+     "6": 5,
+     "8": 0,
+     "10": 0
+    },
+    "linear": {
+     "0": 0,
+     "2": 0,
+     "4": 36,
+     "6": 5,
+     "8": 0,
+     "10": 0
+    }
+   },
+   "test_papers": [
+    {
+     "pid": "elztN9Y4qw",
+     "raw": 6.01,
+     "quantile": 6.0,
+     "human_mean": 5.0,
+     "accepted": true
+    },
+    {
+     "pid": "9R2iUHhVfr",
+     "raw": 6.01,
+     "quantile": 6.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "BDnOrExHmt",
+     "raw": 6.01,
+     "quantile": 6.0,
+     "human_mean": 7.0,
+     "accepted": true
+    },
+    {
+     "pid": "RgOHRYHX5L",
+     "raw": 6.01,
+     "quantile": 6.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "5p1Ucqfd1A",
+     "raw": 6.01,
+     "quantile": 6.0,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "Q2bEFIk6Y5",
+     "raw": 4.0,
+     "quantile": 5.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "FmLGEJEvJ9",
+     "raw": 4.0,
+     "quantile": 5.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "R7fv5NWfMm",
+     "raw": 4.0,
+     "quantile": 5.0,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "2Jyb1yu3nN",
+     "raw": 4.0,
+     "quantile": 5.0,
+     "human_mean": 4.667,
+     "accepted": true
+    },
+    {
+     "pid": "ZwwFuVQv64",
+     "raw": 4.0,
+     "quantile": 5.0,
+     "human_mean": 4.5,
+     "accepted": true
+    },
+    {
+     "pid": "Xt6K4cw36l",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "C9p44r7o3z",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 5.333,
+     "accepted": false
+    },
+    {
+     "pid": "YD1P4DVtdk",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "65iFtHZ8Cu",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "xxYPqm1qWz",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 6.5,
+     "accepted": true
+    },
+    {
+     "pid": "SzrQBJDYHn",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "SHAmQVifzK",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "5Y8PMEeAkv",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "sK06hYt75z",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "97Qk741ih6",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 5.5,
+     "accepted": true
+    },
+    {
+     "pid": "AIKURJjxXT",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "rcmfu1ydAf",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": true
+    },
+    {
+     "pid": "oCkPzCR4f4",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "YTonAPBqI9",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 3.333,
+     "accepted": false
+    },
+    {
+     "pid": "tlYSbw5GXY",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 5.2,
+     "accepted": true
+    },
+    {
+     "pid": "ksxocXsFVh",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 2.0,
+     "accepted": false
+    },
+    {
+     "pid": "UsWTBvkTwf",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "Xs1CrA1kZQ",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 2.5,
+     "accepted": false
+    },
+    {
+     "pid": "Dud8FtScW7",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 6.0,
+     "accepted": true
+    },
+    {
+     "pid": "Ix4WA6AXPe",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "gUw8n109ki",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 3.5,
+     "accepted": false
+    },
+    {
+     "pid": "DqAeSBQckF",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "4fhbxglvYs",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.0,
+     "accepted": false
+    },
+    {
+     "pid": "qfW4IrUuig",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 4.5,
+     "accepted": false
+    },
+    {
+     "pid": "KtocialdxS",
+     "raw": 3.99,
+     "quantile": 4.0,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "G4CN6xgQ3k",
+     "raw": 1.99,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "QN0PplUVdt",
+     "raw": 1.99,
+     "quantile": 2.99,
+     "human_mean": 0.667,
+     "accepted": false
+    },
+    {
+     "pid": "RBktryANQ9",
+     "raw": 1.99,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "bVyCzNDNX8",
+     "raw": 1.99,
+     "quantile": 2.99,
+     "human_mean": 3.0,
+     "accepted": false
+    },
+    {
+     "pid": "Uxn9hvPtiR",
+     "raw": 1.99,
+     "quantile": 2.99,
+     "human_mean": 2.667,
+     "accepted": false
+    },
+    {
+     "pid": "OPFE1zPYbU",
+     "raw": 1.99,
+     "quantile": 2.99,
+     "human_mean": 1.0,
+     "accepted": false
+    }
+   ]
+  }
+ ]
+}
