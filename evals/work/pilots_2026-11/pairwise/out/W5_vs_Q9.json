@@ -1,0 +1,4 @@
+{"pair": "W5_vs_Q9", "winner": 1, "margin": "slight",
+ "rating_paper1": 6, "rating_paper2": 4,
+ "reason": "VideoAgentTrek shows a new thing working: an inverse-dynamics pipeline that mines 1.52M GUI action steps from unlabeled YouTube video. A controlled ablation (same Stage-2 SFT, 0/50/100% video tokens) supports its main claim and shows data scaling, although absolute success rates are low and the 50-step result comes from a single run. SWE-Bench Pro is a likely useful but incremental re-curation of SWE-bench. It never tests its contamination-resistance claim, leaves the held-out set unused, and its numbers are internally inconsistent (Sonnet 17.6 vs 16.3, GPT-4o 4.9 vs 3.9, failure-mode percentages in the text that do not match Table 3), which weakens its evidence despite its practical significance.",
+ "recognized": ["W5: VideoAgentTrek (2025 arXiv preprint)", "Q9: SWE-Bench Pro (2025 benchmark release)"], "injection_found": null}

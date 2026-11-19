@@ -1,0 +1,5 @@
+{"pair": "W5_vs_K7", "winner": 1, "margin": "slight",
+ "rating_paper1": 6, "rating_paper2": 4,
+ "reason": "Paper 1 shows something new working: an inverse-dynamics pipeline that turns unlabeled screen-recording videos into 1.52M action steps, and pretraining on them gives held-out gains (OSWorld-Verified 9.3% to 15.8%, AgentNetBench 64.1% to 69.3%) that grow with data scale. Its weaknesses are a thin evaluation of the IDM and no compute-matched control. Paper 2 is a thorough and useful optimizer benchmark (11 methods, about 2900 runs) with practical takeaways, but it adds no new method or explanation. Its evidence is single-seed, with no variance estimates, at scales of 720M parameters or less, and it reports only validation loss, so many ranking claims rest on small loss gaps whose robustness is not established.",
+ "recognized": ["Paper 1 appears to be VideoAgentTrek (2025 arXiv preprint on computer-use pretraining from YouTube videos)", "Paper 2 appears to be 'Benchmarking Optimizers for Large Language Model Pretraining' (2025 arXiv preprint)"],
+ "injection_found": null}

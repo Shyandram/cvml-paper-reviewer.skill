@@ -1,0 +1,46 @@
+{
+ "id": "iclr26-RBktryANQ9",
+ "mode": "full (ledger)",
+ "paper_type": "analysis",
+ "final_overall": 2,
+ "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+ "task": [
+  "Image classification, representation learning (adapted: learning with noisy labels)",
+  "Efficient models, compression, edge deployment (adapted: dataset distillation / condensation)"
+ ],
+ "neighboring_fields": [
+  "dataset distillation / condensation",
+  "learning theory (memorization, early learning under label noise)",
+  "data-centric ML: coreset selection and data pruning (generated)",
+  "privacy-preserving ML (generated)",
+  "ML evaluation methodology (generated)",
+  "semi-supervised learning as used in noisy-label methods (generated)"
+ ],
+ "aspect_ratio": {
+  "technical_rigor": 0.2752,
+  "clarity": 0.1009,
+  "novelty": 0.2018,
+  "significance": 0.2018,
+  "experimental_validation": 0.1376,
+  "reproducibility": 0.0459,
+  "ethics": 0.0367
+ },
+ "ledger_rating": 2.247,
+ "ledger_pool_position": 20.4,
+ "official_rating": 2.17,
+ "n_types": 6,
+ "n_accept": 12,
+ "n_reject": 21,
+ "n_answered": 5,
+ "n_probes": 12,
+ "top_concerns": [
+  "R15: no method; three existing distillers benchmarked on noisy CIFAR-scale data with largely expected insights (Sec. 2.2, Sec. 1)",
+  "R3: no noisy-label baselines (Co-teaching, GCE, DivideMix); only CE on the full noisy set (Fig. 2/4/5 captions, Sec. 5)",
+  "R5: privacy claim ('strong privacy protection') has no threat model or attack evaluation (Abstract, Sec. 5)",
+  "R13: denoising mechanism asserted, not tested; distillers' experts are trained on noisy labels (Insight-I, Eqs. 4, 6-7)",
+  "R9: no tables or numbers; all results are curves in Figures 2, 4, 5"
+ ],
+ "recognized": true,
+ "injection_found": null,
+ "notes": "Title was familiar from prior knowledge (arXiv); outcome unknown and not used. Figures unavailable, so all quantitative claims judged from text/captions. No network: literature check skipped, R12 rests on memory with [verify]. Ambiguities: (1) paper type analysis vs empirical changes the ratio substantially (novelty 20% vs 16%, validation 14% vs 19%); chose analysis since no method is proposed. (2) Step 2 says confirmed suspicions 'become errors', but the ledger template asks Kind at Step 1 after a check; I recorded final kinds and logged before->after in probes. (3) The rule that probes settle facts made the R3 split (fatal vs major) a value split, so the only post-review probe concerned R10. (4) Top-concern ranking rule (count of fatal/major first) ranks R15 above the only fatal item R3; followed literally. (5) summary 'aspect_ratio' asked for the printed ratio 'as an object'; used the JSON fractions."
+}

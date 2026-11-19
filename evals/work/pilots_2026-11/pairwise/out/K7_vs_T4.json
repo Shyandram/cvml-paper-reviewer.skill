@@ -1,0 +1,5 @@
+{"pair": "K7_vs_T4", "winner": 1, "margin": "strong",
+ "rating_paper1": 6, "rating_paper2": 2,
+ "reason": "Paper 1 is a controlled benchmark of 11 optimizers for LLM pretraining: about 2900 runs, tuned per setting, across model sizes, batch sizes, training horizons and an MoE model. It gives actionable, well-supported findings (weight decay, final learning rate, beta2 re-tuning, z-loss/codebase effects that flip SOAP-vs-AdamW rankings), though the novelty is in the measurements rather than a new method. Paper 2 only runs three off-the-shelf distillation methods on noisy CIFAR/Tiny-ImageNet. It never compares against any noisy-label learning baseline, its 'corollaries' are stated without derivation, and its privacy and 'avoids vicious cycle' claims are untested, so its main claim is not substantiated.",
+ "recognized": ["Paper 1 appears to be the arXiv preprint 'Benchmarking Optimizers for Large Language Model Pretraining' (2025); judged on its merits."],
+ "injection_found": null}

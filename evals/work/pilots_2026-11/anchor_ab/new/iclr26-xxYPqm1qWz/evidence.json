@@ -1,0 +1,405 @@
+{
+ "locations": [
+  "Abstract",
+  "Section 1",
+  "Section 2",
+  "Section 2.1",
+  "Section 2.1.2",
+  "Section 2.1.3",
+  "Section 2.2",
+  "Section 2.2.1",
+  "Section 2.2.2",
+  "Section 2.2.3",
+  "Section 2.3.1",
+  "Section 2.3.2",
+  "Section 3.1.1",
+  "Section 3.1.2",
+  "Section 3.2.1",
+  "Section 3.2.2",
+  "Section 4.1",
+  "Section 4.2",
+  "Section 5",
+  "Section 6",
+  "Appendix A",
+  "Appendix B",
+  "Appendix C",
+  "Appendix D",
+  "Appendix E",
+  "Appendix F",
+  "Appendix G",
+  "Appendix H",
+  "Table 1",
+  "Table 2",
+  "Table 3",
+  "Table 4",
+  "Table 5",
+  "Table 6",
+  "Table 7",
+  "Table 8",
+  "Table 9",
+  "Table 10",
+  "Figure 3",
+  "Figure 5",
+  "Figure 6",
+  "Figure 8",
+  "Figure 9",
+  "Figure 10",
+  "Figure 11",
+  "Figure 12"
+ ],
+ "quotes": [
+  "eliminating the need for manual annotation",
+  "an unsupervised approach to training computer-use agents",
+  "millisecond-level precision and parameter extraction",
+  "we downsample videos to 4 fps",
+  "patch size of 2 frames for modeling efficiency",
+  "its interval has any temporal overlap",
+  "On 10 unseen YouTube tutorials",
+  "it would plausibly produce the observed on-screen transition",
+  "For the 50-step budget, we perform a single run.",
+  "the agent demonstrates true test-time scaling",
+  "teaches the model to decompose complex tasks into",
+  "license/PII checks",
+  "a curated set of clean, human-annotated trajectories",
+  "with a small number of GUI grounding pairs",
+  "includes 369 human-crafted Ubuntu desktop tasks",
+  "the trajectories span hundreds of applications across Windows, macOS, and web platforms",
+  "from 50+ channels",
+  "open-source release of our ScreenFilter and Video2Action tools",
+  "Overall precision is high (0.88) with solid recall (0.71)",
+  "Our dense detector is trained on 512,000 screen-capture clips",
+  "We visualize the data sample in Figure",
+  "a clear relationship between pretraining data size and computer-use agent",
+  "passive internet videos can be transformed into high-quality supervision",
+  "Following insights from robotics where inverse dynamics recovers actions from",
+  "human-in-the-loop screening",
+  "inference settings and action executors; no manual interventions are allowed during evaluation",
+  "we conduct three independent runs per model",
+  "Limitations. Metadata-only classification can mislabel borderline cases",
+  "contributes roughly 1B tokens",
+  "which makes it a proper starting point",
+  "based on 100 representative tasks from the AgentNet",
+  "typically lacks precise temporal boundaries or action parameters",
+  "lilybloom123.",
+  "Training these agents requires extensive trajectories"
+ ],
+ "numbers": [
+  {
+   "claim": "OSWorld-Verified SFT-only (Stage 2 only) task SR",
+   "value": "9.3%",
+   "derived": false
+  },
+  {
+   "claim": "OSWorld-Verified Stage1+2 task SR, 50 steps",
+   "value": "15.78%",
+   "derived": false
+  },
+  {
+   "claim": "OSWorld-Verified Stage1+2 task SR, 20 steps mean",
+   "value": "14.13%",
+   "derived": false
+  },
+  {
+   "claim": "OSWorld base model",
+   "value": "4.5%",
+   "derived": false
+  },
+  {
+   "claim": "Relative improvement headline",
+   "value": "70%",
+   "derived": false
+  },
+  {
+   "claim": "Matched 50-step ratio 15.78/9.27",
+   "value": "1.70",
+   "derived": true
+  },
+  {
+   "claim": "Stage-2-only 20-step mean of three runs",
+   "value": "9.32",
+   "derived": true
+  },
+  {
+   "claim": "Stage-2-only per-run range at 20 steps",
+   "value": "9.13-9.42",
+   "derived": false
+  },
+  {
+   "claim": "Stage1+2 per-run range at 20 steps",
+   "value": "13.57-14.68",
+   "derived": false
+  },
+  {
+   "claim": "Stage-2-only 50-step task SR",
+   "value": "9.27%",
+   "derived": false
+  },
+  {
+   "claim": "Stage1+2 20-step relative gain",
+   "value": "+52%",
+   "derived": false
+  },
+  {
+   "claim": "Solved tasks, Stage1+2 runs (20,20,20,50 steps)",
+   "value": "53/49/51/57",
+   "derived": true
+  },
+  {
+   "claim": "Solved tasks, Stage-2-only runs",
+   "value": "34/33/34/33",
+   "derived": true
+  },
+  {
+   "claim": "Denominator consistent with Table 4 SRs",
+   "value": "361",
+   "derived": true
+  },
+  {
+   "claim": "Sum of Table 4 header denominators",
+   "value": "359",
+   "derived": true
+  },
+  {
+   "claim": "OSWorld task count stated",
+   "value": "369",
+   "derived": false
+  },
+  {
+   "claim": "Test-time scaling gain",
+   "value": "1.65 pp",
+   "derived": false
+  },
+  {
+   "claim": "AgentNetBench step SR base / SFT-only / Stage1+2",
+   "value": "38.5 / 64.1 / 69.3",
+   "derived": false
+  },
+  {
+   "claim": "AgentNetBench gain",
+   "value": "5.2 pp",
+   "derived": false
+  },
+  {
+   "claim": "Terminate accuracy SFT-only vs Stage1+2",
+   "value": "0.588 -> 0.237",
+   "derived": false
+  },
+  {
+   "claim": "AgentNetBench click / moveTo / rClick SFT-only -> Stage1+2",
+   "value": "0.671->0.767, 0.300->0.502, 0.214->0.417",
+   "derived": false
+  },
+  {
+   "claim": "Scaling 0/50/100% AgentNetBench",
+   "value": "64.1 / 68.1 / 69.3",
+   "derived": false
+  },
+  {
+   "claim": "Scaling 0/50/100% OSWorld SR@50",
+   "value": "9.3 / 13.3 / 15.7",
+   "derived": false
+  },
+  {
+   "claim": "Detector overall precision / recall / F1",
+   "value": "0.88 / 0.70 / 0.78",
+   "derived": false
+  },
+  {
+   "claim": "Detector press recall",
+   "value": "0.08",
+   "derived": false
+  },
+  {
+   "claim": "Detector drag F1",
+   "value": "0.62",
+   "derived": false
+  },
+  {
+   "claim": "Table 1 Preds total printed",
+   "value": "17,298",
+   "derived": false
+  },
+  {
+   "claim": "Table 1 Preds column sum",
+   "value": "16,298",
+   "derived": true
+  },
+  {
+   "claim": "Precision implied with 16,298 preds",
+   "value": "0.874",
+   "derived": true
+  },
+  {
+   "claim": "Held-out GT events",
+   "value": "20,282",
+   "derived": false
+  },
+  {
+   "claim": "Held-out test video",
+   "value": "23 hours",
+   "derived": false
+  },
+  {
+   "claim": "In-the-wild recovery",
+   "value": "~70%",
+   "derived": false
+  },
+  {
+   "claim": "Parameterizer overall accuracy",
+   "value": "0.658",
+   "derived": false
+  },
+  {
+   "claim": "Parameterizer accuracy recomputed from per-type rows",
+   "value": "0.660",
+   "derived": true
+  },
+  {
+   "claim": "Parameterizer samples",
+   "value": "500",
+   "derived": false
+  },
+  {
+   "claim": "Parameterizer drag / press accuracy",
+   "value": "0.366 / 0.362",
+   "derived": false
+  },
+  {
+   "claim": "Temporal token duration (2 frames at 4 fps)",
+   "value": "0.5 s",
+   "derived": true
+  },
+  {
+   "claim": "Videos processed / steps",
+   "value": "39,000 / 1.52 million",
+   "derived": false
+  },
+  {
+   "claim": "Stage 1 tokens",
+   "value": "26B",
+   "derived": false
+  },
+  {
+   "claim": "Stage 2 tokens",
+   "value": "8B",
+   "derived": false
+  },
+  {
+   "claim": "Grounding tokens",
+   "value": "1B",
+   "derived": false
+  },
+  {
+   "claim": "Average trajectory length",
+   "value": "39.25",
+   "derived": false
+  },
+  {
+   "claim": "AgentNet / AgentTrek average steps",
+   "value": "18.6 / 12.1",
+   "derived": false
+  },
+  {
+   "claim": "Table 8 printed total",
+   "value": "1,547,092",
+   "derived": false
+  },
+  {
+   "claim": "Table 8 counts sum",
+   "value": "1,560,464",
+   "derived": true
+  },
+  {
+   "claim": "Mouse move / drag share recomputed",
+   "value": "0.55% / 0.41%",
+   "derived": true
+  },
+  {
+   "claim": "Left click share",
+   "value": "67.1%",
+   "derived": false
+  },
+  {
+   "claim": "Table 6 resolution buckets sum",
+   "value": "53,375",
+   "derived": true
+  },
+  {
+   "claim": "Downloaded videos",
+   "value": "55,603",
+   "derived": false
+  },
+  {
+   "claim": "Detector training video",
+   "value": "154 hours",
+   "derived": false
+  },
+  {
+   "claim": "Parameterizer training clips",
+   "value": "512,000",
+   "derived": false
+  },
+  {
+   "claim": "ScreenFilter F1",
+   "value": "89.58%",
+   "derived": false
+  },
+  {
+   "claim": "ScreenFilter throughput",
+   "value": "840 hours per GPU-day",
+   "derived": false
+  },
+  {
+   "claim": "GUI hours retained",
+   "value": "7,377 of 10,000 hours",
+   "derived": false
+  },
+  {
+   "claim": "Stage 1 compute",
+   "value": "32x H100, 6500 iterations, batch 512, ~60 h",
+   "derived": false
+  },
+  {
+   "claim": "Stage 2 compute",
+   "value": "64x H100, 3000 iterations, batch 512, ~16 h",
+   "derived": false
+  },
+  {
+   "claim": "Videos per channel (55k / 50+ channels)",
+   "value": "~1,000",
+   "derived": true
+  }
+ ],
+ "references": [
+  {
+   "title": "Behavioral Cloning from Observation",
+   "authors": "Torabi, Warnell, Stone",
+   "year": 2018,
+   "marked_verify": false
+  },
+  {
+   "title": "Learning to Act without Actions",
+   "authors": "Schmidt, Jiang",
+   "year": 2024,
+   "marked_verify": false
+  },
+  {
+   "title": "VideoGUI: A Benchmark for GUI Automation from Instructional Videos",
+   "authors": "Lin et al.",
+   "year": 2024,
+   "marked_verify": true
+  },
+  {
+   "title": "GUI-World: A Dataset for GUI-oriented Multimodal LLM-based Agents",
+   "authors": "Chen et al.",
+   "year": 2024,
+   "marked_verify": true
+  },
+  {
+   "title": "TongUI: Building Generalized GUI Agents by Learning from Multimodal Web Tutorials",
+   "authors": "unknown",
+   "year": 2025,
+   "marked_verify": true
+  }
+ ]
+}

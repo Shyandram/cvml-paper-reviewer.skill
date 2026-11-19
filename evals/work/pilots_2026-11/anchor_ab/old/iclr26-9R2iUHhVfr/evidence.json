@@ -1,0 +1,430 @@
+{
+ "locations": [
+  "Abstract",
+  "§1",
+  "§2",
+  "§2.1",
+  "§3",
+  "§3.1",
+  "§3.2",
+  "§3.3",
+  "§4",
+  "§4.1",
+  "§4.2",
+  "§4.3",
+  "§5",
+  "§6",
+  "§6.1",
+  "§6.2",
+  "§7",
+  "§7.1",
+  "Table 1",
+  "Table 2",
+  "Table 3",
+  "Table 4",
+  "Figure 1",
+  "Figure 2",
+  "Figure 3",
+  "Figure 4",
+  "App. A",
+  "App. A.1",
+  "App. A.2",
+  "App. A.3",
+  "App. B",
+  "App. B.1",
+  "References [13]",
+  "References [15]",
+  "References [22]",
+  "References [24]",
+  "References [25]"
+ ],
+ "quotes": [
+  "107.4 lines",
+  "107.4 lines of code across 4.1 files",
+  "50-100",
+  "Agentless has difficulty in multi-file editing, thus, produces low evaluation scores",
+  "All environments will be released as pre-built docker images",
+  "All tasks are human-verified and augmented with sufficient context to ensure resolvability.",
+  "DeepSeek Qwen-3 32B",
+  "Each repository contributes between 50 and 100 instances, with a strict cap of 100 instances",
+  "Every problem involves at least 10 lines of change",
+  "Every problem involves at least 10 lines of change, and over 100 tasks demand more than 100 lines of modification.",
+  "Final state: Failed (no successful patch generated)",
+  "For all analysis, we use the public set to avoid potential leakage with the commercial set.",
+  "GPT-5 achieving the highest score to date at 23.3%",
+  "GPT-5 indicates potential differences in effective-tool-use",
+  "Our work follows Yang et al. [22], who demonstrate 87% alignment",
+  "Requirements never include specific code implementation and don’t leak solutions",
+  "Requirements never include specific code implementation and don’t leak solutions.",
+  "SWE-Bench Verified [13]",
+  "We design a novel three-stage human-in-the-loop process",
+  "We design the dataset with contamination resistance, difficulty filtering, and human augmentation/verification.",
+  "We determined 20 turns to have the highest correspondence with human validations",
+  "We hold out a set of 858 problems mirroring the public set but use a separate set of repositories.",
+  "We use the same prompt for all models",
+  "a function named `stage_from_google_books` must attempt to fetch and stage metadata",
+  "also achieves a 16.3% resolve rate",
+  "at 3.4% and 3.9% respectively",
+  "between 50 and 100 instances",
+  "builds upon the best practices of SWE-Bench [25]",
+  "challenging",
+  "contamination",
+  "contamination-resistant",
+  "contamination-resistant testbed",
+  "does not prescribe how the solution should be implemented",
+  "earlier generation models like DeepSeek Qwen-3 32B",
+  "exhibits the highest tool error rate (42.0%)",
+  "first to systematically apply",
+  "for open-weight models, we use syntax parsing to enable tool-use",
+  "hours to days",
+  "latest versions as of September 18th, 2025",
+  "legal barriers",
+  "long-horizon",
+  "may require hours to days for a professional software engineer to complete",
+  "models current perform better",
+  "over 70% pass rate on SWE-Bench-Verified",
+  "social media posts [1, 25]",
+  "startups founded by Scale employees",
+  "substantially lower than the >70% Pass@1",
+  "substantially lower than the >70% Pass@1 reported on SWE-Bench Verified [15]",
+  "syntax parsing",
+  "the first to systematically apply such a methodology",
+  "the nature of these licenses creates legal barriers to their inclusion in commercial training corpora",
+  "the setting without requirements is potentially interesting",
+  "three-stage human-in-the-loop process",
+  "to the best of our knowledge, this work is the first to systematically apply such a methodology",
+  "underscoring the greater complexity of enterprise codebases",
+  "utilizing GPT-5 as the judge",
+  "we keep the private set held-out",
+  "we programmatically filter to only unresolved instances",
+  "we run each set of tests 3 times",
+  "where we contacted the company and purchased their engineering repos",
+  "with a similar number of problems per repo",
+  "with copy-left license"
+ ],
+ "numbers": [
+  {
+   "claim": "GPT-5 public-set resolve rate",
+   "value": "23.3%",
+   "derived": false
+  },
+  {
+   "claim": "Claude Opus 4.1 public-set resolve rate",
+   "value": "22.7%",
+   "derived": false
+  },
+  {
+   "claim": "Claude Sonnet 4 public-set resolve rate (Table 1)",
+   "value": "17.6",
+   "derived": false
+  },
+  {
+   "claim": "Sonnet 4 rate stated in §5 text",
+   "value": "16.3%",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o public rate (Table 1)",
+   "value": "4.9",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o rate stated in §5 text",
+   "value": "3.9%",
+   "derived": false
+  },
+  {
+   "claim": "Gemini 2.5 Pro public rate",
+   "value": "13.5",
+   "derived": false
+  },
+  {
+   "claim": "SWE-Smith-32B public rate",
+   "value": "6.8",
+   "derived": false
+  },
+  {
+   "claim": "Qwen-3 32B public rate",
+   "value": "3.4",
+   "derived": false
+  },
+  {
+   "claim": "Opus 4.1 commercial rate",
+   "value": "17.8",
+   "derived": false
+  },
+  {
+   "claim": "GPT-5 commercial rate",
+   "value": "14.9",
+   "derived": false
+  },
+  {
+   "claim": "Gemini commercial rate",
+   "value": "10.1",
+   "derived": false
+  },
+  {
+   "claim": "Sonnet 4 commercial rate",
+   "value": "9.1",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o commercial rate",
+   "value": "3.6",
+   "derived": false
+  },
+  {
+   "claim": "total problems",
+   "value": "1,865",
+   "derived": false
+  },
+  {
+   "claim": "public / commercial / held-out problems",
+   "value": "731 / 276 / 858",
+   "derived": false
+  },
+  {
+   "claim": "public / held-out / commercial repositories",
+   "value": "11 / 12 / 18",
+   "derived": false
+  },
+  {
+   "claim": "total repositories",
+   "value": "41",
+   "derived": false
+  },
+  {
+   "claim": "average reference-solution size",
+   "value": "107.4 lines of code across 4.1 files",
+   "derived": false
+  },
+  {
+   "claim": "minimum change",
+   "value": "10 lines",
+   "derived": false
+  },
+  {
+   "claim": "SWE-Bench Verified reported pass rate",
+   "value": ">70%",
+   "derived": false
+  },
+  {
+   "claim": "trivial problems in SWE-Bench Verified",
+   "value": "161 out of 500",
+   "derived": false
+  },
+  {
+   "claim": "max agent turns",
+   "value": "200",
+   "derived": false
+  },
+  {
+   "claim": "judge window",
+   "value": "last 20 turns",
+   "derived": false
+  },
+  {
+   "claim": "borrowed judge-human alignment",
+   "value": "87%",
+   "derived": false
+  },
+  {
+   "claim": "Opus Table 3 submitted / not-submitted counts",
+   "value": "681 / 239",
+   "derived": false
+  },
+  {
+   "claim": "GPT-5 Table 3 counts",
+   "value": "267 / 457",
+   "derived": false
+  },
+  {
+   "claim": "Sonnet Table 3 counts",
+   "value": "295 / 404",
+   "derived": false
+  },
+  {
+   "claim": "Gemini Table 3 counts",
+   "value": "491 / 424",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o Table 3 counts",
+   "value": "569 / 220",
+   "derived": false
+  },
+  {
+   "claim": "Qwen Table 3 counts",
+   "value": "386 / 406",
+   "derived": false
+  },
+  {
+   "claim": "GPT-5 not-submitted share of failures",
+   "value": "63.1%",
+   "derived": false
+  },
+  {
+   "claim": "GPT-5 tool-use share of not-submitted",
+   "value": "97.6%",
+   "derived": false
+  },
+  {
+   "claim": "Sonnet Other share of submitted failures",
+   "value": "63.4%",
+   "derived": false
+  },
+  {
+   "claim": "Qwen tool error rate stated in §6.2",
+   "value": "42.0%",
+   "derived": false
+  },
+  {
+   "claim": "Opus wrong-solution share of failures (text)",
+   "value": "35.9%",
+   "derived": false
+  },
+  {
+   "claim": "Opus syntax-error share (text)",
+   "value": "24.2%",
+   "derived": false
+  },
+  {
+   "claim": "Gemini tool-error share stated",
+   "value": "38.8%",
+   "derived": false
+  },
+  {
+   "claim": "Opus Table 3 total failures",
+   "value": "920",
+   "derived": true
+  },
+  {
+   "claim": "Gemini Table 3 total",
+   "value": "915",
+   "derived": true
+  },
+  {
+   "claim": "GPT-4o Table 3 total",
+   "value": "789",
+   "derived": true
+  },
+  {
+   "claim": "Qwen Table 3 total",
+   "value": "792",
+   "derived": true
+  },
+  {
+   "claim": "GPT-5 Table 3 total",
+   "value": "724",
+   "derived": true
+  },
+  {
+   "claim": "Sonnet Table 3 total",
+   "value": "699",
+   "derived": true
+  },
+  {
+   "claim": "expected unresolved public instances for Opus",
+   "value": "565",
+   "derived": true
+  },
+  {
+   "claim": "expected unresolved GPT-5 / Sonnet / Gemini / GPT-4o / Qwen",
+   "value": "561 / 602 / 632 / 695 / 706",
+   "derived": true
+  },
+  {
+   "claim": "Qwen tool-use share recomputed",
+   "value": "44.1%",
+   "derived": true
+  },
+  {
+   "claim": "GPT-5 tool-use share recomputed",
+   "value": "61.6%",
+   "derived": true
+  },
+  {
+   "claim": "Gemini tool-use share recomputed",
+   "value": "38.9%",
+   "derived": true
+  },
+  {
+   "claim": "commercial problems per repository",
+   "value": "15.3",
+   "derived": true
+  },
+  {
+   "claim": "public problems per repository",
+   "value": "66.5",
+   "derived": true
+  },
+  {
+   "claim": "held-out problems per repository",
+   "value": "71.5",
+   "derived": true
+  },
+  {
+   "claim": "95% CI half-width, N=731, p=0.233",
+   "value": "±3.06 pp",
+   "derived": true
+  },
+  {
+   "claim": "95% CI half-width, N=276, p=0.178",
+   "value": "±4.51 pp",
+   "derived": true
+  },
+  {
+   "claim": "aspect-weighted rating",
+   "value": "3.215",
+   "derived": true
+  },
+  {
+   "claim": "plain mean rating",
+   "value": "3.14",
+   "derived": true
+  },
+  {
+   "claim": "weighted pool position",
+   "value": "49.9",
+   "derived": true
+  }
+ ],
+ "references": [
+  {
+   "title": "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code",
+   "authors": "N. Jain et al.",
+   "year": 2024,
+   "marked_verify": false
+  },
+  {
+   "title": "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?",
+   "authors": "S. Miserendino et al.",
+   "year": 2025,
+   "marked_verify": false
+  },
+  {
+   "title": "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents",
+   "authors": "I. Badertdinov et al.",
+   "year": 2025,
+   "marked_verify": true
+  },
+  {
+   "title": "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents",
+   "authors": "M. S. Rashid et al.",
+   "year": 2025,
+   "marked_verify": true
+  },
+  {
+   "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+   "authors": "J. Yang et al.",
+   "year": 2025,
+   "marked_verify": false
+  },
+  {
+   "title": "Time Travel in LLMs: Tracing Data Contamination in Large Language Models",
+   "authors": "S. Golchin and M. Surdeanu",
+   "year": 2024,
+   "marked_verify": false
+  }
+ ]
+}

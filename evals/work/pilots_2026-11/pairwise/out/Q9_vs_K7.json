@@ -1,0 +1,5 @@
+{"pair": "Q9_vs_K7", "winner": 2, "margin": "slight",
+ "rating_paper1": 4, "rating_paper2": 6,
+ "reason": "Paper 2 backs its main claims with a large controlled study: 11 optimizers, about 2900 runs, tuning matched across model size, batch size and training horizon. That study yields concrete, checkable findings, such as AdEMAMix/MARS leading at scale, the weight-decay fix that makes D-Muon work, and codebase defaults (z-loss, 10% LR decay) that flip optimizer rankings, though it stops at 720M parameters and uses single seeds. Paper 1 offers a useful, timely and harder benchmark. However, its evidence is thin: one scaffold, single Pass@1 runs, a weak GPL-based contamination argument, a commercial set no one can audit, and numbers that disagree between text and tables (Sonnet 16.3 vs 17.6, GPT-4o 3.9 vs 4.9, failure-mode percentages). Its analysis adds little insight beyond the dataset itself.",
+ "recognized": ["Paper 1 appears to be SWE-Bench Pro (Scale AI, 2025)", "Paper 2 appears to be 'Benchmarking Optimizers for Large Language Model Pretraining' (EPFL, 2025)"],
+ "injection_found": null}

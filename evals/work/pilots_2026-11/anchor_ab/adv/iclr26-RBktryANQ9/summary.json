@@ -1,0 +1,28 @@
+{
+  "id": "iclr26-RBktryANQ9",
+  "mode": "full (ledger)",
+  "paper_type": "analysis",
+  "final_overall": 2,
+  "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+  "task": ["Image classification, representation learning (adapted: learning with noisy labels)", "dataset distillation / condensation (not listed; generated)"],
+  "neighboring_fields": ["learning with noisy labels", "dataset distillation / condensation (generated)", "data-centric ML: coreset selection and data pruning", "learning theory of memorization and early learning", "privacy-preserving ML (generated from the paper's privacy claim)"],
+  "aspect_ratio": {"technical_rigor": 0.2752, "clarity": 0.1009, "novelty": 0.2018, "significance": 0.2018, "experimental_validation": 0.1376, "reproducibility": 0.0459, "ethics": 0.0367},
+  "ledger_rating": 2.124,
+  "ledger_pool_position": 21.4,
+  "official_rating": 2.17,
+  "n_types": 6,
+  "n_accept": 11,
+  "n_reject": 22,
+  "n_answered": 4,
+  "n_probes": 12,
+  "top_concerns": [
+    "R1: no noisy-label learning baseline; the only comparator is CE on the full noisy dataset (Section 4, Figures 2/4/5)",
+    "R6: no seeds, variance or numeric tables; all results are curves (Section 4, figure captions)",
+    "R20: benefit limited to high noise; distillation underperforms at realistic Aggre noise (Section 4 Observation-III)",
+    "R4: Corollary-II (Eq. 11) contradicts the paper's own Observation-I/III and the direction of Eq. 10",
+    "R2: no matched-size controls (early-stopped CE, random subset, coreset) and unstated baseline protocol (Section 4 Experiment-I)"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "Recognized: the title only felt vaguely familiar; I knew nothing about reviews or the outcome. Figures were unavailable, and since every result is a figure, accuracy claims were judged only from the prose. Ambiguities: (1) Paper type: analysis vs empirical changes the ratio a lot (novelty 20% vs 16%, validation 14% vs 19%); I chose analysis because no new method is proposed. (2) The advocate rule says a blocking fatal reason caps the pool position at 30, but says nothing on how Overall relates; I gave 3 and justified it as within +/-1 of the composite. (3) Whether new seeded runs count as 'new science' (blocking) or as answerable is unclear; I treated them as blocking. (4) Priority 1 also takes reasons graded major by at least half of all types, which here gives 9 Priority 1 items, many more than the five top concerns. (5) The template's 'venue's own label' for ICLR is a two-scale string from the script and is presented as secondary. (6) Without network access, the literature check and novelty probes could only rest on memory, marked [verify]."
+}

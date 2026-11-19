@@ -1,0 +1,120 @@
+{
+ "R3": [
+  "T1 fatal",
+  "T5 major"
+ ],
+ "R4": [
+  "T1 major"
+ ],
+ "R8": [
+  "T1 major",
+  "T6 minor"
+ ],
+ "R9": [
+  "T1 major",
+  "T4 major"
+ ],
+ "R10": [
+  "T1 major",
+  "T4 major"
+ ],
+ "R11": [
+  "T1 minor",
+  "T4 minor"
+ ],
+ "R16": [
+  "T1 minor",
+  "T5 major"
+ ],
+ "A3": [
+  "T1 held"
+ ],
+ "A6": [
+  "T1 held"
+ ],
+ "A4": [
+  "T1 discounted",
+  "T5 held"
+ ],
+ "A1": [
+  "T1 discounted",
+  "T2 held"
+ ],
+ "R12": [
+  "T2 minor",
+  "T5 major"
+ ],
+ "R13": [
+  "T2 major",
+  "T3 major"
+ ],
+ "R15": [
+  "T2 major",
+  "T5 major",
+  "T6 major"
+ ],
+ "R17": [
+  "T2 major"
+ ],
+ "R18": [
+  "T2 minor"
+ ],
+ "A2": [
+  "T2 held",
+  "T4 held"
+ ],
+ "A8": [
+  "T2 held"
+ ],
+ "A9": [
+  "T2 discounted"
+ ],
+ "R1": [
+  "T3 major"
+ ],
+ "R2": [
+  "T3 major"
+ ],
+ "R14": [
+  "T3 major"
+ ],
+ "R7": [
+  "T3 minor",
+  "T4 major"
+ ],
+ "A5": [
+  "T3 held"
+ ],
+ "A10": [
+  "T3 discounted",
+  "T6 discounted"
+ ],
+ "R5": [
+  "T4 major",
+  "T6 major"
+ ],
+ "R6": [
+  "T4 major",
+  "T5 major",
+  "T6 minor"
+ ],
+ "R19": [
+  "T4 minor"
+ ],
+ "R20": [
+  "T4 major"
+ ],
+ "A11": [
+  "T4 held"
+ ],
+ "A7": [
+  "T5 held"
+ ],
+ "A12": [
+  "T5 discounted",
+  "T6 discounted"
+ ],
+ "R21": [
+  "T6 minor"
+ ]
+}

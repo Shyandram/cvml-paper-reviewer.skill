@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-9R2iUHhVfr",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Reported numbers are internally inconsistent: prose vs Table 1/Table 3 mismatches, and Table 3 failure counts (e.g., 920 for Opus 4.1) exceed the 731-task public set",
+    "Contamination resistance is asserted from GPL licensing with no empirical contamination test; the held-out set is not evaluated",
+    "Requirements and interface fields derived from the tests narrow the task; no ablation without them, and the 'hours to days' long-horizon claim is unmeasured",
+    "Thin protocol: single scaffold, single run, no CIs, no cost budgets; context-overflow failures may come from the scaffold",
+    "Human augmentation and verification are under-documented (no annotator agreement, filtering funnel or leakage audit), and the findings are largely descriptive"
+  ],
+  "recognized": true,
+  "injection_found": null
+}

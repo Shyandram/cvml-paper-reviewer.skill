@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-RBktryANQ9",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Only baseline is CE on the full noisy set; no comparison with noisy-label methods (DivideMix, Co-teaching, ELR) or same-size random/small-loss subsets",
+    "Denoising mechanism is assumed rather than measured; experts/encoders are themselves trained on noisy labels",
+    "Corollaries (Eq. 10, 11) are stated without proofs, assumptions, or empirical checks",
+    "Possible test-set selection ('accuracies reported throughout distillation'); no seeds, variance, or validation split",
+    "Privacy, efficiency, tail-class and 'in the wild' claims are untested; only small ConvNets on CIFAR/Tiny-ImageNet/CIFAR-N"
+  ],
+  "recognized": true,
+  "injection_found": null
+}

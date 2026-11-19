@@ -1,0 +1,830 @@
+{
+ "accept": [
+  {
+   "id": "A1",
+   "aspect": "novelty",
+   "reason": "Reframes learning with noisy labels as a dataset-distillation problem: distil a compact synthetic support set from the noisy data and train on it, sidestepping the noise-estimation step of selection/re-weighting/re-labelling pipelines. This links two literatures that rarely meet.",
+   "location": "Abstract; Sec. 1 (Motivation); Sec. 3.1 Remark: \"Why not directly distill a clean subset that enables effective training?\"",
+   "strength": "moderate",
+   "depends_on": "R12 and R15 not upheld; the framing is backed by evidence",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A2",
+   "aspect": "experimental_validation",
+   "reason": "Covers the three main families of dataset distillation with one representative each: parameter/trajectory matching (DATM), distribution matching (DANCE), meta-learning/kernel (RCIG), so conclusions are not tied to one distiller.",
+   "location": "Sec. 3.2, Benchmark-I/II/III, Eqs. 4-9",
+   "strength": "moderate",
+   "depends_on": "each method run with its original protocol",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A3",
+   "aspect": "experimental_validation",
+   "reason": "Symmetric noise is swept over several rates (tau = 0.2, 0.4, 0.6, 0.8) and IPC values on three datasets (CIFAR-10, CIFAR-100, Tiny-ImageNet), giving accuracy-vs-IPC curves against a full-data reference.",
+   "location": "Sec. 4 Experiment-I; Figure 2(a)-(c) captions",
+   "strength": "moderate",
+   "depends_on": "R4 and R9 not upheld",
+   "claim": "C2",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "A4",
+   "aspect": "significance",
+   "reason": "Striking headline effect: at high symmetric noise a single distilled image per class beats training on the full noisy set, and at tau=0.2 fewer than 50 IPC do.",
+   "location": "Sec. 4 Experiment-I: \"at noise rates of 0.6 and 0.8, a single distilled sample per class surpasses the baseline\"",
+   "strength": "moderate",
+   "depends_on": "full-data baseline trained sensibly (R4); numbers verifiable (R9)",
+   "claim": "C2",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "A5",
+   "aspect": "technical_rigor",
+   "reason": "Reports a negative result honestly: under asymmetric (class-pair) noise most distillers fall below the full-data baseline, and only DATM matches it at tau in {0.2, 0.4} with large IPC. This bounds the method's applicability.",
+   "location": "Sec. 4 Experiment-II, Observation-II; Figure 4: \"Only the DATM method achieves comparable performance to the benchmark at noise rate\"",
+   "strength": "moderate",
+   "depends_on": "none",
+   "claim": "C3",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A6",
+   "aspect": "experimental_validation",
+   "reason": "Tests human-annotation noise (CIFAR-10N Aggre/Random/Worst, CIFAR-100N fine, tau up to 40%), not only synthetic flips, and reports where distillation helps (Worst) and where it does not (Aggre).",
+   "location": "Sec. 4 Experiment-III; Figure 5",
+   "strength": "moderate",
+   "depends_on": "R8 not upheld (scale of 'in the wild')",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A7",
+   "aspect": "significance",
+   "reason": "Identifies an IPC-noise trade-off: small IPC removes noise but also compresses clean information, which explains why distillation underperforms at low noise (Aggre, 9%).",
+   "location": "Sec. 4 Insight-III: \"This is why data distillation often yields suboptimal results in low-noise settings\"",
+   "strength": "weak",
+   "depends_on": "read from figures not available to this review",
+   "claim": "C4",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "A8",
+   "aspect": "clarity",
+   "reason": "Self-contained recap of the noise models (Eqs. 1-2) and the three distillation objectives (Eqs. 4-9) lets a noisy-label reader follow the distillers.",
+   "location": "Sec. 3.1 Eqs. 1-3; Sec. 3.2 Eqs. 4-9",
+   "strength": "moderate",
+   "depends_on": "none",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A9",
+   "aspect": "experimental_validation",
+   "reason": "Qualitative evidence: distilled DATM images at IPC=1 shown across tau=0.0-0.8, claimed to retain discriminative features under heavy noise.",
+   "location": "Figure 3 caption; Sec. 4: \"a single distilled image retains discriminative features despite high noise ratios\"",
+   "strength": "weak",
+   "depends_on": "figure not available to this review",
+   "claim": "C2",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "A10",
+   "aspect": "significance",
+   "reason": "Poses open problems with potential follow-up value: how much to distil from a noisy set, and whether distillation behaviour can estimate the noise rate.",
+   "location": "Sec. 4 Insight-I; Corollary-II, Eq. 11",
+   "strength": "weak",
+   "depends_on": "R1, R2 not upheld",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A11",
+   "aspect": "reproducibility",
+   "reason": "Uses public datasets, public noise constructions (CIFAR-10 class mappings, CIFAR-100 superclass flips given) and the original evaluation protocols of the three public distillers with the standard ConvNet.",
+   "location": "Sec. 4 Implementations: \"a three-layer ConvNet for CIFAR and a four-layer ConvNet for Tiny-ImageNet\"",
+   "strength": "moderate",
+   "depends_on": "R20 not upheld",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A12",
+   "aspect": "significance",
+   "reason": "Distillation is a one-off offline step yielding a tiny training set, which could make downstream training cheap and the raw data unnecessary after distillation.",
+   "location": "Abstract; Sec. 1 Contributions; Sec. 5",
+   "strength": "weak",
+   "depends_on": "R5 and R6 not upheld",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  }
+ ],
+ "reject": [
+  {
+   "id": "R1",
+   "aspect": "technical_rigor",
+   "reason": "Corollary-II contradicts the paper's own results. For a dataset where IPC images per class already match the full-data accuracy it gives tau >= 1 - C*IPC/|S|, which is near 1 for every setting the paper reports as successful.",
+   "location": "Corollary-II, Eq. 11: \"the validation accuracy matches that of the original dataset\"; check: CIFAR-10 (|S|=50,000, standard size, not stated in the paper), C=10, IPC=50 gives tau >= 0.99, but Sec. 4 Exp-I reports success at tau=0.2 with <50 IPC; CIFAR-100N (C=100, IPC<10) gives tau >= 0.98 vs the stated 40.20%. Eq. 11 also inverts the direction of Eq. 10 (which implies tau <= 1 - C*IPC/|S|).",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Withdraw Corollary-II or restate it with a proof and assumptions under which it is consistent with Figs. 2/5; low cost (text) or moderate (new theory)",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R2",
+   "aspect": "technical_rigor",
+   "reason": "Both corollaries are given without proof, assumptions or definitions ('perfectly preserve the sample information', delta, the probability space). Eq. 10 reduces to 'IPC is at most the number of clean samples per class' (4,000 on CIFAR-10 at tau=0.2) and so never constrains the IPC range 1-50 studied.",
+   "location": "Corollary-I, Eq. 10: \"This corollary succinctly states the upper bound\"; Sec. 4 Exp-III, Eq. 11; recomputed |S|(1-tau)/C = 50,000*0.8/10 = 4,000",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Either prove the statements with explicit assumptions or relabel them as conjectures/heuristics; low-moderate",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R3",
+   "aspect": "experimental_validation",
+   "reason": "The paper presents distillation as 'a new approach to model learning from noisy data' but compares it with no noisy-label method. The only reference is CE training on the full noisy set. The cited sample selection (Co-teaching [14]), semi-supervised (DivideMix [24]), robust-loss (GCE [55]) and early-learning (ELR-style [47]) methods are never run, so it is unknown whether distillation is competitive with the methods it claims to replace.",
+   "location": "Sec. 5: \"We propose a new approach to model learning from noisy data that avoids vicious cycles\"; Figure 2 caption: dashed lines are \"training on the full dataset at the corresponding noise rate\"; no other baseline in Sec. 4",
+   "kind": "gap",
+   "worst_case": "fatal",
+   "fix": "Add at least 3-4 standard noisy-label baselines (CE+early stopping, Co-teaching, GCE, DivideMix) on the same ConvNet and on a standard ResNet; moderate (CIFAR-scale, a few GPU-days)",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R4",
+   "aspect": "experimental_validation",
+   "reason": "The full-data reference is under-specified: architecture, epochs, augmentation, learning rate and especially whether early stopping or a clean validation set was used are not stated. CE without early stopping memorises noisy labels, which can inflate the distillation-vs-baseline gap that A4 rests on.",
+   "location": "Figure 2/4/5 captions (dashed lines); Sec. 4 Implementations (no baseline settings); search for 'epoch', 'learning rate', 'early stop' finds none in Sec. 4",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "State the baseline protocol; add CE with early stopping on a held-out noisy validation split; low",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R5",
+   "aspect": "technical_rigor",
+   "reason": "The privacy claim ('strong privacy protection', 'ensures privacy protection') is untested: there is no threat model, membership-inference or reconstruction attack, or formal guarantee. Whether distilled data protects privacy is contested in the distillation literature.",
+   "location": "Abstract: \"providing strong privacy protection through offline processing\"; Sec. 5: \"ensures privacy protection through offline dataset distillation\"; text search: 'privacy' occurs only in claims (Abstract, Sec. 1, Sec. 3.2 Remark, Sec. 5), never in an experiment",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Remove the privacy claim or add a membership-inference evaluation against the distilled sets; low (remove) or moderate (evaluate)",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R6",
+   "aspect": "technical_rigor",
+   "reason": "The efficiency claim ('enhances training efficiency') is unmeasured. No distillation time, GPU memory or expert-trajectory cost is reported, and distillation itself (DATM needs expert trajectories trained on the full noisy data) is far costlier than one CE training run.",
+   "location": "Abstract: \"avoids the feedback loop common in existing techniques and enhances training efficiency\"; search for 'GPU', 'hour', 'time' finds no measurement; Sec. 3.2 notes DATM's \"significant scalability challenges\"",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Report end-to-end wall-clock and memory (expert training + distillation + student training) against CE and a noisy-label baseline; low",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R7",
+   "aspect": "technical_rigor",
+   "reason": "The abstract and contributions state as a finding that tail-class clean samples are lossily compressed in imbalanced datasets, but Sec. 4 only hypothesises this; no imbalanced or long-tailed experiment exists.",
+   "location": "Abstract: \"clean but challenging samples, such as those from tail classes in imbalanced datasets, may undergo lossy compression\"; Sec. 4: \"We further hypothesize that challenging clean samples, such as tail data in imbalanced datasets, are at risk\"",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Either run a long-tailed noisy experiment (e.g., CIFAR-10-LT with noise) or move the statement to future work; low-moderate",
+   "claim": "C3",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R8",
+   "aspect": "significance",
+   "reason": "The title's 'In the Wild' and the 'real-world' framing rest on CIFAR-10N/100N only (32x32 images re-annotated by crowd workers). The large real-noise benchmarks named in Sec. 3.1 (Clothing1M, WebVision) are not evaluated, and Tiny-ImageNet is used only with synthetic symmetric noise.",
+   "location": "Title; Sec. 3.1: \"high-volume datasets like Clothing1M [48] and WebVision [27] serve as classic benchmarks\"; Sec. 4 Exp-III uses only CIFAR-10N/100N",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Add Clothing1M or WebVision (mini) results, or retitle; moderate-high (DATM scalability)",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R9",
+   "aspect": "experimental_validation",
+   "reason": "No result is given as a number: the paper has no tables, and every quantitative claim ('consistently outperform', 'significant performance gains') refers to curves in Figures 2, 4 and 5. Gains cannot be checked or compared with other work.",
+   "location": "Text search: no 'Table' in the manuscript; Sec. 4 Observation-I: \"consistently demonstrate significant performance gains\"",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Add tables with accuracy per method x dataset x tau x IPC, and the baseline; low",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R10",
+   "aspect": "experimental_validation",
+   "reason": "Seeds, number of runs and variance are not stated anywhere. At CIFAR scale several seeds are the norm, and some claimed effects (DATM 'comparable' under asymmetric noise; crossings near the dashed line) are of a size where run-to-run noise matters.",
+   "location": "Text search: 'seed', 'runs', 'std' not found; Figure 2/4/5 captions describe only \"solid lines\" and \"dashed lines\"",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report mean +- std over >= 3 seeds for distillation and baselines; moderate compute",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R11",
+   "aspect": "technical_rigor",
+   "reason": "Possible selection on the test set: accuracies are 'reported throughout the distillation process' on the test set, and the figure captions call the same quantity 'validation performance'. If the best test accuracy over distillation iterations is reported, the curves are optimistically biased.",
+   "location": "Sec. 4 Implementations: \"Final test accuracies are reported throughout the distillation process\"; Figure 2 caption: \"The validation performance over symmetric noise\"",
+   "kind": "question",
+   "worst_case": "major",
+   "fix": "State which checkpoint is reported and how it is chosen; use a held-out split for selection; low",
+   "claim": "C2",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "R12",
+   "aspect": "novelty",
+   "reason": "The related work omits the closest prior art: robust subset/coreset selection under label noise (e.g., Mirzasoleiman, Cao, Leskovec, 'Coresets for Robust Training of Neural Networks against Noisy Labels', NeurIPS 2020) and prior studies of dataset distillation/condensation with noisy labels [verify]. Without them the novelty of 'a new perspective' cannot be placed.",
+   "location": "Sec. 2.1-2.2 discuss noisy-label methods and distillation separately; no work combining the two is cited; literature check not run (no network)",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Add a related-work paragraph on coreset selection under noise and on noisy-label dataset distillation, and position the delta; low",
+   "claim": "C1",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "R13",
+   "aspect": "technical_rigor",
+   "reason": "The mechanism is asserted, not tested. 'Distillation captures common patterns while ignoring outliers such as noise' and 'asymmetric noise is absorbed into the distilled samples' are inferred from accuracy curves only. Nothing measures the label content of the distilled images, the influence of noisy samples, or the role of experts trained on noisy labels (DATM trajectories, DANCE phi_expert).",
+   "location": "Sec. 4 Insight-I: \"the distillation process primarily captures common patterns while ignoring outliers such as noise\"; Sec. 4 Observation-II; Eqs. 4, 6-7 (experts trained on the noisy set)",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Add analyses: expert-epoch ablation for DATM, a probe of distilled-image class evidence (e.g., a clean-trained classifier on the synthetic set), influence of noisy samples; moderate",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R14",
+   "aspect": "technical_rigor",
+   "reason": "The claim of avoiding the 'vicious cycle' is not demonstrated. The distillers depend on models trained on the noisy labels (DATM expert trajectories, DANCE's trained encoders), so the noise still shapes the result, only implicitly. No experiment contrasts the feedback-loop failure of existing methods with distillation.",
+   "location": "Abstract: \"This method avoids the feedback loop common in existing techniques\"; Sec. 3.2 Eqs. 4, 6-7",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Narrow the claim, or show a setting where noise-estimation methods fail through their feedback loop and distillation does not; low (narrow) or moderate",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R15",
+   "aspect": "significance",
+   "reason": "Contribution check: the paper proposes no method and benchmarks three existing distillers on noisy CIFAR-scale data. Its insights (symmetric noise averages out; structured noise is preserved; small IPC loses information) are close to what a reader would guess. The delta over distillation and noisy-label work is a refinement-level empirical study.",
+   "location": "Sec. 2.2: \"This work first benchmarks existing representative distillation approaches\"; Sec. 1 Empirical Insights (I)-(III)",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Turn the observations into a method (e.g., noise-aware distillation for structured noise) or a deeper analysis explaining when and why distillation denoises; high",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R16",
+   "aspect": "significance",
+   "reason": "There is no practical recipe. The paper says choosing IPC depends on the unknown noise rate and leaves it open, so a practitioner cannot apply the approach without tuning on clean labels.",
+   "location": "Sec. 4 Insight-I: \"How much data should be distilled from a noisy dataset to create a meaningful distilled set?\"; Insight-III",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Propose and test an IPC-selection rule using only noisy data; moderate",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R17",
+   "aspect": "experimental_validation",
+   "reason": "The evaluation is narrow by distillation standards: only the ConvNet used for distillation, with no cross-architecture evaluation of the distilled sets (standard in the distillation literature). Asymmetric and natural noise are not run on Tiny-ImageNet.",
+   "location": "Sec. 4 Implementations (ConvNet only); Figure 4 (CIFAR-10/100 only); Figure 5 (CIFAR-N only)",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Evaluate the distilled sets on ResNet-18/VGG; add Tiny-ImageNet asymmetric runs; moderate",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R18",
+   "aspect": "clarity",
+   "reason": "Presentation slips: 'Realted Works', 'contributions bellow', 'Both of which' for three noise types; Eq. 4 uses theta-hat_{t+N} while the text defines theta-hat_{t+T}; 'Benchmark-I' is said to denote the accelerated variant of [9], not DATM itself; test vs validation wording is inconsistent (see R11).",
+   "location": "Sec. 2 heading: \"Realted Works\"; Sec. 1: \"major contributions bellow\"; Sec. 3.1: \"Both of which are widely employed\"; Sec. 3.2 Eq. 4; Sec. 3.2: \"Benchmark-I referenced later denotes this accelerated version\"",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Proofread; clarify which DATM variant is used; low",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R19",
+   "aspect": "clarity",
+   "reason": "The extracted layout (two columns, Figure 1 beside the abstract, bracketed numeric citations) suggests the manuscript is not in the ICLR template, which could be a formatting violation. This cannot be confirmed from extracted text.",
+   "location": "Page 1 layout: abstract and Figure 1 caption interleaved in two columns",
+   "kind": "question",
+   "worst_case": "minor",
+   "fix": "Reformat in the ICLR 2026 template; low",
+   "claim": "general",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "R20",
+   "aspect": "reproducibility",
+   "reason": "Key distillation hyperparameters are missing: IPC grid, distillation iterations, expert epochs and trajectories for DATM, learning rates, augmentation for evaluation (except RCIG), and compute. No code release is mentioned.",
+   "location": "Sec. 4 Implementations; search for 'epoch', 'iteration', 'learning rate', 'github' finds none",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Add a hyperparameter table per method/dataset and release code and noisy-label files; low",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R21",
+   "aspect": "ethics",
+   "reason": "There is no limitations section. The privacy framing ('high-privacy environments') is promotional and its risks are not discussed: distilled images can leak training data, and Figure 3 is presented as recognisable images.",
+   "location": "Abstract: \"especially in high-privacy environments where noise is prevalent\"; Sec. 5; Figure 3",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add a limitations paragraph covering privacy leakage and scale; low",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  }
+ ],
+ "answered": [
+  {
+   "reason": "Only symmetric noise is studied.",
+   "answered_at": "Sec. 4 Experiment-II (asymmetric, Figure 4) and Experiment-III (CIFAR-10N/100N, Figure 5)"
+  },
+  {
+   "reason": "Conclusions rest on a single distillation method.",
+   "answered_at": "Sec. 3.2: DATM, DANCE and RCIG, one per family"
+  },
+  {
+   "reason": "The asymmetric noise construction is unspecified.",
+   "answered_at": "Sec. 4 Implementations: TRUCK -> AUTOMOBILE, BIRD -> AIRPLANE, DEER -> HORSE, CAT <-> DOG; CIFAR-100 superclass flips"
+  },
+  {
+   "reason": "The CIFAR-N label sets and their noise rates are unspecified.",
+   "answered_at": "Sec. 4 Experiment-III: Random k (~18%), Worst (40.21%), Aggre (9.03%), CIFAR-100N fine (40.20%)"
+  },
+  {
+   "reason": "Is the evaluation protocol of each distiller altered?",
+   "answered_at": "Sec. 4 Implementations: \"following the evaluation protocols of DATM, DANCE, and RCIG, with data augmentation applied for RCIG as recommended\""
+  }
+ ],
+ "probes": [
+  {
+   "id": "P1",
+   "items": [
+    "R1",
+    "R2",
+    "A10"
+   ],
+   "question": "Is Corollary-II (Eq. 11) consistent with the settings the paper reports as successful, and with Corollary-I (Eq. 10)?",
+   "method": "Recompute the bounds with the standard training-set sizes (CIFAR-10/100: 50,000; not stated in the paper) for the settings quoted in Sec. 4 Exp-I and Exp-III; compare the inequality directions of Eqs. 10 and 11.",
+   "result": "confirmed",
+   "location": "Corollary-II, Eq. 11; Sec. 4 Exp-I/III",
+   "finding": "Eq. 11 at CIFAR-10, IPC=50 gives tau >= 0.99 vs the reported success at tau=0.2; CIFAR-100N, IPC<10 gives tau >= 0.98 vs 40.20%. Eq. 10 rearranges to tau <= 1 - C*IPC/|S|, the reverse of Eq. 11. Eq. 10 gives IPC <= 4,000 at tau=0.2, vacuous for IPC 1-50. No proof anywhere.",
+   "change": "R1 open -> checked (error confirmed by recomputation); R2 open -> checked; A10 weak (condition fails)",
+   "after_reviews": false
+  },
+  {
+   "id": "P2",
+   "items": [
+    "R3",
+    "A4"
+   ],
+   "question": "Does Sec. 4 compare distillation with any noisy-label learning method beyond CE on the full noisy set?",
+   "method": "Re-read Sec. 4 and all figure captions; search for the cited methods (Co-teaching, DivideMix, GCE, DISC) outside Sec. 2.",
+   "result": "confirmed",
+   "location": "Figure 2/4/5 captions; Sec. 4",
+   "finding": "The only reference line is \"training on the full dataset at the corresponding noise rate\". Cited methods appear only in Sec. 1-2.",
+   "change": "R3 open -> checked (gap confirmed); A4 depends on R4",
+   "after_reviews": false
+  },
+  {
+   "id": "P3",
+   "items": [
+    "R4",
+    "A4"
+   ],
+   "question": "Is the full-data baseline's training protocol (architecture, epochs, early stopping, augmentation) given anywhere?",
+   "method": "Search the full text for 'epoch', 'learning rate', 'early stop', 'augmentation', 'baseline'.",
+   "result": "confirmed",
+   "location": "Sec. 4 Implementations",
+   "finding": "No baseline protocol is given. 'Early stopping' appears only in reference [25]; augmentation is mentioned only for RCIG's distilled-set evaluation.",
+   "change": "R4 open -> checked; A4 stays moderate but conditional",
+   "after_reviews": false
+  },
+  {
+   "id": "P4",
+   "items": [
+    "R5",
+    "R6",
+    "A12",
+    "R21"
+   ],
+   "question": "Is there any experiment or measurement behind the privacy and efficiency claims?",
+   "method": "Search for 'privacy', 'efficien', 'GPU', 'hour', 'time', 'memory', 'attack', 'membership'.",
+   "result": "confirmed",
+   "location": "Abstract; Sec. 1; Sec. 3.2 Remark; Sec. 5",
+   "finding": "'Privacy' occurs 6 times, all in claims. 'Efficien' occurs only in claims and in describing [9] and [30]. No timing, memory or attack results.",
+   "change": "R5, R6 open -> checked (E5 claim distortion confirmed); A12 weak",
+   "after_reviews": false
+  },
+  {
+   "id": "P5",
+   "items": [
+    "R7"
+   ],
+   "question": "Does any experiment test the imbalanced/tail-class claim made in the abstract and contributions?",
+   "method": "Search for 'imbalanc', 'tail', 'long-tail'; re-read Sec. 4.",
+   "result": "confirmed",
+   "location": "Sec. 4 after Insight-II",
+   "finding": "All 4 'imbalanc' hits are claims or the hypothesis: \"We further hypothesize that challenging clean samples, such as tail data in imbalanced datasets...\". No experiment.",
+   "change": "R7 open -> error (checked)",
+   "after_reviews": false
+  },
+  {
+   "id": "P6",
+   "items": [
+    "R11"
+   ],
+   "question": "Is the reported accuracy the final, a fixed-iteration or the best test accuracy over distillation, and is any validation split used for selection?",
+   "method": "Re-read Sec. 4 Implementations and the figure captions.",
+   "result": "unsettled",
+   "location": "Sec. 4 Implementations; Figure 2/4 captions",
+   "finding": "\"Final test accuracies are reported throughout the distillation process\" can mean either a final-iteration value or a running maximum. The captions say 'validation performance'; no validation split is defined.",
+   "change": "R11 stays open (question; no grade above minor)",
+   "after_reviews": false
+  },
+  {
+   "id": "P7",
+   "items": [
+    "R9",
+    "R10"
+   ],
+   "question": "Does the paper give numbers or variance for any result?",
+   "method": "Search for 'Table', 'seed', 'runs', 'std', 'mean'; read the captions of Figures 2, 4, 5.",
+   "result": "confirmed",
+   "location": "whole manuscript",
+   "finding": "No tables. No seeds or runs stated. The captions describe solid trend lines and dashed reference lines only; whether the plots show bands cannot be seen.",
+   "change": "R9 open -> checked; R10 open -> checked (not stated after search)",
+   "after_reviews": false
+  },
+  {
+   "id": "P8",
+   "items": [
+    "R8",
+    "A6"
+   ],
+   "question": "Which real-noise datasets are actually evaluated?",
+   "method": "Trace C4 from Sec. 3.1 to Sec. 4 Exp-III and Figure 5.",
+   "result": "confirmed",
+   "location": "Sec. 3.1; Sec. 4 Exp-III; Figure 5",
+   "finding": "Only CIFAR-10N and CIFAR-100N. Clothing1M and WebVision are introduced in Sec. 3.1 but never used.",
+   "change": "R8 open -> checked; A6 moderate (limited scale)",
+   "after_reviews": false
+  },
+  {
+   "id": "P9",
+   "items": [
+    "R12",
+    "A1"
+   ],
+   "question": "Is there prior work on distillation or subset selection for learning with noisy labels that the paper omits?",
+   "method": "Re-read Sec. 2; literature query not possible (no network). Rely on memory, with [verify] where unsure.",
+   "result": "unsettled",
+   "location": "Sec. 2.1-2.2",
+   "finding": "No combined work is cited. From memory, robust coreset selection under label noise (Mirzasoleiman, Cao, Leskovec, NeurIPS 2020) is directly related. Prior noisy-label dataset-distillation studies may exist [verify]. Not settled without a search.",
+   "change": "R12 stays open (judgment, novelty rests on memory, [verify])",
+   "after_reviews": false
+  },
+  {
+   "id": "P10",
+   "items": [
+    "R13",
+    "R14"
+   ],
+   "question": "Are the distillers' teacher/expert models trained on the noisy labels, so that noise enters distillation implicitly?",
+   "method": "Re-read Sec. 3.2: Eq. 4 (expert trajectories theta*), Eqs. 6-7 (phi_expert), Eqs. 8-9 (RCIG trained against L_T on the full noisy training set); check for an analysis of this.",
+   "result": "confirmed",
+   "location": "Sec. 3.2 Eqs. 4, 6-9; Sec. 3.1 Training Protocol",
+   "finding": "Experts are 'trained on real images', which in this setup are the noisy set S-tilde. L_T is the loss on the full training set. No ablation of expert epochs or of the expert's noise exposure.",
+   "change": "R13 open -> checked; R14 open -> checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P11",
+   "items": [
+    "A3",
+    "A4",
+    "A7",
+    "A9"
+   ],
+   "question": "Can the figure-based accept reasons be verified from the text?",
+   "method": "Trace each claim to its figure; check the textual statements for internal consistency.",
+   "result": "partly",
+   "location": "Sec. 4 Exp-I/III; Figures 2, 3, 5",
+   "finding": "The text statements agree with one another (gain grows with noise; Aggre is the weak case). The magnitudes and the curves themselves cannot be read from the extracted text.",
+   "change": "A3, A4, A7, A9 stay open (figure-dependent)",
+   "after_reviews": false
+  },
+  {
+   "id": "P12",
+   "items": [
+    "R10"
+   ],
+   "question": "Do the captions or text of Figures 2, 4 and 5 indicate variance bands or multiple runs (T1 assumed variance might be shown in the figures; T4 assumed it is absent)?",
+   "method": "Re-read every figure caption and Sec. 4 for 'mean', 'std', 'shaded', 'runs', 'seeds'.",
+   "result": "partly",
+   "location": "Figure 2/4/5 captions; Sec. 4",
+   "finding": "The captions describe only solid accuracy lines and dashed full-data lines. Nothing mentions bands, means or runs, and the plots cannot be seen.",
+   "change": "T1: R10 minor -> major (updated after P12); not decisive for T1, so T1's scores are unchanged",
+   "after_reviews": true
+  }
+ ],
+ "types": [
+  {
+   "id": "T1",
+   "name": "Learning-with-noisy-labels specialist",
+   "likelihood": "high",
+   "grades": {
+    "R3": "fatal",
+    "R4": "major",
+    "R8": "major",
+    "R9": "major",
+    "R10": "major",
+    "R11": "minor",
+    "R16": "minor"
+   },
+   "held": [
+    "A3",
+    "A6"
+   ],
+   "discounted": [
+    "A4",
+    "A1"
+   ],
+   "aspect": "experimental_validation",
+   "field": "the task: learning with noisy labels",
+   "decisive": [
+    "R3",
+    "R4",
+    "R9",
+    "A6",
+    "held)"
+   ],
+   "pool_position": 15,
+   "overall": 2,
+   "confidence": 4,
+   "weighs_most": [
+    "R3",
+    "R4",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R16",
+    "A3",
+    "A4",
+    "A6"
+   ]
+  },
+  {
+   "id": "T2",
+   "name": "Dataset distillation researcher",
+   "likelihood": "high",
+   "grades": {
+    "R12": "minor",
+    "R13": "major",
+    "R15": "major",
+    "R17": "major",
+    "R18": "minor"
+   },
+   "held": [
+    "A1",
+    "A2",
+    "A8"
+   ],
+   "discounted": [
+    "A9"
+   ],
+   "aspect": "novelty",
+   "field": "neighbor: dataset distillation / condensation",
+   "decisive": [
+    "R15",
+    "R13",
+    "A1",
+    "held)",
+    "A2"
+   ],
+   "pool_position": 30,
+   "overall": 3,
+   "confidence": 4,
+   "weighs_most": [
+    "R12",
+    "R13",
+    "R15",
+    "R17",
+    "R18",
+    "A1",
+    "A2",
+    "A8",
+    "A9"
+   ]
+  },
+  {
+   "id": "T3",
+   "name": "Learning-theory reviewer (memorization and generalization under label noise)",
+   "likelihood": "medium",
+   "grades": {
+    "R1": "major",
+    "R2": "major",
+    "R13": "major",
+    "R14": "major",
+    "R7": "minor"
+   },
+   "held": [
+    "A5"
+   ],
+   "discounted": [
+    "A10"
+   ],
+   "aspect": "technical_rigor",
+   "field": "neighbor: learning theory",
+   "decisive": [
+    "R1",
+    "R2",
+    "R13"
+   ],
+   "pool_position": 15,
+   "overall": 2,
+   "confidence": 4,
+   "weighs_most": [
+    "R1",
+    "R2",
+    "R13",
+    "R14",
+    "R7",
+    "A10",
+    "A5"
+   ]
+  },
+  {
+   "id": "T4",
+   "name": "Evaluation and protocol methodologist",
+   "likelihood": "medium",
+   "grades": {
+    "R5": "major",
+    "R6": "major",
+    "R7": "major",
+    "R9": "major",
+    "R10": "major",
+    "R11": "minor",
+    "R19": "minor",
+    "R20": "major"
+   },
+   "held": [
+    "A11",
+    "A2"
+   ],
+   "discounted": [],
+   "aspect": "technical_rigor",
+   "field": "neighbor: ML evaluation methodology",
+   "decisive": [
+    "R5",
+    "R7",
+    "R9",
+    "R20"
+   ],
+   "pool_position": 15,
+   "overall": 2,
+   "confidence": 4,
+   "weighs_most": [
+    "R5",
+    "R6",
+    "R7",
+    "R9",
+    "R10",
+    "R11",
+    "R19",
+    "R20",
+    "A11",
+    "A2"
+   ]
+  },
+  {
+   "id": "T5",
+   "name": "Data-centric ML researcher (coreset selection and data pruning)",
+   "likelihood": "medium",
+   "grades": {
+    "R12": "major",
+    "R15": "major",
+    "R16": "major",
+    "R3": "major",
+    "R6": "major"
+   },
+   "held": [
+    "A4",
+    "A7"
+   ],
+   "discounted": [
+    "A12"
+   ],
+   "aspect": "significance",
+   "field": "neighbor: data-centric ML, coreset selection / data pruning",
+   "decisive": [
+    "R12",
+    "R16",
+    "R15",
+    "A4"
+   ],
+   "pool_position": 22,
+   "overall": 2,
+   "confidence": 3,
+   "weighs_most": [
+    "R12",
+    "R15",
+    "R16",
+    "R3",
+    "R6",
+    "A4",
+    "A7",
+    "A12"
+   ]
+  },
+  {
+   "id": "T6",
+   "name": "Privacy and trustworthy-ML researcher",
+   "likelihood": "low",
+   "grades": {
+    "R5": "major",
+    "R21": "minor",
+    "R6": "minor",
+    "R8": "minor",
+    "R15": "major"
+   },
+   "held": [],
+   "discounted": [
+    "A10",
+    "A12"
+   ],
+   "aspect": "significance",
+   "field": "neighbor: privacy-preserving ML",
+   "decisive": [
+    "R5",
+    "R15"
+   ],
+   "pool_position": 22,
+   "overall": 2,
+   "confidence": 3,
+   "weighs_most": [
+    "R5",
+    "R21",
+    "R6",
+    "R8",
+    "R15",
+    "A10",
+    "A12"
+   ]
+  }
+ ]
+}

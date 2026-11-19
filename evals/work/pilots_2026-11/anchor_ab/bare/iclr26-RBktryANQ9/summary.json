@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-RBktryANQ9",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Only baseline is plain CE on the full noisy data; no comparison to any noisy-label learning method, early stopping, or same-IPC subset selection",
+    "No new method: an empirical benchmark of off-the-shelf distillers, with failure modes (asymmetric noise, IPC choice) left unaddressed",
+    "Corollaries I and II are unproven, loosely defined (delta and assumptions unspecified) and not validated empirically",
+    "Privacy, efficiency, 'in the wild' and imbalanced-data claims are asserted without experiments (no Clothing1M/WebVision, no cost or privacy analysis)",
+    "Evaluation protocol unclear (test-set use for selection, seeds, baseline parity); results given only as curves with no tables or variances"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,5 @@
+{"pair": "W5_vs_M2", "winner": 1, "margin": "clear",
+ "rating_paper1": 6, "rating_paper2": 4,
+ "reason": "Paper 1 opens a new, scalable source of supervision for computer-use agents. It brings VPT-style inverse-dynamics labelling to unlabeled GUI tutorial videos, and its controlled ablations (stage-2-only baseline, 0/50/100% data scaling, step-budget scaling) show clear downstream gains on OSWorld-Verified and AgentNetBench. Its weaknesses are a modest IDM accuracy based on manual review, no compute-matched control, and a headline 70% that mixes step budgets. Paper 2 is a more incremental benchmark plus distilled reward model: it fine-tunes Qwen on GPT-4.1 labels and still trails GPT-4.1/GPT-5 without self-ensembling. Its RL gains are measured with the same GPT-4.1-based VIEScore family that produced its training labels, which raises reward-hacking and circularity concerns.",
+ "recognized": ["VideoAgentTrek: Computer-Use Pretraining from Unlabeled Videos (title recognized as an arXiv preprint)", "EditScore: Unlocking Online RL for Image Editing via High-Fidelity Reward Modeling (title recognized as an arXiv preprint)"],
+ "injection_found": null}

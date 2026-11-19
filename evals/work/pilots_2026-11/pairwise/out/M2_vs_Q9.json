@@ -1,0 +1,5 @@
+{"pair": "M2_vs_Q9", "winner": 1, "margin": "slight",
+ "rating_paper1": 6, "rating_paper2": 4,
+ "reason": "EditScore shows something new working end to end: a dual-annotated benchmark, a distilled generative reward model with an inference-time ensembling ablation, and online RL for editing that succeeds where off-the-shelf Qwen2.5-VL rewards fail, plus an analysis of reward variance versus accuracy. Its weak point is circularity: the policy gains are judged by the same GPT-4.1/VIEScore-style judges used to label the reward data. SWE-Bench Pro is a significant, well-motivated benchmark, but the paper contributes mostly curation. It relies on a single scaffold, its argument that GPL licensing resists contamination is not checked, and its text contradicts its own tables (16.3% vs 17.6%, 3.9% vs 4.9%, and failure-mode percentages that do not match Table 3), which weakens the soundness of the evidence.",
+ "recognized": ["Paper 1 appears to be EditScore (OmniGen2 team, 2025)", "Paper 2 appears to be SWE-Bench Pro (Scale AI, 2025)"],
+ "injection_found": null}

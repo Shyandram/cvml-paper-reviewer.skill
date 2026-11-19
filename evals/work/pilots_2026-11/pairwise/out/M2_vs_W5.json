@@ -1,0 +1,4 @@
+{"pair": "M2_vs_W5", "winner": 2, "margin": "slight",
+ "rating_paper1": 4, "rating_paper2": 6,
+ "reason": "VideoAgentTrek shows something new working: VPT-style inverse-dynamics labeling of unlabeled web GUI videos at scale (1.52M steps) gives large downstream gains (OSWorld-Verified 9.3% to 15.8%, AgentNetBench 64.1% to 69.3%), and a data-scaling ablation (0/50/100% of video tokens) supports the claim, although there is no compute-matched control and the IDM is evaluated only thinly (65.8% parameter accuracy). EditScore is a solid but mostly incremental combination of a benchmark, a VIEScore-style reward model distilled from GPT-4.1, and Flow-GRPO, with modest RL gains (+0.40 GEdit) judged by GPT-based metrics. Its claim that the reward model 'unlocks' RL rests mainly on a training-curve figure, and its variance analysis rests on a single 0.637-vs-0.638 comparison.",
+ "recognized": [], "injection_found": null}

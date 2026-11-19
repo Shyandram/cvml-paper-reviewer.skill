@@ -1,0 +1,196 @@
+{
+  "locations": [
+    "Title",
+    "Abstract",
+    "Section 1",
+    "Section 1 Contributions",
+    "Section 2",
+    "Section 2.1",
+    "Section 3.1",
+    "Section 3.2",
+    "Section 4",
+    "Section 4 Implementations",
+    "Section 4 Experiment-I",
+    "Section 4 Experiment-II",
+    "Section 4 Experiment-III",
+    "Section 4 Observation-I",
+    "Section 4 Observation-II",
+    "Section 4 Observation-III",
+    "Section 4 Insight-I",
+    "Section 4 Insight-II",
+    "Section 4 Insight-III",
+    "Section 4 Corollary-I",
+    "Section 4 Corollary-II",
+    "Section 5",
+    "Figure 1",
+    "Figure 2",
+    "Figure 2(a)",
+    "Figure 3",
+    "Figure 4",
+    "Figure 5",
+    "Eq. 1",
+    "Eq. 2",
+    "Eq. 4",
+    "Eq. 5",
+    "Eq. 6",
+    "Eq. 9",
+    "Eq. 10",
+    "Eq. 11",
+    "References [1]-[61]",
+    "Reference [9]",
+    "Reference [10]",
+    "Reference [14]",
+    "Reference [24]"
+  ],
+  "quotes": [
+    "for symmetric noise, existing dataset distillation methods serve as effective denoising tools",
+    "can also be absorbed into the distilled samples, which hinders robust training",
+    "remain effective even in the presence of an unknown fixed noise rate",
+    "may undergo lossy compression during distillation",
+    "avoids the feedback loop",
+    "enhances training efficiency",
+    "providing strong privacy protection through offline processing",
+    "over the baseline trained on the entire noisy dataset",
+    "a single distilled sample per class surpasses the baseline",
+    "fewer than 50 samples per class significantly outperform the baseline",
+    "using fewer than 10 distilled images per class",
+    "We use Cross-Entropy loss by default",
+    "Final test accuracies are reported throughout the distillation process",
+    "The validation performance",
+    "following the evaluation protocols of DATM, DANCE, and RCIG",
+    "Unless otherwise specified, Benchmark-I referenced later denotes this accelerated version",
+    "Only the DATM method achieves comparable performance",
+    "This phenomenon is consistent with intuition",
+    "We further hypothesize that challenging clean samples, such as tail data in imbalanced datasets",
+    "the distillation process primarily captures common patterns",
+    "the maximum number of distilled samples per class",
+    "the relationship between the amount of data to be distilled and the level of noise remains an open question",
+    "these distillation approaches struggle to",
+    "Clothing1M [48] and WebVision [27]",
+    "a simple ConvNet [40] architecture",
+    "Why not directly distill a clean subset",
+    "Realted Works",
+    "bellow",
+    "Both of which are widely employed in existing researches",
+    "significantly outperform the baseline",
+    "captures common patterns while ignoring outliers",
+    "high-privacy environments",
+    "perfectly preserve the sample information",
+    "consistently",
+    "Dataset Distillers Are Good Label Denoisers In the Wild"
+  ],
+  "numbers": [
+    {
+      "claim": "symmetric noise rates studied",
+      "value": "τ = 0.2, 0.4, 0.6, 0.8",
+      "derived": false
+    },
+    {
+      "claim": "asymmetric noise rates where DATM matches the baseline",
+      "value": "τ = {0.2, 0.4}",
+      "derived": false
+    },
+    {
+      "claim": "CIFAR-10N Aggre noise rate",
+      "value": "9.03%",
+      "derived": false
+    },
+    {
+      "claim": "CIFAR-10N Worst noise rate",
+      "value": "40.21%",
+      "derived": false
+    },
+    {
+      "claim": "CIFAR-10N Random k noise rate",
+      "value": "≈ 18%",
+      "derived": false
+    },
+    {
+      "claim": "CIFAR-100N fine noise rate",
+      "value": "40.20%",
+      "derived": false
+    },
+    {
+      "claim": "IPC at which distillation beats the baseline at τ = 0.6/0.8 on CIFAR-10",
+      "value": "a single distilled sample per class",
+      "derived": false
+    },
+    {
+      "claim": "IPC that significantly outperforms the baseline at τ = 0.2",
+      "value": "fewer than 50 samples per class",
+      "derived": false
+    },
+    {
+      "claim": "IPC at which all methods surpass the CIFAR-100N baseline (Worst)",
+      "value": "fewer than 10 distilled images per class",
+      "derived": false
+    },
+    {
+      "claim": "Eq. 11 lower bound on τ for CIFAR-10, IPC = 1, |S| = 50,000",
+      "value": "0.9998",
+      "derived": true
+    },
+    {
+      "claim": "Eq. 11 lower bound on τ for CIFAR-100N, IPC = 10, |S| = 50,000",
+      "value": "0.98",
+      "derived": true
+    },
+    {
+      "claim": "standard CIFAR training-set size assumed in the R4 check (not printed in the paper)",
+      "value": "50,000",
+      "derived": true
+    },
+    {
+      "claim": "Eq. 10 rearranged",
+      "value": "τ ≤ 1 − C·IPC/|S̃|",
+      "derived": true
+    },
+    {
+      "claim": "aspect-weighted final rating",
+      "value": "2.124",
+      "derived": true
+    },
+    {
+      "claim": "plain mean of types' Overall",
+      "value": "2.17",
+      "derived": true
+    },
+    {
+      "claim": "weighted pool position",
+      "value": "21.4",
+      "derived": true
+    }
+  ],
+  "references": [
+    {
+      "title": "Coresets for Robust Training of Deep Neural Networks against Noisy Labels",
+      "authors": "Baharan Mirzasoleiman, Kaidi Cao, Jure Leskovec",
+      "year": 2020,
+      "marked_verify": false
+    },
+    {
+      "title": "Early-Learning Regularization Prevents Memorization of Noisy Labels",
+      "authors": "Sheng Liu, Jonathan Niles-Weed, Narges Razavian, Carlos Fernandez-Granda",
+      "year": 2020,
+      "marked_verify": false
+    },
+    {
+      "title": "Privacy for Free: How does Dataset Condensation Help Privacy?",
+      "authors": "Tian Dong, Bo Zhao, Lingjuan Lyu",
+      "year": 2022,
+      "marked_verify": false
+    },
+    {
+      "title": "No Free Lunch in 'Privacy for Free: How does Dataset Condensation Help Privacy'",
+      "authors": "Nicholas Carlini, Vitaly Feldman, Milad Nasr",
+      "year": 2022,
+      "marked_verify": true
+    },
+    {
+      "title": "(line of work) dataset distillation / condensation trained on noisy-label data",
+      "authors": "unspecified",
+      "year": null,
+      "marked_verify": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"pair": "T4_vs_Q9", "winner": 2, "margin": "strong",
+ "rating_paper1": 2, "rating_paper2": 6,
+ "reason": "Paper 2 contributes a large, human-verified, contamination-resistant benchmark (1,865 multi-file tasks, public/held-out/commercial splits) with clear evaluation of frontier models and a failure-mode analysis, which is a significant and usable resource despite some text/table inconsistencies and limited methodological novelty. Paper 1 only runs off-the-shelf distillation methods on noisy CIFAR/Tiny-ImageNet against a plain CE full-data baseline, with no comparison to any noisy-label learning method and with 'corollaries' that are stated without proof or rigor, so its main claim that distillers are good denoisers is weakly supported.",
+ "recognized": ["Paper 2 appears to be SWE-Bench Pro (Scale AI, 2025)"], "injection_found": null}

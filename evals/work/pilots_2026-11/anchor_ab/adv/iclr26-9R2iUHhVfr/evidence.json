@@ -1,0 +1,418 @@
+{
+ "locations": [
+  "Title",
+  "Abstract",
+  "Section 1",
+  "Section 2.1",
+  "Section 2.2",
+  "Section 3.1",
+  "Section 3.2",
+  "Section 3.3",
+  "Section 4.1",
+  "Section 4.2",
+  "Section 4.3",
+  "Section 5",
+  "Section 6.1",
+  "Section 6.2",
+  "Section 7.1",
+  "Table 1",
+  "Table 2",
+  "Table 3",
+  "Table 4",
+  "Figure 1",
+  "Figure 2",
+  "Figure 3",
+  "Figure 4",
+  "Appendix A.1",
+  "Appendix A.2",
+  "Appendix A.3",
+  "Appendix B.1",
+  "Reference [1]",
+  "Reference [13]",
+  "Reference [15]",
+  "Reference [24]",
+  "Reference [25]"
+ ],
+ "quotes": [
+  "In the next 6 - 12 months, there will be diminishing feedback from SWE-Bench-Verified",
+  "exclusively selecting repositories distributed under strong copyleft licenses (GPL)",
+  "On average, the reference solutions span 107.4 lines of code across 4.1 files",
+  "we run each set of tests 3 times",
+  "We use the same prompt for all models",
+  "latest versions as of September 18th, 2025",
+  "We release 731 instances openly on HuggingFace",
+  "All environments will be released as pre-built docker images",
+  "strict cap of 100 instances",
+  "We keep this set private to test for overfitting in the future",
+  "creates legal barriers to their inclusion in commercial training corpora",
+  "we keep the private set held-out for future analysis",
+  "contamination-resistant testbed",
+  "GPT-5 achieving the highest score to date at 23.3%",
+  "we find that Agentless has difficulty in multi-file editing",
+  "maximum of 200 turns",
+  "score >70% of SWE-Bench Verified but less than 25%",
+  "over 70% pass rate on SWE-Bench-Verified [15]",
+  "programmatically filter to only unresolved instances",
+  "exhibits the highest tool error rate (42.0%)",
+  "also achieves a 16.3% resolve rate",
+  "at 3.4% and 3.9% respectively",
+  "smaller models (e.g., Qwen 3 32B) more frequently fail due to issues in syntax and formatting",
+  "suggesting strong technical execution",
+  "utilizing GPT-5 as the judge",
+  "demonstrate 87% alignment",
+  "We determined 20 turns to have the highest correspondence",
+  "may require hours to days for a professional software engineer to complete",
+  "These requirements are grounded on the unit tests",
+  "Requirements never include specific code implementation and don’t leak solutions",
+  "All tasks are human-verified and augmented with sufficient context to ensure resolvability",
+  "underscoring the greater complexity of enterprise codebases",
+  "Each repository contributes between 50 and 100 instances, with a strict cap of 100",
+  "contribute 50-100+ instances",
+  "For all analysis, we use the public set",
+  "we use syntax parsing to enable tool-use",
+  "over 100 tasks demand more than 100 lines of modification",
+  "Distributions in the public set",
+  "endless file reading behaviors (17.0%)",
+  "builds upon the best practices of SWE-Bench [25]",
+  "social media posts [1, 25]",
+  "Similar to SWE-Bench Verified",
+  "to the best of our knowledge, this work is the first",
+  "some widely-used languages like Java, C++, and Rust are underrepresented",
+  "diverse set of 41 actively maintained repositories",
+  "difficulty filtering",
+  "we exclude trivial edits (1–10 lines of code)",
+  "problems are naturally challenging",
+  "state-of-the-art agents have reported over 70% pass rate on SWE-Bench-Verified [15]",
+  "we contacted the company and purchased their engineering repos",
+  "including companies acquired through mergers and acquisitions",
+  "Models are evaluated in the setting without any ambiguity",
+  "The tuple `STAGED_SOURCES` in `openlibrary/core/imports.py` must include `\"google_books\"`",
+  "a function named `stage_from_google_books` must",
+  "Swe-bench goes live!",
+  "below 25% (Pass@1), with GPT-5 achieving the highest score to date at 23.3%",
+  "the first to systematically apply such a methodology"
+ ],
+ "numbers": [
+  {
+   "claim": "GPT-5 resolve rate, public set",
+   "value": "23.3",
+   "derived": false
+  },
+  {
+   "claim": "Claude Opus 4.1 resolve rate, public set",
+   "value": "22.7",
+   "derived": false
+  },
+  {
+   "claim": "Claude Sonnet 4 resolve rate, public set (Table 1)",
+   "value": "17.6",
+   "derived": false
+  },
+  {
+   "claim": "Claude Sonnet 4 resolve rate stated in Section 5 text",
+   "value": "16.3",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o resolve rate, public set (Table 1)",
+   "value": "4.9",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o resolve rate stated in Section 5 text",
+   "value": "3.9",
+   "derived": false
+  },
+  {
+   "claim": "Qwen-3 32B resolve rate, public set",
+   "value": "3.4",
+   "derived": false
+  },
+  {
+   "claim": "Gemini 2.5 Pro Preview resolve rate, public set",
+   "value": "13.5",
+   "derived": false
+  },
+  {
+   "claim": "SWE-Smith-32B resolve rate, public set",
+   "value": "6.8",
+   "derived": false
+  },
+  {
+   "claim": "Claude Opus 4.1 resolve rate, commercial set",
+   "value": "17.8",
+   "derived": false
+  },
+  {
+   "claim": "GPT-5 resolve rate, commercial set",
+   "value": "14.9",
+   "derived": false
+  },
+  {
+   "claim": "Gemini 2.5 Pro Preview, commercial set",
+   "value": "10.1",
+   "derived": false
+  },
+  {
+   "claim": "Claude Sonnet 4, commercial set",
+   "value": "9.1",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o, commercial set",
+   "value": "3.6",
+   "derived": false
+  },
+  {
+   "claim": "SWE-Bench Verified pass rate of state-of-the-art agents",
+   "value": ">70%",
+   "derived": false
+  },
+  {
+   "claim": "Total problems",
+   "value": "1,865",
+   "derived": false
+  },
+  {
+   "claim": "Public set size",
+   "value": "731",
+   "derived": false
+  },
+  {
+   "claim": "Commercial set size",
+   "value": "276",
+   "derived": false
+  },
+  {
+   "claim": "Held-out set size",
+   "value": "858",
+   "derived": false
+  },
+  {
+   "claim": "Repositories: public / held-out / commercial",
+   "value": "11 / 12 / 18",
+   "derived": false
+  },
+  {
+   "claim": "Average reference solution size",
+   "value": "107.4 lines across 4.1 files",
+   "derived": false
+  },
+  {
+   "claim": "Trivial problems in SWE-Bench Verified",
+   "value": "161 out of 500",
+   "derived": false
+  },
+  {
+   "claim": "Maximum agent turns",
+   "value": "200",
+   "derived": false
+  },
+  {
+   "claim": "Test reruns for flakiness",
+   "value": "3 times",
+   "derived": false
+  },
+  {
+   "claim": "Judge alignment with humans cited from Yang et al.",
+   "value": "87%",
+   "derived": false
+  },
+  {
+   "claim": "Turns fed to judge",
+   "value": "20",
+   "derived": false
+  },
+  {
+   "claim": "Opus 4.1 Table 3 counts submitted / not submitted",
+   "value": "681 / 239",
+   "derived": false
+  },
+  {
+   "claim": "Gemini Table 3 counts submitted / not submitted",
+   "value": "491 / 424",
+   "derived": false
+  },
+  {
+   "claim": "GPT-4o Table 3 counts",
+   "value": "569 / 220",
+   "derived": false
+  },
+  {
+   "claim": "Qwen 3 32B Table 3 counts",
+   "value": "386 / 406",
+   "derived": false
+  },
+  {
+   "claim": "Sonnet 4 'Other' share of submitted failures",
+   "value": "63.4%",
+   "derived": false
+  },
+  {
+   "claim": "GPT-5 Not-Submitted share and Tool-Use share within it",
+   "value": "63.1% / 97.6%",
+   "derived": false
+  },
+  {
+   "claim": "Qwen tool error rate stated in text",
+   "value": "42.0%",
+   "derived": false
+  },
+  {
+   "claim": "Opus wrong-solution and syntax shares stated in text",
+   "value": "35.9% / 24.2%",
+   "derived": false
+  },
+  {
+   "claim": "Sonnet context overflow and endless reading shares stated in text",
+   "value": "35.6% / 17.0%",
+   "derived": false
+  },
+  {
+   "claim": "Opus 4.1 total classified failures (681+239)",
+   "value": "920",
+   "derived": true
+  },
+  {
+   "claim": "Gemini total classified failures (491+424)",
+   "value": "915",
+   "derived": true
+  },
+  {
+   "claim": "GPT-4o total classified failures",
+   "value": "789",
+   "derived": true
+  },
+  {
+   "claim": "Qwen total classified failures",
+   "value": "792",
+   "derived": true
+  },
+  {
+   "claim": "Expected unresolved Opus 4.1 public instances 731 x (1-0.227)",
+   "value": "565",
+   "derived": true
+  },
+  {
+   "claim": "Expected unresolved Gemini public instances",
+   "value": "632",
+   "derived": true
+  },
+  {
+   "claim": "Expected unresolved GPT-4o",
+   "value": "695",
+   "derived": true
+  },
+  {
+   "claim": "Expected unresolved Qwen",
+   "value": "706",
+   "derived": true
+  },
+  {
+   "claim": "Qwen tool-use share of all failures (51.3% x 86.0%; 349/792)",
+   "value": "44.1%",
+   "derived": true
+  },
+  {
+   "claim": "GPT-5 tool-use share of all failures (63.1% x 97.6%)",
+   "value": "61.6%",
+   "derived": true
+  },
+  {
+   "claim": "Opus 4.1 syntax-error share of all failures (74.0% x 32.7%)",
+   "value": "24.2%",
+   "derived": true
+  },
+  {
+   "claim": "Qwen 3 32B syntax-error share of all failures (48.7% x 47.7%)",
+   "value": "23.2%",
+   "derived": true
+  },
+  {
+   "claim": "Sonnet 4 'Other' share of all failures (42.2% x 63.4%)",
+   "value": "26.8%",
+   "derived": true
+  },
+  {
+   "claim": "Sonnet stuck-in-loop share of all failures (57.8% x 29.5%)",
+   "value": "17.1%",
+   "derived": true
+  },
+  {
+   "claim": "Gemini tool / syntax / wrong shares of all failures",
+   "value": "38.9% / 30.6% / 18.0%",
+   "derived": true
+  },
+  {
+   "claim": "Binomial SE at 23.3% with N=731",
+   "value": "1.56 pp",
+   "derived": true
+  },
+  {
+   "claim": "Binomial SE at 17.8% with N=276",
+   "value": "2.30 pp",
+   "derived": true
+  },
+  {
+   "claim": "GPT-5 minus Opus 4.1 on public set",
+   "value": "0.6 pp",
+   "derived": true
+  },
+  {
+   "claim": "Commercial tasks per repository 276/18",
+   "value": "15.3",
+   "derived": true
+  },
+  {
+   "claim": "Public tasks per repository 731/11",
+   "value": "66.5",
+   "derived": true
+  },
+  {
+   "claim": "Held-out tasks per repository 858/12",
+   "value": "71.5",
+   "derived": true
+  },
+  {
+   "claim": "Aspect-weighted rating (aggregate_scores.py)",
+   "value": "3.361",
+   "derived": true
+  },
+  {
+   "claim": "Plain mean of type ratings",
+   "value": "3.38",
+   "derived": true
+  },
+  {
+   "claim": "Weighted pool position",
+   "value": "57.9",
+   "derived": true
+  }
+ ],
+ "references": [
+  {
+   "title": "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?",
+   "authors": "S. Miserendino et al.",
+   "year": 2025,
+   "marked_verify": false
+  },
+  {
+   "title": "Training Software Engineering Agents and Verifiers with SWE-Gym",
+   "authors": "J. Pan et al.",
+   "year": 2024,
+   "marked_verify": false
+  },
+  {
+   "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+   "authors": "J. Yang et al.",
+   "year": 2025,
+   "marked_verify": false
+  },
+  {
+   "title": "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code",
+   "authors": "N. Jain et al.",
+   "year": 2024,
+   "marked_verify": false
+  }
+ ]
+}

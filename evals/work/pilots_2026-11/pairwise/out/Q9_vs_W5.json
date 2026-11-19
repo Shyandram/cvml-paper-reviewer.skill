@@ -1,0 +1,4 @@
+{"pair": "Q9_vs_W5", "winner": 2, "margin": "slight",
+ "rating_paper1": 4, "rating_paper2": 6,
+ "reason": "VideoAgentTrek shows a new method working: inverse-dynamics labeling of unlabeled tutorial videos turned into pretraining data. It gives controlled gains over the same SFT stage (OSWorld-Verified 9.3 to 14-15.8%, AgentNetBench 64.1 to 69.3%), a data-scaling ablation and IDM accuracy evaluations, though there is no compute-matched control and the 50-step result is a single run. SWE-Bench Pro is a useful, harder resource, but as a paper it is thin on new ideas, with weak support for its contamination claims (GPL licensing is not a real barrier and the held-out set is unevaluated). Its numbers also contradict each other between the text and the tables (Sonnet 17.6 vs 16.3, GPT-4o 4.9 vs 3.9, failure-mode percentages), which hurts soundness.",
+ "recognized": ["SWE-Bench Pro (Paper 1)", "VideoAgentTrek (Paper 2)"], "injection_found": null}

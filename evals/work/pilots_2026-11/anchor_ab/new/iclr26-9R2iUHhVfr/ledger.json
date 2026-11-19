@@ -1,0 +1,835 @@
+{
+ "accept": [
+  {
+   "id": "A1",
+   "aspect": "significance",
+   "reason": "Restores headroom after SWE-Bench Verified saturation: the best Pass@1 is 23.3% on the public set and 17.8% on the commercial set, against >70% reported on Verified.",
+   "location": "Abstract; Section 1; Table 1 (GPT-5 23.3); Table 2 (Opus 4.1 17.8)",
+   "strength": "strong",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A2",
+   "aspect": "novelty",
+   "reason": "Contamination resistance by licence and access control: a GPL/copyleft public set, a private held-out set and a proprietary commercial set, with different release policies.",
+   "location": "Section 1 ('exclusively selecting repositories distributed under strong copyleft licenses (GPL)'); Section 3.1; Section 3.3",
+   "strength": "moderate",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A3",
+   "aspect": "significance",
+   "reason": "The commercial set (276 problems, 18 proprietary startup repositories) evaluates agents on code that model developers cannot have trained on, a capability public benchmarks lack.",
+   "location": "Section 3.3; Section 4.1; Table 2",
+   "strength": "moderate",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A4",
+   "aspect": "empirical strength",
+   "reason": "Tasks are larger than SWE-bench's: reference patches average 107.4 LOC over 4.1 files, at least 10 lines each, more than 100 tasks above 100 lines; Verified has 161 of 500 one-to-two-line problems.",
+   "location": "Section 1 ('reference solutions span 107.4 lines of code across 4.1 files')",
+   "strength": "moderate",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A5",
+   "aspect": "soundness",
+   "reason": "Human augmentation (problem statement, requirements, interface) targets false negatives from underspecification and misnamed interfaces, with a full worked instance.",
+   "location": "Section 3.2; Section 4.2; Appendix A.1-A.3; Table 4",
+   "strength": "moderate",
+   "claim": "C3",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A6",
+   "aspect": "soundness",
+   "reason": "Test hygiene: tests are run three times and inconsistent ones dropped; annotators drop fail2pass tests that are too broad or irrelevant; Docker environments are built by engineers and auto-verified.",
+   "location": "Section 3.2 (Tests: 'we run each set of tests 3 times'); Section 4.3",
+   "strength": "moderate",
+   "claim": "C3",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A7",
+   "aspect": "reproducibility",
+   "reason": "The public set (731 instances) is released on HuggingFace, pre-built Docker images are promised, data and code links are given (removed for review), and the full judge prompt is in the appendix.",
+   "location": "Section 3.2 (Environments); Section 3.3; title page links; Appendix B.1",
+   "strength": "moderate",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A8",
+   "aspect": "significance",
+   "reason": "Diversity: 41 actively maintained repositories across consumer apps, B2B services and developer tools; Python, Go, JS and TS; feature requests and bug fixes; a per-repository cap.",
+   "location": "Section 1; Section 3.1; Figure 3 caption",
+   "strength": "moderate",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A9",
+   "aspect": "analysis",
+   "reason": "Per-language and per-repository breakdowns show heterogeneity (Go and Python higher; some repositories below 10% for all models).",
+   "location": "Section 6.1; Figure 4 (caption only)",
+   "strength": "weak",
+   "claim": "C6",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "A10",
+   "aspect": "analysis",
+   "reason": "A trajectory-level failure taxonomy across six models, with the full judge prompt, distinguishes e.g. Sonnet 4's context overflow from Opus 4.1's wrong solutions.",
+   "location": "Section 6.2; Table 3; Appendix B.1",
+   "strength": "weak",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A11",
+   "aspect": "evaluation",
+   "reason": "Controlled comparison: one scaffold (SWE-Agent), the same prompt for all models, a 200-turn cap, stated hosting (vLLM, 8xH100) and model date.",
+   "location": "Section 5 (Scaffold; Evaluation settings)",
+   "strength": "moderate",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A12",
+   "aspect": "clarity",
+   "reason": "The task format is easy to understand from a full worked instance (problem statement, requirements, interface) and an original-vs-rewritten comparison.",
+   "location": "Appendix A; Table 4",
+   "strength": "moderate",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A13",
+   "aspect": "ethics / honesty",
+   "reason": "Candid limitations: language coverage, dependence on test suites, and that augmentation 'may inadvertently make problems too prescriptive'.",
+   "location": "Section 7.1",
+   "strength": "moderate",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "A14",
+   "aspect": "significance",
+   "reason": "A held-out set of 858 problems from 12 repositories is reserved for future overfitting checks against the public set.",
+   "location": "Section 1; Section 3.3",
+   "strength": "weak",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  }
+ ],
+ "reject": [
+  {
+   "id": "R1",
+   "aspect": "clarity / correctness",
+   "reason": "Text and Table 1 disagree: the text gives Claude Sonnet 4 16.3% and GPT-4o 3.9%, Table 1 gives 17.6% and 4.9%; the text also calls Qwen-3 32B 'DeepSeek Qwen-3 32B'.",
+   "location": "Section 5 Results ('also achieves a 16.3% resolve rate') vs Table 1 (17.6, 4.9); cross-referenced",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Align the text with Table 1; fix the model name. Minutes.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R2",
+   "aspect": "soundness",
+   "reason": "Table 3's failure counts cannot come from the stated population. Section 6.2 filters 'to only unresolved instances' of the public set (N=731), yet Submitted+Not-submitted is 920 for Opus 4.1 (expected about 565 unresolved), 915 for Gemini (about 632), 792 for Qwen (about 706), 789 for GPT-4o (about 695), 724 for GPT-5 (about 561) and 699 for Sonnet 4 (about 602). Four totals exceed 731. The unit of analysis is unknown, so every percentage in Table 3 and Section 6.2 is uninterpretable.",
+   "location": "Table 3 vs Table 1 and Section 6.2 ('programmatically filter to only unresolved instances'); recomputed by P1",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "State the unit (runs? attempts? sets?), recompute Table 3 on the unresolved public instances, and correct the text. Hours, given the trajectories.",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R3",
+   "aspect": "soundness",
+   "reason": "Section 6.2 and Section 1 make failure-mode claims that Table 3 contradicts. Qwen 3 32B 'exhibits the highest tool error rate (42.0%)', but Table 3 gives Qwen 349/792 = 44.1% of failures, and GPT-5 has 446/724 = 61.6%. Section 1 says smaller models 'more frequently fail due to issues in syntax', but syntax errors are 223/920 = 24.2% of Opus 4.1's failures against 184/792 = 23.2% of Qwen's.",
+   "location": "Section 6.2 ('exhibits the highest tool error rate (42.0%)'); Section 1; Table 3; recomputed by P2",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Rewrite the failure-mode conclusions from corrected counts (after R2). Hours.",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R4",
+   "aspect": "soundness",
+   "reason": "The central claim of contamination resistance is never tested. The held-out set is not evaluated, there is no public-vs-held-out comparison, no commit-date-vs-cutoff analysis and no memorization probe. The GPL argument ('legal barriers') is asserted, not shown, and the public set's commits and gold patches are already in public git history.",
+   "location": "Section 3.1 ('we ensure benchmark content is unlikely to appear in proprietary model training sets'); Section 5 ('we keep the private set held-out for future analysis'); checked by P3",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Evaluate the held-out set with the same models and report the public-vs-held-out gap; stratify public results by commit date relative to model cutoffs; soften the legal claim. Days of compute.",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R5",
+   "aspect": "significance / scope",
+   "reason": "The 'long-horizon' framing and the 'hours to days for a professional software engineer' estimate are not backed by any measurement. Difficulty is operationalized only by LOC and file counts, and the requirements and interface name exact files, functions and URLs, which removes much of the exploration that makes real tasks long. Basis: contribution check, question 2.",
+   "location": "Title; Abstract ('may require hours to days for a professional software engineer'); Section 1 (LOC/files); Section 5 Issue Ambiguity ('after being given significant details'); Appendix A.2-A.3; checked by P4",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Report human solve-time estimates on a sample, or agent steps and turns per task; otherwise narrow the title and abstract. A small annotation study, or a wording change.",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R6",
+   "aspect": "experimental validation",
+   "reason": "The public-commercial gap is attributed to 'the greater complexity of enterprise codebases' without controls. The commercial set's size, language and LOC statistics are not reported, it averages 15 problems per repository against 66 for the public set, and model rankings change (Sonnet 4 is third on the public set at 17.6%, fourth on the commercial set at 9.1%).",
+   "location": "Section 1 ('underscoring the greater complexity of enterprise codebases'); Section 5; Table 1 vs Table 2; Figure 3 caption ('Distributions in the public set'); checked by P5",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report commercial-set statistics and compare resolve rates stratified by LOC, files and language, or present the gap as descriptive. Hours.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R7",
+   "aspect": "experimental validation",
+   "reason": "Single run, Pass@1, no uncertainty. With N=731, the 95% binomial interval is about +/-3.1 pp at 23%, so GPT-5 (23.3) and Opus 4.1 (22.7) are not separable; the commercial set (N=276) gives about +/-4.5 pp. 'GPT-5 achieving the highest score' is not supported as a ranking.",
+   "location": "Abstract; Table 1; Table 2; derived in P11",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report binomial or bootstrap CIs; run 3 seeds for the top models on the public set. Cheap for CIs; about 3x compute for seeds.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R8",
+   "aspect": "experimental validation",
+   "reason": "One scaffold only, so the model comparisons are confounded with scaffold fit. Agentless is dismissed without numbers. GPT-5 ends without submitting in 63.1% of its failures, 97.6% of them tool-use failures, which points to a tool-format mismatch. Open-weight models get tool use through 'syntax parsing'.",
+   "location": "Section 5 Scaffold ('Agentless has difficulty in multi-file editing, thus, produces low evaluation scores'); Section 5 Evaluation settings; Table 3 (GPT-5 Not-Submitted 63.1%, Tool-Use 97.6%); checked by P6",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report the Agentless numbers and run a second scaffold (e.g. OpenHands or a vendor-native agent) on the public set for the top models. Days of compute.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R9",
+   "aspect": "experimental validation",
+   "reason": "The '>70% on SWE-Bench Verified' contrast that motivates the benchmark comes from external reports under different scaffolds, not from a run under this paper's SWE-Agent, 200-turn, same-prompt setting. The size of the drop is therefore not measured.",
+   "location": "Section 1 ('over 70% pass rate on SWE-Bench-Verified [15]'); Figure 2 caption; Section 8; checked by P7",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Run the same models under the same scaffold on SWE-Bench Verified and report both numbers side by side. A day of compute.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R10",
+   "aspect": "soundness",
+   "reason": "The human augmentation and verification pipeline (C3) is described but not quantified: no number or expertise of annotators, no time per task, no agreement or QA audit, no attrition per stage. The claim that requirements 'don't leak solutions' is asserted, not audited, although the example requirements name exact file paths and function names.",
+   "location": "Section 3.2; Section 4.2; Section 4.3; Appendix A.2 ('Requirements never include specific code implementation and don't leak solutions'); checked by P8",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report pipeline statistics (annotators, hours, drops per stage, tests removed) and an independent leakage audit on a random sample. Low cost if logs exist.",
+   "claim": "C3",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R11",
+   "aspect": "experimental validation",
+   "reason": "No ablation of the augmentation components, so neither the false-negative claim nor the source of difficulty is tested. The paper itself says 'the setting without requirements is potentially interesting'.",
+   "location": "Section 3.1; Section 5 Issue Ambiguity; Section 7.1; checked by P8",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Evaluate 2-3 models on the public set with problem statement only, +requirements and +interface. Two extra runs per model.",
+   "claim": "C3",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R12",
+   "aspect": "novelty",
+   "reason": "The construction pipeline refines SWE-bench's: commit-pair sourcing, fail2pass/pass2pass tests, Docker environments and human verification 'Similar to SWE-Bench Verified'. The deltas are licence-based repository selection, private and commercial sets, requirements/interface augmentation and a size filter. That is moderate novelty (contribution check, question 3). The claim to be 'the first to systematically apply such a methodology' is not checked against prior private or held-out benchmarks [verify]. Prior work: SWE-bench [13], SWE-bench Verified [15], LiveBench [19], SWE-bench-Live [25].",
+   "location": "Section 1 ('the first to systematically apply such a methodology'); Section 3.1 ('Similar to SWE-Bench Verified'); Section 4.1; checked by P10",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Position the deltas explicitly against SWE-bench, Verified and time-based contamination-free benchmarks, and qualify the 'first' claim. Writing only.",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R13",
+   "aspect": "novelty / related work",
+   "reason": "No quantitative comparison with prior SWE benchmarks (patch size, files, languages, repositories, contamination strategy). Related benchmarks that test the same capabilities are missing, including SWE-Lancer (freelance tasks with end-to-end tests), SWE-Gym, LiveCodeBench (time-based contamination control) and SWE-smith, which is evaluated as a model but not cited.",
+   "location": "Section 2.1; Section 5 ('fine-tuned on SWE-bench-like trajectories (e.g. SWE-Smith)')",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add a comparison table and the missing related work. Writing only.",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R14",
+   "aspect": "experimental validation",
+   "reason": "The LLM-judge failure analysis is not validated for this setup. The 87% alignment is borrowed from [22], a different judge and taxonomy; the 20-turn choice is said to have 'the highest correspondence with human validations' with no numbers; GPT-5 judges its own trajectories; and Table 3's buckets do not match the categories in Appendix B.1 (no mapping is given).",
+   "location": "Section 6.2 ('Our work follows Yang et al. [22], who demonstrate 87% alignment'); Table 3; Appendix B.1",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Human-label about 100 trajectories and report agreement per bucket; add a judge that is not one of the evaluated models; give the bucket mapping. A day of annotation.",
+   "claim": "C5",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R15",
+   "aspect": "reproducibility",
+   "reason": "Statistics are reported for the public set only (Figure 3). Patch size, file count, language mix and per-repository counts of the commercial and held-out sets are not given.",
+   "location": "Figure 3 caption ('Distributions in the public set'); Section 3.3",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add a statistics table for all three sets. Cheap.",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R16",
+   "aspect": "clarity / correctness",
+   "reason": "The per-repository instance count is inconsistent: Section 1 says each repository contributes 'between 50 and 100 instances, with a strict cap of 100', Section 3.1 says '50-100+ instances', and the commercial set has 276/18 = 15.3 per repository.",
+   "location": "Section 1; Section 3.1; Section 3.3 (276 problems, 18 repositories; derived)",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Correct the statement and give per-repository counts per set. Minutes.",
+   "claim": "C2",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R17",
+   "aspect": "soundness",
+   "reason": "Figure 1's caption names 'difficulty filtering', but the only filter described is the size and multi-file rule. If any model-based filtering was used, the low headline scores are partly by construction.",
+   "location": "Figure 1 caption ('difficulty filtering'); Section 1; Section 3.1; probed by P9",
+   "kind": "question",
+   "worst_case": "major",
+   "fix": "Describe every filter, its attrition and whether any model was used for selection. Writing only.",
+   "claim": "C2",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "R18",
+   "aspect": "reproducibility",
+   "reason": "Decoding settings (temperature, sampling), context-window handling, cost and token budgets, exact model identifiers and the agent prompt are not given; the prompt is only 'a basic prompt outlining the task'.",
+   "location": "Section 5 Evaluation settings",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add an appendix with the prompt, decoding parameters, model IDs and cost per run. Cheap.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R19",
+   "aspect": "reproducibility / significance",
+   "reason": "The commercial and held-out sets are private, and no governance is described: who runs evaluations, how often, how submissions work, and when held-out results are released. The commercial results cannot be reproduced by others; the paper only says it 'will update in the leaderboard'.",
+   "location": "Section 3.3 ('will update in the leaderboard'); Section 5 Evaluation sets",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Describe the evaluation service, release policy and versioning; publish environment hashes and per-instance commercial results by ID. Writing and policy.",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R20",
+   "aspect": "experimental validation",
+   "reason": "Thin open-weight coverage: only Qwen-3 32B and SWE-Smith-32B on the public set, and no open-weight model on the commercial set. This limits the benchmark's use for open research.",
+   "location": "Table 1; Table 2",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add 2-3 stronger open-weight coding models. Days of GPU time.",
+   "claim": "C4",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R21",
+   "aspect": "experimental validation",
+   "reason": "The text never reports the direct test of the complexity claim, resolve rate by patch size or file count. Figure 4's caption mentions '10+ files and 500+ LOC' categories that the text does not describe. The figure is unavailable here.",
+   "location": "Figure 4 caption ('especially 10+ files and 500+ LOC, contain about 20-30 examples'); Section 6.1; probed by P12",
+   "kind": "question",
+   "worst_case": "minor",
+   "fix": "Report resolve rate by LOC and file bins in a table, with bin sizes. Cheap.",
+   "claim": "C2",
+   "status": "open",
+   "added_by": null
+  },
+  {
+   "id": "R22",
+   "aspect": "clarity / citations",
+   "reason": "Citation slips: the abstract cites SWE-Bench as [25], which is 'Swe-bench goes live!'; 'social media posts [1, 25]' cites two arXiv papers; 'SWE-Bench Verified [13]' cites the original SWE-bench paper (Verified is [15]).",
+   "location": "Abstract; Section 1; References [1], [13], [15], [25]; cross-referenced",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Fix the citation keys. Minutes.",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R23",
+   "aspect": "ethics",
+   "reason": "Commercial repositories come from assets that include acquired companies and startups founded by employees of the authoring organization. This raises representativeness and conflict-of-interest questions the paper does not discuss, and the consent of the original contributors is not addressed. The legal argument about GPL training data is asserted without support.",
+   "location": "Section 4.1 ('companies acquired through mergers and acquisitions, startups founded by'); Section 3.1 ('creates legal barriers')",
+   "kind": "judgment",
+   "worst_case": "minor",
+   "fix": "Discuss selection, COI and consent; qualify the legal claim. Writing only.",
+   "claim": "C1",
+   "status": "checked",
+   "added_by": null
+  },
+  {
+   "id": "R24",
+   "aspect": "clarity",
+   "reason": "Presentation slips: Table 3 mixes per-column bases (Submitted sub-columns are shares of submitted, while the text quotes shares of all failures, without saying so); 'endless file reading' in the text is 'Stuck in Loop' in the table; 'we exclude trivial edits (1-10 lines of code)' conflicts with 'at least 10 lines of change'; promotional wording ('marks a significant step forward').",
+   "location": "Table 3; Section 6.2; Section 1; Section 8",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Clarify the bases and labels; tone down. Writing only.",
+   "claim": "general",
+   "status": "checked",
+   "added_by": null
+  }
+ ],
+ "answered": [
+  {
+   "reason": "Flaky tests could produce false failures.",
+   "answered_at": "Section 3.2 (Tests: run 3 times, inconsistent tests filtered); Section 4.3 (Environment verification)"
+  },
+  {
+   "reason": "Trivial one- or two-line problems inflate scores, as in SWE-Bench Verified.",
+   "answered_at": "Section 1 (trivial edits excluded; every problem at least 10 lines)"
+  },
+  {
+   "reason": "Valid solutions may fail tests because of misnamed classes or functions.",
+   "answered_at": "Section 3.2 (Interface); Appendix A.3 (residual risk acknowledged in Section 7.1)"
+  },
+  {
+   "reason": "Narrow language coverage hidden from the reader.",
+   "answered_at": "Section 7.1 (Limited Language Coverage: disclosed)"
+  },
+  {
+   "reason": "Overfitting to a single repository dominating the benchmark.",
+   "answered_at": "Section 1 and Section 3.1 (per-repository cap; see R16 for the count inconsistency)"
+  }
+ ],
+ "probes": [
+  {
+   "id": "P1",
+   "items": [
+    "R2",
+    "A10"
+   ],
+   "question": "Do Table 3's per-model failure counts match the number of unresolved public instances (N=731, Table 1)?",
+   "method": "Recomputed Submitted+Not-submitted per model and 731x(1-resolve rate); cross-checked with Section 6.2 and the Table 3 caption",
+   "result": "confirmed",
+   "location": "Table 3; Table 1; Section 6.2",
+   "change": "R2 question -> error (worst major); A10 moderate -> weak",
+   "after_reviews": false
+  },
+  {
+   "id": "P2",
+   "items": [
+    "R3"
+   ],
+   "question": "Does Table 3 support 'highest tool error rate (42.0%)' for Qwen 3 32B and Section 1's statement on syntax errors?",
+   "method": "Recomputed shares of all failures from Table 3 counts",
+   "result": "confirmed",
+   "location": "Table 3; Section 6.2; Section 1",
+   "change": "R3 question -> error (worst major)",
+   "after_reviews": false
+  },
+  {
+   "id": "P3",
+   "items": [
+    "R4",
+    "A2"
+   ],
+   "question": "Does the paper measure contamination anywhere (held-out evaluation, overlap, date-vs-cutoff analysis)?",
+   "method": "Re-read Sections 3.1, 3.3, 5, 6 and searched for 'contamin', 'held-out', 'cutoff'",
+   "result": "confirmed",
+   "location": "Section 5 ('we keep the private set held-out for future analysis')",
+   "change": "R4 open -> checked (gap stands); A2 holds as design, its effect unmeasured",
+   "after_reviews": false
+  },
+  {
+   "id": "P4",
+   "items": [
+    "R5",
+    "A4"
+   ],
+   "question": "Is 'hours to days for a professional software engineer' supported by any measurement?",
+   "method": "Searched for 'hours', 'days', 'time'; re-read Sections 1, 3, 4",
+   "result": "confirmed",
+   "location": "Abstract only; no measurement in Sections 3-6",
+   "change": "R5 open -> checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P5",
+   "items": [
+    "R6",
+    "A3"
+   ],
+   "question": "Does the paper report commercial-set statistics or stratified comparisons that control the public-commercial gap?",
+   "method": "Re-read Section 3.3, Section 5, the Table 2 caption and the Figure 3 caption; compared rankings across Tables 1 and 2",
+   "result": "confirmed",
+   "location": "Figure 3 caption ('Distributions in the public set'); Table 1 vs Table 2 (Sonnet 4 17.6 -> 9.1)",
+   "change": "R6 open -> checked; A3 unchanged",
+   "after_reviews": false
+  },
+  {
+   "id": "P6",
+   "items": [
+    "R8",
+    "A11"
+   ],
+   "question": "Are numbers for Agentless or any second scaffold reported, and is there evidence of scaffold-model mismatch?",
+   "method": "Re-read Section 5; read Table 3 Not-Submitted shares",
+   "result": "confirmed",
+   "location": "Section 5 Scaffold (no numbers); Table 3 (GPT-5 63.1% not submitted; 97.6% tool-use)",
+   "change": "R8 open -> checked; A11 kept moderate, conditional on R8",
+   "after_reviews": false
+  },
+  {
+   "id": "P7",
+   "items": [
+    "R9",
+    "A1"
+   ],
+   "question": "Are the >70% SWE-Bench Verified numbers measured in this paper under the same settings?",
+   "method": "Re-read Section 1, the Figure 2 caption and Section 8; checked reference [15]",
+   "result": "confirmed",
+   "location": "Section 1 ([15] is an external blog post); Figure 2 caption",
+   "change": "R9 open -> checked; A1 holds (headroom is real) but the size of the drop is unmeasured",
+   "after_reviews": false
+  },
+  {
+   "id": "P8",
+   "items": [
+    "R10",
+    "R11",
+    "A5"
+   ],
+   "question": "Does the paper report annotation statistics or an ablation of the augmentation components?",
+   "method": "Searched for 'annotator', 'requirements', 'without requirements'; re-read Sections 3.2, 4.2, 4.3, 7.1 and Appendix A",
+   "result": "confirmed",
+   "location": "Section 3.1 ('the setting without requirements is potentially interesting'); no statistics anywhere",
+   "change": "R10, R11 open -> checked; A5 holds as process, its effect unmeasured",
+   "after_reviews": false
+  },
+  {
+   "id": "P9",
+   "items": [
+    "R17"
+   ],
+   "question": "What does 'difficulty filtering' in the Figure 1 caption consist of?",
+   "method": "Re-read Sections 1, 3.1, 4, 4.1-4.3",
+   "result": "partly",
+   "location": "Only the size and multi-file filter is described (Section 1, Section 3.1); whether model-based filtering was used cannot be settled from the paper",
+   "change": "R17 stays question (open); no type may grade above minor",
+   "after_reviews": false
+  },
+  {
+   "id": "P10",
+   "items": [
+    "R12",
+    "A2"
+   ],
+   "question": "Is the construction pipeline new relative to SWE-bench, and is the 'first' claim checked against prior work?",
+   "method": "Re-read Sections 2, 3.1, 4.1; no literature query (no network)",
+   "result": "partly",
+   "location": "Section 3.1 ('Similar to SWE-Bench Verified'); Section 4.1 mirrors SWE-bench's commit-pair/fail2pass pipeline; the 'first' claim cannot be checked without search",
+   "change": "R12 open -> checked as judgment; the prior-work part stays [verify]",
+   "after_reviews": false
+  },
+  {
+   "id": "P11",
+   "items": [
+    "R7"
+   ],
+   "question": "Are the reported differences between the top models larger than sampling uncertainty?",
+   "method": "Computed binomial standard errors: N=731, p=0.233 -> SE 1.56 pp (95% CI +/-3.06); N=276, p=0.178 -> SE 2.30 pp (+/-4.51)",
+   "result": "confirmed",
+   "location": "Table 1; Table 2 (derived)",
+   "change": "R7 open -> checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P12",
+   "items": [
+    "R21"
+   ],
+   "question": "Does the text report resolve rate by patch size or file count?",
+   "method": "Searched for 'LOC', 'files', '500'; re-read Section 6.1",
+   "result": "cannot be settled",
+   "location": "Figure 4 caption mentions file and LOC categories; the text is silent and the figure is unavailable",
+   "change": "R21 stays question (open)",
+   "after_reviews": false
+  },
+  {
+   "id": "P13",
+   "items": [
+    "R2"
+   ],
+   "question": "Split T6 (minor) vs T2/T4/T5 (major) on R2: could Table 3 pool the public and commercial sets, which would explain the counts?",
+   "method": "Re-read Section 5 Evaluation sets and the Table 3 caption; recomputed the pooled unresolved count for Opus 4.1 (565 + 276x0.822 = 792)",
+   "result": "refuted",
+   "location": "Section 5 ('For all analysis, we use the public set'); Table 3 caption ('public set'); even pooled, 792 != 920",
+   "change": "T6: R2 minor -> major (not decisive for T6; scores unchanged)",
+   "after_reviews": true
+  }
+ ],
+ "types": [
+  {
+   "id": "T1",
+   "name": "SWE-agent benchmark specialist",
+   "likelihood": "high",
+   "aspect": "significance",
+   "field": "repository-level software-engineering agent benchmarks (the task)",
+   "grades": {
+    "R4": "major",
+    "R5": "major",
+    "R6": "minor",
+    "R9": "minor",
+    "R12": "minor",
+    "R13": "minor",
+    "R17": "minor",
+    "R19": "minor",
+    "R11": "minor",
+    "R2": "minor",
+    "R8": "minor"
+   },
+   "held": [
+    "A1",
+    "A3",
+    "A4",
+    "A8",
+    "A2"
+   ],
+   "discounted": [
+    "A10",
+    "A14"
+   ],
+   "decisive": [
+    "R4",
+    "R5",
+    "A1",
+    "A3"
+   ],
+   "pool_position": 48,
+   "overall": 3,
+   "confidence": 4
+  },
+  {
+   "id": "T2",
+   "name": "Evaluation and benchmark methodologist",
+   "likelihood": "high",
+   "aspect": "experimental_validation",
+   "field": "evaluation science / ML measurement (neighbor)",
+   "grades": {
+    "R2": "major",
+    "R3": "major",
+    "R6": "major",
+    "R7": "minor",
+    "R8": "major",
+    "R9": "major",
+    "R11": "major",
+    "R14": "major",
+    "R20": "minor",
+    "R21": "minor",
+    "R1": "minor",
+    "R17": "minor"
+   },
+   "held": [
+    "A1",
+    "A11"
+   ],
+   "discounted": [
+    "A9",
+    "A10"
+   ],
+   "decisive": [
+    "R2",
+    "R8",
+    "R11",
+    "R6",
+    "A1"
+   ],
+   "pool_position": 36,
+   "overall": 2,
+   "confidence": 4
+  },
+  {
+   "id": "T3",
+   "name": "LLM data-contamination researcher",
+   "likelihood": "high",
+   "aspect": "technical_rigor",
+   "field": "LLM evaluation and data contamination (neighbor)",
+   "grades": {
+    "R4": "major",
+    "R12": "minor",
+    "R17": "minor",
+    "R19": "major",
+    "R23": "minor",
+    "R9": "minor",
+    "R6": "major"
+   },
+   "held": [
+    "A3"
+   ],
+   "discounted": [
+    "A2",
+    "A14"
+   ],
+   "decisive": [
+    "R4",
+    "R19",
+    "A3"
+   ],
+   "pool_position": 40,
+   "overall": 3,
+   "confidence": 4
+  },
+  {
+   "id": "T4",
+   "name": "Empirical software-engineering / mining-software-repositories researcher",
+   "likelihood": "medium",
+   "aspect": "technical_rigor",
+   "field": "empirical software engineering, mining software repositories (neighbor, added beyond task_neighbors.md)",
+   "grades": {
+    "R10": "major",
+    "R11": "major",
+    "R5": "major",
+    "R16": "minor",
+    "R15": "minor",
+    "R2": "major",
+    "R13": "minor",
+    "R12": "minor",
+    "R17": "minor",
+    "R23": "minor"
+   },
+   "held": [
+    "A4",
+    "A6",
+    "A8"
+   ],
+   "discounted": [
+    "A5"
+   ],
+   "decisive": [
+    "R10",
+    "R5",
+    "R11",
+    "A6"
+   ],
+   "pool_position": 44,
+   "overall": 3,
+   "confidence": 3
+  },
+  {
+   "id": "T5",
+   "name": "General LLM reviewer, presentation",
+   "likelihood": "high",
+   "aspect": "clarity",
+   "field": "LLMs / NLP (neighbor)",
+   "grades": {
+    "R1": "minor",
+    "R2": "major",
+    "R3": "major",
+    "R22": "minor",
+    "R24": "minor",
+    "R16": "minor",
+    "R5": "minor",
+    "R21": "minor",
+    "R13": "minor"
+   },
+   "held": [
+    "A12",
+    "A13"
+   ],
+   "discounted": [],
+   "decisive": [
+    "R2",
+    "R3",
+    "A12"
+   ],
+   "pool_position": 46,
+   "overall": 3,
+   "confidence": 3
+  },
+  {
+   "id": "T6",
+   "name": "Agent-scaffold engineer and benchmark user",
+   "likelihood": "medium",
+   "aspect": "reproducibility",
+   "field": "LLM agent systems and tool use (neighbor, added beyond task_neighbors.md)",
+   "grades": {
+    "R18": "minor",
+    "R19": "major",
+    "R8": "major",
+    "R20": "minor",
+    "R2": "major",
+    "R7": "minor",
+    "R10": "minor",
+    "R15": "minor"
+   },
+   "held": [
+    "A7",
+    "A11",
+    "A1"
+   ],
+   "discounted": [
+    "A14"
+   ],
+   "decisive": [
+    "R19",
+    "R8",
+    "A7"
+   ],
+   "pool_position": 50,
+   "overall": 3,
+   "confidence": 4
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+{"pair": "M2_vs_T4", "winner": 1, "margin": "strong",
+ "rating_paper1": 6, "rating_paper2": 2,
+ "reason": "Paper 1 contributes a human-annotated reward benchmark, released 7B-72B editing reward models that beat open VLMs and match or exceed proprietary ones, and an end-to-end demonstration that a specialized reward enables stable online RL for image editing (with best-of-N, self-ensemble and annotator-variance analyses), though gains are modest and some claims rest on a single base model. Paper 2 is a short empirical benchmark of three existing dataset-distillation methods on noisy CIFAR/Tiny-ImageNet with no new method, no comparison to standard noisy-label baselines, and near-trivial 'corollaries' stated without proof, so its evidence for the denoising claim is thin and its significance limited.",
+ "recognized": ["Paper 1 appears to be EditScore (reward modeling for RL-based image editing on OmniGen2)"], "injection_found": null}

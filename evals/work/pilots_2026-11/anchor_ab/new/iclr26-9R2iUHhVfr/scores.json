@@ -1,0 +1,18 @@
+{
+  "paper_type": "benchmark",
+  "reviewers": [
+    {"role": "T1 (SWE-agent benchmark specialist)", "aspect": "significance", "confidence": 4, "overall": 3, "pool_position": 48,
+     "scores": {"technical_rigor": 52, "clarity": 60, "novelty": 48, "significance": 52, "experimental_validation": 50, "reproducibility": 60, "ethics": 62}},
+    {"role": "T2 (Evaluation and benchmark methodologist)", "aspect": "experimental_validation", "confidence": 4, "overall": 2, "pool_position": 36,
+     "scores": {"technical_rigor": 44, "clarity": 54, "novelty": 46, "significance": 50, "experimental_validation": 36, "reproducibility": 52, "ethics": 60}},
+    {"role": "T3 (LLM data-contamination researcher)", "aspect": "technical_rigor", "confidence": 4, "overall": 3, "pool_position": 40,
+     "scores": {"technical_rigor": 42, "clarity": 58, "novelty": 48, "significance": 52, "experimental_validation": 48, "reproducibility": 50, "ethics": 58}},
+    {"role": "T4 (Empirical software-engineering / mining-software-repositories researcher)", "aspect": "technical_rigor", "confidence": 3, "overall": 3, "pool_position": 44,
+     "scores": {"technical_rigor": 46, "clarity": 56, "novelty": 46, "significance": 54, "experimental_validation": 50, "reproducibility": 48, "ethics": 58}},
+    {"role": "T5 (General LLM reviewer, presentation)", "aspect": "clarity", "confidence": 3, "overall": 3, "pool_position": 46,
+     "scores": {"technical_rigor": 50, "clarity": 52, "novelty": 50, "significance": 54, "experimental_validation": 48, "reproducibility": 56, "ethics": 62}},
+    {"role": "T6 (Agent-scaffold engineer and benchmark user)", "aspect": "reproducibility", "confidence": 4, "overall": 3, "pool_position": 50,
+     "scores": {"technical_rigor": 50, "clarity": 60, "novelty": 48, "significance": 54, "experimental_validation": 50, "reproducibility": 56, "ethics": 60}}
+  ],
+  "da_critical": []
+}

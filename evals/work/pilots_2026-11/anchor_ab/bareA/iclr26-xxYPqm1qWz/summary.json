@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-xxYPqm1qWz",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No compute/token-matched Stage-1 control: gains may come from 26B extra in-domain training tokens rather than video-mined data",
+    "No ablation of GPT-5 inner monologues vs IDM-recovered actions/parameters, so the source of the gain is unisolated",
+    "Weak absolute OSWorld results (14-16%) with no comparison to existing open 7B CUAs (OpenCUA, UI-TARS); baseline looks under-tuned",
+    "Long-horizon/test-time-scaling claim rests on single 50-step runs within the range of run-to-run variance",
+    "Noisy IDM labels (66% parameter accuracy, lenient any-overlap detection metric) with no study of noise impact; possible AgentNet train/test overlap"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

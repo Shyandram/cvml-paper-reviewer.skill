@@ -1,0 +1,4 @@
+{"pair": "T4_vs_M2", "winner": 2, "margin": "strong",
+ "rating_paper1": 2, "rating_paper2": 6,
+ "reason": "Paper 2 contributes a human-annotated reward benchmark, released reward models that beat open VLMs and match or exceed proprietary ones on it, and evidence that the reward enables stable Flow-GRPO training with gains on GEdit and ImgEdit, plus a useful analysis of reward variance. Paper 1 only benchmarks three existing distillation methods on noisy labels. It never compares against any noisy-label learning method, its privacy and 'vicious cycle' claims are untested, and its corollaries are informal and unproven. Paper 2 has weaknesses of its own: its training labels are distilled from GPT-4.1, its RL ablations are thin, and it reports no variance, but it remains far more substantive.",
+ "recognized": [], "injection_found": null}

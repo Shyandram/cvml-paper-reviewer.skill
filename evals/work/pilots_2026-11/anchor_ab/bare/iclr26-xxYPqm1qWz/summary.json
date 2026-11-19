@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-xxYPqm1qWz",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "No token/compute-matched controls: gains not isolated from extra pretraining compute, GPT-5 monologue distillation, or grounding data",
+    "No external baselines (other data-generation methods or contemporary 7B CUAs); absolute OSWorld-Verified SR (14-16%) is low",
+    "Headline 70% uses a single 50-step run vs 20-step baseline; test-time-scaling gain is within run-to-run variance",
+    "IDM claims overstated ('unsupervised', 'millisecond precision'); lenient any-overlap metric, 65.8% parameter accuracy, no end-to-end trajectory quality measure",
+    "No contamination analysis against OSWorld apps/tasks; multiple numerical and reference inconsistencies"
+  ],
+  "recognized": true,
+  "injection_found": null
+}

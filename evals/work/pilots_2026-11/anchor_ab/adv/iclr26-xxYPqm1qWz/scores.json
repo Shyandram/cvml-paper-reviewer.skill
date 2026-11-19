@@ -1,0 +1,118 @@
+{
+  "paper_type": "empirical",
+  "reviewers": [
+    {
+      "role": "T1 (Computer-use / GUI agent specialist)",
+      "aspect": "experimental_validation",
+      "confidence": 4,
+      "overall": 3,
+      "pool_position": 50,
+      "scores": {
+        "technical_rigor": 50,
+        "clarity": 62,
+        "novelty": 56,
+        "significance": 62,
+        "experimental_validation": 46,
+        "reproducibility": 55,
+        "ethics": 50
+      }
+    },
+    {
+      "role": "T2 (Agent evaluation and experimental-design methodologist)",
+      "aspect": "technical_rigor",
+      "confidence": 4,
+      "overall": 3,
+      "pool_position": 42,
+      "scores": {
+        "technical_rigor": 44,
+        "clarity": 58,
+        "novelty": 55,
+        "significance": 58,
+        "experimental_validation": 45,
+        "reproducibility": 52,
+        "ethics": 50
+      }
+    },
+    {
+      "role": "T3 (Learning-from-observation / video-pretraining-for-control researcher)",
+      "aspect": "novelty",
+      "confidence": 3,
+      "overall": 3,
+      "pool_position": 52,
+      "scores": {
+        "technical_rigor": 54,
+        "clarity": 62,
+        "novelty": 50,
+        "significance": 60,
+        "experimental_validation": 52,
+        "reproducibility": 55,
+        "ethics": 50
+      }
+    },
+    {
+      "role": "T4 (Temporal video grounding / action localization researcher)",
+      "aspect": "technical_rigor",
+      "confidence": 3,
+      "overall": 3,
+      "pool_position": 45,
+      "scores": {
+        "technical_rigor": 46,
+        "clarity": 58,
+        "novelty": 56,
+        "significance": 58,
+        "experimental_validation": 48,
+        "reproducibility": 52,
+        "ethics": 50
+      }
+    },
+    {
+      "role": "T5 (Foundation-model pretraining and data-scaling researcher)",
+      "aspect": "significance",
+      "confidence": 3,
+      "overall": 4,
+      "pool_position": 66,
+      "scores": {
+        "technical_rigor": 60,
+        "clarity": 66,
+        "novelty": 62,
+        "significance": 70,
+        "experimental_validation": 62,
+        "reproducibility": 60,
+        "ethics": 52
+      }
+    },
+    {
+      "role": "T6 (Web-data curation and responsible-data researcher)",
+      "aspect": "reproducibility",
+      "confidence": 3,
+      "overall": 3,
+      "pool_position": 45,
+      "scores": {
+        "technical_rigor": 54,
+        "clarity": 58,
+        "novelty": 56,
+        "significance": 58,
+        "experimental_validation": 52,
+        "reproducibility": 50,
+        "ethics": 40
+      }
+    },
+    {
+      "role": "TA (advocate)",
+      "aspect": "significance",
+      "confidence": 3,
+      "overall": 4,
+      "pool_position": 65,
+      "scores": {
+        "technical_rigor": 60,
+        "clarity": 68,
+        "novelty": 62,
+        "significance": 72,
+        "experimental_validation": 62,
+        "reproducibility": 62,
+        "ethics": 55
+      }
+    }
+  ],
+  "da_critical": []
+}

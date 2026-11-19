@@ -1,0 +1,5 @@
+{"pair": "K7_vs_W5", "winner": 1, "margin": "clear",
+ "rating_paper1": 6, "rating_paper2": 4,
+ "reason": "Paper 1 is a carefully controlled benchmark of 11 optimizers across model sizes, batch sizes, training horizons and MoE, with heavy tuning (about 2900 runs). Its findings are well supported and useful: AdEMAMix and MARS lead at scale, D-Muon's weight decay fixes Muon, common codebase defaults can reverse optimizer rankings, and Sophia's paper and code disagree. Paper 2's video-to-trajectory pretraining idea is new and promising, but its main claim rests on weak controls. There is no baseline trained on the same number of extra tokens, the 70% headline compares a single 50-step run against 20-step baselines, and the inverse-dynamics labeler is checked only on small manual samples (65.8% parameter accuracy). It also reads as hastily written.",
+ "recognized": ["Paper 1 appears to be 'Benchmarking Optimizers for Large Language Model Pretraining' (EPFL, 2025)", "Paper 2 appears to be 'VideoAgentTrek' (2025 arXiv preprint)"],
+ "injection_found": null}

@@ -1,0 +1,4 @@
+{"pair": "Q9_vs_T4", "winner": 1, "margin": "strong",
+ "rating_paper1": 6, "rating_paper2": 2,
+ "reason": "Paper 1 contributes a large, human-verified, contamination-resistant long-horizon SWE benchmark (1,865 tasks, public/held-out/commercial splits) whose evaluation of frontier agents shows a clear and significant capability gap, even though it has some text/table inconsistencies (e.g., Sonnet 16.3 vs 17.6, GPT-4o 3.9 vs 4.9) and offers only modest analysis. Paper 2 is a thin empirical observation that dataset distillation beats plain cross-entropy on symmetrically noisy CIFAR/Tiny-ImageNet; it never compares against any noisy-label learning method, its privacy and efficiency claims are not tested, and its 'corollaries' are unproven heuristics, so the main claim is weakly supported.",
+ "recognized": ["Paper 1 appears to be SWE-Bench Pro (Scale AI, 2025)"], "injection_found": null}

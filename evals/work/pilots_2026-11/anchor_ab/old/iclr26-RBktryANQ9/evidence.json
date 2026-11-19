@@ -1,0 +1,172 @@
+{
+ "locations": [
+  "Abstract",
+  "Sec. 1",
+  "Sec. 1 (Contributions)",
+  "Sec. 2",
+  "Sec. 2.1",
+  "Sec. 2.2",
+  "Sec. 3.1",
+  "Sec. 3.2",
+  "Sec. 4",
+  "Sec. 4 (Implementations)",
+  "Sec. 4 Experiment-I",
+  "Sec. 4 Experiment-II",
+  "Sec. 4 Experiment-III",
+  "Sec. 5",
+  "Figure 1",
+  "Figure 2",
+  "Figure 3",
+  "Figure 4",
+  "Figure 5",
+  "Eq. 1",
+  "Eq. 2",
+  "Eq. 3",
+  "Eq. 4",
+  "Eq. 5",
+  "Eq. 6",
+  "Eq. 7",
+  "Eq. 8",
+  "Eq. 9",
+  "Eq. 10",
+  "Eq. 11",
+  "Corollary-I",
+  "Corollary-II",
+  "Reference [10]",
+  "Title"
+ ],
+ "quotes": [
+  "a novel approach that leverages dataset distillation for noise removal",
+  "avoids the feedback loop common in existing techniques and enhances training efficiency",
+  "providing strong privacy protection through offline processing",
+  "ensures privacy protection through offline dataset distillation",
+  "We propose a new approach to model learning from noisy data that avoids vicious cycles",
+  "clean but challenging samples, such as those from tail classes in imbalanced datasets, may undergo lossy compression",
+  "We further hypothesize that challenging clean samples, such as tail data in imbalanced datasets, are at risk",
+  "Final test accuracies are reported throughout the distillation process",
+  "The validation performance over symmetric noise",
+  "at noise rates of 0.6 and 0.8, a single distilled sample per class surpasses the baseline",
+  "the validation accuracy matches that of the original dataset",
+  "the distillation process primarily captures common patterns while ignoring outliers such as noise",
+  "Only the DATM method achieves comparable performance to the benchmark at noise rate",
+  "a three-layer ConvNet for CIFAR and a four-layer ConvNet for Tiny-ImageNet",
+  "Realted Works",
+  "major contributions bellow",
+  "Both of which are widely employed",
+  "high-volume datasets like Clothing1M [48] and WebVision [27] serve as classic benchmarks",
+  "This corollary succinctly states the upper bound",
+  "consistently demonstrate significant performance gains",
+  "Why not directly distill a clean subset that enables effective training?",
+  "This work first benchmarks existing representative distillation approaches",
+  "How much data should be distilled from a noisy dataset to create a meaningful distilled set?",
+  "This is why data distillation often yields suboptimal results in low-noise settings",
+  "a single distilled image retains discriminative features despite high noise ratios",
+  "especially in high-privacy environments where noise is prevalent",
+  "significant scalability challenges",
+  "training on the full dataset at the corresponding noise rate",
+  "following the evaluation protocols of DATM, DANCE, and RCIG, with data augmentation applied for RCIG as recommended",
+  "Benchmark-I referenced later denotes this accelerated version",
+  "largely effective even in the presence of an unknown fixed noise rate"
+ ],
+ "numbers": [
+  {
+   "claim": "symmetric noise rates studied",
+   "value": "τ = 0.2, 0.4, 0.6, 0.8",
+   "derived": false
+  },
+  {
+   "claim": "asymmetric noise rates at which DATM matches the baseline",
+   "value": "τ = {0.2, 0.4}",
+   "derived": false
+  },
+  {
+   "claim": "CIFAR-10N Aggre noise rate",
+   "value": "9.03%",
+   "derived": false
+  },
+  {
+   "claim": "CIFAR-10N Random k noise rate",
+   "value": "τ ≈ 18%",
+   "derived": false
+  },
+  {
+   "claim": "CIFAR-10N Worst noise rate",
+   "value": "40.21%",
+   "derived": false
+  },
+  {
+   "claim": "CIFAR-100N fine noise rate",
+   "value": "40.20%",
+   "derived": false
+  },
+  {
+   "claim": "IPC at which distillation beats the baseline at τ=0.6/0.8",
+   "value": "a single distilled sample per class",
+   "derived": false
+  },
+  {
+   "claim": "IPC bound at τ=0.2 below which distillation beats the baseline",
+   "value": "fewer than 50 samples per class",
+   "derived": false
+  },
+  {
+   "claim": "IPC with which the distillers surpass the CIFAR-100N baseline",
+   "value": "fewer than 10 distilled images per class",
+   "derived": false
+  },
+  {
+   "claim": "Corollary-II lower bound on τ, CIFAR-10, IPC=50 (|S|=50,000 assumed)",
+   "value": "0.99",
+   "derived": true
+  },
+  {
+   "claim": "Corollary-II lower bound on τ, CIFAR-10, IPC=1",
+   "value": "0.9998",
+   "derived": true
+  },
+  {
+   "claim": "Corollary-II lower bound on τ, CIFAR-100N, IPC=10",
+   "value": "0.98",
+   "derived": true
+  },
+  {
+   "claim": "Corollary-I IPC upper bound, CIFAR-10, τ=0.2",
+   "value": "4,000",
+   "derived": true
+  },
+  {
+   "claim": "occurrences of 'privacy' in the manuscript, none in an experiment",
+   "value": "6",
+   "derived": true
+  },
+  {
+   "claim": "occurrences of 'imbalanc' in the manuscript, none in an experiment",
+   "value": "4",
+   "derived": true
+  },
+  {
+   "claim": "ConvNet depth for CIFAR / Tiny-ImageNet",
+   "value": "three-layer / four-layer",
+   "derived": false
+  },
+  {
+   "claim": "aspect-weighted final rating",
+   "value": "2.25",
+   "derived": true
+  }
+ ],
+ "references": [
+  {
+   "title": "Coresets for Robust Training of Neural Networks against Noisy Labels",
+   "authors": "Baharan Mirzasoleiman, Kaidi Cao, Jure Leskovec",
+   "year": 2020,
+   "marked_verify": false
+  },
+  {
+   "title": "prior studies of dataset distillation / condensation under label noise (line of work, no specific paper named)",
+   "authors": "",
+   "year": null,
+   "marked_verify": true
+  }
+ ]
+}

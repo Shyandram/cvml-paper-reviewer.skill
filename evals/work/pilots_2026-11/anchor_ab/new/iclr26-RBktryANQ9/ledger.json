@@ -1,0 +1,693 @@
+{
+ "accept": [
+  {
+   "id": "A1",
+   "aspect": "novelty",
+   "reason": "Reframes noisy-label learning as data condensation, sidestepping the detect-then-correct vicious cycle; disclosed transfer from dataset distillation",
+   "location": "Section 1 Motivation; Section 3.1 Remark",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C7",
+   "status": "checked"
+  },
+  {
+   "id": "A2",
+   "aspect": "experimental_validation",
+   "reason": "Covers three DD families (DATM, DANCE, RCIG) under symmetric, asymmetric and natural noise on CIFAR-10/100, Tiny-ImageNet, CIFAR-10N/100N",
+   "location": "Section 3.2; Section 4; Figures 2, 4, 5",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "A3",
+   "aspect": "significance",
+   "reason": "Under heavy symmetric noise one distilled image per class beats training on the full noisy set",
+   "location": "Section 4 Experiment-I; Figure 2(a)",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C1",
+   "status": "open"
+  },
+  {
+   "id": "A4",
+   "aspect": "significance",
+   "reason": "Honest negative result: structured asymmetric noise is absorbed into the distilled set, qualifying the thesis",
+   "location": "Section 4 Observation-II, Insight-II; Figure 1(b); Figure 4",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "A5",
+   "aspect": "experimental_validation",
+   "reason": "Tests real human-annotation noise (CIFAR-10N/100N) and reports the low-noise (Aggre) failure",
+   "location": "Section 4 Experiment-III; Figure 5",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "A6",
+   "aspect": "clarity",
+   "reason": "Self-contained background: noise models and the three distillers' objectives",
+   "location": "Section 3.1 Eq. 1-2; Section 3.2 Eq. 4-9",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "A7",
+   "aspect": "experimental_validation",
+   "reason": "Visualization of DATM distilled images across noise rates",
+   "location": "Figure 3; Section 4",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "C1",
+   "status": "open"
+  },
+  {
+   "id": "A8",
+   "aspect": "significance",
+   "reason": "Practical motivation: offline distillation as preprocessing in privacy-sensitive noisy settings",
+   "location": "Section 1",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "A9",
+   "aspect": "technical_rigor",
+   "reason": "Poses how much to distill per noise rate and gives closed-form IPC/noise bounds",
+   "location": "Section 4 Insight-I; Eq. 10; Eq. 11; Figure 1(a)",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "C6",
+   "status": "checked"
+  },
+  {
+   "id": "A10",
+   "aspect": "reproducibility",
+   "reason": "Follows original DATM/DANCE/RCIG evaluation protocols with standard ConvNets",
+   "location": "Section 4 Implementations",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  }
+ ],
+ "reject": [
+  {
+   "id": "R1",
+   "aspect": "experimental_validation",
+   "reason": "No learning-with-noisy-labels baseline; only CE on the full noisy set, although the paper claims a new approach to learning from noisy data",
+   "location": "Figure 2 caption; Section 5; Sections 1-2 (cited LNL methods)",
+   "kind": "gap",
+   "worst_case": "fatal",
+   "fix": "Add >=3 LNL methods on the same backbone and data, with compute; a few GPU-days",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "R2",
+   "aspect": "technical_rigor",
+   "reason": "No control separating denoising from data reduction/regularization (random subset, coreset, early-stopped CE, clean subset); baseline schedule not stated",
+   "location": "Section 4 Experiment-I; Figure 2 caption",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Add those controls at each IPC; hours of GPU",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "R3",
+   "aspect": "technical_rigor",
+   "reason": "Possible selection on the test set: accuracies reported throughout distillation, captions say validation, no validation split defined",
+   "location": "Section 4 Implementations; Figure 2 and 4 captions",
+   "kind": "question",
+   "worst_case": "fatal",
+   "fix": "State checkpoint selection; use a held-out noisy validation split",
+   "added_by": null,
+   "claim": "C1",
+   "status": "open"
+  },
+  {
+   "id": "R4",
+   "aspect": "technical_rigor",
+   "reason": "Mechanism unanalyzed: expert trajectories/encoders' training data and epochs unstated; effect may be early-learning/early stopping",
+   "location": "Section 3.2 Eq. 4, 6, 7; Section 4 Implementations",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report expert training; ablate trajectory range and clean vs noisy experts",
+   "added_by": null,
+   "claim": "C1",
+   "status": "open"
+  },
+  {
+   "id": "R5",
+   "aspect": "technical_rigor",
+   "reason": "Corollary-II unproved, lacks accuracy and delta terms, contradicted by the paper's own results (tau >= 0.99 for CIFAR-10 IPC 50; >= 0.98 for CIFAR-100N IPC 10) and reversed relative to Eq. 10",
+   "location": "Section 4 Corollary-II, Eq. 11; Eq. 10; Section 4 Experiments I, III",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Remove or prove and check against Figures 2 and 5",
+   "added_by": null,
+   "claim": "C6",
+   "status": "checked"
+  },
+  {
+   "id": "R6",
+   "aspect": "technical_rigor",
+   "reason": "Corollary-I is a counting identity (clean samples per class) and ill-posed as a requirement",
+   "location": "Section 4 Corollary-I, Eq. 10",
+   "kind": "judgment",
+   "worst_case": "minor",
+   "fix": "Recast as a remark or replace with a predictive analysis",
+   "added_by": null,
+   "claim": "C6",
+   "status": "checked"
+  },
+  {
+   "id": "R7",
+   "aspect": "significance",
+   "reason": "Strong privacy protection claimed but never measured (no membership inference, no DP)",
+   "location": "Abstract; Section 5",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Remove or add membership-inference evaluation",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "R8",
+   "aspect": "significance",
+   "reason": "Training efficiency claimed but no distillation/training cost reported; distillers need full-data expert training",
+   "location": "Abstract; Section 1; Section 5; Section 3.2",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Report end-to-end wall-clock and memory vs CE and LNL",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "R9",
+   "aspect": "significance",
+   "reason": "Tail-class/imbalance lossy-compression claim in abstract, contributions, conclusion, but only hypothesized; no experiment",
+   "location": "Section 4 (We further hypothesize); Abstract; Section 5",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Run CIFAR-LT with noise or demote the claim",
+   "added_by": null,
+   "claim": "C4",
+   "status": "checked"
+  },
+  {
+   "id": "R10",
+   "aspect": "significance",
+   "reason": "'In the Wild' backed only by CIFAR-10N/100N; Clothing1M and WebVision named but unused",
+   "location": "Section 3.1; Section 4 Experiment-III",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Add Clothing1M/mini-WebVision or retitle",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R11",
+   "aspect": "experimental_validation",
+   "reason": "Only 3-4-layer ConvNets on <=64x64 images; no cross-architecture or larger-backbone evaluation",
+   "location": "Section 4 Implementations",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Evaluate on ResNet-18; distill with larger backbone; ~1 GPU-day",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R12",
+   "aspect": "experimental_validation",
+   "reason": "No seeds, runs or variance; claims rest on single curves",
+   "location": "Figures 2, 4, 5; omission sweep",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Mean +- std over >=3 seeds",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "R13",
+   "aspect": "novelty",
+   "reason": "No new method; 'novel approach' overstates a benchmark of three existing distillers; coreset-under-noise and noisy-DD prior work not discussed [verify]",
+   "location": "Abstract; Section 3.2; Section 2",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Reframe; position against prior work; or propose a noise-aware distiller",
+   "added_by": null,
+   "claim": "C7",
+   "status": "checked"
+  },
+  {
+   "id": "R14",
+   "aspect": "reproducibility",
+   "reason": "No hyperparameters, distillation iterations, expert details or code",
+   "location": "Section 4 Implementations; omission sweep",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Implementation appendix; release code and distilled sets",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "R15",
+   "aspect": "clarity",
+   "reason": "Results only as plots; no accuracy numbers or tables",
+   "location": "Section 4; Figures 2, 4, 5",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add accuracy tables at IPC 1/10/50",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "R16",
+   "aspect": "clarity",
+   "reason": "Eq. 4 uses t+N vs text t+T; 'Both of which' for three noise types; typos; Worst vs CIFAR100N mix-up",
+   "location": "Section 3.2 Eq. 4; Section 3.1; Section 2 heading; Section 1; Section 4 Experiment-III",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Proofread and fix",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "R17",
+   "aspect": "significance",
+   "reason": "Insights restate memorization/early-learning theory; no quantitative why/when analysis",
+   "location": "Section 3.1 Remark; Section 4 Insight-I, Insight-II",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Mechanism study or validated predictive rule",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "R18",
+   "aspect": "clarity",
+   "reason": "Layout appears to be a CVPR-style template rather than ICLR's; cannot confirm from extracted text",
+   "location": "Figure 1 caption; reference style",
+   "kind": "question",
+   "worst_case": "major",
+   "fix": "Re-typeset in ICLR template",
+   "added_by": null,
+   "claim": "general",
+   "status": "open"
+  },
+  {
+   "id": "R19",
+   "aspect": "technical_rigor",
+   "reason": "Whether DATM's expert-filtered initialization/soft labels [verify] perform explicit noise filtering, contrary to 'avoids the feedback loop'",
+   "location": "Section 3.2 Benchmark-I; Abstract",
+   "kind": "question",
+   "worst_case": "major",
+   "fix": "State init/label scheme; ablate",
+   "added_by": null,
+   "claim": "C5",
+   "status": "open"
+  },
+  {
+   "id": "R20",
+   "aspect": "experimental_validation",
+   "reason": "Insight-I proposes estimating the noise proportion from distillation, but tau is never estimated",
+   "location": "Section 4 Insight-I; Corollary-II",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Estimate tau on CIFAR-N and compare with known rates",
+   "added_by": "T3",
+   "claim": "C6",
+   "status": "checked"
+  }
+ ],
+ "answered": [
+  {
+   "reason": "Only synthetic noise is tested",
+   "answered_at": "Section 4 Experiment-III; Figure 5 (CIFAR-10N/100N)"
+  },
+  {
+   "reason": "Only one distillation family is tested",
+   "answered_at": "Section 3.2 (parameter matching, distribution matching, meta-learning)"
+  },
+  {
+   "reason": "Only favorable results are reported",
+   "answered_at": "Section 4 Experiment-II / Figure 4 (asymmetric failure); Experiment-III (Aggre failure)"
+  },
+  {
+   "reason": "Asymmetric-noise construction undefined",
+   "answered_at": "Section 4 Implementations; Eq. 2"
+  }
+ ],
+ "probes": [
+  {
+   "id": "P1",
+   "items": [
+    "R3",
+    "A3"
+   ],
+   "question": "Is the reported accuracy chosen on the test set; is a validation split used?",
+   "method": "re-read Section 4 and figure captions; text search",
+   "result": "unsettled",
+   "location": "Section 4 Implementations; Figure 2/4 captions",
+   "change": "R3 open question -> stays open question (<= minor)",
+   "after_reviews": false
+  },
+  {
+   "id": "P2",
+   "items": [
+    "R5",
+    "A9"
+   ],
+   "question": "Is Corollary-II consistent with the paper's own results?",
+   "method": "recompute Eq. 11 bound for reported settings",
+   "result": "confirmed",
+   "location": "Section 4 Corollary-II; Experiments I, III",
+   "change": "R5 open -> error (checked); A9 weak, condition failed",
+   "after_reviews": false
+  },
+  {
+   "id": "P3",
+   "items": [
+    "R1"
+   ],
+   "question": "Does the paper compare with any LNL method?",
+   "method": "trace every baseline mention",
+   "result": "confirmed",
+   "location": "Figures 2, 4, 5 captions; Section 4 Observation-I",
+   "change": "R1 open -> checked gap",
+   "after_reviews": false
+  },
+  {
+   "id": "P4",
+   "items": [
+    "R2",
+    "A3"
+   ],
+   "question": "Is there any random-subset/coreset/early-stopping/clean-subset control, and is the baseline schedule stated?",
+   "method": "re-read Section 4; text search",
+   "result": "confirmed",
+   "location": "Section 4 Implementations, Experiments I-III",
+   "change": "R2 open -> checked; A3 conditional",
+   "after_reviews": false
+  },
+  {
+   "id": "P5",
+   "items": [
+    "R7",
+    "R8",
+    "A8"
+   ],
+   "question": "Does the paper measure privacy or compute anywhere?",
+   "method": "text search and in-place reading",
+   "result": "confirmed",
+   "location": "Abstract; Section 1; Section 3.2; Section 5",
+   "change": "R7, R8 open -> checked; A8 condition fails",
+   "after_reviews": false
+  },
+  {
+   "id": "P6",
+   "items": [
+    "R9"
+   ],
+   "question": "Is there any imbalanced-data or tail-class experiment?",
+   "method": "text search",
+   "result": "confirmed",
+   "location": "Abstract; Section 1; Section 4; Section 5",
+   "change": "R9 open -> checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P7",
+   "items": [
+    "R10",
+    "R11"
+   ],
+   "question": "Which datasets and architectures support the in-the-wild claims?",
+   "method": "trace C3 -> Experiment-III -> Figure 5; text search",
+   "result": "confirmed",
+   "location": "Section 3.1; Section 4",
+   "change": "R10, R11 open -> checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P8",
+   "items": [
+    "R4",
+    "R19"
+   ],
+   "question": "How are experts trained and synthetic sets initialized/labeled?",
+   "method": "re-read Section 3.2 and Section 4",
+   "result": "unsettled",
+   "location": "Section 3.2; Section 4 Implementations",
+   "change": "R4 stays open gap; R19 stays open question (<= minor)",
+   "after_reviews": false
+  },
+  {
+   "id": "P9",
+   "items": [
+    "R13",
+    "A1"
+   ],
+   "question": "Does the paper propose a new method and discuss data-selection-under-noise prior work?",
+   "method": "re-read Abstract, Section 1-3; no literature query (no network)",
+   "result": "partly",
+   "location": "Abstract; Section 2; Section 3.2",
+   "change": "R13 open -> checked for framing; prior art stays [verify]",
+   "after_reviews": false
+  },
+  {
+   "id": "P10",
+   "items": [
+    "R12",
+    "R14"
+   ],
+   "question": "Are seeds, variance, hyperparameters or code stated?",
+   "method": "omission sweep text search",
+   "result": "confirmed",
+   "location": "whole text",
+   "change": "R12, R14 open -> checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P11",
+   "items": [
+    "R2"
+   ],
+   "question": "Is the full-data baseline trained with matched ConvNet, schedule and early stopping (T1/T2/T4/T6 major vs T5 minor)?",
+   "method": "re-read Section 4 and Figure 2 caption",
+   "result": "unsettled",
+   "location": "Section 4 Implementations, Experiment-I; Figure 2 caption",
+   "change": "T5 R2 minor -> major",
+   "after_reviews": true
+  }
+ ],
+ "types": [
+  {
+   "id": "T1",
+   "name": "Noisy-label learning specialist",
+   "likelihood": "high",
+   "grades": {
+    "R1": "fatal",
+    "R2": "major",
+    "R3": "minor",
+    "R10": "major",
+    "R12": "major",
+    "R11": "major"
+   },
+   "held": [
+    "A2",
+    "A5",
+    "A4"
+   ],
+   "discounted": [
+    "A3"
+   ],
+   "aspect": "experimental_validation",
+   "field": "the task: learning with noisy labels",
+   "decisive": [
+    "R1",
+    "R2",
+    "R10",
+    "R12",
+    "A5",
+    "A3"
+   ],
+   "pool_position": 15,
+   "overall": 2,
+   "confidence": 4
+  },
+  {
+   "id": "T2",
+   "name": "Dataset distillation specialist",
+   "likelihood": "high",
+   "grades": {
+    "R4": "major",
+    "R19": "minor",
+    "R14": "major",
+    "R11": "major",
+    "R2": "major",
+    "R16": "minor",
+    "R12": "minor"
+   },
+   "held": [
+    "A2",
+    "A6",
+    "A7"
+   ],
+   "discounted": [
+    "A10"
+   ],
+   "aspect": "technical_rigor",
+   "field": "dataset distillation / condensation",
+   "decisive": [
+    "R4",
+    "R14",
+    "R11",
+    "R2",
+    "A2"
+   ],
+   "pool_position": 22,
+   "overall": 2,
+   "confidence": 4
+  },
+  {
+   "id": "T3",
+   "name": "Learning-theory and memorization theorist",
+   "likelihood": "medium",
+   "grades": {
+    "R5": "major",
+    "R6": "minor",
+    "R17": "major",
+    "R3": "minor",
+    "R20": "minor"
+   },
+   "held": [
+    "A4"
+   ],
+   "discounted": [
+    "A9"
+   ],
+   "aspect": "technical_rigor",
+   "field": "learning theory (memorization, early learning)",
+   "decisive": [
+    "R5",
+    "R17",
+    "R6",
+    "A9"
+   ],
+   "pool_position": 15,
+   "overall": 2,
+   "confidence": 3
+  },
+  {
+   "id": "T4",
+   "name": "Data-centric ML and coreset-selection researcher",
+   "likelihood": "medium",
+   "grades": {
+    "R13": "major",
+    "R2": "major",
+    "R17": "major",
+    "R1": "major"
+   },
+   "held": [
+    "A1",
+    "A4"
+   ],
+   "discounted": [],
+   "aspect": "novelty",
+   "field": "coreset selection, data pruning, data valuation",
+   "decisive": [
+    "R13",
+    "R2",
+    "R17",
+    "A1"
+   ],
+   "pool_position": 32,
+   "overall": 3,
+   "confidence": 3
+  },
+  {
+   "id": "T5",
+   "name": "Privacy and trustworthy-ML researcher",
+   "likelihood": "low",
+   "grades": {
+    "R7": "major",
+    "R8": "major",
+    "R9": "minor",
+    "R2": "major"
+   },
+   "held": [
+    "A3"
+   ],
+   "discounted": [
+    "A8"
+   ],
+   "aspect": "significance",
+   "field": "privacy-preserving ML",
+   "decisive": [
+    "R7",
+    "R8",
+    "A8"
+   ],
+   "pool_position": 18,
+   "overall": 2,
+   "confidence": 3
+  },
+  {
+   "id": "T6",
+   "name": "Large-scale robust-training practitioner",
+   "likelihood": "medium",
+   "grades": {
+    "R10": "major",
+    "R11": "major",
+    "R8": "major",
+    "R9": "major",
+    "R2": "major",
+    "R15": "minor",
+    "R18": "minor"
+   },
+   "held": [
+    "A2"
+   ],
+   "discounted": [
+    "A3",
+    "A5"
+   ],
+   "aspect": "significance",
+   "field": "web-scale noisy-label training",
+   "decisive": [
+    "R10",
+    "R11",
+    "R8",
+    "R9",
+    "A3"
+   ],
+   "pool_position": 15,
+   "overall": 2,
+   "confidence": 4
+  }
+ ]
+}

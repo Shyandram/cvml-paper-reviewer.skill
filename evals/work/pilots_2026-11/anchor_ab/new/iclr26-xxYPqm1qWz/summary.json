@@ -1,0 +1,47 @@
+{
+ "id": "iclr26-xxYPqm1qWz",
+ "mode": "full (ledger)",
+ "paper_type": "empirical",
+ "final_overall": 3,
+ "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+ "task": [
+  "Vision–language models, multimodal LLMs (adapted: computer-use / GUI agents)",
+  "Video understanding, tracking (event detector)",
+  "Reinforcement learning (inverse dynamics / behaviour cloning)"
+ ],
+ "neighboring_fields": [
+  "learning from observation / imitation learning, robotics (VPT-style IDM)",
+  "temporal action localization / dense video event detection",
+  "VLM/LLM pretraining and data scaling",
+  "web and LLM agents and their evaluation",
+  "responsible web-data collection, copyright and privacy",
+  "HCI / UI understanding"
+ ],
+ "aspect_ratio": {
+  "technical_rigor": 0.2264,
+  "clarity": 0.1038,
+  "novelty": 0.1557,
+  "significance": 0.1557,
+  "experimental_validation": 0.1887,
+  "reproducibility": 0.0943,
+  "ethics": 0.0755
+ },
+ "ledger_rating": 3.194,
+ "ledger_pool_position": 53.0,
+ "official_rating": 3.17,
+ "n_types": 6,
+ "n_accept": 14,
+ "n_reject": 18,
+ "n_answered": 3,
+ "n_probes": 11,
+ "top_concerns": [
+  "R1: OSWorld gain not separated from 26B tokens of extra Stage-1 compute; no compute-matched control (Section 2.3.2, Section 4.1)",
+  "R3: no ablation of monologues, ScreenFilter, IDM label quality or zero-shot labelling (Sections 2.2-2.3, 4)",
+  "R18: single 7B base model with weak 9.3% SFT baseline; transfer to stronger recipes untested (Section 2.3.2, Table 4)",
+  "R13: only tools promised; dataset, video IDs, checkpoints and optimizer settings not stated (Section 1, Section 6, Figures 8/11/12)",
+  "R2: no external CUA baselines or alternative data sources compared (Section 3.1.2, Figure 5, Table 4)"
+ ],
+ "recognized": false,
+ "injection_found": null,
+ "notes": "Integrity scan clean (one venue mark redacted in a reference). Ambiguities: (1) the prompt's summary field for aspect_ratio says 'as printed by ratio'; filled from aggregate.json's ledger.aspect_ratio (identical values). (2) aggregate.json reports uncovered_aspects [] even though clarity and reproducibility have no type; the script silently renormalizes them away, while the agent file says it warns 'when heavy' - consistent but not explicit. (3) The template's T-review bracket asks for anchors A-E calibrated on ICLR; with a borderline paper most types land between B/C and C/D, and the rule 'unsure is never a reason to place at C' is hard to apply when a type's evidence genuinely matches C. (4) The script's Markdown output still prints the panel-mode EIC tables in ledger mode, which is confusing. (5) Figures unavailable; figure-dependent values read from extracted labels."
+}

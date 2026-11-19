@@ -1,0 +1,18 @@
+{
+  "paper_type": "empirical",
+  "reviewers": [
+    {"role": "T1 (Computer-use / GUI agent specialist)", "aspect": "experimental_validation", "confidence": 4, "overall": 3, "pool_position": 45,
+     "scores": {"technical_rigor": 50, "clarity": 60, "novelty": 52, "significance": 55, "experimental_validation": 44, "reproducibility": 52, "ethics": 56}},
+    {"role": "T2 (Training and evaluation methodologist for VLM agents)", "aspect": "technical_rigor", "confidence": 4, "overall": 3, "pool_position": 42,
+     "scores": {"technical_rigor": 44, "clarity": 58, "novelty": 52, "significance": 52, "experimental_validation": 45, "reproducibility": 50, "ethics": 56}},
+    {"role": "T3 (Temporal action localization / video grounding researcher)", "aspect": "technical_rigor", "confidence": 3, "overall": 3, "pool_position": 47,
+     "scores": {"technical_rigor": 46, "clarity": 58, "novelty": 54, "significance": 55, "experimental_validation": 50, "reproducibility": 52, "ethics": 58}},
+    {"role": "T4 (Learning-from-observation / inverse-dynamics researcher from robotics)", "aspect": "novelty", "confidence": 4, "overall": 3, "pool_position": 46,
+     "scores": {"technical_rigor": 52, "clarity": 62, "novelty": 46, "significance": 52, "experimental_validation": 50, "reproducibility": 54, "ethics": 58}},
+    {"role": "T5 (Multimodal foundation-model data and scaling researcher)", "aspect": "significance", "confidence": 4, "overall": 3, "pool_position": 57,
+     "scores": {"technical_rigor": 54, "clarity": 62, "novelty": 56, "significance": 60, "experimental_validation": 54, "reproducibility": 55, "ethics": 56}},
+    {"role": "T6 (Data governance and privacy researcher)", "aspect": "ethics", "confidence": 3, "overall": 3, "pool_position": 46,
+     "scores": {"technical_rigor": 54, "clarity": 60, "novelty": 54, "significance": 56, "experimental_validation": 52, "reproducibility": 46, "ethics": 40}}
+  ],
+  "da_critical": []
+}

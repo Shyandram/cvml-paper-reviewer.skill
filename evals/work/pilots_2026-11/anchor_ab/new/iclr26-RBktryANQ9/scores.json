@@ -1,0 +1,18 @@
+{
+  "paper_type": "analysis",
+  "reviewers": [
+    {"role": "T1 (Noisy-label learning specialist)", "aspect": "experimental_validation", "confidence": 4, "overall": 2, "pool_position": 15,
+     "scores": {"technical_rigor": 34, "clarity": 48, "novelty": 38, "significance": 36, "experimental_validation": 28, "reproducibility": 38, "ethics": 55}},
+    {"role": "T2 (Dataset distillation specialist)", "aspect": "technical_rigor", "confidence": 4, "overall": 2, "pool_position": 22,
+     "scores": {"technical_rigor": 36, "clarity": 50, "novelty": 40, "significance": 38, "experimental_validation": 34, "reproducibility": 32, "ethics": 58}},
+    {"role": "T3 (Learning-theory and memorization theorist)", "aspect": "technical_rigor", "confidence": 3, "overall": 2, "pool_position": 15,
+     "scores": {"technical_rigor": 30, "clarity": 46, "novelty": 36, "significance": 34, "experimental_validation": 36, "reproducibility": 40, "ethics": 56}},
+    {"role": "T4 (Data-centric ML and coreset-selection researcher)", "aspect": "novelty", "confidence": 3, "overall": 3, "pool_position": 32,
+     "scores": {"technical_rigor": 44, "clarity": 54, "novelty": 46, "significance": 44, "experimental_validation": 42, "reproducibility": 44, "ethics": 60}},
+    {"role": "T5 (Privacy and trustworthy-ML researcher)", "aspect": "significance", "confidence": 3, "overall": 2, "pool_position": 18,
+     "scores": {"technical_rigor": 36, "clarity": 50, "novelty": 40, "significance": 32, "experimental_validation": 34, "reproducibility": 40, "ethics": 45}},
+    {"role": "T6 (Large-scale robust-training practitioner)", "aspect": "significance", "confidence": 4, "overall": 2, "pool_position": 15,
+     "scores": {"technical_rigor": 36, "clarity": 46, "novelty": 38, "significance": 30, "experimental_validation": 30, "reproducibility": 36, "ethics": 56}}
+  ],
+  "da_critical": []
+}

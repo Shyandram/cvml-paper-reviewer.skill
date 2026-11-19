@@ -1,0 +1,353 @@
+{
+ "locations": [
+  "Abstract",
+  "Section 1",
+  "Section 2",
+  "Section 2.1.1",
+  "Section 2.1.2",
+  "Section 2.1.3",
+  "Section 2.2",
+  "Section 2.2.1",
+  "Section 2.2.2",
+  "Section 2.2.3",
+  "Section 2.3.1",
+  "Section 2.3.2",
+  "Section 3.1.1",
+  "Section 3.1.2",
+  "Section 3.2",
+  "Section 3.2.1",
+  "Section 3.2.2",
+  "Section 4",
+  "Section 4.1",
+  "Section 4.2",
+  "Section 5",
+  "Section 6",
+  "Appendix A",
+  "Appendix B",
+  "Appendix C",
+  "Appendix D",
+  "Appendix E",
+  "Appendix F",
+  "Appendix G",
+  "Appendix H",
+  "Table 1",
+  "Table 2",
+  "Table 3",
+  "Table 4",
+  "Table 5",
+  "Table 6",
+  "Table 7",
+  "Table 8",
+  "Table 9",
+  "Table 10",
+  "Figure 1",
+  "Figure 2",
+  "Figure 3",
+  "Figure 4",
+  "Figure 5",
+  "Figure 6",
+  "Figure 7",
+  "Figure 8",
+  "Figure 9",
+  "Figure 10",
+  "Figure 11",
+  "Figure 12"
+ ],
+ "quotes": [
+  "automatically mines training data from publicly available screen-recorded videos at web scale, eliminating the need for manual annotation",
+  "an unsupervised approach",
+  "precision temporal localization",
+  "without ground-truth labels",
+  "approximately 1.52 million ReAct steps overall, and about 26 billion training tokens",
+  "We train for one epoch over 26B tokens",
+  "augmented with a small number of GUI grounding pairs",
+  "curated set of clean, human-annotated trajectories",
+  "downsample videos to 4 fps",
+  "temporal patch size of 2 frames",
+  "any temporal overlap",
+  "small curated subset from the source corpus",
+  "For the 50-step budget, we perform a single run",
+  "we conduct three independent runs per model",
+  "teaches the model to decompose complex tasks into subgoals, persist through intermediate failures",
+  "solid recall (0.71)",
+  "license/PII checks",
+  "typically lacks precise temporal boundaries or action parameters",
+  "Following insights from robotics",
+  "human-in-the-loop screening",
+  "minimal human oversight",
+  "see Section 4.1",
+  "As illustrated in Figure 10",
+  "Our dense detector is trained on 512,000",
+  "We visualize the data sample in Figure",
+  "will be provided in the Appendix H",
+  "Agent Traing",
+  "369 human-crafted Ubuntu desktop tasks",
+  "lilybloom123.",
+  "a clear relationship between pretraining data size and computer-use agent",
+  "true test-time scaling",
+  "not as a hard accept/reject gate",
+  "we release SCREENFILTER for efficient GUI filtering and VIDEO2ACTION for action extraction as open-source tools",
+  "70% relative improvement",
+  "Foundation Qwen2.5-VL-7B",
+  "millisecond-level precision and parameter extraction",
+  "plausibly produce",
+  "accurate reconstruction of GUI",
+  "Annotators review pre/post frames"
+ ],
+ "numbers": [
+  {
+   "claim": "OSWorld-Verified SFT-only baseline task SR",
+   "value": "9.3%",
+   "derived": false
+  },
+  {
+   "claim": "OSWorld-Verified stage1+stage2 task SR at 50 steps",
+   "value": "15.78%",
+   "derived": false
+  },
+  {
+   "claim": "OSWorld-Verified stage1+stage2 at 20 steps (mean of 3 runs)",
+   "value": "14.13%",
+   "derived": false
+  },
+  {
+   "claim": "stage2-only at 50 steps",
+   "value": "9.27%",
+   "derived": false
+  },
+  {
+   "claim": "relative gain at matched 50 steps 15.78/9.27",
+   "value": "1.70",
+   "derived": true
+  },
+  {
+   "claim": "relative gain at 20 steps 14.13/9.3",
+   "value": "+52%",
+   "derived": false
+  },
+  {
+   "claim": "stage1+stage2 20-step run spread (14.68-13.57)",
+   "value": "1.11 pp",
+   "derived": true
+  },
+  {
+   "claim": "stage2-only 20-step mean",
+   "value": "9.32",
+   "derived": true
+  },
+  {
+   "claim": "50-step minus 20-step mean, stage1+2",
+   "value": "+1.65 pp",
+   "derived": false
+  },
+  {
+   "claim": "AgentNetBench step SR base / SFT-only / stage1+2",
+   "value": "38.5 / 64.1 / 69.3",
+   "derived": false
+  },
+  {
+   "claim": "Data scaling OSWorld 0/50/100%",
+   "value": "9.3 / 13.3 / 15.7",
+   "derived": false
+  },
+  {
+   "claim": "Data scaling AgentNetBench 0/50/100%",
+   "value": "64.1 / 68.1 / 69.3",
+   "derived": false
+  },
+  {
+   "claim": "Table 1 printed total predictions",
+   "value": "17,298",
+   "derived": false
+  },
+  {
+   "claim": "Table 1 sum of per-type predictions",
+   "value": "16,298",
+   "derived": true
+  },
+  {
+   "claim": "Table 1 implied total precision with 16,298",
+   "value": "0.874",
+   "derived": true
+  },
+  {
+   "claim": "Table 1 implied total precision with 17,298",
+   "value": "0.824",
+   "derived": true
+  },
+  {
+   "claim": "Table 1 total precision/recall/F1",
+   "value": "0.88 / 0.70 / 0.78",
+   "derived": false
+  },
+  {
+   "claim": "Table 1 ground-truth events",
+   "value": "20,282",
+   "derived": false
+  },
+  {
+   "claim": "press recall",
+   "value": "0.08",
+   "derived": false
+  },
+  {
+   "claim": "Table 2 overall parameterization accuracy",
+   "value": "0.658",
+   "derived": false
+  },
+  {
+   "claim": "Table 2 recomputed overall from per-type counts",
+   "value": "0.660",
+   "derived": true
+  },
+  {
+   "claim": "Table 2 drag accuracy as printed vs nearest attainable 8/22",
+   "value": "0.366 vs 0.364",
+   "derived": true
+  },
+  {
+   "claim": "Estimated end-to-end correct step share 0.88 x 0.658",
+   "value": "~58%",
+   "derived": true
+  },
+  {
+   "claim": "Table 8 printed total",
+   "value": "1,547,092",
+   "derived": false
+  },
+  {
+   "claim": "Table 8 sum of rows",
+   "value": "1,560,464",
+   "derived": true
+  },
+  {
+   "claim": "mouse move / drag share recomputed",
+   "value": "0.55% / 0.41%",
+   "derived": true
+  },
+  {
+   "claim": "Table 6 sum of resolution buckets",
+   "value": "53,375",
+   "derived": true
+  },
+  {
+   "claim": "videos downloaded",
+   "value": "55,603",
+   "derived": false
+  },
+  {
+   "claim": "Table 4 OSWorld domain denominators sum",
+   "value": "359",
+   "derived": true
+  },
+  {
+   "claim": "Task denominator implied by Table 4 percentages",
+   "value": "361",
+   "derived": true
+  },
+  {
+   "claim": "stage2-only turn4 recomputed 33/361",
+   "value": "9.14%",
+   "derived": true
+  },
+  {
+   "claim": "detector temporal granularity 2 frames / 4 fps",
+   "value": "0.5 s",
+   "derived": true
+  },
+  {
+   "claim": "Stage-1 tokens",
+   "value": "26B",
+   "derived": false
+  },
+  {
+   "claim": "Stage-2 tokens",
+   "value": "8B",
+   "derived": false
+  },
+  {
+   "claim": "grounding tokens",
+   "value": "~1B",
+   "derived": false
+  },
+  {
+   "claim": "Stage-1 wall clock",
+   "value": "~60 h on 32x H100",
+   "derived": false
+  },
+  {
+   "claim": "Stage-2 wall clock",
+   "value": "~16 h on 64x H100",
+   "derived": false
+  },
+  {
+   "claim": "detector training data",
+   "value": "154 hours",
+   "derived": false
+  },
+  {
+   "claim": "parameterizer training clips",
+   "value": "512,000",
+   "derived": false
+  },
+  {
+   "claim": "ScreenFilter throughput",
+   "value": "~840 hours per GPU-day",
+   "derived": false
+  },
+  {
+   "claim": "ScreenFilter F1",
+   "value": "89.58%",
+   "derived": false
+  },
+  {
+   "claim": "average trajectory length",
+   "value": "39.25 steps",
+   "derived": false
+  },
+  {
+   "claim": "terminate step accuracy stage2-only vs stage1+2",
+   "value": "0.588 vs 0.237",
+   "derived": false
+  },
+  {
+   "claim": "videos processed / steps",
+   "value": "39,000 / 1.52 million",
+   "derived": false
+  },
+  {
+   "claim": "tutorial-labeled videos",
+   "value": "38,700 (69.6%)",
+   "derived": false
+  },
+  {
+   "claim": "hours after ScreenFilter",
+   "value": "7,377",
+   "derived": false
+  },
+  {
+   "claim": "left click share in mined data",
+   "value": "67.1%",
+   "derived": false
+  },
+  {
+   "claim": "base model OSWorld",
+   "value": "4.5%",
+   "derived": false
+  }
+ ],
+ "references": [
+  {
+   "title": "ActionFormer: Localizing Moments of Actions with Transformers",
+   "authors": "Chenlin Zhang, Jianxin Wu, Yin Li",
+   "year": 2022,
+   "marked_verify": false
+  },
+  {
+   "title": "TongUI: Building Generalized GUI Agents by Learning from Multimodal Web Tutorials",
+   "authors": "[verify]",
+   "year": 2025,
+   "marked_verify": true
+  }
+ ]
+}

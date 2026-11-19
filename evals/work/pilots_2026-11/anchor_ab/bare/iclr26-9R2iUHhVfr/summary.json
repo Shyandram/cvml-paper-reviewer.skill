@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-9R2iUHhVfr",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Failure-mode analysis text contradicts Table 3, and Table 3 counts (e.g., 920 Opus instances) exceed the 731-instance public set",
+    "Text-vs-table mismatches in main results (Sonnet 4 16.3 vs 17.6, GPT-4o 3.9 vs 4.9) and citation errors",
+    "Contamination resistance asserted via GPL licensing with no empirical contamination analysis; held-out set never evaluated",
+    "Test-derived requirements/interface fields make tasks near spec-implementation; no ablation of their effect",
+    "Single scaffold, single run, no CIs; GPT-5's 97.6% tool-use failure among non-submissions suggests scaffold confounds"
+  ],
+  "recognized": true,
+  "injection_found": null
+}

@@ -1,0 +1,819 @@
+{
+ "accept": [
+  {
+   "id": "A1",
+   "aspect": "significance",
+   "reason": "Abundant passive data source for CUA training; 39k videos -> 1.52M steps / 26B tokens",
+   "location": "Section 2.3.1",
+   "strength": "strong",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "A2",
+   "aspect": "empirical strength",
+   "reason": "Identical Stage 2; Stage 1 lifts OSWorld-Verified 9.3->14.13 (20 steps), 9.27->15.78 (50), AgentNetBench 64.1->69.3",
+   "location": "Section 3.1.2; Figure 5; Tables 4-5",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "A3",
+   "aspect": "statistical robustness",
+   "reason": "Three 20-step runs per model with non-overlapping spreads (9.13-9.42 vs 13.57-14.68)",
+   "location": "Appendix G; Table 4",
+   "strength": "strong",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "A4",
+   "aspect": "empirical strength",
+   "reason": "Monotone data scaling 0/50/100% video tokens",
+   "location": "Section 4.1; Figure 6",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C4",
+   "status": "checked"
+  },
+  {
+   "id": "A5",
+   "aspect": "soundness of the IDM",
+   "reason": "Quantitative per-type IDM evaluation on 20,282 held-out events plus 500-sample manual check, weak types reported",
+   "location": "Tables 1-2; Section 3.2",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "A6",
+   "aspect": "novelty",
+   "reason": "Disclosed transfer of VPT-style inverse-dynamics labeling to GUI video with detection + parameterization decomposition",
+   "location": "Section 2.2; Section 5",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "A7",
+   "aspect": "empirical breadth",
+   "reason": "Gains spread across apps (chrome, writer, thunderbird, os)",
+   "location": "Table 4",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "A8",
+   "aspect": "resource",
+   "reason": "Long mined trajectories, avg 39.25 steps",
+   "location": "Section 4.2; Table 9",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "A9",
+   "aspect": "reproducibility",
+   "reason": "Training configs, monologue prompt, ScreenFilter thresholds, frame-rate policy given",
+   "location": "Figures 8, 11, 12; Appendix B, D, E",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C6",
+   "status": "checked"
+  },
+  {
+   "id": "A10",
+   "aspect": "resource",
+   "reason": "Promised open-source release of ScreenFilter and Video2Action",
+   "location": "Section 1; Section 6",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "C6",
+   "status": "open"
+  },
+  {
+   "id": "A11",
+   "aspect": "clarity",
+   "reason": "Clearly structured pipeline with formal task definitions",
+   "location": "Section 2; Sections 2.2.1-2.2.2; Figures 1, 2, 4",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "A12",
+   "aspect": "efficiency",
+   "reason": "Cheap curation: channel expansion with minimal oversight; ScreenFilter ~840 h video per GPU-day",
+   "location": "Section 2.1.1; Appendix B",
+   "strength": "moderate",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "A13",
+   "aspect": "honesty",
+   "reason": "States limitations of metadata classification and weak keystroke actions",
+   "location": "Appendix H; Sections 3.2.1-3.2.2",
+   "strength": "weak",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  }
+ ],
+ "reject": [
+  {
+   "id": "R1",
+   "aspect": "rigor/validation",
+   "reason": "Treated model gets 26B extra Stage-1 tokens; no equal-compute control, so gain not attributable to mined labels",
+   "location": "Section 2.3.2; Figure 11; Section 3.1.2",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Token-matched Stage-1 controls (~60 h on 32 H100s each)",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R2",
+   "aspect": "rigor/validation",
+   "reason": "OSWorld-G grounding pairs only in Stage 1; Stage-2-only baseline lacks them",
+   "location": "Section 2.3.1; Section 2.3.2",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Stage-2-only + grounding pairs baseline",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R3",
+   "aspect": "validation",
+   "reason": "No external baselines (other 7B CUAs, other trajectory-synthesis/mining methods)",
+   "location": "Figure 5; Table 4",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Table of published 7B results; one alternative data-source baseline",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R4",
+   "aspect": "validation",
+   "reason": "No ablation of monologue, ScreenFilter, IDM quality or label noise (~58% steps correct end to end, derived)",
+   "location": "Section 2.2.3; Tables 1-2; Section 4",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Ablate monologue and IDM-confidence filtering at 50% data",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R5",
+   "aspect": "claim accuracy",
+   "reason": "'millisecond-precision' unsupported: 4 fps, 2-frame patch = 0.5 s; any-overlap hit criterion",
+   "location": "Section 1; Appendix C; Section 3.2.1",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Remove claim or report boundary error / tIoU metrics",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "R6",
+   "aspect": "claim accuracy",
+   "reason": "'unsupervised'/'eliminating manual annotation' contradicted by human data in IDM training, Stage 2 and screening",
+   "location": "Abstract; Section 1; Appendix C; Appendix D; Section 2.3.1",
+   "kind": "error",
+   "worst_case": "major",
+   "fix": "Reword; quantify human data",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "R7",
+   "aspect": "validation/claims",
+   "reason": "Test-time scaling rests on single 50-step runs; +1.65 pp vs 1.11 pp 20-step spread; mechanism untested",
+   "location": "Section 4.2; Appendix G; Table 4",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Three 50/100-step runs; tone down mechanism",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "R8",
+   "aspect": "validation",
+   "reason": "AgentNetBench separation from OpenCUA training data not stated; no variance",
+   "location": "Section 3.1.1; Section 2.3.1; Appendix C-D",
+   "kind": "question",
+   "worst_case": "major",
+   "fix": "State separation; report variance",
+   "added_by": null,
+   "claim": "C3",
+   "status": "open"
+  },
+  {
+   "id": "R9",
+   "aspect": "validation",
+   "reason": "No contamination check between mined videos and OSWorld tasks",
+   "location": "Figure 3; Figure 2; Table 4",
+   "kind": "question",
+   "worst_case": "major",
+   "fix": "Overlap retrieval and removal check",
+   "added_by": null,
+   "claim": "C3",
+   "status": "open"
+  },
+  {
+   "id": "R10",
+   "aspect": "soundness of the IDM",
+   "reason": "In-domain held-out set; 10 wild videos; lenient criterion; no annotator agreement",
+   "location": "Section 2.2.1; Sections 3.2.1-3.2.2; Table 2",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Labeled YouTube test subset; agreement",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "R11",
+   "aspect": "correctness",
+   "reason": "Table 1 Preds total 17,298 vs row sum 16,298; recall 0.71 (text) vs 0.70 (table); macro aggregates missing",
+   "location": "Table 1; Section 3.2.1",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Correct totals",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "R12",
+   "aspect": "correctness",
+   "reason": "Table 8 counts sum 1,560,464 vs printed 1,547,092; shares for mouse move/drag wrong",
+   "location": "Table 8",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Correct table",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "R13",
+   "aspect": "correctness",
+   "reason": "Table 6 sum 53,375 vs 55,603; Table 2 drag 0.366 unattainable, overall 0.660 vs 0.658; Table 4 stage2 turn4 9.14 vs 9.27; 369 vs 359 tasks",
+   "location": "Tables 2, 4, 6; Section 3.1.1",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Reconcile numbers",
+   "added_by": null,
+   "claim": "C2",
+   "status": "checked"
+  },
+  {
+   "id": "R14",
+   "aspect": "ethics",
+   "reason": "No copyright/ToS, consent or PII discussion for 55k scraped videos; only 'license/PII checks'",
+   "location": "Appendix H; Figure 9; Appendix A",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Ethics statement and PII procedure",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "R15",
+   "aspect": "reproducibility",
+   "reason": "No stated release of mined data/IDs/agent; optimizer settings missing; closed-model labeling",
+   "location": "Section 1; Section 6; Figures 8, 11, 12",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Release IDs + trajectories; full optimizer settings",
+   "added_by": null,
+   "claim": "C6",
+   "status": "checked"
+  },
+  {
+   "id": "R16",
+   "aspect": "clarity",
+   "reason": "Cross-reference and copy errors (Section 4.1 vs 4.2, Figure 10 vs Table 10, App. D detector, missing figure number)",
+   "location": "Section 3.1.2; Section 4.2; Appendix D; Section 2.3.1; Figure 1",
+   "kind": "error",
+   "worst_case": "minor",
+   "fix": "Copy-edit",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "R17",
+   "aspect": "novelty",
+   "reason": "Delta over VPT, AgentTrek and video-to-dataset asserted in one sentence, not shown",
+   "location": "Section 5",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Sharpen delta; matched comparison",
+   "added_by": null,
+   "claim": "general",
+   "status": "checked"
+  },
+  {
+   "id": "R19",
+   "aspect": "significance",
+   "reason": "One 7B base model, 15.8% absolute; transfer to stronger bases untested",
+   "location": "Section 2.3.2; Figure 5",
+   "kind": "gap",
+   "worst_case": "major",
+   "fix": "Replicate on stronger/larger base",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R20",
+   "aspect": "validation",
+   "reason": "Table 9 compares per-video vs per-task step counts",
+   "location": "Table 9; Section 4.2",
+   "kind": "judgment",
+   "worst_case": "minor",
+   "fix": "Segment into tasks or caveat",
+   "added_by": null,
+   "claim": "C5",
+   "status": "checked"
+  },
+  {
+   "id": "R21",
+   "aspect": "validation",
+   "reason": "Scaling relationship from three single-run points",
+   "location": "Section 4.1; Figure 6",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Add points and seeds or soften",
+   "added_by": null,
+   "claim": "C4",
+   "status": "checked"
+  },
+  {
+   "id": "R22",
+   "aspect": "validation",
+   "reason": "AgentNetBench terminate accuracy drops 0.588 -> 0.237 unexplained; press missing",
+   "location": "Table 5",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Discuss/handle terminate",
+   "added_by": null,
+   "claim": "C3",
+   "status": "checked"
+  },
+  {
+   "id": "R23",
+   "aspect": "clarity/data",
+   "reason": "55,603 -> 7,377 h -> 39,000 videos funnel unclear",
+   "location": "Section 2.1.2; Section 2.3.1; Table 7; Appendix H",
+   "kind": "gap",
+   "worst_case": "minor",
+   "fix": "Document funnel",
+   "added_by": null,
+   "claim": "C1",
+   "status": "checked"
+  },
+  {
+   "id": "R24",
+   "aspect": "significance",
+   "reason": "No analysis of what video teaches (per-app gains vs video coverage, per-action errors)",
+   "location": "Tables 4-5; Figure 3; Section 4",
+   "kind": "judgment",
+   "worst_case": "major",
+   "fix": "Per-app/per-action analysis from existing runs",
+   "added_by": "T3",
+   "claim": "C3",
+   "status": "checked"
+  }
+ ],
+ "answered": [
+  {
+   "reason": "R18: abstract's 70% relative improvement mixes 50-step treated vs 20-step baseline (refuted by P5: 15.78/9.27=1.70 at matched 50 steps)",
+   "answered_at": "Table 4 (turn4 rows)"
+  },
+  {
+   "reason": "OSWorld results are single runs",
+   "answered_at": "Appendix G; Table 4 (three 20-step runs)"
+  },
+  {
+   "reason": "Compute and hardware not reported",
+   "answered_at": "Figures 8, 11, 12"
+  },
+  {
+   "reason": "Base-model reference missing",
+   "answered_at": "Figure 5; Table 5"
+  },
+  {
+   "reason": "Inner-monologue prompt unspecified",
+   "answered_at": "Appendix E"
+  },
+  {
+   "reason": "Video quality criteria unspecified",
+   "answered_at": "Appendix A"
+  }
+ ],
+ "probes": [
+  {
+   "id": "P1",
+   "items": [
+    "R2",
+    "A2"
+   ],
+   "question": "Are OSWorld-G grounding pairs also in the Stage-2-only baseline?",
+   "method": "re-read Sections 2.3.1, 2.3.2, 4.1, Figure 6",
+   "result": "partly",
+   "location": "Section 2.3.2",
+   "change": "R2 open -> checked; A2 depends on it",
+   "after_reviews": false
+  },
+  {
+   "id": "P2",
+   "items": [
+    "R1",
+    "A2"
+   ],
+   "question": "Does any experiment match Stage-1 compute without the mined labels?",
+   "method": "search Sections 3-4, Appendix F-G",
+   "result": "confirmed",
+   "location": "Section 4.1",
+   "change": "R1 checked; A2 strong -> moderate",
+   "after_reviews": false
+  },
+  {
+   "id": "P3",
+   "items": [
+    "R5"
+   ],
+   "question": "What temporal resolution can the detector have?",
+   "method": "derivation from Appendix C and Section 3.2.1 metric",
+   "result": "confirmed",
+   "location": "Appendix C; Section 3.2.1",
+   "change": "R5 question -> error",
+   "after_reviews": false
+  },
+  {
+   "id": "P4",
+   "items": [
+    "R6"
+   ],
+   "question": "How much human-labeled data does the pipeline use?",
+   "method": "trace Section 2, 2.2.1-2.2.2, Appendix C-D, Section 2.3.1",
+   "result": "confirmed",
+   "location": "Appendix C; Appendix D; Section 2.3.1",
+   "change": "R6 judgment -> error",
+   "after_reviews": false
+  },
+  {
+   "id": "P5",
+   "items": [
+    "R7",
+    "R18"
+   ],
+   "question": "Is the 70% headline budget-matched, and is the 50-step gain beyond run spread?",
+   "method": "recompute from Table 4",
+   "result": "partly",
+   "location": "Table 4; Appendix G",
+   "change": "R18 -> Answered (refuted); R7 confirmed, checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P6",
+   "items": [
+    "R11",
+    "R12",
+    "R13"
+   ],
+   "question": "Do the table totals add up?",
+   "method": "recompute sums and ratios in python",
+   "result": "confirmed",
+   "location": "Tables 1, 2, 4, 6, 8",
+   "change": "R11, R12, R13 -> error (minor)",
+   "after_reviews": false
+  },
+  {
+   "id": "P7",
+   "items": [
+    "R8"
+   ],
+   "question": "Are AgentNetBench tasks excluded from Stage-2 and IDM training data?",
+   "method": "re-read Section 3.1.1, 2.3.1, Appendix C-D, G",
+   "result": "unsettled",
+   "location": "Section 3.1.1",
+   "change": "stays question (<= minor)",
+   "after_reviews": false
+  },
+  {
+   "id": "P8",
+   "items": [
+    "R9"
+   ],
+   "question": "Is any overlap between mined videos and OSWorld tasks checked?",
+   "method": "text search for contamination/overlap/dedup",
+   "result": "unsettled",
+   "location": "Section 3.1.1; Figure 3",
+   "change": "stays question",
+   "after_reviews": false
+  },
+  {
+   "id": "P9",
+   "items": [
+    "R10",
+    "A5"
+   ],
+   "question": "Where does the held-out detector set come from; how many annotators?",
+   "method": "re-read Section 2.2.1, 3.2.1-3.2.2, Appendix C",
+   "result": "confirmed",
+   "location": "Section 2.2.1; Section 3.2.1",
+   "change": "R10 checked; A5 depends-on partly fails",
+   "after_reviews": false
+  },
+  {
+   "id": "P10",
+   "items": [
+    "R17",
+    "A6"
+   ],
+   "question": "How does the paper distinguish itself from VPT, AgentTrek, Jang et al. 2025?",
+   "method": "re-read Section 5 and 2.2 (no literature query: no network)",
+   "result": "confirmed",
+   "location": "Section 5",
+   "change": "R17 checked (paper-internal basis)",
+   "after_reviews": false
+  },
+  {
+   "id": "P11",
+   "items": [
+    "R14"
+   ],
+   "question": "Does the paper discuss licence, consent or PII?",
+   "method": "text search",
+   "result": "confirmed",
+   "location": "Appendix H",
+   "change": "R14 checked",
+   "after_reviews": false
+  },
+  {
+   "id": "P12",
+   "items": [
+    "R15"
+   ],
+   "question": "Does the paper state release of mined trajectories or video list?",
+   "method": "re-read Section 1 bullet 4 and Section 6",
+   "result": "confirmed",
+   "location": "Section 1; Section 6",
+   "change": "T5: R15 minor -> major",
+   "after_reviews": true
+  }
+ ],
+ "types": [
+  {
+   "id": "T1",
+   "name": "Computer-use / GUI agent specialist",
+   "likelihood": "high",
+   "grades": {
+    "R1": "major",
+    "R2": "major",
+    "R3": "major",
+    "R4": "minor",
+    "R7": "minor",
+    "R8": "minor",
+    "R19": "minor",
+    "R20": "minor",
+    "R22": "minor"
+   },
+   "held": [
+    "A2",
+    "A3",
+    "A7"
+   ],
+   "discounted": [
+    "A8"
+   ],
+   "aspect": "experimental_validation",
+   "field": "the task (computer-use / GUI agents)",
+   "decisive": [
+    "R1",
+    "R2",
+    "R3",
+    "A2",
+    "A3"
+   ],
+   "pool_position": 50,
+   "overall": 3,
+   "confidence": 4
+  },
+  {
+   "id": "T2",
+   "name": "Agent evaluation and experimental-design methodologist",
+   "likelihood": "high",
+   "grades": {
+    "R1": "major",
+    "R2": "major",
+    "R6": "major",
+    "R7": "major",
+    "R8": "minor",
+    "R9": "minor",
+    "R11": "minor",
+    "R12": "minor",
+    "R13": "minor",
+    "R21": "minor"
+   },
+   "held": [
+    "A3"
+   ],
+   "discounted": [
+    "A4",
+    "A2"
+   ],
+   "aspect": "technical_rigor",
+   "field": "agent evaluation science",
+   "decisive": [
+    "R1",
+    "R2",
+    "R7",
+    "R6",
+    "A3"
+   ],
+   "pool_position": 42,
+   "overall": 3,
+   "confidence": 4
+  },
+  {
+   "id": "T3",
+   "name": "Learning-from-observation / video-pretraining-for-control researcher",
+   "likelihood": "medium",
+   "grades": {
+    "R17": "major",
+    "R4": "major",
+    "R24": "major",
+    "R6": "minor",
+    "R10": "minor"
+   },
+   "held": [
+    "A6",
+    "A1"
+   ],
+   "discounted": [],
+   "aspect": "novelty",
+   "field": "robotics and games: inverse dynamics / VPT / latent-action pretraining",
+   "decisive": [
+    "R17",
+    "R4",
+    "R24",
+    "A6"
+   ],
+   "pool_position": 52,
+   "overall": 3,
+   "confidence": 3
+  },
+  {
+   "id": "T4",
+   "name": "Temporal video grounding / action localization researcher",
+   "likelihood": "medium",
+   "grades": {
+    "R5": "major",
+    "R10": "major",
+    "R11": "minor",
+    "R13": "minor",
+    "R16": "minor"
+   },
+   "held": [
+    "A5",
+    "A11"
+   ],
+   "discounted": [],
+   "aspect": "technical_rigor",
+   "field": "video understanding (temporal action localization)",
+   "decisive": [
+    "R5",
+    "R10",
+    "A5"
+   ],
+   "pool_position": 45,
+   "overall": 3,
+   "confidence": 3
+  },
+  {
+   "id": "T5",
+   "name": "Foundation-model pretraining and data-scaling researcher",
+   "likelihood": "medium",
+   "grades": {
+    "R1": "major",
+    "R2": "major",
+    "R19": "major",
+    "R21": "minor",
+    "R7": "minor",
+    "R15": "major"
+   },
+   "held": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A12"
+   ],
+   "discounted": [],
+   "aspect": "significance",
+   "field": "continued pretraining and data scaling",
+   "decisive": [
+    "A1",
+    "A3",
+    "R1",
+    "R19"
+   ],
+   "pool_position": 66,
+   "overall": 4,
+   "confidence": 3
+  },
+  {
+   "id": "T6",
+   "name": "Web-data curation and responsible-data researcher",
+   "likelihood": "medium",
+   "grades": {
+    "R15": "major",
+    "R14": "major",
+    "R23": "minor",
+    "R12": "minor",
+    "R16": "minor"
+   },
+   "held": [
+    "A9",
+    "A13"
+   ],
+   "discounted": [
+    "A10"
+   ],
+   "aspect": "reproducibility",
+   "field": "web-data curation, copyright and PII",
+   "decisive": [
+    "R15",
+    "R14",
+    "A9"
+   ],
+   "pool_position": 45,
+   "overall": 3,
+   "confidence": 3
+  },
+  {
+   "id": "TA",
+   "name": "advocate",
+   "likelihood": "medium",
+   "grades": {
+    "R1": "major",
+    "R2": "major",
+    "R3": "minor",
+    "R4": "major",
+    "R5": "minor",
+    "R6": "minor",
+    "R7": "minor",
+    "R10": "minor",
+    "R14": "minor",
+    "R15": "minor",
+    "R17": "major",
+    "R19": "major",
+    "R24": "minor"
+   },
+   "held": [
+    "A1",
+    "A3",
+    "A6",
+    "A11"
+   ],
+   "discounted": [],
+   "aspect": "significance",
+   "field": "the task (computer-use / GUI agents)",
+   "decisive": [
+    "A1",
+    "A3",
+    "R1",
+    "R2"
+   ],
+   "pool_position": 65,
+   "overall": 4,
+   "confidence": 3
+  }
+ ]
+}
