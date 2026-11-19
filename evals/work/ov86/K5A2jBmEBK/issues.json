@@ -1,0 +1,880 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Gains measured only against DeepMath-Zero; no same-recipe control isolating length reward",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Claim of encouraging high entropy inconsistent; length-bonus variant has higher entropy",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Reflection increase of 0.05 at 7B overstated as \"reflects more often\"",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "GPT-4o behavior tagger uses leading prompt and lacks human validation",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Entropy-to-performance link is only correlational",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Related work listed but not positioned against difficulty-calibrated length methods",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Typos, Easy/Simple inconsistency, Fig. 2 contradicts Eq. 10",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Only token counts reported; no latency, throughput or truncation rate; train/eval cap mismatch",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "\"Hard\" defined relative to batch mean, not absolute difficulty",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Length-reward signal scale small; distribution of beta never shown",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "EMA initialized at 1.0 creates early hard-everywhere phase; schedule may drive dynamics",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Only math, Qwen2.5 3B/7B, one recipe; general claims overstated",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Limitations and broader impact discussion shallow",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Difficulty-adaptive length shaping already exists; not differentiated empirically or in text",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Pass@k-vs-length motivation not verified on the trained models",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Literature on whether RL expands reasoning boundary not engaged",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Characterization of cited Liu et al. work inconsistent",
+   "minor": true
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "\"New state-of-the-art\" claim scoped too broadly given few baselines",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Main comparison unmatched in recipe; cap and DAPO shaping could explain gains",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "No ablation of correctness conditioning, EMA, alpha, lambda or signal direction",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "EMA initialization yields long-response phase regardless of difficulty",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Claimed mechanism unmeasured: no pass@k for trained models",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Hard-question responses shrink, opposite of claimed mechanism; no length-by-difficulty analysis",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Groups with no correct samples receive no length signal",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "No efficiency baseline such as length-penalty RL; beta variants untabulated",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Single training run; small AIME sets make gains a few problems",
+   "minor": false
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Checkpoint selection on small validation set; baseline selection unstated",
+   "minor": false
+  },
+  {
+   "id": "P4.10",
+   "reviewer": "P4",
+   "text": "Pass@k-by-length binning and estimator validity unclear",
+   "minor": false
+  },
+  {
+   "id": "P4.11",
+   "reviewer": "P4",
+   "text": "RL algorithm stated as GRPO in intro but DAPO later",
+   "minor": true
+  },
+  {
+   "id": "P4.12",
+   "reviewer": "P4",
+   "text": "\"Consistently outperforms across all seven\" contradicted by MATH-500 tie",
+   "minor": false
+  },
+  {
+   "id": "P4.13",
+   "reviewer": "P4",
+   "text": "Claims four behaviors tracked but reports only one Reflect column",
+   "minor": false
+  },
+  {
+   "id": "P4.14",
+   "reviewer": "P4",
+   "text": "\"Simultaneous optimality\" contradicted by variant results",
+   "minor": false
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Unmatched training recipe vs released baselines; no same-recipe control",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Mechanism untested: no pass@k for trained models, no length by difficulty",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Hard-question responses also shrink",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Correct-only bonus gives no signal to groups with zero correct",
+   "minor": false
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "EMA initialization causes hard-everywhere phase",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "No ablation of Eq. 10, Eq. 11, alpha, lambda or shuffled difficulty",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "Efficiency claim has no efficiency baseline",
+   "minor": false
+  },
+  {
+   "id": "P5.8",
+   "reviewer": "P5",
+   "text": "\"Across all seven\" overclaims given tie",
+   "minor": false
+  },
+  {
+   "id": "P5.9",
+   "reviewer": "P5",
+   "text": "\"Simultaneous optimality\" overclaims",
+   "minor": false
+  },
+  {
+   "id": "P5.10",
+   "reviewer": "P5",
+   "text": "\"Encouraging high policy entropy\" contradicted by bonus variant",
+   "minor": false
+  },
+  {
+   "id": "P5.11",
+   "reviewer": "P5",
+   "text": "\"Reflects more often\" from +0.05 overclaims",
+   "minor": false
+  },
+  {
+   "id": "P5.12",
+   "reviewer": "P5",
+   "text": "Unvalidated GPT-4o tagger with leading prompt",
+   "minor": false
+  },
+  {
+   "id": "P5.13",
+   "reviewer": "P5",
+   "text": "Only one of four behaviors reported",
+   "minor": false
+  },
+  {
+   "id": "P5.14",
+   "reviewer": "P5",
+   "text": "Single run, small AIME sets, noisy checkpoint selection",
+   "minor": false
+  },
+  {
+   "id": "P5.15",
+   "reviewer": "P5",
+   "text": "Minor clarity: GRPO vs DAPO, Fig. 2 vs Eq. 10, validation disjointness, sample counts",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Missing RL-based reasoning compression baselines; method not positioned among them",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Batch-relative difficulty measure causes unstable, fluctuating reward signals",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Hyperparameter choices like beta = ±1 unexplained",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Effect of group size G unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Pass@32-length interpretation may be statistical artifact; length-difficulty correlation unchecked",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Batch-dependent difficulty classification inconsistent and unreliable",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No comparison with popular length penalties like Kimi-1.5 or overlong filtering",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Should validate on Qwen-3 models",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "No ablation over beta and alpha hyperparameters",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Length-bonus baseline longer but worse, contradicting longer-helps claim",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Typos",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Batch-relative difficulty is noisy and relative, suboptimal with skewed batches",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Correctness-conditioned length reward gives no signal when no correct solutions",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Low length variation makes standardized length unstable; sensitive to decoding settings",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Tension between pass@32-oriented training signal and pass@1 evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Baselines strawman; no comparison to adaptive length-reward methods",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "No ablation isolating dual reward vs model-aware difficulty components",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No sensitivity study on alpha, beta, lambda",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Pass@1 decreasing with length contradicts motivation for longer reasoning",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Difficulty classification circular; may cause instability or reinforce bias",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Integration of dual reward into policy gradient not formally analyzed",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Unmatched training recipe; no same-recipe control",
+    "points": [
+     "P1.1",
+     "P4.1",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Entropy claim inconsistent with results",
+    "points": [
+     "P1.2",
+     "P5.10"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Reflection increase overstated",
+    "points": [
+     "P1.3",
+     "P5.11"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Behavior tagger unvalidated and biased",
+    "points": [
+     "P1.4",
+     "P5.12"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Entropy-performance link correlational",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Not differentiated from difficulty-adaptive length methods",
+    "points": [
+     "P1.6",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Typos and minor clarity inconsistencies",
+    "points": [
+     "P1.7",
+     "P4.11",
+     "P5.15"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Cost measured only in tokens",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Relative batch-based difficulty, not absolute",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Small reward signal scale; beta distribution unshown",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "EMA initialization schedule confound",
+    "points": [
+     "P2.4",
+     "P4.3",
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Narrow scope: math, Qwen2.5 only",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Shallow limitations",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Mechanism unmeasured: no pass@k for trained models",
+    "points": [
+     "P3.2",
+     "P4.4",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "RL reasoning-boundary literature not engaged",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Liu et al. citation characterization",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "SOTA claim too broad",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Missing component ablations",
+    "points": [
+     "P4.2",
+     "P5.6"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Hard-question responses shrink, contradicting mechanism",
+    "points": [
+     "P4.5",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No length signal when no correct samples",
+    "points": [
+     "P4.6",
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No efficiency/length-RL baseline",
+    "points": [
+     "P4.7",
+     "P5.7"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Single run, small test sets, noisy selection",
+    "points": [
+     "P4.8",
+     "P4.9",
+     "P5.14"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Pass@k-by-length analysis validity unclear",
+    "points": [
+     "P4.10"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "\"All seven benchmarks\" overclaim",
+    "points": [
+     "P4.12",
+     "P5.8"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Only one of four behaviors reported",
+    "points": [
+     "P4.13",
+     "P5.13"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "\"Simultaneous optimality\" overclaim",
+    "points": [
+     "P4.14",
+     "P5.9"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Missing length-compression and adaptive length-reward baselines",
+    "points": [
+     "Q1.1",
+     "Q2.3",
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Batch-relative difficulty unstable/circular",
+    "points": [
+     "Q1.2",
+     "Q2.2",
+     "Q3.1",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Hyperparameter sensitivity unexplored",
+    "points": [
+     "Q1.3",
+     "Q1.4",
+     "Q2.5",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Pass@k-length interpretation questionable",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Other model families (Qwen-3)",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Results contradict longer-is-better motivation",
+    "points": [
+     "Q2.6",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Typos",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No signal when no correct solutions",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Unstable standardized length under low variance",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Training (pass@32) vs evaluation (pass@1) tension",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No component ablation",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No formal policy-gradient analysis",
+    "points": [
+     "Q4.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI11",
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  }
+ ]
+}

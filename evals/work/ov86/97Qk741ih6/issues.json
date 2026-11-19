@@ -1,0 +1,1050 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Seven-item contribution list redundant and inflated.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Predictable performance under constraints claimed but no budget sweep shown.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Appendix missing (\"Appendix ??\"); training procedure not understandable from main text.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Evaluation terms (feasibility, violation rate, normalized cost) and budget units undefined.",
+   "minor": true
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Figure 3(d) treats larger dual value as better.",
+   "minor": true
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Figure 2 shows tokens only as family averages with unexplained mean ± SD.",
+   "minor": true
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "\"Smallest edge budgets across all settings\" contradicted by Table 3.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "+39.3 EM headline compares against weak baseline; gap vs best is 9.3.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Typesetting inconsistencies and missing reference years.",
+   "minor": true
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "\"Neuro-symbolic\" used loosely.",
+   "minor": true
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Reproducibility details and code not provided.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No limitations discussion.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Trained-vs-untrained confound; baselines not budget-matched; settings unstated.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "\"Without retraining\"/predictable control claims untested; no sweep; low feasibility.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Expectation constraint contradicts per-query \"hard guarantees\" claim.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "+39.3 gain reported against GraphRAG rather than strongest baseline.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Smallest edge budget claim false in two columns.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Latency reduction claim holds only vs some baselines.",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Ablation \"no-KG\" variant inconsistent with Table 1 RAG baselines; hop unstated.",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Provenance-preserving/auditable claim not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Figure 2 shows only family averages.",
+   "minor": true
+  },
+  {
+   "id": "P2.10",
+   "reviewer": "P2",
+   "text": "Bibliography stray annotation and missing years.",
+   "minor": true
+  },
+  {
+   "id": "P2.11",
+   "reviewer": "P2",
+   "text": "k-hop token inflation claim supported only by unrelated surveys.",
+   "minor": false
+  },
+  {
+   "id": "P2.12",
+   "reviewer": "P2",
+   "text": "Larger dual value presented as stronger constraint learning.",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "LC-MAPPO novelty incremental; components standard in constrained RL.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Monotonic QMIX mixer used despite criticizing QMIX; unjustified.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Existing Lagrangian/constrained MAPPO from safe MARL not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Missing KG-LLM and trained KGQA baselines (ToG, RoG, GNN-RAG, NSM).",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Standard KGQA benchmarks WebQSP/CWQ not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "GRPO mischaracterized in related work.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "RL-trained search/retrieval agents not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "MetaQA benchmark attributed to wrong paper.",
+   "minor": true
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "k-hop expansion claim supported by citations that don't address it.",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "Bibliography stray note, garbled authors, missing years.",
+   "minor": true
+  },
+  {
+   "id": "P3.11",
+   "reviewer": "P3",
+   "text": "\"Neuro-symbolic\" label applied loosely.",
+   "minor": true
+  },
+  {
+   "id": "P3.12",
+   "reviewer": "P3",
+   "text": "Provenance/auditability asserted but never measured.",
+   "minor": false
+  },
+  {
+   "id": "P3.13",
+   "reviewer": "P3",
+   "text": "\"Context engineering\" novelty overstated.",
+   "minor": true
+  },
+  {
+   "id": "P3.14",
+   "reviewer": "P3",
+   "text": "Unresolved \"Appendix ??\" references.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Headline comparison uncontrolled for training, budgets, tuning; trained non-agentic baseline missing.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Per-method token consumption not reported despite matched-budget claim.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "HotpotQA KG construction not stated.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Budget/price control without retraining untested; single setting, low feasibility, no EM.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "\"Hard guarantees\" conflict with expectation constraint.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "How policy learns to respond to test-time budgets/prices not described.",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Edge budget claim contradicted by LightRAG in Table 3.",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Latency claims contradicted by Table 2.",
+   "minor": false
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Ablation no-KG variant inconsistent with Table 1; hop setting unstated.",
+   "minor": false
+  },
+  {
+   "id": "P4.10",
+   "reviewer": "P4",
+   "text": "Ablations don't test whether three agents needed vs single policy.",
+   "minor": false
+  },
+  {
+   "id": "P4.11",
+   "reviewer": "P4",
+   "text": "Greedy-Hop variant beats KG-Agent, so gain may not come from learned navigator.",
+   "minor": false
+  },
+  {
+   "id": "P4.12",
+   "reviewer": "P4",
+   "text": "No variance, seeds or learning curves for RL method.",
+   "minor": false
+  },
+  {
+   "id": "P4.13",
+   "reviewer": "P4",
+   "text": "Reproducibility: reward, architectures, hyperparameters, hardware, latency protocol, code missing.",
+   "minor": false
+  },
+  {
+   "id": "P4.14",
+   "reviewer": "P4",
+   "text": "Dual value used as constraint learning strength in Figure 3(d).",
+   "minor": true
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Latency is a step proxy, not wall-clock measurement with hardware.",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "No calibration procedure or sensitivity analysis for choosing prices or caps.",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Transfer to large, heterogeneous or changed KGs and unseen question types untested.",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "HotpotQA KG construction not described.",
+   "minor": false
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Training cost not reported.",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "Auditable benefit not shown; budget never binds in case study; no failure trace.",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "No limitations or broader-impact paragraph.",
+   "minor": false
+  },
+  {
+   "id": "P5.8",
+   "reviewer": "P5",
+   "text": "Figure 2 gives family averages only.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Notation like C_t not explained when introduced.",
+   "minor": true
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Experiments only use Qwen3-32B; other LLMs untested.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Contributions overclaimed; should be merged to highlight key contribution.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Contributions describe method, not problem, difference from prior work or advantages.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Related work is a brief survey not positioned relative to paper.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Problem definition imprecise: KG components, question assumptions and entity linking unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "State notation unclear: subgraph drops relations?, frontier meaning, C_t undefined.",
+   "minor": true
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Agent implementations unclear: models, architectures, parameter counts, encoder.",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Novelty and need of LC-MAPPO unclear vs existing Lagrangian RL methods.",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "EM@1 metric unclear.",
+   "minor": true
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "Missing experimental details: shared LLM, KG identity and scale.",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "CLAUSE not most effective as bolding implies; LightRAG better.",
+   "minor": false
+  },
+  {
+   "id": "Q3.10",
+   "reviewer": "Q3",
+   "text": "Convergence proof incomplete; assumptions absent from paper.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Computational and training cost of three-agent MARL not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Not tested at scale on large, real-world noisy KGs.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Contribution list inflated.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Budget control/predictability claims untested; no sweep.",
+    "points": [
+     "P1.2",
+     "P2.2",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing appendix and algorithm details.",
+    "points": [
+     "P1.3",
+     "P3.14"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Evaluation metrics undefined.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Dual value misread as constraint learning strength.",
+    "points": [
+     "P1.5",
+     "P2.12",
+     "P4.14"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Token usage only as family averages; per-method missing.",
+    "points": [
+     "P1.6",
+     "P2.9",
+     "P4.2",
+     "P5.8"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Smallest edge budget claim contradicted.",
+    "points": [
+     "P1.7",
+     "P2.5",
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "+39.3 headline misleading.",
+    "points": [
+     "P1.8",
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Bibliography and typesetting issues.",
+    "points": [
+     "P1.9",
+     "P2.10",
+     "P3.10"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Neuro-symbolic label loose.",
+    "points": [
+     "P1.10",
+     "P3.11"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Reproducibility details and code missing.",
+    "points": [
+     "P1.11",
+     "P4.13"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No limitations section.",
+    "points": [
+     "P1.12",
+     "P5.7"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Baseline comparison confounded by training, budgets and tuning.",
+    "points": [
+     "P2.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Hard guarantees vs expectation constraints.",
+    "points": [
+     "P2.3",
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Latency claims contradicted by tables.",
+    "points": [
+     "P2.6",
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Ablation no-KG inconsistency and unstated hop.",
+    "points": [
+     "P2.7",
+     "P4.9"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Provenance/auditability not evaluated.",
+    "points": [
+     "P2.8",
+     "P3.12",
+     "P5.6"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "k-hop claim citations unsupportive.",
+    "points": [
+     "P2.11",
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "LC-MAPPO incremental.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Monotonic mixer unjustified.",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Safe MARL prior work missing.",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Missing KG-LLM baselines.",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Missing standard KGQA benchmarks.",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "GRPO mischaracterized.",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "RL retrieval agents not discussed.",
+    "points": [
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "MetaQA misattributed.",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Context engineering novelty overstated.",
+    "points": [
+     "P3.13"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "HotpotQA KG construction unstated.",
+    "points": [
+     "P4.3",
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Training for test-time budgets undescribed.",
+    "points": [
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Ablations don't test multi-agent necessity.",
+    "points": [
+     "P4.10"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Greedy-hop suggests navigator gain unclear.",
+    "points": [
+     "P4.11"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "No variance or seeds.",
+    "points": [
+     "P4.12"
+    ]
+   },
+   {
+    "id": "PI33",
+    "summary": "Latency is a proxy, not wall-clock.",
+    "points": [
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI34",
+    "summary": "No guidance for choosing prices/caps.",
+    "points": [
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI35",
+    "summary": "Scale and transfer untested.",
+    "points": [
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI36",
+    "summary": "Training cost unreported.",
+    "points": [
+     "P5.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Notation unexplained.",
+    "points": [
+     "Q1.1",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Only one LLM evaluated.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Contributions overclaimed or merely descriptive.",
+    "points": [
+     "Q2.1",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Related work not positioned.",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Problem definition imprecise.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Agent implementations unspecified.",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "LC-MAPPO novelty unclear vs Lagrangian RL.",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "EM@1 metric unclear.",
+    "points": [
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Missing experimental details (LLM, KG).",
+    "points": [
+     "Q3.8"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Best-method claim/bolding contradicted by LightRAG.",
+    "points": [
+     "Q3.9"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Convergence proof incomplete.",
+    "points": [
+     "Q3.10"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Training/computational cost not discussed.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Not tested on large noisy KGs.",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI33",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI34",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI35",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI36",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  }
+ ]
+}

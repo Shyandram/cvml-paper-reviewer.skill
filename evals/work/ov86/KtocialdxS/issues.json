@@ -1,0 +1,618 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Unclear presentation: core problem, how method solves it, and benefits not articulated",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Motivation and benefits of the new weight-sharing mechanism not explained",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Cascaded framework well established; no significant innovation or distinction from prior cascades",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Figure 4(a) suggests cyclic dependency from high- to low-resolution branch",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Missing comparisons with cascaded models PixelFlow and RelayDiffusion",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Not novel: resembles progressive GANs and training-free high-resolution guidance methods",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Experiments on small, low-resolution datasets; scalability unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "State-of-the-art comparisons somewhat outdated",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "No comparison with other latency-reduction approaches",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "No combination with orthogonal acceleration methods to test whether gains stack",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Positioning unclear given flow models generating well in few steps",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Cascaded diffusion well established; single-network architecture trivial",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Resolution embedding likely unnecessary given NaViT-style multi-resolution pretraining",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Training-free Bottleneck Sampling already achieves resolution cascading, diminishing novelty",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Latency only at batch 64 on one stack; no single-image or mixed precision",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Evidence only at 64x64 or smaller; higher resolutions untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No diversity metrics such as precision/recall",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No failure case analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No broader-impact or data-licence statement",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "No baseline at equal sampling cost (fewer NFE or fast solvers)",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Single runs; no seeds or FID noise estimate",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "\"Comparable or superior\" overclaims; LowDiff worse on CIFAR-10 FIDs",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Headline hyperparameters selected by FID on reported metric; baseline untuned",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Training cost (GPU-hours) not reported despite comparable-budget claim",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Training budget arithmetic inconsistent; unexplained IS gain; CFG use unstated",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Core design details under-specified: conditioning noise, Te mapping, DiT variant, algorithm update",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "Effective NFE approximate and compared unevenly across papers",
+   "minor": false
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "Minor numeric inconsistencies, typos, no code statement",
+   "minor": true
+  },
+  {
+   "id": "Q2.10",
+   "reviewer": "Q2",
+   "text": "Memory footprint reduction claim unsupported; model size unchanged vs EDM",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "No same-latency or reduced-NFE baseline",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Hyperparameters chosen by FID on reported metric; baseline not tuned",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "\"Comparable or better quality\" overclaims given worse CIFAR FIDs",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "\"Compatible with any diffusion variant\" tested on only two backbones",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Memory reduction claim unmeasured",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Training budget asserted comparable but cost not reported",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Epoch arithmetic inconsistent; unexplained IS gain; CFG unstated",
+   "minor": false
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "\"Not purposed for efficiency\" contradicted by references and uncited efficient cascaded work",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "Numeric slips, algorithm notation, typos",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Closest prior MDM dismissed by assertion and not compared",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Efficient coarse-to-fine prior work (FreCaS, Bottleneck Sampling) uncited; \"underexplored\" framing",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Cascade mechanism comes from CDM; actual novelty narrower than framed",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No fast-solver or few-step baselines",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Typos",
+   "minor": true
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Evidence base small-scale, below venue bar",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "\"Any diffusion variant\" generality claim outruns evidence",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Main table and notation confusing; savings hard to read; algorithm notation undefined",
+   "minor": true
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Headline quality wording stronger than tables; ImageNet claim on one run",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Related work thin; positioning against prior multiscale work asserted",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "Typos and IS inconsistency",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Unclear problem statement and benefits",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Weight-sharing mechanism motivation unexplained",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Limited novelty: cascades/progressive generation well established",
+    "points": [
+     "P1.3",
+     "P2.1",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Figure 4(a) cyclic dependency",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Missing cascaded baselines (PixelFlow, RelayDiffusion)",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Small low-resolution datasets; scalability unclear",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Outdated baselines; no other latency-reduction methods",
+    "points": [
+     "P2.3",
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "No combination with orthogonal methods",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Positioning vs few-step flow models",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Resolution embedding unnecessary",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Training-free resolution cascading prior work",
+    "points": [
+     "P3.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Latency measured only at batch 64",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Only small-scale low-resolution evidence",
+    "points": [
+     "Q1.2",
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No diversity metrics",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No failure cases",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No broader-impact statement",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No equal-cost or fast-solver baseline",
+    "points": [
+     "Q2.1",
+     "Q3.1",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No seeds",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Quality claims overstated",
+    "points": [
+     "Q2.3",
+     "Q3.3",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "FID-based hyperparameter selection; untuned baseline",
+    "points": [
+     "Q2.4",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Training cost unreported",
+    "points": [
+     "Q2.5",
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Budget arithmetic, IS gain, CFG unexplained",
+    "points": [
+     "Q2.6",
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Design details under-specified",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Effective NFE approximate",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Minor typos and numeric slips",
+    "points": [
+     "Q2.9",
+     "Q3.9",
+     "Q4.5",
+     "Q5.6"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Memory claim unsupported",
+    "points": [
+     "Q2.10",
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Generality claim overstated",
+    "points": [
+     "Q3.4",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Prior efficient cascaded work uncited; positioning thin",
+    "points": [
+     "Q3.8",
+     "Q4.2",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "MDM not compared",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Cascade mechanism from CDM; narrow novelty",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Main table and notation confusing",
+    "points": [
+     "Q5.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI19"
+   ],
+   "related": [
+    "QI17",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI17",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  }
+ ]
+}

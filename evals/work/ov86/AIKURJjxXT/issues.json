@@ -1,0 +1,1012 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "\"Outperforms GRPO by 36.5%\" is a ratio of gains, not an accuracy gap.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Absolute gains over GRPO small; EFRame below GRPO on MathVision.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No seeds, runs or confidence intervals reported.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Baselines not compute-matched; no GRPO with matched rollouts or wall-clock.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "DAPO baseline partial reimplementation without dynamic sampling and with different reward.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "\"Deeper reasoning\" and aha-moment claims unmeasured; no pass@k; length read as reasoning.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Ablations confounded, curve-only, single dataset.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Protocol under-specified: splits, training set, steps, KL, checkpoint, decoding, baseline provenance.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Replay buffer rule (",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Clip range setting inconsistent with clip-higher being key hyperparameter.",
+   "minor": true
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Typos and rounding error.",
+   "minor": true
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Tabular NPG theorem does not cover 7B PPO-clip training with replay.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Sample categorization claimed as contribution but unsupported.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Each component has close uncited prior art (Liao et al., Sun et al., RePO).",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Theorem attributed to blog post with broken citation; archival source uncited.",
+   "minor": true
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Theorem for tabular NPG applied to PPO-clip with stale replay; covariance not measured.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Theorem 4.4 is an elementary identity.",
+   "minor": true
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Discarding negatives conflicts with cited work on negative samples; untested.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Citation errors: GRPO attributed to DeepSeek-R1, DPO duplicated, CPPO misused.",
+   "minor": true
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Vision-R1 not compared on MathVista.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "No compute-matched GRPO; partial DAPO; gains may come from extra samples.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Single runs; small margin vs GRPO; reversal on MathVision.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Deeper reasoning and aha frequency never measured.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Tabular theorem used for 7B PPO-clip system with replay.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Entropy rise described as both collapse symptom and feature.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Harm of negatives from hard prompts not isolated; tension with Zhu et al.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Evaluation split, training set, steps, beta, checkpoint, decoding and baseline provenance unstated.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "Generality rests on one backbone; App. B mentions unreported Math results.",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Broken citation and blog as theorem source.",
+   "minor": true
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "GRPO misattributed; DPO duplicated.",
+   "minor": true
+  },
+  {
+   "id": "P3.11",
+   "reviewer": "P3",
+   "text": "Table 2 time ratio rounding error.",
+   "minor": true
+  },
+  {
+   "id": "P3.12",
+   "reviewer": "P3",
+   "text": "Skywork R1V size mismatch between table and text.",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Tabular NPG theorem applied to 7B network with PPO-clip.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Replayed samples used with stale advantages and no off-policy correction.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Hard-prompt definition from five failures is noisy.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "One model and one data family; no text-only math or other backbone.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Repeated replay of rare solutions risks memorization/overfitting; duplication unchecked.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Variable step time and buffer memory not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Links to prioritized replay, off-policy correction and hard-example mining not drawn.",
+   "minor": false
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Framing (\"deeper reasoning\", \"stable learning cycle\") broader than modest single-seed gains.",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "36.5% and 19.9% are ratios of gains, not accuracy gaps.",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Theorem 4.4 elementary identity presented as theorem.",
+   "minor": true
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Theorem 4.5 cites blog and broken reference.",
+   "minor": true
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Definitions hard to parse.",
+   "minor": true
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "Training set for Table 1 and evaluation protocol unstated.",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "Figures carry claims with evaluative captions; numeric tables needed.",
+   "minor": true
+  },
+  {
+   "id": "P5.8",
+   "reviewer": "P5",
+   "text": "One backbone and one data family only.",
+   "minor": false
+  },
+  {
+   "id": "P5.9",
+   "reviewer": "P5",
+   "text": "Typos.",
+   "minor": true
+  },
+  {
+   "id": "P5.10",
+   "reviewer": "P5",
+   "text": "Duplicated DPO reference; GRPO misattributed.",
+   "minor": true
+  },
+  {
+   "id": "P5.11",
+   "reviewer": "P5",
+   "text": "Skywork R1V size mismatch.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Too few baselines; only DAPO besides GRPO.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Experimental analysis insufficient.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Scalability across architectures and sizes not verified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Only standard math benchmarks; no OOD tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Core ideas (adaptive sampling, online filter, replay) already explored.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Evaluation only on math despite general-domain training data.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Only Qwen2.5-7B backbones; transfer to other families untested.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Qwen contamination may make benchmark conclusions unreliable.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Gains only about 1% over baselines.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Max response length 2048 may impair baselines' exploration.",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Evaluation hyperparameters and prompt template missing.",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "Computational costs of extra rollouts and replay not reported.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Limited novelty: similar to RLEP, RePO, VL-Rethinker.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No comparison against closely related replay/filtering methods.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Exploration claim unsupported by pass@k.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Only two Qwen models tested.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Newer reasoning benchmarks omitted.",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Qwen2.5 data contamination risk.",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "No theoretical explanation of why combined design helps.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Combines known components rather than new principle.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Claim that low-quality samples drown high-quality signal questionable given advantage magnitudes.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Tabular NPG theorem may not apply.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Toy settings: older model, 2k context, 5 rollouts, small scale.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Evaluation metric unclear; pass@1 on AIME high-variance.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "MATH accuracies not multiples of 1/500; inconsistent.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Figure 5 reward and accuracy trends contradict.",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Unexplained why DAPO performs worse than GRPO.",
+   "minor": false
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Typo \"EFR\" in Figure 3.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Relative gain percentages misleading.",
+    "points": [
+     "P1.1",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Small gains within noise; single runs.",
+    "points": [
+     "P1.2",
+     "P1.3",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Baselines not compute-matched; DAPO partial.",
+    "points": [
+     "P1.4",
+     "P1.5",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Deeper reasoning/exploration claims unmeasured; no pass@k.",
+    "points": [
+     "P1.6",
+     "P3.3",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Ablations confounded and curve-only.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Training/evaluation protocol unstated.",
+    "points": [
+     "P1.8",
+     "P3.7",
+     "P5.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Replay buffer content inconsistent.",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Clip range inconsistency.",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Typos and rounding.",
+    "points": [
+     "P1.11",
+     "P3.11",
+     "P5.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Tabular NPG theorem misapplied.",
+    "points": [
+     "P1.12",
+     "P2.3",
+     "P3.4",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Sample categorization contribution unsupported.",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Uncited close prior art for each component.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Theorem source non-archival, broken citation.",
+    "points": [
+     "P2.2",
+     "P3.9",
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Theorem 4.4 trivial.",
+    "points": [
+     "P2.4",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Discarding negatives unjustified vs prior work.",
+    "points": [
+     "P2.5",
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Citation attribution errors.",
+    "points": [
+     "P2.6",
+     "P3.10",
+     "P5.10"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Missing Vision-R1 comparison.",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Inconsistent entropy narrative.",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Single backbone and data family.",
+    "points": [
+     "P3.8",
+     "P4.4",
+     "P5.8"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Skywork size mismatch.",
+    "points": [
+     "P3.12",
+     "P5.11"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Stale replay without off-policy correction.",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Noisy hard-prompt definition.",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Memorization/overfitting risk from replay.",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Deployment practicality undiscussed.",
+    "points": [
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Cross-disciplinary links missing.",
+    "points": [
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Definitions hard to parse.",
+    "points": [
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Figures carry claims; evaluative captions.",
+    "points": [
+     "P5.7"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Too few baselines; related methods not compared.",
+    "points": [
+     "Q1.1",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Experimental analysis insufficient.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Only Qwen backbones; scalability untested.",
+    "points": [
+     "Q1.3",
+     "Q2.3",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Math-only evaluation; no OOD/general tasks.",
+    "points": [
+     "Q1.4",
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Limited novelty: known components.",
+    "points": [
+     "Q2.1",
+     "Q3.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Qwen contamination risk.",
+    "points": [
+     "Q2.4",
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Small gains.",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Short context and few rollouts; toy settings may hurt baselines.",
+    "points": [
+     "Q2.6",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Evaluation protocol and hyperparameters unclear.",
+    "points": [
+     "Q2.7",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Computational cost unreported.",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No pass@k exploration metric.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Newer benchmarks omitted.",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No theoretical explanation.",
+    "points": [
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Low-quality samples harm claim questionable.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Tabular NPG theorem inapplicable.",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Impossible MATH accuracy values.",
+    "points": [
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Reward vs accuracy contradiction in Figure 5.",
+    "points": [
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "DAPO underperforming GRPO unexplained.",
+    "points": [
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Typo.",
+    "points": [
+     "Q4.9"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI8",
+    "QI18",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI15"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  }
+ ]
+}

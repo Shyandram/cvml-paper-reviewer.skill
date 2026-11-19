@@ -1,0 +1,919 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Rapid teacher-model progress may make observations obsolete.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Teacher diversity limited; no analysis by architectural differences.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Meaning of M in Section 3.1 unclear.",
+   "minor": true
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Figures 1-4 not referenced in main text.",
+   "minor": true
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Typo: should be D^target.",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Data strategies limited to basic methods; no advanced selection or augmentation techniques.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Task-dependence and generalizability of optimal strategies not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "No quantitative inference-efficiency metrics (throughput, latency, memory).",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Boundary between data-centric CoT distillation and general data synthesis unclear.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "CoT from closed APIs with little transparency on prompts and settings; reproducibility.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "LLM-as-a-Judge filtering not validated against human judgments.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Visual and agentic tasks underrepresented (one benchmark each).",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "OOD transfer pairs not systematically justified.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Conclusions tied to specific teacher-student pairs; generalization to new architectures unclear.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "No comparison to non-data-centric distillation such as logits distillation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "No long-CoT reasoning-model teachers; scope dated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Small-scale training datasets; findings may be artifacts.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "'First' claims overstated; learnability-gap and data-recipe prior work under-credited.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No benchmark protocol, fixed splits or leaderboard; essentially a study.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Student-error filter does not require teacher rationale correctness.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Notation slips writing D_source for target set.",
+   "minor": true
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Teacher model names inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Weaker LLaMA-2-70B judge for stronger teacher rationales not validated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Explanations of results asserted without trace measurements.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Teacher-size comparison confounded with model family and date.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Missing related references on synthetic reasoning data recipes.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Augmentation gains confounded with data size and training steps.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Claim that LLM-as-a-Judge filtering is effective contradicted by Table 1.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Selection/mixing deltas computed against wrong reference row.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Vanilla CoT below No-CoT and zero-shot; baseline implausibly weak.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Claim that combining strategies helps has no combined run.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "No variance; small test sets; teacher differences within noise.",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Reverse degrades on Qwen; 'generally most effective' not general across students.",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "OOD design confounds format learning with transfer.",
+   "minor": false
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "MATH-to-GSM8K result exceeds in-domain results, unexplained.",
+   "minor": false
+  },
+  {
+   "id": "Q2.10",
+   "reviewer": "Q2",
+   "text": "'Consistently' OOD gains claimed though 3 of 10 pairs show none.",
+   "minor": false
+  },
+  {
+   "id": "Q2.11",
+   "reviewer": "Q2",
+   "text": "No validation split; recipes chosen on test accuracy.",
+   "minor": false
+  },
+  {
+   "id": "Q2.12",
+   "reviewer": "Q2",
+   "text": "Teacher list inconsistent across sections.",
+   "minor": true
+  },
+  {
+   "id": "Q2.13",
+   "reviewer": "Q2",
+   "text": "Filtered train sizes exceed original for some datasets; column unclear.",
+   "minor": true
+  },
+  {
+   "id": "Q2.14",
+   "reviewer": "Q2",
+   "text": "Identical Date scores in two rows, worth confirming.",
+   "minor": true
+  },
+  {
+   "id": "Q2.15",
+   "reviewer": "Q2",
+   "text": "Judge weaker than teacher and not validated.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Benchmark lacks protocol, master table and verifiable release.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Judge-effectiveness claim contradicts Table 1.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "'Reverse improves all eight tasks' inconsistent with seven reported.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Table 1 visual result appears to come from a different student.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Notation slips, model naming, unclear WebArena actor, minimal captions.",
+   "minor": true
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Augmentation prompts and key hyperparameters not shown.",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Recommended combined pipelines never run, so guidance not actionable.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Augmentation confounded with training-set size and steps; post-augmentation sizes unreported.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No Selection/No Mixing rows reuse No-CoT numbers; hybrid reference.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Vanilla CoT baseline implausibly weak, likely under-tuned or mis-parsed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No discussion of why CoT distillation hurts agentic and visual tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "No variance or significance tests; small test sets.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Judge filtering claim contradicted by tables.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Reported deltas use wrong reference row.",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Combined configurations never run despite advice.",
+   "minor": false
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "'Consistently' OOD gains contradicted by 3 pairs.",
+   "minor": false
+  },
+  {
+   "id": "Q4.10",
+   "reviewer": "Q4",
+   "text": "Reverse claimed on eight tasks, reported on seven; points vs percent.",
+   "minor": true
+  },
+  {
+   "id": "Q4.11",
+   "reviewer": "Q4",
+   "text": "Table 1 visual number matches a different student and teacher.",
+   "minor": false
+  },
+  {
+   "id": "Q4.12",
+   "reviewer": "Q4",
+   "text": "Table 4 and Table 1 values differ for same configuration.",
+   "minor": true
+  },
+  {
+   "id": "Q4.13",
+   "reviewer": "Q4",
+   "text": "Teacher inventory inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "Q4.14",
+   "reviewer": "Q4",
+   "text": "No validation split; method selection on test.",
+   "minor": false
+  },
+  {
+   "id": "Q4.15",
+   "reviewer": "Q4",
+   "text": "Critical hyperparameters and prompts missing.",
+   "minor": false
+  },
+  {
+   "id": "Q4.16",
+   "reviewer": "Q4",
+   "text": "Non-monotone data-volume curve attributed to noise; over-training alternative untested.",
+   "minor": false
+  },
+  {
+   "id": "Q4.17",
+   "reviewer": "Q4",
+   "text": "OOD protocol cannot separate format adaptation from transfer; configuration unstated.",
+   "minor": false
+  },
+  {
+   "id": "Q4.18",
+   "reviewer": "Q4",
+   "text": "MATH-to-GSM8K OOD value implausibly high.",
+   "minor": false
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Learner-side diagnostics absent; learnability explanation speculative.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "No easy-to-hard curriculum schedule compared against fixed mixing.",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "No inference cost, latency or trace-length reported despite efficiency claims.",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Only LoRA training; full fine-tuning untested.",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Number of WebArena runs not stated.",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "Licensing and terms-of-service of API outputs and NC data not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "Test-set contamination not checked.",
+   "minor": false
+  },
+  {
+   "id": "Q5.8",
+   "reviewer": "Q5",
+   "text": "No limitations on deploying unreliable small students in sensitive settings.",
+   "minor": false
+  },
+  {
+   "id": "Q5.9",
+   "reviewer": "Q5",
+   "text": "Missing random-subset selection baseline.",
+   "minor": false
+  },
+  {
+   "id": "Q5.10",
+   "reviewer": "Q5",
+   "text": "Missing size-matched augmentation control.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Fast teacher progress may outdate findings.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Limited teacher/student diversity; generalization unclear.",
+    "points": [
+     "P1.2",
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Notation unclear and typos.",
+    "points": [
+     "P1.3",
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Figures not referenced.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Only basic data strategies evaluated.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Task-dependence of strategies not discussed.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "No inference-efficiency metrics.",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Unclear scope of data-centric distillation.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Closed-API CoT generation reproducibility.",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "LLM judge not validated.",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Visual and agentic tasks underrepresented.",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "OOD pairs not justified.",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "No non-data-centric distillation comparison.",
+    "points": [
+     "P3.7"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No long-CoT teachers.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Small-scale datasets.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Prior work under-positioned; 'first' overstated.",
+    "points": [
+     "Q1.3",
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No benchmark protocol.",
+    "points": [
+     "Q1.4",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Student-error filter definition flaw.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Notation and model-naming inconsistencies.",
+    "points": [
+     "Q1.6",
+     "Q1.7",
+     "Q2.12",
+     "Q3.5",
+     "Q4.13"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Judge not validated.",
+    "points": [
+     "Q1.8",
+     "Q2.15"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Explanations untested; no learner-side diagnostics.",
+    "points": [
+     "Q1.9",
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Teacher comparison confounded.",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Augmentation confounded with data size.",
+    "points": [
+     "Q2.1",
+     "Q4.1",
+     "Q5.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Judge-effectiveness claim contradicted.",
+    "points": [
+     "Q2.2",
+     "Q3.2",
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Wrong reference rows for deltas.",
+    "points": [
+     "Q2.3",
+     "Q4.2",
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Weak vanilla baseline.",
+    "points": [
+     "Q2.4",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Combined pipelines never run.",
+    "points": [
+     "Q2.5",
+     "Q3.7",
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No variance; small test sets.",
+    "points": [
+     "Q2.6",
+     "Q4.5",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Reverse superiority not general across students.",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "OOD protocol confounds format learning.",
+    "points": [
+     "Q2.8",
+     "Q4.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "MATH-to-GSM8K anomaly.",
+    "points": [
+     "Q2.9",
+     "Q4.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "OOD 'consistently' overstated.",
+    "points": [
+     "Q2.10",
+     "Q4.9"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No validation split.",
+    "points": [
+     "Q2.11",
+     "Q4.14"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Table 6 size columns unclear.",
+    "points": [
+     "Q2.13"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Identical Date values.",
+    "points": [
+     "Q2.14"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Reverse 'eight tasks' claim.",
+    "points": [
+     "Q3.3",
+     "Q4.10"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Table 1 visual result from different student.",
+    "points": [
+     "Q3.4",
+     "Q4.11"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Prompts and hyperparameters missing.",
+    "points": [
+     "Q3.6",
+     "Q4.15"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Table 4 vs Table 1 mismatch.",
+    "points": [
+     "Q4.12"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "CoT harm on agentic/visual undiscussed.",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Data-volume curve explanation untested.",
+    "points": [
+     "Q4.16"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "No curriculum schedule.",
+    "points": [
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "No inference cost reported.",
+    "points": [
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI31",
+    "summary": "Only LoRA.",
+    "points": [
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI32",
+    "summary": "Licensing and ToS.",
+    "points": [
+     "Q5.6"
+    ]
+   },
+   {
+    "id": "QI33",
+    "summary": "Contamination unchecked.",
+    "points": [
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI34",
+    "summary": "Deployment limitations missing.",
+    "points": [
+     "Q5.8"
+    ]
+   },
+   {
+    "id": "QI35",
+    "summary": "No random-subset baseline.",
+    "points": [
+     "Q5.9"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI35"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI30"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI25",
+    "QI32"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  }
+ ]
+}

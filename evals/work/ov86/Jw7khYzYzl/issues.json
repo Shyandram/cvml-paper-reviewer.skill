@@ -1,0 +1,698 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Wall-clock measured on single GPU, short, small batch, without compile; unrepresentative of large-batch training",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Memory, communication and optimizer-state costs not reported alongside loss ranking",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Advice for 7B+ models is untested extrapolation; rankings shift with scale",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Unknown which re-implementation fixes change optimizer rankings",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Single runs without variance for \"consistently\" and \"by far\" claims",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Scheduler and final LR tuned on AdamW applied to all optimizers",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Recommendations over-generalize from small models, short sequences, one dataset, loss only",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "MoE transfer claim rests on one untuned configuration with rank change",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Hyperparameters selected on same validation loss that is reported",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "\"First\" benchmark claim not differentiated from Zhao et al. and concurrent work",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Warmup recommendation inconsistent between sections",
+   "minor": true
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Z-loss/weight-decay/final-LR comparison covers only AdamW and SOAP at one setting",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Model counts sum to 2966, not stated 2900",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Hard to read: 23 takeaways, mixed benchmarks and ablations; needs summary table",
+   "minor": true
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Warmup recommendation differs across sections",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Claims like \"consistently state-of-the-art\" contradicted by other results",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Scope limited to 124M-720M, one dataset, sequence length 512, validation loss only",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Significance for real-scale multi-billion training not shown; general framing",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Typos and caption inconsistencies",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Rankings from single runs without seeds or error bars",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Scheduler chosen on AdamW and transferred despite optimizer-specific optima",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Hyperparameters tuned at one horizon reused for longer runs, favoring some optimizers",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Tuning effort unequal across optimizers; unclear which re-tuned values used",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Claim that doubling iterations preserves ranking rests on one run",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "MoE transfer claim rests on one untuned configuration",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Tuning metric equals reported metric; validation shard handling unstated",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "\"Consistently state-of-the-art\" contradicted by D-Muon and SOAP wins",
+   "minor": false
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Warmup recommendation inconsistent (8k steps vs 25%)",
+   "minor": true
+  },
+  {
+   "id": "P4.10",
+   "reviewer": "P4",
+   "text": "Model count arithmetic mismatch",
+   "minor": true
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "\"First\" claim overstated; incremental over Zhao et al. benchmark",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Missing related work on weight decay scaling and tuning protocols",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Mechanistic explanations for Prodigy and Lion asserted without tests",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Results not connected back to optimizers' theoretical rationales",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "No comparison of computational resources and time across optimizers",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Models small relative to existing LLMs",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Selection schemes heuristic, lacking theoretical guidance or principles",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Limitations and future work discussion needed",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Context length 512 impractical; may change conclusions",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Unrealistically many training iterations with small batches may alter conclusions",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Severe over-training regime not tested",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Optimizers may differ in effective learning rate; no norm alignment",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Largest model only 720M; limited scale",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Only validation loss; no downstream evaluations",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Presentation crowded",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Lacks deep insights into why optimizers behave differently; takeaways trivial",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Some takeaways already well known",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No discussion of best optimizer going forward or robust hyperparameter ranges",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Only curated FineWeb; data heterogeneity unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Model sizes too small for ablation conclusions",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Excessive vertical space; figures overlap text",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Computational cost (time, memory, communication) incompletely measured",
+    "points": [
+     "P1.1",
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Scale extrapolation to real LLM sizes untested",
+    "points": [
+     "P1.3",
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Ranking sensitivity to re-implementation fixes",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Single runs, no variance",
+    "points": [
+     "P2.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Scheduler tuned on AdamW applied to all",
+    "points": [
+     "P2.2",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Recommendations over-generalize from narrow regime",
+    "points": [
+     "P2.3",
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "MoE transfer claim thin",
+    "points": [
+     "P2.4",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Selection on reported validation loss",
+    "points": [
+     "P2.5",
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "\"First\" claim and novelty vs prior benchmarks",
+    "points": [
+     "P2.6",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Inconsistent warmup recommendation",
+    "points": [
+     "P2.7",
+     "P3.2",
+     "P4.9"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Limited z-loss/weight-decay comparison",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Model count mismatch",
+    "points": [
+     "P2.9",
+     "P4.10"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Hard-to-follow organization",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Overclaims \"consistently\" best",
+    "points": [
+     "P3.3",
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Typos and captions",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Single-horizon tuning reused for longer runs",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Unequal tuning effort across optimizers",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Iteration-doubling ranking claim from one run",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Missing related work",
+    "points": [
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Mechanism claims untested",
+    "points": [
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Results not connected to theory",
+    "points": [
+     "P5.4"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No compute/time cost comparison",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Small model scale",
+    "points": [
+     "Q1.2",
+     "Q3.1",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Heuristic recommendations; no theory or insight into why",
+    "points": [
+     "Q1.3",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Limitations and future work missing",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Short context length",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Unrealistic iteration count / batch size",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No severe over-training regime",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Effective learning rate confound",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Validation loss only, no downstream",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Crowded presentation and formatting",
+    "points": [
+     "Q3.3",
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Some takeaways already known",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No forward-looking practical guidance",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Single curated dataset",
+    "points": [
+     "Q4.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI5",
+    "QI9",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  }
+ ]
+}

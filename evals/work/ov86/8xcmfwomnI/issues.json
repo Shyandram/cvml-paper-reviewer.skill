@@ -1,0 +1,635 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Paper difficult to follow.",
+   "minor": true
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Experiments not connected to theory; theorems not related back to motivating experiments.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Theory not specific to diffusion; concerns conditional models/classifiers, so text mismatches content.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Diffusion experiment contrived, only to link work to diffusion.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Section 4.1 notation messy and hard to read.",
+   "minor": true
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Central simplicity metric R left undefined and unelaborated.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Simplicity-generalization link weakly validated; identity toy ad hoc; no theoretical derivation.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Theory tautological: assumes known separating simplicity metric; no guidance on choosing it.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Analysis uses NLL loss, not diffusion's denoising score matching objective.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Gap between diffusion behaviour and simplified setting; principle not tested on real diffusion models.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Strong convexity assumption restrictive, unlikely for deep networks.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Few experiments; MLP toy far from real large-scale vision or language tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Title and abstract promise foundation-model results beyond low-dimensional parametric scope.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "\"First sharp\" guarantees claim needs qualification.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Empirical section qualitative; generalization not quantified, no criterion or run distributions.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Related work lists LLM papers but ignores simplicity-bias literature.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Duplicated bibliography entries.",
+   "minor": true
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Typo \"minimizes\".",
+   "minor": true
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Figure 4 caption vs appendix epoch inconsistency.",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Simplicity principle not new; uncited simplicity-bias literature, including negative evidence.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Theorem follows from assuming true parameter is argmin of R.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Theory incremental over Ge et al. (2023).",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Vanishing-gap assumption appears unsatisfiable; no example given.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Foundation-model claims mismatch underparameterized, strongly convex scope.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Saharia et al. citation points to wrong paper.",
+   "minor": true
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Duplicate bibliography entries.",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Diffusion results qualitative; no simplicity measurement; judged by eye.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "MLP toy bridging experiment not covered by theory assumptions.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No dose-response test of complexity vs target error across many source-only models.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Who supplies R and why human-expected model minimizes it unjustified; norms architecture-dependent.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "No discussion of when fixed-d asymptotic theory approximates large models; framing too strong.",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Typos.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Assumption C.3 unsatisfiable for positive-dimensional solution sets; Theorem 4.2 vacuous.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Norm comparison confounded by different training data; argmin-R hypothesis untested.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Foundation-model explanation claim overstated versus stated scope.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "\"First sharp\" supported only for n-rate of constant gap.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Symmetries make Hessian and gap assumptions fail for paper's own MLP/U-Net.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Lambda depends on unknown gap and constants; global minimizer of non-convex objective assumed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Diffusion generalization shown qualitatively; simplicity unmeasured; number of runs not stated.",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Epoch count inconsistency.",
+   "minor": true
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Intro tau>0 vs assumption tau>=9.",
+   "minor": true
+  },
+  {
+   "id": "Q4.10",
+   "reviewer": "Q4",
+   "text": "Wrong Saharia citation and duplicated entries.",
+   "minor": true
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Assumption C.3 with tau>=9 incompatible with continuum; Theorem 4.2 has no nontrivial instance.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Section 3.2 comparison confounded by corrupted target labels; hypothesis never tested.",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Diffusion model simplicity never measured.",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Hessian and gap assumptions fail under permutation symmetry for paper's own networks.",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Uniform concentration assumption A.1 fails for unbounded losses like MSE.",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "Lambda needs unknown quantities; optimization assumed; burn-in never evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "\"Sharp\" overstated; no lower bound for gap dependence or vanishing-gap rate.",
+   "minor": false
+  },
+  {
+   "id": "Q5.8",
+   "reviewer": "Q5",
+   "text": "Intro tau>0 vs tau>=9 inconsistency.",
+   "minor": true
+  },
+  {
+   "id": "Q5.9",
+   "reviewer": "Q5",
+   "text": "Epoch count inconsistency.",
+   "minor": true
+  },
+  {
+   "id": "Q5.10",
+   "reviewer": "Q5",
+   "text": "Permutation map may assign same center, contradicting text.",
+   "minor": true
+  },
+  {
+   "id": "Q5.11",
+   "reviewer": "Q5",
+   "text": "No code-availability statement.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Paper hard to follow.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Experiments disconnected from theory.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Theory not about diffusion; framing mismatches content.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Diffusion experiment contrived.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Section 4.1 notation messy.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Simplicity metric R undefined.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Simplicity-generalization link weakly validated by ad hoc toy.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Theory tautological given assumed simplicity metric.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "NLL instead of score matching objective.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No validation on real diffusion or large-scale tasks.",
+    "points": [
+     "P3.2",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Strong convexity assumption restrictive for deep nets.",
+    "points": [
+     "P3.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Title/abstract foundation-model framing overclaims scope.",
+    "points": [
+     "Q1.1",
+     "Q2.5",
+     "Q3.5",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "\"First sharp\" claim overstated.",
+    "points": [
+     "Q1.2",
+     "Q4.4",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Diffusion/empirical evidence qualitative; simplicity unmeasured.",
+    "points": [
+     "Q1.3",
+     "Q3.1",
+     "Q4.7",
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Simplicity principle not new; simplicity-bias literature missing.",
+    "points": [
+     "Q1.4",
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Citation errors and duplicates.",
+    "points": [
+     "Q1.5",
+     "Q2.6",
+     "Q2.7",
+     "Q4.10"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Typos.",
+    "points": [
+     "Q1.6",
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Epoch count inconsistency.",
+    "points": [
+     "Q1.7",
+     "Q4.8",
+     "Q5.9"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Result follows from assuming true parameter minimizes R.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Incremental over Ge et al.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Vanishing-gap assumption unsatisfiable.",
+    "points": [
+     "Q2.4",
+     "Q4.1",
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Assumptions exclude paper's own neural network examples.",
+    "points": [
+     "Q3.2",
+     "Q4.5",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Norm comparison confounded; argmin-R hypothesis untested.",
+    "points": [
+     "Q3.3",
+     "Q4.2",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Choice of simplicity measure R unjustified.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Lambda oracle and optimization assumed away.",
+    "points": [
+     "Q4.6",
+     "Q5.6"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Tau condition inconsistency.",
+    "points": [
+     "Q4.9",
+     "Q5.8"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Uniform concentration fails for unbounded losses.",
+    "points": [
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Permutation map description inconsistency.",
+    "points": [
+     "Q5.10"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No code statement.",
+    "points": [
+     "Q5.11"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI12"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI8",
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  }
+ ]
+}

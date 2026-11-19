@@ -1,0 +1,711 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Removing ambiguity leaves context gathering for under-specified real tasks untested.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "\"Long-horizon\" misleading: ~4 files, 100 LoC, standard 50-call budget.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Evaluation uses a single agent harness.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No inference-time scaling or sampling; only pass@1.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Complexity measured by files/lines only; diff-hunk distribution missing.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Unclear whether new tests added after dropping broad tests.",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Repository purchase agreement details missing; resale to competitors would raise fairness issues.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No argument why purchasing beats continuously refreshed benchmarks against contamination.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only one agent scaffold (SWE-agent) evaluated.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Limited language diversity: only 4 languages.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Long-horizon operationalized as patch size; reductive and oversold.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Limited language coverage; Java, C++, Rust missing.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Contribution incremental: refinement of SWE-Bench, not new methodology.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Only a few languages covered.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Small-mid startup repositories fall short of enterprise realism.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Evaluation tied to one scaffold; alternative frameworks not tested.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Analysis descriptive; little causal interpretation of failures.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Human-provided requirements and interface hints undermine autonomy claim.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Contamination resistance rests on legal premise; no probe; held-out set unreported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Table 3 totals exceed N and text numbers contradict tables.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Low scores confounded by harness failures; one scaffold; Agentless numbers missing.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "\"Hours to days\", long-horizon and difficulty filtering unmeasured or undescribed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "23% vs >70% SWE-Bench Verified comparison confounds harness, spec and task set.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "No confidence intervals; top rankings within noise; \"highest score to date\" overclaimed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Commercial repo provenance described inconsistently; partner selection unspecified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Citation errors for SWE-Bench and Verified.",
+   "minor": true
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Per-repository instance cap described inconsistently.",
+   "minor": true
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Model mislabeled \"DeepSeek Qwen-3 32B\".",
+   "minor": true
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Judge alignment borrowed from other work; own human agreement unreported.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Contamination resistance asserted without probe.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Long-horizon difficulty not measured by human time or steps.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No annotation-quality report supporting resolvability.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Single-run results; top comparisons within noise.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Text-table mismatches; Table 3 totals exceed N; columns don't match judge categories.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Missing repository list, per-language counts, annotator numbers, funnel statistics.",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Figure 4 caption categories absent from text; per-repo limit inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "Model mislabel, citation errors, repeated section, mismatched titles.",
+   "minor": true
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "Acknowledgements and text break double-blind anonymity.",
+   "minor": false
+  },
+  {
+   "id": "Q2.10",
+   "reviewer": "Q2",
+   "text": "Licence/consent for commercial data not stated.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Table 3 internally inconsistent; text misreads it.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Single run, no intervals; rankings within noise; \"highest to date\" overclaimed.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Results confounded by harness failures; no second scaffold.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No evidence tasks valid/resolvable: no annotator stats, agreement, funnel or audit.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Valid alternative solutions may fail requirement-coupled tests.",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Difficulty and long-horizon unmeasured; no human time, difficulty filter or size statistics.",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "No with/without-requirements ablation; difficulty source unattributed.",
+   "minor": false
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "Contamination untested; held-out results missing; private code exposed to vendor APIs.",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "Text resolve rates disagree with Table 1.",
+   "minor": true
+  },
+  {
+   "id": "Q3.10",
+   "reviewer": "Q3",
+   "text": "Per-repo instance counts inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "Q3.11",
+   "reviewer": "Q3",
+   "text": "Figure 4 caption, model mislabel, table reference order.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "No-ambiguity, test-grounded requirements make tasks spec-to-code, not realistic enterprise triage.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Startup repositories not representative of large enterprise systems.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Commercial set IP, consent, secrets, API exposure and partner selection bias unaddressed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "GPL legal-barrier premise overreaching and unsupported.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Tests as oracle penalize valid alternatives; construct narrower than claimed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "No broader impact discussion.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Per-repository metadata should be provided.",
+   "minor": true
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Positioning thin; closest prior benchmarks uncited; \"first\" claim unargued.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Copyleft contamination argument is a legal premise; needs empirical evidence.",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Enterprise and long-horizon framing not established by data or citations.",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Failure analysis judge unvalidated; GPT-5 judges own failures.",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Citation inaccuracies.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Ambiguity removal and hints undermine realism/autonomy.",
+    "points": [
+     "P1.1",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "\"Long-horizon\" framing unsupported by patch-size proxy.",
+    "points": [
+     "P1.2",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Single agent scaffold.",
+    "points": [
+     "P1.3",
+     "P2.3",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No inference-time scaling.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Complexity metric coarse; diff hunks missing.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Test augmentation unclear.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Purchase agreement details and fairness.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Purchasing vs continuously refreshed benchmarks unjustified.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Limited language coverage.",
+    "points": [
+     "P2.4",
+     "P3.2",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Incremental contribution.",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Startup repos lack enterprise realism.",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Descriptive failure analysis.",
+    "points": [
+     "P4.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Contamination resistance untested legal premise.",
+    "points": [
+     "Q1.1",
+     "Q2.1",
+     "Q3.8",
+     "Q4.4",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Table 3 inconsistencies and text-table mismatches.",
+    "points": [
+     "Q1.2",
+     "Q2.5",
+     "Q3.1",
+     "Q3.9"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Single scaffold; harness failures confound.",
+    "points": [
+     "Q1.3",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Long-horizon/difficulty claims unmeasured.",
+    "points": [
+     "Q1.4",
+     "Q2.2",
+     "Q3.6",
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "SWE-Bench Verified comparison confounded.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Single run, no CIs; rankings within noise.",
+    "points": [
+     "Q1.6",
+     "Q2.4",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Commercial repo provenance, IP and consent.",
+    "points": [
+     "Q1.7",
+     "Q2.10",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Citation errors.",
+    "points": [
+     "Q1.8",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Minor consistency and labelling errors.",
+    "points": [
+     "Q1.9",
+     "Q1.10",
+     "Q2.7",
+     "Q2.8",
+     "Q3.10",
+     "Q3.11"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "LLM judge failure analysis unvalidated.",
+    "points": [
+     "Q1.11",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Annotation quality and dataset statistics missing.",
+    "points": [
+     "Q2.3",
+     "Q2.6",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Anonymity broken.",
+    "points": [
+     "Q2.9"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Test oracle penalizes alternative solutions.",
+    "points": [
+     "Q3.5",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Spec-to-code setup; requirements ablation missing.",
+    "points": [
+     "Q3.7",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Startup repos not enterprise.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "No broader impact.",
+    "points": [
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Per-repo metadata missing.",
+    "points": [
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Positioning against closest prior benchmarks thin.",
+    "points": [
+     "Q5.1"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI15"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  }
+ ]
+}

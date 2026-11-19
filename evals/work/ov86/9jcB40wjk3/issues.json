@@ -1,0 +1,1071 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Table averages do not match their rows in several appendix tables.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Identical result rows appear across different backbones and datasets.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Text cites 31.06% accuracy for Table 3 but no such value exists.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Baseline training protocol unstated; several baseline rows look like failed ports; mixed time steps.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Gain concentrated in base-session accuracy; novel-class gains small; more forgetting.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Ablation curve-only with SA-only baseline; no plain SNN control.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Hyperparameters selected on test split; robustness claim too strong.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Energy measured as GPU power times time, not spike-based savings.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Theoretical energy table implies firing rate near 1 and inconsistent values.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "No memory footprint reported though memory is the motivation.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Convergence analysis about surrogate gradient, no assumptions, convex rate, missing proof.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Unseen accuracy differs between Tables 4 and 5.",
+   "minor": true
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Threshold update sign in Eq. 7 gives positive feedback.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Parameter size mismatch for same backbone in Table 3.",
+   "minor": true
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Algorithm 1 random mask vs deterministic mask in Section 5.3.",
+   "minor": true
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Symbol clashes, undefined theta, theorem numbering skip.",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "\"First SNN-based on-device FSCIL\" claim overstated; prior on-chip work; single device.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "SNN class-incremental method ALADE-SNN not compared in all tables.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Zeroth-order estimator taken from Mukhoty et al.; no new estimator or theorem.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "No direct ZOO vs standard surrogate gradient comparison.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "ZOO expectation is itself a smooth surrogate, undermining motivation.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Subspace projection close to uncited Subspace Regularizers (ICLR 2022).",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Projection removes novel-class information; small effect on novel accuracy.",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Sparsity-aware dynamics not compared with freezing or cited threshold methods.",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Claim most neurons remain stable supported only by one figure.",
+   "minor": false
+  },
+  {
+   "id": "P2.10",
+   "reviewer": "P2",
+   "text": "No ANN FSCIL reference results for accuracy tradeoff.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Energy savings measured on GPU, where event-driven savings not realized.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Table 13 energy ratio implies firing rate near 1, conflicting with sparsity.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Memory not measured; device memory exceeds stated constrained range.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Base training not realistically on-device; claim applies only to incremental stage.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Fixed disjoint N-way K-shot stream assumption; imbalanced streams untested.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Links to Hebbian learning, neuromorphic continual learning and homeostasis underdeveloped.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Identical rows across backbones/datasets undermine cross-backbone evidence.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Averages do not match rows.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Gains concentrated in base and seen classes; novel-class improvement overstated.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "No plain-SNN-plus-prototype control in ablation.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "No ZOO vs surrogate-gradient comparison.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Baseline fairness: protocol unstated, pathological rows, CLOSER missing in Table 2, mixed settings.",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Hyperparameters chosen on reported test split.",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Efficiency via GPU power x time, not spike-based.",
+   "minor": false
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Table 13 ratio implies near-full firing; 20% claim not reproducible.",
+   "minor": false
+  },
+  {
+   "id": "P4.10",
+   "reviewer": "P4",
+   "text": "No memory measurement.",
+   "minor": false
+  },
+  {
+   "id": "P4.11",
+   "reviewer": "P4",
+   "text": "Convergence claims lack assumptions and proof; convex rate for non-convex.",
+   "minor": false
+  },
+  {
+   "id": "P4.12",
+   "reviewer": "P4",
+   "text": "ZOO construction taken from prior work.",
+   "minor": false
+  },
+  {
+   "id": "P4.13",
+   "reviewer": "P4",
+   "text": "Projection resembles uncited subspace regularizers.",
+   "minor": false
+  },
+  {
+   "id": "P4.14",
+   "reviewer": "P4",
+   "text": "Threshold update sign and zero initialization questionable.",
+   "minor": false
+  },
+  {
+   "id": "P4.15",
+   "reviewer": "P4",
+   "text": "Eq. 14 dimensions inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "P4.16",
+   "reviewer": "P4",
+   "text": "Default hyperparameter values not given.",
+   "minor": true
+  },
+  {
+   "id": "P4.17",
+   "reviewer": "P4",
+   "text": "Table 4 vs Table 5 unseen accuracy mismatch.",
+   "minor": true
+  },
+  {
+   "id": "P4.18",
+   "reviewer": "P4",
+   "text": "Table 3 parameter size inconsistency.",
+   "minor": true
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Outperformance claims exceed evidence: SNN-converted baselines only, GPU efficiency; ANN row needed.",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Threshold update in few-shot incremental session unclear.",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Eq. 7 threshold sign surprising.",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Eq. 14 dimensionally inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Interplay of CE+MSE loss with ZOO not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "Ablation curves only; SA used as baseline; no vanilla SNN.",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "Appendix inconsistencies (averages, repeated rows, missing 31.06%) reduce trust.",
+   "minor": false
+  },
+  {
+   "id": "P5.8",
+   "reviewer": "P5",
+   "text": "Typos.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Advantages of subspace projection not shown vs other projection or regularization methods.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Sparsity-aware dynamics resembles subnet/SoftNet approaches; no comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Zeroth-order optimization not contrasted with other methods.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Sparsity-aware alignment overlaps prior potential-based regularization; novelty unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Sparsity-aware loss heuristic without formal derivation.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Ablation lacks sensitivity to sparsity thresholds and alignment weights.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No visualization of feature alignment beyond one layer.",
+   "minor": true
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Efficiency claim lacks FLOPs/energy or measured power on neuromorphic hardware.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Generalization under noise, jitter or unseen sensor dynamics untested.",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "No mechanistic explanation linking alignment to gradient flow and accuracy gains.",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "No analysis of training convergence and stability with added loss terms.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Abstract and introduction vague; key terms not explained.",
+   "minor": true
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No comparison with ANN on-device FSCIL methods; SNN superiority unjustified.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Overfitting-alleviation claim not motivated in abstract.",
+   "minor": true
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "20% energy claim lacks baseline context.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Equation punctuation and table formatting.",
+   "minor": true
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "ZOO lacks quantitative comparison with surrogate backprop and error analysis.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Degradation in deeper networks unexplained and unaddressed.",
+   "minor": false
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Why sparsity-aware dynamics keep most neurons stable not explained.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Power is theoretical, not measured runtime; speed not clearly better.",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Eq. 14 matrix multiplication hinders neuromorphic chip deployment.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Table averages don't match rows.",
+    "points": [
+     "P1.1",
+     "P4.2",
+     "P5.7"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Identical result rows across settings.",
+    "points": [
+     "P1.2",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Cited 31.06% value absent.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Baseline fairness and broken baseline rows.",
+    "points": [
+     "P1.4",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Gains concentrated in base/seen classes.",
+    "points": [
+     "P1.5",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Ablation lacks plain SNN control; curve-only.",
+    "points": [
+     "P1.6",
+     "P4.4",
+     "P5.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Hyperparameters tuned on test split.",
+    "points": [
+     "P1.7",
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Energy measured as GPU power x time.",
+    "points": [
+     "P1.8",
+     "P3.1",
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Theoretical energy table inconsistent with sparsity.",
+    "points": [
+     "P1.9",
+     "P3.2",
+     "P4.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Memory not measured.",
+    "points": [
+     "P1.10",
+     "P3.3",
+     "P4.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Convergence analysis flawed.",
+    "points": [
+     "P1.11",
+     "P4.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Table 4 vs 5 mismatch.",
+    "points": [
+     "P1.12",
+     "P4.17"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Threshold update sign questionable.",
+    "points": [
+     "P1.13",
+     "P4.14",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Parameter size inconsistency.",
+    "points": [
+     "P1.14",
+     "P4.18"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Mask definition inconsistency.",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Notation clashes and missing defaults.",
+    "points": [
+     "P1.16",
+     "P4.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "\"First\" on-device claim overstated.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "SNN class-incremental baseline missing.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "ZOO taken from prior work.",
+    "points": [
+     "P2.3",
+     "P4.12"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No ZOO vs surrogate gradient comparison.",
+    "points": [
+     "P2.4",
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "ZOO motivation self-undermining.",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Projection resembles uncited subspace regularizers.",
+    "points": [
+     "P2.6",
+     "P4.13"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Projection removes novel information.",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Sparsity dynamics not compared with alternatives.",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Neuron stability claim weakly supported.",
+    "points": [
+     "P2.9"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "No ANN reference; outperformance claim overreaches.",
+    "points": [
+     "P2.10",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Base training not on-device.",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Idealized data stream assumption.",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Cross-disciplinary links missing.",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Eq. 14 dimension inconsistency.",
+    "points": [
+     "P4.15",
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Incremental threshold update unclear.",
+    "points": [
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "Loss interplay with ZOO undiscussed.",
+    "points": [
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI33",
+    "summary": "Typos.",
+    "points": [
+     "P5.8"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Subspace projection advantages unjustified.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Sparsity dynamics not compared with subnetwork methods.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "ZOO not compared with surrogate or other optimizers.",
+    "points": [
+     "Q1.3",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Alignment novelty vs potential regularization.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Loss heuristic; no theoretical/mechanistic justification.",
+    "points": [
+     "Q2.2",
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No hyperparameter sensitivity analysis.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Limited visualization.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Efficiency not measured realistically.",
+    "points": [
+     "Q2.5",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Robustness to noise untested.",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Training stability of added loss unanalysed.",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Abstract vague; claims unmotivated.",
+    "points": [
+     "Q3.1",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No ANN FSCIL comparison.",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Energy claim baseline unclear.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Formatting issues.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Deep network degradation unexplained.",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Neuron stability mechanism unexplained.",
+    "points": [
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Eq. 14 hinders neuromorphic deployment.",
+    "points": [
+     "Q5.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [
+    "QI16"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI33",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  }
+ ]
+}

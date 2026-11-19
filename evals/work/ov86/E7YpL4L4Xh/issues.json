@@ -1,0 +1,891 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Open-source SOTA claim unsupported; no specialised editing reward models compared.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Claim that prior editing reward models are not open-source unsupported per work.",
+   "minor": true
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Method novelty modest: distillation, known ensembling, Flow-GRPO.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "'First systematic path' overstated given UniPic2 and Ahmadi et al.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Claim that VLM rewards are impractical/expensive lacks cost numbers.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No OmniGen2 RL arm with GPT-4.1 as reward.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Table 1 benchmark sizes not in comparable units.",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Fidelity-as-prerequisite thesis tested by one contrast confounded with variance and fine-tuning.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Single RL runs, no seeds or CIs; small policy gaps.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only one base model, chosen for best-of-N headroom on the evaluation benchmark.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Reward and evaluation metric both VIEScore/GPT-derived.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "No human study of the RL policy.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "No reward-hacking analysis.",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "'Surpasses GPT-5' within one SE and compares 4-pass ensemble with single pass.",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Score range selected on the benchmark without validation split.",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "No GPT-4.1 teacher-reward arm for OmniGen2.",
+   "minor": false
+  },
+  {
+   "id": "P2.10",
+   "reviewer": "P2",
+   "text": "Expense of VLM rewards asserted without cost numbers.",
+   "minor": false
+  },
+  {
+   "id": "P2.11",
+   "reviewer": "P2",
+   "text": "Full-agreement filter selects unambiguous pairs; retention and agreement stats missing.",
+   "minor": false
+  },
+  {
+   "id": "P2.12",
+   "reviewer": "P2",
+   "text": "Minor inconsistencies: 0.612 vs 0.621, GEdit citation, UniPic2 label, terminology.",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Central causal claim that fidelity unlocks RL not isolated by experiments.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "No seeds or error bars for RL curves and tables.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "RL gains measured with metric and judge tied to reward and teacher.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "No human preference study of the RL policy.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "No reward-hacking analysis.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Qualitative examples lack a selection rule.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Benchmark reliability asserted not measured; full-agreement filter selects easy cases.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "Pairwise accuracy tie handling undefined.",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "No bootstrap CIs for Table 2 cells.",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "'Surpasses GPT-5' within noise and compute-unmatched.",
+   "minor": false
+  },
+  {
+   "id": "P3.11",
+   "reviewer": "P3",
+   "text": "Configuration chosen on the benchmark itself; no validation split.",
+   "minor": false
+  },
+  {
+   "id": "P3.12",
+   "reviewer": "P3",
+   "text": "Data curation and filtering never ablated; data scale and SC/PQ design untested.",
+   "minor": false
+  },
+  {
+   "id": "P3.13",
+   "reviewer": "P3",
+   "text": "Relation among 70k/60k sample counts and per-task counts unexplained.",
+   "minor": false
+  },
+  {
+   "id": "P3.14",
+   "reviewer": "P3",
+   "text": "Reproducibility gaps: model snapshots, decoding settings, K, image provenance.",
+   "minor": false
+  },
+  {
+   "id": "P3.15",
+   "reviewer": "P3",
+   "text": "Appendix misdescribes GRPO advantages and omits KL term.",
+   "minor": true
+  },
+  {
+   "id": "P3.16",
+   "reviewer": "P3",
+   "text": "Minor inconsistencies, citation errors, typos, duplicate references.",
+   "minor": true
+  },
+  {
+   "id": "P3.17",
+   "reviewer": "P3",
+   "text": "'Across all model sizes' contradicted at category level.",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Reward model trained on fixed editors' outputs; drift and reward hacking during RL unexamined.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Scalarised SC-PQ reward hides trade-offs; alignment with human overall ranking unexamined.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "No broader-impact discussion of portrait editing misuse and beauty bias.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Image source/licence and annotator conditions not stated.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Judge prompt states inputs are AI-generated, possibly inaccurate.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "No reward-query counts, GPU-hours or latency; FLOP proxy misleading.",
+   "minor": false
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "'Key to unlocking'/'prerequisite' fidelity wording outruns evidence.",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "'First systematic path' wording overstated.",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "'Surpasses GPT-5' wording overstated.",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "'State of the art' claim rests on zero-shot VLM comparators.",
+   "minor": false
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Evidence covers one base model and one RL setting.",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "No limitations section.",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "No failure cases; qualitative selection rule absent.",
+   "minor": false
+  },
+  {
+   "id": "P5.8",
+   "reviewer": "P5",
+   "text": "Internal inconsistencies in numbers, labels and citations.",
+   "minor": true
+  },
+  {
+   "id": "P5.9",
+   "reviewer": "P5",
+   "text": "Typos, duplicate references, dense Figure 3.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Benchmark small and curated for perfect agreement, hiding disagreement and inflating metrics.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Reproducibility brittle because candidate pool depends on proprietary editors.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Online RL shown mainly on one editor.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Only one RL algorithm; no ablations across RL methods and hyperparameters.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No stress tests on out-of-distribution edit types.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Self-ensemble cost and latency not reported; no equal-budget comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Claim that reward variance aids optimization not causally established.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "RL experiments only on OmniGen2.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Self-ensembling inference cost trade-off not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No comparison with other open-source reward models like HPSv3 or ImageReward.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Only OmniGen2 evaluated; other editing models untested.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Limited methodological novelty given Flow-GRPO, prior variance work, common techniques.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Training data not released, hindering reproduction.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Labels derived from current models' candidates cap supervision where all models fail.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Section 6.4.1 compares different base models, confounding reward-model effect.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "SOTA claim without specialised open RM comparison.",
+    "points": [
+     "P1.1",
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Unsupported availability claims about prior RMs.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Modest method novelty.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "'First' claim overstated.",
+    "points": [
+     "P1.4",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Cost of rewards not quantified.",
+    "points": [
+     "P1.5",
+     "P2.10",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No GPT-4.1 reward arm.",
+    "points": [
+     "P1.6",
+     "P2.9"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Table 1 units.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Fidelity thesis not isolated from variance; overclaimed.",
+    "points": [
+     "P2.1",
+     "P3.1",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Single RL runs without seeds.",
+    "points": [
+     "P2.2",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Single base model and RL setting.",
+    "points": [
+     "P2.3",
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Evaluation metric tied to reward.",
+    "points": [
+     "P2.4",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No human study of policy.",
+    "points": [
+     "P2.5",
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Reward hacking and drift unexamined.",
+    "points": [
+     "P2.6",
+     "P3.5",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "'Surpasses GPT-5' overstated.",
+    "points": [
+     "P2.7",
+     "P3.10",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Configuration chosen on benchmark.",
+    "points": [
+     "P2.8",
+     "P3.11"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Agreement filter and missing reliability stats.",
+    "points": [
+     "P2.11",
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Minor inconsistencies and typos.",
+    "points": [
+     "P2.12",
+     "P3.16",
+     "P5.8",
+     "P5.9"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Qualitative selection rule and failures missing.",
+    "points": [
+     "P3.6",
+     "P5.7"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Tie handling undefined.",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No CIs on benchmark results.",
+    "points": [
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Data curation not ablated.",
+    "points": [
+     "P3.12"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Reproducibility details missing.",
+    "points": [
+     "P3.13",
+     "P3.14"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "RL objective description errors.",
+    "points": [
+     "P3.15"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "'All model sizes' claim contradicted.",
+    "points": [
+     "P3.17"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Scalarised reward hides trade-offs.",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Misuse and bias not discussed.",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Data provenance and annotator conditions.",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Inaccurate AI-generated prompt note.",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "No limitations section.",
+    "points": [
+     "P5.6"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Benchmark curated for full agreement.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Dependence on proprietary editors.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "RL only on one editor.",
+    "points": [
+     "Q1.3",
+     "Q2.1",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Single RL algorithm; no hyperparameter ablation.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No OOD edit-type tests.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Self-ensemble cost unreported.",
+    "points": [
+     "Q1.6",
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Variance claim not causally established.",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing open reward model baselines.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Limited novelty.",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Training data not released.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Candidate pool caps supervision.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Base-model confound in comparison.",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  }
+ ]
+}
