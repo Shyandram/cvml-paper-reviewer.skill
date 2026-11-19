@@ -1,0 +1,20 @@
+{"claims": [
+  {"id": "C1", "dimension": "method", "central": true,
+   "text": "Attention-score-free KV importance estimator that reuses lower-layer accumulated attention x value norm to prune KV of higher layers, compatible with FlashAttention",
+   "matches": [
+     {"title": "Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction", "url": "https://arxiv.org/abs/2409.17422v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+     {"title": "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments", "url": "https://arxiv.org/abs/2504.15364v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+     {"title": "InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding", "url": "https://arxiv.org/abs/2506.15745v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+   ]},
+  {"id": "C2", "dimension": "method", "central": true,
+   "text": "Spatial-temporal sparse attention pattern in prefill (first frame, current frame, same token in previous frame) that purifies the KV cache for later compression",
+   "matches": [
+     {"title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs", "url": "https://arxiv.org/abs/2505.19155v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+     {"title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity", "url": "https://arxiv.org/abs/2503.05936v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+   ]},
+  {"id": "C3", "dimension": "result", "central": false,
+   "text": "5.0x KV cache compression and 3.16x prefill acceleration with negligible quality degradation on VideoLLaMA2 and Qwen2.5-VL",
+   "matches": [
+     {"title": "MEDA: Dynamic KV Cache Allocation for Efficient Multimodal Long-Context Inference", "url": "https://arxiv.org/abs/2502.17599v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+   ]}
+]}

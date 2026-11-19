@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-b92aysjC8D",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.2,
+  "eic_rating": 3.16,
+  "eic_pool_position": 50,
+  "before_composite": 56.8,
+  "after_composite": 56.4,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 2 has no competitor (only base vs +SRGen): Verified",
+    "Table 3 flat at 70-72 across lr 0.01-0.10 and iterations 1-9: Verified",
+    "Gains remain substantial at lambda=0 and lambda=1 (Fig. 5 text only; figure unavailable): Verified",
+    "Pass@5 unchanged in 5 of 16 cells, Cons@5 unchanged in 6 of 16: Verified",
+    "Gains inside run-to-run noise / headline is best cell (noise SD is derived, n problems not stated): Partly correct",
+    "Eq. 6 sums over the whole prefix so per-activation cost grows with t, Eq. 10 omits it: Verified",
+    "Overhead of about 50% measured only for Qwen2.5-Math-7B, greedy, 4096 tokens: Verified",
+    "Section 5.2 'only DeepSeek-R1-Llama-7B shows a decrease' vs Table 2 (no Cons@5 decrease): Verified",
+    "Theorem 1 is the standard weighted-sum / epsilon-constraint equivalence, exact minimizers only: Verified",
+    "Entropy-minimization at test time (EM-INF, recent preprint) uncited: Partly correct",
+    "Qwen2.5-Math-7B cited to the Qwen2 report: Verified",
+    "Abstract says code is available vs Ethics Statement says it will be released after review: Verified"
+  ],
+  "top_concerns": [
+    "Table 2 compares only base vs base+SRGen: no random-delta, random-position, static-threshold, lower-temperature or compute-matched voting control, so the 'reflection' mechanism is untested",
+    "No variance or repeated runs on 30-problem benchmarks; headline +12.0/+13.3 is the best of 16 cells (median Avg@5 gain +4.0)",
+    "Bounded-overhead (~50%) claim measured only on Qwen2.5-Math-7B, greedy, 4096 tokens; Eq. 6 makes per-activation cost grow with prefix length",
+    "Table 3 / Sec 5.6 insensitivity to step size and to dropping either loss term suggests a generic sharpening or perturbation effect",
+    "Theorem 1 and the 'new paradigm' framing overreach; test-time entropy minimization (Tent, EM-INF) not discussed"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Figures were unavailable, so Fig. 2 (overhead), Fig. 3-5 (Cons/Pass@k, SLOT, lambda/N/k ablations) were judged from text only. The skill orders the literature check after the five reports are drafted; one model wrote all reports in one context, so I ran the searches before writing the final file, but the reviewers' judgments were formed from the paper alone and only the Domain addendum uses the search results. Several related_search.py queries were refused for having 5 concept words (hyphenated terms count as separate words), which the skill text does not warn about; the 4-word limit is easy to hit. A work directory could not be created via mkdir without approval, so literature-check files were written directly to the results directory. The 'recent preprint' rule neatly handled the closest prior work (EM-INF, 4 months before cutoff): it is discussed but did not lower any score. The skill's pool-position bands and Overall definitions are mildly in tension: Overall 3 is both 'borderline reject' and 'typical rejected submission', so R4's pool position 54 (top of the 42-54 band) was the hardest calibration choice. The EIC's own pool position is not an input to the script; I stated 50 in the meta-review."
+}

@@ -1,0 +1,21 @@
+{"claims": [
+  {"id": "C1", "dimension": "method", "central": true,
+   "text": "Cascaded low-resolution-conditioned generation that cuts the number of high-resolution denoising steps",
+   "matches": [
+     {"title": "FreCaS: Efficient Higher-Resolution Image Generation via Frequency-aware Cascaded Sampling", "url": "https://arxiv.org/abs/2410.18410v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+     {"title": "Training-free Diffusion Acceleration with Bottleneck Sampling", "url": "https://arxiv.org/abs/2503.18940v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+     {"title": "Scale-wise Distillation of Diffusion Models", "url": "https://arxiv.org/abs/2503.16397v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+     {"title": "UDPM: Upsampling Diffusion Probabilistic Models", "url": "https://arxiv.org/abs/2305.16269v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+   ]},
+  {"id": "C2", "dimension": "method", "central": true,
+   "text": "One weight-shared U-Net/DiT that serves all resolutions of the cascade via resolution-specific I/O layers and embeddings",
+   "matches": [
+     {"title": "Learning Stackable and Skippable LEGO Bricks for Efficient, Reconfigurable, and Variable-Resolution Diffusion Modeling", "url": "https://arxiv.org/abs/2310.06389v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false},
+     {"title": "Alleviating Distortion in Image Generation via Multi-Resolution Diffusion Models and Time-Dependent Layer Normalization", "url": "https://arxiv.org/abs/2406.09416v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+   ]},
+  {"id": "C3", "dimension": "result", "central": false,
+   "text": "More than 50% sampling throughput at comparable FID on CIFAR-10, FFHQ-64 and ImageNet-256 (latent)",
+   "matches": [
+     {"title": "Fast Sampling of Diffusion Models with Exponential Integrator", "url": "https://arxiv.org/abs/2204.13902v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+   ]}
+]}

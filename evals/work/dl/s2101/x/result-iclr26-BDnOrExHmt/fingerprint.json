@@ -1,0 +1,13 @@
+{
+  "title": "PixNerd: Pixel Neural Field Diffusion",
+  "method_names": ["PixNerd", "PixelNerd", "PixNerd-L/16", "PixNerd-XL/16", "PixNerd-XXL/16", "pixel neural field diffusion"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "single-scale, single-stage, efficient, end-to-end solution",
+    "model the patch-wise decoding with neural field",
+    "directly achieved 2.15 FID on ImageNet 256"
+  ],
+  "cutoff_date": "2025-09-24"
+}

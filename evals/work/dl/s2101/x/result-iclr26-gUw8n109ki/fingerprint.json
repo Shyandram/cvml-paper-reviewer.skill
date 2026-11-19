@@ -1,0 +1,13 @@
+{
+  "title": "Why does Weak-OOD Help? A Further Step Towards Understanding Jailbreaking VLMs",
+  "method_names": ["JOCR", "weak-OOD", "JOCR-shuffle", "FigStep-shuffle"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "jailbreak samples generated via mild OOD strategies exhibit superior performance in circumventing the safety constraints",
+    "trade-off between two dominant factors: input intent perception and model refusal triggering",
+    "Jailbreak via OCR-Aware Embedded Text Perturbation"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "G-KV: Decoding-Time KV Cache Eviction with Global Attention",
+  "method_names": ["G-KV", "GKV", "RL-Sparse", "RL-Full", "global score"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "KV cache eviction method that employs a global scoring mechanism",
+    "combining local and historical attention scores to more accurately assess token importance",
+    "post-training techniques, including reinforcement learning and distillation, to optimize models for compressed KV cache settings"
+  ],
+  "cutoff_date": "2025-09-24"
+}

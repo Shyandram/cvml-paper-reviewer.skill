@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-YTonAPBqI9",
+  "paper_type": "dataset",
+  "final_overall": 2,
+  "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+  "official_rating": 2.6,
+  "eic_rating": 2.54,
+  "eic_pool_position": 25,
+  "before_composite": 48.6,
+  "after_composite": 48.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": true,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "Grid search on the test set (Sec 4.1, DA-C1/R1-W1): Verified",
+    "Abstract 'all metrics' claim vs Table 2 (R1-W2, R4-W1, DA-M1): Verified",
+    "Sec 4.2 'scores match the best baseline models' for content quality: Verified (overstated by authors; human COV below 9 of 17 baselines)",
+    "Table 3 base-model AVG vs Table 2 (R1-W3, DA-m4): Partly correct",
+    "Eqs 3-5 omit beta/reference policy vs beta=0.1 in Sec 4.1 (R1-W6): Verified",
+    "GPT-4o verifies data and judges outputs; o1 generator is also a baseline (DA-M2): Verified (facts); bias impact unproven",
+    "Students at evaluation time unspecified (R1-W5): Verified (omission)",
+    "Judge reliability from Pearson 0.90 over 18 models (R3-S3): Overstated",
+    "Table 4 drop described as slight (R1-W4, R4-W4): Verified (-3.58 and -10.00 points)",
+    "34,250 'dialogue sessions' includes 20,550 preference pairs (DA-M5): Verified",
+    "MT-Bench cited but bibliography entry is MT-Bench-101 (R2-W5): Verified",
+    "AlpacaEval described as multi-turn (R2-W5): Unverifiable from the paper (kept as a question)",
+    "SocraticLM already builds a simulated multi-agent corpus (R2-W1): Unverifiable (literature check unavailable)"
+  ],
+  "top_concerns": [
+    "All hyperparameters were selected by grid search on the test set that produces every reported number (Sec 4.1); upheld DA-CRITICAL, caps decision at 3",
+    "Abstract claims superiority on all metrics, but Table 2 shows EduDial-LLM below a baseline on RES, EMO, FLU, REL and COV",
+    "Circular evaluation: rubric and training scaffold aligned, GPT-4o verifies training data and judges outputs, o1 is generator and baseline, evaluation students unspecified",
+    "No controlled test of the 'data quality' claim (no same-base training on other corpora, no prompted-with-scaffold baselines) and no variance or uncertainty anywhere",
+    "No outcome or educator validation; only rating-based evidence on simulated K-12 math dialogues, with thin ethics and dataset documentation"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) could not run: the arXiv API returned HTTP 429 and then timed out, so the skill's fallback was used (knowledge-only references marked [verify], no novelty verdicts from search). integrity_scan.py was not run because this evaluation restricted tools; a manual grep found no reviewer-directed text. Ambiguities: (1) the skill requires running integrity_scan and related_search, while the evaluation rules allow only the aggregation script plus related_search; (2) the EIC-weighted rating rounds to 3 while the composite band is 2 (flagged), and departing from the starting point requires a 'named verified issue the ratings did not account for', which is judgment-dependent when reviewers overlap; (3) DA criterion 3 decision table row 2 vs 3 turns on a sweep the paper does not show, so upholding DA-C1 relies on 'grid search on the test set' being a selection by score; (4) a pool-position/composite consistency warning for R1 had to be resolved by changing the pool position (25 to 30) rather than the scores; (5) Table 3 extraction was garbled, limiting E1/E6 checks; (6) the skill asks five 'independent' reviewers from one context, which cannot be truly independent."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-QN0PplUVdt",
+  "paper_type": "empirical",
+  "final_overall": 2,
+  "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+  "official_rating": 2.2,
+  "eic_rating": 2.15,
+  "eic_pool_position": 17,
+  "before_composite": 39.9,
+  "after_composite": 39.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Significantly outperforming LLM+P contradicted by Table 3 p=0.078: Verified",
+    "Full system 82.1 (Table 2) vs LOOP 85.8 (Table 1/Abstract): Verified",
+    "Ablation text 'storage reach 67%' vs Table 1 STORAGE 80: Verified",
+    "Figure 2 plan not executable in single-hand Blocksworld (from extracted text; image unavailable): Verified",
+    "Symbolic core contains LLM validators: Verified",
+    "Table 1 Overall arithmetic: Verified",
+    "Closest prior work Mahdavi et al. 2024 uncited: Verified",
+    "Guaranteed optimality overclaim: Verified",
+    "Valmeekam 2022 evaluated GPT-4/Claude/PaLM-2 anachronism: Partly correct",
+    "Causal learning is frequency-weighted effect counting: Partly correct",
+    "No equal-budget or LLM+P-with-feedback baseline: Verified"
+  ],
+  "top_concerns": [
+    "Headline claim of significant improvement over LLM+P is contradicted by Table 3 (p=0.078, one-sided, n=6 domains); 'confidence = 1-p' is invalid",
+    "Ablation (Table 2: 82.1) and text ('storage 67%') disagree with the main results (Table 1: 85.8; STORAGE 80); 'symbolic core' contains LLM validators",
+    "Protocol undefined (instances per domain, validity checker, memory/test separation, seeds, GPT-4 version) and no equal-budget, repair-loop or memory-reset control, so the gain cannot be attributed to iteration or learning",
+    "Closest prior work on LLM-to-PDDL feedback refinement (e.g., Mahdavi et al., NeurIPS 2024) not cited or compared; 'causal' learning is effect counting",
+    "Only worked example (Figure 2 'optimal plan') is not executable; 'guaranteed optimality' and 'trusted with critical real-world applications' are overclaimed"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "integrity_scan.py was not run because the evaluation rules allowed only the aggregation script and related_search.py; a manual grep found no reviewer-directed text. The pipeline requires redirects/pipes that the sandbox sometimes blocked, so literature-check output was parsed via pipes; scout/novelty scripts were skipped for budget and per-claim novelty verdicts were assigned by hand. Ambiguities in the skill: (1) Phase 1.6 says scores are not changed but the Methodology reviewer's score is already fixed before the literature check, so literature findings (uncited closest prior work) only enter the Domain report as an addendum; (2) the skill asks reviewers to be independent but the evaluation requires one model context, so independence is limited; (3) the DA's CRITICAL criteria say missing controls/protocol details are MAJOR, which makes DA-C1 almost certain to be downgraded, so raising it is somewhat redundant; (4) the AAAI-template/visible-author-names issue has no clear home (submission-readiness checklist belongs to quick mode); (5) eic_rating in the summary is the weighted rating (2.15), official_rating the plain mean (2.2)."
+}

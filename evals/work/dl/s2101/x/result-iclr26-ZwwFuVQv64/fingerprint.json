@@ -1,0 +1,13 @@
+{
+  "title": "Layerwise Federated Learning for Heterogeneous Quantum Clients using Quorus",
+  "method_names": ["Quorus", "Quorus-Layerwise", "Quorus-Funnel", "Quorus-Ancilla", "Quorus-Blocking", "Q-HeteroFL"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": ["positivetechnologylab/Quorus"],
+  "distinctive_phrases": [
+    "utilizes a layerwise loss function for effective training of varying-depth quantum models",
+    "ensemble of quantum classifiers can be obtained from a single shot of a quantum circuit",
+    "improves testing accuracy by 12.4% on average over the state-of-the-art"
+  ],
+  "cutoff_date": "2025-09-24"
+}

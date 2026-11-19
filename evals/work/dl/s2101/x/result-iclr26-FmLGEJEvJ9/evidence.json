@@ -1,0 +1,61 @@
+{
+  "locations": [
+    "Abstract", "Section 1", "Footnote 1", "Section 2", "Section 3", "Section 3.2", "Definition 3.4", "Lemma 3.5",
+    "Section 4", "Theorem 1.1", "Theorem 1.2", "Theorem 4.1", "Algorithm 1", "Lemma 4.3", "Lemma 4.4", "Lemma 4.5", "Lemma 4.6", "Lemma 4.7", "Remark 4.8",
+    "Section 5", "Theorem 5.1", "Lemma 5.2", "Theorem 5.3", "Algorithm 2", "Lemma 5.4", "Lemma 5.5", "Lemma 5.6", "Lemma 5.7", "Lemma 5.8", "Remark 5.9",
+    "Section 6", "Appendix A", "Appendix A.1", "Appendix A.3", "Appendix B", "Appendix B.1", "Appendix B.3",
+    "Algorithm 3", "Algorithm 4", "Lemma B.1", "Lemma B.3", "Lemma B.4", "Lemma B.5", "Lemma B.6"
+  ],
+  "quotes": [
+    "On top of the strong privacy guarantees",
+    "which is too large for most applications",
+    "which is exponentially small",
+    "Let t = log k/ǫ",
+    "we impose the assumption that the query B has the property that for any",
+    "Since for each position, Encode changes at most M1 bits",
+    "take log(1/β) independent copies of the data structure, and query all of them",
+    "Therefore, the output of the hash function is also the same.",
+    "T B ←BuildTree(B, n, k, 0)",
+    "threshold ← 1.5M1 M3",
+    "There are 3k2 LCP queries, by union bound, the probability is at least 0.99.",
+    "The Query runs DPLCP.QueryInit once and DPLCP.Query k2 times",
+    "this is the first edit distance algorithm, based on noisy LCP implementations",
+    "1[Ai = Bi ]",
+    "D(i − 1, j − 1) + 1",
+    "e−2(log k+log log n)",
+    "O(n log n(log k +",
+    "h and g are public random hash function",
+    "We select M1 = log k + log log n + 10"
+  ],
+  "numbers": [
+    {"claim": "Hamming data structure error bound (Theorem 1.1)", "value": "O(k/e^{ε/log k}) with tilde", "derived": false},
+    {"claim": "Edit distance data structure error bound (Theorem 1.2)", "value": "O(k/e^{ε/(log k log n)}) with tilde", "derived": false},
+    {"claim": "Hamming query time", "value": "Õ(mk+n)", "derived": false},
+    {"claim": "Edit distance query time", "value": "Õ(mk^2+n)", "derived": false},
+    {"claim": "Hamming space", "value": "Õ(mk)", "derived": false},
+    {"claim": "Edit distance space", "value": "Õ(mn)", "derived": false},
+    {"claim": "Algorithm 1 parameters", "value": "M1 = 10 log k, M2 = 2k, M3 = 400 log^2 k", "derived": false},
+    {"claim": "DP-LCP node parameters (Algorithm 3)", "value": "M1 = log k + log log n + 10, M2 = 1, M3 = 10", "derived": false},
+    {"claim": "Success probability per structure", "value": "0.99", "derived": false},
+    {"claim": "Per-LCP-query failure probability", "value": "1/(300k^2)", "derived": false},
+    {"claim": "Number of LCP queries in the union bound (Lemma 5.8)", "value": "3k^2", "derived": false},
+    {"claim": "Number of LCP queries stated in Lemma 5.5", "value": "k^2", "derived": false},
+    {"claim": "Number of Extend calls implied by Algorithm 2 (k iterations, 2k+1 diagonals, 3 calls)", "value": "about 6k^2+3k", "derived": true},
+    {"claim": "Total sketch cells in Algorithm 1", "value": "8000 k log^3 k", "derived": true},
+    {"claim": "Actual flip exponent with M1 = 10 log k", "value": "e^{ε/(20 log k)}", "derived": true},
+    {"claim": "Hoeffding bound with L = sqrt(M1 M3)", "value": "e^{-2} (about 0.135)", "derived": true},
+    {"claim": "Epsilon above which the bound beats the trivial answer k/2, constants dropped, k=1024, log base 2", "value": "about 69", "derived": true},
+    {"claim": "Epsilon above which the bound beats k/2 with the algorithm's constants, k=1024, log base 2", "value": "about 3,200", "derived": true},
+    {"claim": "Lemma 4.4 union bound failure probability", "value": "2k * 1/(200k) = 0.01", "derived": true},
+    {"claim": "Lemma 4.5 bound with |T_j| <= 10 log k", "value": "1 - (0.5 + 0.025/log k)", "derived": true},
+    {"claim": "Number of binary-search steps and tree levels in DP-LCP", "value": "log n", "derived": false}
+  ],
+  "references": [
+    {"title": "BLIP: Non-interactive Differentially-Private Similarity Computation on Bloom Filters", "authors": "Alaggan, Gambs, Kermarrec", "year": 2012, "marked_verify": true},
+    {"title": "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response", "authors": "Erlingsson, Pihur, Korolova", "year": 2014, "marked_verify": false},
+    {"title": "The Johnson-Lindenstrauss Transform Itself Preserves Differential Privacy", "authors": "Blocki, Blum, Datta, Sheffet", "year": 2012, "marked_verify": false},
+    {"title": "Privacy via the Johnson-Lindenstrauss Transform", "authors": "Kenthapadi, Korolova, Mironov, Mishra", "year": 2013, "marked_verify": false},
+    {"title": "Randomized response: a survey technique for eliminating evasive answer bias", "authors": "Warner", "year": 1965, "marked_verify": false},
+    {"title": "On the Geometry of Differential Privacy", "authors": "Hardt, Talwar", "year": 2010, "marked_verify": true}
+  ]
+}

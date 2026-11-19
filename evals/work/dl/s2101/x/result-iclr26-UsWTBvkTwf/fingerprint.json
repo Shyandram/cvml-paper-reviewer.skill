@@ -1,0 +1,13 @@
+{
+  "title": "Forget-It-All: Multi-Concept Machine Unlearning via Concept-Aware Neuron Masking",
+  "method_names": ["FIA", "Forget-It-All", "Forget It All", "Contrastive Concept Saliency", "Concept Sensitive Neurons", "Concept-Sensitive Neurons", "Concept-Agnostic Neurons", "Concept Agnostic Neurons"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "unlearning multiple concepts by leveraging model sparsity",
+    "fuses them into a unified multi concept mask",
+    "Concept Agnostic Neurons that broadly support general content generation"
+  ],
+  "cutoff_date": "2025-09-24"
+}

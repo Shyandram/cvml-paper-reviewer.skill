@@ -1,0 +1,24 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true,
+  "text": "Co-train an LLM attacker and an LLM agent with adversarial RL so that diverse attacks are discovered automatically for agent safety",
+  "matches": [
+   {"title": "Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models", "url": "https://arxiv.org/abs/2506.07468v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+   {"title": "Diverse and Effective Red Teaming with Auto-generated Rewards and Multi-step Reinforcement Learning", "url": "https://arxiv.org/abs/2412.18693v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+   {"title": "Evolving Diverse Red-team Language Models in Multi-round Multi-agent Games", "url": "https://arxiv.org/abs/2310.00322v5", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "method", "central": true,
+  "text": "Train the agent against a uniformly sampled population of all previous attacker checkpoints to prevent cyclic learning",
+  "matches": [
+   {"title": "Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models", "url": "https://arxiv.org/abs/2506.07468v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "result", "central": true,
+  "text": "Lower attack success rate with maintained task success on BrowserGym and AgentDojo for open 12-14B models",
+  "matches": [
+   {"title": "SecAlign: Defending Against Prompt Injection with Preference Optimization", "url": "https://arxiv.org/abs/2410.05451v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C4", "dimension": "result", "central": false,
+  "text": "Attack embeddings become more diverse over RL training (average pairwise distance)",
+  "matches": [
+   {"title": "Learning diverse attacks on large language models for robust red-teaming and safety tuning", "url": "https://arxiv.org/abs/2405.18540v3", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]}
+]}

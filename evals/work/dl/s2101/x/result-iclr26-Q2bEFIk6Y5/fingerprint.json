@@ -1,0 +1,13 @@
+{
+  "title": "PGLearn - An Open-Source Learning Toolkit for Optimal Power Flow",
+  "method_names": ["PGLearn", "PGLearn.jl", "ML4OPF"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "comprehensive suite of standardized datasets and evaluation tools for ML and OPF",
+    "explicitly capturing both global and local variability in the data generation",
+    "including time series data for several large-scale systems"
+  ],
+  "cutoff_date": "2025-09-24"
+}

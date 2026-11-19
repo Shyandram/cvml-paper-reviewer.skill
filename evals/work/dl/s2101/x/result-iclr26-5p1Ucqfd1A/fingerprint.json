@@ -1,0 +1,13 @@
+{
+  "title": "CRAG-MM: Multi-modal Multi-turn Comprehensive RAG Benchmark",
+  "method_names": ["CRAG-MM", "CRAG MM", "Comprehensive RAG benchmark for Multi-modal Multi-turn conversations"],
+  "authors": ["Jiaqi Wang", "Xiao Yang", "Kai Sun", "Xin Luna Dong", "Wen-tau Yih", "Anuj Kumar", "Babak Damavandi"],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "6.2K egocentric images designed to mimic captures from wearable devices",
+    "straightforward RAG approaches achieve only 32% and 43% truthfulness",
+    "hosted KDD Cup 2025, attracting about 1K participants and 5K submissions"
+  ],
+  "cutoff_date": "2025-09-24"
+}

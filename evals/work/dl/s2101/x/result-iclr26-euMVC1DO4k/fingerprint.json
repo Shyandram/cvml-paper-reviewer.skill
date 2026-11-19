@@ -1,0 +1,12 @@
+{
+  "title": "Spatial Forcing: Implicit Spatial Representation Alignment for Vision-language-action Model",
+  "method_names": ["Spatial Forcing", "SF"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "implicitly forces VLA models to develop spatial comprehension capabilities",
+    "aligns intermediate visual embeddings of VLAs with geometric representations produced by pretrained 3D foundation models"
+  ],
+  "cutoff_date": "2025-09-24"
+}

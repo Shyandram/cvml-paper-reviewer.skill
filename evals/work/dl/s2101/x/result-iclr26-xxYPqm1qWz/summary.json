@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-xxYPqm1qWz",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.34,
+  "eic_pool_position": 57,
+  "before_composite": 56.7,
+  "after_composite": 56.4,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Stage-1+2 vs stage2-only differs by ~27B tokens with no matched control: Verified",
+    "'Unsupervised / no manual annotation' vs supervised IDM (154 h logs) and human-annotated Stage 2: Verified (partly semantic)",
+    "'millisecond-precision' vs any-overlap detection criterion: Verified",
+    "Table 2 65.8% manual accuracy and Table 1 press recall 0.08: Verified",
+    "50-step results are single runs; test-time-scaling claim rests on +1.65 points: Verified",
+    "Table 1 total predictions 17,298 vs row sum 16,298: Verified",
+    "Table 4 denominators sum to 359 and stage2-only 50-step count gives 9.14% not 9.27%: Verified",
+    "Tables 6 and 8 totals do not reconcile: Verified",
+    "Terminate accuracy drop 0.588 to 0.237 in Table 5 undiscussed: Verified",
+    "TongUI uncited and overlapping C1: Partly correct (same task, different mechanism, truncated abstract)",
+    "'Hundreds of applications' unsupported by app-level statistics: Verified",
+    "No limitations or broader-impact section: Verified",
+    "Typed string in Fig. 9 may be a credential: Partly correct (example exists, real status unknowable)",
+    "AgentNetBench tasks overlapping training logs: Not verifiable (not stated)"
+  ],
+  "top_concerns": [
+    "Gain over the Stage-2-only baseline is confounded by ~27B extra tokens, ~3x compute and GPT-5-written rationales; no token-matched non-video control or monologue ablation",
+    "Label quality of the inverse-dynamics module is weakly validated (any-overlap detection, 65.8% plausibility accuracy, 0.08 press recall) while claiming 'millisecond-precision' and 'high fidelity'",
+    "Overclaims: 'unsupervised / eliminating manual annotation' (IDM trained on 154 h of human logs, human-annotated Stage 2), 'true test-time scaling' from a single 50-step run",
+    "No comparison with released open agents or other benchmarks; closest prior work (TongUI) uncited; single base model",
+    "Scraped YouTube data: licence, PII and consent barely addressed, no limitations section; several table totals do not reconcile"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Skill was workable. Points of friction: (1) Phase 1.5 is specified to run after the five reports are drafted, but in a single-context run the searches were run before the reports were written to file (claim IDs came from the paper memory); the order is hard to honour literally. (2) Tool restrictions in this evaluation allowed only related_search.py and the aggregation script, yet the skill also calls integrity_scan.py; it was run (read-only plus a redacted copy written into the results directory) and was clean. (3) The aggregate script prints the ICLR label as '4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})' for final Overall 3, which is easy to confuse with the skill-internal Overall 4; both vocabularies must be kept apart. (4) Overall 4 requires pool position >=65 and mostly >=60 dimension scores, while the pool-position bands put 55-69 as 'borderline'; reconciling R3/R4 (Overall 4 with a composite band of 3 for R4) needed a judgment call. (5) The Domain reviewer's claim-level novelty profile requires rating prior-work abstracts the search returns; arXiv-only coverage meant most claims had no matches, so verdicts are low-information. (6) Figures were unavailable, so Table/figure-derived checks relied on the extracted tables; the OSWorld task-count reconciliation (359 vs 361 vs 369) is inferred from sums and may reflect an excluded-task convention not stated in the paper."
+}

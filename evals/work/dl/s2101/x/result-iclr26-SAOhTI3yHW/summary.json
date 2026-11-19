@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-SAOhTI3yHW",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 45,
+  "before_composite": 55.1,
+  "after_composite": 54.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 0.75, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Realism measured by Shapiro-Wilk normality and WD to simulator target speed, no human data (Sec 5.1, App B.7): Verified",
+    "RIFT best on only 4 of 8 Table 1 metrics; 'consistently outperforms all baselines' (Sec 5.2): Verified as overstated (claim Overstated, reviewers correct)",
+    "ORR/CPK of RIFT worse than un-fine-tuned Pluto (0.36 vs 0.24; 6.83 vs 5.06): Verified",
+    "'near-optimal DS, RC, IS, lowest BR' fails for PlanT (IS 0.64 lowest, DS below GRPO/REINFORCE), Table 2: Verified",
+    "Eq. 8 dual-clip gives zero gradient for positive advantages as printed (c=3 > 1+eps): Partly correct (as printed yes; App Eq. 18 restricts to A<0, likely notation)",
+    "Thm A.4(c) not derived, c absent from Eq. 14 surrogate, contraction assumed: Verified",
+    "Aggressive reward raises 2D-TTC and ACT while raising collisions (Table 3): Verified",
+    "Dev10 evaluation with 3 seeds, BR 0.00 equals 0 vs 2 events (Table 2, App B.4): Partly correct (dev10 stated; event count is derived inference)",
+    "RIFT comfort UCR 76.90% vs Pluto 56.45% only in appendix (Table 7): Verified",
+    "Sec 4.1 single CBV by highest probability vs App B.2 threshold-based set: Verified",
+    "pi_theta(tau|s) undefined for the scoring head: Verified",
+    "WOSAC described as evaluating controllability (Sec 5.1): Partly correct (quote verified; WOSAC characterization from knowledge, [verify])",
+    "DA inference that BR 0.00 shows benign scenarios: Overstated"
+  ],
+  "top_concerns": [
+    "Realism is measured with normality (Shapiro-Wilk) and distance to a simulator target speed, not against human data; title claim unsupported as worded",
+    "KL removal, dual-clip and group-relative advantage are not isolated by ablation; RIFT vs GRPO-Pluto mostly within one std; no stability curves; Appendix A theory does not support its conclusion",
+    "Evaluation on ~10 routes x 3 seeds with no tests; text overclaims versus Tables 1-2, and PlanT results contradict 'near-optimal' wording",
+    "AV-evaluation reliability inferred from the AV scoring higher / fewer blocks, which also fits easier scenarios; TTC/ACT safety metrics inconsistent with Table 3",
+    "Novelty incremental over cited RL-fine-tuning of IL traffic models; Eq. 8 as printed and undefined pi_theta for the scoring head hinder reproduction"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) only partly ran: the arXiv API returned HTTP 429 or timed out, so only 2 of the allowed queries completed (C1 broad query returned mostly off-topic traffic-signal-control work; one CARLA baseline query kept 1 result); no C2/C3 query, scout, coverage, similarity or novelty run, so per-claim novelty is from knowledge with [verify]. The script's 4-word query limit and the title/phrase refusal made claim queries for a GRPO-style method awkward. Ambiguities in the skill: (a) the five reviewers are specified as independent yet here share one context, which the skill allows but it is not truly independent; (b) the rule that a reviewer's Overall 4 needs pool position >= 65 conflicts mildly with giving a generalist an honest 4 for a paper most others place at 3; (c) summary 'after_composite' is ambiguous between official and EIC composite (used the EIC composite 54.2; the official composite stays 55.1); (d) shell restrictions (no redirection, variables or compound commands) make the literature scripts' large JSON outputs expensive to read since abstracts print in full; (e) the review text initially quoted before-run EIC numbers and had to be corrected after the AFTER run, because the skill orders the EIC write-up before the second script run."
+}

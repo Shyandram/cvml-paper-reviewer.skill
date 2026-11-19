@@ -1,0 +1,37 @@
+{
+  "id": "iclr26-UsWTBvkTwf",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.31,
+  "eic_pool_position": 52,
+  "before_composite": 56.7,
+  "after_composite": 55.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.85, "R4": 1.0, "DA": 1.1},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Per-concept r2 / per-task alpha chosen via forgetting accuracy while baselines run at recommended configs (App. B.2, Table 8, App. F): Verified",
+    "Table 2/19 aggregate errors (SalUn forgetting 22.3 vs 15.3; preserving means for FIA/UCE/CP/SPM): Verified (ranking of FIA unchanged)",
+    "About 18-point loss of preserved-class accuracy, no SD column in Table 2: Verified (derived from Tables 1 and 2)",
+    "'marginally higher CLIP scores' (Sec. 4.2) vs gaps up to 2.02 in Table 1: Verified (authors' wording overstated)",
+    "Core components (Eqs. 1-3) not ablated, only alpha/layer/granularity: Verified",
+    "Incremental novelty over ConceptPrune; Wanda-style score uncited: Verified",
+    "Citation errors (ESD description, Podell/Vatter as MU refs, missing Tsai/Yang/Zhang 2024b/COGFD entries): Verified",
+    "Robustness 'consistently best' (Table 15): Partly correct (numerically best, small margins, metrics undefined)",
+    "Forgetting metrics reward image damage rather than erasure (Eq. 9, Tables 1, 4): Partly correct (plausible mechanism, no direct evidence without figures)",
+    "Layer choice only in appendix, r2 inconsistent between App. B.2 and Table 8: Verified"
+  ],
+  "top_concerns": [
+    "Per-concept/per-task hyperparameters tuned on the evaluation metric while baselines run at default configurations (App. B.2, Table 8, App. F)",
+    "Headline components (Eqs. 1-3: saliency, contrast, temporal aggregation) are not ablated; novelty incremental over ConceptPrune and Wanda-style scoring uncited",
+    "Quality/preservation understated: CLIP 31.42 -> 29.56, about 18-point drop on preserved classes, no SD row in Table 2; erasure metrics may reward degradation",
+    "Single run with '+- 0.0' for FIA, undefined evaluation protocol, arithmetic errors in Tables 2/19/5/14 and cross-table inconsistencies",
+    "Missing prior baselines (SPEED, SAFREE, AdvUnlearn, Receler) and undefined robustness metrics in Table 15; multi-concept shown mainly on objects"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Integrity scan found only a soft-hyphen hidden character (benign). Literature check ran in strict mode (7 queries: claim 3, baseline 2, expansion 2); the script refused 5-word queries (counted as refusals, not budget), and the search output is verbose so I filtered it with grep. A search result for another paper carried acceptance information in venue_evidence; I did not use it. The skill is long; ambiguities: (1) Hard Rule 3 and the DA criterion-3 table leave open whether a generation-based benchmark with no train/test split counts as a 'held-out test set' for per-concept hyperparameter tuning, so I rated the per-concept tuning as MAJOR rather than CRITICAL; (2) the skill requires Phase 1.5 after the reports but the reviewers are supposed to be independent, so the literature check output (e.g. SPEED, Wanda) informed the Domain addendum only; (3) integrity_scan.py, fingerprint and novelty steps are not on the task's tool allow-list but are required by SKILL.md, so I ran them (local or via related_search.py only); (4) five reviewer passes share one model context, which limits true independence; (5) the pool-position consistency rule (Overall 4 needs pool >= 65) forced R3/R4 pool positions up to 65-66 even though the composite bands were 55-61."
+}

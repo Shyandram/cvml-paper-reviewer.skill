@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-9R2iUHhVfr",
+  "paper_type": "benchmark",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.6,
+  "eic_rating": 3.56,
+  "eic_pool_position": 65,
+  "before_composite": 58.1,
+  "after_composite": 57.8,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 3 row totals exceed N=731 (920, 915, 789, 792): Verified",
+    "Text 16.3% / 3.9% vs Table 1 17.6 / 4.9 (Sonnet 4, GPT-4o): Verified",
+    "Qwen3-32B 'highest tool error rate (42.0%)' vs Table 3 (44.1%; GPT-5 61.6%): Verified (claim incorrect)",
+    "Contamination resistance untested (licence argument only, no held-out results): Verified",
+    "'Hours to days' / long-horizon unmeasured: Verified",
+    "'Difficulty filtering' undescribed in Section 4: Partly correct (1-10 line exclusion is stated in Section 1)",
+    "GPT-5 63.1% not-submitted / 97.6% tool-use implies scaffold mismatch: Partly correct (numbers verified, causal reading is inference)",
+    "Commercial set averages about 15 tasks per repo vs stated 50-100: Verified",
+    "Public/commercial GPT-5 vs Opus ranking flip within noise: Verified",
+    "Citation errors ([25] for SWE-Bench; [1,25] as social media posts): Verified",
+    "Commercial-set provenance inconsistent: Partly correct",
+    "Closed models run via vendor APIs on private code (exposure): Partly correct (inference)",
+    "Uncited SWE-rebench / SWE-Lancer: Verified (positioning gap, not a known-result claim)"
+  ],
+  "top_concerns": [
+    "Contamination resistance, long-horizon difficulty and resolvability are asserted but not measured (Section 3.1, Abstract)",
+    "Table 3 row totals exceed N=731 and the Section 6.2 text contradicts Table 3 and Table 1",
+    "Single run, single SWE-Agent scaffold, no confidence intervals; GPT-5 vs Opus ranking within noise and flips on the commercial set",
+    "Low scores confounded by harness failures (GPT-5 63.1% not submitted, 97.6% tool-use errors) and by test/specification coupling",
+    "Commercial set: rights, consent, partner selection and API exposure of private code are not described; positioning against SWE-rebench and SWE-Lancer is missing"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "Recognized the paper title from prior knowledge but did not use any knowledge of reviews or outcome. The skill was followable. Friction: (1) the paper type has no exact 'dataset+benchmark' choice, I chose benchmark; (2) the Phase 1.5 order (literature check after drafting the reports) conflicts with the practical need to know the closest prior works while writing the Domain report, and scores.json had to be fixed before the reports were written out; (3) related_search.py rejects hyphenated words as multiple words (e.g. multi-file counts as two), which makes 4-word queries awkward; (4) the 'benchmarks' command returned nothing for a paper that is itself a benchmark, so the baseline-scout step was largely vacuous; (5) Multi-SWE-bench, which the paper cites, was labelled 'recent preprint' by its v1 date, so the label system cannot tell that the paper cites it; (6) the composite cross-check (band 3) disagreed with the rating-based starting point (4) near a boundary, and the EIC rule says not to depart without a named verified issue, which was followed; (7) ICLR rating label was returned in two scales and is not a single label; (8) all five reviewers share one context, so independence is limited and disclosed; (9) the helper tools and shell variables are restricted in this environment, so searches were run one per command."
+}

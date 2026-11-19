@@ -1,0 +1,13 @@
+{
+  "title": "Randomization Boosts KV Caching, Learning Balances Query Load: A Joint Perspective",
+  "method_names": ["RLT", "LBGR", "Randomized Leaf Token", "Learning-Based Greedy Routing", "L-LRU", "Leaf-LRU"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "first unified mathematical model that captures the core trade-offs between KV cache eviction and query routing",
+    "provably competitive randomized KV cache eviction with learning-based methods to adaptively route queries",
+    "balancing query load across workers and maximizing cache hit rate of each worker are inherently conflicting objectives"
+  ],
+  "cutoff_date": "2025-09-24"
+}

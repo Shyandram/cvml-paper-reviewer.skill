@@ -1,0 +1,13 @@
+{
+  "title": "Discounted Online Convex Optimization: Uniform Regret Across a Continuous Interval",
+  "method_names": [],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "adapts to an unknown discount factor",
+    "uniform discounted regret across a continuous interval",
+    "holding for all values of lambda across a continuous interval simultaneously"
+  ],
+  "cutoff_date": "2025-09-24"
+}

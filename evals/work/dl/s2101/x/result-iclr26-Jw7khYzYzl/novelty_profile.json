@@ -1,0 +1,55 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "dimension": "resource",
+      "central": true,
+      "text": "First large-scale, controlled benchmark of 11 optimizers for dense and MoE LLM pretraining, with compute-matched tuning",
+      "matches": [
+        {
+          "title": "Deconstructing What Makes a Good Optimizer for Language Models",
+          "url": "https://arxiv.org/abs/2407.07972v2",
+          "label": "prior (peer-reviewed)",
+          "level": 4,
+          "cited_by_paper": true
+        },
+        {
+          "title": "Fantastic Pretraining Optimizers and Where to Find Them",
+          "url": "https://arxiv.org/abs/2509.02046v3",
+          "label": "concurrent (within 60 days before the cutoff; discuss, don't require)",
+          "level": 4,
+          "cited_by_paper": false
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "dimension": "result",
+      "central": true,
+      "text": "Ablations of warmup, initialization, clipping, final learning rate, scheduler and weight decay giving practical recommendations",
+      "matches": [
+        {
+          "title": "Straight to Zero: Why Linearly Decaying the Learning Rate to Zero Works Best for LLMs",
+          "url": "https://arxiv.org/abs/2502.15938v2",
+          "label": "prior (peer-reviewed)",
+          "level": 3,
+          "cited_by_paper": true
+        },
+        {
+          "title": "Power Lines: Scaling Laws for Weight Decay and Batch Size in LLM Pre-training",
+          "url": "https://arxiv.org/abs/2505.13738v2",
+          "label": "prior (peer-reviewed)",
+          "level": 3,
+          "cited_by_paper": false
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "dimension": "resource",
+      "central": false,
+      "text": "Open-source benchmarking toolkit with training scripts and hyperparameter configurations",
+      "matches": []
+    }
+  ]
+}

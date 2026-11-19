@@ -1,0 +1,617 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "TOFU's independent fictitious entities unrealistic; need interconnected or real-world data like PISTOL",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "ContextQA supplies clean explicit answers; realistic long noisy RAG contexts not tested",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Training responsiveness to context cues expands extraction attack surface; robustness not evaluated",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Retaining knowledge recoverable via context undermines privacy/compliance value of unlearning",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No robustness tests against quantization, prompt or extraction attacks",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Missing activation-steering fine-grained unlearning baseline",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Fix is a straightforward KL-consistency term; limited methodological novelty",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "KL target inherits original model's grounding flaws; no alternative anchors compared",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "GradDiff, DPO, GradAscent results missing from Table 2",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Knowledge editing more suitable for outdated knowledge; realistic re-use of forgotten information rare",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Problem better framed as unlearning's effect on in-context learning than knowledge recovery",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Only two small-to-mid instruction-tuned models",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Only synthetic TOFU benchmark, limiting generalizability",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Limited theoretical justification for why contextual utility preservation works",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Context term trained on same forget pairs used for Contextual QA; no held-out evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Epoch and lambda selected on reported test metrics; no validation split",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Claimed mechanism of contextual collapse asserted but untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No retain-entity contextual control separating forget-specific suppression from general breakdown",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Original-model row absent from results",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "\"Extensive\" and \"general\" claims overstate: three methods, one benchmark, two models, one seed",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Forgetting strength unmatched; \"neutral\" effect on forgetting claim not supported",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Context-conditioned behavior suggests suppression, not removal; leakage under partial contexts untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Minor: percentage mismatch, TOFU mis-citation, duplicated caption, delta rounding, GD sign",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Method is standard retain-style KL regularizer on new prompts; not a new mechanism",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "KL term copies original model including mistakes; \"rewards correct responses\" description wrong",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Missing ablations separating KL on contexts from fine-tuning on context-answer pairs",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Context-conditioned unlearning and pretend-to-forget work not discussed; hidden vs removed question",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Only fictitious TOFU used; MUSE, WMDP not evaluated despite real-world framing",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Proposed method evaluated on the prompts it was trained on",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Epoch and lambda chosen on evaluation set without validation split",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Lambda \"insensitivity\" claim contradicted by 200x range across methods",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No Contextual QA on retain entities to separate suppression from generation collapse",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Original model row missing from Table 2",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Mechanism claims not tested by probing or layer analysis",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Forgetting strength not controlled; no retrain-on-retain reference; neutral claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "No seeds or variance reported",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "One fictitious benchmark with single-sentence contexts and two models",
+   "minor": false
+  },
+  {
+   "id": "Q3.10",
+   "reviewer": "Q3",
+   "text": "Single binary LLM judge without human agreement check",
+   "minor": false
+  },
+  {
+   "id": "Q3.11",
+   "reviewer": "Q3",
+   "text": "Main results only at 5% forget ratio",
+   "minor": false
+  },
+  {
+   "id": "Q3.12",
+   "reviewer": "Q3",
+   "text": "\"General augmentation\" claim covers only three of six methods",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Context-recovery behavior exploitable; partial, misleading contexts and relearning attacks untested",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Contexts are one-sentence gold answers; no realistic RAG pipeline test",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Practical lambda selection has no held-out check; values vary widely",
+   "minor": false
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Central evidence thin; \"extensive experiments\" overstates",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Single run per configuration",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Table 4 analysis based on single example",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "No held-out split for evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Presentation: missing original row, repeated caption, number mismatches, TOFU mis-citation",
+   "minor": true
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "No limitations section",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "Single binary judge without agreement check",
+   "minor": false
+  },
+  {
+   "id": "Q5.8",
+   "reviewer": "Q5",
+   "text": "Contexts are gold sentences; no realistic RAG setting",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Only TOFU fictitious independent entities; need realistic benchmarks",
+    "points": [
+     "P1.1",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Clean gold contexts unrealistic vs RAG",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Context-recoverable knowledge is a security/compliance risk; attacks untested",
+    "points": [
+     "P1.3",
+     "P2.1",
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Missing activation-steering baseline",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "KL term not novel",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "KL target inherits original model flaws",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Some unlearning methods missing from Table 2",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Weak practical motivation and framing of problem",
+    "points": [
+     "P4.1",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Only two models",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Limited theoretical justification",
+    "points": [
+     "P4.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Evaluation on training prompts; no held-out split",
+    "points": [
+     "Q1.1",
+     "Q3.1",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Hyperparameters selected on evaluation metrics",
+    "points": [
+     "Q1.2",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Lambda insensitivity/practical selection unsupported",
+    "points": [
+     "Q3.3",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Mechanism asserted, not tested",
+    "points": [
+     "Q1.3",
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No retain-entity contextual control",
+    "points": [
+     "Q1.4",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Original model row missing",
+    "points": [
+     "Q1.5",
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Overclaims \"extensive\"/\"general\"; only three of six methods extended",
+    "points": [
+     "Q1.6",
+     "Q3.12",
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Forgetting strength unmatched; neutral claim unsupported",
+    "points": [
+     "Q1.7",
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Suppression vs removal; leakage and attacks untested",
+    "points": [
+     "Q1.8",
+     "Q2.4",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Minor numbers, captions, citation errors",
+    "points": [
+     "Q1.9",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Standard KL regularizer; limited novelty",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "KL copies original mistakes; mis-description",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Missing ablations vs simple fine-tuning",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Single fictitious benchmark, two models",
+    "points": [
+     "Q2.6",
+     "Q3.9"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No seeds",
+    "points": [
+     "Q3.8",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Judge not validated",
+    "points": [
+     "Q3.10",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Only 5% forget ratio",
+    "points": [
+     "Q3.11"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Unrealistic one-sentence contexts; no RAG",
+    "points": [
+     "Q4.2",
+     "Q5.8"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Single-example Table 4",
+    "points": [
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No limitations section",
+    "points": [
+     "Q5.6"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI18"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  }
+ ]
+}

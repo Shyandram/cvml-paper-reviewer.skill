@@ -1,0 +1,36 @@
+{
+  "id": "iclr26-Ix4WA6AXPe",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.36,
+  "eic_pool_position": 50,
+  "before_composite": 57.1,
+  "after_composite": 56.6,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "Training pairs of the context term are the evaluation prompts (DA-C1, R1-W1): Verified",
+    "Epoch and lambda_c selected on reported metrics (R1-W2, DA-M1): Verified",
+    "Text 'about 17% and 10%' vs Table 2 deltas (0.14, 0.09): Verified",
+    "TOFU cited as Touvron et al. 2023: Verified",
+    "NPO Direct QA shifts not 'marginal' (R1-W4, DA-M4): Partly correct",
+    "No retain-entity or original-model contextual control (R1-W3, DA-M2): Verified",
+    "Leakage under answer-free or partial contexts untested (R3-W1, DA-M5): Verified (as an omission)",
+    "GD loss sign in App. A.3 (DA-m5): Unverifiable (extraction or sign convention)",
+    "Missing context-conditioned unlearning reference (R2-W2): Verified"
+  ],
+  "top_concerns": [
+    "Contextual QA for the proposed method is scored on the same forget (question, gold context) pairs the context term is trained on; no held-out split",
+    "Epoch and lambda_c are selected on the reported metrics with no validation split and no seeds",
+    "Narrow scope: one fictitious-data benchmark (TOFU), two models, three of six methods extended; 'extensive' and 'general' overclaim",
+    "No retain-entity or original-model contextual control; mechanism of 'contextual suppression' asserted, not tested",
+    "Whether the fix reopens leakage (answer-free or partial contexts, relearning) and how conditional behavior relates to true removal is untested"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Network was available and the strict literature check ran (6 of 12 queries). I could not run integrity_scan.py because the evaluation rules allow only the aggregation and related_search scripts, so I searched the text by hand for reviewer-directed text and found none. The skill has no instruction for this case. Figures were unavailable, so curve-based claims (Figs. 2, 4, 7-9) are judged from captions and text. The skill says to start EIC weights at 1.0 and move them only for verified reasons; I moved only R1 (1.25). The DA table for criterion 3 (selection) is written for test-set selection and fits TOFU awkwardly (no validation split, forget set is also the training set), so I treated selection as MAJOR and used criterion 2 (evaluation on the training inputs of the proposed term) for the CRITICAL issue. The ICLR label printed for final Overall 3 is '4 on {0,2,4,6,8,10}', which reads as a different number than the internal 3; the dual vocabulary is easy to misread. The aggregate script and the review text both rely on pool-position bands that conflict slightly with an Overall of 4 for pool positions in the mid-60s (the script shows pool bands 55-61 for 66-68). Writing five reports in one context is hard to keep independent; I read the whole paper once and then wrote each report from a distinct angle."
+}

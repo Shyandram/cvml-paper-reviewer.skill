@@ -1,0 +1,13 @@
+{
+  "title": "Mutual Information Preserving Neural Network Pruning",
+  "method_names": ["MIPP", "Mutual Information Preserving Pruning", "TERC"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "select nodes such that the mutual information between the activations of adjacent layers is maintained",
+    "global pruning methods do not offer any guarantees regarding re-training",
+    "transfer entropy redundancy critereon to dynamically prune nodes whose activations do not transfer entropy"
+  ],
+  "cutoff_date": "2025-09-24"
+}

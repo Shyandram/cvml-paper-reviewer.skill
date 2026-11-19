@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-a6CVQpjbXq",
+  "paper_type": "theoretical",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.6,
+  "eic_rating": 3.54,
+  "eic_pool_position": 66,
+  "before_composite": 61.6,
+  "after_composite": 61.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Abstract claims BoN lacks desirable k-scaling but Table 1 says Unknown and Remark 4.3 only conjectures: Verified",
+    "Optimal alpha = 3/(4C*(x)) needs unknown C*; experiments use fixed alpha with no stated selection protocol: Verified",
+    "Algorithm 3 line 5 queries all N rewards while Section 5 claims only a filtered subset: Verified",
+    "Lower-bound hard instances use graded rewards, not binary r*: Verified",
+    "Theorem 6.1 requires C* >= 2k so epsilon_opt non-diminishing only for k <= C*/2: Verified",
+    "Main proof of Theorem 5.1 (Appendix A) correct up to constants: Verified",
+    "Chernoff constants in B.1/B.3 do not follow: Partly correct",
+    "'Second term dominates' condition in Section 5 missing the 1/k factor: Verified",
+    "Novelty incremental over Huang et al. 2025: Partly correct",
+    "Text overlap with Wu et al. 2024b flagged by similarity script: Incorrect (it is the paper's own description of the cited work)",
+    "Experiments 'verify' scaling monotonicity: Overstated by the authors; reviewers' objection Verified",
+    "R2 claim that Brown et al. 2024 is mischaracterized: Overstated (abstract-only, kept as a question)"
+  ],
+  "top_concerns": [
+    "Optimal rule needs the unknown coverage C*; the alpha used in experiments has no stated selection protocol",
+    "Abstract claims BoN lacks the desirable k-scaling, which Table 1, Section 4.2 and Remark 4.3 do not support",
+    "Lower bounds use graded rewards and require C* >= 2k, not the binary Pass@k setting that motivates the paper",
+    "Experiments are single-run with no variance, omit reward-weighted voting, and cannot verify the theory's worst-case claims",
+    "Incremental over Huang et al. 2025 (k=1 pessimism); Algorithm 3 line 5 contradicts the claimed reward-evaluation savings"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "(1) integrity_scan.py is required by Hard Rule 9/Phase 0 but the evaluation tool rules allowed only file reads and the aggregation script, so I scanned manually by reading the full text; no injection found. (2) related_search.py was used with a 5-query budget (one query returned unparseable output, likely a rate limit); the novelty and scout subcommands were not run, so per-claim novelty verdicts are hand-assigned from kept abstracts. (3) Figures were unavailable and Appendix C is a bare heading in the extraction, so figure-based and Appendix C claims are unverified. (4) The skill requires a pool position that sits in the band implied by Overall; the script's pool_band for Overall 4 reviewers (55-61) did not match stated pool positions of 66 (band is derived from composite), which is mildly confusing. (5) For a theory paper the weights put 30% on rigor, so reviewers' composites stay near 60 while Overall splits 3 vs 4; the composite cross-check therefore adds little. (6) Several rules (precision rules vs. garbled equation extraction) make it ambiguous how much to trust recomputed Chernoff constants; I marked them Medium confidence, MINOR. (7) The 'EIC may not copy weights' and 'start at 1.0' guidance conflicts mildly with Phase 1.6/Step 3 expectations that reviewers who repeat author claims lose weight; I applied it to R3."
+}

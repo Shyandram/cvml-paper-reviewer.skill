@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-SHAmQVifzK",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.2,
+  "eic_rating": 3.13,
+  "eic_pool_position": 45,
+  "before_composite": 53.4,
+  "after_composite": 52.6,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 3 region EPEs inconsistent with Table 1 (low-frequency 0.72 > overall 0.53): Verified",
+    "Wavelet-RAFT EPE differs across Tables 1, 4, 5, 6, 7 (Table 5 0.367 vs Table 6 0.46 at same runtime): Verified",
+    "Speed claim valid only against 32-iteration RAFT-Stereo (12-iteration RAFT-Stereo 0.53 at 0.22 s vs 0.52 at 0.27 s): Verified",
+    "No control separating wavelet decomposition from extra extractor capacity: Verified",
+    "Section 4.2 percentages for Selective-IGEV and DLNR swapped: Verified",
+    "D1-fg not best (DEFOM-Stereo 2.24/2.23 vs 2.60/2.60), best-among-all-published wording: Verified",
+    "Headline Wavelet-MonSter not described in Section 3: Verified",
+    "HSA 7x7 conv after global pooling (Eq. 8-9) is an error: Partly correct",
+    "Hyperparameters selected on Scene Flow test split as leakage-type issue: Partly correct (MAJOR, not criterion 3; comparison holds at every swept value)",
+    "R3: speed benefit as a strength: Overstated",
+    "R2: Selective-IGEV Scene Flow EPE lower than 0.46: Partly correct (recollection only, marked verify, not used in decision)"
+  ],
+  "top_concerns": [
+    "Central diagnosis (frequency convergence inconsistency as the underlying cause) is untested; Table 3 region EPEs cannot be reconciled with Table 1",
+    "No control separating wavelet decomposition from added extractor/LSTM capacity; ablation EPE for the same model differs across five tables",
+    "Speed claim (38.6%) holds only against the 32-iteration baseline; 12-iteration RAFT-Stereo matches Wavelet-RAFT's 8-iteration EPE at lower runtime",
+    "Headline Wavelet-MonSter is never described; no zero-shot numbers; single runs with 0.01-0.04 margins over MonSter",
+    "Incremental novelty over Selective-Stereo/DLNR; reference and notation errors"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) could not run: the arXiv API returned HTTP 429 on both executed queries (one more query was refused by the self-exclusion filter for containing the method name), so all recommended references are marked [verify] and no similarity/novelty/scout output exists; the skill's fallback to 'off' worked but SKILL.md does not say how many retries to make on rate limiting. The self-exclusion filter refuses 'wavelet stereo matching' because it matches the method name 'Wavelet-Stereo', which makes concept-only queries awkward for papers whose method name is the concept. The EIC step says weights start at 1.0 and move only for verified reasons, but the pool-position consistency rule (Overall 4 needs pool >= 65) pushed R3 to 66 to justify its Overall 4; the script then reports R3 composite 61.2 slightly above its pool band 55-61. Decision-table criterion 3 is ambiguous for Scene Flow (public-label test split, no validation split, no hidden-label server); I treated it as MAJOR because the main claim holds at every swept value. Phase 1 independence is only simulated in one context. Figures were unavailable, so Fig. 1 (the sole direct evidence for the central claim) could not be checked."
+}

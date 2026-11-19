@@ -1,0 +1,13 @@
+{
+  "title": "DiTraj: Training-free Trajectory Control For Video Diffusion Transformer",
+  "method_names": ["DiTraj", "STD-RoPE", "foreground-background separation guidance"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "tight correlation between inter-token attention scores and position embedding",
+    "eliminates their cross-frame spatial discrepancies, strengthening cross-frame attention among them",
+    "regulating the density of position embedding"
+  ],
+  "cutoff_date": "2025-09-24"
+}

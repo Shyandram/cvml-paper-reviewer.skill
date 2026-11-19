@@ -1,0 +1,13 @@
+{
+  "title": "Heat Kernel Goes Topological",
+  "method_names": ["TopoHKS"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "introduces a Laplacian operator on combinatorial complexes",
+    "enabling efficient computation of heat kernels that serve as node descriptors",
+    "avoiding blind spots on topological benchmarks"
+  ],
+  "cutoff_date": "2025-09-24"
+}

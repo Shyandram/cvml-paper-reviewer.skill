@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-AIKURJjxXT",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.8,
+  "eic_rating": 2.84,
+  "eic_pool_position": 40,
+  "before_composite": 50.1,
+  "after_composite": 50.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 0.75},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "36.5% / 19.9% headline figures are ratios of gains over the base model, not accuracy gaps (+4.49 on Geo3K, +0.94 average in Table 1): Verified",
+    "No seeds, runs or intervals anywhere; margins within plausible noise: Verified",
+    "Baselines not compute-matched; DAPO is a partial reimplementation (eps_high plus length penalty only): Verified",
+    "'Deeper reasoning' / aha-moment claim unmeasured (no pass@k): Verified",
+    "Thm 4.5 (tabular softmax NPG) does not cover the 7B PPO-clip + replay setting; broken citation and blog source: Verified",
+    "Entropy rise framed as collapse sign in Sec 3.2 but as a feature in Sec 5.2: Verified",
+    "Replay rule |A|>1 admits negative samples (R1 ERR-3): Partly correct (derivation right; actual buffer content depends on code)",
+    "eps_low=eps_high=0.2 inconsistent with 'clip higher' as key hyperparameter (R1 ERR-2): Partly correct",
+    "C1 'known' via Liao et al. (R2): Partly correct (overlapping idea, incremental not known)",
+    "Negative-sample claim in tension with Zhu et al. (R2, DA): Partly correct (restricted to hard-prompt negatives, untested)",
+    "Time ratio x0.57 should be x0.56 (R1): Verified (trivial)",
+    "R3: large in-domain gain implies real value: Partly correct (vs base yes; vs GRPO +4.49 on one run)"
+  ],
+  "top_concerns": [
+    "Margin over GRPO/DAPO is small and single-run (+0.94 avg in Table 1, -0.29 on MathVision) and the 36.5%/19.9% headline figures are ratios of gains over the base model",
+    "No compute-matched GRPO baseline and DAPO is only partially reimplemented, so gains may come from extra samples and replay updates",
+    "'Deeper reasoning' and the entropy mechanism (Thm 4.5, tabular NPG) are asserted, not measured; no pass@k analysis",
+    "Each component (hard-prompt extra rollouts, filtering, replay) has uncited peer-reviewed prior art (Liao et al. EMNLP 2025; Sun et al. NeurIPS 2025)",
+    "Protocol under-specified: eval split, training set per table, steps, KL beta, checkpoint choice, seeds, baseline provenance"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "(1) integrity_scan.py could not be run because this evaluation allowed only the aggregation and related_search.py scripts; I did a manual regex search of the paper text instead and no reviewer-directed text was found, so reviewers read the original text, not a redacted copy. (2) The skill's Phase 0 says to run integrity_scan; the task rules conflict with that. (3) related_search.py: the 4-concept-word limit treats hyphenated terms and 'RL' as words, so several queries were refused; the 'benchmarks' command returned no benchmarks for this text, so only MathVista was scouted. The script output for Vision-R1 includes an 'Accepted to ICLR 2026' comment, i.e. outcome information about a different paper; I did not use it. (4) The EIC aggregation step requires the same pipeline run twice; with an empty da_critical list the before/after runs differ only by the eic_weight values. The before run flagged a composite band (2) different from the rating-based starting point (3), and the weighted run flipped to band 3 at 50.2 (0.2 above the edge): the 'within 2 points of band edge' rule handled it, but it shows how near-boundary results swing. (5) Pool-position guidance (accepted paper 62-72, rejected 42-54) combined with the 'Overall 4 needs pool >= 65' rule left no room for the Perspective reviewer, nominally the most positive, to give 4, which compresses the panel to all 3s; the reports follow the rule rather than the persona tone. (6) Reviewer independence is simulated in one shared context. (7) Figures were unavailable, so Fig. 1/4/5 claims (ablations, entropy curves, G=20 vs G=5) are judged from captions and prose only."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Dataset Distillers Are Good Label Denoisers In the Wild",
+  "method_names": [],
+  "authors": ["Lechao Cheng", "Kaifeng Chen", "Shengeng Tang", "Shufei Zhang", "Meng Wang"],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "dataset distillation effectively serves as a denoising tool in random noise scenarios",
+    "avoids the feedback loop common in existing techniques",
+    "structured asymmetric noise patterns can be absorbed into the distilled samples"
+  ],
+  "cutoff_date": "2025-09-24"
+}

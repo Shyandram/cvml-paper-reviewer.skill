@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-kwro5432AI",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 42,
+  "before_composite": 52.1,
+  "after_composite": 51.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Algorithm 1 never uses timestamps at retrieval; time enters only offline via T_uv: Verified",
+    "No ablation of L_time, Hamming candidates or a non-temporal filter: Verified",
+    "Final top-K1 is a cosine re-ranking of a subset of F so PPR can only drop anchors: Verified (derivation)",
+    "Token reduction set by K1=10, not by the rule graph: Partly correct (Figure 3 and no-rule token counts not visible)",
+    "'Static methods notably worse than temporal' contradicted on CronQuestion by TOG: Verified",
+    "'9.1%' accuracy gain not reproducible from Table 2: Partly correct (basis unstated)",
+    "Baseline tuning split unstated and no validation split: Verified",
+    "Directed vs undirected rule-graph edges (Sec 3.2 vs Appendix B): Verified",
+    "TS-Retriever run with trained encoder vs NV-Embed for all methods: Partly correct",
+    "Appendix E thoughts cite events absent from retrieved list: Verified",
+    "ICEWS14 inconsistent with Table 1 and Figure 2 dates: Partly correct",
+    "EXAQT contradicts Sec 2 characterization of temporal methods: Overstated",
+    "R3 token efficiency as method strength: Overstated",
+    "Forecast temporal cut-off not enforced: Not verifiable (treated as question)"
+  ],
+  "top_concerns": [
+    "Timestamps are unused at retrieval time in Algorithm 1 and no ablation isolates the temporal term (L_time), so 'time-aligned' gains are not attributed",
+    "Baseline protocol: tuning split unstated, headline comparator MedicalGraphRAG is not the strongest baseline, GraphRAG/LightRAG cited but not compared",
+    "97% token reduction is set by the K1=10 context cap and a largest-context comparator; no matched-budget comparison",
+    "No variance, 'five runs' undefined, no code, missing method details (edge weights of the transition matrix, K_type, directed vs undirected edges)",
+    "Template-generated questions on structured KGs only, no limitations section; closest temporal KGQA and retrieval prior work (KG-IRAG, EXAQT, TempoQR) not positioned"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Ran with network access: literature check strict (8 counted queries, coverage, scout, similarity, novelty, 2 verify). related_search.py refuses queries over 4 concept words (including the 5-word queries I first tried), and 'benchmarks' returned nothing for these datasets, so benchmark scouting was done by hand. The novelty script rated C2 'high' from a single level-2 match while the Domain Reviewer judged it medium given the cited KGist/ANOT; the skill does not say who prevails (I let the reviewer's judgment prevail and said so). The venue-label wording for ICLR (0,2,4,... vs 1,3,5,...) is ambiguous and flagged secondary; I reported both. Compound shell commands needed separate calls under this harness. SKILL.md asks reviewers to be independent but full mode is run sequentially in one context, so independence is weak. The DA/EIC rules for criterion 3 had no clean row for 'selection sentence names no split' (resolved as MAJOR per the 'not stated' row). Verifying baseline descriptions (ToG, DALK) needs the original abstracts; the skill's verify command returns titles only, so those items stayed marked [verify]."
+}

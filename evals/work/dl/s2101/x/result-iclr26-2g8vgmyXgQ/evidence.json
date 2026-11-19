@@ -1,0 +1,59 @@
+{
+  "locations": [
+    "Abstract", "Section 1", "Section 2", "Section 3.1", "Section 3.2", "Section 4", "Section 5.1", "Section 5.2", "Section 5.3", "Section 6", "Section 7",
+    "Equation 2", "Equation 3", "Equation 4", "Equation 5", "Equation 6", "Equation 7", "Equation 8", "Equation 9", "Equation 10", "Equation 11",
+    "Lemma 1", "Lemma 2", "Lemma 3", "Lemma 4", "Lemma 5", "Lemma 6", "Lemma 7", "Lemma 8", "Lemma 9", "Lemma 10",
+    "Theorem 1", "Theorem 2", "Proposition 1", "Proposition 2", "Proposition 3", "Proposition 4",
+    "Figure 1", "Appendix A", "Appendix B", "Appendix C.1", "Appendix C.2", "Appendix C.3", "Appendix D.1", "Appendix D.2", "Appendix E",
+    "Reference [13]", "Reference [19]", "Reference [21]", "Reference [22]", "Reference [2]"
+  ],
+  "quotes": [
+    "satisfied by almost any nontrivial L-Lipschitz function",
+    "excludes only degenerate cases",
+    "For analytical simplicity, we assume x = vk whenever this proximity condition holds",
+    "is, to our knowledge, not addressed in previous ICL theory literature",
+    "Some studies explored the implicit bias of gradient descent and attention-based generalization [21, 39]",
+    "characterized ICL as a two-stage process involving context encoding and task execution",
+    "Self-adaptive in-context learning: An information compression perspective for in-context example selection and ordering",
+    "1/uk − 1/K = Θ(δ) from (7)",
+    "Under the scaling regime for sharp L, either δ = o(1) or ϵ = o(1)",
+    "N/|Vk | = Θ(1/δ) (since δ = o(1) is",
+    "Under gradient descent with learning rate η, the update rules are given by",
+    "may fluctuate in sign depending on the alignment of f (vk )",
+    "We analyze a simplified transformer model comprising a single block with one-head self-attention and a feedforward network",
+    "We generate M = 300 prompts and train the model for T = 400 epochs.",
+    "consistent with Theorem 1, Proposition 1, Proposition 2, and Proposition 3",
+    "These empirical observations are consistent with our theoretical predictions in Theorem 2 and Proposition 4.",
+    "In the flat curvature regime, L is below the threshold and induces smaller gradients, which allow for larger step sizes to convergence.",
+    "This completes the proof of Theorem 1.",
+    "Experiments Verification",
+    "as long as f (x) satisfies the property"
+  ],
+  "numbers": [
+    {"claim": "feature dimension in the experiment", "value": "d = 15", "derived": false},
+    {"claim": "number of features in the experiment", "value": "K = 4", "derived": false},
+    {"claim": "prompt length in the experiment", "value": "N = 100", "derived": false},
+    {"claim": "feature gap in the experiment", "value": "∆ = 3", "derived": false},
+    {"claim": "number of generated prompts", "value": "M = 300", "derived": false},
+    {"claim": "training epochs", "value": "T = 400", "derived": false},
+    {"claim": "flat-regime L values", "value": "{0.1, 0.2, 0.4}", "derived": false},
+    {"claim": "sharp-regime L values", "value": "{1.0, 1.5, 2.0}", "derived": false},
+    {"claim": "exponential target parameters", "value": "alpha = 1, beta = 0.5", "derived": false},
+    {"claim": "L=0.1 loss about 1.0 at epoch 40, near zero by epoch 250", "value": "40 / 250", "derived": false},
+    {"claim": "L=1 loss about 0.6 at t=30, about 0.1 by t=110, near 0 by t=200", "value": "0.6 / 0.1 / 200", "derived": false},
+    {"claim": "recomputed 1/u_k - 1/K with u_k = K(p_k - delta), p_k = 1/K, K = 4, delta = 0.01", "value": "0.792 (not Theta(delta) = 0.01)", "derived": true},
+    {"claim": "concentration width bound 20*sqrt(K/N) for K=4, N=100 (garbled Eq. 7 read this way)", "value": "4", "derived": true},
+    {"claim": "ratio T_s*/T_f* at equal L for K=10, eps=0.1, L*Delta=10", "value": "15.0", "derived": true},
+    {"claim": "theorem condition K >= Theta(1/eps) with K=4 implies eps of at least about 0.25 up to constants", "value": "0.25", "derived": true},
+    {"claim": "EIC-weighted rating", "value": "2.51", "derived": true},
+    {"claim": "official mean rating", "value": "2.60", "derived": true}
+  ],
+  "references": [
+    {"title": "Transformers Learn Nonlinear Features In Context: Nonconvex Mean-field Dynamics on the Attention Landscape", "authors": "Juno Kim, Taiji Suzuki", "year": 2024, "marked_verify": false},
+    {"title": "Pretrained transformer efficiently learns low-dimensional target functions in-context", "authors": "Kazusato Oko, Yujin Song, Taiji Suzuki, Denny Wu", "year": 2024, "marked_verify": false},
+    {"title": "In-Context Linear Regression Demystified: Training Dynamics and Mechanistic Interpretability of Multi-Head Softmax Attention", "authors": "Jianliang He, Xintian Pan, Siyu Chen, Zhuoran Yang", "year": 2025, "marked_verify": false},
+    {"title": "Training Dynamics of In-Context Learning in Linear Attention", "authors": "Yedi Zhang, Aaditya K. Singh, Peter E. Latham, Andrew Saxe", "year": 2025, "marked_verify": false},
+    {"title": "Transformers as Support Vector Machines", "authors": "Davoud Ataee Tarzanagh, Yingcong Li, Christos Thrampoulidis, Samet Oymak", "year": 2023, "marked_verify": true},
+    {"title": "Exact Learning Dynamics of In-Context Learning in Linear Transformers and Its Application to Non-Linear Transformers", "authors": "Nischal Mainali, Lucas Teixeira", "year": 2025, "marked_verify": false}
+  ]
+}

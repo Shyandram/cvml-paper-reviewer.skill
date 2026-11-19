@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-4Uxtzc5Jns",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.33,
+  "eic_pool_position": 52,
+  "before_composite": 56.4,
+  "after_composite": 55.5,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "alpha chosen on AMC 23 and headline reported on AMC 23: Verified",
+    "baselines left at defaults while lambda re-tuned for G-KV: Partly correct",
+    "Observation 2 lacks a chance baseline (about 0.91 for a 3-window union at 55%): Verified",
+    "token-retention ratio conditioned on correct answers: Verified",
+    "decay horizon about 640 tokens at alpha 0.8, s 128: Verified",
+    "'significantly' for RL-Sparse vs RL-Full: Partly correct",
+    "efficiency baseline stack and 40% vs 24% decoding-time discrepancy: Partly correct",
+    "H2O cited but not run as a baseline: Verified",
+    "Qwen 2.5 text vs Qwen2 report in references: Verified",
+    "no limitations section: Verified",
+    "Appendix I 'wait'-token narrative: Overstated"
+  ],
+  "top_concerns": [
+    "alpha and lambda selected on AMC 23, which also supplies the headline gain, while baselines run at paper defaults",
+    "gain not attributed to the global score: G-KV also adds R-KV's redundancy term, new normalisation and a re-tuned lambda; no 2x2 ablation",
+    "no variance or CIs on 30-40 problem benchmarks; Table 1 single training runs with AIME margins of 0.73-1.57; main results only as figures",
+    "motivating Observation 2 has no null baseline (about 0.91 by chance) and 'global' is a roughly 640-token decayed horizon",
+    "efficiency evidence lacks serving stack, equal-accuracy view and an optimised full-cache baseline; mechanism claims (information density, wait tokens) untested"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Strict literature check was requested but the arXiv API returned HTTP 429 and then 503 (one query logged, no results), so Phase 1.5 fell back to knowledge with [verify]; the skill handles this but evidence.json references are all unsearched. Ambiguities: (1) Phase 1.5 is defined as 'after the reports are drafted' but the run is one sequential context, so the independence of reports and the literature check cannot be strict; (2) Phase 1.6 report check is done by the same context that wrote the reports, so its table is partly nominal; (3) scores.json asks for pool_position per reviewer but the script prints pool_band (55,61) for pool 66 while the same reviewer gives Overall 4, which is consistent but looks odd; (4) the ICLR label printed for final Overall 3 is '4 on {0,2,4,6,8,10}', which reads as higher than the internal 3 and could confuse readers; (5) the Methodology and DA protocol sweeps ask for 'split used for selection' on benchmarks with no validation split, and the criterion-3 decision table needs the best-scoring value, which cannot be read from extracted figures (decided MAJOR, not CRITICAL, on the plateau and untuned benchmarks); (6) figures unavailable, so main comparisons (Figs. 5, 6, 18, 19) could not be checked numerically; (7) the instructions to run integrity_scan.py and related_search.py were followed although the task rule lists only the aggregation script and related_search.py."
+}

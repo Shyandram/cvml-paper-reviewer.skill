@@ -1,0 +1,13 @@
+{
+  "title": "Debiasing CLIP: Interpreting and Correcting Bias in Attention Heads",
+  "method_names": ["LOCATE-THEN-CORRECT", "Locate-Then-Correct", "LTC", "LTC-S", "JTT-LTC", "LTC (MA)", "LTC (KI)"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "contrastive framework that identifies spurious attention heads in Vision Transformers",
+    "mitigates them through targeted ablation",
+    "integration of discriminative features through orthogonal projection to improve classification performance"
+  ],
+  "cutoff_date": "2025-09-24"
+}

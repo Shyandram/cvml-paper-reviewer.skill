@@ -1,0 +1,43 @@
+{
+  "paper_type": "empirical",
+  "reviewers": [
+    {
+      "role": "R1 (Meth.)",
+      "confidence": 4,
+      "overall": 2,
+      "scores": {"technical_rigor": 40, "clarity": 50, "novelty": 46, "significance": 50, "experimental_validation": 38, "reproducibility": 44, "ethics": 60},
+      "pool_position": 30
+    },
+    {
+      "role": "R2 (Domain)",
+      "confidence": 4,
+      "overall": 3,
+      "scores": {"technical_rigor": 50, "clarity": 55, "novelty": 48, "significance": 52, "experimental_validation": 46, "reproducibility": 50, "ethics": 62},
+      "pool_position": 40
+    },
+    {
+      "role": "R3 (Persp.)",
+      "confidence": 3,
+      "overall": 4,
+      "scores": {"technical_rigor": 62, "clarity": 58, "novelty": 60, "significance": 66, "experimental_validation": 55, "reproducibility": 58, "ethics": 66},
+      "pool_position": 65
+    },
+    {
+      "role": "R4 (Gen.)",
+      "confidence": 3,
+      "overall": 3,
+      "scores": {"technical_rigor": 52, "clarity": 50, "novelty": 50, "significance": 55, "experimental_validation": 48, "reproducibility": 52, "ethics": 60},
+      "pool_position": 44
+    },
+    {
+      "role": "DA",
+      "confidence": 4,
+      "overall": 2,
+      "scores": {"technical_rigor": 38, "clarity": 48, "novelty": 42, "significance": 45, "experimental_validation": 36, "reproducibility": 42, "ethics": 58},
+      "pool_position": 27
+    }
+  ],
+  "da_critical": [
+    {"id": "DA-C1", "upheld": true, "resolvable_without_new_data": true}
+  ]
+}

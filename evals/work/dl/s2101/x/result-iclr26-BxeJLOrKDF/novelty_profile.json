@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "dimension": "problem",
+      "central": true,
+      "text": "First end-to-end human-to-robot video generation framework on a video diffusion transformer, without intermediate representations",
+      "matches": [
+        {"title": "Human2Robot: Learning Robot Actions from Paired Human-Robot Videos", "url": "https://arxiv.org/abs/2502.16587v4", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 4, "cited_by_paper": true},
+        {"title": "AVID: Learning Multi-Stage Tasks via Pixel-Level Translation of Human Videos", "url": "https://arxiv.org/abs/1912.04443v3", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "Phantom: Training Robots Without Robots Using Only Human Videos", "url": "https://arxiv.org/abs/2503.00779v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C2",
+      "dimension": "method",
+      "central": true,
+      "text": "In-context conditioning of a video DiT: clean demonstration tokens concatenated with noisy target tokens and joint (bidirectional) attention",
+      "matches": [
+        {"title": "Video Diffusion Transformers are In-Context Learners", "url": "https://arxiv.org/abs/2412.10783v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 4, "cited_by_paper": false},
+        {"title": "FullDiT2: Efficient In-Context Conditioning for Video Diffusion Transformers", "url": "https://arxiv.org/abs/2506.04213v2", "label": "recent preprint (arXiv-only, under 6 months before the cutoff; discuss, don't require)", "level": 4, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3",
+      "dimension": "resource",
+      "central": false,
+      "text": "Automatic synthesis of human-robot paired videos from egocentric datasets, with human-in-the-loop filtering",
+      "matches": [
+        {"title": "Phantom: Training Robots Without Robots Using Only Human Videos", "url": "https://arxiv.org/abs/2503.00779v2", "label": "prior (peer-reviewed)", "level": 4, "cited_by_paper": true},
+        {"title": "Look Ma, No Hands! Agent-Environment Factorization of Egocentric Videos", "url": "https://arxiv.org/abs/2305.16301v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

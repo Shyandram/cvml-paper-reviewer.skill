@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-BDnOrExHmt",
+  "paper_type": "empirical",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.6,
+  "eic_rating": 3.54,
+  "eic_pool_position": 63,
+  "before_composite": 58.7,
+  "after_composite": 58.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Memory claim contradicted for ADM-G (3.1 vs 2.23 GB, Table 1): Verified",
+    "'Nearly 8x faster' does not match Table 1 (6.5/15.5/6.7/7.0): Verified",
+    "Table 1 per-step 0.097s inconsistent with 0.48s per image: Partly correct",
+    "DPG '0.82' in text vs 80.9 in Table 5: Verified",
+    "sFID/FID superiority claims vs RDM and PixelFlow (Table 2): Verified",
+    "No matched latent control for 'similar computation' (Tables 1-2): Verified",
+    "Baseline FID absent, mechanism not isolated (Sec 4.1, Fig 5-6): Verified",
+    "T2I comparison confounded by encoder, recaption, BLIP-3o SFT (Sec 4.5): Verified",
+    "Wrong citations [21], [63], [69]: Verified",
+    "Interval [0.1,1] vs [0.3,1.0] for 512 (Table 3 vs Sec 4.4): Verified",
+    "Normalization description Eq. 10 vs Sec 4.2: Partly correct",
+    "DCT encoding Eq. 12 lacks normalization: Overstated",
+    "Arbitrary-resolution detail comes only from the field (Sec 4.5): Partly correct"
+  ],
+  "top_concerns": [
+    "No matched latent/pixel control, so 'similar computation' and 'comparable to latent' are untested (Tables 1-2); latent models stay 0.7-0.9 FID ahead at 256",
+    "Neural-field mechanism not isolated: only loss curves and one image pair against Baseline-L/16, no baseline FID, no static-head or noisy-pixel-skip control",
+    "Efficiency claims contradicted by Table 1 (memory vs ADM-G, '8x', inconsistent per-step times)",
+    "Superiority wording contradicted by Table 2 (RDM 1.99/3.99, PixelFlow 1.98) and DPG '0.82' vs 80.9",
+    "Text-to-image gains confounded by Qwen3 encoder, VLM recaptioning and BLIP-3o SFT; unfinished details ('abc steps', no hyperparameters)"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "I recognized the paper title from prior knowledge (a pixel-space neural-field diffusion transformer) but not any review or outcome, and reviewed it on its merits. The integrity scan found no injected text. Literature check (strict, cutoff 2025-09-24) could not run: arXiv returned HTTP 429 and a retry timed out, so the skill fell back to 'off'; references are marked [verify] where unsure and per-claim novelty is from knowledge only. Skill friction: Phase 1.5 is specified after the reviewers' reports, but in a single context I ran the search attempt before writing; the paper-memory/redacted copy step is trivial when the scan is clean. The EIC-weighted rating (3.54) rounds up to 4 while the composite (58.2) says band 3; both sit on boundaries, which the skill covers explicitly. The ICLR sub-scores (2/2/2) look low next to a rating of 6 because the composite is below the 62 threshold for '3 = Good'; this is a mapping quirk rather than a contradiction. Evidence quotes with symbols (e.g. '×') were copied from the extracted text. The DCT-encoding concern is marked overstated because Eq. 12 may be garbled by extraction."
+}

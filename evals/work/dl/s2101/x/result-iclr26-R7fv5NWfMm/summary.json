@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-R7fv5NWfMm",
+  "paper_type": "system",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.33,
+  "eic_pool_position": 57,
+  "before_composite": 60.1,
+  "after_composite": 59.6,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Throughput +77.4% inconsistent with Table 3 (0.62 vs 1.0 = +61%): Verified",
+    "Table 3 text percentages (47%, 45%) differ from table (45%, 47%): Verified",
+    "Abstract 'up to' 11.96x/14.06x are averages in Section 5: Verified",
+    "Saturated default (10.73 vs 12 req/s offered, 4-token outputs, smaller P95 ratios): Partly correct (DA 'artifact' wording Overstated; Figure 5 unreadable)",
+    "Makespan/load balance never evaluated: Verified",
+    "No seeds, repeats or variance anywhere: Verified",
+    "Theorem 6 proof uses Theorem 4 (an L-LRU result): Partly correct (dependency real, impact limited to the B_i - L parameterization)",
+    "Theorem 8 is the classical paging lower bound in disguise: Verified",
+    "Jaillet et al. cited only generically, not differentiated: Verified",
+    "Preble missing from references: Partly correct (absence verified, relevance from knowledge, literature check unavailable)",
+    "LBGR optimizes a different objective than the Section 3.1 model: Verified",
+    "'Consistently outperforms ... all metrics and settings' vs throughput convergence at 6+ workers: Verified",
+    "70B/Mixtral generality shown on one benchmark in main text (R3 treats as validated): Overstated",
+    "Citation mismatches (Vaswani for KV caching, Llumnix/Infinigen as routing works, SkyLB vs Skywalker): Partly correct"
+  ],
+  "top_concerns": [
+    "Headline latency/TTFT gains are measured in an apparently saturated, 4-token-output default (baseline 10.73 vs 12 req/s offered); P95 gains are far smaller",
+    "'Balances query load' and the makespan objective are never measured; the unified/joint model covers only single-worker eviction and LBGR optimizes a different objective",
+    "Single runs with no variance for a randomized algorithm; narrow baseline set (one threshold router, L-LRU only); undisclosed tuning of LBGR constants",
+    "Headline numbers inconsistent or mixed across setups (77.4% throughput vs Table 3; 'up to' vs average)",
+    "Theory is a classical paging argument embedded in a radix tree, with a proof dependency in Theorem 6 and no empirical test of the competitive ratio"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) could not run: the arXiv API returned HTTP 429 and then timed out, so no queries completed; per the skill all recommended references are marked [verify] and no script-based novelty profile, baseline scout or similarity output exists (the skill's literature_search.md covers the no-network case, but the Domain agent's per-claim novelty profile and field snapshot have no stated fallback format, so a reduced table was used). Ambiguities: (1) paper type: 'system' vs 'theoretical' vs 'empirical' is a judgment call for a paper with a theory pillar and a systems evaluation; (2) SKILL.md says the Synthesizer runs the script before the EIC, but the EIC step also says to add eic_weight and rerun, so BEFORE/AFTER runs were done as instructed in the task; (3) the venue rating label printed by the script ('4 on {0,2,4,6,8,10}') for final Overall 3 is easy to misread next to the internal 3; (4) the before_composite (60.1) sits in band 4 while the weighted composite (59.6) sits in band 3 with no script cross-check flag, which required reading the 'within 2 points of a band edge' rule by hand; (5) reviewers ran sequentially in one context, so independence is limited as the skill discloses; (6) Bash compound commands were blocked, so setup steps were run as single commands."
+}

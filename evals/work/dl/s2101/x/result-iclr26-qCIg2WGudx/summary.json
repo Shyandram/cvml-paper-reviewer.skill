@@ -1,0 +1,42 @@
+{
+  "id": "iclr26-qCIg2WGudx",
+  "paper_type": "analysis",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.32,
+  "eic_pool_position": 50,
+  "before_composite": 56.5,
+  "after_composite": 55.6,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Worked example 80%->70% gives F_true 8%, not 'about 6%' (Sec. 2): Verified",
+    "F_true attenuated by (k-1)/k under the paper's own response model, with an opposing bias from correlated difficulty (net sign unknown): Verified (derivation)",
+    "Sec. 1 defines F_true as a conditional rate, Sec. 2 as a share of all N items: Verified",
+    "No null/noise control, '+-' undefined, seeds/runs not stated: Verified",
+    "F_max differs across alpha columns for one reference model (Table 32 vs Table 28; Table 24): Verified",
+    "R1-Distill-Qwen-7B / Open Math 2 reference identities differ from text and group (Tables 12, 16, 4): Partly correct (identity inferred from matching ceilings)",
+    "Merging reduces forgetting relative to base at alpha=0.2 (Table 24 vs Table 8): Partly correct (benchmark sets differ)",
+    "'Forgetting decreases with scale' (Tables 2, 3): Partly correct (true for totals and relative to ceilings, false for Culture/Knowledge)",
+    "Sec. 3.2 text vs Table 5 on backward-transfer scaling: Verified",
+    "Sample-wise F >= net accuracy drop by construction, so Fig. 10 is not a discovery: Verified",
+    "Categories built from outcomes (App. B.2): Verified",
+    "No contamination analysis: Verified",
+    "Toneva et al. credited only in App. A: Verified",
+    "R3: strong evidence that forgetting is modest under current practice: Overstated",
+    "R2: OpenCodeReasoner/OpenMath2 citation to Bercovich et al.: Unverified (kept as question)"
+  ],
+  "top_concerns": [
+    "Chance-adjusted estimator not validated: worked example in Sec. 2 gives 8% not 6%, (k-1)/k attenuation, independence assumption; F_true definition differs between Sec. 1 and Sec. 2",
+    "No noise floor, undefined '+-', seeds/runs not stated; qualitative low/moderate/high labels have no thresholds",
+    "Forgetting and backward transfer not separated from prompt (few-shot vs zero-shot), answer-extraction and instruction-following effects",
+    "Comparative claim vs continual-learning literature (Table 1) and generalization from released checkpoints are not like-for-like; some groups mislabeled (Open Math 2, R1-Distill-Qwen-7B references)",
+    "Merging conclusion measured relative to the post-trained model with unclear alpha and inconsistent F_max (Tables 24, 28, 32)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "The arXiv API was unreachable (HTTP 429, then two timeouts), so Phase 1.5 literature check could not run in strict mode; all recommended references are knowledge-based and marked [verify], and no similarity/novelty/scout/coverage output exists. SKILL.md says the literature check follows the reviewer drafts, but the fingerprint and searches were attempted before the reports were written out (reviewers did not use any results; none were obtained). The skill's rule that Overall 4 needs pool position >=65 while the script's pool band for 55-69 is 55-61 is a small mismatch; R3/R4 were set at 65/66 and the script showed bands 55-61 for them without warnings. Figures were unavailable; judged from captions and appendix tables. Running five reviewers sequentially in one context cannot give true independence; I wrote each from the paper and paper memory only. The EIC 'weights start at 1.0' rule and the ban on penalizing role sit slightly in tension with using DA/R3 weights; I moved weights only for verified points. The compound-shell restriction in this environment forced separate script calls."
+}

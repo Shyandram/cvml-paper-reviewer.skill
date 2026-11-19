@@ -1,0 +1,12 @@
+{
+  "title": "ViscoReg: Neural Signed Distance Functions via Viscosity Solutions",
+  "method_names": ["ViscoReg", "ViscoReg (lin)", "ViscoReg (quad)"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "generalization error estimates may be obtained for Neural SDFs in terms of the training error",
+    "dynamically scaled viscous term into the training process of neural SDFs"
+  ],
+  "cutoff_date": "2025-09-24"
+}

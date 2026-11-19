@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-oCkPzCR4f4",
+  "paper_type": "benchmark",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.6,
+  "eic_rating": 2.52,
+  "eic_pool_position": 40,
+  "before_composite": 51.0,
+  "after_composite": 50.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 0.9, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Level 2 text values differ from Table 4 (ER, LMM-Score, MiMo 0.4713 vs 0.1573): Verified",
+    "Seed-1.6-VL DM LMM-Score 0.8117 (Table 3) vs 0.23 (Table 6): Verified",
+    "Table 3 InternVL-3-8B row duplicates InternVL-3.5-8B; InternVL-2.5-38B printed as 0 vs Tables 7-8: Verified",
+    "Table 5 Claude-Sonnet-4 and GPT-5 identical sub-scores: Verified",
+    "Table 2 total instructions 2,509 vs sum 2,059: Verified",
+    "Abstract 0.22 chart-quality vs Table 4 0.2506: Verified",
+    "No judge-human agreement statistic in the text: Partly correct (appendix Figs. 7-11 compare human and model scores but are not visible)",
+    "Denominator of scores unstated, conditional averaging suggested by Molmo row: Verified (inference medium)",
+    "Thinking Helps Procedural Compliance: Overstated (Qwen3-VL-30B ER drops with thinking in Table 3)",
+    "Difficulty hierarchy clear correlation (Fig. 3): Partly correct (figure not visible; extracted rows show Medium >= Easy)",
+    "Doc2Chart and Text2Chart31 uncited and relevant to Level 3: Verified from abstracts (partial overlap, not known results)",
+    "ChartMimic already has a customized-data task: Unverifiable from the kept abstract (kept as [verify])",
+    "User-driven claim lacks user evidence: Verified",
+    "Dataset licence not stated: Verified"
+  ],
+  "top_concerns": [
+    "Text, main tables and appendix tables contradict each other in many cells; two of three analysed metric anomalies are artefacts (0.8117 vs 0.23; 0.4713 vs 0.1573).",
+    "All conclusions rest on an unvalidated GPT-5-mini judge: no quantified judge-human agreement in text, no ceiling, no second judge, self-preference risk.",
+    "Score denominators unstated (Molmo-7B-D: ER 4.55% yet highest CRD LMM-Score), single run, and tiny sub-settings (CRD n=36, CFD n=108).",
+    "Level 3 results are at floor, confounded by input-length limits, and cover only five proprietary models.",
+    "Positioning: unqualified 'first' claim, uncited Doc2Chart/Text2Chart31, 'user-driven' framing without user evidence, no data licence or contamination analysis."
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check ran in strict mode (network available): 7 counted queries, 50 kept results, no high-overlap or text-overlap flags. integrity_scan.py was not run because the task limited tools to file reads and the aggregation script; I used a text search for reviewer-directed phrases instead and found none. Ambiguities: (1) the skill says the reviewers read a redacted copy, which was moot with no findings; (2) before_composite is ambiguous: before.json holds before_composite 51.0 (official composite) and an EIC composite of 50.8 (confidence-only), aggregate.json holds EIC composite 50.3; I reported 51.0 and 50.3. (3) The weighted rating 2.52 sits within 0.1 of the x.5 boundary and the composite is 0.3 above the band edge; the skill's departure rule handled it but the rating-vs-composite 'starting point' is fragile there. (4) The pool-position bands (typical rejected 42-54) and the Overall 3 vs 2 distinction are hard to apply to a paper with fixable but pervasive reporting errors. (5) Extraction garbled Fig. 2/3 text, so figure-dependent checks were hedged. (6) Running five roles in one context makes true independence impossible, as the skill discloses. (7) The ICLR label for final Overall 3 is printed as '4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})', two scales at once."
+}

@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "dimension": "resource",
+      "central": true,
+      "text": "Open real-world VRP dataset and generator with road-network distance and duration matrices for training and testing neural solvers",
+      "matches": [
+        {"title": "SVRPBench: A Realistic Benchmark for Stochastic Vehicle Routing Problem", "url": "https://arxiv.org/abs/2505.21887v2", "label": "recent preprint", "level": 3, "cited_by_paper": false},
+        {"title": "Instance generation tool for on-demand transportation problems", "url": "https://arxiv.org/abs/2208.12225v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2",
+      "dimension": "method",
+      "central": true,
+      "text": "Gated fusion of coordinate and distance-matrix embeddings with a learned adaptive bias in an attention-free module for matrix-aware neural routing",
+      "matches": [
+        {"title": "GREAT: A Graph Edge Attention Network for the Electric Vehicle Routing Problem with Asymmetric Costs", "url": "https://arxiv.org/abs/2408.16717v4", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "GASE: Graph Attention Sampling with Edges Fusion for Solving Vehicle Routing Problems", "url": "https://arxiv.org/abs/2405.12475v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "Instance-Conditioned Adaptation for Large-scale Generalization of Neural Routing Solver", "url": "https://arxiv.org/abs/2405.01906v3", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+        {"title": "EFormer: An Effective Edge-based Transformer for Vehicle Routing Problems", "url": "https://arxiv.org/abs/2506.16428v1", "label": "recent preprint", "level": 3, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3",
+      "dimension": "result",
+      "central": true,
+      "text": "State-of-the-art gap to best-known solutions among neural solvers on road-network ATSP, ACVRP and ACVRPTW",
+      "matches": [
+        {"title": "Routing Arena: A Benchmark Suite for Neural Routing Solvers", "url": "https://arxiv.org/abs/2310.04140v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true}
+      ]
+    }
+  ]
+}

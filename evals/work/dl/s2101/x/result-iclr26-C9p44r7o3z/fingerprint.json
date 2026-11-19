@@ -1,0 +1,13 @@
+{
+  "title": "Adamas: Hadamard Sparse Attention for Efficient Long-context Inference",
+  "method_names": ["Adamas", "Adamas-1bit", "Adamas-3bit"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "lightweight yet highly accurate sparse attention mechanism designed for long-context inference",
+    "matches the accuracy of full attention with only a 64-token budget",
+    "supports up to 8x higher sparsity than prior state-of-the-art"
+  ],
+  "cutoff_date": "2025-09-24"
+}

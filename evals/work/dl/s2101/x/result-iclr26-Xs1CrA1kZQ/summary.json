@@ -1,0 +1,37 @@
+{
+  "id": "iclr26-Xs1CrA1kZQ",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 47,
+  "before_composite": 52.9,
+  "after_composite": 52.0,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Crafter baseline numbers copied from papers while Sec. 5.1.2 says same configurations: Verified",
+    "SGRL planner prompt contains the full rule/tech-tree and achievement list (App. B.3.1-B.3.2); that baselines lack it is not stated: Verified (prompt content) / causal attribution untested",
+    "Baselines use DeepSeek-V3 at a reduced query rate (every 200 steps) vs DeepSeek-R1 for SGRL: Verified",
+    "Efficiency claim has no LLM-call/token counts; SGRL SPS 18.5 vs PPO 135.3 (x10^2): Verified",
+    "Eq. 3-4 schedule starts with xi=1 (no masking) contrary to the 'gradual relaxation' text: Partly correct",
+    "'Significantly outperforms all variants' without tests (Table 2 gap +3.9 vs std 2.1-2.6): Verified (MINOR)",
+    "DLLM, SPRING, DECKARD, LLM action-pruning work uncited; Achievement Distillation cited but not compared: Verified",
+    "Table 5 variant with score >= SGRL at 5M: Unverifiable (extraction garbled)",
+    "SGRL is cheap and deployable (R3): Overstated",
+    "One-game evidence (Craftax-Classic re-implements Crafter): Verified"
+  ],
+  "top_concerns": [
+    "Comparison not matched in rule knowledge, LLM (R1 vs V3) or query budget; no scripted-curriculum oracle to separate structure from supplied knowledge",
+    "Efficiency claim (low LLM calls/tokens) is never measured; SGRL is 7.3x slower than PPO by SPS",
+    "Crafter baseline numbers are copied from other papers despite 'same configurations' claim; strong non-LLM and closest LLM-Crafter baselines (Achievement Distillation, DLLM, SPRING) missing",
+    "All evidence from one game in two implementations; 'state-of-the-art' and 'open-world' framing overclaimed",
+    "Mask schedule (Eq. 3-4) under-specified and apparently inconsistent with the text; generated program, call counts and code not provided"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Ambiguities: (1) The user said 'skip confirmation' but SKILL.md Phase 1.5 literature check needs network and a fingerprint; I ran related_search.py in strict mode with at most 7 counted queries and left a 2021-2022 coverage gap. (2) The query word limit (4 concept words) made claim queries awkward and the first C1 query returned off-topic software-engineering papers. (3) Phase 1.6 asks the Synthesizer to drop weaknesses already answered, but with one shared context the 'dropped' items are ones I drafted mentally and removed; the table is therefore partly reconstructive. (4) The paper text is 536 KB with heavy whitespace, NUL bytes and figure-axis garbage; tables 4 and 5 were garbled so per-method Crafter numbers could not be verified. Bash pipes and sed on the paper needed approval, so I read it via Read/grep only. (5) The EIC step says 'read the paper briefly' but the EIC here is the same context as all reviewers, so verification is partly self-confirming. (6) Pool-position band and Overall consistency rule ('Overall 4 requires pool >= 65') was easy to follow; the script flagged no warnings. (7) The script's ICLR label for final 3 is '4 on {0,2,4,6,8,10}', which a reader could misread as the skill's Overall 4."
+}

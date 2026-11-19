@@ -1,0 +1,14 @@
+{
+  "title": "From Coarse to Fine: Recursive Audio-Visual Semantic Enhancement for Speech Separation",
+  "method_names": ["CSFNet", "Coarse-to-Separate-Fine Network", "SP fusion block", "MST separation module", "Speaker-wise Perceptual Fusion", "Multi-range Spectro-Temporal"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "recursive semantic enhancement paradigm for more effective separation",
+    "coarse audio is fed back into an audio-visual speech recognition",
+    "speaker-aware perceptual fusion block to encode speaker identity across modalities",
+    "multi-range spectro-temporal separation network to capture both local and global"
+  ],
+  "cutoff_date": "2025-09-24"
+}

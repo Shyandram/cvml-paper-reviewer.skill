@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-5Y8PMEeAkv",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.8,
+  "eic_rating": 2.75,
+  "eic_pool_position": 38,
+  "before_composite": 47.9,
+  "after_composite": 47.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "k chosen per benchmark (quote 'we used the optimal ratio for each specific benchmark', §4.2): Verified",
+    "Table 1 Qwen ZSPAPrune MMMU/GQA/POPE equal the best cells of Table 2: Verified",
+    "ZSPAPrune advantage over DivPrune fails at other swept k for GQA and POPE: Verified (MMMU holds for k<=0.8, so the MMMU claim is more robust than R1/DA implied)",
+    "No separate tuning split anywhere in paper or appendix: Verified",
+    "'Minimal accuracy loss' at 90% pruning on Qwen2.5-VL: Verified as overclaimed (POPE 85.8->69.0, TextVQA 77.9->54.9, AI2D 80.6->65.3)",
+    "Reproducibility Statement says error bars not required because inference is deterministic: Verified",
+    "Memory saving is only 1.2-1.6% and latency is worse than DivPrune: Verified",
+    "Appendix A describes model modifications: Verified as not present (Appendix A only describes the VLMs)",
+    "Table 3 '900 samples' vs Appendix B.2.1 'official test split' of 11.5K questions: Partly correct (split unclear, medium confidence)",
+    "FastV described as final-layer ViT attention while cited title says 'after layer 2': Partly correct (mechanism recalled, not checked)",
+    "Qwen2.5-VL 'cross-attention' description in Appendix A.1: Not verifiable offline, kept as a question",
+    "Prompt-awareness never tested by random-core or shuffled-prompt control: Verified",
+    "R3 S2 practical-deployment value 'clear' without data: Overstated (R3's own W1 corrects it)",
+    "Recommended references (SparseVLM, VisionZip, etc.) could not be verified, literature check offline: Unverified, all marked [verify]"
+  ],
+  "top_concerns": [
+    "ZSPAPrune's headline numbers use a per-benchmark balance coefficient k chosen on the same evaluation splits (§4.2, Table 1 = best cell of Table 2); the advantage over DivPrune disappears at many other k values (DA-C1, upheld)",
+    "Only one real baseline (DivPrune) plus a self-built relevance-only baseline; 'matches or surpasses the state-of-the-art' unsupported; no text-guided or VisionZip-type baselines",
+    "The prompt's contribution is never isolated (no random-core, shuffled-prompt or k=0 control); GQA and POPE peak at the most diversity-heavy k tested, so 'must be prompt-aware' is not shown",
+    "No variance or significance analysis (the stated reason, deterministic inference, is not valid); gains are 0.1-1.3 points absolute on Qwen and identical to DivPrune in 5 of 12 LLaVA cells",
+    "Efficiency claims overstated: one model, 1.2-1.6% memory saving, slower than DivPrune; single keep rate (90%); missing setup details and no code at submission"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "The literature check could not run: related_search.py's single strict-mode query hung until the arXiv API timed out ('arXiv API unreachable'); the skill's no-network fallback (off, references marked [verify]) was followed, so no novelty profile, similarity, scout or coverage output exists and all missing references are [verify]. SKILL.md and the Domain agent require a novelty delta table, baseline scout and field snapshot that depend on search results; the fallback wording ('build from knowledge') is workable but leaves little guidance on how much weight unverified references may carry. The integrity scan ran clean. In the DA criterion-3 decision table, the field-practice exception ('order of application') is ambiguous when a paper itself calls a split 'official test split' but another table implies a validation-sized subset (MMMU: 900 samples vs 11.5K), and for GQA test-dev; I applied the table to POPE (no validation split) and treated MMMU/GQA as softened but not exempt. The EIC step 'start every reviewer at 1.0' conflicts mildly with the need to move weights for R3's lenient praise; resolved by moving only for a verified point. The cross-check (composite band 2 vs rating 3) was within one step and not used to depart. The Phase 1.6 report-check table is written after the reports are final, so it documents changes only as a record, which is slightly artificial for a single-context run."
+}

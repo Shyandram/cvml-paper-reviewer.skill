@@ -1,0 +1,13 @@
+{
+  "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+  "method_names": ["SWE-Bench Pro", "SWE-B ENCH P RO", "SWE-Bench-Pro", "SWEBench Pro"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "substantially more challenging benchmark that builds upon the best practices",
+    "explicitly designed to capture realistic, complex, enterprise-level problems beyond",
+    "contamination-resistant testbed that more faithfully captures the complexity and diversity"
+  ],
+  "cutoff_date": "2025-09-24"
+}

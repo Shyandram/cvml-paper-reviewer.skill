@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-DqAeSBQckF",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 46,
+  "before_composite": 53.2,
+  "after_composite": 52.4,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 2 round-1 random-data gap 45.9 vs 45.2: Verified",
+    "Table 1 1B BLISS FLOPs 8.08 vs Table 4 19.53: Verified",
+    "Table 6 Pythia-160M average 44.1 vs recomputed 43.66: Verified",
+    "Text '0.8% on LogiQA' vs Table 1 gain 1.2: Verified",
+    "MATES 410M average 45.7 vs recomputed 45.59: Partly correct",
+    "'softmax weighting consistently outperforms naive weighting' vs Table 5: Verified",
+    "Lower level is a few steps, not shown converged (Alg. 1 line 9, Table 9, Sec 5.5): Verified",
+    "Softmax over (0,1) scores bounds weight ratio at e: Verified",
+    "BLISS below MATES on 3 of 9 tasks at 1B and 2 at 410M: Verified",
+    "Missing learning-to-reweight / optimal-control prior work and 'first' claim: Partly correct",
+    "Footnote 1 terms-of-service argument covers MATES's scorer: Overstated",
+    "R3 claim that the 160M-proxy transfer to 2.8B supports robustness: Partly correct"
+  ],
+  "top_concerns": [
+    "Average gains over MATES (+0.2, +0.4, +0.04/+0.64, one +1.4) are single-run and no larger than the 0.7 spread between identical random-data rounds in Table 2",
+    "The long-term/converged-lower-level claim is untested: implementation uses a few inner steps and no one-step vs multi-step ablation exists",
+    "Validation set (LAMBADA), KL term and proxy loss are confounded with the bilevel horizon; softmax over sigmoid scores bounds weight ratio at about e",
+    "Numeric inconsistencies: Table 1 1B FLOPs 8.08 vs 19.53, Table 6 average 44.1 vs 43.66, text 0.8% vs 1.2 on LogiQA",
+    "Uncited prior mechanisms (learning-to-reweight, Meta-Weight-Net, optimal-control data selection) and an overstated 'first' claim"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "The arXiv API returned HTTP 429 for all search attempts, so Phase 1.5 search/scout/coverage/similarity/novelty were skipped; only `verify` worked intermittently (3 of 4 titles confirmed, one 429). The skill says to run Phase 1.5 after the reports are drafted, but a single-pass write-up made the order nominal. The skill does not say how to report the ICLR label: aggregate.json gives '4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})' for an internal Overall of 3, which is confusing next to 'Borderline Reject'. A reviewer's Overall 4 requires pool position >=65 and composite band 4, which forced R3's scores up together; the rubric is slightly rigid there. The Report Check (Phase 1.6) has little to do in a single-context run. Shell variable use and mkdir were blocked by the sandbox, so files were created through the Write tool and absolute paths."
+}

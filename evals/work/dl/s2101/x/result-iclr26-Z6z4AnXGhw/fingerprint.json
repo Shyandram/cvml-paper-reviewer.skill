@@ -1,0 +1,13 @@
+{
+  "title": "Discovering Quality-Diversity Algorithms via Meta-Black-Box Optimization",
+  "method_names": ["LQD", "Learned Quality-Diversity", "Learned QD", "LQD (F)", "LQD (N)", "LQD (F+N)"],
+  "authors": ["Maxence Faldor", "Robert Tjarko Lange", "Antoine Cully"],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "parameterizing the competition rules using attention-based neural architectures",
+    "even when optimized solely for fitness, these algorithms naturally maintain diverse populations",
+    "meta-learning rediscovers that diversity is fundamental to effective optimization"
+  ],
+  "cutoff_date": "2025-09-24"
+}

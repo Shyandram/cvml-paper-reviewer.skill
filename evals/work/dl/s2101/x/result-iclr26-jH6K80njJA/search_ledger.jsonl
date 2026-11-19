@@ -1,0 +1,3 @@
+{"time": "2026-11-10T14:06:19+00:00", "event": "query", "source": "arxiv", "query": "aggregative questions retrieval", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T14:09:34+00:00", "event": "query_too_long", "query": "schema induction text-to-SQL documents", "concept_words": 5}
+{"time": "2026-11-10T14:09:36+00:00", "event": "query", "source": "arxiv", "query": "schema induction text-to-SQL", "purpose": "claim", "tag": "C3"}

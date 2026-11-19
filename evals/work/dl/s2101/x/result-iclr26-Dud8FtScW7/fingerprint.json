@@ -1,0 +1,12 @@
+{
+  "title": "The Quest for Efficient Reasoning: A Data-Centric Benchmark to CoT Distillation",
+  "method_names": ["DC-CoT", "DC-CoT benchmark"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "the first data-centric benchmark that investigates data manipulation in chain-of-thought",
+    "from method, model and data perspectives"
+  ],
+  "cutoff_date": "2025-09-24"
+}

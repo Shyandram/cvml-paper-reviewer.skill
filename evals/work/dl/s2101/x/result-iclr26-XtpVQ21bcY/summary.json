@@ -1,0 +1,42 @@
+{
+  "id": "iclr26-XtpVQ21bcY",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.6,
+  "eic_rating": 2.56,
+  "eic_pool_position": 40,
+  "before_composite": 48.1,
+  "after_composite": 47.8,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "'Negligible quality degradation' vs VideoLLaMA2 Table 2 (0.6635 -> 0.6189 at 20%, 0.5047 at 10%): Verified",
+    "Prefill speed-up is independent of budget (Table 3, 0.0355-0.0376 ms/token) so it comes from ST-SpAttn: Verified",
+    "5.0x is the nominal 20% budget; no measured peak memory: Verified",
+    "ROUGE (Sec 4.1) vs 'average accuracy' (App 6.3): Verified",
+    "Full-cache OS 0.1674 and LOOK-M ~0.06 indicate sub-chance / broken evaluation: Partly correct (numbers verified; option count and chance level not stated in the paper)",
+    "Table 4 ablation is on one task only: Verified",
+    "Fig. 5 selection concern (sweep values coincide with Table 2/4 Action Sequence .7588): Partly correct (coincidence verified; that the main configuration was selected from it is not stated; figure not available)",
+    "Table 3 has no comparison method despite the 'faster than the comparison method' claim: Verified",
+    "Table 5 'significantly outperforms all other baselines' (+0.0016 over SnapKV): Verified",
+    "Linformer cited as 'Linear Transformer' and Mongoose as 'Reformer': Verified",
+    "Unrelated citations used as support (knowledge tracing for sparse attention, etc.): Verified",
+    "InfiniPot-V and GemFilter uncited prior work with overlapping mechanisms: Verified (abstracts read; overlap is partial, not criterion 7)",
+    "R2 draft claim that Eq. 2 duplicates SnapKV: Overstated (downgraded to a question; abstract does not confirm)",
+    "Table 5 SnapKV = StreamingLLM = 0.4249 as a copy error: Partly correct (identical values verified; cause unknown)",
+    "Table averages recomputed for Tables 1, 2 and 7: Verified"
+  ],
+  "top_concerns": [
+    "Headline claim 'negligible quality degradation' is contradicted by Table 2 on VideoLLaMA2 (-6.7% at 20% budget, -23.9% at 10%); Table 5 'significantly outperforms' rests on +0.0016",
+    "Evaluation confined to short MVBench clips with an unclear metric (ROUGE vs accuracy), different 10-task subsets per model, a near-zero LOOK-M baseline and no CIs",
+    "Key mechanism untested: no ST-SpAttn-only control, one-task ablation, no with/without-ST-SpAttn evidence for 'purification'; correlation 0.2-0.4 presented as 'sufficient statistic'",
+    "Missing hyperparameters, selection protocol (Fig. 5 sweep on a reported task) and latency setup; Table 3 lacks any baseline",
+    "Close prior work uncited (InfiniPot-V, GemFilter) and several citations wrong or unrelated (Linformer/Mongoose, knowledge-tracing papers)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "(1) Criterion 3 was ambiguous here: a hyperparameter sweep on one reported MVBench task (Fig. 5) whose best value equals a Table 2 cell, with no statement that the main configuration came from it. I followed the decision-table row 'not stated after the protocol sweep' (MAJOR) so no DA-CRITICAL was raised; a stricter reading of the 'best-scoring and produces headline numbers' row would have raised one. (2) The pool-position bands make Overall 3 the typical-rejected label, while the same paper could be argued as Overall 2; the composite cross-check (band 2) and the weighted rating (2.56, within 0.1 of the x.5 rounding edge) disagreed, which the EIC section handles but the rule for 'near a boundary' leaves the final choice to judgment. (3) The ICLR venue label printed by aggregate_scores.py for final Overall 3 is '4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})', which reads like a borderline-accept number although the skill's internal label is Borderline Reject; the mapping is flagged 'secondary' but could confuse readers. (4) The skill orders the literature check after the five reports are drafted, but all passes share one context, so reviewers could not be kept ignorant of the search; this is disclosed in review.md. (5) related_search.py 'benchmarks' returned an empty list for this paper (MVBench/AVSD not detected), so benchmarks were scouted by hand through one multimodal-KV query. (6) The sandbox rejected shell commands that used variables or chained commands, so every script call used absolute literal paths. (7) Figures were unavailable, so Fig. 4 and Fig. 5 were judged from captions and extracted numbers only; the Fig. 5 row/column mapping is ambiguous in the extracted text."
+}

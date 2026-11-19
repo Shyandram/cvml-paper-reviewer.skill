@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-FmLGEJEvJ9",
+  "paper_type": "theoretical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 40,
+  "before_composite": 51.8,
+  "after_composite": 50.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "Node-relative sketch keys make equal substrings at different offsets differ (DA-C1, R1-W1): Verified",
+    "Hoeffding step in Lemma B.5 gives e^-2, not 1/(300k^2 log n) (R1-W2, DA-C1): Verified",
+    "Algorithm 4 threshold uses a different flip rate than Algorithm 1 line 26 (R1-ERR-3): Verified",
+    "Hamming error bound non-trivial only for eps of order log k loglog k or more (R2-W2, R4-W2, DA-M1): Verified",
+    "Remark 4.8 boosting ignores privacy composition (R1-W4, DA-M2): Verified",
+    "Constants in the exponent not absorbed by tilde-O (R1-W3, DA-M3): Verified",
+    "Union bound over adaptive LCP queries (R1-W5, DA-M4): Partly correct",
+    "Missing private-sketch related work BLIP/RAPPOR/DP-JL (R2-W1): Partly correct",
+    "Promise max_i D <= k conflicts with the intro's attack queries (R3-W2, DA-M5): Verified",
+    "No experiments as a weakness (R4-W4): Overstated",
+    "Laplace baseline sensitivity under-counted (R2-W4a): Partly correct"
+  ],
+  "top_concerns": [
+    "Edit-distance theorem not established: DP-LCP compares node-relative XOR sketches at different offsets (App. B, Alg. 3-4, Lemma B.4); upheld DA-CRITICAL",
+    "Lemma B.5's Hoeffding step evaluates to e^-2 and the Alg. 4 threshold is calibrated to a different flip rate than Alg. 1",
+    "Hamming error bound is non-trivial only for eps of order log k loglog k or more (about 69 at k=1024, about 3,200 with the algorithm's constants), yet the abstract says strong privacy",
+    "Remark 4.8 boosting ignores composition, and constants inside the exponent are not absorbed by tilde-O",
+    "Utility promise (all strings within k of the query) excludes the intro's own attack queries; related private-sketch work (BLIP, RAPPOR, DP-JL) is not discussed"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check could not run: arXiv API returned HTTP 503 (and the first call hung), so Phase 1.5 was skipped as the skill prescribes and missing references came from knowledge with [verify] on two entries. The skill is built around CV/ML empirical papers: for a pure theory paper the Experimental Validation dimension and the Protocol Sweep are mostly inapplicable, and the DA CRITICAL criteria do not list an incorrect proof of a main theorem explicitly; I mapped DA-C1 to criterion 1 (own lemma contradicted by own construction), which is an interpretation. The skill says to run the BEFORE aggregation before the EIC, but the single-context run meant scores were already fixed. The eic_composite (50.9) was used as after_composite. Also, the sandbox blocked chained shell commands and heredocs, so score files were written with the Write tool."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Mechanistic Interpretability as Statistical Estimation: A Variance Analysis of EAP-IG",
+  "method_names": ["EAP-IG variance analysis", "Mechanistic Interpretability as Statistical Estimation"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "interpretability methods such as circuit discovery should be viewed as statistical estimators",
+    "systematic stability analysis of a state-of-the-art circuit discovery method",
+    "routine reporting of stability metrics to promote a more rigorous and statistically grounded science of interpretability"
+  ],
+  "cutoff_date": "2025-09-24"
+}

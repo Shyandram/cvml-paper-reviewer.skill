@@ -1,0 +1,13 @@
+{
+  "title": "MixtureKit: A General Framework for Composing, Training, and Visualizing Mixture-of-Experts Models",
+  "method_names": ["MixtureKit", "Nile-Chat-3x4B-A6B", "Nile-Chat-2x4B-A6B"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "modular open-source framework for constructing, training, and analyzing Mixture-of-Experts",
+    "patches decoder and causal LM classes, and saves a unified checkpoint ready for inference",
+    "visualization interface to inspect per-token routing decisions, expert weight distributions"
+  ],
+  "cutoff_date": "2025-09-24"
+}

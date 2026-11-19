@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-OPFE1zPYbU",
+  "paper_type": "analysis",
+  "final_overall": 2,
+  "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+  "official_rating": 2.4,
+  "eic_rating": 2.33,
+  "eic_pool_position": 38,
+  "before_composite": 48.6,
+  "after_composite": 48.0,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Eq. 16 gives the x0-regression reading for all t, so C1 is not load-bearing for Sec. 3.3: Verified",
+    "Table 1 shows no collapse at high noise (VP t=800/900 0.00/0.00; flow t=900 0.09) while the abstract states collapse unqualified: Verified",
+    "'inversely proportional to the distance' contradicts the Gaussian-kernel weights of Eq. 22/24: Verified",
+    "Epsilon pulled out of the posterior integral in Eq. 14-15: Verified (conclusion intact)",
+    "'10 million' samples per t vs 1000 x 1000 = 1 million; '16,480' vs 16,384 latent dims: Verified (latent dim depends on the factor-8 autoencoder assumption)",
+    "Table 3 gains 2.84 / 0.36 / 0.62 FID vs best baseline: Verified; 10-step margin is small for a single run",
+    "Selection procedure for the optimized matrices is not stated; only baseline hyperparameter selection is stated: Verified (a MAJOR question, not criterion 3)",
+    "DDPM vs DDIM signal row sums differ at identical times (0.008 vs 0.005 at t=940): Verified",
+    "Sec. 5 'training-testing consistency' vs Sec. 5.5 'train-test mismatch': Verified",
+    "Optimized matrices contain large negative weights contrary to Sec. 5.2's prescription for large CFG: Verified",
+    "Table 14 rows do not sum like Table 13: Partly correct (arithmetic holds on extracted text; extraction artifact not excluded)",
+    "Reference list lacks solver-search and memorization work and these overlap C2/C3/C1: Partly correct (absence verified; overlap unverified because the literature check failed)",
+    "'without requiring ... Markov chains and SDEs' is overstated: Verified (Eq. 31 and Table 4 coefficients derive from the Markov-chain posterior)"
+  ],
+  "top_concerns": [
+    "Mechanism claims (Self Guidance explanations, Sec. 5.1-5.3, 5.5) rest on coefficient sign patterns and single qualitative images, with no controlled interventions",
+    "Only quantitative method result (Table 3, CIFAR-10 FID) has an unstated coefficient search, a single run, a larger search space than baselines and no learned-solver or UniPC baselines",
+    "Posterior-collapse analysis concerns the empirical posterior, is untested on trained models and shows no collapse at high noise, yet is used to question whether models learn the distribution",
+    "Unified 'Natural Inference' framework is numeric, approximate and holds by construction for linear samplers; 'without Markov chains/SDEs' is overstated",
+    "Closely related solver-search, unified-solver and memorization work appears uncited (from reviewer knowledge, marked [verify]; literature check failed)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict) could not run: arXiv API returned HTTP 429/503 on valid queries (one query refused for 5 concept words, one command had a path typo), so Phase 1.5 fell back to knowledge with [verify] on every external reference and the Domain Reviewer's per-claim novelty verdicts are unverified. integrity_scan.py was not run because the task's tool rules allow only file I/O, the aggregation script and related_search.py; a manual text search found no reviewer-directed text. The skill does not say what to do when the API is reachable but rate-limited (the 'no network' fallback was applied). Ambiguities: the paper type is a mix of analysis and method (chose analysis); the 'marked_verify' semantics for references when verify could not run (all marked true); the ICLR Soundness sub-score flipped 2 -> 1 between the unweighted and EIC-weighted runs because it sits at the 45-point band edge; the EIC rule that a one-step composite/rating disagreement is not a reason to depart was not exercised here. Five passes shared one model context, as the skill allows."
+}

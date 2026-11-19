@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-sKvo9ZZfpe",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.2,
+  "eic_rating": 3.16,
+  "eic_pool_position": 50,
+  "before_composite": 55.9,
+  "after_composite": 55.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Node-only and supervised baselines not retrained on the generator (Sec 6.1): Verified",
+    "MatNet/GCN absent from the ACVRPTW block (Table 1): Verified",
+    "Decoder/depth confound with MatNet; ablation internal only (Sec 5.2, Fig 4 caption): Verified (size unknown; Fig 4 unavailable)",
+    "No seeds or variance: Verified",
+    "In-distribution test shares the 1000-point city pools (Appendix A, Sec 6.1): Partly correct",
+    "Efficiency claim in Sec 6.2 vs Table 1 times: Verified",
+    "Single unified framework wording (Sec 6.1 vs 6.2): Partly correct",
+    "Population counts 50/30/20 vs Table 4: Verified",
+    "Traffic cited as the asymmetry source while traffic is deferred (Sec 3.1, footnote 3): Verified",
+    "Task, time-window and OOD-cluster definitions missing: Verified",
+    "OR-Tools cited as [61] (CP-SAT entry): Verified",
+    "[63] cited for traffic forecasting: Partly correct (title only)",
+    "ICAM / ReLD not compared: Partly correct (cited and credited; ablation missing)"
+  ],
+  "top_concerns": [
+    "Baselines not trained on the same generator data and MatNet missing for ACVRPTW, so the SOTA comparison is not controlled (Sec 6.1, Table 1)",
+    "Gain over MatNet not attributable to gating/NAB/AAFM: decoder and depth also differ and the ablation is internal only (Sec 5.2, Fig 4)",
+    "No seeds or variance; in-distribution test shares point pools with training (Sec 6.1, Appendix A)",
+    "'Real-world' is static OSRM data in 3x3 km windows at n=100 with synthetic demands and time windows, with no asymmetry statistics (Sec 4.2, Table 3)",
+    "Key definitions missing (angle matrix, cost objective, time windows, OOD-cluster construction, use of durations) and claims worded beyond Table 1"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "No injection found (integrity scan: one soft-hyphen only). Figures unavailable, so Fig. 4 claims were judged unverifiable; I initially inferred small ablation margins from extracted axis ticks and withdrew that in Phase 1.6. The skill never says what to do with a result the search labels 'prior (peer-reviewed)' whose venue evidence is dated after the cutoff (ICAM: T-ITS 2026), so I treated it as prior by its arXiv date. related_search.py novelty returns 'high' for claims with no match, while the domain agent says to cap at medium; I capped by hand. Hyphenated words like 'real-world' count as two words in the 4-word query limit. The skill's Bash steps (aggregate, related_search) work but the 'venue label' for final 3 on ICLR prints '4 on {0,2,4,6,8,10}', which reads oddly next to internal Overall 3. Paper-type choice (empirical vs dataset) for a dual dataset+method paper is not covered by the Field Analyst. The skill asks reviewers to run sequentially in one context while also requiring independence, so the DA and R1 share the protocol sweep and overlap heavily (CONSENSUS-4 items were mostly one issue). Phase order (reports first, then literature check) was followed, but reports could not use literature results, so R2's novelty reading relied on the paper's own related work plus knowledge until the addendum. The Bash tool needed approval for file redirection, so review.md was assembled by rewriting rather than concatenating parts; part1.md and part2.md are placeholder leftovers."
+}

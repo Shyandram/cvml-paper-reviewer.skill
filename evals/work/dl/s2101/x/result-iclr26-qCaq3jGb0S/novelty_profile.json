@@ -1,0 +1,40 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "dimension": "method",
+      "central": true,
+      "text": "A learned per-token, per-layer/head retention gate scored at creation time with exponential decay, used for argmin KV eviction during generation, trained by distillation plus a capacity loss with frozen LLM weights",
+      "matches": [
+        {"title": "Locret: Enhancing Eviction in Long-Context LLM Inference with Trained Retaining Heads on Consumer-Grade Devices", "url": "https://arxiv.org/abs/2410.01805v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true},
+        {"title": "A2SF: Accumulative Attention Scoring with Forgetting Factor for Token Pruning in Transformer Decoder", "url": "https://arxiv.org/abs/2407.20485v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false},
+        {"title": "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments", "url": "https://arxiv.org/abs/2504.15364v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C2",
+      "dimension": "result",
+      "central": true,
+      "text": "Under small KV budgets TRIM-KV outperforms eviction baselines and the learnable retrieval baseline SeerAttn-R on math reasoning and LongProc, sometimes exceeding the full cache",
+      "matches": [
+        {"title": "CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective", "url": "https://arxiv.org/abs/2502.03805v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3",
+      "dimension": "result",
+      "central": false,
+      "text": "Retention gates trained on long-context data maintain full-cache accuracy on LongMemEval with 25% of the KV budget and are competitive on SCBench and LongBench(-V2) under chunked prefill",
+      "matches": [
+        {"title": "Locret: Enhancing Eviction in Long-Context LLM Inference with Trained Retaining Heads on Consumer-Grade Devices", "url": "https://arxiv.org/abs/2410.01805v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C4",
+      "dimension": "result",
+      "central": false,
+      "text": "Learned retention scores recover sink, sliding-window and gist heuristics and expose layer/head roles (interpretability)",
+      "matches": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "dimension": "problem",
+      "central": true,
+      "text": "Time-consistent, token-efficient GraphRAG for question answering over temporal knowledge graphs, training-free",
+      "matches": [
+        {"title": "Beyond Single Pass, Looping Through Time: KG-IRAG with Iterative Knowledge Retrieval", "url": "https://arxiv.org/abs/2503.14234v4", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "GenTKG: Generative Forecasting on Temporal Knowledge Graph with Large Language Models", "url": "https://arxiv.org/abs/2310.07793v5", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true},
+        {"title": "Complex Temporal Question Answering on Knowledge Graphs", "url": "https://arxiv.org/abs/2109.08935v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2",
+      "dimension": "method",
+      "central": true,
+      "text": "Rule graph of entity-type event categories linked by temporally proximate edges selected by MDL",
+      "matches": [
+        {"title": "GenTKG: Generative Forecasting on Temporal Knowledge Graph with Large Language Models", "url": "https://arxiv.org/abs/2310.07793v5", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C3",
+      "dimension": "method",
+      "central": true,
+      "text": "Seeded personalized PageRank over the rule graph to select candidate events for LLM generation",
+      "matches": []
+    },
+    {
+      "id": "C4",
+      "dimension": "result",
+      "central": false,
+      "text": "+9.1% accuracy and -97.0% tokens versus MedicalGraphRAG on temporal KG QA benchmarks",
+      "matches": []
+    }
+  ]
+}

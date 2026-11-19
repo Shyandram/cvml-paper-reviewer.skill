@@ -1,0 +1,13 @@
+{
+  "title": "Rethinking Diffusion Model in High Dimension",
+  "method_names": ["Natural Inference", "Self Guidance", "Fore Self Guidance", "Mid Self Guidance", "Back Self Guidance", "weighted sum degradation", "coefficient matrix"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "the target of the objective function fitting degrades from a weighted sum of multiple samples to a single sample",
+    "mainstream inference methods can all be represented within a simple unified framework",
+    "without requiring statistical concepts such as Markov chains and SDEs"
+  ],
+  "cutoff_date": "2025-09-24"
+}

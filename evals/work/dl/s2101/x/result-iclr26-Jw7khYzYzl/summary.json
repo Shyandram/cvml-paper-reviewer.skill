@@ -1,0 +1,37 @@
+{
+  "id": "iclr26-Jw7khYzYzl",
+  "paper_type": "benchmark",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 4.0,
+  "eic_rating": 3.89,
+  "eic_pool_position": 70,
+  "before_composite": 66.3,
+  "after_composite": 65.5,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.85, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "AdEMAMix 'consistently' state-of-the-art is contradicted in places (D-Muon at 1B tokens, SOAP at 336k MoE): Verified",
+    "No seeds for loss comparisons (only wall-clock uses 5 seeds): Verified",
+    "Scheduler/final LR chosen on AdamW and applied to all optimizers (Sec 4.2) vs Takeaway 6: Verified",
+    "One-horizon tuning and unequal tuning budgets: Partly correct (AdamW received the most runs, so the inequality favors the baseline)",
+    "MoE transfer claim (Takeaway 12) overstated: Partly correct",
+    "Selection on the reported validation loss as leakage: Partly correct (true but field-standard, not criterion 3)",
+    "'First' claim vs Zhao et al. (cited) and concurrent work: Verified",
+    "Power Lines (Bergsma et al. 2025) uncited: Verified",
+    "Warmup recommendation inconsistent between Sec 4.1 (8k steps) and Sec 5 (25% of T): Verified",
+    "Model count sum 2966 vs stated 2900: Verified (derived, trivial)"
+  ],
+  "top_concerns": [
+    "Optimizer rankings rest on single runs with no variance estimates, yet are worded as 'consistent' and 'by far'",
+    "Scheduler and final-LR heuristics were chosen on AdamW and applied to all optimizers, although Takeaway 6 shows per-optimizer optima differ",
+    "Hyperparameters tuned at one near-Chinchilla horizon and reused; tuning effort and re-tuning unequal across optimizers; MoE left untuned",
+    "Claims 'first', 'transfer to MoE' and 'best suited for each scenario' overreach the 124M-720M, FineWeb, loss-only evidence",
+    "Presentation: 23 takeaways, inconsistent warmup advice; delta over Zhao et al. and concurrent Wen et al. not made explicit"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "I recognized the paper from title and content (an optimizer benchmark for LLM pretraining) and reviewed it on its merits without using any knowledge of its reviews or outcome. Skill friction: (1) The benchmark paper type has no external benchmark numbers, so the benchmarks/scout steps return nothing; the skill does not say how to handle this beyond 'not applicable'. (2) The script flagged a pool-position-versus-composite mismatch for R2 (pool 67 vs composite 67.0 mapping to the 62-72 band); the skill says to move scores or pool position without adjusting dimension scores just to silence warnings, which is somewhat contradictory; I corrected R2's pool position (67 to 70) and kept scores, so before.json carries the warning and aggregate.json does not. (3) Pool-position bands put 55-69 into one 55-61 score band while the composite-to-Overall mapping treats 60-69 as Overall 4, creating a gap. (4) The 5-word query refusals of related_search.py are not counted but cost calls. (5) Extracted PDF text interleaves multi-column figures and captions, so quotes spanning lines are fragile. Figures unavailable: numerical gaps between optimizers could not be verified, so variance-related concerns rest on text and captions."
+}

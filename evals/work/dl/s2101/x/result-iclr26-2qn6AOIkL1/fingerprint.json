@@ -1,0 +1,13 @@
+{
+  "title": "BadMoE: Backdooring Mixture-of-Experts LLMs via Optimizing Routing Triggers and Infecting Dormant Experts",
+  "method_names": ["BadMoE", "BadFFN"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "first backdoor attack against MoE-based LLMs where the attackers poison dormant experts",
+    "optimizing routing triggers and infecting dormant experts",
+    "prove the existence of a few dominating experts in MoE models"
+  ],
+  "cutoff_date": "2025-09-24"
+}

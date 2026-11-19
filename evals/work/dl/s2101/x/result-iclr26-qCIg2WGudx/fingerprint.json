@@ -1,0 +1,13 @@
+{
+  "title": "Mapping Post-Training Forgetting in Language Models at Scale",
+  "method_names": ["Ftrue", "BTtrue", "chance-adjusted forgetting", "sample-wise forgetting"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "a practical yardstick for mapping how post-training alters pretrained knowledge at scale",
+    "Forgetting one fact does not average out by recalling another",
+    "subtract the expected contribution of random guessing from pre- and post-training accuracies"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-md9nBwwmEh",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.32,
+  "eic_pool_position": 54,
+  "before_composite": 56.5,
+  "after_composite": 55.7,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "'>50% gain' is relative to zero-shot; vs best training-free baseline +7.6/+1.8/+17.5% (Table 1): Verified",
+    "Ortho-Cali ViT-H collapse (18.1/41.9) and 'consistently underperforms' contradicted for ViT-B/L: Verified",
+    "LTC-S-hat is the label-fair row and loses to Ortho-Cali on ViT-B (61.8 vs 68.1): Verified",
+    "GenderBias BT set selected on zero-shot bias, random edits cut BT 43.5/19.4/34.3 (Tables 2, 7): Partly correct",
+    "BO not best for ViT-L/H (9.8 vs 9.2; 10.1 vs 9.4): Verified",
+    "CounterAnimal gains +0.4/+0.2/+1.1 within noise: Partly correct",
+    "Section 4.1 normalization vs Section 4.2 sign argument inconsistent: Partly correct",
+    "Captioner GPT-4o (Section 6, Table 10) vs MiniCPM-V 2.6 (App. D): Verified",
+    "Interpretation evidence circular, 'fully aligned' overstated: Partly correct",
+    "Uncited head-pruning CLIP-bias prior work (Madasu et al. 2025) harms novelty: Overstated",
+    "No selection of a reported configuration on the reported test split (Waterbirds): Verified"
+  ],
+  "top_concerns": [
+    "Abstract '>50% gain' holds only vs zero-shot; vs best training-free baseline +7.6/+1.8/+17.5% (Table 1)",
+    "LTC uses labeled group validation data while TextSpan/Roboshot do not; LTC-S-hat (fair row) loses on ViT-B; no equal-supervision baseline",
+    "Ortho-Cali ViT-H collapse (WG 18.1, Avg 41.9) unexplained; 'consistently underperforms' contradicted by ViT-B/L",
+    "GenderBias worst-group (BT) selected on zero-shot bias, only gap metrics shown, BO not best for ViT-L/H; no per-group accuracy",
+    "Single deterministic runs, CounterAnimal gains within noise; interpretation evidence largely circular"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Skill was followable overall. Points of friction: (1) the paper is meant to be read in full yet Phase 1.5 literature check must come after the reports are drafted, which conflicts with writing one report file; I ran searches after forming all five analyses and before writing the file. (2) The reviewer copy from integrity_scan.py was unchanged when no injection exists, so reviewers read the original; the skill does not say whether to read the redacted file or the original in that case. (3) Phase 1.5 asks for scout/coverage/novelty scripts but a 12-query budget and no clear rule for when to stop; I ran fingerprint, 5 searches, 4 verifies, 1 scout, similarity and wrote the novelty table by hand without the novelty script. (4) quality_rubrics says an Overall 4 needs pool position >= 65 and dimension scores mostly >= 60, which pushes a mixed paper to either 3 or 4 and makes the borderline call feel forced; the EIC weighting uses confidence x weight so low-confidence accept-leaning reviewers had little pull. (5) the paper-type 'empirical' vs 'analysis' choice changes composite weights materially and the field analyst guidance gives no tie-break for method papers with an interpretability component. (6) Figures were unavailable, so interpretability claims (Figs. 3, 4, 21-28) could not be verified."
+}

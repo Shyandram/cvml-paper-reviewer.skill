@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-C9p44r7o3z",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 46,
+  "before_composite": 54.0,
+  "after_composite": 53.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.25, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "64-token 'matches full attention' claim overstated (Abstract, Table 1a, Table 6): Verified",
+    "100K passkey not near-lossless at 128 (Table 1b: 71%): Verified",
+    "8x sparsity vs Quest holds on LongBench only (Table 6): Verified",
+    "Quest above Adamas at budgets 2048 and 4096 (Table 6 means): Verified",
+    "Wang et al. 2024a bibliography entry is an image-generation paper (Section 5, References): Verified",
+    "H2O and InfLLM described as sliding-window methods (Section 5): Partly correct",
+    "Without-Hadamard 'remains below the baseline' false for Qasper (Section 4.4, Table 7): Verified",
+    "Table 4 implies Adamas selection costs far more FLOPs than Quest (page size assumed): Partly correct",
+    "No recall or oracle top-k analysis anywhere (Section 4, Appendix): Verified",
+    "R3 claim that Adamas is near-lossless at 128 on both models (Table 1): Overstated",
+    "Table 2 unit 'us' wrong: Partly correct",
+    "Figure 1 accuracy values not reproduced by Table 1: Partly correct"
+  ],
+  "top_concerns": [
+    "Abstract headline claims (64-token parity, near-lossless at 128, PPL below full attention) exceed Tables 1 and 6; 100K passkey is 71% at 128",
+    "'Prior SOTA' rests on one baseline (Quest) and two Llama-2 MHA models; token-level training-free methods (SparQ, Loki, MagicPIG, ShadowKV) are absent",
+    "Mechanism untested: no top-k recall or oracle, no quantized-inner-product control, thresholds unstated, L1 and L2 interchangeable in Table 7",
+    "Efficiency: Quest never timed, settings (batch size, units) unclear, 256 vs 1024 budget differs by about 1.7% latency in Table 2",
+    "Bibliography entry for MOA points to an image-generation paper; related-work grouping of H2O and InfLLM questionable"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "The literature check (strict mode) could not run: the arXiv API returned HTTP 429/503 and two calls timed out, so no results were kept and all recommended references are marked [verify]; the skill's no-network fallback was used. SKILL.md does not say whether a rate-limited or partially failing API counts as 'no network' or should be retried with backoff. Other friction: the skill requires a pool position of 65+ for Overall 4, so a deliberately positive Perspective reviewer needed a generous pool position; the EIC weight rules ('start at 1.0') versus the examples in the template are fine but there is no guidance on how to treat a reviewer who is wrong only on one supporting claim. Figures were unavailable, so Figure 5's per-stage speedup labels could not be interpreted. Phase 1.6 asks for a check table but reviewers and checker are the same context, so the check is not independent. The five reviewers and EIC shared one model context, as disclosed."
+}

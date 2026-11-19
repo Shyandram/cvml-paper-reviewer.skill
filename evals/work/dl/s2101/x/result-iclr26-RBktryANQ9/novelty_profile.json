@@ -1,0 +1,23 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true,
+  "text": "Use offline dataset distillation as a noise-removal step that avoids the evaluate-then-reweight feedback loop",
+  "matches": [
+   {"title": "Coresets for Robust Training of Neural Networks against Noisy Labels", "url": "https://arxiv.org/abs/2011.07451v1", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+   {"title": "Mitigating Noisy Supervision Using Synthetic Samples with Soft Labels", "url": "https://arxiv.org/abs/2406.16966v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+  ]},
+ {"id": "C1b", "dimension": "result", "central": false,
+  "text": "Offline dataset distillation gives strong privacy protection",
+  "matches": [
+   {"title": "A Comprehensive Study on Dataset Distillation: Performance, Privacy, Robustness and Fairness", "url": "https://arxiv.org/abs/2305.03355v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "Existing dataset distillers act as effective denoisers under symmetric and natural label noise",
+  "matches": [
+   {"title": "Coresets for Robust Training of Neural Networks against Noisy Labels", "url": "https://arxiv.org/abs/2011.07451v1", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "result", "central": false,
+  "text": "Distillation absorbs structured noise and loses tail-class clean samples",
+  "matches": [
+   {"title": "Distilling Long-tailed Datasets", "url": "https://arxiv.org/abs/2408.14506v2", "label": "prior (peer-reviewed)", "level": 4, "cited_by_paper": false}
+  ]}
+]}

@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-qCaq3jGb0S",
+  "paper_type": "empirical",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 4.0,
+  "eic_rating": 3.92,
+  "eic_pool_position": 70,
+  "before_composite": 63.9,
+  "after_composite": 63.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 6 text 'best across tasks and budgets' vs Thought-of-Mind 0.5k at 8192 (H2O 38.0 > TRIM-KV 32.5): Verified",
+    "Abstract 'consistently outperforms ... SCBench' vs Table 2 (Math.Find 13.80 vs 18.60, Retr.KV 0.00 vs 2.20, Code.RepoQA 4.32 vs 53.86): Verified",
+    "Full-KV 65.5 vs TRIM-KV 74.0 on AIME24 with untested 'regularization' explanation (Table 4): Verified (numbers); explanation unsupported",
+    "Trained-policy vs training-free baseline confound (R1-W2, DA-M1): Partly correct (SeerAttn-R is a trained comparator, but a different mechanism; no trained control)",
+    "Interpretability evidence from a single AIME24 example (Appendix C): Verified",
+    "'Learnable policies limited to prefilling' (R2-W1): Partly correct (accurate for Locret per Appendix B.3; DMC cited but not differentiated)",
+    "Design choices ablated on AIME24 without a stated selection protocol (DA-M3): Partly correct (no selection sentence; MAJOR question, not criterion 3)",
+    "Literal reading of Eq. 1/3 (evicted token still weight exp(0)=1): Unverifiable from extracted text (kept as a question)",
+    "Intro 'preference toward more recently generated tokens' vs Appendix A.1 'no extra recency bias': Verified",
+    "Table 8 Full-KV lcc 33.35 identical to gov_report 33.35: Verified (identical value, cause unknown)",
+    "'Even faster than SnapKV' throughput claim (Table 5): Partly correct (2 of 3 rows)",
+    "Table 7 TRIM-KV 32768 overall 48.2 vs 47.98 recomputed: Verified (0.22 difference)",
+    "Baseline collapse in Table 1 at budget 2048 indicating misconfiguration (R1-W4): Unverifiable (baseline settings not in paper)"
+  ],
+  "top_concerns": [
+    "No variance/uncertainty anywhere; 'surpasses full cache' rests on single runs, an unspecified full-cache reference and an untested 'regularization' explanation (Table 4, Table 6, Table 9)",
+    "Mechanism not isolated: task-matched trained gates vs training-free baselines, no trained learned-window control, and Locret-style / adaptive-budget baselines absent from the main generation comparison",
+    "Abstract and appendix claims exceed the tables ('consistently outperforms ... SCBench', 'best across tasks and budgets'); creation-time importance fails on retrieval-heavy tasks (Table 2)",
+    "Baseline settings undocumented and some baselines collapse implausibly at moderate budgets (Table 1, Table 6); headline 198% / 58.4% gains not reproducible from the text",
+    "Eq. 1/3 formulation ambiguity and train/inference mismatch (soft capacity loss vs hard top-M eviction); interpretability claims rest on one example"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "1) Phase 1.5 literature search: related_search.py silently returns nothing for several concept queries (more than ~3 words or strict-mode cutoff removal), and 'verify' prints no abstract, so the Hard Rule that novelty statements must match a prior work's own abstract cannot be satisfied for papers like DMC; I relied on the paper's own description of Locret and marked what could not be verified. 2) The novelty script requires URLs for matches; I first typed placeholder/guessed URLs and had to correct them from kept_results.jsonl, so the instructions should say to copy URLs only from kept results. 3) The skill asks for five reviewers in one context when delegation is not allowed; independence is only by role and I disclosed that. 4) For a positive reviewer relying on an overstated point, the EIC-weight guidance (start at 1.0, move only for a verified paper-specific reason) was workable but leaves room: I lowered R3 to 0.75 for rating resting on single-example interpretability evidence. 5) The ICLR label from the script gives two scales in one string; the 'venue_recommendation' field had to be copied verbatim. 6) Figures were unavailable, so the headline math gains (198%, 58.4%, Figure 3) were left as unverifiable rather than errors. 7) No upheld DA-CRITICAL, so the 'da_critical' list is empty in both script runs. 8) Reviewer-run recomputation (e.g., LongMemEval overall from per-type accuracies) required external knowledge of question-type counts; I validated them by reproducing the other table rows."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-euMVC1DO4k",
+  "paper_type": "empirical",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.8,
+  "eic_rating": 3.72,
+  "eic_pool_position": 68,
+  "before_composite": 62.3,
+  "after_composite": 61.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Ablation base 92.7 vs published OFT 97.1 (4.4-point gap): Verified",
+    "Abstract 'surpassing 3D-based VLAs' not supported by Table 1: Verified",
+    "Layer/PE results dominated by noise: Partly correct",
+    "3.8x training speed-up not reconcilable with Table 2: Partly correct",
+    "Table 3 inconsistent with Table 2 (alpha=0 73.2 vs base 92.7): Verified",
+    "Data-efficiency text '1%, 5%, 33%' vs Table 2 rows 1%, 5%, 100%: Verified",
+    "Layer/alpha selected on LIBERO (criterion 3 table row 2, MAJOR): Verified",
+    "Depth probe circular and 'proves' overstated: Verified",
+    "t-SNE shows representational identity preserved: Verified as unsupported",
+    "Dual-arm 42.5% with 20 trials: Partly correct",
+    "Fig. 4 'RoboTwin 2.0' vs cited original RoboTwin reference: Partly correct",
+    "Evo-0 characterised as explicit-assistance in Fig. 2(b): Partly correct",
+    "Missing required baselines from literature check: Overstated"
+  ],
+  "top_concerns": [
+    "Efficiency claims (3.8x, data efficiency) rest on a 1xH100 baseline 4.4 points below the published OFT number; 3.8x not reconcilable with Table 2",
+    "All results single-run; layer/PE/target conclusions (e.g., LIBERO-Long 83.2 / 94.2 / 84.8 across layers 16/24/32) not separable from variance",
+    "Abstract claims 'surpassing' 3D-based VLAs but Table 1 margins are +0.4/+0.8 and SF is lower on 3 cells",
+    "Layer, PE and alpha chosen on LIBERO; Table 3 inconsistent with Table 2; key implementation details and code missing",
+    "Novelty is incremental (REPA/3DRS/Geometry Forcing-style alignment transferred to VLA) and only lightly differentiated; probe and t-SNE analyses are circular or uninformative"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "I recognised the paper from its title as an existing arXiv paper but have no memory of its reviews or decision, and I reviewed it on its merits. The strict literature check's date filter and the arXiv-only index limited it: the query 'vision-language-action' counts as 3 words so 'VLA' had to be used, which returned radio-astronomy results; two later queries were refused for exceeding 4 words and no queries were rerun (C3 and benchmarks were left thin; `related_search.py benchmarks` returned an empty list for this robotics paper). The ledger prints dropped titles including post-cutoff work, which I did not open or use. The skill sets confidence-weighted EIC shares but R3 (confidence 3) with Overall 5 still moves the mean little; the 'criterion 3' table does not clearly cover benchmarks like LIBERO that have no separate validation split and no hidden test labels (simulator rollouts), so I had to judge between 'field practice' and 'benchmark with no validation split'; I chose MAJOR via the row where the main comparison holds across the sweep. Also ambiguous: the reviewer templates ask for Missing References 'verified with `verify`' but `verify` only searches arXiv, so peer-reviewed-only references cannot be confirmed. Figures were unavailable, so several numbers (Fig. 4, Fig. 5, Fig. 6) are text-extracted or unverified."
+}

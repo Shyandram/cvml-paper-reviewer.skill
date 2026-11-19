@@ -1,0 +1,6 @@
+{"time": "2026-11-10T13:46:57+00:00", "event": "query", "source": "arxiv", "query": "bilevel data selection pretraining", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:48:41+00:00", "event": "query", "source": "arxiv", "query": "influence data selection pretraining", "purpose": "claim", "tag": "C2"}
+{"time": "2026-11-10T13:51:20+00:00", "event": "query", "source": "arxiv", "query": "bilevel data selection pretraining", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:55:42+00:00", "event": "verify", "title": "Data Selection via Optimal Control for Language Models", "found": true, "url": "https://arxiv.org/abs/2410.07064v2"}
+{"time": "2026-11-10T13:57:15+00:00", "event": "verify", "title": "Learning to Reweight Examples for Robust Deep Learning", "found": true, "url": "https://arxiv.org/abs/1803.09050v3"}
+{"time": "2026-11-10T13:59:53+00:00", "event": "verify", "title": "Meta-Weight-Net: Learning an Explicit Mapping For Sample Weighting", "found": true, "url": "https://arxiv.org/abs/1902.07379v6"}

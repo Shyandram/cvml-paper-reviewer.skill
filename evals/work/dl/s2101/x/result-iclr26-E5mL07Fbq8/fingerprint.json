@@ -1,0 +1,13 @@
+{
+  "title": "Semantic Energy: Detecting LLM Hallucination Beyond Entropy",
+  "method_names": ["Semantic Energy", "Boltzmann energy"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "Boltzmann-inspired energy distribution",
+    "operating directly on logits of penultimate layer",
+    "semantic entropy relies on post-softmax probabilities and fails to capture the model's inherent uncertainty"
+  ],
+  "cutoff_date": "2025-09-24"
+}

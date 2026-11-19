@@ -1,0 +1,277 @@
+{
+  "locations": [
+    "Table 1",
+    "Table 2",
+    "Table 3",
+    "Table 4",
+    "Table 5",
+    "Table 6",
+    "Table 7",
+    "Table 8",
+    "Table 9",
+    "Table 10",
+    "Table 11",
+    "Figure 1",
+    "Figure 2",
+    "Figure 3",
+    "Section 1",
+    "Section 2.1",
+    "Section 4",
+    "Section 4.1",
+    "Section 4.2",
+    "Section 5.1",
+    "Section 5.2",
+    "Section 6",
+    "Appendix A.1",
+    "Appendix A.2",
+    "Appendix A.4",
+    "Appendix A.5",
+    "Appendix A.6",
+    "Appendix A.7",
+    "Appendix A.8",
+    "Appendix A.9",
+    "Algorithm 1",
+    "Eq. 5",
+    "Eq. 7",
+    "Eq. 8",
+    "Eq. 10",
+    "Theorem 4.2",
+    "Proposition 4.1"
+  ],
+  "quotes": [
+    "almost all the settings of the standard dataset condensation",
+    "Still, there are clear improvement margins over",
+    "our model also achieves constant memory",
+    "at most only one-third of the inner",
+    "SATM even consumes less time than MTT",
+    "SATM consistently outperforms other methods",
+    "rigorous theoretical support by bounding the errors of",
+    "carefully chosen learning rate α",
+    "In the worst case, when LCE is K-smooth but nonconvex",
+    "norm on Cifar100 with 10 IPC",
+    "Cifar100 with 3 IPC",
+    "task incremental setting",
+    "we cannot run the full batch of synthetic dataset learning",
+    "required two A6000 GPUs",
+    "are properly tuned",
+    "We repeat each method 5 times",
+    "in the setting where the synthetic trajectory is produced by",
+    "until converge",
+    "these possibilities are not explored in this work",
+    "We cite the results of DC, DM and MMT from FTD",
+    "a flat inner-loop leads to clear improvements in SATM-FI compared to both standard SATM",
+    "with comparable memory consumption",
+    "tailored loss landscape smoothing strategy",
+    "controllable memory cost",
+    "ImageWoor",
+    "ImageNeow",
+    "syntactic",
+    "Vanilla MMT",
+    "THU",
+    "Table A.7",
+    "forage",
+    "Shaprness",
+    "noticeable improvement margins"
+  ],
+  "numbers": [
+    {
+      "claim": "SATM CIFAR-10 IPC1 accuracy (Table 2)",
+      "value": "49.0±0.3",
+      "derived": false
+    },
+    {
+      "claim": "SATM CIFAR-100 IPC10 accuracy (Table 2)",
+      "value": "43.1±0.5",
+      "derived": false
+    },
+    {
+      "claim": "FTD CIFAR-100 IPC10 accuracy (Table 2)",
+      "value": "43.4±0.3",
+      "derived": false
+    },
+    {
+      "claim": "SATM minus FTD, CIFAR-100 IPC10",
+      "value": "-0.3",
+      "derived": true
+    },
+    {
+      "claim": "SATM minus best baseline, CIFAR-10 IPC50 (73.9 vs FTD 73.8)",
+      "value": "+0.1",
+      "derived": true
+    },
+    {
+      "claim": "Mean margin of SATM over best baseline across nine Table 2 cells",
+      "value": "+0.38",
+      "derived": true
+    },
+    {
+      "claim": "Number of Table 2 cells with margin <= 0.5 over best baseline",
+      "value": "7 of 9",
+      "derived": true
+    },
+    {
+      "claim": "Table 3 ImageNette/ImageWoof/ImageFruit/ImageMeow SATM minus FTD",
+      "value": "+0.5, +0.6, +0.3, +2.1",
+      "derived": true
+    },
+    {
+      "claim": "Table 4 ImageNet-1K SATM accuracy IPC 1/10/50",
+      "value": "8.9, 19.2, 29.2",
+      "derived": false
+    },
+    {
+      "claim": "Table 4 ImageNet-1K TESLA accuracy IPC 1/10/50",
+      "value": "7.7, 17.8, 27.9",
+      "derived": false
+    },
+    {
+      "claim": "Table 4 SATM minus TESLA",
+      "value": "+1.2, +1.4, +1.3",
+      "derived": true
+    },
+    {
+      "claim": "Table 5 SATM minus FTD at IPC50 on AlexNet and VGG11",
+      "value": "+3.1, +5.1",
+      "derived": true
+    },
+    {
+      "claim": "Table 5 SATM CIFAR-10 IPC50 ConvNet",
+      "value": "74.2±0.3",
+      "derived": false
+    },
+    {
+      "claim": "Table 2/9 SATM CIFAR-10 IPC50",
+      "value": "73.9±0.2",
+      "derived": false
+    },
+    {
+      "claim": "Table 5 MTT CIFAR-10 IPC10 ConvNet",
+      "value": "64.3±0.7",
+      "derived": false
+    },
+    {
+      "claim": "Table 2 MTT CIFAR-10 IPC10",
+      "value": "65.4±0.7",
+      "derived": false
+    },
+    {
+      "claim": "Table 6 CIFAR-100 memory MTT / TESLA / SATM (GB)",
+      "value": "17.1, 3.6, 5.7",
+      "derived": false
+    },
+    {
+      "claim": "SATM memory relative to TESLA on CIFAR-100 (Table 6)",
+      "value": "+58%",
+      "derived": true
+    },
+    {
+      "claim": "Table 6 CIFAR-100 runtime MTT / TESLA / SATM (s)",
+      "value": "12.1, 15.3, 12.0",
+      "derived": false
+    },
+    {
+      "claim": "Table 6 ImageNet-1K runtime MTT / TESLA / SATM (s)",
+      "value": "45.9, 47.4, 45.4",
+      "derived": false
+    },
+    {
+      "claim": "SATM runtime relative to TESLA on ImageNet-1K (Table 6)",
+      "value": "-4.2%",
+      "derived": true
+    },
+    {
+      "claim": "Table 6 ImageNet-1K memory for MTT, TESLA, SATM (GB)",
+      "value": "26.6",
+      "derived": false
+    },
+    {
+      "claim": "Table 8 CIFAR-100 accuracy at 1/6 and 1/3 retained steps",
+      "value": "23.4, 50.9",
+      "derived": false
+    },
+    {
+      "claim": "Table 8 CIFAR-10 accuracy at 1/3 and 1/2 retained steps",
+      "value": "49.0, 49.2",
+      "derived": false
+    },
+    {
+      "claim": "Table 9 CIFAR-10 IPC1 SATM-FI vs SATM",
+      "value": "48.7 vs 49.0",
+      "derived": false
+    },
+    {
+      "claim": "Table 9 SATM-FI minus SATM across eight cells",
+      "value": "-0.3, +0.8, +0.3, +0.5, +0.8, +0.5, +0.8, +0.2",
+      "derived": true
+    },
+    {
+      "claim": "Table 7 SATM-DA vs DATM on Tiny-ImageNet IPC1",
+      "value": "16.4 vs 17.1",
+      "derived": false
+    },
+    {
+      "claim": "Table 10 CIFAR-100 (1 IPC): MTT, SAM, SATM",
+      "value": "24.3, 25.7, 26.1",
+      "derived": false
+    },
+    {
+      "claim": "Table 10 Tiny-ImageNet (3 IPC): MTT, SAM, SATM",
+      "value": "10.5, 12.3, 13.6",
+      "derived": false
+    },
+    {
+      "claim": "Share of SATM gain over MTT recovered by SAM (CIFAR-100 1 IPC; Tiny 3 IPC)",
+      "value": "78%, 58%",
+      "derived": true
+    },
+    {
+      "claim": "Fraction of inner loop retained in experiments",
+      "value": "one-third",
+      "derived": false
+    }
+  ],
+  "references": [
+    {
+      "title": "Truncated Back-propagation for Bilevel Optimization",
+      "authors": "Shaban, Cheng, Hatch, Boots",
+      "year": 2019,
+      "marked_verify": false
+    },
+    {
+      "title": "Dataset Distillation with Convexified Implicit Gradients",
+      "authors": "Loo, Hasani, Lechner, Rus",
+      "year": 2023,
+      "marked_verify": false
+    },
+    {
+      "title": "Squeeze, Recover and Relabel: Dataset Condensation at ImageNet Scale From A New Perspective",
+      "authors": "Yin, Xing, Shen",
+      "year": 2023,
+      "marked_verify": false
+    },
+    {
+      "title": "Generalized Large-Scale Data Condensation via Various Backbone and Statistical Matching",
+      "authors": "Shao et al.",
+      "year": 2024,
+      "marked_verify": false
+    },
+    {
+      "title": "Dataset Distillation via Factorization",
+      "authors": "Liu, Wang, Yang, Ye, Wang",
+      "year": 2022,
+      "marked_verify": false
+    },
+    {
+      "title": "Dataset Distillation by Automatic Training Trajectories",
+      "authors": "Liu et al.",
+      "year": 2024,
+      "marked_verify": true
+    },
+    {
+      "title": "Accelerating Dataset Distillation via Model Augmentation",
+      "authors": "Zhang et al.",
+      "year": 2023,
+      "marked_verify": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-E7YpL4L4Xh",
+  "paper_type": "empirical",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.6,
+  "eic_rating": 3.56,
+  "eic_pool_position": 65,
+  "before_composite": 58.9,
+  "after_composite": 58.7,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "surpasses GPT-5 overstated (Abstract vs Table 2): Verified",
+    "section 6.4 variance-vs-accuracy tension with the thesis (Table 4): Verified",
+    "no teacher-reward arm; UniPic2 'RL w/ GPT-4.1' in Table 5: Verified",
+    "no seeds or variance anywhere in the paper: Verified",
+    "score range chosen on the benchmark without a validation split (Table 3): Verified",
+    "full-agreement filter without retention or agreement statistics (section 3.3): Verified",
+    "Qwen-72B 'falls short of 0.612' vs Table 2 0.621: Partly correct",
+    "GAE and missing KL term in Appendix C: Partly correct",
+    "judge behind Table 5 is the teacher family: Partly correct",
+    "last-step score coefficient about 0.4 in Eq. 18: Partly correct",
+    "'AI-generated' prompt note vs real photographs (Appendix H.1): Partly correct",
+    "31.2% portrait inputs and no impact or licence statement: Verified",
+    "no specialised open reward model compared in Table 2: Verified",
+    "DA-M4 criterion-3 handling (MAJOR, not CRITICAL): Verified"
+  ],
+  "top_concerns": [
+    "Central thesis (reward fidelity is the key to unlocking RL) is tested by one confounded contrast (zero-shot Qwen vs fine-tuned EditScore) with single runs; section 6.4 says variance, not accuracy, can dominate",
+    "Overclaiming: 'surpasses GPT-5' is within noise (+0.008 O, PF lower), compares a 4-pass ensemble to a single pass, and uses a score range chosen on the benchmark",
+    "RL gains are measured with VIEScore-type metrics tied to the reward and its GPT-4.1 teacher; no human study, no reward-drift or hacking analysis, no teacher-reward arm",
+    "Benchmark reliability not quantified (full-agreement filter, no retention or agreement statistics, tie handling, CIs)",
+    "No limitations, failure cases, cost accounting, or data-provenance/misuse statement (31.2% portrait images)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Skill was workable end to end. Friction: (1) Phase order requires drafting the five reports before the literature check, but the reports must then be written into one file before searches, so I wrote reports first and appended the addendum; fine but cumbersome. (2) related_search.py `benchmarks` returned an empty list for a paper whose only external benchmarks are evaluation sets in the text (GEdit-Bench-EN, ImgEdit-Bench), so scouting was manual; the arXiv-only search missed the paper's own cited benchmarks/reward models (ImagenHub, GenAI-Bench, UnifiedReward), making the novelty verdict (script says 'high' from level-2 matches) hard to trust; I adjusted C2 to medium by judgment. (3) DA criterion 3 is ambiguous for a score-range/format choice made on an author-built benchmark with no validation split: the decision table's CRITICAL row literally matches (best-scoring value, same numbers in Table 2) but the effect is <=0.002 for the headline model and does not change conclusions; I rated MAJOR using the 'conclusions hold at other sweep values' row, and the EIC agreed, but the table does not say how to treat effect size and says size is not a reason to downgrade. (4) Composite (58.7, band 3) vs rating-based start (3.56 -> 4) disagreed near a boundary, as the EIC doc anticipates. (5) Tooling: shell redirection/cat needed approval, so review.md had to be written by re-emitting content; two leftover stub files part1.md and part2.md remain in the results directory (contents say ignore). (6) Figures unavailable, so Fig. 2/3/5 claims (best-of-N, RL curves) are unverifiable and flagged as such. The skill's 'Qwen-72B short of 0.612' error (text vs Table 2 0.621) is only medium confidence because 0.612 also appears elsewhere in Table 2."
+}

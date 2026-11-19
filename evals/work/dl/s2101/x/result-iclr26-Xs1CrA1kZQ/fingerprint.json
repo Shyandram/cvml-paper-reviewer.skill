@@ -1,0 +1,13 @@
+{
+  "title": "Goal-Guided Efficient Exploration via Large Language Model in Reinforcement Learning",
+  "method_names": ["SGRL", "Structured Goal-guided Reinforcement Learning", "CodeGoal", "SGRL w/ Static-Prun", "SGRL w/o Prun", "SGRL w/o Priority"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "structured goal planner and a goal-conditioned action pruner",
+    "reusable, structured function for goal generation, in which goals are prioritized",
+    "filters out actions misaligned with the current goal"
+  ],
+  "cutoff_date": "2025-09-24"
+}

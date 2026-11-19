@@ -1,0 +1,13 @@
+{
+  "title": "Context Tuning for In-Context Optimization",
+  "method_names": ["Context Tuning", "CT-Prompt", "CT-KV", "TTT+CT-KV", "CT-V", "CT-Prefix", "In-Context Optimization", "ICO"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "initializes the trainable prompt or prefix with task-specific demonstration examples",
+    "achieves competitive accuracy to Test-Time Training with significantly higher training efficiency",
+    "enhance few-shot adaptation of language models without fine-tuning model parameters"
+  ],
+  "cutoff_date": "2025-09-24"
+}

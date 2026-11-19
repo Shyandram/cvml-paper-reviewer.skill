@@ -1,0 +1,13 @@
+{
+  "title": "Forget to Know, Remember to Use: Context-Aware Unlearning for Large Language Models",
+  "method_names": ["context-aware unlearning", "Contextual QA", "contextual utility", "Context-aware"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "users may still want the model to leverage the removed information",
+    "plug-in term that preserves the model's ability to use forgotten knowledge",
+    "restores contextual utility to near original levels"
+  ],
+  "cutoff_date": "2025-09-24"
+}

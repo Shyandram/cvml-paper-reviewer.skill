@@ -1,0 +1,43 @@
+{
+  "id": "iclr26-4fhbxglvYs",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.6,
+  "eic_rating": 2.56,
+  "eic_pool_position": 40,
+  "before_composite": 47.7,
+  "after_composite": 47.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Baselines trained under unspecified/unmatched budgets (R1-W1, DA-M1): Partly correct",
+    "Baseline anomalies in Table 8 (Restormer 16.62 dB at sigma=50, DFPIR flat ~21.5 dB): Verified",
+    "Latent prior alone +0.27 dB and super-additive interaction with 3WD (Table 6): Verified",
+    "SA/CA variants below the base model (Table 5 vs Table 6): Verified",
+    "Table 9 contradicts 'fastest across image sizes' at 512x512: Verified",
+    "Table 8 text '+2.2 dB' and 'consistently higher' vs table max +0.28 and three negative cells: Verified",
+    "Duplicated/near-duplicate cells in Table 8 BSD100 columns: Verified",
+    "Abstract 1.68 dB is not a table entry (mean of three average gains): Verified",
+    "Table 7 lowlight-outdoor PSNR gain +0.87 should be +0.03: Verified",
+    "'Without explicit task cues' contradicted by label supervision in pre-training: Overstated",
+    "FFT branch contradicts criticism of frequency heuristics: Partly correct",
+    "PromptIR/DFPIR 'manual prompt' mischaracterization: Partly correct (not verifiable without literature check)",
+    "'Unseen' degradations are combinations of seen primitives: Verified",
+    "Detection table lacks unrestored-input and clean-reference rows: Verified",
+    "Mis-attributed citations (SupCon source, MHSA via DFPIR): Partly correct",
+    "'Up to 7.40 mAP' not reproduced by Table 10: Partly correct (Fig. 1 unavailable)"
+  ],
+  "top_concerns": [
+    "Baselines were retrained by the authors under an unstated, apparently unmatched protocol, with anomalous baseline numbers (Tables 1, 8; Section 4.1)",
+    "The latent prior is not isolated: Base+LP adds only +0.27 dB and the large gains appear only with the 3WD gate; Table 5 SA/CA variants score below the no-module base (Tables 5-6)",
+    "Efficiency, linear-complexity, unseen-generalization and 'no explicit cues' claims exceed the evidence (Table 9 at 512x512, Table 4, App. C, Eq. 17)",
+    "Text-table contradictions and duplicated cells in Table 8 (+2.2 dB claimed vs max +0.28; abstract 1.68 dB is not a table entry)",
+    "No splits, seeds, variance, code, or documentation of the new 3,000-image detection set; detection table lacks no-restoration baseline"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "(1) The literature check could not be completed: the arXiv API returned HTTP 429 / timed out for the one search and one verify call that reached it, so no search results, novelty profile, similarity or baseline scout were produced; the skill's fallback (knowledge with [verify]) was followed. (2) related_search.py counts hyphenated terms such as 'all-in-one' as several concept words and refuses queries that look short (three refusals, uncharged); the guidance of '2-4 words per query' is hard to apply to AIR terminology. (3) Phase 1.5 is specified after the reports are drafted but the single-file review forces one shared context; I wrote Phase 0 plus the five reports first and appended the addendum, but all reviewers share one context and were not independent. (4) The Phase 1.6 report check and the Domain addendum edit already-written text; the skill does not say whether to show the pre-check text, so I applied corrections in place and logged them in the table. (5) The EIC-weighted rating (2.56) sat within 0.1 of the 2.5 rounding boundary and the composite band (2) disagreed with the rating-based starting point (3); the skill's near-boundary rule resolved it, but 'within 2 points of a band edge' was not met by 47.3 vs 50, so the instruction left some judgment. (6) ICLR rating label is printed on two scales ({0,2,4,6,8,10} and the older one) and the skill requires quoting both as secondary, which makes a single 'venue recommendation' ambiguous; I used the script's label string verbatim. (7) The EIC pool position is not part of scores.json, so it is only reported in the text and summary. (8) Table 4 layout was garbled by text extraction; values were read as extracted. All figures were unavailable, so figure-dependent claims (Fig. 1 detection gain, Fig. 5b t-SNE, Fig. 6 maps) were treated as unverifiable."
+}

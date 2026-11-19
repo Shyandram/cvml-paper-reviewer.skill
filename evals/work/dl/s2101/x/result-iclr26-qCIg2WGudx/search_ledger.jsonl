@@ -1,0 +1,4 @@
+{"time": "2026-11-10T14:07:43+00:00", "event": "query", "source": "arxiv", "query": "catastrophic forgetting instruction tuning", "purpose": "claim", "tag": "C3"}
+{"time": "2026-11-10T14:08:21+00:00", "event": "query_too_long", "query": "forgetting reasoning fine-tuning LLMs", "concept_words": 5}
+{"time": "2026-11-10T14:08:23+00:00", "event": "query", "source": "arxiv", "query": "forgetting reasoning fine-tuning", "purpose": "claim", "tag": "C3"}
+{"time": "2026-11-10T14:11:32+00:00", "event": "query", "source": "arxiv", "query": "example forgetting neural networks", "purpose": "claim", "tag": "C1"}

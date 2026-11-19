@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-rcmfu1ydAf",
+  "paper_type": "benchmark",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.8,
+  "eic_rating": 2.65,
+  "eic_pool_position": 45,
+  "before_composite": 54.7,
+  "after_composite": 53.8,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Emotion best-model 87.1 (Sec 4.3) vs 75.4 (Table 4, Fig 13): Verified",
+    "Table 2 caption '5 of 14' vs 4 pairs where humans top: Verified",
+    "Agreement values differ between Appendix B captions and Appendix D (Reddit, Tweet, SICK-R, SIB200, Robust04): Verified",
+    "STS22-Russian 'low agreement' claimed though Russian had a single annotator: Verified",
+    "Inconsistent high/low agreement thresholds (Toxicity 0.55, STSBenchmark 0.58): Verified",
+    "Tweet agreement 62.2% incompatible with human accuracy 84.4%: Partly correct",
+    "Human and model protocols unmatched: Partly correct",
+    "Section 4.1 category averages are English-only: Verified",
+    "Mechanism 'models exploit patterns' never tested (Sec 5.1 vs Conclusion): Verified",
+    "Russian sentiment called ambiguous (App C.1.2) yet human score 92.5: Verified",
+    "R3: findings reveal genuine cross-cultural gaps: Overstated",
+    "DA: human 4th place is within noise: Partly correct",
+    "R2: Tedeschi et al. and Northcutt et al. missing from related work: Verified",
+    "R3: no annotator compensation/consent/ethics statement: Verified"
+  ],
+  "top_concerns": [
+    "Human-vs-model comparison is not shown to be protocol-matched (humans see no labelled examples, free clusters, binary relevance; model-side MTEB protocol undocumented)",
+    "Only 20-50 items per task and 1-2 annotators, with no confidence intervals; 4th-place rank and gaps of 0.1-2.5 points are not supported",
+    "Central interpretive claims (models exploit annotation patterns where humans disagree; replace Emotion, ArXiv, STS22-Russian; cultural-knowledge advantage) are untested and rest partly on single-annotator or inconsistent agreement data",
+    "Internal numeric contradictions: Emotion best model 87.1 vs 75.4, five agreement values differ between Appendix B and D, Table 2 caption '5 of 14' vs 4, inconsistent agreement thresholds",
+    "Related work omits human-baseline, superhuman-claim and label-noise literature; no annotator compensation/consent statement"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Paper type was a judgment call (benchmark vs dataset vs analysis); I used benchmark. The skill says reviewers read a redacted copy; with no findings the copy is identical, which is fine but the step is a no-op. related_search.py: queries with 5 words are refused silently when output is filtered with grep, and the 'benchmarks' command listed nothing for MTEB, so the baseline-scout step had nothing to scout; the instruction to scout 'each external benchmark' is ambiguous when the paper's benchmark is itself the object of study. The Phase 1.6 check is described as 'record what changed' but all weaknesses were authored by the same context a moment earlier, so it mostly records rewordings. The pool-position rule (Overall 4 needs pool >= 65) forced R3's pool position up to 66 to stay consistent with its rating; the script's pool_band for R3 printed [55,61] for pool 66, which looks inconsistent with the rubric table (70-84 -> 62-72, 55-69 -> 55-61). EIC weights are asked to start at 1.0 and move only for verified reasons, which I followed; weighted rating 2.65 rounds to 3 and the composite cross-check agreed. Ten of the quoted phrases span a line break in the extracted text (and one hyphenated word), which makes exact-quote evidence checking fragile."
+}

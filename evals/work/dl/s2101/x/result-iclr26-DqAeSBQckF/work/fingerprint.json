@@ -1,0 +1,13 @@
+{
+  "title": "BLISS: A Lightweight Bilevel Influence Scoring Method for Data Selection in Language Model Pretraining",
+  "method_names": ["BLISS", "BileveL Influence Scoring"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "operates entirely from scratch, without relying on any external pretrained oracle models",
+    "explicitly accounting for the long-term impact of selected data",
+    "estimate the long-term influence of training samples if the proxy model is trained to convergence"
+  ],
+  "cutoff_date": "2025-09-24"
+}

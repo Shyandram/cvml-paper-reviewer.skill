@@ -1,0 +1,13 @@
+{
+  "title": "Mirror Mean-Field Langevin Dynamics",
+  "method_names": ["MMFLD", "mirror mean-field Langevin dynamics", "Mirror Mean-Field Langevin"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "optimization of probability measures constrained to a convex subset",
+    "uniform-in-time propagation of chaos results for its time- and particle-discretized counterpart",
+    "linear convergence guarantees for the continuous MMFLD via a uniform log-Sobolev inequality"
+  ],
+  "cutoff_date": "2025-09-24"
+}

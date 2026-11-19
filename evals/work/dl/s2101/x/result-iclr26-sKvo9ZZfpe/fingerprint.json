@@ -1,0 +1,13 @@
+{
+  "title": "RRNCO: Towards Real-World Routing with Neural Combinatorial Optimization",
+  "method_names": ["RRNCO", "Real Routing NCO", "AAFM", "Adaptation Attention Free Module", "Neural Adaptive Bias", "NAB", "Contextual Gating"],
+  "authors": ["Jiwoo Son", "Zhikai Zhao", "Federico Berto", "Chuanbo Hua", "Changhyun Kwon", "Jinkyoo Park"],
+  "arxiv_ids": [],
+  "urls": ["real-routing-nco"],
+  "distinctive_phrases": [
+    "bridge the gap of NCO between synthetic and real-world VRPs",
+    "distance and duration matrices from 100 cities",
+    "Adaptation Attention Free Module with neural adaptive bias mechanisms"
+  ],
+  "cutoff_date": "2025-09-24"
+}

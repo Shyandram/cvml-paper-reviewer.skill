@@ -1,0 +1,13 @@
+{
+  "title": "Falcon: A Cross-Modal Evaluation Dataset for Comprehensive Safety Perception",
+  "method_names": ["Falcon", "FalconEye", "Falcon-test", "Falcon-train", "Falcon dataset"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "large-scale vision-language safety dataset containing 57,515 VQA pairs across 13 harm categories",
+    "explicit annotations for harmful attributes across images, instructions, and responses",
+    "specialized evaluator fine-tuned from Qwen2.5-VL-7B using the Falcon dataset"
+  ],
+  "cutoff_date": "2025-09-24"
+}

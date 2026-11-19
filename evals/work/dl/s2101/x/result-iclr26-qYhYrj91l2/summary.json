@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-qYhYrj91l2",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.34,
+  "eic_pool_position": 52,
+  "before_composite": 55.5,
+  "after_composite": 54.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Complex-motion FVD +25.4% (1866.40 vs 1488.36) described as small in Section 5.3: Verified",
+    "Complex TransErr -7.3% and RotErr -1.1% for VividCam-Cog vs CogVideoX: Verified",
+    "VividCam-AC3D RotErr worse than AC3D on simple and composed: Verified (composed gap is tiny)",
+    "No ablation of the flow loss in Section 5.4: Verified",
+    "Eq. 5 is a frame difference, not appearance-invariant: Verified (invariance judgement is an inference)",
+    "LoRA rank 128 vs 512 inconsistency (Section 5.1 / Appendix C / Table 6): Verified",
+    "Table 4 setting unstated, full row equals Table 3 composed row: Verified",
+    "Real-data control is RealEstate10K with limited diversity (Section 5.4): Verified",
+    "Test motions equal training motion types: Partly correct (category match stated, trajectory disjointness not stated)",
+    "Dolly zoom absent from results: Partly correct (absent from captions and text; images not viewed)",
+    "Human-study protocol details missing (blinding, agreement, ratings per video): Verified",
+    "Missing motion-customization citations: Verified (mechanism overlap Partly correct)",
+    "Train/inference adapter mismatch harms results: Overstated (design fact verified, harm unmeasured)"
+  ],
+  "top_concerns": [
+    "Baselines/controls do not separate synthetic data from fine-tuning on the test motions; real-data control (RealEstate10K, Table 5) is low-diversity",
+    "Complex motions: TransErr -7.3%, RotErr -1.1% vs CogVideoX and FVD +25.4% worse, described as small; claim rests on an unqualified MTurk study",
+    "Flow loss (Eq. 5) is a frame difference, called appearance-invariant, not ablated, lambda missing",
+    "Human study lacks variance, blinding, agreement and per-method counts; $0.03 per question; no limitations or ethics statement",
+    "Medium novelty versus uncited motion/appearance adapter work (MotionDirector, Customize-A-Video, FloVD); reproducibility gaps (lambda, steps, compute, code)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check ran in strict mode (8 of 12 queries; first query hit an arXiv HTTP 429 and was retried; benchmarks command found no external benchmark, so baseline scout was skipped). The baseline-scout requirement is hard to apply to papers with a self-defined evaluation and no external benchmark. The skill says every reviewer reads the redacted copy and the EIC restores flagged text, which is a no-op when the scan is clean. Pool-position guidance (Overall 4 needs pool >= 65) and the 'start weights at 1.0' rule were followed; the choice between pool 52 for the EIC and per-reviewer positions had no explicit script field (eic_pool_position is only in summary). The venue_recommendation label for ICLR printed two scales ('4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})'), so the label is ambiguous for an Overall of 3. Sandbox blocked inline JSON/braces in shell commands, so helper files were written inside the results directory (lit_helper.py, novelty_profile.json, fingerprint.json, reviewer_copy.txt). The five reviewers shared one context, so independence is imperfect (disclosed in review.md)."
+}

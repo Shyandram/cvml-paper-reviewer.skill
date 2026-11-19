@@ -1,0 +1,13 @@
+{
+  "title": "LLM-based Automated Theorem Proving Hinges on Scalable Synthetic Data Generation",
+  "method_names": ["DoBeVi", "Dojo-BeamSearch-Visualization", "proof state exploration", "adaptive beam size"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "novel proof-state exploration approach for training data synthesis",
+    "effective one-shot fine-tuning of LLM as the policy model",
+    "trade-off between exploration and exploitation during tree search"
+  ],
+  "cutoff_date": "2025-09-24"
+}

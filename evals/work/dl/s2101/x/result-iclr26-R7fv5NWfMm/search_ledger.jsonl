@@ -1,0 +1,4 @@
+{"time": "2026-11-10T13:52:46+00:00", "event": "query_too_long", "query": "cache-aware LLM request scheduling", "concept_words": 5}
+{"time": "2026-11-10T13:52:48+00:00", "event": "query", "source": "arxiv", "query": "prefix cache LLM routing", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:54:10+00:00", "event": "query", "source": "arxiv", "query": "KV cache eviction competitive", "purpose": "claim", "tag": "C3"}
+{"time": "2026-11-10T13:56:05+00:00", "event": "query", "source": "arxiv", "query": "prefix cache LLM routing", "purpose": "claim", "tag": "C1"}

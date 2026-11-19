@@ -1,0 +1,37 @@
+{
+  "id": "iclr26-KtocialdxS",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.96,
+  "eic_pool_position": 45,
+  "before_composite": 54.1,
+  "after_composite": 53.6,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Baselines are default-sampler-budget only (no reduced-NFE or equal-latency EDM/LightningDiT): Verified",
+    "ImageNet 65.5% speedup is against the 100-NFE baseline and a 50-NFE baseline is probably faster than LowDiff: Partly correct (basis verified; the ~10.9 s figure is a linear-scaling estimate, not measured)",
+    "Abstract quality claim 'comparable or better' overclaims (worse on both CIFAR-10 FIDs): Verified",
+    "Te and sigma range chosen by FID on the reported metric, baseline untuned: Verified (MAJOR, not leakage: FID uses training statistics, small sweep, claim holds across sweep)",
+    "Training-budget arithmetic inconsistent (42/64 epochs is 65.6%, not 75%): Verified",
+    "Memory-footprint claim unsupported (no memory measured; params equal to EDM): Verified",
+    "CIFAR-10 throughput gain printed as 60.5% but printed throughputs give 62%: Verified (minor, understates gain)",
+    "'Not purposed for efficiency' contradicts reference [15] title and uncited efficiency-oriented cascades: Verified (found works differ in setting, so discussion not required comparison)",
+    "MDM [11] is structurally close to the unified-network claim C2: Partly correct (rests on recollection marked [verify]; MDM was not retrieved by the arXiv search)",
+    "Conditioning noise distribution in training is unspecified (same symbol sigma in Algorithm 1 lines 3 and 9): Verified"
+  ],
+  "top_concerns": [
+    "Central claim (same quality with far fewer steps) is never tested against an equal-latency or reduced-NFE baseline; ImageNet speed-up is quoted against 100 NFE",
+    "Single runs and FID differences of 0.04-0.10, with LowDiff worse on both CIFAR-10 FIDs, yet abstract says comparable or better",
+    "Headline Te/sigma settings chosen by FID on the same metric while the baseline is untuned; training cost not reported and epoch arithmetic inconsistent",
+    "Novelty is incremental over CDM and Matryoshka-style unified networks; positioning is asserted, not compared; 'not purposed for efficiency' conflicts with ref. [15]",
+    "Narrow scale (<=64x64 pixel space, one B-size latent DiT) against claims of generality, memory reduction and compatibility with any diffusion variant"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Skill was workable but had friction: (1) SKILL.md says the reviewers read the redacted copy, but integrity_scan with --redact wrote reviewer_copy.txt even for a clean scan; I read the original since nothing was flagged. (2) The Overall-vs-pool-position consistency rule (Overall 4 needs pool >= 65) forces a pool position of 66 for the most positive reviewer, which feels like fitting to the rule. (3) The DA criterion-3 order of application is ambiguous for generative-model FID sweeps (FID is computed against training statistics, no held-out split); I treated it as field practice plus decision-table row 2 (MAJOR). (4) related_search.py refuses queries with >4 concept words and treats hyphenated tokens as multiple words, which cost several queries; the budget counter counts only accepted queries, so the '12 queries' cap is easy to misread; a benchmark-name query for ImageNet was refused and not re-run. (5) The novelty script ranks C2 as 'high' because the arXiv search missed MDM, which the paper itself cites; the instructions have no step to add cited-but-unretrieved prior work to the profile, so I handled it in prose. (6) Phase 1.6 requires a report-check table of drafted-then-changed weaknesses, which in a single-context run means recording drafting corrections after the fact. (7) Shell variable use and mkdir/sed in the sandbox needed approval, so intermediate files were put directly in the results directory."
+}

@@ -1,0 +1,3 @@
+{"time": "2026-11-10T13:50:15+00:00", "event": "query", "source": "arxiv", "query": "optimal power flow dataset", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:51:23+00:00", "event": "query_too_long", "query": "learning optimal power flow benchmark", "concept_words": 5}
+{"time": "2026-11-10T13:51:25+00:00", "event": "query", "source": "arxiv", "query": "AC-OPF optimization proxy", "purpose": "claim", "tag": "C2"}

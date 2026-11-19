@@ -1,0 +1,23 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true,
+  "text": "Parameterize QD competition (fitness-adjustment) function with a permutation-equivariant transformer over (fitness, descriptor) and meta-learn it with a meta-ES",
+  "matches": [
+   {"title": "Discovering Attention-Based Genetic Algorithms via Meta-Black-Box Optimization", "url": "https://arxiv.org/abs/2304.03995v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true},
+   {"title": "Quality-Diversity Meta-Evolution: customising behaviour spaces to a meta-objective", "url": "https://arxiv.org/abs/2109.03918v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false},
+   {"title": "Dominated Novelty Search: Rethinking Local Competition in Quality-Diversity", "url": "https://arxiv.org/abs/2502.00593v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true}
+  ]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "Learned algorithms match or exceed MAP-Elites and Dominated Novelty Search on BBOB and robot control",
+  "matches": [
+   {"title": "Dominated Novelty Search: Rethinking Local Competition in Quality-Diversity", "url": "https://arxiv.org/abs/2502.00593v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true}
+  ]},
+ {"id": "C3", "dimension": "result", "central": false,
+  "text": "Meta-learned competition rules generalize to larger populations, higher dimension and robot control without retraining",
+  "matches": [
+   {"title": "Discovering Evolution Strategies via Meta-Black-Box Optimization", "url": "https://arxiv.org/abs/2211.11260v3", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+   {"title": "Discovering Attention-Based Genetic Algorithms via Meta-Black-Box Optimization", "url": "https://arxiv.org/abs/2304.03995v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true}
+  ]},
+ {"id": "C4", "dimension": "result", "central": false,
+  "text": "Fitness-only meta-trained competition function yields emergent population diversity",
+  "matches": []}
+]}

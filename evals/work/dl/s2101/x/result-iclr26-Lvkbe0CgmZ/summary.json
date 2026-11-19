@@ -1,0 +1,36 @@
+{
+  "id": "iclr26-Lvkbe0CgmZ",
+  "paper_type": "theoretical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.2,
+  "eic_rating": 3.02,
+  "eic_pool_position": 45,
+  "before_composite": 55.5,
+  "after_composite": 54.0,
+  "eic_weights": {"R1": 1.5, "R2": 0.75, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "D = max||grad phi(u) - grad phi(v)||^2 infinite, so M and delta_eta infinite in Theorem 4.3: Verified",
+    "Assumption 4 uses Euclidean Fisher information while Appendix B.4 needs the mirror one: Verified",
+    "Section 5 barrier violates Assumption 5(i) (dual-norm^2 = beta^2 * sum 1/x_i): Verified",
+    "Theorem 3.2 proof correct given hypotheses: Verified",
+    "First algorithm with global convergence guarantees overstated: Partly correct",
+    "Groenwall fixed point off by factor 2 after (21): Partly correct",
+    "OV00 citation does not support the mirror LSI sentence: Partly correct",
+    "Text overlap with Nitanda 2024 is shared standard phrasing, source cited: Verified",
+    "Missing references (Aubin-Frankowski et al.; Bubeck et al.): Verified"
+  ],
+  "top_concerns": [
+    "Theorem 4.3 bound is infinite under the paper's own definitions (D = max over grad phi(X) = R^d), so the uniform-in-time propagation of chaos is vacuous for constrained domains",
+    "Uniform mirror LSI assumptions (4, 8) are never verified for any instance, and Assumption 4 is stated with the Euclidean Fisher information",
+    "Single 3-dimensional experiment: no numbers, repeats or loss definition, and its barrier violates Assumption 5(i)",
+    "Headline wording (first algorithm, global guarantees, sharpest bounds) exceeds the conditional results",
+    "Theory analyses exact diffusion simulation while experiments use one Euler step; hypothesis lists and notation inconsistent"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Ran all five reviewers sequentially in one context, so independence between R1 and the DA on the D = infinity finding is only role-based (R1 flagged it MAJOR, the DA escalated it); the skill says the Methodology Reviewer shares its protocol-sweep quotes with the DA, which makes this overlap expected. The skill orders aggregation (BEFORE) before the EIC, but the EIC weights live in the same scores file, so I fixed the weights in scores.json only after writing the EIC reasoning in review.md; the sequence was therefore partly simultaneous. The literature search script refuses queries containing most of the title, so natural queries like 'constrained mean-field Langevin' had to be rephrased, and hyphenated terms such as log-Sobolev count as two words against the 4-word limit; the Bash tool also rejects pipes and heredocs, so kept results had to be read from kept_results.jsonl. 'before_composite' appears in before.json as the official composite (55.5) while the EIC-weighted composite differs (55.2 before weights); I reported 55.5 per the field name. The 'theoretical' paper type gives low weight (0.10) to Experimental Validation, yet reviewers' 0-100 experimental scores in a theory paper still pull the composite; the skill has no guidance on scoring toy experiments in theory papers. Error-audit rules say low-confidence items go to Questions, but extraction-garbled display equations make some proof-level checks (Gronwall constant, lambda in (18), exact M) unverifiable, which left me unsure whether DA-C1 should rest on partly garbled formulas; I rested it on the legible definition of D and Lemma 2.1(i). CRITICAL criteria do not clearly cover 'theorem holds but is vacuous'; I used criterion 1."
+}

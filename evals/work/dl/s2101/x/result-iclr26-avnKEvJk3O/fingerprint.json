@@ -1,0 +1,13 @@
+{
+  "title": "Transformers self-organize like newborn visual systems when trained in prenatal worlds",
+  "method_names": ["ViT-CoT", "Vision Transformer with Contrastive Learning through Time"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "transformers spontaneously developed the same structure as newborn visual systems",
+    "space-time fitting transformers that also learn through unsupervised temporal learning",
+    "the organization of newborn visual systems emerges spontaneously when transformers adapt to a prenatal visual world"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,26 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "method", "central": true,
+      "text": "A pipeline that mines desktop GUI interaction trajectories from unlabeled screen-recorded tutorial videos without manual annotation, yielding 1.52M steps from 39k videos",
+      "matches": [
+        {"title": "TongUI: Internet-Scale Trajectories from Multimodal Web Tutorials for Generalized GUI Agents", "url": "https://arxiv.org/abs/2504.12679v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "AgentTrek: Agent Trajectory Synthesis via Guiding Replay with Web Tutorials", "url": "https://arxiv.org/abs/2412.09605v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "method", "central": true,
+      "text": "Video2Action: a VLM-based inverse dynamics module with dense action-event detection and action parameterization (click coordinates, typed text) from screen video",
+      "matches": [
+        {"title": "TongUI: Internet-Scale Trajectories from Multimodal Web Tutorials for Generalized GUI Agents", "url": "https://arxiv.org/abs/2504.12679v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "result", "central": true,
+      "text": "Continued pretraining on mined trajectories raises OSWorld-Verified success from 9.3% to 15.8% and AgentNetBench step accuracy from 64.1% to 69.3% for a 7B model",
+      "matches": [
+        {"title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments", "url": "https://arxiv.org/abs/2404.07972v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 1, "cited_by_paper": true}
+      ]
+    }
+  ]
+}

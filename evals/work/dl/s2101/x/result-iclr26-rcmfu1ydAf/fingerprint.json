@@ -1,0 +1,13 @@
+{
+  "title": "HUME: Measuring the Human-Model Performance Gap in Text Embedding Tasks",
+  "method_names": ["HUME", "Human Evaluation Framework for Text Embeddings"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "human performance across 16 MTEB datasets spanning reranking, classification, clustering, and semantic textual similarity",
+    "Humans achieve an average performance of 77.6% compared to 80.1% for the best embedding model",
+    "an extensible evaluation framework that enables a more meaningful interpretation of the model"
+  ],
+  "cutoff_date": "2025-09-24"
+}

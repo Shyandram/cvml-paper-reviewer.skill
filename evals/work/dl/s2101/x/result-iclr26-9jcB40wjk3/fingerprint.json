@@ -1,0 +1,12 @@
+{
+  "title": "SAFA-SNN: Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network",
+  "method_names": ["SAFA-SNN", "SAFA", "Sparsity-Aware and Fast Adaptive SNN", "Sparsity-Aware Dynamic SNN"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "sparsity-conditioned neuronal dynamics, in which most neurons remain stable while a subset stays active",
+    "enhance the discriminability of new classes through subspace projection"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "On Differentially Private String Distances",
+  "method_names": ["DPHammingDistance", "DPEditDistance", "DPLCP"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": ["novel adaptation of the randomized response technique as a bit flipping procedure"],
+  "cutoff_date": "2025-09-24"
+}

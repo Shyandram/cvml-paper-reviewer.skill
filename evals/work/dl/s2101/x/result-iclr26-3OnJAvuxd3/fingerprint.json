@@ -1,0 +1,13 @@
+{
+  "title": "Structured Attention Matters to Multimodal LLMs in Document Understanding",
+  "method_names": ["structure-preserving approach", "structured text", "structured attention"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "raw OCR text often impairs rather than improves MLLMs",
+    "structured text induces structured attention patterns on both textual and visual content",
+    "encodes document elements using the LaTeX paradigm"
+  ],
+  "cutoff_date": "2025-09-24"
+}

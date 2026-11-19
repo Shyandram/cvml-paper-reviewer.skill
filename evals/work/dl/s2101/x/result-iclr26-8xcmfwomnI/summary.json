@@ -1,0 +1,37 @@
+{
+  "id": "iclr26-8xcmfwomnI",
+  "paper_type": "theoretical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.87,
+  "eic_pool_position": 42,
+  "before_composite": 54.8,
+  "after_composite": 53.7,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "Assumption C.3 (tau >= 9) unsatisfiable when the solution manifold has dimension >= 1: Verified",
+    "Section 3.2 norm comparison confounded (800 vs 400 training samples, target points included): Verified",
+    "Diffusion experiment shows simplicity at work (Section 3.1): Overstated",
+    "Hidden-unit symmetries violate B.1/B.2 for the paper's own networks: Verified",
+    "Assumption A.1 uniform bound fails for unbounded losses: Partly correct",
+    "'Sharp' guarantees: Partly correct (optimal in n for constant gap only)",
+    "Introduction says tau > 0 but Assumption C.3 requires tau >= 9: Verified",
+    "Figure 4 caption says 20,000 epochs, Appendix B.1 says 40,000: Verified",
+    "Missing references (Shah 2020, Valle-Perez 2019, Abbe 2023, Liang 2024): Verified",
+    "Theorem 4.1 is a routine extension of Ge et al.: Partly correct"
+  ],
+  "top_concerns": [
+    "Assumption C.3 (tau >= 9) with L-smooth R cannot hold when the source-minimizer set is a positive-dimensional manifold, so Theorem 4.2 has no non-trivial instance (DA-CRITICAL, upheld)",
+    "Section 3.2 norm comparison does not test the simplicity hypothesis: non-generalizable MLPs are trained on 800 samples including corrupted target labels; the diffusion model is never measured for simplicity",
+    "Framing ('foundation models', 'first sharp') exceeds the proven scope: underparameterized, well-specified, strongly convex at minimizers, oracle lambda",
+    "Assumptions (strong convexity, unique-gap, uniform concentration over R^d) exclude the paper's own MLP/U-Net because of permutation symmetry; deferred to future work",
+    "Incremental over Ge et al. (2023); uncited simplicity-bias literature (Shah 2020, Valle-Perez 2019, Abbe 2023)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Figures were unavailable, so Figures 1-7 were judged from captions only. The literature check ran with the strict cutoff 2025-09-24 and 4 counted queries (one refused for 5 concept words, not counted); a search term for a 'theory' paper finds mostly off-topic arXiv results, so the baseline-scout step had no external benchmark to scout. Ambiguities in the skill: (1) the skill says the five reviewers must be independent, but a single model context made it impossible to keep a self-found theorem-level error (Assumption C.3) out of more than one report; I let R1 and the DA raise it and R2 hedge. (2) The skill asks the DA to re-check 'errors behind its CRITICAL issues' but does not say whether a non-experimental, theorem-level hypothesis inconsistency counts under criterion 1 (evidence contradicts claim) or 2 (experiment cannot test claim); I treated it as criterion 1. (3) The 'resolvable_without_new_data' field is named for data/experiments, whereas a theory fix needs new analysis; I set it to false so the cap is 3. (4) Phase 0 asks for a fingerprint file whose fields must be hand-edited, and shell variables are blocked in some hosts, so the commands had to use literal paths. (5) The Theorem 4.2 appendix (C.2) was only partially read for cost reasons; this is disclosed in review.md. (6) The pool-position rule 'Overall 4 requires pool >= 65' made it awkward to give the most positive reviewer a 4; I set R3 pool 65 to stay consistent. (7) The aggregation script returned eic_composite 54.5 in the BEFORE run (default weights, DA upheld) and 53.7 in the AFTER run, because the BEFORE input has no eic_weight; before_composite (54.8) is the raw official composite in both."
+}

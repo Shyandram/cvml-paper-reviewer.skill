@@ -1,0 +1,13 @@
+{
+  "title": "Prompt reinforcing for long-term planning of large language models",
+  "method_names": ["RPO", "Reinforced Prompt Optimisation", "Reinforced Prompt Optimization", "RPOTD", "RPO_TD"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "prompt optimisation framework inspired by reinforcement learning",
+    "generating turn-by-turn feedback and leveraging experience replay for prompt rewriting",
+    "reinforcement learning-inspired parameter-free optimisation methods"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,703 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Hamming error scales like k log k for small epsilon, so accuracy is not meaningful",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Algorithmic novelty unclear: non-private approach adapted plus randomized response",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Error bounds near trivial k unless epsilon very large, for Hamming and edit distance",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No lower bounds provided",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Hidden constants and log factors in bounds not reasoned about",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Neighboring notion restrictive: one bit differs, record-level rather than person-level privacy",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Hamming algorithm is pre-existing algorithm plus randomized response; low novelty",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Edit distance algorithm not described in main body despite available space",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Boosting remark ignores that epsilon must be split across copies",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Authors resubmitted essentially same paper ignoring previous reviewers' comments",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Motivation lacks plausible settings where privacy notion makes sense; DNA protection weak",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Nontrivial accuracy only for very large epsilon; no useful setting identified",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Assumption all strings within k of query forces dataset strings to be nearly identical",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Error bound meaningless for typical epsilon; o(k) error needs unrealistically large epsilon",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Trivial estimator outputting zero has smaller error with no preprocessing",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Related work on private similarity sketches missing; novelty of bit-flipping sketches overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No comparison with simpler baselines like JL private sketch or input randomized response",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Trivial data-independent answer beats the bound unless epsilon very large; regime unstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No lower bound reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Promise that every database string is within k of query is overly strong",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Behavior for queries violating promise unstated; intro attack examples violate it",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Laplace baseline sensitivity under-counted, so claimed gap is misstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "DP related-work list includes unrelated applications and reads as padding",
+   "minor": true
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Claim of first noisy-LCP-based edit distance algorithm is unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Sketches at different offsets not shift-invariant; Lemma B.4 and Theorem 5.1 unproven",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Hoeffding step in Lemma B.5 has arithmetic error; required failure probability not established",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "DP-LCP threshold inconsistent with actual flip probability used",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "For large epsilon threshold below 1 falsely rejects identical strings too often",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Constants inside exponent dropped; stated error bounds stronger than proofs give",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Boosting ignores privacy composition; no boosting argument for edit distance",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Adaptive LCP queries invalidate union bound in Lemma 5.8",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "LCP query counts inconsistent across Lemma 5.5, Lemma 5.8 and Algorithm 2",
+   "minor": true
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "Utility only per fixed query; adaptive adversary seeing public hashes not covered",
+   "minor": false
+  },
+  {
+   "id": "Q2.10",
+   "reviewer": "Q2",
+   "text": "Storage of random hash functions not counted in space bound",
+   "minor": false
+  },
+  {
+   "id": "Q2.11",
+   "reviewer": "Q2",
+   "text": "Minor errors: recurrence typo, Dham defined with equality, epsilon=0 query, Init time, t definition",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Weak venue fit: no learning component and no experiments",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Main text lacks technical overview of edit-distance idea; key proofs deferred",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Abstract overstates \"strong privacy\" and \"exponentially small\" error, valid only for large epsilon",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Notation and statement slips (Dham equality, indices, typos, swapped indexes)",
+   "minor": true
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "No empirical sanity check simulation of the algorithm",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Bit-level privacy notion does not match patient-level medical/genomic threat model",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Utility promise excludes paper's own attack examples; output outside promise unstated",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Practical epsilon regime not discussed; no numeric error versus epsilon instance",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Alternatives like cryptographic protocols, RAPPOR, DP-JL sketches not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Lemma B.4 contradicted by node-relative keys; Theorem 5.1 and 1.2 not established",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Lemma B.5 Hoeffding step gives constant, not required failure probability",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Test threshold uses different flip rate than Algorithm 1",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "\"Strong privacy\" and \"exponentially small\" claims hold only for large epsilon; bound exceeds trivial",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Boosting copies ignore composition; Theorem 1.2 success probability unargued",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "Constants in exponent not absorbed by Õ; bounds stronger than proved",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "Adaptive queries under union bound invalid in Lemma 5.8",
+   "minor": false
+  },
+  {
+   "id": "Q5.8",
+   "reviewer": "Q5",
+   "text": "Promise restricts to clustered databases",
+   "minor": false
+  },
+  {
+   "id": "Q5.9",
+   "reviewer": "Q5",
+   "text": "Behavior outside promise unspecified; intro attack queries violate it",
+   "minor": false
+  },
+  {
+   "id": "Q5.10",
+   "reviewer": "Q5",
+   "text": "Utility only for non-adaptive queries with public hash functions",
+   "minor": false
+  },
+  {
+   "id": "Q5.11",
+   "reviewer": "Q5",
+   "text": "Presentation slips: Dham equality, recurrence, t definition, probability vs expectation, Init time",
+   "minor": true
+  },
+  {
+   "id": "Q5.12",
+   "reviewer": "Q5",
+   "text": "Lemma 4.5 union-bound constant slightly off, probability below 0.5",
+   "minor": false
+  },
+  {
+   "id": "Q5.13",
+   "reviewer": "Q5",
+   "text": "Lemma 4.4-4.6 hash definition on positions mismatches keys hashed by Algorithm 1",
+   "minor": false
+  },
+  {
+   "id": "Q5.14",
+   "reviewer": "Q5",
+   "text": "Query counts disagree across lemmas and algorithm",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Error bounds trivial/meaningless unless epsilon very large; trivial estimator better",
+    "points": [
+     "P1.1",
+     "P2.1",
+     "P3.2",
+     "P4.2",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Low algorithmic novelty: known sketch plus randomized response",
+    "points": [
+     "P1.2",
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No lower bounds",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Hidden constants and log factors ignored",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Bit-level neighboring notion too weak (record vs person level)",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Edit distance algorithm absent from main body",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Boosting ignores epsilon splitting",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Resubmission ignoring prior reviews",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Unclear motivating settings for privacy notion",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Within-k promise forces near-identical dataset strings",
+    "points": [
+     "P4.1"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Missing related work on private sketches and alternatives; novelty overstated",
+    "points": [
+     "Q1.1",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No comparison to simpler private baselines",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Bound nontrivial only for large epsilon; overclaims; regime unstated",
+    "points": [
+     "Q1.3",
+     "Q3.3",
+     "Q4.3",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No lower bound",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Clustered-database promise too strong",
+    "points": [
+     "Q1.5",
+     "Q5.8"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Behavior outside promise unspecified",
+    "points": [
+     "Q1.6",
+     "Q4.2",
+     "Q5.9"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Laplace baseline sensitivity miscounted",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Related-work padding",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "First noisy-LCP claim unsupported",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Sketch not shift-invariant; edit-distance theorem unproven",
+    "points": [
+     "Q2.1",
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Hoeffding arithmetic error in Lemma B.5",
+    "points": [
+     "Q2.2",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Threshold vs flip-rate mismatch",
+    "points": [
+     "Q2.3",
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "False rejection at large epsilon",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Constants in exponent dropped",
+    "points": [
+     "Q2.5",
+     "Q5.6"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Boosting ignores privacy composition",
+    "points": [
+     "Q2.6",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Adaptive queries break union bound",
+    "points": [
+     "Q2.7",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Inconsistent query counts",
+    "points": [
+     "Q2.8",
+     "Q5.14"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Utility not robust to adaptive adversary with public hashes",
+    "points": [
+     "Q2.9",
+     "Q5.10"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Hash storage omitted from space bound",
+    "points": [
+     "Q2.10"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Notation and statement slips",
+    "points": [
+     "Q2.11",
+     "Q3.4",
+     "Q5.11"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Weak ICLR venue fit",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No technical overview of edit-distance in main text",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "No empirical sanity check",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Privacy notion mismatched with threat model",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Lemma 4.5 constant off",
+    "points": [
+     "Q5.12"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Hash key definition mismatch in Lemmas 4.4-4.6",
+    "points": [
+     "Q5.13"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI24"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI22"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI15"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI24",
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  }
+ ]
+}

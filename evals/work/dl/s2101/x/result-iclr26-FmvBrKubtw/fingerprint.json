@@ -1,0 +1,9 @@
+{
+  "title": "Negotiated Reasoning: On Provably Addressing Relative Over-Generalization",
+  "method_names": ["SVNR", "Stein Variational Negotiated Reasoning", "Negotiated Reasoning", "negotiated reasoning", "NR", "SVNR-F", "SVNR-M", "Max Of Three", "Particle Gather", "PRO", "ERO"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": ["provably avoids RO in MARL under maximum entropy policy iteration", "consistent reasoning requirement under certain conditions", "Stein variational gradient descent to derive a negotiation policy"],
+  "cutoff_date": "2025-09-24"
+}

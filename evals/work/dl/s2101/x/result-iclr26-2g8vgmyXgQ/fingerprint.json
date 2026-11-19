@@ -1,0 +1,13 @@
+{
+  "title": "Provable In-Context Learning of Nonlinear Regression with Transformers",
+  "method_names": ["non-degenerate L-Lipschitz", "flat L-regime", "sharp L-regime"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "stage-wise dynamics of attention during training",
+    "attention to irrelevant features decays more slowly and exhibits oscillatory behavior",
+    "query tokens consistently attend to prompt tokens with highly relevant features at convergence"
+  ],
+  "cutoff_date": "2025-09-24"
+}

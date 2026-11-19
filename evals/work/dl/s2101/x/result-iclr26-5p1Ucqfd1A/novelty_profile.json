@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "problem", "central": true,
+      "text": "First benchmark for wearable-device multimodal question answering with retrieval augmentation",
+      "matches": [
+        {"title": "MMSearch: Benchmarking the Potential of Large Models as Multi-modal Search Engines", "url": "https://arxiv.org/abs/2409.12959v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "Visual-RAG: Benchmarking Text-to-Image Retrieval Augmented Generation for Visual Knowledge Intensive Queries", "url": "https://arxiv.org/abs/2502.16636v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false},
+        {"title": "EgoBlind: Towards Egocentric Visual Assistance for the Blind", "url": "https://arxiv.org/abs/2503.08221v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "resource", "central": true,
+      "text": "Dataset of 6.5K single-turn questions and 2K multi-turn conversations over 13 domains with 6.2K egocentric images and controlled quality, type and popularity slices",
+      "matches": [
+        {"title": "Can Pre-trained Vision and Language Models Answer Visual Information-Seeking Questions?", "url": "https://arxiv.org/abs/2302.11713v5", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "EgoBlind: Towards Egocentric Visual Assistance for the Blind", "url": "https://arxiv.org/abs/2503.08221v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+        {"title": "OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge", "url": "https://arxiv.org/abs/1906.00067v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "resource", "central": false,
+      "text": "Mock image-KG and web search APIs with fixed corpora for fair comparison of multimodal RAG pipelines",
+      "matches": [
+        {"title": "MMSearch: Benchmarking the Potential of Large Models as Multi-modal Search Engines", "url": "https://arxiv.org/abs/2409.12959v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "Visual-RAG: Benchmarking Text-to-Image Retrieval Augmented Generation for Visual Knowledge Intensive Queries", "url": "https://arxiv.org/abs/2502.16636v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C4", "dimension": "result", "central": false,
+      "text": "Simple RAG and industry systems reach about 32% single-turn and 43-45% multi-turn truthfulness",
+      "matches": [
+        {"title": "EgoBlind: Towards Egocentric Visual Assistance for the Blind", "url": "https://arxiv.org/abs/2503.08221v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

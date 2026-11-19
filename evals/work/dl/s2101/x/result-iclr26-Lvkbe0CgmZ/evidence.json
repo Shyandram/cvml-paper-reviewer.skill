@@ -1,0 +1,58 @@
+{
+  "locations": [
+    "Abstract", "Section 1", "Section 1.1", "Section 1.2", "Section 2.1", "Section 2.2", "Section 3", "Section 4", "Section 4.1", "Section 4.2", "Section 4.3", "Section 5", "Section 6",
+    "Appendix A", "Appendix B.1", "Appendix B.2", "Appendix B.3", "Appendix B.4", "Appendix B.5", "Appendix B.6",
+    "Lemma 2.1", "Lemma 2.1(i)", "Theorem 2.2", "Theorem 3.1", "Theorem 3.2", "Theorem 4.1", "Theorem 4.3", "Lemma 4.2", "Lemma B.1", "Lemma B.2",
+    "Assumption 1", "Assumption 2", "Assumption 3", "Assumption 4", "Assumption 5", "Assumption 5(i)", "Assumption 6", "Assumption 7", "Assumption 8",
+    "Algorithm 1", "Algorithm 1 line 5", "Figure 1", "Figure 1(d-f)",
+    "Eq. (6)", "Eq. (11)", "Eq. (12)", "Eq. (13)", "Eq. (18)", "Eq. (19)", "Eq. (20)", "Eq. (21)"
+  ],
+  "quotes": [
+    "the problem for general X has remained open",
+    "the first algorithm minimizing (1) with global convergence guarantees",
+    "constitute the sharpest",
+    "The proof, which mirrors that of ordinary MFLD",
+    "It is straightforward to see that the proof of",
+    "The arguments of [Nit24, Appendix A] directly hold over",
+    "except without the modifier",
+    "when c1 = 0 and D = ∞",
+    "Suppose Assumptions 2, 6-8 hold",
+    "Now using Assumptions 5, 7, and (16)",
+    "barrier preventing collapse towards the boundary",
+    "To avoid this trivial failure case",
+    "MMFLD is able to achieve significantly smaller loss",
+    "thus demonstrating higher stability and optimality for constrained optimization",
+    "indicate that the trivial one-step discretization generally suffices",
+    "the stronger mirror LSI may not hold",
+    "Both algorithms are run using 50K particles",
+    "that (13) corresponds to the following Fokker-Planck PDE",
+    "Sqrt(d) dimension dependence of Langevin Monte Carlo",
+    "An important direction for future work is to generalize to the mirror Poincaré setting",
+    "(7) admits a minimizer",
+    "MFLD exhibits accumulation of mass along the boundary characteristic of projection methods",
+    "as this ensures the diffusion remains inside the domain"
+  ],
+  "numbers": [
+    {"claim": "Number of particles in the Section 5 experiment", "value": "50K", "derived": false},
+    {"claim": "Dimension of the simplex in the Section 5 experiment", "value": "d = 3", "derived": false},
+    {"claim": "Step size in the Section 5 experiment", "value": "η = 3 × 10−3", "derived": false},
+    {"claim": "Temperature in the Section 5 experiment", "value": "λ = 0.1", "derived": false},
+    {"claim": "Barrier strength in Figure 1(d-f)", "value": "β = 10−4", "derived": false},
+    {"claim": "Continuous-time rate in Theorem 3.2", "value": "e^{−2 C_LSI λ t}", "derived": false},
+    {"claim": "Discrete-time rate in Theorem 4.3", "value": "exp(−C_LSI λ η k)", "derived": false},
+    {"claim": "Particle approximation bound in Theorem 4.1", "value": "L R^2 / (2N)", "derived": false},
+    {"claim": "Fixed point of the Gronwall step recomputed from (20) and (21): N δ_η / (C_LSI λ) versus the printed N δ_η / (2 C_LSI λ), a factor 2 (medium confidence, display partly garbled)", "value": "factor 2", "derived": true},
+    {"claim": "Dual-norm squared of the barrier gradient for the entropy mirror map, with [∇²ϕ]^{-1} = diag(x_i): β² Σ_i 1/x_i, unbounded as x_i → 0", "value": "β² Σ 1/x_i", "derived": true},
+    {"claim": "D = max ||∇ϕ(u) − ∇ϕ(v)||² is infinite because ∇ϕ(X) = R^d (Lemma 2.1(i)), so M and δ_η are infinite", "value": "D = ∞", "derived": true},
+    {"claim": "Official mean of reviewer Overall ratings", "value": "3.20", "derived": true},
+    {"claim": "EIC-weighted rating", "value": "3.02", "derived": true},
+    {"claim": "Literature check queries run (6 claim, 1 expansion)", "value": "7", "derived": true}
+  ],
+  "references": [
+    {"title": "Mirror Descent with Relative Smoothness in Measure Spaces, with application to Sinkhorn and EM", "authors": "Pierre-Cyril Aubin-Frankowski, Anna Korba, Flavien Léger", "year": 2022, "marked_verify": false},
+    {"title": "Sampling from a log-concave distribution with Projected Langevin Monte Carlo", "authors": "Sébastien Bubeck, Ronen Eldan, Joseph Lehec", "year": 2018, "marked_verify": false},
+    {"title": "Wasserstein Mirror Gradient Flow as the limit of the Sinkhorn Algorithm", "authors": "Nabarun Deb, Young-Heon Kim, Soumik Pal, Geoffrey Schiebinger", "year": 2023, "marked_verify": false},
+    {"title": "Large-scale concentration and relaxation for mean-field Langevin particle systems", "authors": "Songbo Wang", "year": 2025, "marked_verify": false},
+    {"title": "Exponential ergodicity of mean-field Langevin dynamics by synchronous coupling", "authors": "Mohamed Alfaki Aboubacrine Assadek", "year": 2025, "marked_verify": false}
+  ]
+}

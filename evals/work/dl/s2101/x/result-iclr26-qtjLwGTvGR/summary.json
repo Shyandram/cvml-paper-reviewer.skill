@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-qtjLwGTvGR",
+  "paper_type": "empirical",
+  "final_overall": 2,
+  "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+  "official_rating": 2.4,
+  "eic_rating": 2.31,
+  "eic_pool_position": 28,
+  "before_composite": 44.8,
+  "after_composite": 44.1,
+  "eic_weights": {"R1": 1.25, "R2": 1.25, "R3": 1.0, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "Thm 4.1 equates orthogonal similarity with isomorphism: Verified",
+    "Thm 8.3 proves only that L determines K_t: Verified",
+    "Maximal expressivity contradicted by rank-1 strongly regular graph pairs (srg(16,6,2,2)): Verified",
+    "Def. 2.3 leaves the +1 position unspecified and the choice changes the spectrum (||L||_F^2 18 vs 26): Verified",
+    "Thm 4.2 smoothness fails on the constant function for cells of size >= 3: Verified",
+    "'approximately 12 times faster' not reproducible from Table 3 (mean 4.15x): Verified",
+    "SOTA wording vs ties and a loss in Table 3: Verified",
+    "Torus metric 'accuracy 0%' undefined: Verified",
+    "Hodge Laplacian comparison is a straw man and [4] defines rank-to-rank Laplacians: Partly correct",
+    "Rank-4 cell carries 1/8 the weight of rank 1: Partly correct",
+    "Table 1 marks SMCN scalable vs Section 5.2: Partly correct"
+  ],
+  "top_concerns": [
+    "Maximal-expressivity theorem (Thm 4.1/4.3, Cor 4.3) is false by rank-1 counterexamples and its proofs conflate orthogonal similarity with isomorphism (DA-C1, upheld)",
+    "Laplacian of Def. 2.3/Eq. 2 is not canonical (arbitrary +1 position changes the spectrum) and Thm 4.2 smoothness fails on constants",
+    "No ablation isolates HKS from the transformer; no graph-transformer or positional-encoding baselines; gains on MolHIV/PROTEIN within the noise shown",
+    "Expressivity experiment is self-built and circular (rank-4 cell SMCN cannot see by construction), with an undefined metric (0% accuracy)",
+    "Efficiency and SOTA claims exceed the evidence: '12 times faster' vs 4.15x from Table 3, constant footprint tested only to 100 cells, full eigendecomposition per complex"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Ran sequentially in one shared context (disclosed in review.md). Ambiguities: (1) the DA CRITICAL criteria say evidence supporting only a weaker claim is MAJOR, but give no rule for a theorem that is proved false while empirical results survive; I used criterion 1 and the EIC upheld it, which is a judgment call that decides the DA cap (not binding here since the starting point was already 2). (2) Phase 1.5 is meant to run after the five reports, but in one context the reviewers had already read everything; I wrote the reports first and added the literature addendum afterward. (3) related_search.py `novelty` does not accept --fp although the other subcommands do, and `benchmarks` returned empty for a paper without named external benchmarks (MolHIV, PROTEIN not recognised), so no baseline scout table could be built. (4) The 4-concept-word limit refused two natural queries; refused queries are not counted but the budget of 12 is tight for 4 claims plus benchmarks. (5) Paper type: a method paper with a headline theoretical claim; the empirical weights were chosen, a theoretical weighting would have lowered the composite further. (6) The sandbox blocked shell variables, loops and output redirection, so queries were run one per call and the final review.md was assembled with a Python one-liner; this is an environment limit, not a skill problem. (7) Phase 1.6 allows rewriting weaknesses but reviewers' scores are fixed; I rewrote two statements (R2-W3, R3-W1) after checking kept abstracts and my own derivation."
+}

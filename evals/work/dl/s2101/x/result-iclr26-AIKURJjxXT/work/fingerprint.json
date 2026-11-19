@@ -1,0 +1,13 @@
+{
+  "title": "EFRame: Deeper Reasoning via Exploration-Filter-Replay Reinforcement Learning Framework",
+  "method_names": ["EFRame", "EFR", "Exploration-Filtering-Replay", "Exploration-Filter-Replay"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "enables access to deeper reasoning capabilities that remain unattainable under vanilla GRPO",
+    "establishes a complete and stable learning cycle, guiding the model through a structured transition from exploration to convergence",
+    "repeatedly exploit rare but informative samples"
+  ],
+  "cutoff_date": "2025-09-24"
+}

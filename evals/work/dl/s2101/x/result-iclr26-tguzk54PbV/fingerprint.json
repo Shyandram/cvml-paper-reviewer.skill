@@ -1,0 +1,12 @@
+{
+  "title": "Adversarial Reinforcement Learning for Large Language Model Agent Safety",
+  "method_names": ["ARLAS", "Adversarial Reinforcement Learning for Agent Safety", "ARLAS w/o PBL", "ARLAS w/o AL"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "co-trains two LLMs: an attacker that learns to autonomously generate diverse prompt injections",
+    "trains the agent to defend against all previous attacker checkpoints"
+  ],
+  "cutoff_date": "2025-09-24"
+}

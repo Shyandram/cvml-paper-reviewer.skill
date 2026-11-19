@@ -1,0 +1,9 @@
+{
+  "title": "VividCam: Learning Unconventional Camera Motions from Virtual Synthetic Videos",
+  "method_names": ["VividCam", "VIVIDCAM", "VividCam-Cog", "VividCam-AC3D"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": ["learn complex camera motions from synthetic videos", "isolate camera motion learning from synthetic appearance artifacts", "surprisingly simple synthetic data"],
+  "cutoff_date": "2025-09-24"
+}

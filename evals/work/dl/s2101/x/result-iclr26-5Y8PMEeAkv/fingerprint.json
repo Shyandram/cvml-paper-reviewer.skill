@@ -1,0 +1,12 @@
+{
+  "title": "ZSPAPrune: Zero-Shot Prompt-Aware Token Pruning for Vision-Language Models",
+  "method_names": ["ZSPAPrune", "ZSPAP"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "explicitly modeling visual token pruning as a balance between task relevance and information diversity",
+    "first selects a core set of task-relevant visual tokens and then supplements them with diversity tokens"
+  ],
+  "cutoff_date": "2025-09-24"
+}

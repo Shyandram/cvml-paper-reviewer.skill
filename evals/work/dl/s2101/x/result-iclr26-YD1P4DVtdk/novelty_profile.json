@@ -1,0 +1,16 @@
+{"claims": [
+ {"id": "C1", "dimension": "problem", "central": true,
+  "text": "Circuit discovery should be viewed as statistical estimation with variance and robustness (framing and formal setup).",
+  "matches": [
+   {"title": "Adaptive Circuit Behavior and Generalization in Mechanistic Interpretability", "url": "https://arxiv.org/abs/2411.16105v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "EAP-IG circuits show high structural variance under bootstrap resampling and are sensitive to hyperparameters (GPT-2 small, Llama-3.2-1B).",
+  "matches": [
+   {"title": "Have Faith in Faithfulness: Going Beyond Circuit Overlap When Finding Model Mechanisms", "url": "https://arxiv.org/abs/2403.17806v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true},
+   {"title": "EAP-GP: Mitigating Saturation Effect in Gradient-based Automated Circuit Identification", "url": "https://arxiv.org/abs/2502.06852v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "method", "central": false,
+  "text": "Noise injection into embeddings as a stability probe, with a recommended amplitude of 0.2.",
+  "matches": []}
+]}

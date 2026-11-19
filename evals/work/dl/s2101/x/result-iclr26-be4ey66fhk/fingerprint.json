@@ -1,0 +1,13 @@
+{
+  "title": "SPAR: Self-supervised Placement-Aware Representation Learning for Distributed Sensing",
+  "method_names": ["SPAR", "M3N-VC"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "the duality between signals and observer positions",
+    "self-supervised placement-aware representation learning given spatially-distributed sensor observations",
+    "dual reconstruction objectives, which enforce the mutual recoverability of signals and spatial positions"
+  ],
+  "cutoff_date": "2025-09-24"
+}

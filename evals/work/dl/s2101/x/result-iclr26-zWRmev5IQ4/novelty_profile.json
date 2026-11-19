@@ -1,0 +1,36 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "method", "central": true,
+      "text": "First training-free, inversion-free and optimization-free trajectory control tailored to video DiT",
+      "matches": [
+        {"title": "FreeTraj: Tuning-Free Trajectory Control in Video Diffusion Models", "url": "https://arxiv.org/abs/2406.16863v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true},
+        {"title": "TrailBlazer: Trajectory Control for Diffusion-Based Video Generation", "url": "https://arxiv.org/abs/2401.00896v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true},
+        {"title": "Tora: Trajectory-oriented Diffusion Transformer for Video Generation", "url": "https://arxiv.org/abs/2407.21705v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "method", "central": false,
+      "text": "Foreground/background prompt separation with a box-derived cross-attention mask",
+      "matches": [
+        {"title": "TrailBlazer: Trajectory Control for Diffusion-Based Video Generation", "url": "https://arxiv.org/abs/2401.00896v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 4, "cited_by_paper": true},
+        {"title": "Boximator: Generating Rich and Controllable Motions for Video Synthesis", "url": "https://arxiv.org/abs/2402.01566v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "method", "central": true,
+      "text": "Align spatial RoPE of foreground tokens across frames (anchor box) plus self-attention mask for repeated-PE tokens",
+      "matches": [
+        {"title": "VideoRoPE: What Makes for Good Video Rotary Position Embedding?", "url": "https://arxiv.org/abs/2502.05173v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false},
+        {"title": "Video Diffusion Models are Training-free Motion Interpreter and Controller", "url": "https://arxiv.org/abs/2405.14864v3", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C4", "dimension": "method", "central": false,
+      "text": "3D-aware (camera-distance) trajectory control by changing position-embedding density via nearest-neighbour upsampling",
+      "matches": [
+        {"title": "ObjCtrl-2.5D: Training-free Object Control with Camera Poses", "url": "https://arxiv.org/abs/2412.07721v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

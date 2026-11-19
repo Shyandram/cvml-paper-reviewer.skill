@@ -1,0 +1,2 @@
+{"time": "2026-11-10T13:38:58+00:00", "event": "query", "source": "arxiv", "query": "decoding KV eviction reasoning", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:41:33+00:00", "event": "query", "source": "arxiv", "query": "attention history token eviction", "purpose": "claim", "tag": "C1"}

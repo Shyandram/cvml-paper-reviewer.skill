@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-RgOHRYHX5L",
+  "paper_type": "empirical",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.8,
+  "eic_rating": 3.69,
+  "eic_pool_position": 68,
+  "before_composite": 61.8,
+  "after_composite": 61.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.85, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Evaluation prompt for the sentiment setting chosen by score (Sec 3.2): Verified",
+    "Best-of-N prompts shown, no dev split (Figs 2-3, Tables 1-4, App L): Verified",
+    "Qwen 2 base headline setting: IP prompts elicit no reward hacking (Sec 3.5, 3.1): Verified",
+    "Single-run evidence in Figs 14, 16, 17, 24, 26: Verified",
+    "Mixtral correlation 0.57 in text vs 0.60 in Fig 6 caption: Verified",
+    "'above .57' in Sec 1 while two correlations equal .57: Verified",
+    "Missing hyperparameters/decoding/eval size: Verified (supplement not provided, so treated as questions)",
+    "'IP consistently outperforms PTST' overstated (Sec 4): Partly correct",
+    "Theory assumes convergence, contradicted by Sec 5 (App M Eq. 1): Partly correct",
+    "Heuristic correlations are cluster-driven (Sec 3.5): Partly correct",
+    "IP raises harmful compliance in 2 of 6 models (Sec 3.6.2, 5): Verified",
+    "Context distillation work uncited: Verified",
+    "R3 claim of high impact given the evidence scale: Overstated"
+  ],
+  "top_concerns": [
+    "Inoculation prompts, evaluation prompts and PTST prompts were chosen by score on the same evaluation that reports results; no dev split (Sec 3.2, 3.3, Figs 2-4)",
+    "Headline Qwen 2 base reward-hacking setting does not isolate inoculation: no IP prompt elicits hacking, so the paper's own heuristic and theory do not explain it (Sec 3.5, 3.1)",
+    "Scope is SFT-only on 2B-8B models with constructed datasets, while title/abstract/motivation speak of alignment under imperfect oversight and RL reward hacking (Sec 1, 5)",
+    "Thin comparison: only PTST and an unrelated-prompt ablation; no non-prompt methods (steering, concept ablation, filtering oracle, conditioning token) and several arms are single-run (Figs 14, 16, 17, 24, 26)",
+    "Missing training/decoding hyperparameters and eval sizes; IP raises compliance with harmful or undesired requests in 2 of 6 models (Sec 3.6.2, 5)"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "I recognized the topic (inoculation prompting, with a concurrent anonymous paper cited in Sec 4) from prior knowledge but do not know the decision; reviewed on merits. integrity_scan.py (Phase 0) was run although the task's tool list named only the aggregation and related_search scripts; it wrote reviewer_copy.txt inside the results directory and found nothing. Ambiguities: (1) The paper reports almost all results in figures with no tables, so the skill's 'recompute two headline deltas' rules could only be applied to the text-stated correlations and to the App. M algebra. (2) The skill's Phase 1.6 report check assumes drafts that can be revised; with sequential single-context passes the dropped items are the author's own redundancies, which makes the table somewhat artificial. (3) Pool-position bands (e.g., 55-69 maps to scores 55-61) conflict with the instruction that Overall 4 needs pool >= 65, so I had to move one reviewer's pool position to 70 to match its dimension scores. (4) The related_search.py query limit (4 concept words) refused one claim query and the skill gives no instruction on retrying beyond the 12-query budget; I did not re-run it, so claim C3 has no dedicated query. (5) The ICLR label printed by aggregate.json ('6 on {0,2,4,6,8,10}') is not comparable to the internal 1-6 label without reading venue_profiles.md; the 'official_rating' (plain mean on the internal scale) is not an ICLR rating. (6) The EIC weighting formula (confidence x weight) and the starting-point rounding are clear, but the skill does not say whether the pool position and the 0-100 composite cross-check should be reported in the final JSON for the EIC beyond what aggregate_scores.py outputs. (7) Several quoted phrases span extracted-text line breaks, so evidence quotes were chosen from single lines."
+}

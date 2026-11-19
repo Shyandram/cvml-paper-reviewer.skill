@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "method", "central": true,
+      "text": "Extra high-temperature rollouts for prompts whose initial group has no correct answer",
+      "matches": [
+        {"title": "Enhancing Efficiency and Exploration in Reinforcement Learning for LLMs", "url": "https://arxiv.org/abs/2505.18573v2", "label": "prior (peer-reviewed)", "level": 4, "cited_by_paper": false},
+        {"title": "Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts", "url": "https://arxiv.org/abs/2506.02177v1", "label": "recent preprint", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "method", "central": true,
+      "text": "Online filtering: keep all non-zero-advantage regular samples, keep only positives from additional rollouts",
+      "matches": [
+        {"title": "Improving Data Efficiency for LLM Reinforcement Fine-tuning Through Difficulty-targeted Online Data Selection and Rollout Replay", "url": "https://arxiv.org/abs/2506.05316v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts", "url": "https://arxiv.org/abs/2506.02177v1", "label": "recent preprint", "level": 3, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "method", "central": true,
+      "text": "Replay buffer of high-advantage samples reused every few steps to stabilize entropy",
+      "matches": [
+        {"title": "Improving Data Efficiency for LLM Reinforcement Fine-tuning Through Difficulty-targeted Online Data Selection and Rollout Replay", "url": "https://arxiv.org/abs/2506.05316v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "RePO: Replay-Enhanced Policy Optimization", "url": "https://arxiv.org/abs/2506.09340v1", "label": "recent preprint", "level": 4, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C4", "dimension": "result", "central": true,
+      "text": "+16.80 accuracy on Geometry3K (36.5% relative gain over GRPO's gain) and +5.66 average on four multimodal math benchmarks",
+      "matches": [
+        {"title": "Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models", "url": "https://arxiv.org/abs/2503.06749v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

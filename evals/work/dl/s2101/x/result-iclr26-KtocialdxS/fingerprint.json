@@ -1,0 +1,13 @@
+{
+  "title": "LowDiff: Efficient Diffusion Sampling with Low-Resolution Condition",
+  "method_names": ["LowDiff", "Low-Diff"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "a novel and efficient diffusion framework based on a cascaded approach",
+    "unified model to progressively refine images from low resolution to the desired resolution",
+    "much fewer high-resolution sampling steps"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Circuit Insights: Towards Interpretability Beyond Activations",
+  "method_names": ["WeightLens", "CircuitLens", "CircuitLens-Input", "CircuitLens-Full", "WeightLens+Out", "Circuit Insights"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "interpretability beyond activations",
+    "interprets features directly from their learned weights, removing the need for explainer models or datasets",
+    "captures how feature activations arise from interactions between components"
+  ],
+  "cutoff_date": "2025-09-24"
+}

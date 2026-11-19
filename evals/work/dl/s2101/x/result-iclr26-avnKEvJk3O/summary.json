@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-avnKEvJk3O",
+  "paper_type": "analysis",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 3.0,
+  "eic_pool_position": 42,
+  "before_composite": 51.6,
+  "after_composite": 51.4,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Scrambled vs unscrambled runs differ beyond temporal order; construction ambiguous (A.1, Sec 2.1): Verified (ambiguity); failure mechanism unverifiable",
+    "RF metric min-max of signed gradients may inflate RF size, single stimulus (Eq. 11-14, A.2.2): Partly correct",
+    "Generic learners without hardcoded priors vs 8x8 patch grid (Sec 1.1, 2.1): Verified",
+    "Shape probe may measure colour invariance; colour format not stated (Sec 2.3, 2.2): Partly correct",
+    "Edge probe lacks pixel/Gabor baselines and significance test (Sec 2.3, A.2.1): Verified",
+    "Data-size sweep confounded with optimisation steps (Sec 2.1, 3): Partly correct",
+    "Authors' own related work shows other learners reach V1-like edges (Sec 1.1): Verified",
+    "Retinotopic equated with RF growth, retinotopy not tested (Sec 1, 2.3): Verified",
+    "Conclusions beyond evidence: same structure, genes unnecessary (Abstract, Sec 4): Verified",
+    "No table of numbers, seeds only in A.1: Verified",
+    "Ligeralde et al. described as static images / V1-like features vs its abstract (Sec 1.1): Partly correct",
+    "Fig. 2c cited for trained models while caption places them in panel d (Sec 1): Verified",
+    "Eq. 6 non-integer offset for p=3: unverifiable (possible floor lost in extraction)"
+  ],
+  "top_concerns": [
+    "No control isolates the cause (no alternative data, learner or objective), so the 'transformers learn like brains / genes unnecessary' conclusion is not tested and is overclaimed (Abstract, Sec 4)",
+    "Probe validity: shape grouping may reflect colour invariance, edge probe has no pixel/Gabor baseline, and the gradient RF metric (Eq. 11-14, one stimulus) may inflate RF size",
+    "Temporal-scrambling control differs from the main condition in batch composition and is under-specified (Sec 2.1, A.1, Fig. 6a)",
+    "No result table, seed variability or effect sizes; data-size sweep varies optimisation steps (Sec 3, Fig. S1-S2)",
+    "Claims of 'no hardcoded priors' ignore the 8x8 patch grid and positional embeddings; prior retinal-wave work (Ligeralde et al.) is described inconsistently with its abstract"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Figures were unavailable, so all figure-based results were unverifiable and judged from captions and text. Ran five reviewer passes sequentially in one context (disclosed). Ambiguities: (1) Phase 1.5 literature check is meant to follow the five drafted reports, but the Domain Reviewer's report needs the addendum, so I wrote Phase 1 first and added the addendum afterwards, leaving the other reports unchanged. (2) Hard Rule 10 says garbled equations are unverifiable; Eq. 6 may have lost a floor bracket in extraction, so I downgraded that point after drafting. (3) The DA agent says 'No CRITICAL' is the normal outcome, yet the strongest objection (non-identifiability of the main inference) is arguably 'experiment cannot test the claim' (criterion 2); the criteria text says missing controls are MAJOR, so I filed it as MAJOR and the EIC ruled accordingly. (4) The DA gave Overall 2 with no CRITICAL; the rubrics do not say how DA's Overall relates to its issue list. (5) The pool-position bands (Overall 3 = typical rejected 30-54; <30 = clearly below the bar) leave Overall 2 vs 3 ambiguous for a paper at pool position ~30-40. (6) The skill gives no explicit guidance for which paper type fits a NeuroAI hypothesis-testing paper; I chose 'analysis'. (7) The shell blocked redirects/cat in the sandbox, so I assembled review.md with Python. summary.json fields venue_recommendation and after_composite taken from aggregate.json (label; eic_composite 51.4)."
+}

@@ -1,0 +1,19 @@
+{"claims": [
+ {"id": "C1", "dimension": "problem", "central": true,
+  "text": "New task: detect and localize local post-generation edits (replace/insert/delete spans) in watermarked LLM text",
+  "matches": [
+   {"title": "Segmenting Watermarked Texts From Language Models", "url": "https://arxiv.org/abs/2410.20670v1", "label": "prior (peer-reviewed)", "level": 4, "cited_by_paper": false},
+   {"title": "Robust Detection of Watermarks for Large Language Models Under Human Edits", "url": "https://arxiv.org/abs/2411.13868v3", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true}
+  ]},
+ {"id": "C2", "dimension": "method", "central": true,
+  "text": "Watermark enforcing a deterministic cyclic pattern over disjoint vocabulary subsets, enabling local pattern-violation detection",
+  "matches": [
+   {"title": "A Watermark for Order-Agnostic Language Models", "url": "https://arxiv.org/abs/2410.13805v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true},
+   {"title": "Duwak: Dual Watermarks in Large Language Models", "url": "https://arxiv.org/abs/2403.13000v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "method", "central": false,
+  "text": "Sliding-window global and local statistics with a Janson-inequality false-alarm bound for edit localization",
+  "matches": [
+   {"title": "Segmenting Watermarked Texts From Language Models", "url": "https://arxiv.org/abs/2410.20670v1", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false}
+  ]}
+]}

@@ -1,0 +1,13 @@
+{
+  "title": "Localized Cultural Knowledge is Conserved and Controllable in Large Language Models",
+  "method_names": ["explicit-implicit localization gap", "EI-Gap", "Cultural Localization Benchmark", "universal cultural localization vector", "explicit cultural customization vector"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "explicit–implicit localization gap",
+    "synthetic English cultural world-model toward each non-English cultural world",
+    "cultural knowledge exists within LLMs, it may not naturally surface in multilingual interactions"
+  ],
+  "cutoff_date": "2025-09-24"
+}

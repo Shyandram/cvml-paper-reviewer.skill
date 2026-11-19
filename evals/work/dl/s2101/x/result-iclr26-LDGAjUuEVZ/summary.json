@@ -1,0 +1,36 @@
+{
+  "id": "iclr26-LDGAjUuEVZ",
+  "paper_type": "benchmark",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.6,
+  "eic_rating": 3.51,
+  "eic_pool_position": 58,
+  "before_composite": 59.7,
+  "after_composite": 58.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": true,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Search products have lower, not higher, calibration error (browsing mean 49.3 vs non-browsing 65.7): Verified",
+    "Multi-turn products outperform purely parametric models (Section 5 vs Table 1): Verified (claim overstated; only DeepResearch is above the best parametric models)",
+    "Statistical analysis shows significantly higher accuracy, but no test is reported: Verified",
+    "Gold-answer validity and uniqueness not independently audited by humans: Verified",
+    "Non-browsing models above 20% show the set is answerable from parametric knowledge: Partly correct (numbers verified, memorization is an inference)",
+    "GPT-4o low accuracy is partly by construction (Section 3.1 filtering): Overstated",
+    "R1 23.2% vs DeepSeek (Deep Think) 7.6% as the effect of enabling search: Verified as confounded (R3 treats it as a clean finding)",
+    "Censorship-related complexities are never examined beyond the abstract: Verified",
+    "R3 location claim that DeepSeek single-round retrieval is asserted in Section 4.6: Partly correct (statement is in Section 4.5)"
+  ],
+  "top_concerns": [
+    "Gold answers, uniqueness and difficulty are checked only by AI agents and a 10-minute peer search; no human audit, agreement or human baseline",
+    "Section 4.7 and Section 5 claims (search raises calibration error; multi-turn products beat parametric models; 'significantly' without a test) are contradicted or unsupported by Table 1",
+    "Reasoning and search effects are drawn from confounded pairs (model generations; API model vs consumer product with human answer extraction)",
+    "Three non-browsing models exceed 20%, so the benchmark does not isolate browsing; filtering involved the very systems that are ranked; no contamination control",
+    "Single runs with no confidence intervals and a thin analysis (no per-topic, constraint or failure analysis); product results not reproducible (no dates or versions)"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "I recognized the title as a publicly known benchmark from prior knowledge and reviewed it on its merits only; I did not search for the paper, its reviews or its outcome. integrity_scan.py found no reviewer-directed text, so the original text served as the reviewers' copy. Skill friction: (1) The Overall-4 consistency rule (pool position >= 65, dimension scores mostly >= 60) and the pool-band table (55-69 borderline) pull in different directions, so an EIC pool position of 58 forced Overall 3 even though the EIC-weighted rating was 3.51 (starting point 4); the instruction to depart only for a verified named issue was satisfiable but felt like a judgment call at a rounding boundary. (2) Phase 1.5 is specified after the reports are drafted, but the Domain Reviewer's reference list must appear in its report; I solved this with an addendum section. (3) The script refuses queries with 5 or more concept words, which made claim queries for analysis-type claims (C4) awkward; the 'benchmarks' subcommand and scout are of no use when the paper only reports on its own new benchmark. (4) The Bash sandbox rejected compound commands and shell variables, so the integrity scan could not write the --redact copy; since the scan was clean no redaction was needed. (5) The script writes the venue label for ICLR as a pair of scales ('4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})'), which I reported verbatim. (6) Paper type: no clean fit between 'dataset' and 'benchmark'; I chose benchmark because the model evaluation is half of the paper."
+}

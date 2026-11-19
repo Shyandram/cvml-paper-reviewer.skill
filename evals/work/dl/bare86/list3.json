@@ -1,0 +1,545 @@
+{
+  "total_count": 87,
+  "artifacts": [
+    {
+      "id": 13882768238,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4Mjc2ODIzOA==",
+      "name": "result-iclr26-BQUeUjahfI",
+      "size_in_bytes": 10755,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882768238",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882768238/zip",
+      "expired": false,
+      "digest": "sha256:f3ea2a9c3e02bdb41275858210253d26f8616531deca5af2d8e2c0fe2b20186d",
+      "created_at": "2026-11-11T18:24:30Z",
+      "updated_at": "2026-11-11T18:24:30Z",
+      "expires_at": "2026-12-11T18:24:30Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882749100,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4Mjc0OTEwMA==",
+      "name": "result-iclr26-RBktryANQ9",
+      "size_in_bytes": 9061,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882749100",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882749100/zip",
+      "expired": false,
+      "digest": "sha256:1c8f386858738b9abeb68af19c797590d13af4058bcee0c54bfcefd5815b2305",
+      "created_at": "2026-11-11T18:31:38Z",
+      "updated_at": "2026-11-11T18:31:38Z",
+      "expires_at": "2026-12-11T18:31:38Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882742928,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4Mjc0MjkyOA==",
+      "name": "result-iclr26-E7YpL4L4Xh",
+      "size_in_bytes": 11307,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882742928",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882742928/zip",
+      "expired": false,
+      "digest": "sha256:d20f29e0e30fdc7da83a8cea57ce205b886dc56feaaf44ec47fefff98b331b8a",
+      "created_at": "2026-11-11T18:26:14Z",
+      "updated_at": "2026-11-11T18:26:14Z",
+      "expires_at": "2026-12-11T18:26:14Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882674099,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjY3NDA5OQ==",
+      "name": "result-iclr26-OPFE1zPYbU",
+      "size_in_bytes": 13666,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882674099",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882674099/zip",
+      "expired": false,
+      "digest": "sha256:980ccc40cc6ce4b66c9665e04c4a0c2803bde3693a332598f31c836fe039f6c0",
+      "created_at": "2026-11-11T18:30:42Z",
+      "updated_at": "2026-11-11T18:30:42Z",
+      "expires_at": "2026-12-11T18:30:41Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882612481,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjYxMjQ4MQ==",
+      "name": "result-iclr26-4Uxtzc5Jns",
+      "size_in_bytes": 10796,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882612481",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882612481/zip",
+      "expired": false,
+      "digest": "sha256:8e436917c60e04cf325915939c5f62ecf8bf42df2fd9abb61c204312dae5e180",
+      "created_at": "2026-11-11T18:20:19Z",
+      "updated_at": "2026-11-11T18:20:19Z",
+      "expires_at": "2026-12-11T18:20:19Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882604764,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjYwNDc2NA==",
+      "name": "result-iclr26-R7fv5NWfMm",
+      "size_in_bytes": 10660,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882604764",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882604764/zip",
+      "expired": false,
+      "digest": "sha256:f4fc40490c3d728515bcab295bb6d83c424727c5e9b8c826d266cd7840b2038c",
+      "created_at": "2026-11-11T18:32:04Z",
+      "updated_at": "2026-11-11T18:32:04Z",
+      "expires_at": "2026-12-11T18:32:03Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882592613,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjU5MjYxMw==",
+      "name": "result-iclr26-2Jyb1yu3nN",
+      "size_in_bytes": 10332,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882592613",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882592613/zip",
+      "expired": false,
+      "digest": "sha256:7da82af406b07b05e7b3b8f76ed1ae6edbb770d314a3b230cdc695a86a3c9b34",
+      "created_at": "2026-11-11T18:19:03Z",
+      "updated_at": "2026-11-11T18:19:03Z",
+      "expires_at": "2026-12-11T18:19:02Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882492634,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjQ5MjYzNA==",
+      "name": "result-iclr26-3OnJAvuxd3",
+      "size_in_bytes": 9714,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882492634",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882492634/zip",
+      "expired": false,
+      "digest": "sha256:cfded7fb227dce2cea44272cca0772f16552bb28c5ab8193a02964abc1b281ae",
+      "created_at": "2026-11-11T18:20:17Z",
+      "updated_at": "2026-11-11T18:20:17Z",
+      "expires_at": "2026-12-11T18:20:17Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882458710,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjQ1ODcxMA==",
+      "name": "result-iclr26-Ix4WA6AXPe",
+      "size_in_bytes": 9635,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882458710",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882458710/zip",
+      "expired": false,
+      "digest": "sha256:0dfe11b4dc0eb4a1855eea94278318553366fec27e402556c54335218906df4c",
+      "created_at": "2026-11-11T18:27:51Z",
+      "updated_at": "2026-11-11T18:27:51Z",
+      "expires_at": "2026-12-11T18:27:51Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882372554,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjM3MjU1NA==",
+      "name": "result-iclr26-5Y8PMEeAkv",
+      "size_in_bytes": 9989,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882372554",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882372554/zip",
+      "expired": false,
+      "digest": "sha256:9c95559439d42650c49c0e33cd431d3d690ee70932bc1b581b1e37dd7a6f2cd8",
+      "created_at": "2026-11-11T18:20:42Z",
+      "updated_at": "2026-11-11T18:20:42Z",
+      "expires_at": "2026-12-11T18:20:41Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882318195,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjMxODE5NQ==",
+      "name": "result-iclr26-FmvBrKubtw",
+      "size_in_bytes": 11667,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882318195",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882318195/zip",
+      "expired": false,
+      "digest": "sha256:c36cbc4eeddb80634c00b1c9e896197d2ea1722b210d3359d5082a062238764a",
+      "created_at": "2026-11-11T18:27:23Z",
+      "updated_at": "2026-11-11T18:27:23Z",
+      "expires_at": "2026-12-11T18:27:23Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882209176,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjIwOTE3Ng==",
+      "name": "result-iclr26-FaNWaj1Zk2",
+      "size_in_bytes": 10307,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882209176",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882209176/zip",
+      "expired": false,
+      "digest": "sha256:eb612be9616a586316d35cb841e0d73a4e65146f7c605825eb3d7b19742fa8e1",
+      "created_at": "2026-11-11T18:26:40Z",
+      "updated_at": "2026-11-11T18:26:40Z",
+      "expires_at": "2026-12-11T18:26:40Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13882089038,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MjA4OTAzOA==",
+      "name": "result-iclr26-K5A2jBmEBK",
+      "size_in_bytes": 11659,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882089038",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13882089038/zip",
+      "expired": false,
+      "digest": "sha256:a89009782f341ed00c628d1e53f445264ed7d72a13dfeef8558e848d2bca0ff5",
+      "created_at": "2026-11-11T18:28:56Z",
+      "updated_at": "2026-11-11T18:28:56Z",
+      "expires_at": "2026-12-11T18:28:55Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881988612,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTk4ODYxMg==",
+      "name": "result-iclr26-NViQr33V7m",
+      "size_in_bytes": 12577,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881988612",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881988612/zip",
+      "expired": false,
+      "digest": "sha256:2cad5ca08b7b3e8591dfd38ef3babec0972541515d882685097def7ee50b3a51",
+      "created_at": "2026-11-11T18:30:24Z",
+      "updated_at": "2026-11-11T18:30:24Z",
+      "expires_at": "2026-12-11T18:30:24Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881988032,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTk4ODAzMg==",
+      "name": "result-iclr26-DqAeSBQckF",
+      "size_in_bytes": 10242,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881988032",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881988032/zip",
+      "expired": false,
+      "digest": "sha256:70ed45da5562d55c552fadd265f389a05a6e18b69af3d3ededa9cfa581b25e2f",
+      "created_at": "2026-11-11T18:25:33Z",
+      "updated_at": "2026-11-11T18:25:33Z",
+      "expires_at": "2026-12-11T18:25:32Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881968779,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTk2ODc3OQ==",
+      "name": "result-iclr26-PJdMrK79Mo",
+      "size_in_bytes": 10501,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881968779",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881968779/zip",
+      "expired": false,
+      "digest": "sha256:9d9bfa24ecd6b0f2c84f67668557a50816cd182b3d9453a878a73c0ed524b9be",
+      "created_at": "2026-11-11T18:30:46Z",
+      "updated_at": "2026-11-11T18:30:46Z",
+      "expires_at": "2026-12-11T18:30:45Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881949197,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTk0OTE5Nw==",
+      "name": "result-iclr26-Lvkbe0CgmZ",
+      "size_in_bytes": 6588,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881949197",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881949197/zip",
+      "expired": false,
+      "digest": "sha256:bfcc4d2afa54f9f944aef1905d88dc5e838e2c58ad2042734ed7deee34cef853",
+      "created_at": "2026-11-11T18:29:54Z",
+      "updated_at": "2026-11-11T18:29:54Z",
+      "expires_at": "2026-12-11T18:29:53Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881937423,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTkzNzQyMw==",
+      "name": "result-iclr26-2g8vgmyXgQ",
+      "size_in_bytes": 11118,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881937423",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881937423/zip",
+      "expired": false,
+      "digest": "sha256:05c50bd0c1adc3895343cbd91f65dfa2debd0ddf2555cb4dfa419a89fe89bea6",
+      "created_at": "2026-11-11T18:19:09Z",
+      "updated_at": "2026-11-11T18:19:09Z",
+      "expires_at": "2026-12-11T18:19:08Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881829043,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTgyOTA0Mw==",
+      "name": "result-iclr26-E5mL07Fbq8",
+      "size_in_bytes": 10955,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881829043",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881829043/zip",
+      "expired": false,
+      "digest": "sha256:041d820a9a640d7685b0d60d4db412ce2a6087ade329fef2cd29d4d93a2b20d7",
+      "created_at": "2026-11-11T18:25:57Z",
+      "updated_at": "2026-11-11T18:25:57Z",
+      "expires_at": "2026-12-11T18:25:56Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881517707,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTUxNzcwNw==",
+      "name": "result-iclr26-8xcmfwomnI",
+      "size_in_bytes": 10460,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881517707",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881517707/zip",
+      "expired": false,
+      "digest": "sha256:fca7f84c440cc17e3f987632f7b3070935bdbe958a894cdc917371ac67abb5a8",
+      "created_at": "2026-11-11T18:21:54Z",
+      "updated_at": "2026-11-11T18:21:54Z",
+      "expires_at": "2026-12-11T18:21:53Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881467784,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTQ2Nzc4NA==",
+      "name": "result-iclr26-9jcB40wjk3",
+      "size_in_bytes": 10940,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881467784",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881467784/zip",
+      "expired": false,
+      "digest": "sha256:f72e49077832880768b8fb2b9b4c48df000f205fd4f73dafd604aae661bad0ca",
+      "created_at": "2026-11-11T18:23:15Z",
+      "updated_at": "2026-11-11T18:23:15Z",
+      "expires_at": "2026-12-11T18:23:14Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881444031,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTQ0NDAzMQ==",
+      "name": "result-iclr26-SHAmQVifzK",
+      "size_in_bytes": 10515,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881444031",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881444031/zip",
+      "expired": false,
+      "digest": "sha256:100641e27fe10e3364dd14b547d49f55a7b7d11b2cec4596d3982d600946d407",
+      "created_at": "2026-11-11T18:33:01Z",
+      "updated_at": "2026-11-11T18:33:01Z",
+      "expires_at": "2026-12-11T18:33:01Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881443726,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTQ0MzcyNg==",
+      "name": "result-iclr26-Q2bEFIk6Y5",
+      "size_in_bytes": 6229,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881443726",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881443726/zip",
+      "expired": false,
+      "digest": "sha256:3f38679f147bd9fc23a09db41cf06f73bf1a98e4509bed212fbbfa1b1e6b8ea9",
+      "created_at": "2026-11-11T18:30:43Z",
+      "updated_at": "2026-11-11T18:30:43Z",
+      "expires_at": "2026-12-11T18:30:42Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13881227793,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MTIyNzc5Mw==",
+      "name": "result-iclr26-AIKURJjxXT",
+      "size_in_bytes": 11550,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881227793",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13881227793/zip",
+      "expired": false,
+      "digest": "sha256:3aaa09975fef600e326eadffd5c741a5d2a799f1dcc13f1887a396a19af245cd",
+      "created_at": "2026-11-11T18:23:24Z",
+      "updated_at": "2026-11-11T18:23:24Z",
+      "expires_at": "2026-12-11T18:23:23Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13880529007,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MDUyOTAwNw==",
+      "name": "result-iclr26-2qn6AOIkL1",
+      "size_in_bytes": 13005,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13880529007",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13880529007/zip",
+      "expired": false,
+      "digest": "sha256:57a573dccbead75e56e75aed5b9d369830b1d89611d2d6cda6eb4cc08428c845",
+      "created_at": "2026-11-11T18:19:21Z",
+      "updated_at": "2026-11-11T18:19:21Z",
+      "expires_at": "2026-12-11T18:19:20Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13880444248,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MDQ0NDI0OA==",
+      "name": "result-iclr26-4fhbxglvYs",
+      "size_in_bytes": 11483,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13880444248",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13880444248/zip",
+      "expired": false,
+      "digest": "sha256:2a7d93a3e8a4f95de4a5342094ac9a75ed52dceca952a13141ad523095214198",
+      "created_at": "2026-11-11T18:20:36Z",
+      "updated_at": "2026-11-11T18:20:36Z",
+      "expires_at": "2026-12-11T18:20:35Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    },
+    {
+      "id": 13880329574,
+      "node_id": "MDg6QXJ0aWZhY3QxMzg4MDMyOTU3NA==",
+      "name": "result-iclr26-0xObmDmsKY",
+      "size_in_bytes": 12294,
+      "url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13880329574",
+      "archive_download_url": "https://api.github.com/repos/Shyandram/cvml-paper-reviewer.skill/actions/artifacts/13880329574/zip",
+      "expired": false,
+      "digest": "sha256:dc47ad15e02b56371adcdabd261db2717166cfcf42992842ce26f1cd421ed1ff",
+      "created_at": "2026-11-11T18:19:26Z",
+      "updated_at": "2026-11-11T18:19:26Z",
+      "expires_at": "2026-12-11T18:19:25Z",
+      "workflow_run": {
+        "id": 43075458737,
+        "repository_id": 1420514756,
+        "head_repository_id": 1420514756,
+        "head_branch": "claude/next-independent-check",
+        "head_sha": "6a22919ca2cc416b532b45207d1bea49173fbdf7"
+      }
+    }
+  ]
+}

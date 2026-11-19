@@ -1,0 +1,19 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true,
+  "text": "Prepend an instruction requesting the undesired behavior to training prompts, use neutral prompts at test time, to prevent learning the behavior",
+  "matches": [
+   {"title": "Steering Out-of-Distribution Generalization with Concept Ablation Fine-Tuning", "url": "https://arxiv.org/abs/2507.16795v2", "label": "recent preprint (arXiv-only, under 6 months before the cutoff; discuss, don't require)", "level": 3, "cited_by_paper": true},
+   {"title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs", "url": "https://arxiv.org/abs/2502.17424v7", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true},
+   {"title": "Learning by Distilling Context", "url": "https://arxiv.org/abs/2209.15189v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "IP reduces undesired behavior across four SFT settings without substantially reducing desired capabilities",
+  "matches": [
+   {"title": "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs", "url": "https://arxiv.org/abs/2502.17424v7", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true}
+  ]},
+ {"id": "C3", "dimension": "method", "central": false,
+  "text": "Elicitation strength of a candidate instruction on the initial model predicts its effectiveness as an inoculation prompt",
+  "matches": [
+   {"title": "Learning by Distilling Context", "url": "https://arxiv.org/abs/2209.15189v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 1, "cited_by_paper": false}
+  ]}
+]}

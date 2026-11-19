@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-97Qk741ih6",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.6,
+  "eic_rating": 2.56,
+  "eic_pool_position": 35,
+  "before_composite": 48.7,
+  "after_composite": 48.4,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "'Smallest edge budgets across all settings' false (LightRAG lower at MetaQA 1-hop and 3-hop, Table 3): Verified",
+    "Latency 'close to or below Hybrid/GraphRAG' (Table 2: HotpotQA 1.48 vs 1.18, FactKG 1.36 vs 1.15): Verified",
+    "No budget/price sweep or Pareto figure in the provided text despite Section 1 claim: Verified (appendix not provided)",
+    "Feasibility 0.340 and Eq. 1 expectation constraints vs 'hard guarantees': Verified (metric undefined, so 'violated most of the time' is Partly correct)",
+    "Headline +39.3 is vs GraphRAG, 9.3 vs KG-Agent in same cell: Partly correct (qualifier is literal; framing concern)",
+    "Table 4 StaticRAG/no-KG 74.8 EM vs Table 1 RAG 37.6/41.5, and no-KG with edge budget 1.44x: Verified (discrepancy; cause unstated)",
+    "Greedy-Hop 82.1 beats KG-Agent 78.0: Partly correct (only if Table 4 is 2-hop; hop unstated)",
+    "MetaQA cited as Puerto et al. 2023 (a different work by bibliography title): Verified",
+    "k-hop token-inflation claim supported only by LLM-efficiency surveys: Verified",
+    "GRPO/DPO characterised as static preference learning: Partly correct",
+    "Published baseline numbers on MetaQA are higher than Table 1: Unverifiable (recollection only, not used)"
+  ],
+  "top_concerns": [
+    "Main claim (per-query budget/price control from one checkpoint, predictable behavior) is untested: no sweep, feasibility 0.340, Eq. 1 constrains expectations",
+    "Baselines not controlled for training, budgets or per-method tokens; CLAUSE is RL-trained, baselines described as shared reader only",
+    "Table 4 ablation inconsistent with Table 1 (no-KG 74.8 vs RAG 37.6/41.5) and confounded; no single-agent control",
+    "Appendix missing ('Appendix ??'), no hyperparameters, seeds, variance, compute or code; closest prior art (constrained MAPPO, LLM-KG retrievers) uncited",
+    "Text claims exceed tables (smallest edge budget; headline gain vs GraphRAG rather than best baseline)"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) could not complete: the single claim query reached the arXiv API but got HTTP 429 on every retry (two invocations), so no results were kept; recommended references are all marked [verify] and the skill's novelty/similarity/scout steps could not be run. The skill's venue-scale data for ICLR is 'secondary' and gives two label scales ({0,2,4,6,8,10} and {1,3,5,6,8,10}); the label string is copied from aggregate.json. The cross-check flag (composite band 2 vs rating 3) fell within the EIC's 'borderline signal' tolerance, which was a useful rule. The skill gives no guidance on a DA who finds no CRITICAL issue beyond writing an empty list, which worked. Scripts called with pipes/variables needed approval in this sandbox; the related_search 4-concept-word limit refused two queries (5 words). Reviewer passes shared one context (disclosed). Figures were unavailable; Fig. 2-4 judged from captions and text. Appendix not provided; details deferred to it were treated as unverified."
+}

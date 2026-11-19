@@ -1,0 +1,12 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true,
+  "text": "GD convergence guarantee for one-layer softmax-attention ICL on a broad class of nonlinear (non-degenerate Lipschitz) regression functions with non-orthonormal features",
+  "matches": [
+   {"title": "In-Context Learning with Representations: Contextual Generalization of Trained Transformers", "url": "https://arxiv.org/abs/2408.10147v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+   {"title": "Pretrained transformer efficiently learns low-dimensional target functions in-context", "url": "https://arxiv.org/abs/2411.02544v1", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+   {"title": "Transformers Learn Nonlinear Features In Context: Nonconvex Mean-field Dynamics on the Attention Landscape", "url": "https://arxiv.org/abs/2402.01258v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "The Lipschitz constant L governs convergence; flat vs sharp regimes with different step sizes and time bounds",
+  "matches": [
+   {"title": "In-Context Learning with Transformers: Softmax Attention Adapts to Function Lipschitzness", "url": "https://arxiv.org/abs/2402.11639v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true}]}
+]}

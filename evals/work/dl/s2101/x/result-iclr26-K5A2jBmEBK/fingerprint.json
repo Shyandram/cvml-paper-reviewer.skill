@@ -1,0 +1,13 @@
+{
+  "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains",
+  "method_names": ["DeepCompress", "DeepCompress-Zero", "DeepCompress-Zero-3B", "DeepCompress-Zero-7B"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "dynamically classifies problems as Simple or Hard in real-time based on the model's evolving capability",
+    "compressing reasoning for well-mastered problems and extending it for those it finds challenging",
+    "longer responses can contain a broader range of correct solutions for difficult problems"
+  ],
+  "cutoff_date": "2025-09-24"
+}

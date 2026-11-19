@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-SzrQBJDYHn",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 2.8,
+  "eic_rating": 2.73,
+  "eic_pool_position": 46,
+  "before_composite": 54.6,
+  "after_composite": 54.0,
+  "eic_weights": {"R1": 1.25, "R2": 1.25, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Random, content-independent edits in the main evaluation: Verified",
+    "Baselines adapted as degenerate AA pattern with w = 2, gamma not stated: Verified",
+    "Per-position Type-I 0.1, no calibration split, no ROC/precision: Verified",
+    "Theorem 3.1 is per-token while Algorithm 3 decides on a minimum over positions: Verified",
+    "'no existing method addresses ...' contradicted by uncited segmentation work: Partly correct",
+    "Reference [32] mischaracterized as an AIGC detector: Verified",
+    "Reference [19] author/venue mismatch: Partly correct",
+    "Detectability 'comparable to state-of-the-art' unsupported as worded: Partly correct",
+    "Appendix A.1 pair-count constant off by a factor of about 2: Partly correct",
+    "Per-cell sample size about 56: Partly correct",
+    "Table 1 arithmetic (59+44+36 = 139; percentages): Verified"
+  ],
+  "top_concerns": [
+    "Evaluation uses random short token edits on short texts with two small models; the spoofing/human-edit threat model is untested (only a 139-text, baseline-free Table 1 in the appendix)",
+    "Baselines KGW/Unigram are adapted ad hoc (w = 2, gamma unstated) and compared at equal delta rather than equal quality; no localization-capable baseline",
+    "Single per-position false-alarm operating point (0.1) with no ROC/precision; Theorem 3.1 bounds a per-token event, not Algorithm 3's min-over-positions decision",
+    "Novelty claim 'no existing method' ignores peer-reviewed segmentation work for edited watermarked text; [32] is mischaracterized",
+    "Claim that detectability is comparable to state-of-the-art is not supported; the best-localizing pattern has the weakest quality trade-off"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "(1) The literature-check order (reviewers first, then searches) cannot be respected by one sequential context: I ran searches after reading the paper but before writing the reports, so the Domain addendum could not be independent of the searches. (2) The aggregate script returns the ICLR label as '4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})' for Overall 3, which looks like an off-by-one when read next to the internal 3; the venue profile says the scale status is secondary. (3) The skill's 'Never mix vocabularies' rule and the template ask for both labels, which is awkward. (4) Instructions say reviewers read the redacted copy; with no findings, the copy equals the manuscript, which is fine but the step is mechanical. (5) Several shell conveniences (variables, IFS) are blocked in this environment; related_search.py output is verbose without a summary mode. (6) The skill asks for 'per-claim' queries, but the claim-ID tags are used only for logging and coverage, not for selecting results. (7) Figures were unavailable; E9 not run, Fig. 5/6 comparisons could not be checked, which limits how far a claim like 'comparable to state-of-the-art' can be judged Incorrect vs Overstated. (8) The pool-position band for R3 at 66 maps to score band 55-61 per the script's pool_band while the rubric table lists 62-72 for pool 70-84; the 55-69 pool range spans the 'borderline' band, so Overall 4 with dimensions around 64-70 feels consistent with the rubric but the script's band column shows [55, 61]."
+}

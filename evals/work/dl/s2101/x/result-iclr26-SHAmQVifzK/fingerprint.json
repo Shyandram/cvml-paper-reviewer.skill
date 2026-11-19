@@ -1,0 +1,13 @@
+{
+  "title": "A Wavelet-based Stereo Matching Framework for Solving Frequency Convergence Inconsistency",
+  "method_names": ["Wavelet-Stereo", "Wavelet-RAFT", "Wavelet-MonSter", "HPU", "HP-LSTM", "IFA", "frequency convergence inconsistency", "high-frequency preservation update"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "frequency convergence inconsistency",
+    "high-frequency preservation update operator containing an iterative frequency adapter",
+    "decompose an image into high and low frequency components using discrete wavelet transform"
+  ],
+  "cutoff_date": "2025-09-24"
+}

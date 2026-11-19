@@ -1,0 +1,12 @@
+{
+  "title": "From Charts to Code: A Hierarchical Benchmark for Multimodal Models",
+  "method_names": ["Chart2Code", "LT2Chart", "chart2code"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "first hierarchical benchmark that reflects practical chart2code usage while systematically scaling task complexity",
+    "Long-Table to Chart Generation requires models to transform long, information-dense tables into faithful charts"
+  ],
+  "cutoff_date": "2025-09-24"
+}

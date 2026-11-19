@@ -1,0 +1,13 @@
+{
+  "title": "Self-Reflective Generation at Test Time",
+  "method_names": ["SRGen", "Self-Reflective Generation", "L_SRGen", "Retrospective Context Loss", "Anticipatory Entropy Minimization"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "reflects before generating at uncertain points",
+    "dynamic entropy thresholding to identify high-uncertainty tokens",
+    "trains a specific corrective vector"
+  ],
+  "cutoff_date": "2025-09-24"
+}

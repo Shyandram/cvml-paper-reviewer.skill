@@ -1,0 +1,13 @@
+{
+  "title": "Detecting Post-generation Edits to Watermarked LLM Outputs via Combinatorial Watermarking",
+  "method_names": ["combinatorial watermarking", "combinatorial pattern-based watermarking", "Alternating Binary Pattern", "Alternating Quaternary Pattern"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "detecting post-generation edits locally made to watermarked LLM outputs",
+    "enforcing a deterministic combinatorial pattern over these subsets during generation",
+    "lightweight local statistics to flag and localize potential edits"
+  ],
+  "cutoff_date": "2025-09-24"
+}

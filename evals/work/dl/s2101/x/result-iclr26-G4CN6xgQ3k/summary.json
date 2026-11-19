@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-G4CN6xgQ3k",
+  "paper_type": "analysis",
+  "final_overall": 2,
+  "venue_recommendation": "2 on {0,2,4,6,8,10} (3 on {1,3,5,6,8,10})",
+  "official_rating": 2.4,
+  "eic_rating": 2.33,
+  "eic_pool_position": 22,
+  "before_composite": 44.5,
+  "after_composite": 43.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "log Z(x) cancels only for constant alpha; alpha = beta/|y| breaks Eq. 14-15 (R1-W1, R2-W1, DA-C1): Verified",
+    "Guarantees (Lemma 2, Prop. 1, App. D.5-D.6) proved only for constant alpha: Verified",
+    "Abstract 'consistently exhibits overoptimization' vs 1B lr 1e-7 runs at 33.4-51.3% and the text 'does not become overoptimized': Verified",
+    "Offline/online asymmetry contradicted by App. B (SimPO overoptimizes at lr 1e-6, works at 2e-7); no SimPO run at 2.8B: Verified",
+    "Entropy coefficient 0 run not shown in Fig. 1-2 (legends list 0.01-1.0): Partly correct (may exist unshown)",
+    "MaxEnt vs KL learning rates mismatched by 20-60x, text 1e-6 vs Fig. 3 legend 3e-6 for the 2.8B KL baseline: Verified",
+    "Coefficient grid corresponds to a weaker per-sequence regularizer than working KL beta: Partly correct (depends on |y|, not stated)",
+    "Minimum Entropy RL and clipping results have no figure or table: Verified",
+    "R3 treats Minimum Entropy as a promising result: Overstated",
+    "R4 accepts the SimPO-as-MaxEnt derivation as sound: Incorrect",
+    "Consecutive-policy KL above 1 at lr 5e-8 suggests an implementation issue (R1 question): Unverifiable from extracted text; kept as a question"
+  ],
+  "top_concerns": [
+    "SimPO-as-MaxEnt-RL derivation (Sec. 3.2, Eq. 14-15) fails for the y-dependent temperature beta/|y|; App. D.2 itself yields only the loss 'without target margin and length normalization'",
+    "Online MaxEnt vs KL comparison is unmatched (learning rate 20-60x apart, coefficient scale, missing log pi_ref term), so entropy is not isolated",
+    "Offline/online 'asymmetry' is not shown: App. B shows SimPO also overoptimizes at lr 1e-6, and there is no SimPO run at 2.8B where the online failure occurs",
+    "Causal claim that entropy exacerbates reward hacking rests on correlated curves; the coefficient-0 control is not shown",
+    "Single runs with no seeds, unspecified reward model and split, and claims (Minimum Entropy, clipping) with no data; 'fully reproducible' without code"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) could not run: arXiv API returned HTTP 429 and then timed out on every attempt (0 of 12 queries), so all recommended references are from knowledge and marked [verify]; no baseline scout or claim-level novelty profile. The skill says to skip the phase without network access, but is not explicit about an unreachable API versus no network. Five reviewer passes shared one context (disclosed). Figures unavailable: all figure-based claims come from captions and legends, and no E9 check was possible. Mild ambiguity: the DA-CRITICAL criteria list does not explicitly name a wrong derivation, so DA-C1 was framed under criterion 1 (claim invalidated by the paper's own appendix) plus error_audit severity rules; the 'resolvable without new data' label for a corrected derivation is a judgment call (ceiling 3 vs 4), moot here because the decision is 2. The paper type fit 'analysis' only loosely (derivation plus small empirical study). The Phase 1.6 report check is hard to do honestly in a single context, since the same model wrote the reports."
+}

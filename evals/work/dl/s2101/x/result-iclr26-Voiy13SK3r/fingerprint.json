@@ -1,0 +1,14 @@
+{
+  "title": "Helmsman: Autonomous Synthesis of Federated Learning Systems via Collaborative LLM Agents",
+  "method_names": ["Helmsman", "AgentFL-Bench", "AgentFL"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "automates the end-to-end synthesis of federated learning systems from high-level user specifications",
+    "interactive human-in-the-loop planning to formulate a sound research plan",
+    "modular code generation by supervised agent teams",
+    "closed-loop of autonomous evaluation and refinement in a sandboxed simulation environment"
+  ],
+  "cutoff_date": "2025-09-24"
+}

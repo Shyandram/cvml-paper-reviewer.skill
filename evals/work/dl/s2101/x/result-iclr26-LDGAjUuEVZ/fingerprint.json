@@ -1,0 +1,13 @@
+{
+  "title": "BrowseComp-ZH: Benchmarking Web Browsing Ability of Large Language Models in Chinese",
+  "method_names": ["BrowseComp-ZH", "BrowseComp ZH"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "a high-difficulty benchmark purpose-built to comprehensively evaluate LLM agents on the Chinese web",
+    "reverse-engineered from a short, objective, and easily verifiable answer",
+    "two-stage quality control protocol is applied to strive for high question difficulty and answer uniqueness"
+  ],
+  "cutoff_date": "2025-09-24"
+}

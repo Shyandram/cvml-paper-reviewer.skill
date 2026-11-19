@@ -1,0 +1,13 @@
+{
+  "title": "Visual Autoregressive Modeling for Instruction-Guided Image Editing",
+  "method_names": ["VAREdit", "VAREdit-2.2B", "VAREdit-8.4B", "Scale-Aligned Reference", "SAR", "GPT-Balance"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "finest-scale source features cannot effectively guide the prediction of coarser target features",
+    "injects scale-matched conditioning information into the first self-attention layer",
+    "reframes image editing as a next-scale prediction problem"
+  ],
+  "cutoff_date": "2025-09-24"
+}

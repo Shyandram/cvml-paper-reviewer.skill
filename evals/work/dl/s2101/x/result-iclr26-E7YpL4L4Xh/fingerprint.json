@@ -1,0 +1,13 @@
+{
+  "title": "EditScore: Unlocking Online RL for Image Editing via High-Fidelity Reward Modeling",
+  "method_names": ["EditScore", "EditReward-Bench", "EditRewardBench", "EditReward", "OmniGen2-Edit"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "high-fidelity, domain-specialized reward model is the key to unlocking the full potential of RL",
+    "first systematic path from benchmarking to reward modeling to RL training in image editing",
+    "even the largest open-source VLMs fail to provide an effective learning signal"
+  ],
+  "cutoff_date": "2025-09-24"
+}

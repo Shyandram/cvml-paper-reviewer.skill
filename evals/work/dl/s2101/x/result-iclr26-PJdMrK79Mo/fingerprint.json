@@ -1,0 +1,13 @@
+{
+  "title": "Sample-efficient and Scalable Exploration in Continuous-Time RL",
+  "method_names": ["COMBRL", "OCORL", "OTaCoS", "COMBRL-TaCoS", "Pendulum-GP", "MountainCar-GP"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": ["https://go.klem.nz/combrl", "lasgroup/ombrl"],
+  "distinctive_phrases": [
+    "greedily maximizes a weighted sum of the extrinsic reward and model epistemic uncertainty",
+    "achieves sublinear regret in the reward-driven setting",
+    "we provide a sample complexity bound"
+  ],
+  "cutoff_date": "2025-09-24"
+}

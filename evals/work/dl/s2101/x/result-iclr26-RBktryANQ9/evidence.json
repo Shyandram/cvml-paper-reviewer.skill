@@ -1,0 +1,62 @@
+{
+  "locations": [
+    "Abstract", "Section 1", "Section 2", "Section 2.1", "Section 2.2", "Section 3.1", "Section 3.2", "Section 4", "Section 5",
+    "Equation 1", "Equation 2", "Equation 4", "Equation 8", "Equation 10", "Equation 11",
+    "Figure 1", "Figure 2", "Figure 3", "Figure 4", "Figure 5",
+    "Observation-I", "Observation-II", "Observation-III", "Insight-I", "Insight-II", "Insight-III",
+    "Corollary-I", "Corollary-II", "Experiment-I", "Experiment-II", "Experiment-III",
+    "Reference [9]", "Reference [13]", "Reference [14]", "Reference [24]", "Reference [29]", "Reference [32]", "Reference [40]", "Reference [46]", "Reference [52]", "Reference [54]", "Reference [55]"
+  ],
+  "quotes": [
+    "avoids the issue of vicious cycles",
+    "improves training efficiency and provides strong privacy",
+    "are at risk of being lossy",
+    "training on the full dataset",
+    "fewer than 50 samples per class",
+    "first memorize",
+    "evaluated based on test accuracy",
+    "Final test accuracies are",
+    "validation performance",
+    "validation accuracy matches that of the original",
+    "remain largely effective even in the presence",
+    "like Aggre, these distillation approaches struggle to",
+    "is the learnable",
+    "further hypothesize that challenging clean samples",
+    "scalability challenges",
+    "remains an open question",
+    "How much data should be distilled",
+    "often yields suboptimal results in low-noise",
+    "high-privacy environments",
+    "label corruption tends to occur",
+    "largely random",
+    "data noise is",
+    "achieves better performance with fewer distilled",
+    "the CIFAR100N baseline",
+    "serve as effective denoising tools",
+    "In the Wild",
+    "Realted Works",
+    "IPC ≤ |S̃|·(1−τ)/C",
+    "τ ≥ (1 − C·IPC/|S̃|)"
+  ],
+  "numbers": [
+    {"claim": "CIFAR-10N Aggre noise rate", "value": "9.03%", "derived": false},
+    {"claim": "CIFAR-10N Worst noise rate", "value": "40.21%", "derived": false},
+    {"claim": "CIFAR-100N fine noise rate", "value": "40.20%", "derived": false},
+    {"claim": "CIFAR-10N Random k noise rate", "value": "≈ 18%", "derived": false},
+    {"claim": "Symmetric noise rates tested", "value": "0.2, 0.4, 0.6, 0.8", "derived": false},
+    {"claim": "Samples per class that beat the baseline at noise 0.2", "value": "fewer than 50", "derived": false},
+    {"claim": "Distilled images per class that beat the CIFAR-100N baseline", "value": "fewer than 10", "derived": false},
+    {"claim": "ConvNet depth for CIFAR / Tiny-ImageNet", "value": "three-layer / four-layer", "derived": false},
+    {"claim": "Corollary-I clean images per class, CIFAR-10, tau = 0.8, |S| = 50,000 (size not printed in the paper), C = 10", "value": "1000", "derived": true},
+    {"claim": "Corollary-II bound at CIFAR-10, IPC = 50: 1 - C*IPC/|S|", "value": "0.99", "derived": true},
+    {"claim": "Eq. 11 rearranged equals IPC >= |S|(1 - tau)/C, opposite direction of Eq. 10", "value": "IPC >= |S|(1-tau)/C", "derived": true}
+  ],
+  "references": [
+    {"title": "Coresets for Robust Training of Neural Networks against Noisy Labels", "authors": "Baharan Mirzasoleiman, Kaidi Cao, Jure Leskovec", "year": 2020, "marked_verify": false},
+    {"title": "A Comprehensive Study on Dataset Distillation: Performance, Privacy, Robustness and Fairness", "authors": "Zongxiong Chen, Jiahui Geng, Derui Zhu, Herbert Woisetschlaeger, Qing Li, Sonja Schimmler, et al.", "year": 2023, "marked_verify": false},
+    {"title": "Distilling Long-tailed Datasets", "authors": "Zhenghao Zhao, Haoxuan Wang, Yuzhang Shang, Kai Wang, Yan Yan", "year": 2025, "marked_verify": false},
+    {"title": "Early-Learning Regularization Prevents Memorization of Noisy Labels", "authors": "Sheng Liu, Jonathan Niles-Weed, Narges Razavian, Carlos Fernandez-Granda", "year": 2020, "marked_verify": false},
+    {"title": "Privacy for Free: How does Dataset Condensation Help Privacy?", "authors": "Tian Dong, Bo Zhao, Lingjuan Lyu", "year": 2022, "marked_verify": false},
+    {"title": "Mitigating Noisy Supervision Using Synthetic Samples with Soft Labels", "authors": "Yangdi Lu, Wenbo He", "year": 2024, "marked_verify": false}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Mitty: Diffusion-based Human-To-Robot Video Generation",
+  "method_names": ["Mitty", "H2R", "HI2R"],
+  "authors": ["Yiren Song", "Cheng Liu", "Weijia Mao", "Mike Zheng Shou"],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "end-to-end Human2Robot video generation",
+    "Demonstration videos are compressed into condition tokens and fused with robot denoising tokens",
+    "automatic synthesis pipeline that produces high-quality human-robot pairs from large egocentric datasets"
+  ],
+  "cutoff_date": "2025-09-24"
+}

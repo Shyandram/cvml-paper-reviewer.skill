@@ -1,0 +1,34 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "dimension": "method",
+      "central": true,
+      "text": "Proactive token-level test-time intervention: at uncertain tokens, optimize a transient hidden-state correction vector and inject it before sampling",
+      "matches": [
+        {"title": "The Unreasonable Effectiveness of Entropy Minimization in LLM Reasoning", "url": "https://arxiv.org/abs/2505.15134v1", "label": "recent preprint", "level": 4, "cited_by_paper": false},
+        {"title": "Tent: Fully Test-time Adaptation by Entropy Minimization", "url": "https://arxiv.org/abs/2006.10726v3", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+        {"title": "Steering Large Language Model Activations in Sparse Spaces", "url": "https://arxiv.org/abs/2503.00177v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2",
+      "dimension": "method",
+      "central": false,
+      "text": "Dynamic (rolling mean + k std) entropy thresholding to detect critical tokens during decoding",
+      "matches": [
+        {"title": "Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning", "url": "https://arxiv.org/abs/2506.01939v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+        {"title": "Protected Test-Time Adaptation via Online Entropy Matching: A Betting Approach", "url": "https://arxiv.org/abs/2408.07511v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3",
+      "dimension": "method",
+      "central": false,
+      "text": "Hybrid loss (prefix cross-entropy + entropy) interpreted as a Lagrangian of a constrained problem (Theorem 1)",
+      "matches": [
+        {"title": "Tent: Fully Test-time Adaptation by Entropy Minimization", "url": "https://arxiv.org/abs/2006.10726v3", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

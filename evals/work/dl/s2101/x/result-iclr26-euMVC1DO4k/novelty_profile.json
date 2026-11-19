@@ -1,0 +1,18 @@
+{"claims": [
+ {"id": "C1", "dimension": "result", "central": false,
+  "text": "Frozen visual embeddings of a mainstream VLA do not yield depth structure under a DPT probe",
+  "matches": [
+   {"title": "Evo-0: Vision-Language-Action Model with Implicit Spatial Understanding", "url": "https://arxiv.org/abs/2507.00416v3", "label": "recent preprint", "level": 2, "cited_by_paper": true}
+  ]},
+ {"id": "C2", "dimension": "method", "central": true,
+  "text": "Align intermediate visual tokens of a VLA with VGGT features by cosine loss during training; no inference-time cost",
+  "matches": [
+   {"title": "Evo-0: Vision-Language-Action Model with Implicit Spatial Understanding", "url": "https://arxiv.org/abs/2507.00416v3", "label": "recent preprint", "level": 3, "cited_by_paper": true},
+   {"title": "R3M: A Universal Visual Representation for Robot Manipulation", "url": "https://arxiv.org/abs/2203.12601v3", "label": "prior (arXiv-only)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "result", "central": true,
+  "text": "SOTA LIBERO success rate (98.5), 3.8x faster training, data efficiency, real-world gains",
+  "matches": [
+   {"title": "VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning", "url": "https://arxiv.org/abs/2505.18719v1", "label": "recent preprint", "level": 2, "cited_by_paper": false}
+  ]}
+]}

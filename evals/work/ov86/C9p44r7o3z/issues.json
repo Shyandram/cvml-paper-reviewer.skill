@@ -1,0 +1,938 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Only Quest as prior SOTA; token-level training-free selection methods absent.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "MoA citation points to an image-generation paper.",
+   "minor": true
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "H2O and InfLLM wrongly grouped as sliding-window methods.",
+   "minor": true
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Related work omits KV-cache quantization methods.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Novelty mainly a combination of known components such as QuaRot rotation.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Manhattan estimator interchangeable with L2; not shown to matter.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "'No information loss' framing overstated; no ranking-error bound under bucketization.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Assumptions behind coarse scoring (attention concentration, shared thresholds) unexamined per layer/head.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Fixed deterministic Hadamard used without comparing randomized variant.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Deployment evidence limited to one GPU, unbatched, no GQA.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "No KV-cache capacity saving.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "End-to-end speedup measured only up to 32K.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Energy and prefill overhead not reported.",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Latency differs little across budgets; no quality-latency Pareto guidance.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Claim of matching full attention at 64 tokens unsupported; 100K passkey weak.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Exactness of Eq. 3 invoked for a quantized L1 pipeline.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Prior SOTA represented only by Quest.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Quest latency not measured; Adamas selection cost higher.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Latency gain from higher sparsity is tiny.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Hadamard ablation confounded by threshold choice.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "No quantized-inner-product or oracle top-k control.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "L1 and L2 perform similarly.",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Lower-than-full perplexity and >2x claims unsupported or setting undefined.",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "'Remains below baseline' statement false for Qasper.",
+   "minor": true
+  },
+  {
+   "id": "P3.11",
+   "reviewer": "P3",
+   "text": "'Most memory-efficient' claim wrong; 1-bit is smaller.",
+   "minor": true
+  },
+  {
+   "id": "P3.12",
+   "reviewer": "P3",
+   "text": "Latency unit 'us' implausible in Table 2.",
+   "minor": true
+  },
+  {
+   "id": "P3.13",
+   "reviewer": "P3",
+   "text": "Citation and related-work grouping errors.",
+   "minor": true
+  },
+  {
+   "id": "P3.14",
+   "reviewer": "P3",
+   "text": "Hadamard transform cost in Table 4 inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "P3.15",
+   "reviewer": "P3",
+   "text": "No variance or confidence intervals; small differences within noise.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Headline 64-token and near-lossless 128 claims overstated by Tables 1 and 6.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Recall of true top-k or attention-mass coverage never measured.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "L1 score on codes not monotone in q\u00b7k; inner-product alternative untested.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "L2 matches L1, so Manhattan choice not shown to matter.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Bucketization thresholds never stated.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Hadamard ablation may be confounded by fixed thresholds on raw Q/K.",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Quest not timed; Adamas selection FLOPs exceed Quest's.",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Batch size unstated for latency measurements.",
+   "minor": false
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Table 2 unit 'us' wrong.",
+   "minor": true
+  },
+  {
+   "id": "P4.10",
+   "reviewer": "P4",
+   "text": "Speed measured only up to 32K while accuracy claimed at 100K.",
+   "minor": false
+  },
+  {
+   "id": "P4.11",
+   "reviewer": "P4",
+   "text": "Prefill cost of rotating and packing keys not reported.",
+   "minor": false
+  },
+  {
+   "id": "P4.12",
+   "reviewer": "P4",
+   "text": "Narrow scope: two baselines, old MHA Llama-2 models, six tasks.",
+   "minor": false
+  },
+  {
+   "id": "P4.13",
+   "reviewer": "P4",
+   "text": "'Consistently surpasses' contradicted at large budgets where Quest is better.",
+   "minor": false
+  },
+  {
+   "id": "P4.14",
+   "reviewer": "P4",
+   "text": "'Remains below baseline' false for Qasper.",
+   "minor": true
+  },
+  {
+   "id": "P4.15",
+   "reviewer": "P4",
+   "text": "Figure 1 accuracy values inconsistent with Table 1 and setting undefined.",
+   "minor": true
+  },
+  {
+   "id": "P4.16",
+   "reviewer": "P4",
+   "text": "Hadamard FLOP entry in Table 4 incorrect.",
+   "minor": true
+  },
+  {
+   "id": "P4.17",
+   "reviewer": "P4",
+   "text": "Typos, Figure 3 metric label, missing full-attention row in Table 1.",
+   "minor": true
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "64-token and near-lossless claims stronger than results.",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Lower-perplexity and >2x claims unsupported; setting undefined.",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Missing settings: Quest page size, budget definition, thresholds, batch size.",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Figure 1 numbers lack task and budget.",
+   "minor": true
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Narrow scope: two Llama-2 models, one benchmark subset.",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "No limitations section.",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "Typos, Figure 3 label, missing full-attention row.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Efficiency compared only with full attention, not other sparse methods.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No explanation or case analysis of why results match full attention.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Hadamard smoothing borrowed from QuaRot; weak novelty.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Bucketization resembles standard quantization.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Baselines limited to StreamingLLM and Quest; SnapKV, MInference, DuoAttention missing.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No justification that Manhattan distance on 2-bit codes approximates dot products.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Choice of bucketization thresholds not explained.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "No sensitivity analysis for thresholds.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Unclear whether sparse attention applies during prefill, affecting LongBench interpretation.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Missing Needle-in-a-Haystack stress tests.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Dynamic inference baselines limited mainly to Quest.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Efficiency only on RTX A6000; no A100/H100 results.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Figure PPL/Acc annotations lack precise setup description.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Only Quest as baseline; token-level methods missing.",
+    "points": [
+     "P1.1",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Citation and related-work description errors.",
+    "points": [
+     "P1.2",
+     "P1.3",
+     "P3.13"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "KV quantization omitted from related work.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Novelty mainly combination of known parts.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Manhattan estimator not shown to matter vs L2.",
+    "points": [
+     "P1.6",
+     "P3.8",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Information-preservation claim overstated; no ranking-error bound.",
+    "points": [
+     "P1.7",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Coarse-scoring assumptions unexamined per layer/head.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Fixed vs randomized Hadamard.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Deployment evidence on one GPU, unbatched, no GQA.",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No KV capacity saving.",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Latency measured only to 32K.",
+    "points": [
+     "P2.5",
+     "P4.10"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Prefill and energy overhead unreported.",
+    "points": [
+     "P2.6",
+     "P4.11"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Small latency gain across budgets; no Pareto analysis.",
+    "points": [
+     "P2.7",
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "64-token/near-lossless claims overstated.",
+    "points": [
+     "P3.1",
+     "P4.1",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Quest not timed; selection cost higher.",
+    "points": [
+     "P3.4",
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Hadamard ablation confounded by thresholds.",
+    "points": [
+     "P3.6",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "No inner-product or oracle top-k control; L1 not monotone.",
+    "points": [
+     "P3.7",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Lower-PPL and >2x claims unsupported.",
+    "points": [
+     "P3.9",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Qasper statement false.",
+    "points": [
+     "P3.10",
+     "P4.14"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Memory-efficiency claim wrong.",
+    "points": [
+     "P3.11"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Wrong latency unit.",
+    "points": [
+     "P3.12",
+     "P4.9"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Hadamard FLOP entry wrong.",
+    "points": [
+     "P3.14",
+     "P4.16"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No variance or CIs.",
+    "points": [
+     "P3.15"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Top-k recall never measured.",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Thresholds unstated.",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Missing experimental settings (batch, page size, budget).",
+    "points": [
+     "P4.8",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Narrow models, tasks and benchmarks.",
+    "points": [
+     "P4.12",
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "'Consistently surpasses' contradicted at large budgets.",
+    "points": [
+     "P4.13"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Figure 1 setting undefined and inconsistent.",
+    "points": [
+     "P4.15",
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Typos, labels, missing full-attention row.",
+    "points": [
+     "P4.17",
+     "P5.7"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "No limitations section.",
+    "points": [
+     "P5.6"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Efficiency not compared with other sparse methods.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No explanation of why matches full attention.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Hadamard idea borrowed from QuaRot.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Bucketization is standard quantization.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Limited sparse-attention baselines.",
+    "points": [
+     "Q2.3",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Manhattan-dot product approximation unjustified.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Threshold choice unexplained.",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No threshold sensitivity.",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Prefill behaviour unclear.",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Missing needle-in-a-haystack tests.",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Single GPU type for efficiency.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Figure setup unspecified.",
+    "points": [
+     "Q3.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  }
+ ]
+}

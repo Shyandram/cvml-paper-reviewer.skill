@@ -1,0 +1,1055 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No experiment manipulates temporal feature variation with other factors fixed; causal augmentation claim untested",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Main evidence uses training-set composite metrics only",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Label-free prediction agreement on test/corrupted data cannot measure generalization",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Overclaiming wording such as \"direct evidence\", \"establish\", \"rigorous statistical evidence\"",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Abstract says random labels but experiments use 40% noisy labels",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "\"Across datasets and architectures\" claim unsupported; main text only ResNet-20/CIFAR-10",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Theorem 1 TV term uncomputed and possibly trivial; no delta, window or TV values reported",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Theorem 2 is merely Markov's inequality",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "NTK argument comparing mixed-parameter loss to frozen-shallow trajectory does not follow",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Spherical null for SGD-noise anisotropy is weak",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Claimed correlation with consistency and alignment with feature dynamics have no supporting analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Bootstrap B, N, d and multiplicity handling not stated",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "\"Not a convergence artifact\" argument expected under slow drift; LR schedule unreported",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "No seeds or repeated runs anywhere",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Welch's t-test on per-sample bounded consistency values with unstated n is inappropriate",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Identical p-values reported for Depth 1 and Depth 3",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Duplicate heading, appendix lettering collisions, ambiguous cross-references, overloaded notation d",
+   "minor": true
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "\"3-4% accuracy drop\" is actually relative error increase",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Causal augmentation claim untested; results equally explained by slow drift and insensitive classifier",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Reinit/freeze interventions are single-run with differences within seed noise",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Freeze experiment removes trainable capacity as well as drift, confounded",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "No experiment relates consistency window length to generalization gap across runs",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Consistency is implied by high training accuracy and measured mostly on training set",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "No chance or null baseline for consistency levels",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Agreement under distribution shift counts both-wrong cases; cannot show augmentation effectiveness",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Convergence-artifact rebuttal does not rule out slow drift; LR schedule not given",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Spherical covariance null is a straw man; anisotropy expected from Jacobian",
+   "minor": false
+  },
+  {
+   "id": "P2.10",
+   "reviewer": "P2",
+   "text": "Claimed anisotropy-consistency correlation and alignment with feature dynamics never shown",
+   "minor": false
+  },
+  {
+   "id": "P2.11",
+   "reviewer": "P2",
+   "text": "Fig. 8 setup, bootstrap B, N, d unstated; no multiple-testing correction",
+   "minor": false
+  },
+  {
+   "id": "P2.12",
+   "reviewer": "P2",
+   "text": "\"Across datasets and architectures\" unsupported; architectures for other datasets not stated",
+   "minor": false
+  },
+  {
+   "id": "P2.13",
+   "reviewer": "P2",
+   "text": "SVHN and STL-10 use Adam, so SGD-noise narrative does not apply",
+   "minor": false
+  },
+  {
+   "id": "P2.14",
+   "reviewer": "P2",
+   "text": "No seeds, repeated runs or error bars",
+   "minor": false
+  },
+  {
+   "id": "P2.15",
+   "reviewer": "P2",
+   "text": "Welch's t-test on non-independent per-sample values; n and effect size missing",
+   "minor": false
+  },
+  {
+   "id": "P2.16",
+   "reviewer": "P2",
+   "text": "NTK forgetting argument is logically flawed; mixed point not on frozen trajectory",
+   "minor": false
+  },
+  {
+   "id": "P2.17",
+   "reviewer": "P2",
+   "text": "ResNet-20 at lr 0.1 is not in lazy regime, so NTK contrast uninformative",
+   "minor": false
+  },
+  {
+   "id": "P2.18",
+   "reviewer": "P2",
+   "text": "Duplicate heading typo, appendix letter collisions, ambiguous references, overloaded d, notation inconsistency",
+   "minor": true
+  },
+  {
+   "id": "P2.19",
+   "reviewer": "P2",
+   "text": "\"3-4% accuracy drop\" misreports relative error increase as accuracy drop",
+   "minor": true
+  },
+  {
+   "id": "P2.20",
+   "reviewer": "P2",
+   "text": "Identical p-values for Depth 1 and Depth 3 in Table 1, likely copy error",
+   "minor": true
+  },
+  {
+   "id": "P2.21",
+   "reviewer": "P2",
+   "text": "Noisy-label experiment uses 40% noise, not random labels as claimed",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Stability shows classifier insensitivity, not that exposure to varied features regularized deep layers",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Assumption that time-window features mimic unseen inputs' feature distribution is unchecked",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Agreement used as stand-in for generalization; composite accuracy on test/OOD missing",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Noisy-label collapse could reflect memorization instability; no control separating explanations",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Abstract says random labels while experiment randomizes 40% of labels",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Headline evidence only ResNet-20/CIFAR-10; no transformer or non-residual network",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "No practical use of the window shown, e.g., predicting gap or checkpoint selection",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "No limitations section",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Closest prior work (stitching, SVCCA, mode connectivity, SWA) not cited or differentiated",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Simpler explanation (shallow layers converge early, deep adapt) never engaged",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "SGD-noise anisotropy result is already well established, not novel",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "SDE background mis-sourced and lacks learning-rate factor",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Theorem 1 likely vacuous since TV equals 1 between singular measures; no computed values",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Theorem 2 is Markov's inequality",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "NTK foil is not a meaningful comparator; flawed and lazy regime irrelevant",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Zhang et al. (2016) citation wording is loose",
+   "minor": true
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Overclaiming wording (\"direct evidence\", \"establish\", \"rigorous\") for observational results",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Abstract says random labels but section 5 uses 40% randomized labels",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Fig. 3 caption reference network differs from definition; definitions mention y but unused",
+   "minor": true
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Duplicate headings, inconsistent appendix lettering, ambiguous references, overloaded d",
+   "minor": true
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Key reinit/freeze controls buried in appendix without table or error bars",
+   "minor": true
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "Theory is conceptual only; no delta, window or TV value computed yet presented as contribution",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "No summary table across datasets and architectures; evidence qualitative",
+   "minor": false
+  },
+  {
+   "id": "P5.8",
+   "reviewer": "P5",
+   "text": "Seeds and variability of curves not shown",
+   "minor": false
+  },
+  {
+   "id": "P5.9",
+   "reviewer": "P5",
+   "text": "Typos and figure captions omitting model and dataset",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Not prescriptive; no new training algorithm derived to improve generalization",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Source code not released, limiting reproducibility",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Limited experimental scope; unclear if holds on bigger datasets, architectures, other domains",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Effect of hyperparameter selection on phenomena not studied",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No comparison or discussion with Tunnel Effect and related representation-dynamics work",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "TV bound is conceptual and not computable; MMD/Wasserstein surrogates untested",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Evidence limited to small/mid-scale datasets; no ImageNet or large transformers",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "BatchNorm handling in composite networks not described, may confound results",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Optimizer sensitivity not analyzed; anisotropy shown only for SGD though Adam used",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Unclear difference from prior stitching/ensembling like SWA, SWAG, temporal ensembling",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Many formatting/presentation errors: terminology, undefined abbreviations, citations, duplicate section, wrong references",
+   "minor": true
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Claim that SGD stochasticity makes features a distribution is questionable for single network",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Section 4 experiments on training set may be trivial convergence artifacts; test set needed",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Relation of NTK discussion to main claim unclear",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Causal augmentation claim untested; alternative explanations (insensitive classifier, early convergence) not ruled out",
+    "points": [
+     "P1.1",
+     "P2.1",
+     "P3.1",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Evidence on training set; consistency implied by training accuracy",
+    "points": [
+     "P1.2",
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Prediction agreement used as proxy for generalization",
+    "points": [
+     "P1.3",
+     "P2.7",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Overclaiming wording",
+    "points": [
+     "P1.4",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Random labels claim vs 40% noisy labels",
+    "points": [
+     "P1.5",
+     "P2.21",
+     "P3.5",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Limited architectures/datasets; \"across datasets and architectures\" overstated",
+    "points": [
+     "P1.6",
+     "P2.12",
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Theorem 1 uncomputed, possibly vacuous, conceptual only",
+    "points": [
+     "P1.7",
+     "P4.5",
+     "P5.6"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Theorem 2 is Markov's inequality",
+    "points": [
+     "P1.8",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "NTK argument logically flawed",
+    "points": [
+     "P1.9",
+     "P2.16"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "NTK comparison not meaningful for the main claim",
+    "points": [
+     "P2.17",
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Spherical null for anisotropy is weak",
+    "points": [
+     "P1.10",
+     "P2.9"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Claimed correlation/alignment of SGD noise unsupported",
+    "points": [
+     "P1.11",
+     "P2.10"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Statistical test details and multiplicity not reported",
+    "points": [
+     "P1.12",
+     "P2.11"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Convergence-artifact rebuttal weak; LR schedule unreported",
+    "points": [
+     "P1.13",
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No seeds, repeated runs or error bars",
+    "points": [
+     "P1.14",
+     "P2.14",
+     "P5.8"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Welch's t-test on per-sample values inappropriate",
+    "points": [
+     "P1.15",
+     "P2.15"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Identical p-values for Depth 1 and 3",
+    "points": [
+     "P1.16",
+     "P2.20"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Formatting, headings, appendix numbering, notation, typos",
+    "points": [
+     "P1.17",
+     "P2.18",
+     "P5.4",
+     "P5.9"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "\"3-4% accuracy drop\" misreported",
+    "points": [
+     "P1.18",
+     "P2.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Reinit/freeze interventions single-run, within noise",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Freeze experiment confounded by capacity removal",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "No relation of window length to generalization gap across runs",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No null baseline for consistency",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Adam used on some datasets; SGD narrative inapplicable",
+    "points": [
+     "P2.13"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Ergodicity assumption about time-window features unchecked",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Noisy-label collapse may reflect memorization; no control",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "No practical use or prescriptive application shown",
+    "points": [
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "No limitations section",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Missing related work on stitching, SVCCA, mode connectivity, SWA",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "SGD-noise anisotropy not novel",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "SDE background mis-sourced",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "Loose citation wording for Zhang et al.",
+    "points": [
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI33",
+    "summary": "Fig. 3 caption inconsistent with definitions",
+    "points": [
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI34",
+    "summary": "Key controls buried in appendix",
+    "points": [
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI35",
+    "summary": "No summary table across datasets",
+    "points": [
+     "P5.7"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Not prescriptive; no improved training algorithm",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Code not released",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Limited scale, datasets, architectures, domains",
+    "points": [
+     "Q2.1",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Hyperparameter sensitivity not studied",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Missing discussion of Tunnel Effect works",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "TV bound not computable; surrogates untested",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "BatchNorm handling in composites not described",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Optimizer sensitivity; anisotropy only for SGD despite Adam",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Unclear difference from stitching/ensembling (SWA, SWAG)",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Formatting and presentation errors",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "SGD stochasticity-as-augmentation argument questionable",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Training-set results may be convergence artifacts",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "NTK discussion relevance unclear",
+    "points": [
+     "Q4.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI33",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI34",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI35",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  }
+ ]
+}

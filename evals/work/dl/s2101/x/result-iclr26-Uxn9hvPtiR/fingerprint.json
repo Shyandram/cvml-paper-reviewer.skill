@@ -1,0 +1,9 @@
+{
+  "title": "Multiscale Neural PDE Surrogates for Prediction and Downscaling: Application to Ocean Currents",
+  "method_names": ["DUNO", "SpecDFNO", "SpecDFNODiff", "MetaGradDFNO", "MultiGradDFNO", "Temp DFNO", "Temp SpecDFNO"],
+  "authors": ["El Kabid", "Benabbou", "Lguensat"],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": ["supervised deep learning framework based on neural operators for solving PDEs and providing arbitrary resolution solutions", "propose downscaling models with an application to Copernicus ocean current data"],
+  "cutoff_date": "2025-09-24"
+}

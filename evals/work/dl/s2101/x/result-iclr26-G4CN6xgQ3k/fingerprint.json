@@ -1,0 +1,13 @@
+{
+  "title": "Failure Modes of Maximum Entropy RLHF",
+  "method_names": ["Maximum Entropy RLHF", "Minimum Entropy RL", "Max-Ent RLHF"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "SimPO can be derived as Maximum Entropy Reinforcement Learning with length-normalized temperature",
+    "Maximum Entropy RL consistently exhibits overoptimization and unstable KL dynamics, even at very low learning rates",
+    "entropy regularization fails to prevent reward hacking and appears to correlate with overoptimization"
+  ],
+  "cutoff_date": "2025-09-24"
+}

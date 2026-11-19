@@ -1,0 +1,15 @@
+{"claims": [
+ {"id": "C1", "dimension": "resource", "central": true,
+  "text": "Benchmark several neural-operator downscaling models for arbitrary-resolution downscaling on Copernicus ocean current data",
+  "matches": [
+   {"title": "Fourier Neural Operators for Arbitrary Resolution Climate Data Downscaling", "url": "https://arxiv.org/abs/2305.14452v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+   {"title": "Downscaling Neural Network for Coastal Simulations", "url": "https://arxiv.org/abs/2408.16553v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "method", "central": true,
+  "text": "Temporal neural-operator surrogate that predicts PDE solutions at arbitrary output resolution independent of input resolution, without an external numerical solver",
+  "matches": [
+   {"title": "Fourier Neural Operators for Arbitrary Resolution Climate Data Downscaling", "url": "https://arxiv.org/abs/2305.14452v2", "label": "prior (peer-reviewed)", "level": 4, "cited_by_paper": true},
+   {"title": "Multiscale Neural Operator: Learning Fast and Grid-independent PDE Solvers", "url": "https://arxiv.org/abs/2207.11417v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+   {"title": "Meta-SR: A Magnification-Arbitrary Network for Super-Resolution", "url": "https://arxiv.org/abs/1903.00875v4", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]}
+]}

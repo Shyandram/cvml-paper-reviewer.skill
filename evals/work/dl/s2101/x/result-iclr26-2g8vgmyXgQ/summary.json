@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-2g8vgmyXgQ",
+  "paper_type": "theoretical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10}); Borderline Reject (3) internal",
+  "official_rating": 2.6,
+  "eic_rating": 2.51,
+  "eic_pool_position": 36,
+  "before_composite": 49.1,
+  "after_composite": 48.3,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "App. D.2 drops L^2 Delta^2 so O(eps^2) does not follow for sharp L: Verified",
+    "Lemma 5 claim 1/u_k - 1/K = Theta(delta): Verified (computes to about 0.79 for K=4, delta=0.01)",
+    "Lemma 7 constant Theta(delta) gap vs Lemma 8 O(eps delta) and (1-Attn)^2 in Eq. 10: Verified as inconsistency / Partly correct on the true rate",
+    "Two-sided Theta bounds fail for f in class (three-feature counter-example): Verified (relies on arbitrary D_f allowed in 3.1)",
+    "q update ignores Gram matrix for non-orthonormal features: Verified",
+    "Theorems 1-2 contain no step-size condition despite step-size claims: Verified",
+    "L enters only via L^2 Delta^2, so regimes look like time rescaling: Verified (from the paper's own Lemmas 1-2)",
+    "'almost any nontrivial L-Lipschitz function' overclaim: Verified",
+    "Experiments outside theorem conditions (K=4, N=100): Partly correct (constants hidden, Eq. 7 garbled; architecture mismatch and missing eta/delta verified)",
+    "[21] mis-described and Kim-Suzuki / Oko et al. uncited: Verified",
+    "[13] description does not match bibliography title: Partly correct",
+    "R3 kernel-smoothing analogy and practical implication: Overstated",
+    "R4 'organized proofs' strength: Overstated"
+  ],
+  "top_concerns": [
+    "Appendix proofs of Theorems 1-2 do not establish the stated rates (Lemma 5 arithmetic, Lemma 7 vs 8 gradient decay, App. D.2 drops L^2 Delta^2)",
+    "Setting is exact-match label lookup on K features; 'nonlinear regression', 'unseen functions' and 'curvature' are overstated and L acts as a rescaling",
+    "Non-orthonormal-feature generalization is not carried by the q dynamics, and Eq. 2 two-sided bounds are not implied by the class",
+    "Step-size / phase-transition claims are not stated in the theorems; no eta condition",
+    "Experiment uses a different architecture, no eta/delta, single run, and does not test rates; nearest nonlinear-ICL training papers uncited and [21] mis-described"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Five roles were run sequentially in one context (disclosed; not independent). The DA-CRITICAL criteria are written for empirical papers (leakage, contradicting evidence); none names an incorrect proof, so I mapped proof-step failures that void the main theorems to criterion 1 ('evidence contradicts the main claim'), which is a judgment call. The script's composite cross-check (band 2) disagreed with the rating starting point (3) while both sat near a boundary; the EIC guidance on keeping the starting point worked but is subjective. related_search.py refuses queries over 4 concept words, so claim queries had to be shortened and two returned off-topic results; the tool prints long JSON that had to be filtered with grep. Phase 1.6 asks the Synthesizer to check weaknesses before the EIC, but the same single context wrote both the reports and the check. The 'novelty' command needs hand-written entailment levels, which is subjective. Equation extraction was partly garbled (Eq. 7 and several exponents), so some checks are marked partly unverifiable."
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Cache What Lasts: Token Retention for Memory-Bounded KV Cache in LLMs",
+  "method_names": ["TRIM-KV", "TRIM-KV2048", "retention-gated attention", "retention gate"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "learns each token's intrinsic importance at creation time via a lightweight retention gate",
+    "selective retention can serve as a form of regularization, suppressing noise from uninformative tokens"
+  ],
+  "cutoff_date": "2025-09-24"
+}

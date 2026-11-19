@@ -1,0 +1,30 @@
+{"claims": [
+ {"id": "C1", "dimension": "resource", "central": true,
+  "text": "Human-ranked benchmark of reward-model quality for instruction image editing over 11 modern editors, 13 subtasks, three dimensions",
+  "matches": [
+   {"title": "EditVal: Benchmarking Diffusion Based Text-Guided Image Editing Methods", "url": "https://arxiv.org/abs/2310.02426v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false},
+   {"title": "VE-Bench: Subjective-Aligned Benchmark Suite for Text-Driven Video Editing Quality Assessment", "url": "https://arxiv.org/abs/2408.11481v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "method", "central": true,
+  "text": "Generative reward model (reasoning then score) fine-tuned from Qwen2.5-VL for editing, with K-pass self-ensemble",
+  "matches": [
+   {"title": "RM-R1: Reward Modeling as Reasoning", "url": "https://arxiv.org/abs/2505.02387v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+   {"title": "InternLM-XComposer2.5-Reward: A Simple Yet Effective Multi-Modal Reward Model", "url": "https://arxiv.org/abs/2501.12368v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+   {"title": "Multi-Reward as Condition for Instruction-based Image Editing", "url": "https://arxiv.org/abs/2411.04713v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "result", "central": false,
+  "text": "Best-of-N selection with the reward model improves several editing models",
+  "matches": [
+   {"title": "Multi-Reward as Condition for Instruction-based Image Editing", "url": "https://arxiv.org/abs/2411.04713v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C4", "dimension": "problem", "central": true,
+  "text": "Online RL for instruction image editing with a learned editing reward model; open VLM rewards fail",
+  "matches": [
+   {"title": "InstructRL4Pix: Training Diffusion for Image Editing by Reinforcement Learning", "url": "https://arxiv.org/abs/2406.09973v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false}
+  ]},
+ {"id": "C5", "dimension": "result", "central": false,
+  "text": "Reward score variance rather than annotator accuracy can dominate RL optimisation success",
+  "matches": [
+   {"title": "GVPO: Group Variance Policy Optimization for Large Language Model Post-Training", "url": "https://arxiv.org/abs/2504.19599v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]}
+]}

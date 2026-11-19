@@ -1,0 +1,21 @@
+{"claims": [
+ {"id": "C1", "dimension": "resource", "central": true,
+  "text": "First data-centric benchmark for chain-of-thought distillation (augmentation, selection, mixing)",
+  "matches": [
+   {"title": "Symbolic Chain-of-Thought Distillation: Small Models Can Also \"Think\" Step-by-Step", "url": "https://arxiv.org/abs/2306.14050v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true},
+   {"title": "Keypoint-based Progressive Chain-of-Thought Distillation for LLMs", "url": "https://arxiv.org/abs/2405.16064v1", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+   {"title": "OpenThoughts: Data Recipes for Reasoning Models", "url": "https://arxiv.org/abs/2506.04178v2", "label": "recent preprint (arXiv-only, <6 months before cutoff)", "level": 3, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "Data augmentation (especially reverse thinking) gives the largest gains over selection and mixing for 7-8B students",
+  "matches": [
+   {"title": "Mind the Gap: Bridging Thought Leap for Improved Chain-of-Thought Tuning", "url": "https://arxiv.org/abs/2505.14684v3", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+   {"title": "Reverse Thinking Makes LLMs Stronger Reasoners", "url": "https://arxiv.org/abs/2411.19865v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true}
+  ]},
+ {"id": "C3", "dimension": "result", "central": false,
+  "text": "Teacher-student compatibility and the small-model learnability gap affect distillation; strongest teacher is not always best",
+  "matches": [
+   {"title": "Small Models Struggle to Learn from Strong Reasoners", "url": "https://arxiv.org/abs/2502.12143v3", "label": "prior (arXiv-only, 6+ months before cutoff)", "level": 4, "cited_by_paper": true},
+   {"title": "MiCoTA: Bridging the Learnability Gap with Intermediate CoT and Teacher Assistants", "url": "https://arxiv.org/abs/2507.01887v1", "label": "recent preprint (arXiv-only, <6 months before cutoff)", "level": 3, "cited_by_paper": false}
+  ]}
+]}

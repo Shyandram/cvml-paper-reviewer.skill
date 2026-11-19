@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-BQUeUjahfI",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.88,
+  "eic_pool_position": 46,
+  "before_composite": 52.1,
+  "after_composite": 50.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.25},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 2 Transformer-Block below Standard HMM at length 20 on BLEU-4/CIDEr: Verified",
+    "'slashing the maximum perplexity by more than half': Partly correct (true for 2 of 4 neural rows)",
+    "No standard-HMM row in Table 3: Verified",
+    "Sampling baseline degenerate (k=1, perplexity 43.142, toxicity above vanilla): Verified",
+    "'Minimal inference overhead' not measured: Verified",
+    "'Improves constraint satisfaction' not measured in Tables 2-3: Verified",
+    "No VLM distillation likelihood result: Verified",
+    "Training/protocol details absent: Verified",
+    "Proposition 1 bound applies equally to neural HMMs, so does not motivate the encoder: Verified",
+    "HMM prefix insensitivity shown by a single example (Fig. 1): Partly correct (figure not viewed)",
+    "Monarch-16384 vs Dense-1024 'comparable compute' mismatch: Partly correct (depends on unstated V and constants)",
+    "R3 reliance on unmeasured negligible overhead: Overstated"
+  ],
+  "top_concerns": [
+    "Table 2 downstream gains are tiny, single-run and partly negative, yet described as significant/consistent",
+    "Table 3 lacks a standard-HMM TRACE baseline; Sampling baseline is degenerate; LTLA perplexity rises 51%",
+    "Abstract claims improved constraint satisfaction and minimal overhead, but neither is measured",
+    "No VLM distillation likelihood, no timing, no training details or code",
+    "Incremental novelty over Ctrl-G/TRACE HMMs; Proposition 1 does not motivate the neural encoder"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Literature check (strict, cutoff 2025-09-24) could not complete: related_search.py got HTTP 429 and read timeouts from the arXiv API, so Phase 1.5 outputs (claim profile, scout table, similarity) were skipped and recommended references are from memory, three marked as confident and three [verify]. The skill asks for the BEFORE aggregation run before the EIC reads the reports, but in a single-context run the scores and weights are fixed by the same pass, so the order is nominal. Figures 1-4 were unavailable. The no-CRITICAL case is handled cleanly (empty da_critical). The ICLR pool-position bands and the 'never borderline when unsure' rule push toward Overall 3; the Overall 3 vs 4 split relies on that. The skill's R3 'most positive' instruction and the confidence x EIC weight scheme worked without conflict. Appendix-only-proofs papers: the Reproducibility floor rule (supplement deferred) does not apply since the paper does not defer details to a supplement; this was my interpretation."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Degradation-Aware All-in-One Image Restoration via Latent Prior Encoding",
+  "method_names": ["DAIR", "3WD", "DAEB", "LPE", "which-where-what decoding", "Latent Prior Encoding"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "reframe AIR as learned latent prior inference",
+    "degradation-aware representations are automatically inferred from the input without explicit task cues",
+    "average PSNR improvement of 1.68 dB while being three times more efficient"
+  ],
+  "cutoff_date": "2025-09-24"
+}

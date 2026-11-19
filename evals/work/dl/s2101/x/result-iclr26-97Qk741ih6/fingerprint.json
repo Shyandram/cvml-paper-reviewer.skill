@@ -1,0 +1,13 @@
+{
+  "title": "CLAUSE: Agentic Neuro-Symbolic Knowledge Graph Reasoning via Dynamic Learnable Context Engineering",
+  "method_names": ["CLAUSE", "LC-MAPPO", "Subgraph Architect", "Path Navigator", "Context Curator"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "Lagrangian-Constrained Multi-Agent Proximal Policy Optimization",
+    "treats context construction as a sequential decision process over knowledge graphs",
+    "Static k-hop expansions and think-longer prompting often over-retrieve"
+  ],
+  "cutoff_date": "2025-09-24"
+}

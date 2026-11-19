@@ -1,0 +1,13 @@
+{
+  "title": "Enhancing Generalization via Sharpness-Aware Trajectory Matching for Dataset Condensation",
+  "method_names": ["SATM", "SATM-DA", "SATM-FI", "TUH", "Truncated Unrolling Hypergradient", "Trajectory Reusing", "Sharpness-Aware Trajectory Matching"],
+  "authors": ["Boyan Gao", "Bo Zhao", "Shreyank N Gowda", "Xingrun Xing", "Yibo Yang", "Timothy Hospedales", "David A. Clifton"],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "optimising the sharpness of the loss landscape and objective simultaneously",
+    "efficient hypergradient approximation that is mathematically well-supported and straightforward to implement",
+    "notoriously complicated loss landscape and expensive time-space complexity of the inner-loop unrolling"
+  ],
+  "cutoff_date": "2025-09-24"
+}

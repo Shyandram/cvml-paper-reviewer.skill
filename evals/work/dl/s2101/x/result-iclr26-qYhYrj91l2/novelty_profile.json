@@ -1,0 +1,18 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true, "text": "Training paradigm that learns camera motions for video diffusion from synthetic low-poly rendered videos, with appearance LoRA discarded at inference",
+  "matches": [
+   {"title": "Free-Form Motion Control: Controlling the 6D Poses of Camera and Objects in Video Generation", "url": "https://arxiv.org/abs/2501.01425", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+   {"title": "HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation", "url": "https://arxiv.org/abs/2407.17438v3", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true},
+   {"title": "CinePreGen: Camera Controllable Video Previsualization via Engine-powered Diffusion", "url": "", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "method", "central": true, "text": "Disentangling motion from synthetic appearance via separate appearance LoRA trained on static-camera videos, a virtual-style prompt token, and a flow-based loss",
+  "matches": [
+   {"title": "MotionDirector: Motion Customization of Text-to-Video Diffusion Models", "url": "", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+   {"title": "Separate Motion from Appearance: Customizing Motion via Customizing Text-to-Video Diffusion Models", "url": "", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+   {"title": "FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis", "url": "", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "result", "central": false, "text": "Synthetic low-quality videos suffice to produce precise, realistic compound and complex camera motions comparable to real-data training",
+  "matches": [
+   {"title": "Free-Form Motion Control: Controlling the 6D Poses of Camera and Objects in Video Generation", "url": "https://arxiv.org/abs/2501.01425", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": true}
+  ]}
+]}

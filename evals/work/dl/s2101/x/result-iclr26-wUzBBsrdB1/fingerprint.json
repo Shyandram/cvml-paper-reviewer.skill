@@ -1,0 +1,13 @@
+{
+  "title": "Sparse but Wrong: Incorrect L0 Leads to Incorrect Features in Sparse Autoencoders",
+  "method_names": ["Nth decoder projection score", "Nth decoder projection", "decoder projection score"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "if L0 is not set precisely, the SAE fails to learn the underlying features of the LLM",
+    "If L0 is too low, the SAE will mix correlated features to improve reconstruction",
+    "to train SAEs with correct features, practitioners must set L0 correctly"
+  ],
+  "cutoff_date": "2025-09-24"
+}

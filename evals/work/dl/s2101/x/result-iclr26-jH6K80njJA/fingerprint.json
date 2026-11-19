@@ -1,0 +1,13 @@
+{
+  "title": "Structured RAG for Answering Aggregative Questions",
+  "method_names": ["S-RAG", "Hybrid-S-RAG", "HOTELS", "WORLD CUP", "WorldCup", "Hotels", "S-RAG-GoldSchema", "S-RAG-InferredSchema", "Structured RAG", "Structured Retrieval-Augmented Generation"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "translates natural-language queries into formal queries over said representation",
+    "constructs a structured representation of the corpus",
+    "we introduce two new datasets of aggregative queries"
+  ],
+  "cutoff_date": "2025-09-24"
+}

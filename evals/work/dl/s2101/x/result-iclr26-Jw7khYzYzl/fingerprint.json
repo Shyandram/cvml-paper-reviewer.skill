@@ -1,0 +1,13 @@
+{
+  "title": "Benchmarking Optimizers for Large Language Model Pretraining",
+  "method_names": [],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "comprehensive evaluation of recent optimization techniques across standardized LLM pretraining scenarios",
+    "systematically varying model size, batch size, and training duration",
+    "making all experiments fully reproducible, we hope our efforts can help the development"
+  ],
+  "cutoff_date": "2025-09-24"
+}

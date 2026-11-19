@@ -1,0 +1,37 @@
+{
+  "id": "iclr26-65iFtHZ8Cu",
+  "paper_type": "theoretical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.29,
+  "eic_pool_position": 52,
+  "before_composite": 57.2,
+  "after_composite": 56.4,
+  "eic_weights": {"R1": 1.25, "R2": 1.25, "R3": 1.0, "R4": 0.75, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Abel-summation reduction from strongly adaptive regret to uniform discounted regret (R2-W1, DA-M1): Verified (algebra re-derived; the strongly adaptive rate itself is recalled, marked [verify])",
+    "Invalid final step in Lemma 1 proof, Section 4.5 (R1 ERR-1, DA-M3): Verified for the step; Partly correct that the lemma itself fails (impact on Thm 3 appears limited)",
+    "Lemma 1 hypothesis U(n) >= 20 vs proof needing 22 (R1 ERR-2): Verified",
+    "tau restriction is vacuous because the trivial bound GD/(1-lambda) already implies the form for windows <= 32 log T (R1-W4, DA-M4): Verified",
+    "Horizon T is used in the grid, so the method is not anytime; 'uniformly over time' holds for OGD only (R1-W4, R3-W3, DA-m3): Verified",
+    "'Cost of adaptivity' asserted without a lower bound (R1-W3, DA-M2): Verified",
+    "Gaps and inaccuracies in the Kapralov-Panigrahy sketch are never enumerated (R2-W2, DA-M5): Verified",
+    "Per-round function-value access at several points (R3-W2): Verified",
+    "R4: contribution is a clear answer to an open question: Overstated",
+    "Lemma 2 coefficients sum to less than 1 for finite T (R1 ERR-4): Verified, harmless"
+  ],
+  "top_concerns": [
+    "Main rate of Thm 3 appears to follow from known strongly adaptive regret via Abel summation; the paper never analyses this reduction",
+    "Proof of Lemma 1, presented as new and complete, has an invalid final step and a hypothesis mismatch (U(n) >= 20 vs 22)",
+    "'Cost of adaptivity' and 'novel analysis' are asserted without a lower bound or a list of what changed relative to Kapralov-Panigrahy and Zhang et al. 2022a",
+    "Horizon T must be known and the stated lambda range restriction is vacuous; the scope of 'unknown discount factor' is narrower than the abstract suggests",
+    "No sanity experiment, no limitations discussion; imported lemmas make the analysis not self-contained"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Phase 1.5 literature check could not run (arXiv queries timed out, no network), so recommended references are marked [verify] and the decisive 'strongly adaptive regret implies discounted regret' point rests on a recalled rate. Mild ambiguities: the skill's per-reviewer pool-position bands in aggregate_scores output (e.g. 55-61 for Overall 4) differ from the 65+ pool position the rubric asks for with Overall 4, and R3/R4 pool positions of 66/65 sit above that script band; ICLR label for internal 3 is '4' on {0,2,4,6,8,10}, which may read oddly next to the internal scale. The instruction to run the five reviewers one after another in one context conflicts mildly with 'keep each independent': the reduction insight was known to the author of all reports, so R1 only raised it as a question. The theory paper type makes the Experimental Validation dimension (weight 0.10) hard to score; I used 36-48. Reviewer length targets (500-1200 words) were roughly met."
+}

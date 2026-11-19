@@ -1,0 +1,38 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "method", "central": true,
+      "text": "Splat Regression Model: mixture of heterogeneous anisotropic bump functions with vector weights; universal approximation",
+      "matches": [
+        {"title": "Physics-informed radial basis network (PIRBN): A local approximating neural network for solving nonlinear PDEs", "url": "https://arxiv.org/abs/2304.06234v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "Gaussian Fluids: A Grid-Free Fluid Solver based on Gaussian Spatial Representation", "url": "https://arxiv.org/abs/2405.18133v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "DARB-Splatting: Generalizing Splatting with Decaying Anisotropic Radial Basis Functions", "url": "https://arxiv.org/abs/2501.12369v3", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "method", "central": true,
+      "text": "Training splat models by Wasserstein-Fisher-Rao gradient flows over mixing measures (Theorem 1)",
+      "matches": [
+        {"title": "Learning Gaussian Mixtures Using the Wasserstein-Fisher-Rao Gradient Flow", "url": "https://arxiv.org/abs/2301.01766v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "An Exponentially Converging Particle Method for the Mixed Nash Equilibrium of Continuous Games", "url": "https://arxiv.org/abs/2211.01280v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+        {"title": "DPVI: A Dynamic-Weight Particle-Based Variational Inference Framework", "url": "https://arxiv.org/abs/2112.00945v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "result", "central": true,
+      "text": "3D Gaussian Splatting recovered as a special case; unified framework separating inverse problem, model and optimizer",
+      "matches": [
+        {"title": "Gaussian Herding across Pens: An Optimal Transport Perspective on Global Gaussian Reduction for 3DGS", "url": "https://arxiv.org/abs/2506.09534v2", "label": "recent preprint (arXiv-only, under 6 months before the cutoff; discuss, don't require)", "level": 2, "cited_by_paper": false},
+        {"title": "Plug-and-Play PDE Optimization for 3D Gaussian Splatting: Toward High-Quality Rendering and Reconstruction", "url": "https://arxiv.org/abs/2509.13938v1", "label": "concurrent (within 60 days before the cutoff; discuss, don't require)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C4", "dimension": "result", "central": false,
+      "text": "Splat models vastly outperform KAN and MLP in size, error and convergence on low-dimensional regression and PDE fitting",
+      "matches": [
+        {"title": "Physics-informed radial basis network (PIRBN): A local approximating neural network for solving nonlinear PDEs", "url": "https://arxiv.org/abs/2304.06234v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+        {"title": "Solving High Frequency and Multi-Scale PDEs with Gaussian Processes", "url": "https://arxiv.org/abs/2311.04465v2", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

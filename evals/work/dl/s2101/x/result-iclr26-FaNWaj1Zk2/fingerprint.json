@@ -1,0 +1,12 @@
+{
+  "title": "Feature Dynamics as Implicit Data Augmentation: A Depth-Decomposed View on Deep Neural Network Generalization",
+  "method_names": ["temporal consistency", "composite networks", "depth-decomposed"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "predictions remain stable when shallow features from earlier checkpoints combine with deeper features from later ones",
+    "SGD injects anisotropic noise aligned with a few principal directions"
+  ],
+  "cutoff_date": "2025-09-24"
+}

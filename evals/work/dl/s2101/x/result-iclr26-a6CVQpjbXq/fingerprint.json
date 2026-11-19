@@ -1,0 +1,9 @@
+{
+  "title": "Best-of-Majority: Minimax-Optimal Strategy for Pass@k Inference Scaling",
+  "method_names": ["Best-of-Majority", "BoM"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": ["restricts the candidates to the responses with high frequency in the N samples before selecting the top-k rewards", "neither majority voting nor BoN exhibits the desirable scaling with k and the sampling budget"],
+  "cutoff_date": "2025-09-24"
+}

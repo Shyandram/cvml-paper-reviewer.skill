@@ -1,0 +1,13 @@
+{
+  "title": "Right Answer at the Right Time — Temporal Retrieval-Augmented Generation via Graph Summarization",
+  "method_names": ["STAR-RAG", "STAR-RAG-no-rule", "STAR-RAG-uniform"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "building a time-aligned rule graph and conducting propagation on this graph to narrow the search space",
+    "eliminates the need for heavy model training and fine-tuning",
+    "reduces the candidate set of retrieval results, and lowers token consumption without sacrificing accuracy"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,4 @@
+{"time": "2026-11-10T13:37:10+00:00", "event": "query_too_long", "query": "training-free sparse attention decoding", "concept_words": 5}
+{"time": "2026-11-10T13:37:15+00:00", "event": "query", "source": "arxiv", "query": "sparse attention decoding", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:38:01+00:00", "event": "query", "source": "arxiv", "query": "quantized key retrieval attention", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:40:01+00:00", "event": "query", "source": "arxiv", "query": "top-k attention hashing KV", "purpose": "claim", "tag": "C2"}

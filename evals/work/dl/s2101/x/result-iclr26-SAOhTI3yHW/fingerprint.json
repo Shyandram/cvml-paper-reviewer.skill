@@ -1,0 +1,13 @@
+{
+  "title": "RIFT: Group-Relative RL Fine-Tuning for Realistic and Controllable Traffic Simulation",
+  "method_names": ["RIFT", "RIFT-Pluto", "StateWiseRM"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "dual-stage AV-centered simulation framework that conducts open-loop imitation learning pre-training",
+    "preserves the trajectory-level multimodality through a GRPO-style group-relative advantage formulation",
+    "replacing KL regularization with the dual-clip mechanism"
+  ],
+  "cutoff_date": "2025-09-24"
+}

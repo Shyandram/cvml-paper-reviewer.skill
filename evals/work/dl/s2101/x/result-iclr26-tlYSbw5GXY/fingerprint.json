@@ -1,0 +1,13 @@
+{
+  "title": "Closing the Safety Gap: Surgical Concept Erasure in Visual Autoregressive Models",
+  "method_names": ["VARE", "VARErasure", "S-VARE", "VAR Erasure", "filtered cross entropy", "LFCE", "LPre"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "leveraging auxiliary visual tokens to reduce fine-tuning intensity",
+    "filtered cross entropy loss to precisely identify and minimally adjust unsafe visual tokens",
+    "closing the safety gap in autoregressive text-to-image generation"
+  ],
+  "cutoff_date": "2025-09-24"
+}

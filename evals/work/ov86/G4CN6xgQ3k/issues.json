@@ -1,0 +1,663 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Limited contribution; implications of the SimPO analysis for algorithm design unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "No theoretical explanation of why maximum entropy RL fails online",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Equivalence non-rigorous: length-normalized temperature prevents log Z cancellation",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Online failure shown only on small Pythia models; unclear for 7B+",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only TL;DR summarization task; unclear for more complex alignment tasks",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Temperature depends on y via length normalization, which is not analyzed theoretically",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Margin hyperparameter gamma not related to maximum entropy RL",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Experiments only on small models; need modern base models like Qwen, LLaMA",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Novelty weak: reward hacking with entropy known; no insight on handling entropy-reward relation",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Experiments only on small models; need more diverse base models",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "No formal results for the SimPO-MaxEnt connection in main paper; conditions unclear",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Derivation cancels log Z only for constant alpha; fails for length-dependent temperature",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Margin gamma added by analogy, not derived",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Constant-alpha margin-free case is known uniform-reference DPO reading (Liu et al.)",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "MaxEnt and KL runs use very different learning rates",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Entropy coefficient grid too small to match working KL regularization strength",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "MaxEnt and KL objectives differ in reference term and length scaling simultaneously",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Offline/online asymmetry not shown; App. B suggests learning-rate effect; no 2.8B SimPO run",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Claim that entropy exacerbates reward hacking rests on correlation",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Entropy coefficient-0 run cited but not shown",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Single runs, no seeds or variance",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Reward model and TL;DR split unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "GPT-4o-mini judge not validated; no human check or sample outputs",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Overoptimization inferred from win-rate collapse alone; may be output pathology",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Minimum Entropy RL, clipping, epsilon experiment and reproduction failure claimed without evidence",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Typos and Eq. 17 bracket",
+   "minor": true
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Learning rate for 2.8B KL runs inconsistent between text and Fig. 3",
+   "minor": true
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Abstract's \"consistently overoptimizes\" contradicted by 1B low-learning-rate runs",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Claim that dataset constraints explain offline success unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Abstract's \"consistently exhibits overoptimization\" contradicted by results and body text",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Conclusion generalizes from two small models and one dataset",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Abstract final sentence vague",
+   "minor": true
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Dense multi-panel figures hide main evidence; no summary results table",
+   "minor": true
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Section 4.2.2 contains no figure",
+   "minor": true
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Insight weak for venue: main result \"unsurprising\", new parts single-run and unexplained",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Typos and inconsistent KL-constrained/regularized terminology",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Sequence-level entropy assumption unexamined; bonus rewards degenerate outputs; paradox under-explained",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Evidence from two small models, one dataset, one judge; claims overgeneralized",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No practical guidance for practitioners, e.g., learning-rate window or collapse monitor",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Ethics statement generic",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "SimPO-MaxEnt equivalence invalid under length-normalized alpha; appendix concedes missing normalization and margin",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Learning rate, coefficient scale and reference term differ between MaxEnt and KL runs",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Offline/online asymmetry contradicted by App. B; no 2.8B SimPO run",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Causal entropy claim read from correlated curves",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Coefficient-0 run not shown",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "\"Consistently exhibits overoptimization\" contradicted by 1B results",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Minimum Entropy and clipping results described without data",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "No seeds or variance; small differences interpreted",
+   "minor": false
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Text and Fig. 3 legend disagree on learning rate",
+   "minor": true
+  },
+  {
+   "id": "Q4.10",
+   "reviewer": "Q4",
+   "text": "Contextual-bandit view cited to an exploration-in-bandits paper",
+   "minor": true
+  },
+  {
+   "id": "Q4.11",
+   "reviewer": "Q4",
+   "text": "\"Fully reproducible\" claimed while reward model, split, seeds, code absent",
+   "minor": true
+  },
+  {
+   "id": "Q4.12",
+   "reviewer": "Q4",
+   "text": "Typos",
+   "minor": true
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Length normalization breaks log Z cancellation; equivalence statement unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Margin gamma added following psiPO, not derived",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Derived constant-alpha result is known DPO uniform-reference reading; novelty incremental",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Online length-weighted entropy objective does not correspond to SimPO's closed form",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Contextual bandit view cited to non-RLHF source",
+   "minor": true
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "Relevant prior work on maximum entropy failure and overoptimization not engaged; missing references",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "Dataset constraints claim asserted, not tested",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited contribution and insight; implications for algorithm design unclear",
+    "points": [
+     "P1.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No explanation of why MaxEnt RL fails online",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Length-dependent temperature breaks SimPO-MaxEnt equivalence",
+    "points": [
+     "P2.1",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Margin gamma not connected to MaxEnt",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Only small models and one task",
+    "points": [
+     "P2.2",
+     "P2.3",
+     "P3.3",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No formal results or conditions for equivalence",
+    "points": [
+     "P4.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Length-normalized alpha breaks the equivalence derivation",
+    "points": [
+     "Q1.1",
+     "Q4.1",
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Margin not derived",
+    "points": [
+     "Q1.2",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Constant-alpha result already known; C1 incremental",
+    "points": [
+     "Q1.3",
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "MaxEnt vs KL comparison confounded (lr, coefficient scale, ref term)",
+    "points": [
+     "Q1.5",
+     "Q1.6",
+     "Q1.7",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Offline/online asymmetry not demonstrated",
+    "points": [
+     "Q1.8",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Causal entropy claim only correlational",
+    "points": [
+     "Q1.10",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Coefficient-0 run not shown",
+    "points": [
+     "Q1.11",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No seeds or variance",
+    "points": [
+     "Q1.12",
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Reward model, split and reproducibility details missing",
+    "points": [
+     "Q1.13",
+     "Q4.11"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Judge not validated",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Overoptimization diagnosed from win rate only",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Claims without shown evidence (Minimum Entropy, clipping)",
+    "points": [
+     "Q1.16",
+     "Q2.5",
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Typos and terminology",
+    "points": [
+     "Q1.17",
+     "Q2.7",
+     "Q4.12"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Learning-rate inconsistency text vs legend",
+    "points": [
+     "Q1.18",
+     "Q4.9"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Abstract \"consistently overoptimizes\" overclaims",
+    "points": [
+     "Q1.19",
+     "Q2.1",
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Dataset constraints claim untested",
+    "points": [
+     "Q1.20",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Overgeneralization from small models and one task",
+    "points": [
+     "Q2.2",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Vague abstract sentence",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Dense figures; no results table",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Weak insight; result unsurprising",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Sequence-level entropy bonus effect unexamined; paradox under-explained",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No practical guidance",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Generic ethics statement",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Inappropriate citation for bandit view",
+    "points": [
+     "Q4.10",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Online objective does not correspond to SimPO theory",
+    "points": [
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Prior work not engaged",
+    "points": [
+     "Q5.6"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI20"
+   ],
+   "related": [
+    "QI22",
+    "QI3",
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI21"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  }
+ ]
+}

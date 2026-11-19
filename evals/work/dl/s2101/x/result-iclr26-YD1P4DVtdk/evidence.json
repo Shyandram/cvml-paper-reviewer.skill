@@ -1,0 +1,312 @@
+{
+  "locations": [
+    "Abstract",
+    "Section 1",
+    "Section 2.1",
+    "Section 2.2",
+    "Section 2.3",
+    "Section 3",
+    "Section 3.1",
+    "Section 3.2",
+    "Section 3.3",
+    "Section 4",
+    "Section 5",
+    "Section 5.1",
+    "Section 5.2",
+    "Section 5.3",
+    "Section 6",
+    "Future Directions (Section 6)",
+    "Table 1",
+    "Table 2",
+    "Table 3",
+    "Table 4",
+    "Table 5",
+    "Table 6",
+    "Table 7",
+    "Table 8",
+    "Table 9",
+    "Figure 1",
+    "Figure 2",
+    "Figure 3",
+    "Figure 4",
+    "Figure 5"
+  ],
+  "quotes": [
+    "should be viewed as statistical estimators, subject to questions of variance and robustness",
+    "exhibit high variance under data resampling",
+    "are sensitive to hyperparameter choices",
+    "A noise level of 0.2 seems to be a good starting point for gpt2-small",
+    "until a path from input to output is found",
+    "no faithful circuit is found",
+    "dedicated studies analyzing the stability of circuit discovery outputs to variations in input data, experimental conditions, or method hyperparameters are scarce",
+    "Our publicly available codebase",
+    "a critical vulnerability of the method",
+    "questioning the stability of its findings",
+    "none of the tested EAP methods consistently yields circuits with lower variance",
+    "larger, more capable models that are of ultimate interest",
+    "may not fundamentally alter the stability",
+    "the statistical framework we have proposed is broadly applicable to other circuit discovery methods",
+    "distinct, yet stable circuit solutions",
+    "echoing the concept of non-identifiability",
+    "a circuit identified from a single dataset may not be representative of the underlying mechanism",
+    "may be an artifact of the sample",
+    "noise of a controlled amplitude and fixed direction",
+    "Table 3 shows the effect of increasing noise amplitude",
+    "Aggregated results from Figure 2 for bootstrap resampling",
+    "circuits found in gpt2-small on the Greater-Than task",
+    "gpt2-small for the IOI task",
+    "three tasks and three model architectures",
+    "averaged over tasks and models",
+    "more stable circuits, with higher Jaccard indices (resp. 0.790 and 0.799) and lower CVs",
+    "Null-space constrained model editing for language models",
+    "can fail to extend to novel contexts",
+    "feature visualization",
+    "tields"
+  ],
+  "numbers": [
+    {
+      "claim": "Table 1 bootstrap mean pairwise Jaccard index",
+      "value": "0.561",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 bootstrap CV of Jaccard index",
+      "value": "0.335",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 bootstrap mean circuit error",
+      "value": "0.440",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 meta-dataset mean Jaccard",
+      "value": "0.790",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 prompt paraphrasing mean Jaccard",
+      "value": "0.799",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 prompt paraphrasing mean circuit error",
+      "value": "0.150",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 circuit-error CV, paraphrasing",
+      "value": "0.134",
+      "derived": false
+    },
+    {
+      "claim": "Table 1 circuit-error CV, bootstrap",
+      "value": "0.123",
+      "derived": false
+    },
+    {
+      "claim": "Table 2 Greater-Than Jaccard to median, lowest row",
+      "value": "0.086",
+      "derived": false
+    },
+    {
+      "claim": "Table 2 IOI Jaccard to median, lowest row",
+      "value": "0.071",
+      "derived": false
+    },
+    {
+      "claim": "Table 2 IOI circuit sizes range",
+      "value": "3 to 12 edges",
+      "derived": false
+    },
+    {
+      "claim": "Table 2 Greater-Than circuit sizes range",
+      "value": "10 to 33 edges",
+      "derived": false
+    },
+    {
+      "claim": "Table 2/7 Greater-Than circuit error identical across sizes 23, 17, 10, 16, 16",
+      "value": "0.20",
+      "derived": false
+    },
+    {
+      "claim": "Table 7 Greater-Than KL identical across those circuits",
+      "value": "6.4e-7",
+      "derived": false
+    },
+    {
+      "claim": "Table 2 IOI circuit error identical across sizes 3, 12, 6, 7, 9",
+      "value": "0.69",
+      "derived": false
+    },
+    {
+      "claim": "Table 6 IOI clean-corrupted circuit size",
+      "value": "448",
+      "derived": false
+    },
+    {
+      "claim": "Table 6 IOI clean-corrupted Jaccard to median",
+      "value": "0.016",
+      "derived": false
+    },
+    {
+      "claim": "Table 6 IOI EAP-IG-activations circuit size",
+      "value": "117",
+      "derived": false
+    },
+    {
+      "claim": "Table 6 IOI EAP-IG-activations Jaccard to median",
+      "value": "0.042",
+      "derived": false
+    },
+    {
+      "claim": "Size bound on Jaccard for a 7-edge circuit inside a 448-edge circuit",
+      "value": "7/448 = 0.0156",
+      "derived": true
+    },
+    {
+      "claim": "Table 3 Llama-3.2-1B IOI bootstrap circuit error",
+      "value": "0.66",
+      "derived": false
+    },
+    {
+      "claim": "Table 3 Llama-3.2-1B-Instruct IOI bootstrap circuit error",
+      "value": "0.69",
+      "derived": false
+    },
+    {
+      "claim": "Table 3 Llama-3.2-1B SVA bootstrap circuit error",
+      "value": "0.80",
+      "derived": false
+    },
+    {
+      "claim": "Table 3 Llama-3.2-1B IOI Jaccard CV",
+      "value": "0.85",
+      "derived": false
+    },
+    {
+      "claim": "Table 3 Llama-3.2-1B-Instruct IOI Jaccard CV",
+      "value": "0.76",
+      "derived": false
+    },
+    {
+      "claim": "Recomputed mean bootstrap circuit error from Table 3 (8 cells)",
+      "value": "0.439",
+      "derived": true
+    },
+    {
+      "claim": "Recomputed mean bootstrap Jaccard from Table 3 (8 cells)",
+      "value": "0.5625",
+      "derived": true
+    },
+    {
+      "claim": "Recomputed mean paraphrase circuit error from Table 5 (5 cells)",
+      "value": "0.148",
+      "derived": true
+    },
+    {
+      "claim": "Recomputed mean meta-dataset circuit error from Table 4 (8 cells)",
+      "value": "0.299",
+      "derived": true
+    },
+    {
+      "claim": "Common-cell bootstrap circuit error (GT x2, IOI x3)",
+      "value": "0.376",
+      "derived": true
+    },
+    {
+      "claim": "Common-cell bootstrap mean Jaccard (GT x2, IOI x3)",
+      "value": "0.43",
+      "derived": true
+    },
+    {
+      "claim": "Common-cell meta-dataset circuit error and Jaccard",
+      "value": "0.164 and 0.75",
+      "derived": true
+    },
+    {
+      "claim": "Common-cell paraphrase circuit error and Jaccard",
+      "value": "0.148 and 0.80",
+      "derived": true
+    },
+    {
+      "claim": "Table 3 Llama-3.2-1B Greater-Than bootstrap circuit error variance",
+      "value": "4.67e-4",
+      "derived": false
+    },
+    {
+      "claim": "Implied standard deviation for that cell",
+      "value": "0.0216",
+      "derived": true
+    },
+    {
+      "claim": "Table 8 gpt2-small SVA circuit size",
+      "value": "1",
+      "derived": false
+    },
+    {
+      "claim": "Maximum edge budget in the stopping rule",
+      "value": "2000",
+      "derived": false
+    },
+    {
+      "claim": "Initial edge count in the stopping rule",
+      "value": "30",
+      "derived": false
+    },
+    {
+      "claim": "Noise amplitude recommended for gpt2-small",
+      "value": "0.2",
+      "derived": false
+    },
+    {
+      "claim": "Figure 3 IOI circuit-error axis range (from extracted tick labels)",
+      "value": "0.1000 to 0.1125",
+      "derived": false
+    }
+  ],
+  "references": [
+    {
+      "title": "Stability selection",
+      "authors": "Nicolai Meinshausen, Peter Bühlmann",
+      "year": 2010,
+      "marked_verify": true
+    },
+    {
+      "title": "On the stability of feature selection algorithms",
+      "authors": "Sarah Nogueira, Konstantinos Sechidis, Gavin Brown",
+      "year": 2018,
+      "marked_verify": true
+    },
+    {
+      "title": "Position-aware Automatic Circuit Discovery",
+      "authors": "Tal Haklay, Hadas Orgad, David Bau, Aaron Mueller, Yonatan Belinkov",
+      "year": 2025,
+      "marked_verify": false
+    },
+    {
+      "title": "Adaptive Circuit Behavior and Generalization in Mechanistic Interpretability",
+      "authors": "Jatin Nainani, Sankaran Vaidyanathan, AJ Yeung, Kartik Gupta, David Jensen",
+      "year": 2024,
+      "marked_verify": false
+    },
+    {
+      "title": "MIB: A Mechanistic Interpretability Benchmark",
+      "authors": "Aaron Mueller et al.",
+      "year": 2025,
+      "marked_verify": false
+    },
+    {
+      "title": "Interpretation of neural networks is fragile",
+      "authors": "Amirata Ghorbani, Abubakar Abid, James Zou",
+      "year": 2019,
+      "marked_verify": true
+    },
+    {
+      "title": "EAP-GP: Mitigating Saturation Effect in Gradient-based Automated Circuit Identification",
+      "authors": "Lin Zhang, Wenshuo Dong, Zhuoran Zhang, Shu Yang, Lijie Hu, Ninghao Liu",
+      "year": 2025,
+      "marked_verify": false
+    }
+  ]
+}

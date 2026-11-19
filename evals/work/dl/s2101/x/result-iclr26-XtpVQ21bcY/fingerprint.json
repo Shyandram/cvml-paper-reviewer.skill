@@ -1,0 +1,13 @@
+{
+  "title": "PureKV: Plug-and-Play KV Cache Optimization with Spatial-Temporal Sparse Attention for Vision-Language Large Models",
+  "method_names": ["PureKV", "ST-SpAttn", "CLIE", "Cross-Layer Importance Estimation"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "joint optimization of sparse attention and KV cache compression",
+    "purifying spatial noise and temporal redundancy in KV cache",
+    "utilizes lower layer attention scores to estimate the importance of high layers"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,28 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "method", "central": true,
+      "text": "First to explore multi-concept unlearning via unstructured neuron masking (sparsity perspective)",
+      "matches": [
+        {"title": "ConceptPrune: Concept Editing in Diffusion Models via Skilled Neuron Pruning", "url": "https://arxiv.org/abs/2405.19237", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 4, "cited_by_paper": true},
+        {"title": "Separable Multi-Concept Erasure from Diffusion Models", "url": "https://arxiv.org/abs/2402.05947v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "method", "central": true,
+      "text": "Training-free framework with concept-sensitive neurons (saliency, temporal/spatial selection) and concept-agnostic neuron preservation in mask fusion",
+      "matches": [
+        {"title": "ConceptPrune: Concept Editing in Diffusion Models via Skilled Neuron Pruning", "url": "https://arxiv.org/abs/2405.19237", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": true},
+        {"title": "SPEED: Scalable, Precise, and Efficient Concept Erasure for Diffusion Models", "url": "https://arxiv.org/abs/2503.07392v5", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "result", "central": true,
+      "text": "State-of-the-art multi-concept unlearning across objects, styles and explicit content at under 0.3% sparsity",
+      "matches": [
+        {"title": "MACE: Mass Concept Erasure in Diffusion Models", "url": "https://arxiv.org/abs/2403.06135v1", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true},
+        {"title": "SPEED: Scalable, Precise, and Efficient Concept Erasure for Diffusion Models", "url": "https://arxiv.org/abs/2503.07392v5", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

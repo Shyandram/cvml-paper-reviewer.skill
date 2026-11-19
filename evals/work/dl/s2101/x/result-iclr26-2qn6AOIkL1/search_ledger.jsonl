@@ -1,0 +1,2 @@
+{"time": "2026-11-10T13:38:33+00:00", "event": "query_too_long", "query": "backdoor mixture-of-experts language models", "concept_words": 5}
+{"time": "2026-11-10T13:38:35+00:00", "event": "query", "source": "arxiv", "query": "backdoor mixture-of-experts LLM", "purpose": "claim", "tag": "C1"}

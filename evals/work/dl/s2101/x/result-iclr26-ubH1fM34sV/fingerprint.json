@@ -1,0 +1,13 @@
+{
+  "title": "Improving GUI Grounding with Explicit Position-to-Coordinate Mapping",
+  "method_names": ["RULER", "RULER tokens", "I-MRoPE", "I-MRO PE", "Interleaved MRoPE", "Rotary position-to-pixeL mappER"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "referencing positions similar to gridlines on a map",
+    "explicit coordinate markers, letting the model reference positions",
+    "width and height dimensions are represented equally"
+  ],
+  "cutoff_date": "2025-09-24"
+}

@@ -1,0 +1,5 @@
+{"time": "2026-11-10T13:48:38+00:00", "event": "query_too_long", "query": "SimPO reference-free preference optimization", "concept_words": 5}
+{"time": "2026-11-10T13:48:41+00:00", "event": "query_too_long", "query": "maximum entropy direct preference optimization", "concept_words": 5}
+{"time": "2026-11-10T13:48:42+00:00", "event": "query", "source": "arxiv", "query": "maximum entropy preference optimization", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:50:26+00:00", "event": "query", "source": "arxiv", "query": "online RLHF overoptimization entropy", "purpose": "claim", "tag": "C2"}
+{"time": "2026-11-10T13:51:49+00:00", "event": "query", "source": "arxiv", "query": "entropy regularization RLHF", "purpose": "claim", "tag": "C2"}

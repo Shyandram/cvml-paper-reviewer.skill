@@ -1,0 +1,40 @@
+{
+  "id": "iclr26-ubH1fM34sV",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 47,
+  "before_composite": 54.9,
+  "after_composite": 54.2,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Headline 31.1 -> 37.2 uses UGround-V1-7B as baseline; matched baseline is 34.6 (+2.6): Verified",
+    "No resolution-controlled experiment; ScreenSpot-Pro confounded with domain shift: Verified",
+    "No mechanism control / evidence of copy-and-add for RULER: Verified",
+    "I-MRoPE gains tiny (0.2/0.5/0.5): Verified",
+    "I-MRoPE concurrent near-identical to Qwen3-VL (authors' own statement): Verified",
+    "'Consistent gains' contradicted by per-column decreases in Tables 2-3: Verified",
+    "Own-row Avg is unweighted mean while baselines are sample-weighted: Partly correct",
+    "Section 5.3 'p = 8' inconsistent with patch size 14 / s = 8: Verified",
+    "Appendix A.2 pixel range 784 to 50,176 implausibly small: Partly correct",
+    "LLaVA-558K citation mismatch (2024a vs 2023): Verified",
+    "'<1%' token overhead vs 2.8% for mobile: Partly correct",
+    "R3: gains reflect resolution generalization: Overstated",
+    "Missing 2025 RL/zoom baselines as a weakness: Overstated"
+  ],
+  "top_concerns": [
+    "Central claim (explicit position-to-coordinate mapping fixes resolution brittleness) is untested: no resolution-controlled experiment, no mechanism control, ScreenSpot-Pro confounded with domain shift",
+    "Headline 31.1% -> 37.2% compares against UGround-V1-7B; matched fine-tune gain is 34.6 -> 37.2 (+2.6); 'consistent gains' includes per-column decreases",
+    "Single-run results; most deltas (0.2-1.1 points) are within benchmark sampling noise (SE about 0.9-1.2 points)",
+    "I-MRoPE has 0.2-0.5 point gains, is not evaluated in the fine-tuned setting, and is a concurrent near-duplicate of Qwen3-VL; 'previously overlooked' is overstated",
+    "Fine-tuned model trails UI-TARS-7B on ScreenSpot and ScreenSpot-V2; method format (training target, RULER tokenization, Eq. 8) under-specified; no qualitative or failure analysis"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Phase 1.5 literature check ran (strict, cutoff 2025-09-24) with 6 logged queries via related_search.py; the 12-query budget was not exhausted. A search returning 5 results kept none and one returned nothing, so the C3 (positional-embedding) claim had weak search coverage. Ambiguities in the skill: (1) the Phase 0 fingerprint script leaves most fields empty and must be hand-edited; (2) the instructions say per-claim novelty should be rated from retrieved abstracts, but the search tool returns only partial abstracts, and I could not retrieve VideoRoPE's abstract, so that novelty rating was left 'pending' instead of inventing a level; (3) 'pool position' bands (typical rejected 42-54) and the 'Overall 4 requires pool >= 65' rule interact so that a lenient Perspective reviewer at pool 66 must give 4, which then needs a down-weight to land the EIC rating near 3; (4) the DA CRITICAL criteria are written mostly around leakage, so a paper whose main claim is untested rather than contradicted yields no CRITICAL issue by design; (5) the unweighted-vs-weighted Avg check relied on benchmark subset sizes not present in the paper (flagged Medium confidence, reviewer knowledge, validated on two baseline rows). The paper has no code-release statement; figures were not available, so Fig. 3 and Fig. 4 were judged from text only. Reviewer passes shared one model context (disclosed)."
+}

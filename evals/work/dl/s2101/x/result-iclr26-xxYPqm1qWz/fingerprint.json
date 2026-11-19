@@ -1,0 +1,13 @@
+{
+  "title": "VideoAgentTrek: Computer-Use Pretraining from Unlabeled Videos",
+  "method_names": ["VideoAgentTrek", "Video2Action", "ScreenFilter", "Screen Filter", "VAT"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "scalable pipeline that automatically mines training data from publicly available screen-recorded videos",
+    "inverse dynamics module with two components",
+    "continued pretraining followed by supervised fine-tuning"
+  ],
+  "cutoff_date": "2025-09-24"
+}

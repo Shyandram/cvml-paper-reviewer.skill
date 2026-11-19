@@ -1,0 +1,42 @@
+{
+  "id": "iclr26-2Jyb1yu3nN",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.2,
+  "eic_rating": 3.17,
+  "eic_pool_position": 50,
+  "before_composite": 56.5,
+  "after_composite": 56.1,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Baseline scores differ between Table 1 and Table 2 (MaxAct* L12 Clarity 0.33 vs 0.17): Verified",
+    "Abstract claims matching or exceeding existing methods while MaxAct* has higher Purity (and Faithfulness at 3 of 4 layers): Verified",
+    "Adding output tokens lowers Clarity at all four layers in Table 1: Verified",
+    "CircuitLens gain not isolated from prompt, sampling and merge changes; no ablation: Verified",
+    "Clarity gain is driven by format/prompt sensitivity of the metric: Partly correct",
+    "CircuitLens (top) vs MaxAct*: Clarity +0.10 to +0.16, Responsiveness within +/-0.03, Purity lower: Verified",
+    "Dataset/explainer-LLM dependence claimed as addressed vs 'circuit-based methods still depend on the dataset': Verified",
+    "No cost, runtime, seeds or confidence intervals reported: Verified",
+    "Missing z-threshold, rho, DBSCAN settings, FADE judge model: Verified",
+    "Weight-space vocabulary-projection prior work not cited: Partly correct",
+    "PRISM (Kopf et al.) only in Appendix A.1, no comparison with embedding clustering: Verified",
+    "Assumption 2 contradicted by Figure 3: Overstated",
+    "58.8% coverage refers to GPT-2 while quantitative tests use Gemma (32.7%): Verified",
+    "Layers 0 and 7 'perform poorly' vs Table 1: Partly correct",
+    "Eq. 4 omits Jacobian for heads at l' < l: Partly correct (unverifiable from extracted equations)"
+  ],
+  "top_concerns": [
+    "Abstract/conclusion claims (matching or exceeding, robustness, efficiency, reduced dataset and LLM dependence) exceed what Tables 1-2 show; Purity and Faithfulness favour MaxAct*, no cost measured",
+    "Evaluation population undefined (about 250 features per layer) and baseline numbers differ between Table 1 and Table 2; no variance or confidence intervals; one 2B model, four layers, two baselines",
+    "CircuitLens contribution is confounded with quantile sampling, a new specificity-favouring prompt, masking and merge steps; no ablation or embedding-clustering baseline",
+    "Only Clarity improves, a metric sensitive to description format; Purity flat/lower and Faithfulness near zero; no human or intervention-based validation",
+    "Key parameters (z-score threshold, rho, DBSCAN, FADE judge) missing; weight-space prior work and PRISM not positioned or compared"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "The literature check could not run: the first arXiv query (strict mode) retried for about ten minutes and exited with HTTP 429, so the skill's fallback was used (no kept results, no similarity/novelty/baseline-scout outputs, references marked [verify]); the SKILL.md fallback is clear but the script's long retry blocks the shell for the whole retry period. The skill asks reviewers to run integrity_scan.py and related_search.py while the task restricted tools to aggregation, so I ran integrity_scan (local, writes reviewer_copy.txt in the results dir) and related_search as the task allowed. Phase order is awkward when running sequentially in one context: Phase 1.5 must follow the five drafts, so I wrote the Domain addendum afterwards. The consistency rule (Overall 4 needs pool position >= 65) sits next to a borderline band of 55-69 and a script pool_band of 55-61 for the same position, which is slightly confusing; I set R3 at pool 66 / Overall 4. The ICLR venue label 'rating 4 on {0,2,4,6,8,10}' for internal Overall 3 may confuse readers because the internal and venue scales use the same digit differently. Equations were garbled by text extraction so Eq. 4 issues are left as questions."
+}

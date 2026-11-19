@@ -1,0 +1,22 @@
+{"claims": [
+ {"id": "C1", "dimension": "method", "central": true,
+  "text": "Laplacian on rank-0 cells of a combinatorial complex and heat kernel descriptors as permutation-invariant embeddings for transformers",
+  "matches": [
+   {"title": "NetLSD: Hearing the Shape of a Graph", "url": "https://arxiv.org/abs/1805.10712v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 3, "cited_by_paper": false},
+   {"title": "Cell Complex Neural Networks", "url": "https://arxiv.org/abs/2010.00743v4", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true},
+   {"title": "Submodular Hypergraphs: p-Laplacians, Cheeger Inequalities and Spectral Clustering", "url": "https://arxiv.org/abs/1803.03833v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C2", "dimension": "result", "central": true,
+  "text": "Heat kernel descriptors make the method maximally expressive: distinguishes arbitrary non-isomorphic combinatorial complexes",
+  "matches": [
+   {"title": "Comparing Graph Transformers via Positional Encodings", "url": "https://arxiv.org/abs/2402.14202v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+  ]},
+ {"id": "C3", "dimension": "result", "central": false,
+  "text": "State-of-the-art accuracy on MolHIV, PROTEIN and Gifflar tasks",
+  "matches": [
+   {"title": "Molecular topological deep learning for polymer property prediction", "url": "https://arxiv.org/abs/2410.04765v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 1, "cited_by_paper": false}
+  ]},
+ {"id": "C4", "dimension": "result", "central": false,
+  "text": "Scales efficiently to large combinatorial complexes relative to higher-order message passing",
+  "matches": []}
+]}

@@ -1,0 +1,27 @@
+{
+  "claims": [
+    {
+      "id": "C1", "dimension": "result", "central": false,
+      "text": "Longer responses cover a wider range of correct solutions (pass@32 rises with length while pass@1 falls)",
+      "matches": [
+        {"title": "Between Underthinking and Overthinking: An Empirical Study of Reasoning Length and correctness in LLMs", "url": "https://arxiv.org/abs/2505.00127v1", "label": "recent preprint", "level": 2, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C2", "dimension": "method", "central": true,
+      "text": "Dual length reward: shorter-preferring for Simple questions, longer-preferring for Hard questions",
+      "matches": [
+        {"title": "GRPO-LEAD: A Difficulty-Aware Reinforcement Learning Approach for Concise Mathematical Reasoning in Language Models", "url": "https://arxiv.org/abs/2504.09696v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "Just Enough Thinking: Efficient Reasoning with Adaptive Length Penalties Reinforcement Learning", "url": "https://arxiv.org/abs/2506.05256v2", "label": "recent preprint", "level": 3, "cited_by_paper": false}
+      ]
+    },
+    {
+      "id": "C3", "dimension": "method", "central": true,
+      "text": "Model-aware difficulty from group pass ratio relative to an EMA-smoothed batch pass ratio, used as signed reward coefficient",
+      "matches": [
+        {"title": "GRPO-LEAD: A Difficulty-Aware Reinforcement Learning Approach for Concise Mathematical Reasoning in Language Models", "url": "https://arxiv.org/abs/2504.09696v2", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+        {"title": "Thinking Fast and Right: Balancing Accuracy and Reasoning Length with Adaptive Rewards", "url": "https://arxiv.org/abs/2505.18298v1", "label": "recent preprint", "level": 3, "cited_by_paper": false}
+      ]
+    }
+  ]
+}

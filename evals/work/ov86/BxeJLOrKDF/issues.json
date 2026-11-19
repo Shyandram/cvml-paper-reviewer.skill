@@ -1,0 +1,641 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Human preference comparison unfair to Masquerade because Mitty uses human-in-the-loop filtering.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Quality of synthetic paired data and its downstream effects questioned.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No real-robot experiments or actions; unclear whether good videos yield accurate actions.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Model novelty incremental: Wan 2.2 with LoRA and bidirectional attention.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Synthetic data pipeline may introduce domain bias and accumulated errors.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "No quantitative real-world task success metrics.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Task is essentially video-to-video translation specialized to robotics.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "No evidence that generated videos are useful for robotics.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Improper citation spacing.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Mixed-training benefit claim contradicted by Table 2; text sections disagree.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No ablation with versus without synthetic EPIC data.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No matched-data baseline using intermediate representations or other conditioning.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Human2Robot, a directly related method, not compared.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Cross-task generalization claimed without held-out task evaluation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Split unit unstated; clips from same episode may leak into train and test.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Single runs on small test sets; differences within noise; no intervals.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "FVD feature extractor and protocol unspecified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Table 1 and Table 2 disagree; prose misdescribes Table 1.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "5B vs 14B scaling comparison confounded by steps, naming, conditioning.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Human studies under-specified: no agreement stats, rater counts, metric formula, blinding.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Minor: swapped headings, typos, decimals, wrong citation, stray GPT mention, no GPU-hours.",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Success rate is visual plausibility; kinematic feasibility untested; robotics claims overstated.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Single embodiment and viewpoint; generating other robot arms not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Dexterous non-pinch grasps mapped to same gripper abstraction.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Short low-resolution clips; long-horizon and resolution effects not studied.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "No breakdown by camera-motion or difficulty level.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Data licensing and commercial API use of source footage not addressed.",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Term 'paradoxical in-context learning' unexplained.",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "'First end-to-end' claim overstated; Human2Robot and AVID not differentiated.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Delta over in-context conditioning small; bidirectional attention not ablated.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Bypassing intermediate representations contradicted by training data built from them.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "EPIC metrics measure agreement with renderings, not real robot video.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Positioning against recent human-to-robot translation works thin.",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "HaMeR lacks bibliography entry.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Teacher-student circularity: Mitty trained on filtered Masquerade renders, compared with raw Masquerade.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Mixed training claims contradict Table 2.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Cross-task generalization claimed without held-out-task test.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Clip split unit unstated.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Numeric inconsistencies across Tables 1-3.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Human-judged success rate lacks agreement statistic; few survey responses; undefined consistency metric.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Small test splits give wide confidence intervals.",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Bypass-intermediate-representation claim inconsistent with data pipeline.",
+   "minor": false
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Robot-learning claims lack robot-level evidence.",
+   "minor": false
+  },
+  {
+   "id": "Q4.10",
+   "reviewer": "Q4",
+   "text": "Eq. 4 and DDPM equations mismatch described architecture.",
+   "minor": true
+  },
+  {
+   "id": "Q4.11",
+   "reviewer": "Q4",
+   "text": "14B naming and step count inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "Q4.12",
+   "reviewer": "Q4",
+   "text": "Leftover GPT mention in supplement.",
+   "minor": true
+  },
+  {
+   "id": "Q4.13",
+   "reviewer": "Q4",
+   "text": "Swapped subsection headings.",
+   "minor": true
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "No analysis of why model works, e.g. attention or conditioning length.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Sole architectural novelty Eq. 4 not ablated.",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Mixed-training claims inconsistent with tables.",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "First-frame claim and SR values inconsistent across tables.",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Method underspecified: attention computation, concatenation dimension, training objective unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "In-context learning framing over-promises; no actions or novel tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "Minor: swapped headings, typos, decimals, unexplained term, GPT mention, 14B naming.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Preference comparison unfair due to human filtering.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Synthetic paired data quality and accumulated errors.",
+    "points": [
+     "P2.1",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No real-robot evidence of usefulness.",
+    "points": [
+     "P2.2",
+     "P3.3",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Incremental model novelty.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Essentially video-to-video translation.",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Citation spacing.",
+    "points": [
+     "P4.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Mixed-training claim contradicted by tables.",
+    "points": [
+     "Q1.1",
+     "Q4.2",
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No synthetic-data ablation.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No matched-data intermediate-representation baseline.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Human2Robot not compared; 'first' overstated.",
+    "points": [
+     "Q1.4",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No held-out task evaluation.",
+    "points": [
+     "Q1.5",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Split unit unstated; leakage risk.",
+    "points": [
+     "Q1.6",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Small test sets, no intervals or seeds.",
+    "points": [
+     "Q1.7",
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "FVD protocol unspecified.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Numeric inconsistencies across tables.",
+    "points": [
+     "Q1.9",
+     "Q4.5",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "5B vs 14B confounded and inconsistently named.",
+    "points": [
+     "Q1.10",
+     "Q4.11"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Human studies under-specified.",
+    "points": [
+     "Q1.11",
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Typos, headings, stray text.",
+    "points": [
+     "Q1.12",
+     "Q2.7",
+     "Q4.12",
+     "Q4.13",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Success metric visual only; robotics claims unsupported.",
+    "points": [
+     "Q2.1",
+     "Q4.9"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Single embodiment.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Dexterous grasps abstracted to gripper.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Short low-resolution clips.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No difficulty breakdown.",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Licensing and API use.",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Bidirectional attention not ablated; small delta.",
+    "points": [
+     "Q3.2",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Bypass narrative contradicts data pipeline.",
+    "points": [
+     "Q3.3",
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "EPIC ground truth is rendering.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Teacher-student circularity vs Masquerade.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Thin positioning vs human-to-robot works.",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Missing HaMeR citation.",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "No analysis of why model works.",
+    "points": [
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Method section underspecified.",
+    "points": [
+     "Q5.5",
+     "Q4.10"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "In-context learning framing over-promises.",
+    "points": [
+     "Q5.6"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI22"
+   ],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI20",
+    "QI21",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI13"
+   ],
+   "related": [
+    "QI27"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI19"
+   ],
+   "related": [
+    "QI4",
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI27"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  }
+ ]
+}

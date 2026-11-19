@@ -1,0 +1,244 @@
+{
+  "paper_type": "empirical",
+  "weights": {
+    "technical_rigor": 0.2,
+    "clarity": 0.1,
+    "novelty": 0.15,
+    "significance": 0.15,
+    "experimental_validation": 0.2,
+    "reproducibility": 0.1,
+    "ethics": 0.1
+  },
+  "dimensions": [
+    {
+      "key": "technical_rigor",
+      "label": "Technical Rigor",
+      "per_reviewer": [
+        52,
+        58,
+        62,
+        56,
+        50
+      ],
+      "before_avg": 55.6,
+      "weighted_avg": 55.3,
+      "spread": 12,
+      "high_spread": false
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity & Presentation",
+      "per_reviewer": [
+        62,
+        64,
+        66,
+        62,
+        60
+      ],
+      "before_avg": 62.8,
+      "weighted_avg": 62.7,
+      "spread": 6,
+      "high_spread": false
+    },
+    {
+      "key": "novelty",
+      "label": "Novelty & Originality",
+      "per_reviewer": [
+        56,
+        60,
+        66,
+        58,
+        54
+      ],
+      "before_avg": 58.8,
+      "weighted_avg": 58.6,
+      "spread": 12,
+      "high_spread": false
+    },
+    {
+      "key": "significance",
+      "label": "Significance & Impact",
+      "per_reviewer": [
+        52,
+        56,
+        66,
+        56,
+        52
+      ],
+      "before_avg": 56.4,
+      "weighted_avg": 56.1,
+      "spread": 14,
+      "high_spread": false
+    },
+    {
+      "key": "experimental_validation",
+      "label": "Experimental Validation",
+      "per_reviewer": [
+        46,
+        50,
+        54,
+        50,
+        44
+      ],
+      "before_avg": 48.8,
+      "weighted_avg": 48.6,
+      "spread": 10,
+      "high_spread": false
+    },
+    {
+      "key": "reproducibility",
+      "label": "Reproducibility",
+      "per_reviewer": [
+        50,
+        54,
+        58,
+        54,
+        50
+      ],
+      "before_avg": 53.2,
+      "weighted_avg": 53.0,
+      "spread": 8,
+      "high_spread": false
+    },
+    {
+      "key": "ethics",
+      "label": "Ethical Compliance",
+      "per_reviewer": [
+        66,
+        66,
+        70,
+        68,
+        66
+      ],
+      "before_avg": 67.2,
+      "weighted_avg": 67.1,
+      "spread": 4,
+      "high_spread": false
+    }
+  ],
+  "eic_weighted": false,
+  "before_composite": 56.5,
+  "before_overall": 3,
+  "official_composite": 56.5,
+  "eic_composite": 56.2,
+  "eic_minus_official": -0.3,
+  "panel_composite": 56.2,
+  "per_reviewer": [
+    {
+      "role": "R1 (Meth.)",
+      "composite": 53.6,
+      "implied_overall": 3,
+      "overall": 3,
+      "confidence": 4,
+      "confidence_weight": 0.85,
+      "eic_weight": 1.0,
+      "weight_share": 0.215,
+      "pool_position": 42,
+      "pool_band": [
+        42,
+        54
+      ]
+    },
+    {
+      "role": "R2 (Domain)",
+      "composite": 57.4,
+      "implied_overall": 3,
+      "overall": 3,
+      "confidence": 4,
+      "confidence_weight": 0.85,
+      "eic_weight": 1.0,
+      "weight_share": 0.215,
+      "pool_position": 52,
+      "pool_band": [
+        42,
+        54
+      ]
+    },
+    {
+      "role": "R3 (Persp.)",
+      "composite": 62.4,
+      "implied_overall": 4,
+      "overall": 4,
+      "confidence": 3,
+      "confidence_weight": 0.7,
+      "eic_weight": 1.0,
+      "weight_share": 0.177,
+      "pool_position": 66,
+      "pool_band": [
+        55,
+        61
+      ]
+    },
+    {
+      "role": "R4 (Gen.)",
+      "composite": 56.7,
+      "implied_overall": 3,
+      "overall": 3,
+      "confidence": 3,
+      "confidence_weight": 0.7,
+      "eic_weight": 1.0,
+      "weight_share": 0.177,
+      "pool_position": 54,
+      "pool_band": [
+        42,
+        54
+      ]
+    },
+    {
+      "role": "DA",
+      "composite": 52.3,
+      "implied_overall": 3,
+      "overall": 3,
+      "confidence": 4,
+      "confidence_weight": 0.85,
+      "eic_weight": 1.0,
+      "weight_share": 0.215,
+      "pool_position": 44,
+      "pool_band": [
+        42,
+        54
+      ]
+    }
+  ],
+  "suggested_overall": 3,
+  "suggestion_basis": "rating",
+  "official_rating": 3.2,
+  "eic_rating": 3.18,
+  "composite_band": 3,
+  "cross_check": null,
+  "final_overall_ceiling": 6,
+  "decision_ceiling": "none (no upheld DA-CRITICAL issue)",
+  "da_cap_reason": null,
+  "warnings": [],
+  "roles": [
+    "R1 (Meth.)",
+    "R2 (Domain)",
+    "R3 (Persp.)",
+    "R4 (Gen.)",
+    "DA"
+  ],
+  "da_cap": null,
+  "venue_views": [
+    {
+      "key": "iclr",
+      "name": "ICLR",
+      "kind": "conference",
+      "as_of": "2026",
+      "scale_status": "secondary",
+      "composite": 56.1,
+      "bar_offset": 0,
+      "shift": 0,
+      "band": 3,
+      "final": 3,
+      "subscores": {
+        "Soundness": 2,
+        "Presentation": 3,
+        "Contribution": 2
+      },
+      "notes": [
+        "Soundness/Presentation/Contribution 1-4 and Confidence 1-5 are long-standing. Overall rating reported as {0,2,4,6,8,10} for ICLR 2026; earlier cycles used {1,3,5,6,8,10}. Both are shown."
+      ],
+      "label": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Inoculation Prompting: Instructing LLMs to misbehave at train-time improves test-time alignment",
+  "method_names": ["Inoculation Prompting", "IP", "inoculation prompt", "inoculation prompts", "Inoculation"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "prevents learning of an undesired behavior by modifying training prompts to explicitly request it",
+    "Instructing LLMs to misbehave at train-time improves test-time alignment",
+    "prompts which more strongly elicit the undesired behavior prior to fine-tuning more effectively inoculate"
+  ],
+  "cutoff_date": "2025-09-24"
+}

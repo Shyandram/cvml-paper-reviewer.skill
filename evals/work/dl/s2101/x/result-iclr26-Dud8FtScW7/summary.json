@@ -1,0 +1,43 @@
+{
+  "id": "iclr26-Dud8FtScW7",
+  "paper_type": "benchmark",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10}); ICLR sub-scores Soundness 1, Presentation 2, Contribution 2",
+  "official_rating": 2.6,
+  "eic_rating": 2.56,
+  "eic_pool_position": 38,
+  "before_composite": 49.0,
+  "after_composite": 48.7,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Table 1 'No Selection'/'No Mixing' rows reuse No-CoT (textual), Vanilla (WebArena) and Zero-Shot-CoT (Visual) values: Verified",
+    "'+1.93 over Vanilla CoT' and '-0.83 over Vanilla CoT' use the 42.80 reference (really +2.92 and +0.16): Verified",
+    "LLM-as-a-Judge 'highly effective' vs Table 1 (Judge 41.04, lowest selector, below Vanilla 41.81): Verified",
+    "'all eight tasks' for Reverse (only seven textual tasks): Verified",
+    "Augmentation gain confounded with data size/steps (post-augmentation sizes unreported, fixed 10 epochs): Partly correct (well-founded inference, not a documented fact)",
+    "Vanilla CoT below No-CoT and zero-shot (MATH 4.38, ANLI 23.92): Verified numbers; cause unverifiable",
+    "Table 1 Visual column vs 'Llama-3.1-8B' caption (45.44 equals Table 3 Qwen-2.5-VL-3B value): Partly correct",
+    "Table 4 vs Table 1 Vanilla ARC/Date mismatch: Verified (minor)",
+    "Table 5 MATH->GSM8K 80.74 unexplained vs in-domain Table 1: Verified as unexplained",
+    "Table 5 'consistently' improves (3 of 10 pairs no gain/loss): Verified",
+    "No combined augmentation+filter+mix pipeline run; guidelines untested: Verified",
+    "Reverse chosen on test split, no validation split (criterion-3 table: MAJOR, not CRITICAL): Verified",
+    "Learnability gap 'strong support' from Table 3 (0.24-2.5 point differences, single student): Overstated (by the paper)",
+    "Learnability gap already reported by cited prior work (arXiv 2502.12143): Verified",
+    "Dated scope, no long-CoT teacher: Verified",
+    "ToS/licence/contamination not discussed: Verified"
+  ],
+  "top_concerns": [
+    "Augmentation gains (Reverse +24.64 points over Vanilla CoT) are not isolated from larger training sets and more steps; no matched-budget control and post-augmentation sizes unreported (Section 3.1.1, App. C.1, Table 1/6)",
+    "Table 1 reference rows 'No Selection'/'No Mixing' are a hybrid of No-CoT, Vanilla and Zero-Shot-CoT runs; Vanilla CoT is below No-CoT and below zero-shot on MATH and ANLI",
+    "Written conclusions contradict or are untested by the tables: LLM-judge filtering 'highly effective' (Judge 41.04 < Vanilla 41.81), '+1.93 over Vanilla CoT' really +2.92, guidelines never run as combined pipelines",
+    "No variance or significance tests on 169-229-item test sets; method choice (Reverse) and per-task recipes made on the reported test split with no validation split",
+    "Benchmark is not defined as a reusable artefact; 'first' claims, learnability-gap finding already known, scope uses 2023-era teachers/short CoT; Table 5 OOD design lacks controls and has an unexplained MATH->GSM8K 80.74"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Skill was workable. Friction: (1) the skill says reviewers read the --redact copy but the sandbox did not permit the shell to write files for integrity_scan --redact, so the scan was run to stdout only (clean) and reviewers read the original text. (2) Phase 1.5 literature check is specified as running after Phase 1 reports are drafted, but in a single-context sequential run the searches have to be done before writing any report text; I read the paper, ran 7 searches (budget-limited, benchmarks/scout/coverage subcommands skipped) and then wrote all reports. (3) The aggregate script's composite band (2) disagreed with the weighted rating (3) near a band edge; the EIC rules say a one-step disagreement near an edge is not a reason to depart, which was applicable and clear. (4) ICLR scale output 'rating 4 on {0,2,4,6,8,10}' for final Overall 3 is a secondary-status label; both ICLR scales are printed and the summary field carries both. (5) Strict mode left few comparable prior abstracts for a baseline scout table on a benchmark paper whose tasks are public datasets, so that table could not be built. (6) The DA instructions allow 'No CRITICAL issues found'; this paper had confounds and text-table contradictions but none met the strict criteria (selection of Reverse on the test split fell in the MAJOR rows of the criterion-3 table)."
+}

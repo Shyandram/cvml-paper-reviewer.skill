@@ -1,0 +1,20 @@
+{"claims": [
+  {"id": "C1", "dimension": "problem", "central": true,
+   "text": "SAE L0 is not a free hyperparameter: incorrect L0 yields incorrect (mixed) features, and reconstruction-sparsity tradeoff is misleading",
+   "matches": [
+     {"title": "Feature Hedging: Correlated Features Break Narrow Sparse Autoencoders", "url": "https://arxiv.org/abs/2505.11756v2", "label": "recent preprint", "level": 3, "cited_by_paper": true},
+     {"title": "Sparse Autoencoders Do Not Find Canonical Units of Analysis", "url": "https://arxiv.org/abs/2502.04878v1", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false},
+     {"title": "Sparse Autoencoders Trained on the Same Data Learn Different Features", "url": "https://arxiv.org/abs/2501.16615v2", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": false}
+   ]},
+  {"id": "C2", "dimension": "method", "central": true,
+   "text": "Nth decoder projection score finds the correct L0 without ground truth",
+   "matches": [
+     {"title": "BatchTopK Sparse Autoencoders", "url": "https://arxiv.org/abs/2412.06410v1", "label": "prior (arXiv-only, 6+ months before the cutoff)", "level": 2, "cited_by_paper": true},
+     {"title": "SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability", "url": "https://arxiv.org/abs/2503.09532v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+   ]},
+  {"id": "C3", "dimension": "result", "central": false,
+   "text": "Most commonly used open-source SAEs have too low an L0 (correct L0 about 200-250 for Gemma-2-2b layer 12)",
+   "matches": [
+     {"title": "SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability", "url": "https://arxiv.org/abs/2503.09532v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": false}
+   ]}
+]}

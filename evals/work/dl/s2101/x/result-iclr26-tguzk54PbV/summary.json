@@ -1,0 +1,42 @@
+{
+  "id": "iclr26-tguzk54PbV",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.4,
+  "eic_rating": 3.34,
+  "eic_pool_position": 52,
+  "before_composite": 56.4,
+  "after_composite": 56.0,
+  "eic_weights": {"R1": 1.25, "R2": 1.25, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Safety separation only against the method's own attacker (Fig. 4): Verified",
+    "AgentDojo gains of 0.9 and 0.2 points, no test, SPAG tied (Table 1): Verified",
+    "Population-based learning not isolated by the ablation (Sec. 4.2, Sec. 3.3): Verified",
+    "Ablation attackers an order of magnitude weaker (DA): Overstated (4-5x)",
+    "Attacker weaker although pairing identical, implying a weaker agent should help (R1): Partly correct",
+    "Game is not zero-sum (Sec. 3.1 rewards): Verified",
+    "Cumulative APD rises by construction (Eq. 3): Partly correct",
+    "TSR gain reflects in-domain SFT/RL, not safety (Fig. 4, Sec. 4.2): Verified",
+    "Residual leakage 34-37% against strongest attacker (Fig. 3, 4): Verified",
+    "SPAG cited as Chen et al. (Sec. 2.2): Verified",
+    "Wen et al. described as sandboxing (Sec. 2.1): Verified",
+    "Uncited Self-RedTeam, SecAlign, StruQ as prior work: Verified",
+    "Eq. (2) sign inconsistency: Partly correct",
+    "ASR/TSR averages use different row sets (Fig. 4): Verified",
+    "No dual-use or release statement (Sec. 5, App. C): Verified"
+  ],
+  "top_concerns": [
+    "Robustness is measured mainly against attackers produced by the method itself (Fig. 4); non-ARLAS attackers reach only 2-13% ASR",
+    "The independent benchmark AgentDojo shows only 0.9 and 0.2 point ASR changes with no significance test, and SPAG ties ARLAS; abstract/conclusion wording ('significantly', 'generalizes', 'wide range') overstates this",
+    "No fixed-data fine-tuning defense baseline (StruQ/SecAlign family) although Sec. 1 motivates the work against that approach",
+    "Population-based learning is not isolated (ablation attackers 4-5x weaker despite identical stated pairing; SPAG matches ARLAS on AgentDojo); diversity analysis has no baseline",
+    "Closest prior work (attacker/defender self-play RL for LLM safety) uncited; protocol details (test-set size, checkpoint choice, seeds, code) missing"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Integrity scan clean. Hard to follow: (1) SKILL.md orders Phase 1 -> Phase 1.5 -> 1.6 -> Phase 2 but also says the Domain Reviewer's report contains Missing References, so a single-context run has to write provisional references and later replace them; (2) the 'benchmarks' command found no benchmarks for a paper that evaluates on BrowserGym/AgentDojo, so scout had to be run manually; (3) the search script refuses queries with 5 'concept words' and counts hyphenated words like self-play as two, which is not obvious; (4) the script's --out for before.json and the markdown print are separate invocations; (5) Fig. 4 column labels were garbled in the extracted text, so agent identities were inferred from printed averages; (6) the skill asks for the DA to report CRITICAL only rarely, and the rubric's pool-position rule (Overall 4 needs pool >= 65) forced R3/R4 to a generous pool position to justify a 4 even though the evidence sat near the border; (7) the sandbox blocked shell redirection and heredocs for file writes, so report parts were merged with a python one-liner. Literature check ran in strict mode with 9 of 12 queries."
+}

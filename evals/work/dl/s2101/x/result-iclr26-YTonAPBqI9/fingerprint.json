@@ -1,0 +1,13 @@
+{
+  "title": "EduDial: Constructing a Large-scale Multi-turn Teacher–Student Dialogue Corpus",
+  "method_names": ["EduDial", "EduDial-LLM", "EduDial-LLM 32B", "MTI", "PDTS", "Multi-turn Teaching Instruction", "Preference Dataset based on Teaching Strategies"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "multi-turn teacher-student dialogue dataset generated through interactions between teacher and student agents",
+    "ten questioning strategies including situational questioning zone of proximal development questioning and metacognitive questioning",
+    "11-dimensional evaluation framework that systematically measures the teaching abilities of LLMs"
+  ],
+  "cutoff_date": "2025-09-24"
+}

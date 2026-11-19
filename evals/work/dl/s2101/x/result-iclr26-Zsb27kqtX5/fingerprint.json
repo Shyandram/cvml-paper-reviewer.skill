@@ -1,0 +1,19 @@
+{
+ "title": "On the Collapse of Generative Paths: A Criterion and Correction for Diffusion Steering",
+ "method_names": [
+  "ACE",
+  "Marginal Path Collapse",
+  "Path Existence Criterion",
+  "CrossDock-Weak",
+  "CrossDock-SBDD"
+ ],
+ "authors": [],
+ "arxiv_ids": [],
+ "urls": [],
+ "distinctive_phrases": [
+  "intermediate densities become non-normalizable even though endpoints remain valid",
+  "ratio-of-densities steering with heterogeneous experts from an unstable heuristic into a reliable tool"
+ ],
+ "cutoff_date": "2025-09-24",
+ "_instructions": "Check the title; add method_names (e.g., the system's name), authors (if visible), 2-4 distinctive_phrases (6+ words from the abstract), and cutoff_date (submission date, or arXiv v1 date, YYYY-MM-DD). Never use these in queries."
+}

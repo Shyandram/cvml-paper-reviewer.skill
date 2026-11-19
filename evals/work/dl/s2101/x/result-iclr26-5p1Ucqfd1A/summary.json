@@ -1,0 +1,41 @@
+{
+  "id": "iclr26-5p1Ucqfd1A",
+  "paper_type": "benchmark",
+  "final_overall": 4,
+  "venue_recommendation": "6 on {0,2,4,6,8,10} (6 on {1,3,5,6,8,10})",
+  "official_rating": 3.6,
+  "eic_rating": 3.56,
+  "eic_pool_position": 65,
+  "before_composite": 60.1,
+  "after_composite": 59.8,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 1.0, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "'Dynamism' never analysed (abstract only): Verified",
+    "+28% is 28.3 absolute points across private vs public splits, driven by abstention (Table 5): Verified",
+    "Egocentric vs normal never compared on QA results (Fig. 4, Fig. 6): Verified",
+    "Judge '99.1%' hides weak Incorrect class, precision 68.1 (Table 7): Verified",
+    "R1's ~11-point truthfulness swing from judge error: Overstated",
+    "No annotation-quality evidence (agreement, removal rates): Verified",
+    "Slice margin-of-error claim (<5%) at public-test size: Partly correct",
+    "Frozen ground truth vs live-web industry runs biasing scores: Partly correct",
+    "First MM-RAG benchmark claim and selective Table 1: Partly correct",
+    "Template-based questions contradict critique of prior work (Sec. 1 vs Sec. 3.2): Verified",
+    "No privacy, consent or licence statement for daily-life captures: Verified",
+    "Multi-turn Truth differs from Acc minus Hallu (Tables 4, 5): Verified",
+    "Balanced popularity buckets vs '21% torso-to-tail': Partly correct",
+    "15% low-quality egocentric images vs Table 2 (13.9%): Verified (minor)"
+  ],
+  "top_concerns": [
+    "Abstract and headline claims drift from evidence: 'dynamism' never analysed; '+28%' is 28.3 points across splits and mostly abstention; 'first' and a selective Table 1",
+    "Differentiator (egocentric) never tested on QA results; defect slices are nearly all egocentric by construction",
+    "No evidence of label quality (annotator agreement, removal rates) and a judge with Incorrect-class precision 68.1; no confidence intervals, slice sizes unsupported at public-test size",
+    "Frozen ground truth with volatile answers versus live-web industry systems, and a closed retrieval corpus built around the questions",
+    "No privacy, consent, licence or limitations statement for smart-glasses images captured in daily life (ethics flag)"
+  ],
+  "recognized": true,
+  "injection_found": null,
+  "notes": "I recognised CRAG-MM by name and general context (a Meta benchmark used for a KDD Cup 2025 challenge) but know nothing of its reviews or outcome and used none of it; the review rests on the paper text and the strict literature check. Sandbox friction: shell variables, for-loops, $? and file redirection were blocked or needed approval, so commands were run one at a time with literal paths and review.md was assembled with the Write tool; two scratch part files (part_a_phase0_reports.md, part_b_phase15_to_decision.md) could not be deleted and duplicate parts of review.md. Skill ambiguities: (1) Phase 1.5 must follow the reviewer drafts but the Domain Reviewer's reference list is part of the report, so I wrote [verify] entries first and verified them afterwards; Phase 1.6 then edited report text, which blurs 'scores not changed' and 'reports not rewritten'. (2) With all five reviewers in one context, independence is only procedural. (3) 'after_composite' is not a named field in aggregate.json: I used eic_composite (59.8); official_composite stays 60.1; the ICLR label for rating 4 prints '6' on both scales, which reads oddly next to 'Borderline Accept (4)'. (4) The ⚠ cross-check fired for 59.8 vs a 60 band edge, a 0.2 difference; the guidance on boundary swaps helped. (5) A benchmark paper that reports only on its own benchmark leaves the baseline scout and `benchmarks` command empty, and the 4-word concept-only query rule plus arXiv keyword matching missed three relevant benchmarks (Dyn-VQA, Encyclopedic-VQA, MRAG-Bench) that were found only by title verification, so the claim-level novelty profile (script verdict 'medium') understates coverage. (6) The pool-position/Overall consistency rule (Overall 4 needs pool >= 65) pushed me to set the EIC pool position at exactly 65 for a borderline case. (7) The paper file labelled 'blinded' still lists author names and affiliations; I ignored them as instructed and added author names to the fingerprint only for exclusion."
+}

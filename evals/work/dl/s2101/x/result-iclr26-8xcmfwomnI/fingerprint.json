@@ -1,0 +1,12 @@
+{
+  "title": "Principled Out-of-Distribution Generalization via Simplicity",
+  "method_names": ["regularized MLE", "constant-gap", "vanishing-gap"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "first sharp sample complexity guarantees for learning the true, generalizable, simple model",
+    "the true, generalizable model that aligns with human expectations typically corresponds to the simplest among those consistent with the training data"
+  ],
+  "cutoff_date": "2025-09-24"
+}

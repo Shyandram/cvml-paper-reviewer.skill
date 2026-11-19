@@ -1,0 +1,901 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Abstract overclaims provable RO avoidance, many environments, superiority and efficiency over state of the art",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Theorem 5.1's hypothesis is its own conclusion",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Section 4 asserts links without theorems",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Inconsistencies: s-squared direction, notation clash for K, references to nonexistent equations/theorems",
+   "minor": true
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Table 1 lacks number of seeds and meaning of plus-minus",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Two Modalities results only a qualitative scatter plot; no quantitative score",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "No efficiency or timing measurement despite efficiency claim",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Only low-dimensional environments; no standard cooperative benchmark",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Fig. 6 caption copied, Eq. 7.4 lacks gamma, terse related-work phrasing",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Theorem 5.1 hypothesis assumes its conclusion",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No formal bridge from consistent reasoning to RO avoidance",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Finite-action assumption of lemmas violated by continuous-action experiments",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Alpha annealing to zero required by theory not satisfied in experiments",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Exact SVGD assumption violated by practical implementation",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Shared randomness at execution likely removes ERO; baselines lack it",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Improvement step and practical gradient not shown to match theory's nested conditionals",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Baselines from 2017-2019; no recent RO baselines",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Tuning parity with baselines unstated",
+   "minor": false
+  },
+  {
+   "id": "P2.10",
+   "reviewer": "P2",
+   "text": "\"Many RO-challenged environments\" claim rests on three toy games",
+   "minor": false
+  },
+  {
+   "id": "P2.11",
+   "reviewer": "P2",
+   "text": "Efficiency never measured",
+   "minor": false
+  },
+  {
+   "id": "P2.12",
+   "reviewer": "P2",
+   "text": "SVNR-F matches SVNR, so strict nesting requirement is not tested",
+   "minor": false
+  },
+  {
+   "id": "P2.13",
+   "reviewer": "P2",
+   "text": "Inconsistencies: s-squared direction, MADDPG text vs table, nonexistent equation references",
+   "minor": true
+  },
+  {
+   "id": "P2.14",
+   "reviewer": "P2",
+   "text": "At s-squared 3.0 \"highest return\" claim is within noise of L-MADRL",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Theory for finite action sets while experiments use continuous actions",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Alpha schedule ends at positive value, never zero as Theorem 5.2 requires",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "SVGD convergence invoked for idealized particles; no bound for finite particles or amortized network",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Theorem 5.1 nearly circular: assumes convergence to optimal policy",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Claim that consistent reasoning implies no RO has no theorem",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Baselines old (2017-2019) despite state-of-the-art claim",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Only three tiny games used for \"many RO-challenged environments\"",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "SVNR gets 50-trial tuning; baselines' tuning budget unstated",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Table 1 omits seed count and whether plus-minus is std or variance",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "s-squared 3.0 difference with L-MADRL within spread yet claimed highest",
+   "minor": false
+  },
+  {
+   "id": "P3.11",
+   "reviewer": "P3",
+   "text": "Efficient computation claimed but never measured",
+   "minor": false
+  },
+  {
+   "id": "P3.12",
+   "reviewer": "P3",
+   "text": "Reproducibility details missing: architecture, chosen hyperparameters, compute, code",
+   "minor": false
+  },
+  {
+   "id": "P3.13",
+   "reviewer": "P3",
+   "text": "Ablation cannot show strict nesting matters since SVNR-F performs on par",
+   "minor": false
+  },
+  {
+   "id": "P3.14",
+   "reviewer": "P3",
+   "text": "No ablation of amortization, rounds K or particles M",
+   "minor": false
+  },
+  {
+   "id": "P3.15",
+   "reviewer": "P3",
+   "text": "Minor: copied caption, missing gamma, wrong equation numbers, limit notation, sum index",
+   "minor": true
+  },
+  {
+   "id": "P3.16",
+   "reviewer": "P3",
+   "text": "Eq. 6.6 improvement step lacks soft marginalization; policy improvement proof unsupported",
+   "minor": false
+  },
+  {
+   "id": "P3.17",
+   "reviewer": "P3",
+   "text": "Practical gradient Eq. 7.2 equals nested conditional only for full conditioning",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "ERO fix relies on shared random seed, a stronger execution model not given to baselines",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Scaling beyond four agents and one-dimensional actions untested",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "No sampling-quality diagnostic for SVGD against Boltzmann target",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Cognitive-science framing and \"negotiation\" term loosely connected to technical content",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Robustness to undelivered shared noise or inconsistent agent ordering not discussed",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "\"Negotiation policy\" and \"perceived opponent policy\" terms used interchangeably",
+   "minor": true
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "\"First provable RO method\" claim not differentiated from value-factorization and policy-gradient RO work",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Relation to ROMMEO under-argued; no experiment where ROMMEO and SVNR-F differ",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Recursive Reasoning Graph not cited",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Method resembles autoregressive/sequential coordination schemes, which are not discussed",
+   "minor": false
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "\"Negotiation\" and cognitive framing overstate a sequential conditional sampler",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "No autoregressive-policy baseline with shared randomness",
+   "minor": false
+  },
+  {
+   "id": "P5.7",
+   "reviewer": "P5",
+   "text": "\"Provably\" applies to idealized algorithm, not SVNR as run",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Theorems for finite action spaces but experiments use continuous actions",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Communication-free execution claim conflicts with sharing noise between neighbours at test time",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Little guidance on schedules and hyperparameter sensitivity",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Shift from known-model policy iteration to critic learning not analysed",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Compute and tuning parity versus baselines not tabulated",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Scope limited to CTDE and full observability",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Strictly nested negotiation sets and max-entropy assumptions restrictive; sensitivity unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Training cost, memory and runtime overhead not quantified",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Unclear distinction from opponent-modeling and communication-based MARL approaches",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No analysis of emerging negotiation dynamics, rounds used, or PRO/ERO evolution",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Dense writing; proofs and definitions need intuition or visuals",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Guarantees require annealing alpha to zero, unlike practice",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Gap between proofs assuming optimal joint policy and amortized neural implementation",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Decentralized execution assumes amortization faithfully reproduces multi-round negotiation",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Sample efficiency and robustness underexplored; no training curves",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Finite action space assumptions mismatch continuous control practice",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Abstract and intro overclaim scope, environments and superiority",
+    "points": [
+     "P1.1",
+     "P2.10",
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Theorem 5.1 circular",
+    "points": [
+     "P1.2",
+     "P2.1",
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No theorem linking consistent reasoning to RO avoidance",
+    "points": [
+     "P1.3",
+     "P2.2",
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Finite-action theory vs continuous experiments",
+    "points": [
+     "P2.3",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Alpha not annealed to zero as theory requires",
+    "points": [
+     "P2.4",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Idealized SVGD/particle theory vs implementation; \"provably\" covers idealization only",
+    "points": [
+     "P2.5",
+     "P3.3",
+     "P5.7"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Shared randomness at execution drives result; baselines lack it",
+    "points": [
+     "P2.6",
+     "P4.1",
+     "P5.6"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Practical updates not shown to match theory's nested conditionals",
+    "points": [
+     "P2.7",
+     "P3.16",
+     "P3.17"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Outdated baselines",
+    "points": [
+     "P2.8",
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Tuning parity unstated",
+    "points": [
+     "P2.9",
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Efficiency claimed but not measured",
+    "points": [
+     "P1.7",
+     "P2.11",
+     "P3.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Strict nesting role not supported by ablation",
+    "points": [
+     "P2.12",
+     "P3.13"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Seeds and dispersion statistics unreported",
+    "points": [
+     "P1.5",
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "\"Highest\" claim at s-squared 3.0 within noise",
+    "points": [
+     "P2.14",
+     "P3.10"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Notation, caption and reference inconsistencies",
+    "points": [
+     "P1.4",
+     "P1.9",
+     "P2.13",
+     "P3.15",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Two Modalities only qualitative",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Only toy low-dimensional environments, no standard benchmark",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Reproducibility details missing",
+    "points": [
+     "P3.12"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "No ablation of amortization, K, M",
+    "points": [
+     "P3.14"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Scaling to more agents untested",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No sampling-quality diagnostic",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Cognitive-science and negotiation framing overstated",
+    "points": [
+     "P4.4",
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Robustness to noise delivery and ordering",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Missing RO-related work; \"first provable\" claim",
+    "points": [
+     "P5.1",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "ROMMEO relation under-argued",
+    "points": [
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Autoregressive/sequential schemes not discussed",
+    "points": [
+     "P5.4"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Finite action theory vs continuous experiments",
+    "points": [
+     "Q1.1",
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Alpha annealing to zero assumption",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Shared noise at execution vs communication-free claim",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Schedule and hyperparameter sensitivity",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Gap between idealized theory and learned/amortized implementation",
+    "points": [
+     "Q1.4",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Compute and tuning parity not tabulated",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "CTDE and full observability scope",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Strict nesting assumption restrictive",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Computational overhead unquantified",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Unclear relation to opponent modeling/communication MARL",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No analysis of negotiation dynamics",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Dense writing",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Amortization reproducing negotiation assumed",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Sample efficiency and robustness, no training curves",
+    "points": [
+     "Q3.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  }
+ ]
+}

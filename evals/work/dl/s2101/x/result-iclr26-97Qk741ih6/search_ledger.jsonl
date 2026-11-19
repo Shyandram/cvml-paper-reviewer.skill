@@ -1,0 +1,4 @@
+{"time": "2026-11-10T13:38:00+00:00", "event": "query_too_long", "query": "knowledge graph question answering reinforcement", "concept_words": 5}
+{"time": "2026-11-10T13:38:03+00:00", "event": "query_too_long", "query": "knowledge graph question answering reinforcement", "concept_words": 5}
+{"time": "2026-11-10T13:38:05+00:00", "event": "query", "source": "arxiv", "query": "knowledge graph reinforcement retrieval", "purpose": "claim", "tag": "C1"}
+{"time": "2026-11-10T13:41:46+00:00", "event": "query", "source": "arxiv", "query": "knowledge graph reinforcement retrieval", "purpose": "claim", "tag": "C1"}

@@ -1,0 +1,39 @@
+{
+  "id": "iclr26-YD1P4DVtdk",
+  "paper_type": "analysis",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 47,
+  "before_composite": 53.7,
+  "after_composite": 52.9,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 0,
+  "da_critical_upheld": 0,
+  "eic_verification": [
+    "Jaccard dominated by circuit size (448-edge circuit, Jaccard 0.016 = 7/448, Table 6): Verified",
+    "Table 1 rows averaged over different task/model cells (paraphrase excludes SVA): Verified (ordering survives common-cell recompute)",
+    "Llama circuits non-functional (circuit error 0.66-0.80) yet called faithful by path existence: Verified",
+    "Identical circuit error/KL across circuits of different size (Tables 7, 8): Verified as observation, interpretation open",
+    "Stop rule differs from standard EAP-IG practice: Partly correct (unverifiable from the paper)",
+    "Setup facts missing (dataset size, replicates, seeds, M_C, limitations): Verified",
+    "'three model architectures' vs two architectures in Section 4: Verified",
+    "Paraphrase has lower CVs than bootstrap (Section 5.1 vs Table 1): Partly correct (Jaccard CV lower, circuit-error CV higher)",
+    "AlphaEdit / integrated gradients mis-described in Section 2.1: Partly correct",
+    "Prior circuit-robustness work under-differentiated (Section 2.3): Partly correct",
+    "Noise effect small and 0.2 not portable (Section 5.3, Figs 3, 5): Partly correct (figures not viewed as images)",
+    "R3 accepted the 'three architectures' framing and the scale story: Overstated"
+  ],
+  "top_concerns": [
+    "Pairwise Jaccard on variable-size circuits is confounded by size and has no reference scale or null, so 'high variance' is not established (Table 6, Section 3.2)",
+    "Variance is not separated from redundancy/non-identifiability: no cross-evaluation of resampled circuits, evaluation is in-sample (D_eval = D)",
+    "Path-existence stopping rule gives mostly non-functional Llama circuits (circuit error 0.66-0.80), a non-standard operating point",
+    "Missing setup (dataset size, replicates, M_C definition, default configuration) and no limitations section; Table 1 averages over different cells",
+    "Scope overreach: one method family, three small tasks, two architectures, noise recommendation (0.2) tied to gpt2-small"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "Integrity scan was clean. Literature check (strict, cutoff 2025-09-24) ran 6 searches; arXiv keyword search returned many off-topic hits for statistical queries, so the 'stability selection' gap was filled from knowledge with [verify]. The script's novelty verdict ('high') rests on thin arXiv-only results and was tempered to medium by the Domain reviewer; the skill does not say how to reconcile the two. The skill's rule that reviewers must give a pool position while the script prints the pool 'band' as a score range is slightly confusing (DA pool 38 shown with band 42-54). The skill asks EIC to start weights at 1.0 and move them only for verified reasons; simulating all five roles in one context makes 'verified reviewer errors' partly self-generated, so the R3 down-weight rests on a deliberately modest overstatement. The R1 'identical metric values' observation sits between suspicion (Questions) and verified error (Weaknesses); I put it in Weaknesses as an observation with an open interpretation. Figures were not viewable, so figure-based claims (noise axis range, multimodality) are from extracted text and captions. run.json in the results directory was an empty file created before my work and was left untouched."
+}

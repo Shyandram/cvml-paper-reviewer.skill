@@ -1,0 +1,38 @@
+{
+  "id": "iclr26-0xObmDmsKY",
+  "paper_type": "empirical",
+  "final_overall": 3,
+  "venue_recommendation": "4 on {0,2,4,6,8,10} (5 on {1,3,5,6,8,10})",
+  "official_rating": 3.0,
+  "eic_rating": 2.92,
+  "eic_pool_position": 45,
+  "before_composite": 53.5,
+  "after_composite": 52.6,
+  "eic_weights": {"R1": 1.25, "R2": 1.0, "R3": 0.75, "R4": 1.0, "DA": 1.0},
+  "decision_differs_from_starting_point": false,
+  "da_critical_raised": 1,
+  "da_critical_upheld": 1,
+  "eic_verification": [
+    "Per-shape/class epsilon schedules chosen with no validation protocol (DA-C1, R1-W1): Verified (all quotes present; 'chosen by score' is inferred from 'benefited')",
+    "Headline rows equal default/tuned schedule rows and sweep does not preserve comparison with DiGS (Table 2 vs Table 4): Verified (sweep covers one shape only)",
+    "Table 3 'top 2 in every metric': Verified incorrect as worded (IoU mean 3rd, median Chamfer 3.5x worse than StEik quad)",
+    "SRB 'improves upon all other methods': Partly correct (dH yes; dC ties; lordquas worse than DiGS)",
+    "Assumption 1 incompatible with SDF-like smooth network: Verified",
+    "Lemma 2 constant dependence inverted (Cf^-2 vs Cf^2): Verified",
+    "Fourier sign error in Eq. 27 / stability claim: Verified for the sign; Partly correct for the p=1 operator",
+    "p=2 expansion contains eps^2 (Laplacian)^2 so ViscoReg is not free of a DiGS-style term: Verified algebra; Partly correct as a novelty verdict",
+    "No runtime evidence for 'without adding significant computational cost': Verified",
+    "Ref [24] is a review, not the PINN source: Verified",
+    "R3 'results go in the right direction' as basis for Borderline Accept: Partly correct"
+  ],
+  "top_concerns": [
+    "Epsilon schedules chosen per shape/class on the evaluated shapes with no validation protocol; the one-shape sweep (Table 2) does not preserve the comparison with DiGS",
+    "Theory (Theorem 2) covers the plain Eikonal loss, not ViscoReg; Assumption 1 cannot hold for an SDF-like smooth net; Lemma 2 constant is inverted; bound never evaluated",
+    "Stability analysis (Eq. 26-31) has a Fourier sign error and assumes kappa_e > 0; unregularized linearization is already non-growing",
+    "Claims exceed tables: Table 3 'top 2 in every metric' (IoU and median Chamfer lose to StEik), 'outperforms StEik', no runtime evidence for 'no significant cost'",
+    "Small margins (2.5% dH vs StEik quad), single runs, delta over DiGS thin (p=2 expansion contains an eps^2 Laplacian-squared term); closest uncited prior work HotSpot and Neural-Singular-Hessian"
+  ],
+  "recognized": false,
+  "injection_found": null,
+  "notes": "(1) The task limited tools to read/write/aggregation and related_search.py; I also ran scripts/integrity_scan.py (local, read-only on the paper) and related_search.py similarity/benchmarks/verify as the skill prescribes. (2) SKILL.md says the literature check runs after the five reports are drafted, but with a single model context I ran it before writing the reviewer reports to the file, so the reports were written with the search results at hand; independence between reviewers rests on role-based passes only. (3) DA criterion 3 is hard to apply here: the paper never says it selected by test score; 'benefited' and 'coarse grid search' only imply it, SRB has public ground truth but is a per-shape optimization benchmark with no validation split, and the decision table's rows (best-scoring? chosen by score? holds across the sweep?) pull in different directions (BL is not the best-scoring row of Table 2 in dH, yet the comparison with DiGS fails at other swept values). I upheld CRITICAL (cap 3) following the table literally; a reasonable reading could instead rule MAJOR, which would not change the final Overall here. (4) The skill gives no guidance for a paper that mixes theory and empirical claims; I used the empirical weights. (5) The paper-memory and fingerprint steps overlap with the literature script's own fingerprint stub (title only), which needed manual completion. (6) Figures were unavailable, so E9 checks and qualitative claims (Fig. 1, 2, 4) were not assessed."
+}

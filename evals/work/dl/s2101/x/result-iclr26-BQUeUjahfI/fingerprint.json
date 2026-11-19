@@ -1,0 +1,13 @@
+{
+  "title": "Learning Tractable Distributions of Language Model Continuations",
+  "method_names": ["LTLA", "Learning to Look Ahead", "Learning To Look Ahead", "neural-encoded HMM", "Neural Monarch HMM"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": [
+    "pairs the same base language model for rich prefix encoding with a fixed tractable surrogate model",
+    "conditioning only the surrogate's latent state prior on the LM's hidden representations",
+    "a single batched HMM update to account for all next-token candidates at once"
+  ],
+  "cutoff_date": "2025-09-24"
+}

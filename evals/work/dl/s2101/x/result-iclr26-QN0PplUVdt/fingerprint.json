@@ -1,0 +1,9 @@
+{
+  "title": "LOOP: A Plug-and-Play Neuro-Symbolic Framework for Enhancing Planning in Autonomous Systems",
+  "method_names": ["LOOP", "ParaNet", "Learning Orchestrated and Optimized Planning", "MultiAgentValidator", "CausalTriple"],
+  "authors": [],
+  "arxiv_ids": [],
+  "urls": [],
+  "distinctive_phrases": ["planning as an iterative conversation between neural and symbolic components", "treats planning as an iterative conversation between neural and symbolic components rather than simple translation"],
+  "cutoff_date": "2025-09-24"
+}

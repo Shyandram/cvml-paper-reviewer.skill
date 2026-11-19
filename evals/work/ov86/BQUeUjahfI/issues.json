@@ -1,0 +1,970 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Evaluated only on short sequences; long contexts untested.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Not tested on newer or larger LLMs beyond GPT-2 and Qwen2-VL.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Only marginal perplexity gains over standard HMMs.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Fluency gains in controllable generation do not align with BLEU/ROUGE.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Missing established controllable-generation baselines such as FUDGE and GeDi.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Experimental setup details (learning rate, batch size) insufficient in appendix.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No generated sample examples, e.g. for detoxification.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only two downstream tasks; other controlled-generation tasks missing.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Baselines too limited; no comparison with prior controlled generation algorithms.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Core idea would be clearer with a method diagram.",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Framing covers general tractable models but only HMM is evaluated.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Figure 1 example not explained and no takeaway drawn.",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Related work and conclusion blended; positioning against prior art unclear.",
+   "minor": true
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Missing Sequential Monte Carlo baseline.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "More datasets needed to assess robustness and generality.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "No large-scale evaluation on long contexts.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Lacks benchmarks against established controllable generation methods.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "No analysis of computational time/space trade-offs.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Lookahead effectiveness diminishes for longer continuations due to limited state capacity.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Simple HMM structure limits expressiveness, hurting practical generation use.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Lookup table grows very large with large C and state size.",
+   "minor": false
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Experiments only on medium-sized models; stronger LLMs untested.",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Constraints synthetic or benchmark-style; real-world control settings untested.",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Efficiency in streaming/large-batch inference and memory vs sampling baselines unclear.",
+   "minor": false
+  },
+  {
+   "id": "P5.4",
+   "reviewer": "P5",
+   "text": "Mutual information bound not linked to empirical metrics or design choices.",
+   "minor": false
+  },
+  {
+   "id": "P5.5",
+   "reviewer": "P5",
+   "text": "Architectural ablations limited, e.g. why Monarch gains are small, encoder-HMM trade-off.",
+   "minor": false
+  },
+  {
+   "id": "P5.6",
+   "reviewer": "P5",
+   "text": "Limitations and failure cases not analyzed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Claim of improved constraint satisfaction is not measured.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Claimed significant improvements rest on tiny single-run differences with sign flips.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No standard-HMM TRACE row in Table 3 to test neural/visual benefit.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Sampling baseline degenerate (k=1, higher toxicity than vanilla).",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No VLM likelihood result despite claim of approximating VLM continuations.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Gain may stem from added encoder parameters/compute; prefix-parameterized TPM never evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Overhead claims only asymptotic; no timing measurements.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Proposition 1 bound identical for standard and neural HMMs; does not motivate encoder.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Proposition numbering inconsistent between main text and appendix.",
+   "minor": true
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Inconsistent Qwen VLM model names.",
+   "minor": true
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Identical standard-HMM max perplexity at both lengths.",
+   "minor": true
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Claims about Lee & Berg-Kirkpatrick method given without numbers.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Negligible overhead claims not measured; no wall-clock or memory.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Surrogate distilled on unconditional samples may fail on steered prefixes.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Perspective-based toxicity misses multimodal harm and has dialect bias.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No limitations or broader-impact discussion; dual-use risk.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Missing connections to hybrid DNN-HMM and WFST literature.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Reproducibility not met: no code, hyperparameters, data sizes.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Abstract claims improved constraint satisfaction but none is measured.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "'Significant' wording used for small differences.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "VLM setup under-documented: encoder variant, hidden size, toxicity model, sample counts.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "No qualitative example captions with and without control.",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Distillation results only in plots; no numeric table.",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Typos, duplicated references, missing benchmark/model citations.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Novelty incremental; not delineated from hybrid neural/tractable models and neural HMMs.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Architecture study contribution is a small sweep.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Claim that HMMs ignore the prefix rests on one example; no quantitative metric.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Proposition bound applies equally to neural HMMs, not explaining gain.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Experiments omit decoding-time controllers like FUDGE, GeDi; positioning thin.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "State-of-the-art claim unsupported; only own HMM compared, prior method without numbers.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Missing citations, duplicated Krause references, questionable Choi citation.",
+   "minor": true
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Table 2 gains within noise or negative, single runs, yet called significant.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Table 3 omits standard-HMM TRACE baseline.",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Sampling baseline broken (k=1, higher toxicity).",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "No VLM distillation likelihood reported.",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Perplexity rise of 51% described as preserving fluency.",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "No caption-quality or relevance metric; toxicity drop may reflect blander captions.",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "No variance over images or seeds for Table 3.",
+   "minor": false
+  },
+  {
+   "id": "Q5.8",
+   "reviewer": "Q5",
+   "text": "Efficiency asserted from complexity, no wall-clock or memory comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q5.9",
+   "reviewer": "Q5",
+   "text": "Fine-tuned-backbone variant cannot reuse base LM without extra forward pass.",
+   "minor": false
+  },
+  {
+   "id": "Q5.10",
+   "reviewer": "Q5",
+   "text": "Missing protocol details: data sizes, optimizer, hidden sizes, seeds, compute, code.",
+   "minor": false
+  },
+  {
+   "id": "Q5.11",
+   "reviewer": "Q5",
+   "text": "Statement that prior techniques worsen performance given without numbers.",
+   "minor": false
+  },
+  {
+   "id": "Q5.12",
+   "reviewer": "Q5",
+   "text": "Comparison not compute/parameter matched; prefix-parameterized TPM not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q5.13",
+   "reviewer": "Q5",
+   "text": "Claim of halving max perplexity holds for only 2 of 4 rows.",
+   "minor": false
+  },
+  {
+   "id": "Q5.14",
+   "reviewer": "Q5",
+   "text": "Proposition numbering inconsistency.",
+   "minor": true
+  },
+  {
+   "id": "Q5.15",
+   "reviewer": "Q5",
+   "text": "Two different Qwen model names.",
+   "minor": true
+  },
+  {
+   "id": "Q5.16",
+   "reviewer": "Q5",
+   "text": "Identical max perplexity for standard HMM at both lengths.",
+   "minor": true
+  },
+  {
+   "id": "Q5.17",
+   "reviewer": "Q5",
+   "text": "Typos and duplicated GeDi reference.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "No evaluation on long contexts.",
+    "points": [
+     "P1.1",
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Not tested on newer or larger LLMs.",
+    "points": [
+     "P1.2",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Marginal perplexity gains over HMMs.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Fluency gains inconsistent with BLEU/ROUGE.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Missing established controllable-generation baselines.",
+    "points": [
+     "P1.5",
+     "P2.4",
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Insufficient experimental setup details.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "No generated examples.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Limited tasks, datasets and real-world settings.",
+    "points": [
+     "P2.3",
+     "P3.5",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Needs method diagram.",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "General TPM framing but only HMM evaluated.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Figure 1 under-analyzed.",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Related work disorganized; positioning unclear.",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Missing SMC baseline.",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No computational/efficiency trade-off analysis.",
+    "points": [
+     "P3.8",
+     "P5.3"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Lookahead weakens over long continuations due to state capacity.",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "HMM expressiveness bottleneck limits practicality.",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Lookup table size grows large.",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Theory not linked to empirics or design.",
+    "points": [
+     "P5.4"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Limited architectural ablations.",
+    "points": [
+     "P5.5"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Failure cases and limitations not analyzed.",
+    "points": [
+     "P5.6"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Constraint satisfaction claimed but not measured.",
+    "points": [
+     "Q1.1",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Small single-run differences without variance overstated as significant.",
+    "points": [
+     "Q1.2",
+     "Q3.3",
+     "Q5.1",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Missing standard-HMM TRACE baseline in Table 3.",
+    "points": [
+     "Q1.3",
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Degenerate sampling baseline.",
+    "points": [
+     "Q1.4",
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No VLM distillation likelihood.",
+    "points": [
+     "Q1.5",
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Not compute-matched; prefix-parameterized TPM unevaluated.",
+    "points": [
+     "Q1.6",
+     "Q5.12"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Inference overhead not measured.",
+    "points": [
+     "Q1.7",
+     "Q2.1",
+     "Q5.8"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Proposition 1 does not motivate neural encoder.",
+    "points": [
+     "Q1.8",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Proposition numbering inconsistency.",
+    "points": [
+     "Q1.9",
+     "Q5.14"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Inconsistent Qwen model names.",
+    "points": [
+     "Q1.10",
+     "Q5.15"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Identical max perplexity values.",
+    "points": [
+     "Q1.11",
+     "Q5.16"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Prior-method and state-of-the-art claims lack numbers.",
+    "points": [
+     "Q1.12",
+     "Q4.6",
+     "Q5.11"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Surrogate validity under steered prefixes.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Toxicity metric limitations.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No limitations or broader impact.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Missing connections to speech/WFST work.",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Reproducibility details missing.",
+    "points": [
+     "Q3.1",
+     "Q5.10"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "VLM setup under-documented.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No qualitative caption examples.",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Distillation results only as plots.",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Typos and citation errors.",
+    "points": [
+     "Q3.7",
+     "Q4.7",
+     "Q5.17"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Incremental novelty vs hybrid neural/tractable models.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Small architecture study.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Prefix-insensitivity motivation from one example.",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Decoding-time controller baselines missing.",
+    "points": [
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Fluency cost understated.",
+    "points": [
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "No caption quality metric.",
+    "points": [
+     "Q5.6"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Fine-tuned backbone breaks LM reuse.",
+    "points": [
+     "Q5.9"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Max-perplexity halving claim overstated.",
+    "points": [
+     "Q5.13"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI25"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI17"
+   ],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI19"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI22",
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI23",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  }
+ ]
+}

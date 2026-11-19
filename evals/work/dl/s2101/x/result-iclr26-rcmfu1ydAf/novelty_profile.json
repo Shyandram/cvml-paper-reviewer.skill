@@ -1,0 +1,16 @@
+{"claims": [
+  {"id": "C1", "dimension": "resource", "central": true,
+   "text": "A generalizable framework for human evaluation of embedding tasks on MTEB",
+   "matches": [
+     {"title": "MMTEB: Massive Multilingual Text Embedding Benchmark", "url": "https://arxiv.org/abs/2502.13595v4", "label": "prior (peer-reviewed)", "level": 2, "cited_by_paper": true}
+   ]},
+  {"id": "C2", "dimension": "result", "central": true,
+   "text": "Human performance on 16 MTEB datasets (77.6 average vs 80.1 for best model)",
+   "matches": []},
+  {"id": "C3", "dimension": "result", "central": false,
+   "text": "Models look superhuman where human agreement is low; some MTEB datasets are of poor quality",
+   "matches": [
+     {"title": "What's the Meaning of Superhuman Performance in Today's NLU?", "url": "https://arxiv.org/abs/2305.08414v1", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false},
+     {"title": "Pervasive Label Errors in Test Sets Destabilize Machine Learning Benchmarks", "url": "https://arxiv.org/abs/2103.14749v4", "label": "prior (peer-reviewed)", "level": 3, "cited_by_paper": false}
+   ]}
+]}
