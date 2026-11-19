@@ -26,7 +26,10 @@ def main():
     ap.add_argument("out", nargs="?", default="evals/iclr2026_important_hits.json")
     ap.add_argument("--bare", help="bare-control result dirs (<prefix>-<id>/summary.json with an "
                                    "ICLR rating); its rating/2 + 1 replaces the skill's panel rating")
+    ap.add_argument("--no-top", default="", help="comma-separated ids whose point ids are not in "
+                    "review order (left out of the 'top' definition)")
     a = ap.parse_args()
+    no_top = set(filter(None, a.no_top.split(",")))
     base, out = Path(a.dir), a.out
     ids = sorted(p.name for p in base.iterdir() if (p / "issues.json").exists())
     t = pq.read_table("evals/work/dl/reviews.parquet",
@@ -67,7 +70,7 @@ def main():
         sets = {"all": H,
                 "consensus": [i for i in H if len(revs[i]) >= 2],
                 "negative": [i for i in H if any((rr.get(r) or 10) <= 4 for r in revs[i])],
-                "top": [i for i in H if i in top]}
+                "top": [i for i in H if i in top] if pid not in no_top else []}
         hum = statistics.mean(v for v in rr.values() if v is not None) / 2 + 1
         row = {"pid": pid, "panel": final[pid]["panel_rating_1_6"],
                "final": final[pid]["final_overall"], "human": round(hum, 3),
