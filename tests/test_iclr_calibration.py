@@ -101,6 +101,39 @@ class CalibrationMath(unittest.TestCase):
         self.assertNotIn("\n000 ", out)
         self.assertIn("line 149", out)
 
+    def test_normalize_removes_company_names_and_paged_acknowledgments(self):
+        raw = ("SWE Thing: A Benchmark\nAda Lovelace*, Alan Turing\n\n\n   Scale AI\n"
+               "# ada@scale.com   https://scale.com/research/thing\n\nAbstract\nWe build a thing.\n\n"
+               "4 Data\nRepositories were sourced from Scale\u2019s internal assets and Scale AI partners.\n"
+               "We scale the data. Scale matters.\n\n\nAcknowledgments\nWe thank Grace Hopper.\n\n"
+               "                11\n\x0cReferences\n[1] A. Author. Paper. 2020.\n")
+        out, n = cal.normalize(raw, "SWE Thing")
+        for cue in ("Scale\u2019s", "Scale AI", "Grace Hopper", "Ada", "scale.com"):
+            self.assertNotIn(cue, out)
+        self.assertIn("We scale the data. Scale matters.", out)   # ordinary words stay
+        self.assertIn("[affiliation removed]\u2019s internal assets", out)
+        self.assertEqual(n["acknowledgments"], 1)
+        uni = ("T\nJane Doe\nDepartment of CS, University of Somewhere\njane@cs.somewhere.edu\n\nAbstract\n"
+               "Data from the University of Somewhere hospital.\n")
+        out, _ = cal.normalize(uni, "T")
+        self.assertNotIn("University of Somewhere", out)
+
+    def test_normalize_without_abstract_heading(self):
+        raw = ("    CRAG-Thing: A Benchmark\n    Jiaqi Wang1,† , Xiao Yang1,† , Kai Sun1\n    1\n"
+               "        Meta Reality Labs, 2 Meta Superintelligence Labs, 3 FAIR, Meta\n\n    †\n"
+               "        Equal contribution, ∗ Work done at Meta\n\n"
+               "    Wearable devices such as smart glasses are transforming the way people interact with\n"
+               "    the world. Correspondence: First Authors at jw@meta.com\n\n"
+               "1 Introduction\nWe use Meta’s glasses (https://www.meta.com/ai-glasses) and Meta Reality Labs data. A meta-analysis follows.\n")
+        out, n = cal.normalize(raw, "CRAG-Thing: A Benchmark")
+        self.assertEqual(n["header"], 1)
+        for cue in ("Jiaqi", "Kai Sun", "Work done at", "Meta’s", "Meta Reality Labs", "jw@"):
+            self.assertNotIn(cue, out)
+        self.assertIn("Wearable devices such as smart glasses", out)
+        self.assertIn("A meta-analysis follows.", out)
+        self.assertNotIn("meta.com", out)
+        self.assertNotIn("Equal contribution", cal.normalize("T\nAbstract\nText.\n   ∗\n     Equal contribution.\nMore.", "T")[0])
+
     def test_title_match(self):
         hits = [{"title": "Something Else Entirely"},
                 {"title": "DataEnvGym: Data Generation Agents in Teacher Environments with "

@@ -274,10 +274,82 @@ LINK = re.compile(r"(https?://)?(www\.)?(github\.com|gitlab\.com|huggingface\.co
 AFFILIATION = re.compile(r"(universit|institut|department|laborator|school of|college|"
                          r"equal contribution|corresponding author|work done (while|during))", re.I)
 FOOTNOTE_MARK = re.compile(r"^\s*([*†‡§¶∗]|\d\s)")
-ACKS = re.compile(r"\n[ \t]*(\d+[ \t]+)?(A\s?CKNOWLEDG\w*|Acknowledg\w*)[^\n]*\n.*?"
-                  r"(?=\n[ \t]*(R\s?EFERENCES|References|Bibliography|R\s?EFERENCE)\b)", re.S)
+# pdftotext puts a form feed before a heading that starts a new page.
+ACKS = re.compile(r"\n[ \t\f]*(\d+[ \t]+)?(A\s?CKNOWLEDG\w*|Acknowledg\w*)[^\n]*\n.*?"
+                  r"(?=\n[ \t\f]*(R\s?EFERENCES|References|Bibliography|R\s?EFERENCE)\b)", re.S)
+# Mail and web domains that name no organization.
+AUTHOR_NOTE = re.compile(r"^[ \t\f]*[∗*†‡]?[ \t]*(Equal contribution|Corresponding author|Project lead)[^\n]{0,60}$",
+                         re.M | re.I)
+GENERIC_DOMAINS = {"gmail", "googlemail", "outlook", "hotmail", "yahoo", "qq", "163", "126",
+                   "foxmail", "icloud", "proton", "protonmail", "github", "gitlab", "huggingface",
+                   "arxiv", "openreview", "google", "sites", "anonymous", "4open", "mail", "email"}
+ORG_SUFFIX = r"(?:AI|Research|Labs?|Inc\.?|Technologies|Group|Corporation|Corp\.?|Ltd\.?)"
 ACCEPT_MARK = re.compile(r"\b(accepted|to appear|published)\s+(at|in|to|by|as)\b[^\n]{0,80}", re.I)
 LINE_NO = re.compile(r"^[ \t]{0,8}\d{3}(?=[ \t]{2,}|[ \t]*$)", re.M)
+
+
+def first_prose(text, max_lines=150):
+    """Start of the first prose paragraph, for a paper with no "Abstract" heading: the
+    first line of at least 8 words, most of them lowercase, after at least one line
+    (the title). Author lists, affiliations and footnotes are mostly capitalized names,
+    numbers and marks. Returns None when nothing qualifies."""
+    pos = 0
+    for i, line in enumerate(text.split("\n")[:max_lines]):
+        words = re.findall(r"[A-Za-z][A-Za-z'’-]*", line)
+        if (i > 0 and len(words) >= 8 and sum(w[0].islower() for w in words) / len(words) > 0.5
+                and not re.search(r"equal contribution|work done|corresponding", line, re.I)):
+            return pos
+        pos += len(line) + 1
+    return None
+
+
+def header_orgs(header, front=""):
+    """Organizations named in the author block: affiliation lines, and the names behind
+    the authors' mail and web domains (e.g. 'Scale AI' from scale.com). The body still
+    names them in phrases such as "Scale's internal assets", so normalize() removes
+    them there too."""
+    lines = [re.sub(r"^[\s\d*†‡§¶∗#]+", "", l).strip() for l in header.split("\n")]
+    phrases = set()
+    for l in lines:
+        if AFFILIATION.search(l):
+            for part in re.split(r"[,;]", EMAIL.sub("", l)):
+                part = part.strip(" .")
+                if AFFILIATION.search(part) and 2 < len(part) < 80:
+                    phrases.add(part)
+    labels = set()
+    for m in re.finditer(r"@([\w-]+(?:\.[\w-]+)*)|(?:https?://)?(?:www\.)?([\w-]+)\.(?:com|ai|org|io|co|net)\b",
+                         header + "\n" + front):
+        dom = m.group(1) or m.group(2)
+        parts = [p for p in dom.lower().split(".") if p not in {"com", "ai", "org", "io", "co", "net",
+                                                                  "edu", "ac", "www", "cs", "mail"}]
+        if not parts:
+            continue
+        label = parts[-1] if m.group(1) else parts[0]
+        if label not in GENERIC_DOMAINS and len(label) >= 3 and not label.isdigit():
+            labels.add(label)
+    segments = [re.sub(r"^[\s\d*†‡§¶∗#]+", "", seg).strip(" .") for l in lines
+                for seg in re.split(r"[,;]|\s\d+\s", l)]
+    for label in labels:
+        for seg in segments:   # the full name, e.g. "Scale AI" or "Meta Reality Labs"
+            if re.fullmatch(rf"{re.escape(label)}((\s+[A-Z][\w&-]*){{0,3}})", seg, re.I) and seg[:1].isupper():
+                phrases.add(seg)
+    return phrases, labels
+
+
+def redact_orgs(text, phrases, labels):
+    n = 0
+    for ph in sorted(phrases, key=len, reverse=True):
+        text, k = re.subn(re.escape(ph), "[affiliation removed]", text)
+        n += k
+    for label in labels:   # the org's own sites, e.g. meta.com/ai-glasses or ai.meta.com
+        text, k = re.subn(rf"(https?://)?([\w-]+\.)*{re.escape(label)}\.(com|ai|org|io|co|net)(/\S*)?",
+                          "[link removed]", text, flags=re.I)
+        n += k
+        name = re.escape(label.capitalize())
+        text, k = re.subn(rf"\b{name}(\s+{ORG_SUFFIX})?(?=['’]s\b)|\b{name}\s+{ORG_SUFFIX}\b"
+                          rf"|\b{re.escape(label.upper())}\s+{ORG_SUFFIX}\b", "[affiliation removed]", text)
+        n += k
+    return text, n
 
 
 def normalize(text, title):
@@ -297,8 +369,12 @@ def normalize(text, title):
     if len(LINE_NO.findall(text)) > 100:
         text = sub("line_numbers", LINE_NO, "", text)
     m = ABSTRACT_HEAD.search(text, 0, 8000)
-    if m:
-        text = f"{title}\n\n[Author block removed]\n\n" + text[m.start():]
+    start = m.start() if m else first_prose(text)
+    intro = re.search(r"\n[ \t\f]*(1\.?|I\.?)?[ \t]*(I\s?NTRODUCTION|Introduction)\b", text[:20000])
+    front = text[start or 0:intro.start() if intro else (start or 0) + 4000]
+    orgs = header_orgs(text[:start] if start is not None else text[:3000], front)
+    if start is not None:
+        text = f"{title}\n\n[Author block removed]\n\n" + text[start:]
         n["header"] = 1
     else:
         text = f"{title}\n\n" + text
@@ -312,6 +388,8 @@ def normalize(text, title):
     text = sub("emails", EMAIL, "[email removed]", text)
     text = sub("links", LINK, "[link removed]", text)
     text = sub("acknowledgments", ACKS, "\n[Acknowledgments removed]\n", text)
+    text, n["organizations"] = redact_orgs(text, *orgs)
+    text = sub("author_footnotes", AUTHOR_NOTE, "", text)
     front, rest = text[:4000], text[4000:]
     front = sub("accept_marks", ACCEPT_MARK, "[REDACTED: venue/acceptance mark]", front)
     text = front + rest
