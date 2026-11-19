@@ -158,6 +158,15 @@ Write the reviews in roster order. Each review argues from the ledger:
    - Then the seven dimension scores (0–100), inside the pool position's band (`references/quality_rubrics.md`).
    - Then **Overall** (1–6) and **Confidence** (1–5). Confidence reflects how well this type's expertise covers the paper.
 
+**Contribution check (every type that grades novelty or significance, every paper).** Judge the contribution from the manuscript alone, as it stands at submission. Never use anything known about how the paper or its artifact was received later, whether or not you recognize the paper: adoption, citations, leaderboard use, follow-up work, or who released it. Before scoring novelty or significance, answer these four questions in the review, by ledger ID:
+
+1. **What does a reader learn** that they could not have known or confidently guessed before? A ranking, a leaderboard or "method X is better" is not yet an insight. The insight is why, when, or what follows for the field.
+2. **Does the setting support the framing?** Check that the title and headline claims match what the experiments operationalize. "Long-horizon", "real-world", "comprehensive", "general" and "at scale" must be backed by the setting the paper actually tests: scale, sequence length, number of scaffolds, models or domains, how realistic the data is.
+3. **Is the delta conceptual or a refinement?** Extending, cleaning, enlarging or re-running an existing benchmark, dataset or method is a contribution of moderate novelty, however much effort it took. Say which prior artifact it extends.
+4. **Would the conclusions transfer** to the settings practitioners actually use? If they plausibly would not, significance is limited to the tested regime.
+
+Effort, polish and thorough execution count toward technical rigor and clarity, never toward significance. A paper that fails questions 1 and 3 has modest significance and novelty, and a type that speaks for those aspects places it in the lower half of the pool unless an accept reason in the ledger shows a specific insight. Record each failed question as a reject reason (`judgment`, with its basis) if it is not already in the ledger.
+
 **Same context, separate judgments.** All the types share one context, so their judgments are not independent; say so in the output. To keep each review its own:
 
 - score each type from its own reading of the ledger;
