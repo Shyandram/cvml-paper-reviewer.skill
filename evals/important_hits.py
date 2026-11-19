@@ -20,8 +20,14 @@ import hit_conditional as hc  # noqa: E402
 
 def main():
     import pyarrow.parquet as pq
-    base = Path(sys.argv[1] if len(sys.argv) > 1 else "evals/work/ov86")
-    out = sys.argv[2] if len(sys.argv) > 2 else "evals/iclr2026_important_hits.json"
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("dir", nargs="?", default="evals/work/ov86")
+    ap.add_argument("out", nargs="?", default="evals/iclr2026_important_hits.json")
+    ap.add_argument("--bare", help="bare-control result dirs (<prefix>-<id>/summary.json with an "
+                                   "ICLR rating); its rating/2 + 1 replaces the skill's panel rating")
+    a = ap.parse_args()
+    base, out = Path(a.dir), a.out
     ids = sorted(p.name for p in base.iterdir() if (p / "issues.json").exists())
     t = pq.read_table("evals/work/dl/reviews.parquet",
                       columns=["paper_id", "reviewer_id", "rating", "decision", "review_src"],
@@ -34,6 +40,14 @@ def main():
             dec[pid] = d
     final = {p["paper_id"]: p for p in json.loads(Path("evals/iclr2026_full_scores.json")
                                                   .read_text())["papers"]}
+    if a.bare:
+        final = {}
+        for d in Path(a.bare).iterdir():
+            f = d / "summary.json"
+            r = json.loads(f.read_text()).get("rating") if f.exists() else None
+            if isinstance(r, (int, float)):
+                final[d.name.split("-")[-1]] = {"panel_rating_1_6": r / 2 + 1,
+                                                 "final_overall": r / 2 + 1}
     rows = []
     for pid in ids:
         if pid not in final:
