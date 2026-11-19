@@ -1,0 +1,348 @@
+{
+ "note": "Skill 2.10.1 (panel, Sonnet high) vs ICLR 2026 human reviewers, conditional on whether the skill raised the reviewer's first main point (issue_overlap annotation). Human ratings on the skill scale: ICLR 0/2/4/6/8/10 -> 1..6. Numbers and paper ids only.",
+ "papers": 82,
+ "reviewers": {
+  "hit": {
+   "n": 178,
+   "papers": 79,
+   "human_mean": 2.983,
+   "skill_mean": 2.983,
+   "diff": 0,
+   "diff_ci": [
+    -0.128,
+    0.124
+   ],
+   "mae": 0.596,
+   "accept_side_agree": 0.747,
+   "accept_side_ci": [
+    0.687,
+    0.805
+   ]
+  },
+  "not_hit": {
+   "n": 137,
+   "papers": 73,
+   "human_mean": 3.168,
+   "skill_mean": 3.022,
+   "diff": -0.146,
+   "diff_ci": [
+    -0.314,
+    0.022
+   ],
+   "mae": 0.774,
+   "accept_side_agree": 0.577,
+   "accept_side_ci": [
+    0.489,
+    0.662
+   ]
+  }
+ },
+ "strata": {
+  "rating<=2": {
+   "hit_rate": 0.584,
+   "hit": {
+    "n": 52,
+    "papers": 42,
+    "human_mean": 1.942,
+    "skill_mean": 2.827,
+    "diff": 0.885,
+    "diff_ci": [
+     0.736,
+     1.038
+    ],
+    "mae": 0.885,
+    "accept_side_agree": 0.962,
+    "accept_side_ci": [
+     0.898,
+     1
+    ]
+   },
+   "not_hit": {
+    "n": 37,
+    "papers": 34,
+    "human_mean": 1.865,
+    "skill_mean": 2.838,
+    "diff": 0.973,
+    "diff_ci": [
+     0.769,
+     1.171
+    ],
+    "mae": 0.973,
+    "accept_side_agree": 0.919,
+    "accept_side_ci": [
+     0.811,
+     1
+    ]
+   }
+  },
+  "rating=4": {
+   "hit_rate": 0.636,
+   "hit": {
+    "n": 82,
+    "papers": 56,
+    "human_mean": 3,
+    "skill_mean": 2.988,
+    "diff": -0.012,
+    "diff_ci": [
+     -0.131,
+     0.105
+    ],
+    "mae": 0.183,
+    "accept_side_agree": 0.915,
+    "accept_side_ci": [
+     0.838,
+     0.976
+    ]
+   },
+   "not_hit": {
+    "n": 47,
+    "papers": 37,
+    "human_mean": 3,
+    "skill_mean": 3.085,
+    "diff": 0.085,
+    "diff_ci": [
+     -0.064,
+     0.227
+    ],
+    "mae": 0.213,
+    "accept_side_agree": 0.851,
+    "accept_side_ci": [
+     0.733,
+     0.944
+    ]
+   }
+  },
+  "rating=6": {
+   "hit_rate": 0.468,
+   "hit": {
+    "n": 36,
+    "papers": 33,
+    "human_mean": 4,
+    "skill_mean": 3.167,
+    "diff": -0.833,
+    "diff_ci": [
+     -0.974,
+     -0.667
+    ],
+    "mae": 0.833,
+    "accept_side_agree": 0.194,
+    "accept_side_ci": [
+     0.057,
+     0.351
+    ]
+   },
+   "not_hit": {
+    "n": 41,
+    "papers": 32,
+    "human_mean": 4,
+    "skill_mean": 3.049,
+    "diff": -0.951,
+    "diff_ci": [
+     -1,
+     -0.85
+    ],
+    "mae": 0.951,
+    "accept_side_agree": 0.049,
+    "accept_side_ci": [
+     0,
+     0.15
+    ]
+   }
+  },
+  "rating>=8": {
+   "hit_rate": 0.4,
+   "hit": {
+    "n": 8,
+    "papers": 8,
+    "human_mean": 5,
+    "skill_mean": 3.125,
+    "diff": -1.875,
+    "diff_ci": [
+     -2,
+     -1.625
+    ],
+    "mae": 1.875,
+    "accept_side_agree": 0.125,
+    "accept_side_ci": [
+     0,
+     0.375
+    ]
+   },
+   "not_hit": {
+    "n": 12,
+    "papers": 11,
+    "human_mean": 5,
+    "skill_mean": 3.25,
+    "diff": -1.75,
+    "diff_ci": [
+     -2,
+     -1.462
+    ],
+    "mae": 1.75,
+    "accept_side_agree": 0.25,
+    "accept_side_ci": [
+     0,
+     0.538
+    ]
+   }
+  }
+ },
+ "hit_by_main_points": {
+  "1-2": 0.553,
+  "3-4": 0.553,
+  "5+": 0.589
+ },
+ "pairs": {
+  "same_issue": {
+   "n": 311,
+   "papers": 79,
+   "human_mean": 2.974,
+   "skill_mean": 2.99,
+   "diff": 0.016,
+   "diff_ci": [
+    -0.114,
+    0.146
+   ],
+   "mae": 0.691,
+   "accept_side_agree": 0.707,
+   "accept_side_ci": [
+    0.636,
+    0.772
+   ]
+  },
+  "other": {
+   "n": 1264,
+   "papers": 82,
+   "human_mean": 3.085,
+   "skill_mean": 3.085,
+   "diff": 0,
+   "diff_ci": [
+    -0.121,
+    0.117
+   ],
+   "mae": 0.809,
+   "accept_side_agree": 0.604,
+   "accept_side_ci": [
+    0.562,
+    0.646
+   ]
+  }
+ },
+ "paper_spearman": {
+  "n_all": 82,
+  "panel_vs_all_mean": 0.435,
+  "n_hit": 79,
+  "panel_vs_all_mean_same_papers": 0.418,
+  "panel_vs_hit_mean": 0.376
+ },
+ "tiers": {
+  "reject_clear": {
+   "hit": {
+    "n": 56,
+    "papers": 23,
+    "human_mean": 2.482,
+    "skill_mean": 2.732,
+    "diff": 0.25,
+    "diff_ci": [
+     0.058,
+     0.414
+    ],
+    "mae": 0.429,
+    "accept_side_agree": 1,
+    "accept_side_ci": [
+     1,
+     1
+    ]
+   },
+   "not_hit": {
+    "n": 33,
+    "papers": 19,
+    "human_mean": 2.424,
+    "skill_mean": 2.697,
+    "diff": 0.273,
+    "diff_ci": [
+     0.031,
+     0.514
+    ],
+    "mae": 0.455,
+    "accept_side_agree": 1,
+    "accept_side_ci": [
+     1,
+     1
+    ]
+   }
+  },
+  "reject_borderline": {
+   "hit": {
+    "n": 79,
+    "papers": 36,
+    "human_mean": 3.038,
+    "skill_mean": 3.063,
+    "diff": 0.025,
+    "diff_ci": [
+     -0.179,
+     0.213
+    ],
+    "mae": 0.709,
+    "accept_side_agree": 0.658,
+    "accept_side_ci": [
+     0.571,
+     0.739
+    ]
+   },
+   "not_hit": {
+    "n": 65,
+    "papers": 33,
+    "human_mean": 3.246,
+    "skill_mean": 3.046,
+    "diff": -0.2,
+    "diff_ci": [
+     -0.426,
+     0.065
+    ],
+    "mae": 0.877,
+    "accept_side_agree": 0.462,
+    "accept_side_ci": [
+     0.351,
+     0.563
+    ]
+   }
+  },
+  "accept": {
+   "hit": {
+    "n": 43,
+    "papers": 20,
+    "human_mean": 3.535,
+    "skill_mean": 3.163,
+    "diff": -0.372,
+    "diff_ci": [
+     -0.591,
+     -0.178
+    ],
+    "mae": 0.605,
+    "accept_side_agree": 0.581,
+    "accept_side_ci": [
+     0.465,
+     0.696
+    ]
+   },
+   "not_hit": {
+    "n": 39,
+    "papers": 21,
+    "human_mean": 3.667,
+    "skill_mean": 3.256,
+    "diff": -0.41,
+    "diff_ci": [
+     -0.769,
+     -0.05
+    ],
+    "mae": 0.872,
+    "accept_side_agree": 0.41,
+    "accept_side_ci": [
+     0.25,
+     0.558
+    ]
+   }
+  }
+ }
+}
