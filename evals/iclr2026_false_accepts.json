@@ -49,5 +49,37 @@
    "final_ge4": 2,
    "mean_panel": 3.6
   }
+ },
+ "bare_control": {
+  "note": "Same 85 papers (0xObmDmsKY has no bare result), bare model with evals/bare_prompt.md (run 43075458737). False accept: ICLR rating >= 6, which is what the skill's final Overall >= 4 maps to. The bare model reported recognizing 0 of 85 papers; the skill run reported 11.",
+  "tiers": {
+   "reject_clear": {
+    "n": 25,
+    "rating_ge6": 0,
+    "rating_ge6_ids": []
+   },
+   "reject_borderline": {
+    "n": 37,
+    "rating_ge6": 4,
+    "rating_ge6_ids": [
+     "5p1Ucqfd1A",
+     "9R2iUHhVfr",
+     "Jw7khYzYzl",
+     "RgOHRYHX5L"
+    ]
+   },
+   "accept": {
+    "n": 23,
+    "rating_ge6": 5,
+    "rating_ge6_ids": [
+     "BDnOrExHmt",
+     "E7YpL4L4Xh",
+     "elztN9Y4qw",
+     "euMVC1DO4k",
+     "qCaq3jGb0S"
+    ]
+   }
+  },
+  "bare_recognized": 0
  }
 }
