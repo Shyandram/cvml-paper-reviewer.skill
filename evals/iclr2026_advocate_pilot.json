@@ -1,0 +1,72 @@
+{
+ "note": "Advocate-type pilot: skill 7163a25 (no anchors) plus one advocate type TA (aspect significance) that sorts other types' fatal/major reasons into answerable vs blocking and scores the paper as if the answerable ones were answered. The change lives only in a scratch copy, not in the skill. 3 test papers, single runs. Human: RBktryANQ9 reject 2,2,4,4; 9R2iUHhVfr reject 4,4,4,6; xxYPqm1qWz accept 4,6,8,8. Compare with arm 'old' in evals/iclr2026_anchor_ab.json. Scores and ids only.",
+ "results": {
+  "RBktryANQ9": {
+   "final_overall": 2,
+   "advocate_overall": 3,
+   "advocate_pool": 30,
+   "others_overall": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "others_pool": [
+    15,
+    25,
+    18,
+    22,
+    20
+   ],
+   "others_mean_pool": 20
+  },
+  "9R2iUHhVfr": {
+   "final_overall": 3,
+   "advocate_overall": 4,
+   "advocate_pool": 70,
+   "others_overall": [
+    3,
+    3,
+    4,
+    4,
+    3,
+    3,
+    3
+   ],
+   "others_pool": [
+    56,
+    45,
+    66,
+    66,
+    56,
+    50,
+    50
+   ],
+   "others_mean_pool": 55.6
+  },
+  "xxYPqm1qWz": {
+   "final_overall": 3,
+   "advocate_overall": 4,
+   "advocate_pool": 65,
+   "others_overall": [
+    3,
+    3,
+    3,
+    3,
+    4,
+    3
+   ],
+   "others_pool": [
+    50,
+    42,
+    52,
+    45,
+    66,
+    45
+   ],
+   "others_mean_pool": 50
+  }
+ },
+ "finding": "The advocate scores the rejected 9R2iUHhVfr (pool 70) above the accepted xxYPqm1qWz (65): it raises every paper that has fixable-looking weaknesses and does not separate them. One vote among 6-8 moves no final Overall."
+}
