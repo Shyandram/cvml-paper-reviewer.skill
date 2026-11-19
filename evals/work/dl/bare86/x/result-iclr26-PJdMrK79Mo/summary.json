@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-PJdMrK79Mo",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Incremental over SOMBRL/MaxInfoRL (discrete-time) and OCORL; theory reuses Treven et al. 2023 lemmas",
+    "Theory does not match the practice: theorem's lambda_n is huge/exponential in T, experiments use hand-tuned or auto-tuned lambda and the mean model; BNN calibration only assumed",
+    "Theorem 2 and proof inconsistencies (lambda to infinity yet (1+lambda_N)^2 factor, I_N exponent mismatch between main text and appendix, missing 1/N)",
+    "Scalability claim rests on one ~3x compute comparison with OCORL on two low-dim GP tasks; no SOMBRL/MaxInfoRL/modern MBRL baselines in deep RL",
+    "Experiments are effectively fixed-rate discrete-time; thin adaptive-sampling evidence, few seeds, heavy hand-tuning"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

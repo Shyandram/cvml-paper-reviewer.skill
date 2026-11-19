@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-8xcmfwomnI",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Simplicity hypothesis (beta* = argmin R over source minimizers) is assumed, so recovery by regularized MLE is nearly circular; no explanation of why or which R governs diffusion/foundation models",
+    "Empirical evidence is confounded: non-generalizing MLPs are trained on contradictory target data and need larger norms; no source-only test of norm predicting failure; no complexity measure for the diffusion model",
+    "Assumptions (bounded loss, uniform concentration, bounded third derivative, convex smooth R, benign local minima, global optimizer, fixed-d underparameterized) do not hold for neural nets or diffusion models",
+    "Constant-gap case needs isolated strongly convex minima; vanishing-gap needs tau>=9 with no verified example; sharpness claimed without lower bound beyond the unique-minimizer case; lambda depends on unknown gap; large N* thresholds",
+    "Symmetries (e.g. beta vs -beta) violate C.3, deferred to an unproved quotient-space extension; intro rate typo n^{1-3tau}"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

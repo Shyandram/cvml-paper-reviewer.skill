@@ -1,0 +1,328 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Strongly adaptive regret appears to imply the bound via simple reduction; novelty and challenge claims overstated",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Proof gap in Lemma 1: key inequality goes the wrong way for n>=32",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Sloppy constants, conditions and notation errors in proofs and abstract",
+   "minor": true
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Proofs of Theorems 2 and 4 largely inherited from Zhang et al.; new content short",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No lower bound or discussion of optimality of sqrt(log T) price",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Lambda range excludes very short effective windows",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Requires known horizon T and bounded losses; no anytime version",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Per-round computational cost and memory not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "No empirical evidence or simulations, despite stock-prediction motivation",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Related work thin: universal methods like MetaGrad not compared",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Experiments compare SOGD only with OGD; adaptive or meta-learning baselines missing",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Bounds depend on constants and assumptions; may be impractical and costly at scale",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "DNP-cu combiner seems unnecessary; discounted-measure mismatch issue overstated",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Exponential step-size grids and iterative expert combination already established",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "No discussion of OCO with unbounded memory (Kumar et al. 2023)",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Algorithm 3 hard to read; equations should be inline",
+   "minor": true
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Differences from Zhang et al. 2022 insufficiently discussed",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Practical motivation for unknown lambda not concrete",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Extension to time-varying lambda not addressed",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Strongly adaptive regret appears to imply the bound via simple reduction; novelty and challenge claims overstated",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Proof gap in Lemma 1: key inequality goes the wrong way for n>=32",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Sloppy constants, conditions and notation errors in proofs and abstract",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Proofs of Theorems 2 and 4 largely inherited from Zhang et al.; new content short",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No lower bound or discussion of optimality of sqrt(log T) price",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Lambda range excludes very short effective windows",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Requires known horizon T and bounded losses; no anytime version",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Per-round computational cost and memory not discussed",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No empirical evidence or simulations, despite stock-prediction motivation",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Related work thin: universal methods like MetaGrad not compared",
+    "points": [
+     "P1.10"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Experiments compare SOGD only with OGD; adaptive or meta-learning baselines missing",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Bounds depend on constants and assumptions; may be impractical and costly at scale",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "DNP-cu combiner seems unnecessary; discounted-measure mismatch issue overstated",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Exponential step-size grids and iterative expert combination already established",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No discussion of OCO with unbounded memory (Kumar et al. 2023)",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Algorithm 3 hard to read; equations should be inline",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Differences from Zhang et al. 2022 insufficiently discussed",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Practical motivation for unknown lambda not concrete",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Extension to time-varying lambda not addressed",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI3",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI5"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-elztN9Y4qw",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Claim that AR avoids spurious edits is unsupported: GPT-Over. is lower than OmniGen/UltraEdit in several settings; gain comes from GPT-Suc.; no direct preservation metric or tokenizer round-trip error",
+    "Confounded comparison: VAREdit trained on 3.92M curated pairs (incl. ImgEdit) vs. older released baselines; no same-data diffusion baseline, no recent strong editors (Step1X-Edit, BAGEL, FLUX Kontext, OmniGen2)",
+    "Primary metric is custom GPT-4o-judged GPT-Balance with single run, no variance or human study; CLIP gains small or absent",
+    "SAR evidence thin: motivated by one attention heatmap, ablation only 256px/2.2B with small gains (PIE Suc. drops), no layer-placement or extra-capacity controls",
+    "Scaling and efficiency claims confounded (codebook dim, training length differ between 2.2B/8.4B; timing setup and resolutions not matched)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

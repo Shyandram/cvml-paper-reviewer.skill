@@ -1,0 +1,797 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "CommonGen metric differences are tiny (second or third decimal).",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Results lack seeds, variance, or significance tests.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Some variants are worse than the standard HMM on several metrics.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Claims of significant quality gains and halved max perplexity overstated; max perplexity is an outlier statistic.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Constraint satisfaction claim not measured since Ctrl-G satisfies constraints by construction.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "VLM experiment small, single configuration, missing CIs and setup details.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Fluency preservation overstated; perplexity rises about 50% over vanilla.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Monte Carlo baseline capped at one sample is a strawman.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Missing standard controlled-decoding baselines like FUDGE or GeDi.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "No ablation showing visual context is what helps the HMM.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Hateful Memes with Perspective API is a weak, noisy testbed.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Distillation results only in figures; headline gains unquantified, no base LM reference.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Comparison to Lee and Berg-Kirkpatrick dismissed without data.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Gains concentrate on first tokens, limiting benefit for distant-future constraints.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Minimal inference overhead claim not measured; no wall-clock or memory numbers.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Fine-tuned backbone variant contradicts fixed base LM pitch; deployment unclear.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Modest extension of Ctrl-G/TRACE; no comparison to hybrid neural-tractable models.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Proposition 1 is a trivial standard bound and inconsistently numbered.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "No analysis of expressiveness lost by fixed transition and emission parameters.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Only GPT-2-large and a 2B VLM; no modern larger LMs.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Only one CommonGen Ctrl-G setting and no text TRACE experiment or RealToxicityPrompts comparison.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Presentation inconsistencies: model names, variant names, typos, duplicated reference.",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Related work and conclusion merged and very short.",
+   "minor": true
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Datasets, training budgets, hidden sizes, encoder training details absent from main text.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Experimental setup details (learning rate, batch size) for neural HMM insufficient.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No generated sample examples, e.g. for detoxification.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Only two downstream tasks; other controlled-generation tasks not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Baselines too limited; prior controlled generation algorithms not compared.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "A visual diagram of the method would aid understanding.",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Lookahead effectiveness diminishes for longer continuations due to limited latent capacity.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Simple HMM structure limits expressiveness, hindering practical generation use.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Lookup table becomes very large with large C and latent size.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Only GPT-2 and Qwen2-VL; newer or larger LLMs not tested.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Only short sequences up to 32 tokens; longer contexts not tested.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Only marginal perplexity gains over standard HMMs.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Fluency gains do not align with BLEU or ROUGE; discrepancy unexplained.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Missing controllable-generation baselines like FUDGE and GeDi.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Experiments mainly on medium-sized models; stronger LLMs needed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Constraints synthetic or benchmark-style; real-world control settings untested.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Efficiency in streaming or large-batch inference and memory footprint unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Theory (MI bound) not linked to empirical metrics or design choices.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Ablation of architectural choices limited, e.g. Monarch gains and encoder-HMM trade-off.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Limitations and failure cases not analysed.",
+   "minor": false
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Framing covers tractable models broadly but only HMM evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "Figure 1 example not explained and no takeaway drawn.",
+   "minor": true
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "Related work and conclusion blended; positioning relative to prior work unclear.",
+   "minor": true
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Missing Sequential Monte Carlo baseline.",
+   "minor": false
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "More datasets needed to assess robustness and generality.",
+   "minor": false
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "No evaluation on long contexts.",
+   "minor": false
+  },
+  {
+   "id": "Q5.7",
+   "reviewer": "Q5",
+   "text": "Lacks benchmarks against established controllable generation methods.",
+   "minor": false
+  },
+  {
+   "id": "Q5.8",
+   "reviewer": "Q5",
+   "text": "Appendix C lacks computational trade-off analysis.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Tiny CommonGen differences",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No seeds or significance tests",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Some variants worse than standard HMM",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Overstated quality and max-perplexity claims",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Constraint satisfaction claim not measured",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "VLM experiment small and underspecified",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Fluency preservation overstated",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "MC baseline strawman",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Missing controlled-decoding baselines",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No visual-context ablation",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Weak detoxification testbed",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Distillation gains unquantified",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Prior distillation comparison dismissed",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Gains limited to early tokens",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Efficiency not measured",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Fine-tuned variant deployment unclear",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Modest novelty; no hybrid comparison",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Trivial proposition",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Fixed-parameter expressiveness unanalysed",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No modern larger LMs",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Limited task/framework coverage",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Presentation inconsistencies and typos",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Related work merged with conclusion",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Experimental details missing",
+    "points": [
+     "P1.24"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Experimental setup details (learning rate, batch size) for neural HMM insufficient.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No generated sample examples, e.g. for detoxification.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Limited tasks, datasets, and real-world settings",
+    "points": [
+     "Q1.3",
+     "Q4.2",
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Missing controlled-generation baselines",
+    "points": [
+     "Q1.4",
+     "Q3.5",
+     "Q5.7"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "A visual diagram of the method would aid understanding.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Lookahead effectiveness diminishes for longer continuations due to limited latent capacity.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Simple HMM structure limits expressiveness, hindering practical generation use.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Lookup table becomes very large with large C and latent size.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No newer or larger LLMs",
+    "points": [
+     "Q3.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No long-context evaluation",
+    "points": [
+     "Q3.2",
+     "Q5.6"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Only marginal perplexity gains over standard HMMs.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Fluency gains do not align with BLEU or ROUGE; discrepancy unexplained.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Computational efficiency trade-offs unclear",
+    "points": [
+     "Q4.3",
+     "Q5.8"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Theory (MI bound) not linked to empirical metrics or design choices.",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Ablation of architectural choices limited, e.g. Monarch gains and encoder-HMM trade-off.",
+    "points": [
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Limitations and failure cases not analysed.",
+    "points": [
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Framing covers tractable models broadly but only HMM evaluated.",
+    "points": [
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Figure 1 example not explained and no takeaway drawn.",
+    "points": [
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Related work and conclusion blended; positioning relative to prior work unclear.",
+    "points": [
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Missing Sequential Monte Carlo baseline.",
+    "points": [
+     "Q5.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI6"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI19"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  }
+ ]
+}

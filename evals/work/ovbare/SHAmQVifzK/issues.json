@@ -1,0 +1,660 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Frequency convergence inconsistency shown only in Fig. 1 on few scenes.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Claim that joint frequency optimization causes edge degradation is asserted, not tested.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "High-frequency region defined by disparity edges, not image frequency; concepts mixed.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No evidence proposed model converges more consistently across regions.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Numerical inconsistencies across tables in EPE and parameter counts.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Runtime reduction claim unfair; baseline with fewer iterations matches EPE faster.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Reported percentage gains over baselines miscomputed or swapped.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Gains over state of the art are marginal.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "No seeds, confidence intervals or significance tests.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Method is heavier with more parameters and longer runtime.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Zero-shot generalization claimed only qualitatively; no quantitative table.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "HPU gain confounded by LSTM, extra parameters and extra input.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "No ablation replacing wavelet sub-bands with other high-pass filters or plain branch.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "No ablation of IFA or LSA/HSA design.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "No parameter-matched controls.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Ablations only on RAFT-Stereo, not MonSter.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "IFA equations and notation unclear; text and figure descriptions differ.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Placing F_h in LSTM cell state is unusual, unanalyzed, contradicts motivation.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Why low-frequency LL-band context input helps is unexplained.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Low-frequency hidden state not constrained to be low-frequency.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Wrong citation for Haar wavelet and duplicate references.",
+   "minor": true
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Novelty moderate; combination of known components; interpretability critique unsupported.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Typos, inconsistent names, unclear which model each table uses.",
+   "minor": true
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Plug-and-play claim shown for only two methods.",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Failure cases suggesting added noise not analyzed.",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Code promised but not provided.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Missing comparison with FoundationStereo and Stereo Anywhere.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Appendix figure layout issues and missing figure references.",
+   "minor": true
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Computational overhead of wavelet and dual-branch processing not analyzed.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Efficiency claim unsupported; no FLOPs, parameters or inference time comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Limited novelty; frequency-separate processing exists in Selective-Stereo, DLNR.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Gains marginal; practical significance unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No justification or ablation of Haar wavelet choice.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Limited technical novelty; frequency ideas widely explored.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Cost incompletely discussed; FLOPs and memory missing.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No ablation of alternative decomposition methods.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No ablation removing the high-frequency branch.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Missing baselines FoundationStereo and S2M2.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No Middlebury benchmark results.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Frequency convergence inconsistency motivation needs more evidence; explanation speculative.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Thin evidence for convergence inconsistency.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Causal mechanism untested.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Disparity vs image frequency confusion.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No evidence of improved convergence consistency.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Numerical inconsistencies across tables.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Misleading runtime claim.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Miscomputed percentage gains.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Marginal gains.",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No variance or significance.",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Heavier model.",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No quantitative zero-shot results.",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Confounded HPU ablation.",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Wavelet decomposition necessity untested.",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Missing IFA ablation.",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No parameter-matched controls.",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Ablations only on RAFT.",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Unclear IFA description.",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Questionable LSTM cell-state design.",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Unexplained LL-band context input.",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Unconstrained low-frequency state.",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Citation errors.",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Moderate novelty.",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Typos and naming.",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Limited plug-and-play evidence.",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Unanalyzed failure cases.",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Code not provided.",
+    "points": [
+     "P1.26"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Missing recent foundation stereo baselines.",
+    "points": [
+     "Q1.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Appendix figure issues.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Computational cost not analyzed.",
+    "points": [
+     "Q1.3",
+     "Q2.1",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Limited novelty.",
+    "points": [
+     "Q2.2",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Marginal gains.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No ablation of wavelet choice.",
+    "points": [
+     "Q2.4",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No high-frequency branch removal ablation.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No Middlebury results.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Weak motivation evidence.",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  }
+ ]
+}

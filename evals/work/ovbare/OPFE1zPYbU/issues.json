@@ -1,0 +1,848 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Language vague and analysis not rigorous.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Claim that diffusion models cannot learn posterior/score lacks rigorous support; ignores convergence theory.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Supporting arguments such as weighted-sum degradation are expected and not original.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Natural inference section only reinterprets existing samplers; no new insights or methods.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "False 'first rigorous analysis' claim; existing literature on high-dimensional sparse setting not cited or compared.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Known proofs and diffusion/flow-matching equivalences presented without attribution.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Many vague, undefined statements and confusing notation; Sec. 4.1 lacks rigour (I_good/I_bad undefined).",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Self guidance resembles uncited Autoguidance; no real contribution.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Proposed framework not defined with equations; Sec. 4.2 given only as bullet ideas.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Figure 5 confusing with undefined symbols.",
+   "minor": true
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "No empirical results for new framework or comparison with known samplers.",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Appendix proofs imprecise: f_theta undefined, missing norms.",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Flow matching discussion incorrect in general; ignores non-Gaussian paths.",
+   "minor": false
+  },
+  {
+   "id": "P2.10",
+   "reviewer": "P2",
+   "text": "Different flow-matching statistics due to noise schedule, not acknowledged.",
+   "minor": false
+  },
+  {
+   "id": "P2.11",
+   "reviewer": "P2",
+   "text": "Degradation is not equivalent to single-sample mean estimate; single-sample training works (VAEs).",
+   "minor": false
+  },
+  {
+   "id": "P2.12",
+   "reviewer": "P2",
+   "text": "Learning ideal target is undesirable since it only reproduces training data; argument misguided.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Main claim overstated: posterior concentration does not invalidate probabilistic formulation.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Natural Inference Framework only re-expresses known samplers linearly; no new theory or algorithm.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "No experiments show the perspective improves understanding or performance.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Claim that models cannot learn high-dimensional distributions given without references or evidence.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Equation (15) unclear: expectation over x_t rather than x_0.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Figure 1 appears incorrect.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Lack of experiments in main text.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "No related work section.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Redundant content, including well-known score-matching equivalence proof.",
+   "minor": true
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Overuse of emphasized text.",
+   "minor": true
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Figure 5 cluttered and inadequately explained.",
+   "minor": true
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Formatting errors: missing caption periods, 'Eq. equation (1)'.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Analysis concerns empirical optimal denoiser, not learned network; network outputs never measured.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Inference from degenerate target to model failing to learn is asserted; conflates finite-sample and population targets.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Missing memorization/generalization and intrinsic-dimension literature; novelty overstated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Posterior weight described as inversely proportional to distance, contradicting Gaussian form.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Notation slips in Eqs. 18-23.",
+   "minor": true
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Standard posterior-mean regression reduction presented as contribution.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Degradation statistic close to tautological given sparsity relative to noise.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Degradation statistic implementation under-specified (softmax, threshold, t mapping, held-out points).",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Only ImageNet analysed; no control datasets.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Conclusion contradicts practice where models generate novel content.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Predict-x0 understanding not new.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Frequency-domain explanation informal and untested.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Unified framework trivial consequence of linear sampler updates.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Equivalence only approximate; no error bounds or deviation tables.",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Claim that Markov/SDE concepts are not needed overreaches.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Framework coverage incomplete: UniPC, predictor-corrector, stochastic samplers; DDPM breaks structure.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Linear multistep view already known; Self Guidance renaming adds no technical content.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Self Guidance quality enhancement argued by analogy only, untested.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "High-order solver explanation (5.1) lacks ablation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Large-CFG explanation rests on one hand-picked example.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Sharpness control shown only qualitatively.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Over-enhancement attribution hypothetical; single qualitative verification without baseline.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Only quantitative result is CIFAR-10; no high-dimensional benchmarks.",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "No seeds, confidence intervals or sample counts for FID.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Coefficient matrices tuned on same metric/model; no held-out check against overfitting.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Missing learned/searched solver baselines (UniPC, DPM-Solver-v3, LD3, AMED).",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Unusual baseline ordering suggests configuration issues; NFE accounting unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "No reusable method; design principles are heuristics.",
+   "minor": false
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Title/abstract promise not addressed; sections loosely connected.",
+   "minor": false
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Numerous typos and inconsistencies.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Vague, non-rigorous analysis",
+    "points": [
+     "P1.1",
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Main claim overstated and unsupported",
+    "points": [
+     "P1.2",
+     "P3.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Supporting arguments expected, not original",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Natural inference framework only re-expresses known samplers",
+    "points": [
+     "P1.4",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "False first claim; missing literature",
+    "points": [
+     "P2.1",
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Known results without attribution / redundant",
+    "points": [
+     "P2.2",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Self guidance resembles Autoguidance",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Proposed method not precisely defined",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Figure 5 confusing",
+    "points": [
+     "P2.6",
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No experiments",
+    "points": [
+     "P2.7",
+     "P3.3",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Imprecise appendix proofs",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Flow matching discussion incorrect",
+    "points": [
+     "P2.9"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Noise schedule ignored in statistics comparison",
+    "points": [
+     "P2.10"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Degradation-single-sample argument flawed",
+    "points": [
+     "P2.11"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Ideal target undesirable (memorizes)",
+    "points": [
+     "P2.12"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Eq. 15 unclear",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Figure 1 incorrect",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Overuse of emphasis",
+    "points": [
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Formatting errors",
+    "points": [
+     "P4.9"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Empirical optimum analysed, not learned network",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Degenerate target to learning failure asserted",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Missing memorization/generalization literature",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Posterior weight description wrong",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Notation slips",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Standard reduction claimed as contribution",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Degradation statistic tautological",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Statistic implementation under-specified",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Only ImageNet, no controls",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Conclusion at odds with practice",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "x0-prediction view not new",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Frequency explanation untested",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Unified framework trivial",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Equivalence only approximate",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Markov/SDE not-needed claim overreaches",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Incomplete sampler coverage",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Linear multistep view known; Self Guidance renaming",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Self Guidance enhancement untested",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "High-order solver explanation lacks ablation",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "CFG explanation single example",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Sharpness control qualitative",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Over-enhancement attribution weak",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Single small benchmark",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "No seeds or CIs",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Tuning asymmetry / overfitting to FID",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Missing learned-solver baselines",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Suspicious baseline configuration",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "No reusable method",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Title mismatch, loosely connected sections",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Typos",
+    "points": [
+     "Q1.30"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI1",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI13",
+    "QI17"
+   ],
+   "related": [
+    "QI14",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI23"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI1",
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI30"
+   ]
+  }
+ ]
+}

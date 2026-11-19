@@ -1,0 +1,679 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Methodology notation insufficiently explained, e.g. C_t undefined at first use.",
+   "minor": true
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Experiments use only Qwen3-32B; other LLMs not tried.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Three agents plus MARL may be costly; training cost not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Framework not tested at scale on large real-world noisy knowledge graphs.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Contributions describe the method rather than the problem and differences from prior work.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Related work is a brief RL survey not positioned relative to the paper.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Problem definition imprecise: KG components, question assumptions, and entity linking unspecified.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "State notation unclear: subgraph lacks relations, frontier unexplained, C_t undefined.",
+   "minor": true
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Agent implementations unclear: what architect and navigator models are, architectures, parameter counts.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Novelty and need for LC-MAPPO over existing Lagrangian RL methods unclear.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "EM@1 evaluation metric unclear.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "Missing experimental details: which shared LLM, which KG, its scale.",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Table 2 bolding implies CLAUSE best though LightRAG is better.",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "Convergence proof incomplete; relies on assumptions not stated in paper.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Contributions in Section 1 are overclaimed; points should be merged.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Claimed test-time adjustable budgets not demonstrated; no budget sweeps or Pareto plots.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Unclear how policy is conditioned on budgets/prices and whether budgets sampled in training.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Latency reduction claim contradicted: slower than Vanilla RAG and LightRAG.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Predictable runtime never measured (no variance, tail latency, violation rate).",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Latency reported only as normalized ratios without absolute times or hardware; steps vs wall-clock conflated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Constraint experiment budgets inconsistent with main results and mostly infeasible for the method.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Low feasibility rates show unreliable constraint enforcement; dual value misused as quality metric.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Constraint experiment lacks seeds, error bars, accuracy, definitions; only MetaQA.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Training and implementation details missing: reward, episodes, data splits, hyperparameters, architectures.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Algorithms and proofs deferred to unresolved \"Appendix ??\", so unevaluable.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Convergence with PPO nontrivial; shadow-price claim stronger than warranted.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Combination of QMIX, COMA, MAPPO under-described; adopts mixer restriction criticized in related work.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Architect gain-price rule looks heuristic rather than learned policy; training unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Budgets enforced by truncation, not expectation constraints; hard guarantees unsupported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "How edits feed traversal and curation, and reader input, only sketched.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "How a KG is built for HotpotQA is not stated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "EM@1 for FactKG claim verification is unexplained.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "MetaQA baseline numbers look odd; CLAUSE below specialized methods.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Missing specialized KGQA baselines and standard benchmarks like WebQSP and CWQ.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Baseline configuration and tuning unclear; RL-trained vs zero-shot; no supervised baseline.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "No statistical reporting: seeds, confidence intervals, significance; small ablation gaps.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Token-budget claim only from a figure; no matched-token comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Ablation table dataset and normalization unclear; some variants loosely defined.",
+   "minor": true
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "\"w/o Architect\" removes the KG entirely, not isolating the Architect.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "No ablations of claimed algorithmic components; RCPO comparison lacks EM.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Provenance quality and neuro-symbolic claims not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Case study is a single trivial example.",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Presentation: unresolved references, odd phrasing, undefined terminology.",
+   "minor": true
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Results text over-interprets findings.",
+   "minor": false
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Meaning of \"agentic\" (small fixed policies) should be stated clearly.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Notation unclear/undefined (e.g. C_t)",
+    "points": [
+     "P1.1",
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Only one LLM tested",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Training cost not discussed",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Not tested on large real noisy KGs",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Contribution statement overclaimed/poorly framed",
+    "points": [
+     "P3.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Related work not positioned",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Problem definition imprecise",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Agent implementation details missing",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "LC-MAPPO novelty/need unclear",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "EM@1 metric unclear",
+    "points": [
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "LLM and KG details missing",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Table 2 bolding misleading",
+    "points": [
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Convergence proof incomplete",
+    "points": [
+     "P3.10"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Claimed test-time adjustable budgets not demonstrated; no budget sweeps or Pareto plots.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Unclear how policy is conditioned on budgets/prices and whether budgets sampled in training.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Latency reduction claim contradicted: slower than Vanilla RAG and LightRAG.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Predictable runtime never measured (no variance, tail latency, violation rate).",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Latency reported only as normalized ratios without absolute times or hardware; steps vs wall-clock conflated.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Constraint experiment budgets inconsistent with main results and mostly infeasible for the method.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Low feasibility rates show unreliable constraint enforcement; dual value misused as quality metric.",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Constraint experiment lacks seeds, error bars, accuracy, definitions; only MetaQA.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Training and implementation details missing: reward, episodes, data splits, hyperparameters, architectures.",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Algorithms and proofs deferred to unresolved \"Appendix ??\", so unevaluable.",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Convergence with PPO nontrivial; shadow-price claim stronger than warranted.",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Combination of QMIX, COMA, MAPPO under-described; adopts mixer restriction criticized in related work.",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Architect gain-price rule looks heuristic rather than learned policy; training unclear.",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Budgets enforced by truncation, not expectation constraints; hard guarantees unsupported.",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "How edits feed traversal and curation, and reader input, only sketched.",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "How a KG is built for HotpotQA is not stated.",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "EM@1 for FactKG claim verification is unexplained.",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "MetaQA baseline numbers look odd; CLAUSE below specialized methods.",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Missing specialized KGQA baselines and standard benchmarks like WebQSP and CWQ.",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Baseline configuration and tuning unclear; RL-trained vs zero-shot; no supervised baseline.",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "No statistical reporting: seeds, confidence intervals, significance; small ablation gaps.",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Token-budget claim only from a figure; no matched-token comparison.",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Ablation table dataset and normalization unclear; some variants loosely defined.",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "\"w/o Architect\" removes the KG entirely, not isolating the Architect.",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "No ablations of claimed algorithmic components; RCPO comparison lacks EM.",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Provenance quality and neuro-symbolic claims not evaluated.",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Case study is a single trivial example.",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Presentation: unresolved references, odd phrasing, undefined terminology.",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Results text over-interprets findings.",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Meaning of \"agentic\" (small fixed policies) should be stated clearly.",
+    "points": [
+     "Q1.30"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI29"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI13",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI16"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI11"
+   ],
+   "related": [
+    "QI10"
+   ]
+  }
+ ]
+}

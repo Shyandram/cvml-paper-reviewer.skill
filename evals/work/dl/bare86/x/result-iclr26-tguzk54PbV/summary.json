@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-tguzk54PbV",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Main gains are shown mostly in cross-play against attackers from the same framework; no independent/adaptive attacks and no comparison with other defenses",
+    "AgentDojo gains are about 1 point (6.3->5.4 ASR; Qwen 1.6->1.4), matched by SPAG, with low base ASR and unspecified attack setup",
+    "Diversity claim rests on cumulative-set average pairwise embedding distance, with no baseline comparison or semantic analysis",
+    "Baselines (ART, w/o PBL) look under-tuned (weak attackers), so the PBL benefit may be overstated; no cycling measurement or sensitivity analysis",
+    "Narrow leakage-only string-match threat model, no over-refusal test, high residual ASR (34-41%) and TSR drop under strong attack"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

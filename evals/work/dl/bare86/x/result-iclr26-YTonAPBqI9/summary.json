@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-YTonAPBqI9",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Claims of outperforming all baselines on all metrics contradict Table 2 (RES, FLU, COV); count inconsistencies (17 vs 18 models, 34,250 'sessions' includes preference pairs); Table 2 and Table 3 numbers do not reconcile",
+    "Circular evaluation: data generated and filtered with the same rubric and GPT-4o that judges; student simulators trained on the same data; no prompted baseline with the same teaching scaffold",
+    "No real-student or learning-outcome evidence; only 36 scenarios, no CIs or significance tests; machine-human agreement shown only at model-mean level, no inter-rater statistics",
+    "Hyperparameters and checkpoints tuned on the test set; DPO chosen/rejected pairs confounded by privileged strategy information and style/length",
+    "Limited novelty and scope (math only); Math500/AIME24 reasoning drops; expert verification and data quality unquantified"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

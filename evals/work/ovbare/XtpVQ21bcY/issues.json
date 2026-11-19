@@ -1,0 +1,806 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Requiring attention scores appears incompatible with FlashAttention",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Block-wise probing methods (NSA, MoBA, SeerAttention, ZipVL) obtain scores with FlashAttention",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Top-p dynamic KV methods like Twilight and ZipVL already exist",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only compared against StreamingLLM and H2O",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Need VideoMME, LongVideoBench, PerceptionTest, ActNet-QA, NextQA benchmarks",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Need evaluation on long videos exceeding 20k context",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "More extensive experiments on LLaVA-Video expected",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Cross-layer dropping unnecessary versus fine-grained selection; risks compounding information loss",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Should compare with AdaKV, PyramidKV, HeadKV, PruneVID",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Figure 1(c) should more clearly show dense vs ST-SpAttn differences",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Needs formal analysis why lower-layer scores suffice for high-layer importance",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Ablation lacks analysis of PureKV computational overhead",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Overall writing could be clearer and more readable",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Attention-based importance scoring and sparse attention are not individually novel",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Choice of layers for CLIE vs ST-SpAttn is empirical, lacking principled framework",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Audio-visual results only in appendix; test Qwen2-Audio or Omni models",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Better results at 10% than 20% budget need investigation",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Only single-query evaluation; multi-turn cache reuse not shown",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Spearman correlations of 0.2-0.4 do not support 'sufficient statistic' claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No top-h recall, output-error or attention-mass recovery metric",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No theory supports the sufficient-statistic claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Number of samples used for correlation not stated",
+   "minor": true
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Purification claim rests on qualitative figure; gain may come from sink-like prior",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Ablation Table 4 uses a single task",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Ablation differences small; no variance, seeds or CIs anywhere",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "No ablation with ST-SpAttn but without CLIE",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Ablation never shows a benefit from CLIE",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "PureKV changes prefill while baselines keep dense; Table 6 ambiguous",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "PureKV at 20% beats full cache, suggesting noise or metric issue",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "LOOK-M scores near zero, likely integration failure inflating margins",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Baselines collapse on VideoLLaMA2; tuning details not given",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "VideoLLaMA2 drops substantially at 10-20%, contradicting negligible degradation",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Task subset differs from list and per model; selection unexplained",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "ROUGE used for multiple-choice instead of accuracy",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "No Video-MME, LongVideoBench, MLVU or EgoSchema evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Only two models evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "AVSD result barely above baselines yet called significant",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "3.16x speedup in ms/token without sequence length, batch or frames",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Speedup comes from ST-SpAttn, not compression; headline numbers from different configs",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No latency or throughput comparison to baselines despite faster-decoding claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Peak memory not reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Selection after high-layer K/V computed, so peak prefill memory not reduced",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Unclear whether sparse pattern uses block-sparse kernel or masking",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Frame token correspondence for merged patches in Qwen2.5-VL not explained",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "How text query tokens attend and interact with ST-SpAttn is unknown",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Head/GQA aggregation, h, w and per-layer budgets omitted",
+   "minor": false
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Best CLIE/ST-SpAttn layers selected on the same reported task",
+   "minor": false
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "CLIE at layer 0 fails catastrophically, suggesting fragility",
+   "minor": false
+  },
+  {
+   "id": "Q1.31",
+   "reviewer": "Q1",
+   "text": "Resembles FastV, GemFilter, ZipCache, StreamingLLM, Sparse VideoGen; not compared",
+   "minor": false
+  },
+  {
+   "id": "Q1.32",
+   "reviewer": "Q1",
+   "text": "Claim that no sparse attention scheme interacts with KV compression too strong",
+   "minor": false
+  },
+  {
+   "id": "Q1.33",
+   "reviewer": "Q1",
+   "text": "Wrong table order cited, budget mismatch, AC label reused for different tasks",
+   "minor": true
+  },
+  {
+   "id": "Q1.34",
+   "reviewer": "Q1",
+   "text": "Several references unrelated to the paper",
+   "minor": true
+  },
+  {
+   "id": "Q1.35",
+   "reviewer": "Q1",
+   "text": "No limitations section",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Need for attention scores incompatible with FlashAttention",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Claim that attention-based methods cannot use FlashAttention is inaccurate",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Claim that existing methods are static is misleading",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Baselines too weak; stronger KV methods missing",
+    "points": [
+     "P2.3",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Benchmarks insufficient; long-video evaluation missing",
+    "points": [
+     "P2.4",
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "More LLaVA-Video experiments needed",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Cross-layer estimation of questionable necessity",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Figure 1(c) unclear",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Weak theoretical justification for low-layer importance estimation",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Computational overhead not analysed",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Writing quality",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Core techniques not novel",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Layer assignment empirical, not principled",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Other modalities underexplored",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Non-monotonic budget-performance relation unexplained",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Multi-turn dialogue and cache reuse not evaluated",
+    "points": [
+     "P4.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "CLIE sufficiency claim overstated given weak correlations",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No top-h set overlap or recall metric",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No theory for sufficient-statistic claim",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Correlation sample count unstated",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Purification motivation for ST-SpAttn not demonstrated",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Ablation uses a single task",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Small differences with no variance reported",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing ST-SpAttn-without-CLIE configuration",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "CLIE benefit never shown",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Unfair comparison: altered prefill vs dense baselines",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "PureKV exceeding full cache undiscussed",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "LOOK-M baseline appears broken",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Baselines likely untuned on VideoLLaMA2",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "'Negligible degradation' claim overstated",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "MVBench task subset inconsistent and unexplained",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Non-standard ROUGE metric on multiple-choice",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No long-video benchmark",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Only two models tested",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "AVSD gain overclaimed",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Prefill speedup settings unspecified",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Speedup source and compression config mismatch",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No latency comparison to baselines",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Peak memory not reported or reduced",
+    "points": [
+     "Q1.23",
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Unclear whether real block-sparse kernel is used",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "First-frame and previous-frame token definition unclear for Qwen2.5-VL",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Text query attention and recent window interaction unclear",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Head aggregation and hyperparameters omitted",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Layer choice tuned on reported test task",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "CLIE fragile at layer 0",
+    "points": [
+     "Q1.30"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Limited novelty; related methods not discussed or compared",
+    "points": [
+     "Q1.31"
+    ]
+   },
+   {
+    "id": "QI31",
+    "summary": "Overly strong 'no existing scheme' claim",
+    "points": [
+     "Q1.32"
+    ]
+   },
+   {
+    "id": "QI32",
+    "summary": "Presentation inconsistencies in tables and labels",
+    "points": [
+     "Q1.33"
+    ]
+   },
+   {
+    "id": "QI33",
+    "summary": "Unrelated references",
+    "points": [
+     "Q1.34"
+    ]
+   },
+   {
+    "id": "QI34",
+    "summary": "No limitations section",
+    "points": [
+     "Q1.35"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI31",
+    "QI30"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI31",
+    "QI30"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI30",
+    "QI12",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI17"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI29"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI20",
+    "QI21",
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI32"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI30"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI28",
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI19",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  }
+ ]
+}

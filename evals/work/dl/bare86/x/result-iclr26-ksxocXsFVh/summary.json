@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-ksxocXsFVh",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Modest novelty: CT-KV is prefix tuning initialized from the demonstration KV cache plus LOO masking borrowed from TTT; the ICO framing is mostly taxonomy",
+    "Efficiency claim vs TTT is confounded by batch-size/memory caps and has no iteration/FLOP-matched comparison; observed ~2x is far from the claimed k-fold",
+    "Hyperparameter selection protocol unclear (possible test-set tuning, e.g., dropping LOO on ARC); TTT and CT-KV tuning budgets differ; gaps to TTT ~0.1 pt",
+    "Mechanistic 'lossy KV cache' explanation (Table 4) does not establish the cause of CT-KV gains; alternative explanations untested",
+    "Missing baselines (LoRA few-shot FT, context distillation/gist, calibrated/CoT ICL) and limited scale/task diversity; ARC single-run with a 1B model"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

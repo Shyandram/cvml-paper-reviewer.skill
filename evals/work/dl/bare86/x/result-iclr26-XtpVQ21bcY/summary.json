@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-XtpVQ21bcY",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Cross-layer proxy validated only by weak-to-moderate Spearman correlation (0.2-0.4); 'sufficient statistic' overclaimed, no top-h overlap or output-error metric",
+    "ST-SpAttn 'purification' motivation never measured; ablations on a single MVBench task with no variance, and no ST-SpAttn-only or CLIE-benefit control",
+    "Suspicious/unfair baselines: LOOK-M near zero, baselines collapse on VideoLLaMA2, PureKV beats full cache on Qwen at 20%; baselines lack the sparse prefill; ROUGE metric and 10-of-20 task subset",
+    "Narrow evaluation: short-video MVBench only, no long-video benchmarks, two models; AVSD gain is marginal despite 'significant' claim",
+    "Efficiency claims unsupported: no baseline latency/memory comparisons, 3.16x prefill and 5x compression are different configs, kernels and setup unspecified"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

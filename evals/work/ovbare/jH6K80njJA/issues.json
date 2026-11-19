@@ -1,0 +1,881 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Core idea (LLM table extraction + text-to-SQL) close to Evaporate and text-to-table work; limited novelty",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Related work dismisses Evaporate; no comparison with Evaporate or similar systems",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Missing agentic, code-based, iterative or map-reduce aggregation baselines",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Headline results use oracle gold schema built with test questions in view",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Realistic InferredSchema variant scores poorly, below baselines on FB-Agg",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Claim of strong results versus top RAG methods is overstated",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Manual schema construction effort unmeasured; scaling to real query distributions not shown",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "HOTELS documents verbalize structured records; extraction nearly inverts generation, favouring method",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "WORLD CUP is tiny (22 docs) and leaked into LLM pretraining",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Datasets fit method assumptions (one schema, no nested/list); real unstructured corpora untested",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Only 50 FB-Agg queries",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No confidence intervals, seeds or significance tests",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "S-RAG uses GPT-4o while baselines use o3; generator confound",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "VectorRAG baseline is a single weak configuration without BM25 or reranker",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Missing long-context model baselines (1M-token models)",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Truncated FullCorpus does not support claim of outperforming long-context LLMs",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "OAI-Responses baseline is a black box with unspecified configuration",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "LLM judges unvalidated; no human agreement study",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Judge prompt has no numeric tolerance",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Answer Recall metric not described in detail",
+   "minor": true
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Bare-number vs long reasoning outputs may bias judge behaviour",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "WORLD CUP question count inconsistent (83 vs 88)",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "No quantified error analysis of failures",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Record extraction accuracy and SQL execution accuracy not reported",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "No results broken down by question type",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "No ablations on schema-induction sample sizes, iterations, column statistics, hybrid mode",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Ingestion cost (one LLM call per document) not discussed or compared",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Hybrid gain over VectorRAG within noise and uses gold schema; general-purpose claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Narrow scope: single schema, no list/nested attributes, joins or multi-entity; title overbroad",
+   "minor": false
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Hybrid mode under-described (document selection, empty SQL results)",
+   "minor": true
+  },
+  {
+   "id": "P1.31",
+   "reviewer": "P1",
+   "text": "Question generation under-specified; gold answers not validated by humans",
+   "minor": false
+  },
+  {
+   "id": "P1.32",
+   "reviewer": "P1",
+   "text": "Questions likely answerable by single SQL by construction; not analysed",
+   "minor": false
+  },
+  {
+   "id": "P1.33",
+   "reviewer": "P1",
+   "text": "Missing related work: LOTUS, Palimpzest, ZenDB, table-augmented generation",
+   "minor": false
+  },
+  {
+   "id": "P1.34",
+   "reviewer": "P1",
+   "text": "Not evaluated on cited aggregative benchmarks MoNaCo, QAMPARI, QUEST",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Assumes all documents share one structure / single entity type",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Performance on nested or list-type attributes unverified",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Hotels and World Cup datasets small; large-scale scalability unvalidated",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Implementation mostly prompting existing LLMs; minimal methodological innovation",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "No quantitative analysis of schema accuracy or inter-run variance; stability unclear",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Different models for S-RAG (GPT-4o) and baselines (o3) confound comparisons",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Synthetic LLM-generated HOTELS may bias in favour of schema-driven methods",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "LLM-as-judge metrics without agreement statistics or robustness analysis",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "No human evaluation of correctness",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Single latent schema assumption; multi-schema or hierarchical settings unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Hotels dataset generated from hand-crafted attributes, too structured; contradicts unstructured claim",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Synthetic question-answer pairs not human-verified",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Method straightforward; similar prior work (TrustUQA, QuASM)",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Limited to single-entity-type corpora",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Schema inference fragile; large gap between gold and inferred schemas",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "WORLD CUP 22 docs, HOTELS 350; far below enterprise scale",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No timing or computational cost analysis of ingestion",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Aggregative queries simple; no multi-join or nested aggregations",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Core idea (LLM table extraction + text-to-SQL) close to Evaporate and text-to-table work; limited novelty",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Related work dismisses Evaporate; no comparison with Evaporate or similar systems",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing agentic, code-based, iterative or map-reduce aggregation baselines",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Headline results use oracle gold schema built with test questions in view",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Realistic InferredSchema variant scores poorly, below baselines on FB-Agg",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Claim of strong results versus top RAG methods is overstated",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Manual schema construction effort unmeasured; scaling to real query distributions not shown",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "HOTELS documents verbalize structured records; extraction nearly inverts generation, favouring method",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "WORLD CUP is tiny (22 docs) and leaked into LLM pretraining",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Datasets fit method assumptions (one schema, no nested/list); real unstructured corpora untested",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Only 50 FB-Agg queries",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No confidence intervals, seeds or significance tests",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "S-RAG uses GPT-4o while baselines use o3; generator confound",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "VectorRAG baseline is a single weak configuration without BM25 or reranker",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Missing long-context model baselines (1M-token models)",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Truncated FullCorpus does not support claim of outperforming long-context LLMs",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "OAI-Responses baseline is a black box with unspecified configuration",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "LLM judges unvalidated; no human agreement study",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Judge prompt has no numeric tolerance",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Answer Recall metric not described in detail",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Bare-number vs long reasoning outputs may bias judge behaviour",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "WORLD CUP question count inconsistent (83 vs 88)",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No quantified error analysis of failures",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Record extraction accuracy and SQL execution accuracy not reported",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "No results broken down by question type",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "No ablations on schema-induction sample sizes, iterations, column statistics, hybrid mode",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Ingestion cost (one LLM call per document) not discussed or compared",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Hybrid gain over VectorRAG within noise and uses gold schema; general-purpose claim unsupported",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Narrow scope: single schema, no list/nested attributes, joins or multi-entity; title overbroad",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Hybrid mode under-described (document selection, empty SQL results)",
+    "points": [
+     "P1.30"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Question generation under-specified; gold answers not validated by humans",
+    "points": [
+     "P1.31"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "Questions likely answerable by single SQL by construction; not analysed",
+    "points": [
+     "P1.32"
+    ]
+   },
+   {
+    "id": "PI33",
+    "summary": "Missing related work: LOTUS, Palimpzest, ZenDB, table-augmented generation",
+    "points": [
+     "P1.33"
+    ]
+   },
+   {
+    "id": "PI34",
+    "summary": "Not evaluated on cited aggregative benchmarks MoNaCo, QAMPARI, QUEST",
+    "points": [
+     "P1.34"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Single schema / entity-type assumption",
+    "points": [
+     "Q1.1",
+     "Q2.7",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Nested/list attributes unverified",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Small datasets; scalability unvalidated",
+    "points": [
+     "Q1.3",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Limited novelty; prompting existing LLMs, similar prior work",
+    "points": [
+     "Q2.1",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Schema/record accuracy and run variance unquantified",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Generator model confound GPT-4o vs o3",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Synthetic structured HOTELS favours method",
+    "points": [
+     "Q2.4",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "LLM judge not validated",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No human evaluation of answers",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Synthetic QA pairs not human verified",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Gold vs inferred schema gap",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No ingestion cost analysis",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Queries too simple",
+    "points": [
+     "Q4.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI1",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI8",
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [
+    "QI1",
+    "QI2"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI33",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI34",
+   "match": [],
+   "related": []
+  }
+ ]
+}

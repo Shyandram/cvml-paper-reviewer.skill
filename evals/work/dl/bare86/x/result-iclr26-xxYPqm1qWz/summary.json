@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-xxYPqm1qWz",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No compute/token-matched or label-corruption control, so gains cannot be attributed to IDM-mined video labels rather than extra training",
+    "Headline 70% gain uses the 50-step budget; at 20 steps it is 52%. Single runs, no variance on a 369-task benchmark, and the test-time-scaling claim rests on about 6 tasks",
+    "Mined label quality is modest (event recall 0.70, press 0.08; parameter accuracy 65.8%), with lenient 'plausible' and any-overlap metrics, tiny in-the-wild evaluation, and no noise analysis",
+    "No comparison to published 7B agents (OpenCUA, UI-TARS, AGUVIS) or other data-synthesis methods such as AgentTrek; AgentNetBench and the IDM are in-domain to OpenCUA data",
+    "Causal claims about long-horizon planning and test-time scaling are speculative. Hindsight-conditioned GPT-5 thoughts are not ablated, and data release and legal status are unclear"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

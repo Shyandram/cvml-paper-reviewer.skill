@@ -1,0 +1,817 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Central claims (transformers learn like brains, genes unnecessary) overreach the evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Matching qualitative properties does not show same mechanism or neural-level structure",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No comparison to newborn neural or behavioural data",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Results likely hold for any hierarchical learner; do not discriminate hypotheses",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No comparison to CNNs or other architectures trained on same data",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No comparison to other objectives or generic learners such as ICA/sparse coding",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "No training controls on natural videos, noise or static images",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Scrambled control confounded; smooth non-wave motion and spatially-destroyed controls missing",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Untrained ViT is a weak baseline for 'no structure'",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Edge metric uses arbitrary hand-chosen RDM without sensitivity analysis or statistics",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Edge stimuli 0-90 degree range without wraparound and rotation artefacts problematic",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No unit-level tuning, filter/Gabor fits, or V1 comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Shape test weak: 16 synthetic objects, mean-pooled patch-token RDMs",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Shape bias may stem from colour insensitivity of greyscale training; colour input handling unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Shape bias is not IT-like shape selectivity; no generalisation tests",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Gradient spread in globally-connected transformer is not a receptive field",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Normalisation of signed gradients for RF size questionable",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "RF measure uses single stimulus and depends on object and position",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Retinotopy claimed but never tested",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "RF measure not validated on known model; no error bars; units unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "No variability, confidence intervals or statistical tests across seeds",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "'Early' and 'later' layers never defined",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Ordered non-iid training stream, constant LR, 100 epochs without ablation",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Single simulator preset; wave statistics, time window, rasterisation unjustified or undescribed",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Selectional vs instructional framing false dichotomy; inductive biases analogous to genetic instruction",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "'No hardcoded priors' ignores patch tokenisation and position embeddings",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Limited novelty over prior retinal-wave training and emergent locality work",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Prior CNN/ICA retinal-wave models dismissed without empirical comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Related work thin and heavily self-citing",
+   "minor": false
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Methods underspecified: loss form, negatives, channels, rendering, layers, t-SNE settings",
+   "minor": false
+  },
+  {
+   "id": "P1.31",
+   "reviewer": "P1",
+   "text": "Broader-impact prenatal-phase claim untested; no downstream transfer experiment",
+   "minor": false
+  },
+  {
+   "id": "P1.32",
+   "reviewer": "P1",
+   "text": "Paper dominated by framing and discussion",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Backprop training limits biological plausibility",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Unsupervised temporal learning method not described in methods",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "'Self-organization' conflated with representational similarity; no topographic organization analysis",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "No comparison of model RSMs to human brain data",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Missing control training on other stimuli like gratings or natural videos",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Figure 4(d) bar plots too low-resolution",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Incremental over Ligeralde et al.: CNN swapped for ViT",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No comparison against prior models trained on retinal waves",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "100 training epochs biologically implausible; developmental trajectory ignored",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Very low-resolution inputs; unclear if findings scale",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Receptive-field analysis limited to fovea; eccentricity not considered",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Excluding CLS token from RF analysis undermines validity",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Mischaracterises Ligeralde et al. as not using spatiotemporal waves",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Temporally shuffled control cannot isolate spatial statistics; reconstruction objective needed",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Central claims (transformers learn like brains, genes unnecessary) overreach the evidence",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Matching qualitative properties does not show same mechanism or neural-level structure",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No comparison to newborn neural or behavioural data",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Results likely hold for any hierarchical learner; do not discriminate hypotheses",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No comparison to CNNs or other architectures trained on same data",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No comparison to other objectives or generic learners such as ICA/sparse coding",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "No training controls on natural videos, noise or static images",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Scrambled control confounded; smooth non-wave motion and spatially-destroyed controls missing",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Untrained ViT is a weak baseline for 'no structure'",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Edge metric uses arbitrary hand-chosen RDM without sensitivity analysis or statistics",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Edge stimuli 0-90 degree range without wraparound and rotation artefacts problematic",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No unit-level tuning, filter/Gabor fits, or V1 comparison",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Shape test weak: 16 synthetic objects, mean-pooled patch-token RDMs",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Shape bias may stem from colour insensitivity of greyscale training; colour input handling unclear",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Shape bias is not IT-like shape selectivity; no generalisation tests",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Gradient spread in globally-connected transformer is not a receptive field",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Normalisation of signed gradients for RF size questionable",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "RF measure uses single stimulus and depends on object and position",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Retinotopy claimed but never tested",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "RF measure not validated on known model; no error bars; units unclear",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No variability, confidence intervals or statistical tests across seeds",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "'Early' and 'later' layers never defined",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Ordered non-iid training stream, constant LR, 100 epochs without ablation",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Single simulator preset; wave statistics, time window, rasterisation unjustified or undescribed",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Selectional vs instructional framing false dichotomy; inductive biases analogous to genetic instruction",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "'No hardcoded priors' ignores patch tokenisation and position embeddings",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Limited novelty over prior retinal-wave training and emergent locality work",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Prior CNN/ICA retinal-wave models dismissed without empirical comparison",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Related work thin and heavily self-citing",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Methods underspecified: loss form, negatives, channels, rendering, layers, t-SNE settings",
+    "points": [
+     "P1.30"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Broader-impact prenatal-phase claim untested; no downstream transfer experiment",
+    "points": [
+     "P1.31"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "Paper dominated by framing and discussion",
+    "points": [
+     "P1.32"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Backprop training limits biological plausibility",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Unsupervised temporal learning method not described in methods",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "'Self-organization' conflated with representational similarity; no topographic organization analysis",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No comparison of model RSMs to human brain data",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Missing control training on other stimuli like gratings or natural videos",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Figure 4(d) bar plots too low-resolution",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Incremental over Ligeralde et al.: CNN swapped for ViT",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No comparison against prior models trained on retinal waves",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "100 training epochs biologically implausible; developmental trajectory ignored",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Very low-resolution inputs; unclear if findings scale",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Receptive-field analysis limited to fovea; eccentricity not considered",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Excluding CLS token from RF analysis undermines validity",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Mischaracterises Ligeralde et al. as not using spatiotemporal waves",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Temporally shuffled control cannot isolate spatial statistics; reconstruction objective needed",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI30",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": []
+  }
+ ]
+}

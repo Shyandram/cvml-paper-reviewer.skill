@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-R7fv5NWfMm",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Theory covers only single-worker eviction (largely classical paging/marking analysis); LBGR routing has no guarantee, so the 'unified' claim is overstated",
+    "Huge median latency/TTFT gains (11.8x/23x) with modest hit-rate and small P95 gains suggest the baseline is overloaded; no unsaturated-load comparison or variance reporting",
+    "Narrow baselines: only SGLang cache-aware/LRU, no other routers or eviction policies (LFU/ARC), no Belady oracle, unclear tuning of thresholds",
+    "LBGR lacks ablations (residual regression vs service-time+decay only, hyperparameter and calibration sensitivity, radix-tree estimate staleness)",
+    "Worst-case LRU competitive ratio and handcrafted round-robin order may not reflect real traces; short outputs, homogeneous workers, no production traces"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

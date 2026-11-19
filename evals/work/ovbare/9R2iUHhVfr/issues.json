@@ -1,0 +1,679 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Contribution incremental: refines SWE-Bench rather than new methodology or insight.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Narrow language coverage (mainly Python, JS/TS, Go).",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Small-to-mid repositories and startup codebases do not show enterprise-level or industrial realism.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Evaluation tied to single SWE-Agent scaffold; other frameworks not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Failure analysis descriptive, lacking causal interpretation.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Human-provided requirements and interface hints undermine autonomy claim.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Long-horizon operationalized as lines changed, conflating patch size with task complexity; oversold.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Limited language coverage; Java, C++, Rust missing.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Ambiguity reduction leaves untested agent ability to handle under-specified real tasks.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Long-horizon term misleading given modest changes and 50-call budget; turn counts unreported.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Only a single agent harness evaluated.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "No inference-time scaling or sampling; only pass@1.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Complexity measured by files and lines; diff-hunk distribution should be provided.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Unclear whether new tests were added after dropping broad tests.",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Purchasing startup repositories as contamination prevention unconvincing; agreement details absent.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "No discussion why purchasing beats continuous-evolution approaches like SWE-bench Live.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Single agent scaffold; difficulty gap may be scaffold-specific.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Only four languages versus seven or more in prior benchmarks.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "GPL licensing is a legal, not technical, barrier to training-data inclusion.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No empirical contamination analysis such as memorization probes or cutoff comparisons.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Public set will be crawled and commits are historical; contamination resistance unsupported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Held-out set never evaluated, so overfitting check not demonstrated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Commercial set unverifiable, vendor conflicts of interest, no repository information.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Commercial tasks called more complex based only on lower resolve rates.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Commercial tasks per repository contradict stated constraint; per-repo results noisy.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Reported numbers in tables and text inconsistent.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Table 3 counts exceed N; denominators unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Failure categories in table differ from judge prompt; mapping unexplained.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "LLM judge validation lacks sample size or agreement figures.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Judge is also an evaluated model, risking self-preference bias.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Single label per trajectory conflates symptom and cause.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Failure interpretation confounded by scaffold and prompt incompatibility.",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Single scaffold and prompt; Agentless dropped without numbers; strong scaffolds not evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Single run without confidence intervals, seeds, or temperature; differences within noise.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Few open-weight models evaluated; some model versions outdated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Human-written requirements leak test specifics, turning task into spec-following.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "False negatives from valid alternative solutions not quantified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Effect of requirement augmentation not ablated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Hours-to-days long-horizon claim unsupported; LOC proxy is modest.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Enterprise-level and industrial relevance claims unsubstantiated; GPL selection biases distribution.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Novelty and first claims lack comparison with prior pipelines; related work omits benchmarks.",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Difficulty filtering mentioned but undescribed; possible selection against models.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "SWE-Bench Verified comparison confounds several factors.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Dataset-creation details missing: annotators, agreement, stage yields.",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Repository list and per-split distributions not provided.",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Inconsistent wording about per-repo caps and held-out mirroring.",
+   "minor": true
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Cost, token usage, and turn statistics not reported.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Incremental contribution over SWE-Bench",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Limited language coverage",
+    "points": [
+     "P1.2",
+     "P2.2",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Enterprise realism not shown",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Single agent scaffold",
+    "points": [
+     "P1.4",
+     "P3.3",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Failure analysis descriptive",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Human-augmented specs reduce realism/autonomy",
+    "points": [
+     "P1.6",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Long-horizon framing unsupported by LOC proxy",
+    "points": [
+     "P2.1",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "No inference-time scaling, pass@1 only",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Complexity metric coarse; need diff hunks",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Test addition unclear",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Purchased repositories contamination claim unconvincing",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No comparison to continuous-evolution contamination approaches",
+    "points": [
+     "P4.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "GPL licensing is a legal, not technical, barrier to training-data inclusion.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No empirical contamination analysis such as memorization probes or cutoff comparisons.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Public set will be crawled and commits are historical; contamination resistance unsupported.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Held-out set never evaluated, so overfitting check not demonstrated.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Commercial set unverifiable, vendor conflicts of interest, no repository information.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Commercial tasks called more complex based only on lower resolve rates.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Commercial tasks per repository contradict stated constraint; per-repo results noisy.",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Reported numbers in tables and text inconsistent.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Table 3 counts exceed N; denominators unclear.",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Failure categories in table differ from judge prompt; mapping unexplained.",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "LLM judge validation lacks sample size or agreement figures.",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Judge is also an evaluated model, risking self-preference bias.",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Single label per trajectory conflates symptom and cause.",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Failure interpretation confounded by scaffold and prompt incompatibility.",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Single scaffold and prompt; Agentless dropped without numbers; strong scaffolds not evaluated.",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Single run without confidence intervals, seeds, or temperature; differences within noise.",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Few open-weight models evaluated; some model versions outdated.",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Human-written requirements leak test specifics, turning task into spec-following.",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "False negatives from valid alternative solutions not quantified.",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Effect of requirement augmentation not ablated.",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Hours-to-days long-horizon claim unsupported; LOC proxy is modest.",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Enterprise-level and industrial relevance claims unsubstantiated; GPL selection biases distribution.",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Novelty and first claims lack comparison with prior pipelines; related work omits benchmarks.",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Difficulty filtering mentioned but undescribed; possible selection against models.",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "SWE-Bench Verified comparison confounds several factors.",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Dataset-creation details missing: annotators, agreement, stage yields.",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Repository list and per-split distributions not provided.",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Inconsistent wording about per-repo caps and held-out mirroring.",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Cost, token usage, and turn statistics not reported.",
+    "points": [
+     "Q1.29"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI23"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI22"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI15"
+   ],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI13",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI18"
+   ],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI21"
+   ],
+   "related": [
+    "QI29"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI2",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI23"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-ubH1fM34sV",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Gains are small (often under 1 point on ScreenSpot/V2) and come from single runs with no seeds or confidence intervals, with some sub-splits regressing",
+    "The fine-tuning baseline is ambiguous (off-the-shelf vs UGround-finetuned Qwen2.5-VL), which could confound the RULER gain",
+    "The claimed retrieve-and-offset mechanism and resolution generalization are not directly tested (no extrapolation study, attention analysis or corrupted-RULER ablation); ScreenSpot-Pro also confounds domain and resolution",
+    "Missing baselines for alternative explicit-coordinate designs (normalized coordinates, overlaid rulers, Phi-Ground smoothing, GUI-Actor under the same data), and results are well below SOTA",
+    "I-MRoPE is concurrent with Qwen3-VL and its measured benefit is marginal (+0.2 to +0.5), so novelty and evidence are limited"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

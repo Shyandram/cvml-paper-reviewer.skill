@@ -1,0 +1,626 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Adversarial filtering with the same evaluated systems biases rankings; filter agents chosen circularly.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Uniqueness checked only against alternatives found by five AI systems; ambiguity likely remains.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No independent human audit, inter-annotator agreement or label-noise estimate.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No temporal stability check though answers may change over time.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Difficulty definition operationally weak; conflates question obscurity with browsing skill.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No human baseline solve rate or check that questions are solvable by browsing.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Benchmark may measure parametric knowledge; no browse vs no-browse comparison for same model.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "AI search products queried manually via GUI without dates, versions or run counts; not reproducible.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "'Search hurts R1' compares different systems, not a controlled ablation; explanation unsupported.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "LLMs graded by GPT-4o but products by humans; differing protocols and compliance confound accuracy.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Model categories mix factors; multi-round retrieval claim lacks statistical test.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No confidence intervals or multiple runs; many ranking gaps within noise.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Calibration-increases-with-search claim inconsistent with Table 1 and compares different systems.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Calibration metric (5 bins, verbalized confidence) barely discussed or analysed.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "'Reasoning helps' rests on three confounded model pairs; overstated.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No failure analysis.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "No per-topic accuracy breakdown.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "No analysis of search steps, tool use or cost.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Chinese-specific difficulty claims not demonstrated; no translated or cross-lingual comparison or error taxonomy.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Censorship complexities mentioned in abstract but never addressed.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Validation with Google/Bing, which behave differently in mainland China; effect unclear.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Small scale (289 questions), few items for some topics, annotator-driven coverage.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "No contamination protection (canary strings, held-out split, encrypted answers).",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Evaluated models dated; open browsing-agent systems not tested.",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Comparison with other Chinese search benchmarks qualitative; 'first benchmark' claim needs scoping.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Only 289 questions; small scale weakens robustness.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Answer uniqueness still depends on model/retrieval limits and annotator creativity.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Small dataset scale versus English BrowseComp.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Reverse design cannot fully guarantee no alternative valid answers.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Dataset contains obvious bugs needing fixes.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Insufficiently challenging compared with BrowseComp.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Essentially a Chinese adaptation of BrowseComp lacking originality.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Creation process mirrors BrowseComp; contribution incremental.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Cultural groundedness not empirically verified; evidence exclusivity on Chinese websites unchecked.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No failure-mode analysis separating retrieval errors from cultural/linguistic misinterpretation.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Incremental: closely mirrors BrowseComp task construction.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "289 queries insufficient for representativeness and statistical robustness.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No analysis whether gaps stem from language change or Chinese web ecosystem; need cross-lingual ablation.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Selection bias from adversarial filtering",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Answer uniqueness not ensured",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No human audit of ground truth",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No temporal stability check",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Weak difficulty definition",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No human baseline / solvability check",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Parametric knowledge vs browsing confound",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Non-reproducible product evaluation",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Uncontrolled search-hurts-R1 comparison",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Inconsistent grading protocols",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Confounded categories, no statistical test",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No uncertainty estimates",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Calibration claim inconsistent",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Calibration metric unanalysed",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Reasoning-helps claim overstated",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No failure analysis",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "No per-topic breakdown",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "No search-step/cost analysis",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Chinese-specific challenges not demonstrated",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Censorship not addressed",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Search engine validation effect unclear",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Small scale and topic coverage",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No contamination protection",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Dated models, no open agents",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Weak positioning vs Chinese benchmarks",
+    "points": [
+     "P1.25"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Small dataset scale",
+    "points": [
+     "Q1.1",
+     "Q2.1",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Answer uniqueness not guaranteed",
+    "points": [
+     "Q1.2",
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Dataset bugs",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Insufficiently challenging",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Incremental adaptation of BrowseComp",
+    "points": [
+     "Q2.5",
+     "Q3.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Cultural groundedness unverified",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No failure-mode analysis",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Language vs web-ecosystem effect not disentangled",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI6",
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  }
+ ]
+}

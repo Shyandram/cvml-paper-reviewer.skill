@@ -1,0 +1,784 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Theory section confusing; Theorem 1 generic Lagrangian not tied to the specific losses",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "lambda has weak influence, questioning need for both loss terms; needs more datasets/models",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Early decoding tokens never eligible for reflection due to entropy buffer warm-up",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Experiments restricted to math datasets",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Unclear why correction vector applied to all past tokens in CE loss",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "High-entropy triggers dominated by function words; content-aware trigger ablation missing",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Self-consistency baselines limited; no prompt seeds, temperature sweeps, ToT under equal budget",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Unclear whether compared results use comparable inference budgets",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "No thorough inference-cost analysis across temperature, length, correction frequency",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Method expensive: up to 50% inference-time increase",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No side-by-side comparison with other reasoning-improvement methods; SLOT on one model only",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only math competition benchmarks; no coding, logic or tabular reasoning",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Combination with RL-based post-training methods not shown",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "No empirical comparison to decoding methods (DoLA, SLED) or critical-token methods",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Multiple new hyperparameters contradict plug-and-play claim",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Avoids head-to-head comparison with self-refinement/test-time baselines under matched compute",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Evaluation almost only math tasks with math-tuned models",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "One model degrades with SRGen, contradicting consistent-gains narrative",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Entropy trigger blind to confident errors; failure mode not analysed",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Orthogonality/compatibility claims overstated; only combined with SLOT",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Theorem 1 is textbook Lagrangian equivalence, little novelty",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Theorem gives no guidance on choosing lambda or its generalisation",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Self-referential delta optimisation without ground truth may reinforce model biases",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Compatibility shown only with SLOT; not with training-free methods like contrastive decoding",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Main table lacks comparison to other self-reflective methods",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Benchmarks limited to mathematical problems",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Table 2 missing percentage marks",
+   "minor": true
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Latency reported only as ratios, not absolute time",
+   "minor": true
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Notation t and k inconsistent; Avg@k defined using Pass@k before introduced",
+   "minor": true
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Section 5.4 does not discuss Avg@k",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "No baseline methods run, only base model; Table 1 ratings qualitative assertions",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Missing lower-temperature/sharpened sampling and greedy decoding controls",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Missing entropy/confidence-aware decoding baselines (DeepConf, forking)",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Missing entropy-minimization test-time baselines (TENT-style)",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Missing budget-matched alternatives such as more majority-vote samples",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Missing random-trigger or fixed-interval ablation to test entropy trigger",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Small 30-problem benchmarks; no seeds, CIs or significance; noisy Cons@5",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Reported values inconsistent with 30 problems; metric computation unclear",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Gains may come from reduced truncation/loops; no output-length analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Base numbers unusually low; non-standard setup; Qwen3 thinking mode unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Mechanism likely logit sharpening; no evidence corrections fix errors at entropy spikes",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "CE-only ablation gains conflict with entropy-minimization being key",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Theorem 1 textbook scalarization; no lambda guidance or convergence; overstated as guarantee",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Applying delta to all earlier hidden states unjustified and not compared",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Latency measured only on one model with short traces; 50% bound unshown for long traces",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Cost model ignores prefix loss, caching unstated, memory overhead unreported",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Ablations on 100 problems, one model; hyperparameters unchecked on reasoning models",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "SLOT combination only on one capped model",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Only exact-answer math benchmarks despite broad reasoning claims",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Text claims inconsistent with Table 2 results",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Diversity loss from entropy reduction barely discussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Code withheld until after review; evaluation details only in appendices",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Theorem 1 generic Lagrangian, unclear loss roles, no lambda guidance",
+    "points": [
+     "P1.1",
+     "P3.6",
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Weak lambda influence questions necessity of both terms",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Early tokens excluded from reflection",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Math-only evaluation",
+    "points": [
+     "P1.4",
+     "P2.3",
+     "P3.2",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Delta applied to all past tokens unjustified",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Entropy triggers hit function words, may not mark errors",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Weak self-consistency/sampling baselines",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Unclear comparable inference budgets",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Insufficient inference cost analysis",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "High inference overhead",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No comparison with other self-refinement/test-time methods",
+    "points": [
+     "P2.2",
+     "P3.1",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Compatibility claims rest only on SLOT",
+    "points": [
+     "P2.4",
+     "P3.5",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Missing decoding and critical-token baselines",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Hyperparameters undermine plug-and-play claim",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "One model degrades, contradicting consistent gains",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Confident errors not corrected",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Self-referential optimisation may reinforce biases",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Table 2 percentage marks",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Latency in ratios only",
+    "points": [
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Notation inconsistencies",
+    "points": [
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Avg@k not discussed",
+    "points": [
+     "P4.8"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No baseline methods run, only base model; Table 1 ratings qualitative assertions",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Missing lower-temperature/sharpened sampling and greedy decoding controls",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Missing entropy/confidence-aware decoding baselines (DeepConf, forking)",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Missing entropy-minimization test-time baselines (TENT-style)",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Missing budget-matched alternatives such as more majority-vote samples",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Missing random-trigger or fixed-interval ablation to test entropy trigger",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Small 30-problem benchmarks; no seeds, CIs or significance; noisy Cons@5",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Reported values inconsistent with 30 problems; metric computation unclear",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Gains may come from reduced truncation/loops; no output-length analysis",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Base numbers unusually low; non-standard setup; Qwen3 thinking mode unspecified",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Mechanism likely logit sharpening; no evidence corrections fix errors at entropy spikes",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "CE-only ablation gains conflict with entropy-minimization being key",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Theorem 1 textbook scalarization; no lambda guidance or convergence; overstated as guarantee",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Applying delta to all earlier hidden states unjustified and not compared",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Latency measured only on one model with short traces; 50% bound unshown for long traces",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Cost model ignores prefix loss, caching unstated, memory overhead unreported",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Ablations on 100 problems, one model; hyperparameters unchecked on reasoning models",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "SLOT combination only on one capped model",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Only exact-answer math benchmarks despite broad reasoning claims",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Text claims inconsistent with Table 2 results",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Diversity loss from entropy reduction barely discussed",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Code withheld until after review; evaluation details only in appendices",
+    "points": [
+     "Q1.22"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI19"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI11"
+   ],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI15"
+   ],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI3",
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI18"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  }
+ ]
+}

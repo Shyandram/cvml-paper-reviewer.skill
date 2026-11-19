@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-E7YpL4L4Xh",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Claims of surpassing GPT-5 rest on a 0.008 gap with no CIs, and an asymmetric K=4 ensemble vs single-pass proprietary baselines",
+    "Circular downstream evaluation: reward and metric share the GPT-4.1/VIEScore rubric; no human eval or reward-hacking check",
+    "Causal claim that a high-fidelity RM is the key to RL is weakly supported: no teacher-as-reward baseline, single-run RL, no seeds; Table 4 shows equal accuracy giving different RL outcomes",
+    "Possible data overlap between RM training/benchmark and GEdit/ImgEdit used for RL evaluation; pairwise accuracy definition unclear (ties, below-chance 0.325)",
+    "Modest novelty and thin comparison with other editing reward models; data filtering not ablated"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

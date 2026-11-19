@@ -1,0 +1,749 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Software description with no new method or insight; weak ICLR fit, no adoption evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Generality claim untested; only Gemma3-4B with BTX, no compatibility matrix",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Regex rewriting and copying modeling files is brittle",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "BTS and Traditional MoE never evaluated",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No check that implementations reproduce published BTX/BTS behaviour",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No expert utilisation or routing-entropy statistics; no load-balancing alpha ablation",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Claimed reproduction of Shang et al. lacks original numbers for comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Claim MoE outperforms dense overstated; dense better or equal on several tasks",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "No seeds, variances or significance tests",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Comparison confounded by extra SFT/DPO for MoE; dense post-training undescribed",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Missing baselines: union-data model, model soup, MergeKit/Mergoo merging",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "'6B activated parameters' figure not derived; parameter counts missing",
+   "minor": true
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "No systems evaluation of build time, memory, throughput or latency",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Efficiency benefit unrealised without optimised kernels; BTS memory not quantified",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Comparison with MergeKit/Mergoo only qualitative; no feature table",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Other MoE tooling (HF, Megatron/DeepSpeed-MoE, Tutel) not discussed; 'previously unavailable' unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Router initialisation, inference expert selection and load-balancing loss unspecified",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Visualization claimed valuable for diagnosis but no real case shown",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Averaging routing weights crude; no faithfulness analysis of routing",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Loose text, confusing Fig. 1 caption, wrong panel references",
+   "minor": true
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Introduction mixes loosely related catastrophic-forgetting claims",
+   "minor": true
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Related work dwells on MoE history and has odd citation",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Code unavailable; tests, documentation, CI, licensing not described",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Copying upstream modeling files raises long-term maintenance concerns",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "LoRA settings partial; DPO data and hyperparameters absent",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Unclear whether Table 1 reproduction succeeds; more replication experiments needed",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Motivation weak: no need shown beyond DeepSpeed-MoE, FairScale, Megatron",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Contribution is engineering integration without scientific innovation",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Experiments only small multilingual code-switching; no comparison to Mixtral, DeepSeekMoE, Switch",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No large-scale or cross-domain results",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "No measurement of efficiency, scalability or convergence stability",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Merging compute cost and compatibility issues (tokenizer, architecture) not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Small gains make practical benefit marginal",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "No comparison with model-merging frameworks (AdapterFusion, LoRAHub, ModelSoup)",
+   "minor": false
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "Visualization analyses descriptive; no routing entropy or utilization statistics",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Usefulness of supporting BTX/BTS doubtful; few frontier models use them",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No research-focused efficiency optimization for MoE",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Many existing codebases already provide MoE training and visualization",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Unclear how to integrate with other training codebases like Megatron",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Training/inference efficiency versus Megatron and other frameworks unknown",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Usability unverifiable; 'proven valuable' scenarios not described",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No reimplementation of original BTX/BTS experiments with configs and code",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "'Reimplementation' matches original exactly; likely not independent evidence of usability",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No comprehensive list of configuration options",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "No example adapter file for adding new MoE variant",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Software description with no new method or insight; weak ICLR fit, no adoption evidence",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Generality claim untested; only Gemma3-4B with BTX, no compatibility matrix",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Regex rewriting and copying modeling files is brittle",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "BTS and Traditional MoE never evaluated",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No check that implementations reproduce published BTX/BTS behaviour",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No expert utilisation or routing-entropy statistics; no load-balancing alpha ablation",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Claimed reproduction of Shang et al. lacks original numbers for comparison",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Claim MoE outperforms dense overstated; dense better or equal on several tasks",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No seeds, variances or significance tests",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Comparison confounded by extra SFT/DPO for MoE; dense post-training undescribed",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Missing baselines: union-data model, model soup, MergeKit/Mergoo merging",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "'6B activated parameters' figure not derived; parameter counts missing",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "No systems evaluation of build time, memory, throughput or latency",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Efficiency benefit unrealised without optimised kernels; BTS memory not quantified",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Comparison with MergeKit/Mergoo only qualitative; no feature table",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Other MoE tooling (HF, Megatron/DeepSpeed-MoE, Tutel) not discussed; 'previously unavailable' unsupported",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Router initialisation, inference expert selection and load-balancing loss unspecified",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Visualization claimed valuable for diagnosis but no real case shown",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Averaging routing weights crude; no faithfulness analysis of routing",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Loose text, confusing Fig. 1 caption, wrong panel references",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Introduction mixes loosely related catastrophic-forgetting claims",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Related work dwells on MoE history and has odd citation",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Code unavailable; tests, documentation, CI, licensing not described",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Copying upstream modeling files raises long-term maintenance concerns",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "LoRA settings partial; DPO data and hyperparameters absent",
+    "points": [
+     "P1.25"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Insufficient replication experiments",
+    "points": [
+     "Q1.1",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Need beyond existing MoE codebases unclear",
+    "points": [
+     "Q2.1",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No scientific innovation",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Limited experiments, no strong MoE baselines",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No large-scale or cross-domain results",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No efficiency/scalability measurements",
+    "points": [
+     "Q2.5",
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Merging cost and compatibility issues",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Small gains, marginal benefit",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No comparison with model-merging frameworks",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Visualization superficial",
+    "points": [
+     "Q2.9"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "BTX/BTS usefulness doubtful",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No efficiency optimization",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Integration with other codebases unclear",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Usability unverifiable",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Reimplementation not independent",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Config options undocumented",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No adapter example",
+    "points": [
+     "Q4.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI14"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  }
+ ]
+}

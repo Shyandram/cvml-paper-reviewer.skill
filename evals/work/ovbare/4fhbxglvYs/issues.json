@@ -1,0 +1,709 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Conceptual gap to prior non-prompt AIR not isolated; VAE prior may be incremental",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Fairness of encoder pretraining data exposure versus baselines unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No end-to-end wall-clock and memory benchmarks supporting claimed attention speedups",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Unseen tests limited to two combinations; more OOD degradation types needed",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No real-capture datasets to support robustness claims",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Experimental setting non-standard; should add PromptIR/Perceive-IR settings",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Main framework figure confusing; degradation map inputs unclear",
+   "minor": true
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "'Which, where, what' framing lacks convincing experimental support",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "SupCon pretraining uses degradation labels, contradicting no-prompt claim",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Ablation in Table 6 does not support 'which, where, what' motivation",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "No benchmarking on unseen tasks, only unseen mixed degradations",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "YOLOv12 experiment claimed as contribution but only in supplementary",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Citation brackets missing",
+   "minor": true
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "PromptIR incorrectly described as using manual prompts",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Benchmarks mostly synthetic; real-capture data and ISP/compression robustness lacking",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Heavy reliance on PSNR/SSIM; no perceptual metrics or user study",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Comparisons with task-specialized SOTA per degradation not comprehensive",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Encoder overfitting or latent collapse only qualitatively addressed",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Degradation maps and mu-fusion lack quantitative localization validation",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "No high-resolution latency, tiling memory or windowed-attention comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Non-standard protocol; established AIR benchmarks with published checkpoints not used",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Baseline numbers implausible, suggesting under-trained baselines with unequal training budgets",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Encoder uses degradation-class supervision; 'without task cues' claim overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Encoder pretrained on same degradation configurations later evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Unseen tests compose seen degradations; weak generalization evidence",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "t-SNE plot is only evidence latent separates unseen classes",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "No real-world degraded images or no-reference metric evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Numbers in abstract and text inconsistent with tables; duplicated dataset listing",
+   "minor": true
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Detection contribution supported only in appendix",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "3WD is per-pixel gating, not attention; complexity comparison misleading",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Table 5 SA/CA replacement drop implausible; implementation details missing",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Attention speedup irrelevant to whole-network efficiency claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Ablation shows 3WD, not latent prior, gives most gain; Base undefined",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "'w/o LP' unspecified; no non-VAE or plain encoder comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No ablation of KL term, regularizer, pretraining data, color split or FFT branch",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Ablation numbers differ from Table 1 without explanation",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "VAE reconstruction of degraded input unconvincing for learning degradation semantics",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Global descriptor mu described with spatial dimensions; inconsistent",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Degradation map lacks quantitative localization evidence",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No tests with spatially varying degradation strengths",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Many grammatical errors",
+   "minor": true
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No variance or seeds; small gains claimed as wins",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Odd citations",
+   "minor": true
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Application claims for autonomous systems and healthcare unsupported",
+   "minor": true
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Code release not mentioned",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Related-work section title mislabels content",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Novelty versus prior non-prompt AIR not isolated",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Encoder pretraining fairness versus baselines",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "End-to-end efficiency benchmarks missing",
+    "points": [
+     "P1.3",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Limited unseen degradation types",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Lack of real-capture data",
+    "points": [
+     "P1.5",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Non-standard experimental setting",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Confusing framework figure",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "'Which, where, what' motivation not experimentally supported",
+    "points": [
+     "P2.3",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Pretraining uses degradation labels despite no-prompt claim",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No unseen-task benchmarks",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Detection experiment only in supplementary",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Citation style",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "PromptIR mischaracterized",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Reliance on PSNR/SSIM",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Incomplete comparison with task-specific SOTA",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Latent stability only qualitatively assessed",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Degradation map not quantitatively validated",
+    "points": [
+     "P4.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Non-standard protocol; established AIR benchmarks with published checkpoints not used",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Baseline numbers implausible, suggesting under-trained baselines with unequal training budgets",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Encoder uses degradation-class supervision; 'without task cues' claim overstated",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Encoder pretrained on same degradation configurations later evaluated",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Unseen tests compose seen degradations; weak generalization evidence",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "t-SNE plot is only evidence latent separates unseen classes",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No real-world degraded images or no-reference metric evaluation",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Numbers in abstract and text inconsistent with tables; duplicated dataset listing",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Detection contribution supported only in appendix",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "3WD is per-pixel gating, not attention; complexity comparison misleading",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Table 5 SA/CA replacement drop implausible; implementation details missing",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Attention speedup irrelevant to whole-network efficiency claim",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Ablation shows 3WD, not latent prior, gives most gain; Base undefined",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "'w/o LP' unspecified; no non-VAE or plain encoder comparison",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No ablation of KL term, regularizer, pretraining data, color split or FFT branch",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Ablation numbers differ from Table 1 without explanation",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "VAE reconstruction of degraded input unconvincing for learning degradation semantics",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Global descriptor mu described with spatial dimensions; inconsistent",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Degradation map lacks quantitative localization evidence",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No tests with spatially varying degradation strengths",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Many grammatical errors",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No variance or seeds; small gains claimed as wins",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Odd citations",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Application claims for autonomous systems and healthcare unsupported",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Code release not mentioned",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Related-work section title mislabels content",
+    "points": [
+     "Q1.26"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI19"
+   ],
+   "related": []
+  }
+ ]
+}

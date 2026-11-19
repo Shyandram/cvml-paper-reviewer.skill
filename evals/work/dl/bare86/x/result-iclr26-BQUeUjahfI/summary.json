@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-BQUeUjahfI",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "CommonGen gains (Table 2) are tiny and mixed across variants and lengths, with no seeds or variance; the max-perplexity number is odd and Ctrl-G satisfies constraints by construction",
+    "VLM detoxification evidence is thin: one config, strawman MC baseline (k=1), no text-only HMM/TRACE or FUDGE baseline, perplexity rises ~50% yet 'preserves fluency' is claimed, no sample sizes or CIs",
+    "Headline distillation gains are shown only in figures with no numbers and no gap-to-LM reference; the comparison to Lee & Berg-Kirkpatrick is asserted without data",
+    "Efficiency/'minimal overhead' claims are not measured (no wall-clock or memory), and the fine-tuned-backbone variant seems to conflict with reusing the base LM",
+    "Incremental novelty (neural prior head on Ctrl-G/TRACE HMM) with trivial theory (Prop. 1 is a standard bound, mislabelled as Prop. 2) and narrow scope (GPT-2-large, 2B VLM)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,812 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Limited novelty: decayed accumulated score close to H2O, Scissorhands, TOVA",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "H2O or decayed H2O not a main baseline; effect of decay not isolated",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Motivating overlap observation uses only last 512 tokens, one model and benchmark",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Union-window overlap comparison not size-matched; no controlled random or oracle test",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No confidence intervals or seeds; small differences on 30-problem AIME24 and training gains within noise",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Decay alpha tuned on AMC23, also a headline test benchmark",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "AMC23 benchmark citation points to AMC 8, inconsistent with standard usage",
+   "minor": true
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Only two 7-8B distilled models; no larger or cross-family models",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Baseline adaptation and R-KV hyperparameter choice unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Headline 20% gain only at harsh budget; gaps small at larger budgets",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Missing other decode-time eviction baselines like TOVA or LazyEviction",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Token Retention Ratio metric confounded by correct set and sequence length",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Generation length under compression not reported",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Trained models evaluated only at 4096 length, not long-generation regime",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "RL-Sparse train/test cache budget mismatch not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Missing control training with baseline eviction to show benefit specific to G-KV",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Sparse-mask training implementation (backward, RoPE positions) and cost undescribed",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Zeroing advantages for truncated outputs discards many trajectories",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Training presented as core contribution but treated lightly",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Throughput gains compared to OOM Full-KV at different batch sizes; no gain over R-KV",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Throughput ignores accuracy, longer outputs and end-to-end time to solution",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "No analysis of when global score hurts, failure cases or per-layer/head behavior",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Per-head max normalization may be dominated by attention sinks; sink handling undescribed",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Loose claims like 'significantly' and 'SOTA across most budgets'",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Typos and conclusion omits LiveCodeBench",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Results unstable; gains inconsistent for DeepSeek-R1-Distill-Llama-8B",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Needs validation on larger models such as 32B and 70B",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Significant gains only at impractically low cache budgets; marginal at large budgets",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Lack of novelty",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Post-training generic and disconnected from global score mechanism",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Time-to-first-token overhead not analyzed",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Evaluation limited to math reasoning; no LongBench or Needle-in-a-Haystack",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Memory and latency overhead of global score not empirically reported",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Global score is a standard EWMA resembling H2O; limited technical novelty",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Only math reasoning on two datasets; no QA, coding or open-ended generation",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Only DeepSeek-R1 distilled models; standard LLMs unverified",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No comparison with non-eviction compression like quantization or low-rank",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "No robustness analysis for alpha and lambda hyperparameters",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "High optimal alpha questions marginal utility of local scores",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Interaction of sparse training mask with RoPE unclear",
+   "minor": false
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "Distillation teacher full-KV versus sparse student mismatch unaddressed",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "SOTA claim overstated; stronger baselines like CAKE, LightThinker not compared",
+   "minor": false
+  },
+  {
+   "id": "Q3.10",
+   "reviewer": "Q3",
+   "text": "No comparison with StreamingLLM or Infini-Attention",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Recent SOTA methods (R-KV, CAKE, KVzip, RocketKV, ShadowKV, RaaS) not baselines",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Novelty incremental relative to temporal and redundancy-aware methods",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "RL objective claims (simplifies GRPO, no clipping needed) unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Hard max may overreact to outliers; no ablation against smoother alternatives",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "No sensitivity sweeps over alpha, window size, interval and budget",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Benchmarks math-centric; GSM8K, MATH-500, LiveCodeBench, LongBench missing",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "No system-level comparison against optimized kernels",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "No head-wise analysis of retained or evicted tokens",
+   "minor": false
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Typos and Eq. 2 summation bound inconsistency",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited novelty: decayed accumulated score close to H2O, Scissorhands, TOVA",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "H2O or decayed H2O not a main baseline; effect of decay not isolated",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Motivating overlap observation uses only last 512 tokens, one model and benchmark",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Union-window overlap comparison not size-matched; no controlled random or oracle test",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No confidence intervals or seeds; small differences on 30-problem AIME24 and training gains within noise",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Decay alpha tuned on AMC23, also a headline test benchmark",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "AMC23 benchmark citation points to AMC 8, inconsistent with standard usage",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Only two 7-8B distilled models; no larger or cross-family models",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Baseline adaptation and R-KV hyperparameter choice unclear",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Headline 20% gain only at harsh budget; gaps small at larger budgets",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Missing other decode-time eviction baselines like TOVA or LazyEviction",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Token Retention Ratio metric confounded by correct set and sequence length",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Generation length under compression not reported",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Trained models evaluated only at 4096 length, not long-generation regime",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "RL-Sparse train/test cache budget mismatch not discussed",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Missing control training with baseline eviction to show benefit specific to G-KV",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Sparse-mask training implementation (backward, RoPE positions) and cost undescribed",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Zeroing advantages for truncated outputs discards many trajectories",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Training presented as core contribution but treated lightly",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Throughput gains compared to OOM Full-KV at different batch sizes; no gain over R-KV",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Throughput ignores accuracy, longer outputs and end-to-end time to solution",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "No analysis of when global score hurts, failure cases or per-layer/head behavior",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Per-head max normalization may be dominated by attention sinks; sink handling undescribed",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Loose claims like 'significantly' and 'SOTA across most budgets'",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Typos and conclusion omits LiveCodeBench",
+    "points": [
+     "P1.25"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Inconsistent results across models",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Larger and non-distilled models untested",
+    "points": [
+     "Q1.2",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Gains only at very low budgets",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Limited novelty versus H2O/EWMA/temporal methods",
+    "points": [
+     "Q1.4",
+     "Q3.1",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Post-training generic, not tied to G-KV",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "TTFT overhead unanalyzed",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Benchmarks limited to math reasoning",
+    "points": [
+     "Q2.1",
+     "Q3.2",
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Global score overhead not measured",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No non-eviction compression baselines",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Hyperparameter sensitivity not studied",
+    "points": [
+     "Q3.5",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Utility of local score questioned",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Sparse mask and RoPE interaction unclear",
+    "points": [
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Distillation distribution mismatch",
+    "points": [
+     "Q3.8"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Missing strong eviction baselines; SOTA overstated",
+    "points": [
+     "Q3.9",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No comparison with StreamingLLM or Infini-Attention",
+    "points": [
+     "Q3.10"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "RL objective claims unsupported",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Hard max not ablated against smoother alternatives",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No system-level kernel comparison",
+    "points": [
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No head-wise analysis",
+    "points": [
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Typos",
+    "points": [
+     "Q4.9"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI14",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI18",
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI19",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [
+    "QI20"
+   ],
+   "related": []
+  }
+ ]
+}

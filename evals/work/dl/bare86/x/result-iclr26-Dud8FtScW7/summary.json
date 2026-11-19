@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Dud8FtScW7",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Augmentation gains are confounded with training-set size/compute; no size- or token-matched controls",
+    "Text claims (LLM-judge 'highly effective', teacher-correct filtering 'consistently improves') contradict Table 1, where the judge is worse than no selection",
+    "Inconsistent/weak baselines: No Selection/No Mixing equal No CoT, Vanilla CoT below No CoT, unstable Table 4 trends suggest a weak training recipe",
+    "No variance/significance reporting; 1-3 point differences over-interpreted (learnability gap, teacher effects); OOD gains likely format learning",
+    "Inconsistent specification (teachers/students in abstract vs experiments), weak Llama-2-70B judge, no long-CoT setting, limited novelty"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Ix4WA6AXPe",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Context term trains on the same forget-set (question, gold context) pairs used for Contextual QA evaluation; no held-out generalization (new questions, contexts, noisy RAG)",
+    "Forgetting evidence is weak: Direct QA only, no TOFU Forget Quality, probing or relearning attacks; KL anchor to the original model may reintroduce forgotten knowledge",
+    "lambda_c and epoch selected post hoc on evaluation metrics; no seeds, variance or validation split",
+    "Missing simple baselines (CE/SFT on contextual prompts, contextual data in retain set, KL vs CE ablation); only 3 of 6 methods fixed",
+    "Only TOFU (synthetic) with two models; binary Claude LLM-judge not validated; modest novelty"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

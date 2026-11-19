@@ -1,0 +1,51 @@
+# Review: Mechanistic Interpretability as Statistical Estimation: A Variance Analysis of EAP-IG
+
+## Summary
+The paper argues that circuit discovery should be treated as a statistical estimator whose output (a subgraph) has variance and sensitivity to analysis choices. It formalizes a circuit-discovery pipeline (data D, experimental conditions E, algorithm/hyperparameters Λ). As a case study it measures the stability of EAP and EAP-IG circuits on three tasks (IOI, Subject-Verb Agreement, Greater-Than) and three models (GPT-2 small, Llama-3.2-1B, Llama-3.2-1B-Instruct). The perturbations are bootstrap resampling of the discovery data, regeneration of the dataset from the same meta-distribution, prompt paraphrasing, variation of the EAP variant / aggregation / intervention type, and injected embedding noise. Stability is summarized by the pairwise Jaccard index of edge sets, circuit error (disagreement with the full model) and KL divergence. The main findings: bootstrap gives the lowest mean Jaccard (0.56); circuits differ substantially across EAP variants and hyperparameters (Jaccard to the median from 0.07 to 1.0); "moderate" noise (amplitude about 0.2 on GPT-2) reveals instability. The paper recommends routinely reporting bootstrap stability, justifying hyperparameters, and using noise as a stress test.
+
+## Strengths
+- The question is timely. Circuits are rarely reported with any uncertainty or stability estimate, and a reminder that a circuit is one draw from a data-dependent procedure is useful.
+- The pipeline formalization (D, E, A, Λ) is clear and reusable for other methods.
+- Several perturbation axes (data, prompt, method, noise) across three tasks and models. Variance and CV are reported in appendix tables, not only means.
+- The recommendations (bootstrap stability reporting, hyperparameter sensitivity analysis) are simple and actionable; code is said to be released.
+- Some observations are nuanced, e.g. multimodal Jaccard distributions in GPT-2, linked to non-identifiability.
+
+## Weaknesses
+1. **The central claim rests largely on unfaithful circuits.** Circuit error under bootstrap averages 0.44 (Table 1), and is 0.66–0.69 for Llama on IOI and 0.75–0.80 for Llama on SVA (Tables 3, 6, 7). In those settings the circuit disagrees with the full model on most examples. Greater-Than on Llama-3.2-1B yields "no faithful circuit" for most configurations (Table 6). Structural variance of a circuit that does not explain the behavior is weak evidence that EAP-IG is unreliable; it may reflect failure of the method or of the selection stage (see 3). The paper never shows that the conclusions hold in the regime where EAP-IG is normally claimed to work (faithful circuits at a reasonable size). Wording such as "critical vulnerability" and "questioning the stability of its findings" overreaches.
+
+2. **No reference point for "high" variance.** A Jaccard of 0.56 or 0.79 is called high, but there is no baseline: no other discovery method (ACDC, edge pruning, node-level methods), no null model (random edge sets of matched size, shuffled task), and no estimate of the Jaccard expected from sampling noise given circuit sizes of a few to tens of edges out of tens of thousands. The title and abstract frame this as a statement about a state-of-the-art method, but no comparison with any other method is made.
+
+3. **Jaccard is confounded with circuit size and the selection rule.** Circuits come from a greedy "increase n until an input-to-output path exists" procedure, so size is set by connectivity rather than a faithfulness or sparsity target. Reported sizes range from 1 to 448 edges (GPT-2 SVA circuits have 1 edge; Llama IOI circuits 3–448). Jaccard between sets of very different size, or of a handful of edges, is dominated by size and tie-breaking. There is no control (fixed top-k, matched faithfulness) and no size distributions under bootstrap. Edge-level overlap is also a debatable notion of "same circuit": functionally equivalent circuits may differ in edges, and node/head-level overlap or functional equivalence is not examined. In Table 2, circuits with different edge sets have identical circuit error (e.g. 0.20 on Greater-Than), which points to non-identifiability rather than estimator failure.
+
+4. **Bootstrap design and evaluation protocol.** Deval = D, so circuit error is in-sample and says nothing about generalization. Dataset size, number of replicates and seeds are not given in the main text. A bootstrap sample contains about 63% unique examples, so it is effectively a smaller dataset; larger variance than independent draws is expected, which the paper's own results show (Jaccard 0.56 bootstrap vs 0.79 meta-dataset). Meta-dataset resampling is arguably the more faithful estimate of sampling variance and gives much more stable results, weakening the headline message. Bootstrap validity for a non-smooth, discrete functional (top-n/greedy path selection) is not discussed, and no confidence intervals or tests are given. Datasets are templated, so effective diversity is small.
+
+5. **Hyperparameter sensitivity is weakly framed.** EAP, EAP-IG-inputs, EAP-IG-activations and clean-corrupted are different estimators and need not agree; differences between them are not sensitivity to arbitrary choices, and some variants are clearly worse (mean-positional has much higher error in Table 2). The "median circuit" over 7 rows varying along different axes is an arbitrary reference. Several rows are degenerate (GPT-2 SVA: size 1, Jaccard 1.0, KL 0). True EAP-IG hyperparameters (number of IG steps, number of edges, threshold) are not varied.
+
+6. **The noise experiment is thin and the recommendation unjustified.** It covers GPT-2 on two tasks only. The text refers to "Table 3" for these results, but Table 3 is the bootstrap table; the intended item is the figure. Noise with "fixed direction" added to embeddings is not well motivated, and its scale depends on embedding norm, so "0.2" does not transfer. IOI circuit error changes only within about 0.100–0.1125, CV peaks are small (≤0.2), and Greater-Than error is 0.6–0.9 across the range, so "without harming performance" is not supported there. It is not shown that noise-induced instability predicts anything (e.g. bootstrap instability or failure to transfer).
+
+7. **Model-comparison conclusions are confounded.** "GPT-2 is more stable than larger Llama models, so discovery is harder in larger models" compares 124M with 1B models, differing in tokenization and task performance, and coincides with large differences in circuit error (GPT-2 is where EAP-IG finds faithful circuits). The conclusion that instruction tuning does not alter stability rests on one pair in the unfaithful Llama regime. The "multiple distinct stable solutions" reading of multimodal Jaccard distributions is speculative; no clustering is shown.
+
+8. **Limited novelty and scope.** Sensitivity to methodological choices and non-identifiability are already documented (Miller et al. 2024; Méloux et al. 2025; Zhang & Nanda 2024; Hanna et al. 2024 on faithfulness vs. overlap). The "statistical estimator" framing is rhetorical: there is no estimand (the paper itself says no ground-truth circuit exists), no bias analysis, no confidence-set construction and no proposed method. It is a single case study on one method family, small models and three templated tasks, yet the abstract and discussion claim broad applicability. The recommendations are not validated: no demonstration that reporting bootstrap Jaccard changes any conclusion about a published circuit.
+
+9. **Presentation.** The Table 1 discussion in Section 5.1 appears twice in near-identical form. Table references are wrong in places. Degenerate cases (Jaccard 1.0, CV 0.00) are averaged into Table 1, and Table 1 averages incommensurate regimes (e.g. 0.8 error on Llama SVA with 0.03 on GPT-2). No confidence intervals are given for any stability numbers, which is ironic given the thesis. Figures were not available to me, so Figures 1–5 were judged from captions and text only; claims such as "no EAP method yields tighter clustering" in Fig. 1 are not backed by a quantitative statement.
+
+## Questions
+1. Can the analysis be repeated at matched circuit size and/or matched faithfulness (fixed top-k, or smallest circuit reaching a target faithfulness), with a size-adjusted null (random or degree-matched subgraphs)? How much of the 0.56 is explained by size and ties?
+2. How does EAP-IG compare with at least one other method (ACDC, edge pruning) and a trivial baseline under the same protocol?
+3. What are the dataset sizes, replicate counts and seeds? Can you give confidence intervals for the headline numbers? Why is bootstrap preferable to meta-dataset resampling?
+4. Do the findings hold with held-out evaluation (Deval ≠ D)? Do differing circuits transfer to each other's data, i.e. are they functionally interchangeable?
+5. Is node-level or functional similarity consistent with edge-level Jaccard? Are circuits with different edges but the same heads the same mechanism?
+6. What are the Jaccard numbers in the regime where EAP-IG circuits are faithful (GPT-2 IOI, Greater-Than) separately from the Llama failures?
+7. How should the noise amplitude be chosen for other models? Does noise-induced instability correlate with bootstrap instability?
+8. What is the estimand the "variance" refers to, and how should a practitioner interpret low Jaccard (variance of a biased estimator vs. genuinely non-unique solutions)?
+
+## Scores
+- **Soundness: 2.** Reasonable in spirit, but confounding by circuit size and low faithfulness, missing baselines, in-sample evaluation and unexamined bootstrap validity leave the headline conclusions unsecured.
+- **Presentation: 2.** Readable, but with duplicated text, wrong table references, and averages over incommensurate regimes.
+- **Contribution: 2.** A worthwhile message, but modest novelty: a single-method empirical case study, no new method, unvalidated recommendations.
+
+**Rating: 4** (marginally below the acceptance threshold)
+
+**Confidence: 4**
+
+A well-controlled version of this study (size-matched, with baselines and other methods, held-out evaluation) could be a solid contribution. As submitted, the evidence does not support the strength of the claims.

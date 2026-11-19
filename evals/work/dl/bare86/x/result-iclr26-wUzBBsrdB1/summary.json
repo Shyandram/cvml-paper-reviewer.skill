@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-wUzBBsrdB1",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "LLM evidence limited to one model/layer/width/architecture (Gemma-2-2b L12, 32k, BatchTopK), yet claims most public SAEs have too-low L0",
+    "s_n^dec metric is heuristic, has no theory, depends on a free n, and is validated in LLMs only against a noisy proxy (sparse probing) with no seeds or error bars",
+    "Toy model is idealized (orthogonal features, single config, no seeds, qualitative heatmaps only); a single true L0 is assumed for real LLMs",
+    "No evidence that SAEs at L0~200-250 have better features (no absorption/hedging, autointerp, SAEBench); 'sparsity-reconstruction tradeoff is misleading' is over-stated",
+    "Limited novelty over feature hedging; automatic L0 method has no results; inconsistencies such as Fig. 2 N=12/20 vs text 18/22"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

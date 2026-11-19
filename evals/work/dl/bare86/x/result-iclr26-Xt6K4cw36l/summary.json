@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Xt6K4cw36l",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "TD-error framing is metaphorical; no TD computation, and TD vs MC comparison is confounded by extra feedbacker inputs (user goal, API calls) and replay",
+    "Baselines (APO/GPO/MC) are not given equal information, history access, or optimisation budget; TextGrad is a re-implementation; no multi-turn agent optimiser baselines",
+    "No variances/seeds/CIs in Tables 1-2; differences among methods are often within noise; selection on validation may bias results",
+    "Simulated-user and rule-based evaluation only; no real-user or cross-simulator test; medical QA human eval is small, unreported agreement, and comparison to HuatuoGPT-II is confounded by base model",
+    "Efficiency/latency claims over self-refine pipelines are not measured; long-term planning not directly tested"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

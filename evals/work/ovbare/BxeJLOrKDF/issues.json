@@ -1,0 +1,651 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Architecture is standard in-context conditioning; novelty limited.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Bidirectional attention implementation unclear; equations may misdescribe joint self-attention.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Eq. 5 uses epsilon-prediction DDPM while Wan 2.2 uses flow matching.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No ablation of attention design versus plain concatenation.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "\"First end-to-end Human2Robot\" claim lacks thorough related-work comparison.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "EPIC ground truth are Masquerade renderings, so metrics measure imitation and inherit limitations.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Supervision still relies on keypoints and IK; intermediate representation bypassed only at inference.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Masquerade comparison unfair: Mitty trained on filtered outputs, baseline unfiltered.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Table 3 success rate presented as headline despite claim of not competing.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Video-editing baselines receive different inputs and are not fine-tuned on paired data.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Task success judged subjectively by unspecified experts; vague criteria, no agreement or CIs.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Plausible generated video is not robot task success; claims mislead.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Human preference study has only 20 respondents; item count unstated.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Embodiment Consistency metric formula not given.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Mixed-training benefit claims contradicted by Table 2 results.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Little evidence of cross-environment generalization; unseen split small and same dataset.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Small differences from single runs without seeds or error bars.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "14B model labelled inconsistently and trained fewer steps, confounding scaling claim.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "FVD values implausibly small; feature extractor and protocol unspecified.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Generalization to unseen tasks not evaluated; split type unclear, leakage possible.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Clips very short and low resolution; tasks simple tabletop.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Single rendered robot embodiment; no other embodiments or out-of-distribution human videos.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "No evidence generated videos can be turned into actions; no downstream policy experiment.",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Physical feasibility of generated videos not shown.",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "No trained keypoint- or trajectory-conditioned baseline; information-loss claim untested.",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "No ablations on filtering effect, data scale, LoRA rank, or attention.",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Yield and cost of human-in-the-loop filtering not reported.",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Curated dataset size inconsistent between caption and text.",
+   "minor": true
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Confusing section naming and typos.",
+   "minor": true
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Code and data release unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Diffusion transformer novelty incremental, largely Wan 2.2 with LoRA and bidirectional attention.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Synthetic paired data pipeline may introduce domain biases and accumulated errors.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Evaluation lacks quantitative real-world task success metrics.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Dataset quality and its effect on downstream robot tasks questionable.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "No actions or real robot experiments; unclear whether videos translate to accurate actions.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Fair comparison to Masquerade would require real robot tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Work is essentially video-to-video translation specialised to robotics.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No evidence the generated videos are useful for robotics.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Improper citation spacing at L240.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Human preference comparison unfair to Masquerade due to human-in-the-loop filtering.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Experiments without the human filtering step are missing.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited/overclaimed novelty",
+    "points": [
+     "P1.1",
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Attention implementation unclear",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Training objective inconsistent with Wan",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No attention-design ablation",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Synthetic Masquerade ground truth; pipeline limitations inherited",
+    "points": [
+     "P1.6",
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Unfair Masquerade comparison",
+    "points": [
+     "P1.8",
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Video-editing baselines mismatched",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Subjective, weakly specified task success",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Video plausibility is not task success",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Small human preference study",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Embodiment Consistency undefined",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Mixed-training claims contradicted",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Weak cross-environment generalization evidence",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No seeds or error bars",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Scaling claim confounded",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "FVD values suspicious",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Unseen-task generalization not evaluated",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Short low-res clips, simple tasks",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Single embodiment",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No path to actions or policies",
+    "points": [
+     "P1.23",
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No trained intermediate-representation baseline",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Missing filtering and other ablations",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Filtering yield/cost unreported",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Inconsistent dataset size",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Section naming and typos",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Release unclear",
+    "points": [
+     "P1.30"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Incremental novelty",
+    "points": [
+     "Q1.1",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Synthetic paired data quality and bias",
+    "points": [
+     "Q1.2",
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No real robot/task success evidence of usefulness",
+    "points": [
+     "Q1.3",
+     "Q2.2",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Fair comparison to Masquerade would require real robot tasks.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Improper citation spacing at L240.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Human preference comparison unfair to Masquerade due to human-in-the-loop filtering.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Experiments without the human filtering step are missing.",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI6"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-md9nBwwmEh",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "LTC uses labeled validation groups (G_NW/G_NC) to locate heads, more supervision than TextSpan; label-free LTC-S-hat is weaker and not the headline result",
+    "Gender evaluation selects the 10 worst occupations from zero-shot bias on the evaluation data, so regression to the mean inflates gains; no accuracy/utility metric and no variance",
+    "Unexplained baseline anomalies: Ortho-Cali ViT-H Waterbirds 18.1 WG, and LTC(MA) identical to TextSpan on FairFace for two backbones",
+    "Head-selection derivation (Eqs. 7-10) is heuristic with no controlled or causal validation; interpretability claims rest on a few qualitative examples",
+    "Narrow scope and tiny CounterAnimal gains (0.4-1.7 pts) that need an ad hoc class-pairing hack; no general-accuracy checks or significance"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

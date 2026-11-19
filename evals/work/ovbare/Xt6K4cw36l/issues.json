@@ -1,0 +1,756 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "RL framing is metaphor; method never computes V, r or TD error",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Lower-variance and stability claims rest on one set of curves",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "TD vs MC confounds extra inputs; needs MC with same info and per-turn controls",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Long-term planning claim never directly tested",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "RPO feedbacker receives user goal, API calls, expert feedback that baselines lack",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "'MC-style (TextGrad)' is the authors' reimplementation, not actual TextGrad",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "APO binary-label and GPO multi-turn adaptations described only briefly",
+   "minor": true
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "No comparison with OPRO, Reflexion-style, ProTeGi, Agent-Pro or simple trajectory baseline",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Candidates, epochs and LLM calls per baseline not stated; budget uncontrolled",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "+replay drives most gains while baselines get no history access",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Tables lack variances, seeds or CIs; small gaps likely within noise",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Size of sharded Spider subset not given in main text",
+   "minor": true
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Best-of-2 selection on validation risks selection bias; test separation unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Non-monotone entries like APO below baseline suggest variance, undiscussed",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "LLM-simulated user may be exploited; no human-user evaluation",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Prompts not tested for transfer across domains, simulators or backbones",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "'Generalizes across agents' only partly shown; conflates optimizer vs system LLM",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Small expert eval with combined preference; no agreement, breakdown or significance",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Comparison to 7B Huatuo-GPT-II reflects stronger base model, not prompt optimization",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Unclear whether evaluating experts are the same as feedback experts",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "TCM gains over plain system modest and not significant",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Optimized prompts may add confident medical advice; safety unexamined",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Medical QA arguably not a long-term planning task",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "No cost, token or latency numbers for optimization or inference",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "No empirical comparison to Reflexion-like self-refine methods at inference",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Replay context grows with epochs; scaling and value of old entries undiscussed",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Prompt length, evolution and learned strategies not analysed; only one example",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Claims like robust, stable, efficient, lower-variance exceed evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Petrov et al. argument used post hoc to explain TCM results",
+   "minor": false
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Mean delta includes OracleFull and is dominated by low-baseline models",
+   "minor": false
+  },
+  {
+   "id": "P1.31",
+   "reviewer": "P1",
+   "text": "Code is not yet released",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "LLM feedback to adjust prompts already explored in Self-Refine and Reflexion",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Unclear how choice of feedbacker and rewriter base models affects performance",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Unclear epochs, interaction data and update timeliness needed in live systems",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "No formal definition relating RPO to states, actions and value functions",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Quality of feedbacker and reasonableness of rewards not studied",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "No ablation replacing or analysing Feedbacker and Rewriter individually",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No comparison with RL-based methods like StablePrompt",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No quantitative API call or token comparison versus APO or GPO",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "High variance in Figure 4; tables lack standard deviations",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Prompts used for generating text gradients insufficiently explained",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Per-step feedback on long trajectories may be very expensive",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "What practitioners should do when feedback is not useful is unaddressed",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No qualitative analysis of the generated feedback",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "RL/TD framing is metaphorical; V, r, delta never computed",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Lower-variance and stability claims weakly supported",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "TD vs MC comparison confounded by richer inputs",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Long-term planning claim untested",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Feedbacker gets information baselines lack",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "MC-style TextGrad is a reimplementation",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Baseline adaptations described only briefly",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Missing related multi-turn prompt-optimizer baselines",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Optimization budget per method not controlled",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Replay gives most gain; baselines lack history access",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No variance or significance; differences within noise",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Spider subset size not given",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Validation-based candidate selection may bias results",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Non-monotone table entries undiscussed",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Simulated user and no human-user evaluation",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No transfer tests across domains, simulators or backbones",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Generalization claim conflates optimizer LLM and agent",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Medical QA human evaluation weak",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Huatuo-GPT-II comparison confounded by base model",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Optimization and evaluation experts may overlap",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "TCM improvements modest and not significant",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Safety of optimized medical prompts not examined",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Medical QA is not a long-term planning task",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Efficiency claim not measured",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "No inference-time comparison with self-refine methods",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Replay context growth and scaling not discussed",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "No analysis of prompt evolution or what optimizer learns",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Claims overstated",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Post hoc explanation of TCM results",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Mean relative gain metric misleading",
+    "points": [
+     "P1.30"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Code not released",
+    "points": [
+     "P1.31"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Limited novelty: LLM feedback for prompt refinement known",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Effect of base model choice for feedbacker/rewriter unclear",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Practical deployment details unclear",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No formal theoretical link to RL",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Roles of feedbacker and rewriter not analysed or ablated",
+    "points": [
+     "Q2.2",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Missing RL-based prompt optimization baselines",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "API call and token costs not quantified",
+    "points": [
+     "Q3.3",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No standard deviations despite high variance",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Text-gradient prompts insufficiently explained",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Unclear handling when feedback is not useful",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No qualitative analysis of generated feedback",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  }
+ ]
+}

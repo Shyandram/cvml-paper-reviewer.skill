@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-FaNWaj1Zk2",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Causal claim (implicit augmentation supports generalization) rests on descriptive consistency measurements with no intervention or quantitative link to the generalization gap",
+    "Temporal consistency is expected from slow drift and residual structure; no baselines (cross-seed, matched noise, non-residual nets) to rule out trivial explanations",
+    "Random-label collapse is confounded by different training dynamics; consistency is measured mostly on train data as self-agreement, not accuracy",
+    "Theorem 1 is informal and relies on an intractable, likely vacuous TV term; the NTK no-forgetting argument is not convincing",
+    "SGD anisotropy is well known and the sphericity test with tiny p-values is uninformative; limited scope (ResNet-20/CIFAR-10, no seeds or error bars)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

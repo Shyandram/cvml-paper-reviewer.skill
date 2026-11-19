@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-K5A2jBmEBK",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No control run of the same DAPO recipe (10K cap, overlong buffer, 500 steps, checkpoint selection) without the length reward, so the accuracy and length gains cannot be attributed to the dual reward",
+    "No comparison with existing length-penalty or efficient-reasoning methods; the SOTA claim rests on a single baseline (DeepMath-Zero), and 'all seven benchmarks' includes a tie",
+    "Single seed, no variance, 1-2 point gains on tiny benchmarks, and checkpoint selection on a validation set that includes AIME",
+    "Ablations are limited (7B only, fixed beta=+-1) and do not isolate the Hard/Simple classification, EMA or correctness gating; length adapting to difficulty at test time is never shown",
+    "The motivating pass@k-by-length study is confounded, and the mechanistic claims (entropy, GPT-4o reflection counts) are correlational and overstated"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

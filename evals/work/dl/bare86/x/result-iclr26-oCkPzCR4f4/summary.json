@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-oCkPzCR4f4",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "LMM-score (GPT-5-mini judge) is the headline metric, with no human-agreement or judge-robustness validation and a risk of self-preference bias",
+    "Numerous inconsistencies between tables, text and appendix (identical Claude/GPT-5 rows in Table 5, identical InternVL-3/3.5-8B rows, Seed-1.6-VL 0.81 vs 0.23, text values absent from tables)",
+    "Unclear treatment of non-executable outputs: scores likely averaged over different successful subsets, so cross-model comparison and the 'fidelity is the bottleneck' conclusion are unreliable",
+    "Level 3 is small (150 tasks, 85 charts), mostly a context-length and execution-failure test, only 5 models, near-zero scores with no variance or confidence intervals",
+    "Incremental novelty, LLM-assisted GT code and edit instructions, no contamination analysis, and no failure taxonomy or diagnostic insight"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

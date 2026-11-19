@@ -1,0 +1,805 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Hyperparameters tuned per concept and task on reported metric, undercutting minimal-tuning claim.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Baselines use recommended configs without comparable per-concept tuning.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No held-out selection or joint hyperparameter sensitivity analysis.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Mask-construction and evaluation prompts may overlap.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No evaluation on paraphrases, synonyms or compositional prompts.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Classifier forgetting accuracy ignores residual visual traces.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Style metrics CLIPa and FSR conflate removal with degradation; no classifier or human study.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Preservation of related neighbouring concepts not checked.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Quality-preservation claim overstated given CLIP drop.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "FID not reported for Imagenette.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Reported numbers internally inconsistent across tables.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Zero standard deviations suspicious.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Seeds, images per class and runs unstated; no significance tests.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Some baseline numbers copied from prior papers; SD versions mixed.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Average rank hides weaknesses on FID and CLIP.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Eq. 1 cosine term is heuristic without theory or ablation.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Eq. 2 is not a significance test; statistical significance claim unjustified.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Retaining neurons shared by many concepts may leak concepts.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Saliency may capture generic high-norm weights.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Ablations only on Imagenette.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Adversarial attacks still recover erased content in most cases.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Arrows in Table 15 unexplained.",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "No tests of recovery via fine-tuning, inversion or probing.",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Explicit-content experiments narrow: two words, single NudeNet threshold.",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Limited novelty over ConceptPrune; first-work claim rests on narrow reading.",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "No ablation isolating saliency score versus fusion pipeline.",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Related-work citation errors and misdescriptions.",
+   "minor": true
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Only SD v1.4/1.5; no SDXL, SD3 or DiT models.",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Code not released.",
+   "minor": false
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Concept-scaling claims depend on arbitrary thresholds and classifier-friendly classes.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Number of images generated per concept for saliency scores unstated.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "No theoretical connection to EWC or Fisher-based continual learning.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Saliency formulation combination lacks theoretical justification.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "FID not consistently reported across tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Only older SD v1.4/1.5 architectures evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Number and construction of concept and base prompts unspecified.",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Sensitivity to prompt variations not reported.",
+   "minor": false
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Compute costs for baselines not reported; efficiency claim unquantified.",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "Failure cases and harder concepts not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Saliency score lacks theoretical basis.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Stability of selection under varied base prompts unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Broken section reference typo.",
+   "minor": true
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Unclear whether highly correlated concepts cause cross-contamination.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Fewer-hyperparameters claim incorrect; three hyperparameters without sensitivity evidence.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "First multi-concept neuron masking claim incorrect given ConceptPrune.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Differences from ConceptPrune minor and unablated; novelty unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "CLIP-based style metric conflates content; standard benchmark like UnlearnCanvas needed.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "COCO preservation set limited; near-concept retention unmeasured.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Per-concept tuning on evaluation metric.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Untuned baselines.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No sensitivity analysis.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Prompt overlap.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No paraphrase evaluation.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Weak forgetting metric.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Weak style metrics.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Neighbouring concept preservation unchecked.",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Overstated quality preservation.",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Missing Imagenette FID.",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Inconsistent numbers.",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Suspicious zero variance.",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Missing seeds and significance.",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Copied baselines, mixed versions.",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Misleading average rank.",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Heuristic saliency formula.",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Unjustified significance threshold.",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Shared-neuron retention leakage.",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Saliency captures high-norm weights.",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Ablations limited to Imagenette.",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Weak adversarial robustness.",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Unexplained arrows.",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No recovery tests.",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Narrow explicit-content experiments.",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Limited novelty over ConceptPrune.",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Saliency vs fusion not isolated.",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Related-work errors.",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Older models only.",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Code unreleased.",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Arbitrary scaling thresholds.",
+    "points": [
+     "P1.30"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Sample and prompt counts unspecified.",
+    "points": [
+     "Q1.1",
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No EWC connection.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Saliency lacks theoretical justification.",
+    "points": [
+     "Q2.2",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Inconsistent FID reporting.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Older models only.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Prompt sensitivity unreported.",
+    "points": [
+     "Q2.6",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Baseline compute missing.",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Failure cases undiscussed.",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Typo.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Correlated concepts cross-contamination.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Incorrect hyperparameter claim.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Incorrect first-work claim.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Incremental over ConceptPrune; unablated additions.",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Weak style metric.",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Limited preservation evaluation.",
+    "points": [
+     "Q4.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI15"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [
+    "QI12",
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  }
+ ]
+}

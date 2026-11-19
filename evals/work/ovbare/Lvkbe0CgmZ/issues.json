@@ -1,0 +1,592 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Discrete-time bound in Thm 4.3 vacuous (D infinite) for barrier mirror maps; general-X claim unacknowledged.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Uniform LSI assumption stated with Euclidean Fisher information but proof uses mirror Fisher information.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No example verifying a uniform mirror LSI; no mirror analogue of standard LSI criteria.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Uniform-in-N mirror LSI simply assumed, carrying most of propagation-of-chaos difficulty.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Theorem assumption lists inconsistent with assumptions actually used in proofs.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Rate in (20) lacks M-dependence despite G0 vs Hessian comparison only up to factor M.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Errors in Lemma B.2 and inconsistent delta_eta formula between (21) and Thm 4.3.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "W_{2,phi} asymmetric and not a metric; relative Lipschitz condition never verified for any example.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Typos and wrong equation references.",
+   "minor": true
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Analysis assumes exact diffusion simulation; experiments use unanalyzed one-step discretization.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Propagation-of-chaos result specialized to supervised risk; assumptions not verified on constrained domains.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Thm 4.1 reuses Nit24 verbatim and is not mirror-specific.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Only one d=3 synthetic experiment; no neural-network or realistic application.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "No seeds or error bars in experiments.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Only projected MFLD baseline; reflected, barrier and other mirror methods missing.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Projected baseline failure is built into barrier objective; loss comparison confounded by entropy accounting.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "No empirical test of discretization, N or step-size dependence predicted by theory.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "'First algorithm with global convergence' claim too strong given prior constrained mean-field work.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Technical content largely substitutes mirror metric into existing proofs; limited novelty.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Paper short, workshop-like; preliminaries recap too long.",
+   "minor": true
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Missing algorithmic discussion of computing grad phi*, Hessians and exact diffusion for general X.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "No discussion of computational cost versus projection.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Limitations such as mirror LSI strength and infinite D not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Practical applicability unclear due to strong assumptions.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Empirical results limited and toy-level.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Scheme not a genuine discretization; assumes exact Brownian motion simulation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Analysis builds largely on prior results (Ahn & Chewi, Vempala & Wibisono); limited novelty.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Motivation weak; should show new settings unlocked, e.g. constrained networks or generative modeling.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Discretization cost of Step 5 unanalyzed; no discussion why it is easier than Brownian motion on X.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Theorems are standard extensions of Nitanda et al.; more synthesis than novel ideas.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Only one low-dimensional experiment barely showing advantage.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Little motivating example for why constrained sampling matters in ML.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Proof techniques borrowed from prior papers; limited technical novelty.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Exact simulation of diffusion step assumed, creating gap with one-step implementation.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Discrete-time analysis only for mean-field neural network risk; limited generality.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Discrete-time bound vacuous for barrier mirror maps",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Euclidean vs mirror LSI mismatch",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No verified mirror LSI example",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Uniform-in-N mirror LSI assumed",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Inconsistent assumption lists",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Unjustified rate without M-dependence",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Errors in Lemma B.2 and formulas",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "W_{2,phi} not a metric; Lipschitz unverified",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Typos",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Exact diffusion assumption vs implementation",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Analysis specialized to supervised risk",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Thm 4.1 reused from prior work",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Single toy experiment",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No seeds/error bars",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Limited baselines",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Unfair projected baseline comparison",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Theory predictions not tested empirically",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Overstated first claim",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Limited technical novelty",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Workshop-like presentation",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Missing algorithmic computation details",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "No computational cost discussion",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Limitations not discussed",
+    "points": [
+     "P1.23"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Strong assumptions limit practicality",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Limited toy experiments",
+    "points": [
+     "Q1.2",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Exact diffusion simulation assumed",
+    "points": [
+     "Q1.3",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Limited novelty over prior proofs",
+    "points": [
+     "Q1.4",
+     "Q3.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Weak motivation / applications",
+    "points": [
+     "Q2.1",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Cost of simulating diffusion step not discussed",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Discrete analysis limited to mean-field NN risk",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  }
+ ]
+}

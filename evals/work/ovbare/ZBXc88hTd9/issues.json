@@ -1,0 +1,640 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Stage 2 gets double training and inference; controls for longer training, cascade, matched params missing",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Lower WER expected from any better separation; doesn't support semantic claim",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Stage 2 trained on stage-1 outputs over fitted training data, causing mismatch",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "AVSR freezing, gradient flow and speaker matching in multi-speaker mixtures unstated",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Mixed reproduced and copied baselines; CSFNet uses heavier AVSR pipeline with external data",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Auto-AVSR pretrained on LRS2/LRS3; overlap with test sets undiscussed",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Unclear whether memory and time include AVSR and both passes; pretrain column mixes sizes",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Stray 'MAVINet' name in Sec. 4.4.1",
+   "minor": true
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Large PESQ/SI-SDRi gains against copied baselines with possibly different protocols",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Noisy-condition results do not separate coarse and fine stages",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "MST is TF-GridNet with extra branches; SP fusion is simple MLP/concat",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "SP ablation only in figure with different setup; no MST vs TF-GridNet ablation",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "No analysis showing fusion encodes speaker identity",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Caption says fusion advantage diminishes with missing visuals, contradicting graceful-decline claim",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Unstated whether visual dropout used in training or baselines evaluated under same occlusion",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No seeds, variance or CIs; coarse-stage margin only ~0.2 dB",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Table 5 evaluates 2 s segments instead of full utterances",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Feeding first-pass estimate back is a known iterative/cascade pattern",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "No semantic feature analysis, failure analysis or listening test",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Only two passes; no test of a third pass",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Inconsistent fusion names, SI-SNRi vs SI-SDRi, mixture-number mismatch",
+   "minor": true
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Data generation, losses and ablations relegated to appendix",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Coarse-to-fine is a well-known principle; prior iterative models already follow it",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Model size and memory over 3x IIANet; processes audio and video twice",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Approach seems to just add an extra stage; novelty limited",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "3x parameters of IIANet for marginal improvement",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No analysis distinguishing stage effects from simply training twice as long",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Unclear whether missing frames are temporally aligned across speakers; misalignment handling",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No explanation for not using common attention-based fusion",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Two sequential passes may double inference time, unsuitable for low latency",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Improvements may stem from pretrained AVSR backbone rather than architecture",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Unclear whether performance from Auto-AVSR encoder or architecture; encoder-swap experiment needed",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "SP fusion closely resembles CTCNet and RTFS-Net baseline and should cite them",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "SP fusion should be compared with CTCNet, RTFS-Net, AVLiT, IIANet fusion",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Figure 5 colours too similar; a table would be better",
+   "minor": true
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "RTFS-Net results missing from Table 1",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Table order unclear and best results not bolded",
+   "minor": true
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Unclear whether Table 2 is coarse+fine or coarse-only; coarse-only cost missing",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Stage-2 gain confounded with extra training and compute",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "WER evidence for semantic enhancement indirect",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Exposure-bias mismatch in stage-2 training",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Stage-2 training details missing",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Comparisons not like-for-like",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Possible leakage via Auto-AVSR pretraining data",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Efficiency accounting in Table 2 unclear",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Stray model name suggests copied text",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Noisy-dataset gains implausibly large",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Table 3 lacks coarse vs fine split",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "SP fusion and MST incremental",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "SP and MST lightly ablated",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Speaker-identity encoding claims unanalysed",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Robustness claim contradicted by Fig. 5 caption",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Occlusion experiment protocol unclear",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No statistical rigor; small margins",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Table 5 uses nonstandard 2 s segments",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Limited novelty: known cascade pattern",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Limited analysis of learned representations and failures",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "'Recursive' framing misleading",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Inconsistent terminology and figure labels",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Key details relegated to appendix",
+    "points": [
+     "P1.22"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Limited novelty of coarse-to-fine / extra stage",
+    "points": [
+     "Q1.1",
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "High computational cost and memory",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Marginal gains relative to parameter increase",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Roles of coarse and fine stages not analysed",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Occlusion simulation details unclear",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Choice of non-attention fusion unjustified",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Two-pass inference limits real-time use",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Gains may come from pretrained Auto-AVSR encoder",
+    "points": [
+     "Q3.4",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "SP fusion similar to CTCNet/RTFS-Net; citations needed",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "SP fusion not compared with prior fusion methods",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Figure 5 hard to read",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "RTFS-Net missing from Table 1",
+    "points": [
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Table ordering and bolding confusing",
+    "points": [
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Table 2 configuration ambiguous",
+    "points": [
+     "Q4.7"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI14"
+   ],
+   "related": [
+    "QI2",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI10"
+   ],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  }
+ ]
+}

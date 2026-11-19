@@ -1,0 +1,637 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Settings are small and synthetic; misbehavior programmatically injected; no naturally occurring cases.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Undesired behaviors are clean, nameable and known in advance.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Motivation (frontier oversight, RL reward hacking) far from tested SFT settings.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Models are small (2B-8B) and mostly older.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Training and evaluation prompts selected on test metrics; best-of-N without validation set.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Heuristic validation is post hoc; no test that argmax-elicitation picks the best prompt.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Heuristic correlations weak, few points, no confidence intervals, one setting excluded.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Elicitation heuristic fails when model does not follow the instruction.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Mechanism unexplained; alternative explanations like conditional policies not tested.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "IP can increase compliance with harmful requests when instructed.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Capabilities measured narrowly; no general benchmarks; some capability drops.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Brittle: single-word prompt changes flip effectiveness.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Effectiveness decays with more training; reported only qualitatively.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Slight improvements claimed without significance tests.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Narrow toxicity metric and single LLM judge; judge bias untested.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Qwen-2 base works without elicitation, undermining claimed mechanism.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Only PTST baseline; no training-time baselines like filtering or steering.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Persona-vector steering, closest prior work, not compared.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Claim that IP needs no labels is misleading; requires knowing affected data.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Key results relegated to appendix; crowded figures hard to read.",
+   "minor": true
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Wording overreaches: prevents behavior, consistently outperforms weak PTST.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Preliminary experiments on instruction placement not shown.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Method heuristic without mechanistic explanation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Small-scale controlled datasets with narrow metrics; generalization unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Improvements modest, possibly within fine-tuning noise.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Effect brittle across models, reversing with longer training or larger models.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Results highly sensitive to inoculation prompt wording.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Approach is ad hoc prompt manipulation rather than algorithmic innovation.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Tasks scriptable; behavior nameable in one line, unlike real failures.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Prompt-selection heuristic assumes failure can be cheaply elicited.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "OOD and compositional attacks not evaluated; evaluations isomorphic to training.",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Scope narrower than general misalignment-mitigation framing.",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Needs stronger baselines.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Figures use coded labels defined only in appendix.",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Near-total overlap with concurrent Inoculation Prompting work weakens originality.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Concurrent work covers more fundamental settings, making contribution incremental.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Minor wording change greatly reduces effectiveness; brittle.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Requires a priori knowledge of undesired behavior; unforeseen behaviors untested.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Small synthetic settings.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Behaviors known and nameable in advance.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Gap between motivation and tested settings.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Small, older models.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Prompt selection leaks test information.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Heuristic not validated prospectively.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Weak heuristic correlations.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Heuristic fails when elicitation fails.",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Mechanism unexplained.",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Increased harmful compliance.",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Thin capability evaluation.",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Prompt wording brittleness.",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Decay with training.",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No significance tests.",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Weak metrics and judge.",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Qwen-2 anomaly undermines mechanism.",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Limited baselines.",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Persona-vector comparison missing.",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Misleading no-labels claim.",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Appendix-heavy, hard-to-read figures.",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Overreaching wording.",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Unshown preliminary experiments.",
+    "points": [
+     "P1.22"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No mechanistic explanation.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Small controlled datasets.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Modest gains within noise.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Brittle across models and training.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Prompt wording sensitivity.",
+    "points": [
+     "Q1.5",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Ad hoc method.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Requires explicitly nameable, foreseen behavior.",
+    "points": [
+     "Q2.1",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Heuristic assumes elicitable failure.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No OOD/compositional evaluation.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Scope narrower than framing.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Weak baselines.",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Coded figure labels.",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Overlap with concurrent work.",
+    "points": [
+     "Q4.1",
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  }
+ ]
+}

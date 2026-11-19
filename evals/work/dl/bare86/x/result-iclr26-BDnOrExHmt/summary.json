@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-BDnOrExHmt",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Only one weak linear-head baseline and loss curves support the claim that the neural field is the key ingredient; no matched-FLOPs alternative decoders or FID-vs-step comparison",
+    "Uses REPA/DINOv2 alignment with no ablation, undermining the 'VAE-free, simple, end-to-end' framing; comparisons to latent models are not budget- or sampler-matched and still trail them (e.g. REPA 1.42, DDT 1.26)",
+    "Efficiency table has inconsistent numbers (0.010s per step vs 0.51s per image), higher training memory is undiscussed, and baselines are measured under unclear settings",
+    "Text-to-image evaluation weak: few old baselines, unusually high GenEval Position score, possible SFT-data overlap, no quantitative arbitrary-resolution or patch-boundary analysis",
+    "Writing and reproducibility issues: 'abc steps' placeholder, 0.82 vs 80.9 DPG, 0.73 vs 73.0, equation/notation errors, underspecified DCT encoding, single-run FIDs"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

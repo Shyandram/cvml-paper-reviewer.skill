@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Xs1CrA1kZQ",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Novelty is limited: it combines LLM-generated code with LLM action masking, and the goal function relies on hand-supplied Crafter tech-tree knowledge, so LLM prior is not separated from human engineering.",
+    "Baselines are weak or unfairly constrained: ELLM and AdaRefiner are queried only every 200 steps, Crafter numbers are copied from other papers, and there is no PPO + same mask or hand-written heuristic control and no strong non-LLM baselines.",
+    "Gains are modest (33.8 vs 28.5 score, reward about equal) with 5 seeds and no significance tests. The ablation uses 10M steps while baselines stop at 5M.",
+    "Efficiency claims lack data: total LLM cost, calls and tokens are not reported, SPS is 7x below PPO, and there is no variance across LLM-generated goal functions.",
+    "Method inconsistencies (Eq. 3-5 annealing fully relaxes the mask by 0.8T, the logit masking form, Figure 5 labelled Crafter vs Craftax-Classic) and evaluation on a single environment family only."
+  ],
+  "recognized": false,
+  "injection_found": null
+}

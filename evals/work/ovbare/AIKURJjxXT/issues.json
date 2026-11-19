@@ -1,0 +1,887 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Too few baselines; only DAPO besides GRPO.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Experimental analysis insufficient.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Scalability across model architectures or sizes not verified.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Only standard math benchmarks; no out-of-distribution tasks.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Core ideas (adaptive sampling, filtering, replay) already explored in prior work.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Evaluation only on math despite general-domain training data; general reasoning benchmarks missing.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only Qwen2.5-7B backbones; transfer to Llama or Gemma untested.",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Possible Qwen data contamination makes benchmark conclusions unreliable.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Gains of about 1% over baselines are small.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Max response length 2048 may impair baseline exploration compared to DAPO default.",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Evaluation hyperparameters and training prompt template not reported.",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Computational overhead of extra rollouts and replay not reported.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Framework mainly combines known components on GRPO rather than new principle.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Claim that numerous low-quality samples drown out high-quality signal is questionable.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Applicability of tabular NPG theorem to this setting unclear.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Experimental setting toy-like: older Qwen, 2k context, only 5 rollouts.",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Evaluation protocol unclear; pass@1 on AIME high-variance, should use pass@k averaging.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "MATH accuracies not multiples of 1/500, inconsistent with pass@1.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Figure 5 reward and accuracy trends contradict, possibly from evaluation variance.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "DAPO performing worse than GRPO unexplained.",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Typo: EFR should be EFRame in Figure 3.",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Limited novelty; similar mechanisms in RLEP, RePO, VL-Rethinker.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "No comparison against closely related replay/filtering methods.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Exploration improvement not supported by pass@k.",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Only two Qwen models; other LLM families untested.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Newer reasoning benchmarks (AIME25, HMMT-Feb25, etc.) omitted.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Qwen2.5 data leakage risk raises doubts about improvements.",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "No theoretical explanation why combined design improves performance.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Results appear single-run with no seeds, variances, or confidence intervals.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Margins over GRPO and DAPO small and within noise; GRPO wins on MathVision.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Headline relative-gain percentages inflate small absolute improvements.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Method costs more compute per step; no compute-matched baseline.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Figure 1 group-size comparison is not the right comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Missing baselines: dynamic sampling, curricula, off-policy guidance, prioritized replay.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "DAPO baseline appears partially configured without dynamic sampling.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Only one 7B model, training mostly on Geo3K.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Unclear which training data produced the main results row.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Other baselines copied from papers with different settings; evaluation protocol unspecified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Max response length 2048 short for deeper reasoning; length growth not evidence.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Deeper-reasoning claim untested: no pass@k, hard-prompt analysis, or qualitative examples.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Title refers to LLMs but no text-only experiments.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Theorem 4.5 is tabular NPG result from a blog, misapplied to transformers; covariance unmeasured.",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Entropy explanation internally inconsistent and unfalsifiable.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Theorem 4.4 trivial and holds only before positive-only filtering.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Claim that high-advantage samples are more often clipped is not measured.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Positive-only training removes negative gradients; supporting evidence correlational from one run.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Importance ratio for off-policy replayed samples unspecified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Higher sampling temperature changes behaviour policy; ratio mismatch unaddressed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Advantage threshold for replay is not selective.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Repeated replay on small Geo3K may overfit; no held-out analysis.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Difficulty definition mixes hard and moderate prompts; trigger rates unreported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Admitted hyperparameter sensitivity not studied.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Ablations shallow: one dataset, curves only, missing variants.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Exploration-only variant below GRPO suggests fragile tuning.",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "GRPO baseline uses symmetric clipping, unmatched to method's asymmetric clipping.",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Promotional language and typos.",
+   "minor": true
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Unresolved references, duplicate entry, blog post as key source.",
+   "minor": true
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Sample taxonomy restates existing splits and is not analysed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.31",
+   "reviewer": "Q1",
+   "text": "Related-work coverage thin.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Too few baselines; related methods not compared",
+    "points": [
+     "P1.1",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Experimental analysis insufficient",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Limited model families/sizes",
+    "points": [
+     "P1.3",
+     "P2.3",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Math-only evaluation, no OOD/general tasks",
+    "points": [
+     "P1.4",
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Limited novelty: combines known components",
+    "points": [
+     "P2.1",
+     "P3.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Qwen data contamination risk",
+    "points": [
+     "P2.4",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Small performance gains",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Short response length may hurt baselines",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Evaluation hyperparameters missing",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Computational cost not reported",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Low-quality-samples-drown-signal claim questionable",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Tabular NPG theorem applicability",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Toy-scale experimental setting",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "pass@1 high variance, protocol unclear",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "MATH numbers inconsistent with pass@1",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Figure 5 reward/accuracy inconsistency",
+    "points": [
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "DAPO worse than GRPO unexplained",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Typo in Figure 3",
+    "points": [
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "No pass@k for exploration",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Newer benchmarks omitted",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No theoretical explanation of combined design",
+    "points": [
+     "P4.7"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Results appear single-run with no seeds, variances, or confidence intervals.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Margins over GRPO and DAPO small and within noise; GRPO wins on MathVision.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Headline relative-gain percentages inflate small absolute improvements.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Method costs more compute per step; no compute-matched baseline.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Figure 1 group-size comparison is not the right comparison.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Missing baselines: dynamic sampling, curricula, off-policy guidance, prioritized replay.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "DAPO baseline appears partially configured without dynamic sampling.",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Only one 7B model, training mostly on Geo3K.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Unclear which training data produced the main results row.",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Other baselines copied from papers with different settings; evaluation protocol unspecified.",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Max response length 2048 short for deeper reasoning; length growth not evidence.",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Deeper-reasoning claim untested: no pass@k, hard-prompt analysis, or qualitative examples.",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Title refers to LLMs but no text-only experiments.",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Theorem 4.5 is tabular NPG result from a blog, misapplied to transformers; covariance unmeasured.",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Entropy explanation internally inconsistent and unfalsifiable.",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Theorem 4.4 trivial and holds only before positive-only filtering.",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Claim that high-advantage samples are more often clipped is not measured.",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Positive-only training removes negative gradients; supporting evidence correlational from one run.",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Importance ratio for off-policy replayed samples unspecified.",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Higher sampling temperature changes behaviour policy; ratio mismatch unaddressed.",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Advantage threshold for replay is not selective.",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Repeated replay on small Geo3K may overfit; no held-out analysis.",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Difficulty definition mixes hard and moderate prompts; trigger rates unreported.",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Admitted hyperparameter sensitivity not studied.",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Ablations shallow: one dataset, curves only, missing variants.",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Exploration-only variant below GRPO suggests fragile tuning.",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "GRPO baseline uses symmetric clipping, unmatched to method's asymmetric clipping.",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Promotional language and typos.",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Unresolved references, duplicate entry, blog post as key source.",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Sample taxonomy restates existing splits and is not analysed.",
+    "points": [
+     "Q1.30"
+    ]
+   },
+   {
+    "id": "QI31",
+    "summary": "Related-work coverage thin.",
+    "points": [
+     "Q1.31"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI6"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI30"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI16",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI11"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI14",
+    "QI15"
+   ]
+  }
+ ]
+}

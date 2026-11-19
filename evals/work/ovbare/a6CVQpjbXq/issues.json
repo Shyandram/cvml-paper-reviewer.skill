@@ -1,0 +1,733 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "1/sqrt(k) scaling only relevant for k<C*; beyond it trivially covered, not stated",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Upper bound vacuous when C* eps_RM^2 >= k, common for hard problems",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "'Minimax optimal' and 'optimal scaling with N' overstated; N requirement lacks matching lower bound",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Unique optimal response with reward 1 is a strong assumption",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Theory ignores answer clustering used in experiments; on-policy error/coverage far from practice",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "eps_opt is free additive term making Omega(eps_opt) lower bound near-definitional",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "alpha requires unknown per-prompt C*; no estimation procedure; experiments use fixed alpha",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Scaling-monotonicity definition does not imply non-degradation with N as claimed",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Negative results for majority vote and BoN rest on single constructed instances",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "BoN k-scaling analysis incomplete; only conjectured not to match BoM",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Technical novelty modest; standard proof tools and lower-bound construction",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Proof of Thm 6.1 not verifiable; appendix proof typos need cleanup",
+   "minor": true
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "No confidence intervals, seeds or resampling; AIME24 only 30 problems",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "alpha tuned per setting, no sensitivity analysis, unclear if tuned on test",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "'Consistently outperforms' overstated; BoM only matches baselines for larger k",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Missing baselines: weighted majority vote, sum/max reward aggregation, pessimistic/smoothed BoN",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Majority voting's low accuracy wrongly presented as confirming worst-case theorem",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Attribution of BoN degradation to reward over-optimisation not tested",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Narrow test: k<=10, few benchmarks, one reward model",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Practical relevance of verifier-free Pass@k submission setting unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Claimed cost savings in reward evaluations not measured",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "No discussion of cases with fewer than k distinct answers",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Backwards-reading sentence in Section 3 and several typos",
+   "minor": true
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Table 1 mixes worst-case lower bounds with upper bounds",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Uniqueness-of-optimum assumption restrictive; bounds rely on it",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "BoM threshold depends on unknown C*; no estimator or misspecification analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Empirical scope narrow: only math/verifier-style datasets",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Negative results are worst-case pathological instances; instance-dependent bounds preferable",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Guarantee requires alpha tied to pi_ref(y*) and per-prompt N threshold; no practical estimation",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Experiments lack explanation of alpha choice and ablation over alpha",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Dependence on N missing in Theorems 5.1 and 6.1",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Upper and lower bounds do not depend on N, missing compute-regret trade-off",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Theorem 5.1 does not cover regime k <~ N <~ C*",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Scaling with response alphabet size unclear",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Algorithm requires knowledge of C* and lower bound on eps_RM",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Broader impact of Pass@k inference problem unclear",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Experiments do not show benefit of scaling monotonicity as N grows",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "More intuition needed for coverage constant and assumptions",
+   "minor": true
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Reasons for alpha choices per N unexplained; accuracy vs alpha not shown",
+   "minor": false
+  },
+  {
+   "id": "Q5.1",
+   "reviewer": "Q5",
+   "text": "Relation to Aminian et al. BoN regret upper bound not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q5.2",
+   "reviewer": "Q5",
+   "text": "No empirical or conceptual comparison to InfAlign",
+   "minor": false
+  },
+  {
+   "id": "Q5.3",
+   "reviewer": "Q5",
+   "text": "No comparison to Soft-BoN theoretically or empirically",
+   "minor": false
+  },
+  {
+   "id": "Q5.4",
+   "reviewer": "Q5",
+   "text": "Theorem 4.2 asymptotic constant regret needs elaboration",
+   "minor": true
+  },
+  {
+   "id": "Q5.5",
+   "reviewer": "Q5",
+   "text": "Unclear whether reward function is calibrated",
+   "minor": true
+  },
+  {
+   "id": "Q5.6",
+   "reviewer": "Q5",
+   "text": "'Mathematical equivalence' criterion for answers undefined",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "1/sqrt(k) scaling only relevant for k<C*; beyond it trivially covered, not stated",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Upper bound vacuous when C* eps_RM^2 >= k, common for hard problems",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "'Minimax optimal' and 'optimal scaling with N' overstated; N requirement lacks matching lower bound",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Unique optimal response with reward 1 is a strong assumption",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Theory ignores answer clustering used in experiments; on-policy error/coverage far from practice",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "eps_opt is free additive term making Omega(eps_opt) lower bound near-definitional",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "alpha requires unknown per-prompt C*; no estimation procedure; experiments use fixed alpha",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Scaling-monotonicity definition does not imply non-degradation with N as claimed",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Negative results for majority vote and BoN rest on single constructed instances",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "BoN k-scaling analysis incomplete; only conjectured not to match BoM",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Technical novelty modest; standard proof tools and lower-bound construction",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Proof of Thm 6.1 not verifiable; appendix proof typos need cleanup",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "No confidence intervals, seeds or resampling; AIME24 only 30 problems",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "alpha tuned per setting, no sensitivity analysis, unclear if tuned on test",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "'Consistently outperforms' overstated; BoM only matches baselines for larger k",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Missing baselines: weighted majority vote, sum/max reward aggregation, pessimistic/smoothed BoN",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Majority voting's low accuracy wrongly presented as confirming worst-case theorem",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Attribution of BoN degradation to reward over-optimisation not tested",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Narrow test: k<=10, few benchmarks, one reward model",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Practical relevance of verifier-free Pass@k submission setting unclear",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Claimed cost savings in reward evaluations not measured",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "No discussion of cases with fewer than k distinct answers",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Backwards-reading sentence in Section 3 and several typos",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Table 1 mixes worst-case lower bounds with upper bounds",
+    "points": [
+     "P1.24"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Uniqueness-of-optimum assumption restrictive",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Requires unknown C*/alpha/eps_RM with no estimation",
+    "points": [
+     "Q1.2",
+     "Q2.2",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Narrow empirical scope (math only)",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Negative results are worst-case constructions",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "alpha choice and ablation missing in experiments",
+    "points": [
+     "Q2.3",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Bounds lack dependence on N",
+    "points": [
+     "Q2.4",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Theorem 5.1 regime gap",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Alphabet-size scaling unclear",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Practical impact of Pass@k inference unclear",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Experiments do not show monotonic scaling benefit",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Intuition for technical terms",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Relation to Aminian et al.",
+    "points": [
+     "Q5.1"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "InfAlign comparison missing",
+    "points": [
+     "Q5.2"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Soft-BoN comparison missing",
+    "points": [
+     "Q5.3"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Theorem 4.2 asymptotics",
+    "points": [
+     "Q5.4"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Reward calibration",
+    "points": [
+     "Q5.5"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Mathematical equivalence definition",
+    "points": [
+     "Q5.6"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI13",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  }
+ ]
+}

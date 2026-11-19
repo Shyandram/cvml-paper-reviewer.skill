@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-LDGAjUuEVZ",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Selection bias/circularity: questions filtered against the same top agents later ranked; uniqueness checked only against alternatives those agents produced; no independent label-noise audit or human solve rate",
+    "Key findings come from confounded comparisons (R1 API without search vs DeepSeek consumer product with search; GPT-4o grading for LLMs vs human GUI grading for products), so causal claims are unsupported",
+    "No confidence intervals or repeated runs at N=289; several claimed gaps are within noise; product results are not reproducible",
+    "Shallow analysis: no error taxonomy, per-topic results, or evidence that difficulty comes from Chinese-specific properties rather than obscure long-tail knowledge; calibration claims inconsistent with Table 1",
+    "Small, annotator-interest-driven dataset with contamination/stability risk and dated model set"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

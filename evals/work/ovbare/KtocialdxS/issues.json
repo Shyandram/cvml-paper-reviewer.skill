@@ -1,0 +1,687 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Limited novelty: cascaded generation with truncation augmentation; sharing close to MDM, Relay, f-DM, pyramidal flow.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Related-work dismissal thin; training-stability criticism of prior methods unsupported.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Matryoshka Diffusion not compared experimentally.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Missing step-reduction baselines: fewer-step EDM, DPM-Solver/UniPC, consistency and distilled models.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Fig. 1 and Tab. 1 mix numbers from different codebases.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Orthogonality to step reduction asserted but not tested by combining.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Truncation point, step counts and noise ranges tuned on test FID.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "No seeds, confidence intervals or FID sample counts; tiny FID differences read as trends.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Method slightly worse than EDM on CIFAR-10 FID; FFHQ gain not significant.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Training budget comparison unclear; actual training cost and update counts not reported.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "ImageNet headline speedup uses 100-NFE baseline; versus 50-NFE baseline speedup small or negative.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Unexplained IS jump; gains may come from sampler/noise-range changes, not isolated from architecture.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Only small ImageNet B/1 16x16 latent regime; no larger models or high-resolution benchmarks.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Source of speedup unclear; missing controls like EDM with same NFE and sigma range or SDEdit truncation.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Effective NFE and compute/throughput reduction numbers inconsistent across paper.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Speedups hardware-dependent; latency measurements lack variance.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Memory reduction claimed but peak memory never reported.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Claim that model multiplicity is not essential rests on single unverifiable CDM comparison.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Claimed applicability to any diffusion variant, but DiT variant hardly described.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "No study of error propagation from low-resolution mistakes.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "No precision/recall or diversity metrics beyond FID and IS.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "No text-to-image or guided generation experiments.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "No check whether weight sharing hurts each stage versus standalone model.",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Typos and textual errors (e.g., ImageNet256x64, evalutions).",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Figs. 2/3 do not clearly show active blocks.",
+   "minor": true
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Unclear how noise level at stage handoff matches next stage's starting sigma.",
+   "minor": true
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Loss weighting across resolutions not specified.",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Not novel: progressive generation (ProGAN) and training-free high-resolution generation with low-res guidance.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Experiments on small, low-resolution datasets; scalability unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "State-of-the-art comparisons are outdated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No comparison with other latency-reduction approaches.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No combination with orthogonal acceleration directions to test whether gains stack.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Positioning unclear relative to few-step flow models.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Lacks novelty: cascaded diffusion established; single-network architecture trivial.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Resolution embedding likely unnecessary given NaViT-style multi-resolution pretraining.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Prior training-free resolution-cascaded acceleration (Bottleneck Sampling) diminishes novelty.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Unclear presentation: core problem, difference from cascaded methods and source of speedup not articulated.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Benefits and motivation of the new sharing mechanism not explained.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Cascaded efficient generation well-established; no significant architectural or acceleration innovation.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Fig. 4(a) suggests cyclic dependency from high- to low-resolution branch.",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Missing comparisons with cascaded models PixelFlow and RelayDiffusion.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited novelty vs cascaded/shared-network prior work",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Thin related-work dismissal",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "MDM not compared",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Missing step-reduction efficiency baselines",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Mixed-codebase numbers",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Orthogonality untested",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Hyperparameters tuned on test FID",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "No variance; tiny FID differences",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Quality gains not significant",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Training cost not reported",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Unfair ImageNet NFE comparison",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Gains not isolated from sampler changes",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Small-scale regime; no high-resolution/large models",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Unclear source of speedup; missing controls",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Inconsistent efficiency numbers",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Hardware-dependent latency without variance",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Memory claim unsupported",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Model multiplicity claim weak",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "DiT variant undescribed",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No error propagation analysis",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No diversity metrics",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "No text-to-image/guided generation",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Per-stage effect of weight sharing unchecked",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Typos",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Figures unclear about active blocks",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Stage handoff noise unclear",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Loss weighting unspecified",
+    "points": [
+     "P1.27"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Limited novelty vs cascaded/progressive/training-free prior work",
+    "points": [
+     "Q1.1",
+     "Q2.1",
+     "Q2.3",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Small low-resolution datasets; scaling unclear",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Outdated SOTA comparisons",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Missing latency-reduction / few-step baselines",
+    "points": [
+     "Q1.4",
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No combination with orthogonal methods",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Resolution embedding unnecessary",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Unclear problem statement and speedup explanation",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Sharing mechanism benefits unexplained",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Fig. 4(a) cyclic dependency",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Missing cascaded baselines",
+    "points": [
+     "Q3.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-a6CVQpjbXq",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "The 1/sqrt(k) scaling is only meaningful for k < C*; for k >~ C* the filtered set contains y* and the problem is trivial, and the bound is vacuous when C* eps^2 >= k",
+    "Strong assumptions (unique y*, on-policy reward error, C* = 1/pi_ref(y*)) and the threshold alpha needs the unknown C*; experiments use hand-set alpha with no sensitivity analysis",
+    "The scaling-monotonicity definition does not imply performance never degrades with N, so the 'no degradation' claim is overstated; BoN's k-scaling is left unresolved",
+    "Experiments are thin and noisy (no error bars, AIME24 with 30 problems), with missing baselines such as weighted voting and sum/max-aggregated BoN",
+    "The theoretical novelty over Huang et al. 2025 is modest (pessimism filter plus Chernoff and Cauchy-Schwarz)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

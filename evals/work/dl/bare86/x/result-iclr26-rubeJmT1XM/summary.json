@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-rubeJmT1XM",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Model is essentially an anisotropic RBF/Gaussian-mixture network; novelty over classical RBF/free-knot methods unaddressed, universal approximation is a Cybenko corollary",
+    "WFR 'gradient' is just the parameter-space chain rule; experiments use Adam/GD and never exercise the Fisher-Rao part, no convergence theory",
+    "Claim of recovering 3D Gaussian Splatting is not derived and there is no novel view synthesis experiment; heuristic interpretations are speculative",
+    "Experiments are toy 1D/2D, single seed, weak/untuned MLP and KAN baselines, no RBF/SIREN/Fourier-feature/hash-grid or numerical-solver comparisons",
+    "Scalability (curse of dimensionality, cost, ill-conditioned A_i), overfitting and ablations not studied; presentation has typos and over-claiming"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-BxeJLOrKDF",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "EPIC-Kitchens ground truth is rendered by the Masquerade pipeline the paper criticises, so metrics measure imitation of a synthetic renderer; the Masquerade comparison is not apples-to-apples (filtered training data vs unfiltered baseline)",
+    "Primary metric 'task success' is a subjective expert judgement of video plausibility with no stated blinding, CIs or inter-rater agreement, and there is no downstream policy or physical evaluation",
+    "Mixed-training claim is contradicted by Table 2 (H2R SR 91 -> 72); generalization to unseen tasks and embodiments is weakly evidenced, with small, unreplicated differences",
+    "Limited novelty: standard in-context token concatenation on Wan 2.2 with LoRA; 'bidirectional attention' is unclear and unablated, and the equations are inconsistent with flow-matching Wan",
+    "Missing baselines and ablations: no keypoint-conditioned model trained on the same data, no data-filtering or data-scale ablation, and the 5B vs 14B comparison is not equal-compute"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

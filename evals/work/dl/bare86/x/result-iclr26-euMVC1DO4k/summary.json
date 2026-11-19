@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-euMVC1DO4k",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "No seeds or variance reported; ablations (e.g., layer choice, LIBERO-Long 83-94) look noisy and the ~1.4-pt LIBERO gain may be within noise",
+    "Inconsistent baselines: 1xH100 ablation baseline (92.7%) is far below official OpenVLA-OFT (97.1%); training-speed and data-efficiency claims use this weaker baseline",
+    "No same-model comparison with explicit depth/VGGT input or other 3D-aware targets; SigLIP/DINOv2 alignment also helps, so the 'spatial' attribution is weakly supported",
+    "Depth probing is qualitative and somewhat circular; mechanistic claims (shortcut avoidance, spatial comprehension) are untested",
+    "Incremental novelty (REPA/3DRS-style alignment); small real-world evaluation (20-40 trials, one platform, no 3D VLA baselines)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

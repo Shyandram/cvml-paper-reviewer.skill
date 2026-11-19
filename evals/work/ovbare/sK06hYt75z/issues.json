@@ -1,0 +1,852 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No human evaluation of cultural appropriateness; cosine similarity only a proxy; few prompts",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "GPT embeddings plus GPT judge raises circularity and bias concerns",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Universal steering vector evidence limited; needs ablations on robustness, sparsity, side-effects",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Should include more low-resource languages",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Should study cultures sharing the same language, e.g. US, UK, Australia",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Culture vaguely operationalized; unclear which aspects each dataset tests",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Paper hard to follow; confusing dataset descriptions and ungrammatical key sentences",
+   "minor": true
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Activation patching and steering procedure, token positions, D+/D- unclear; localization claim hard to follow",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Labels like correct English/translated answer undefined; Figure 1 uninterpretable",
+   "minor": true
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Cosine similarity of embeddings uninformative of homogeneity; value differences uninterpretable",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Using ChatGPT as cultural judge is questionable",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Refusal rates hard to interpret without dataset sizes",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Three of four benchmarks are new without information validating their effectiveness",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Chosen languages span multiple cultures, e.g. Bengali in Bangladesh and India",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Assumption that language alone implicitly signals locale is problematic",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "One-to-one language-country mapping may be untrue",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Stereotyping not formally defined",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Stereotyping measured only with LLM judge; human evaluation needed",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "No statistical significance test for Table 1",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Judge prompt lacks option for none being stereotypical",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Comparative judging may differ from individual scoring; robustness unchecked",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "EI gap as subtraction of probability distributions is unclear",
+   "minor": false
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Paper hard to read; Sections 3.2-3.3 unclear; undefined jargon",
+   "minor": true
+  },
+  {
+   "id": "P4.10",
+   "reviewer": "P4",
+   "text": "Figure 3 formatting inconsistent font sizes and axis ranges",
+   "minor": true
+  },
+  {
+   "id": "P4.11",
+   "reviewer": "P4",
+   "text": "Representational universality claim not validated statistically",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Binary benchmark always includes American option, exploitable by picking non-American",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Names and cities tasks tiny, synthetic, easy; gap not evidence of cultural competence",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "o1-distilled questions and translations not validated by native speakers",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Localized answers ignore intra-country variation",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "EI-Gap conflates language effects with context effects",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Large unexplained gap in United States row",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "EI-Gap defined with probabilities but reported as accuracy differences",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Gap reported without uncertainty or significance testing",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Explicit prompting weak baseline; gap may be prompt-format sensitivity",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "No comparison with persona system prompts, few-shot, or fine-tuning",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Steering underperforms explicit prompting; customization claim overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Embedding-based homogeneity metric unvalidated; differences tiny",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Steering diversity comparison on one model, differences not significant",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Only 24 stories for open-ended evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Stereotype and faithfulness judged by LLM without human validation or bias checks",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Fewer stereotypes may reflect less localization rather than better output",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Mechanistic analysis only on Gemma-2-9b; universal mechanism claims unbacked",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Interpretation of patching probability curves speculative",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Steering hyperparameter selection unclear; possibly tuned on evaluation set",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No random-vector controls; vector may encode country mention or non-American bias",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Universal vector overclaimed: four cultures, modest gains, not rigorously evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Country-equals-language assumption ignores multi-country languages",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Few languages and models; no reasoning or frontier models",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "GPT-4o high refusal rate complicates its numbers",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "English-centric default shown only on forced-choice tasks",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Steering requires white-box access, excluding popular chatbots",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Unclear whether steering works on longer real conversations",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Key details deferred to appendix",
+   "minor": true
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Figures 2 and 3 are dense heatmaps",
+   "minor": true
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Sloppy statements, e.g. relative vs absolute gap unclear",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "No human evaluation",
+    "points": [
+     "P1.1",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "GPT judge circularity/questionable",
+    "points": [
+     "P1.2",
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Universality claim weakly supported",
+    "points": [
+     "P1.3",
+     "P4.11"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "More low-resource languages",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Same-language different cultures",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Culture vaguely operationalized",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Hard to read",
+    "points": [
+     "P2.1",
+     "P4.9"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Patching/steering method unclear",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Undefined answer labels",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Cosine homogeneity metric uninformative",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Dataset sizes missing",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "New benchmarks unvalidated",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Languages not one-to-one with cultures",
+    "points": [
+     "P3.2",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Language-implies-locale assumption",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Stereotyping undefined",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No significance test Table 1",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Judge prompt lacks none option",
+    "points": [
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Comparative judging robustness",
+    "points": [
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "EI gap definition unclear",
+    "points": [
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Figure formatting",
+    "points": [
+     "P4.10"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Binary American-option benchmark exploitable",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Tasks tiny and easy",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Questions/translations unvalidated",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Intra-country variation ignored",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "EI-Gap confounded",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "US row gap unexplained",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "EI-Gap definition vs reporting mismatch",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No uncertainty for gap",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Weak explicit prompting baseline",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Missing persona/few-shot/fine-tune comparisons",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Steering below explicit prompting",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Homogeneity metric unvalidated",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Diversity steering on one model",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Only 24 stories",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "LLM judge without human validation",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Stereotype confounded with localization",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Single-model mechanistic analysis",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Speculative patching interpretation",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Steering hyperparameter selection",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No control vectors",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Universal vector overclaimed",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Country=language assumption",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Limited languages/models",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "GPT-4o refusals",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Forced-choice only",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "White-box requirement",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Long conversations untested",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Details deferred to appendix",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Dense heatmaps",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Sloppy statements",
+    "points": [
+     "Q1.30"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI15"
+   ],
+   "related": [
+    "QI12",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI21"
+   ],
+   "related": [
+    "QI17",
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI23"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI28",
+    "QI30"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI19",
+    "QI18",
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI24",
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI2",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI22"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI29"
+   ]
+  }
+ ]
+}

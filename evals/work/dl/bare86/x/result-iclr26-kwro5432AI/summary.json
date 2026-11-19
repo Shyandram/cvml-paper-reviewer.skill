@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-kwro5432AI",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Method never parses or enforces query temporal constraints; time-consistency claim unsupported (edges by Hamming distance, undefined transition matrix, no time-consistency or retrieval-recall analysis)",
+    "MDL edge selection (Eqs. 5-7) is ill-specified: coverage cost sign contradicts the text, unclear when delta-L < 0, no ablation of MDL/temporal term/labeling",
+    "97% token reduction is confounded: it comes from sending top-10 events vs a heavy baseline (MedicalGraphRAG), not from the rule graph; offline cost and update cost unreported",
+    "Missing baselines: timestamp/time-window filter + dense retrieval, and published TKGQA methods; very low absolute accuracy suggests a weak protocol",
+    "No variance or significance despite 1,000-question samples; hyperparameters tuned on test; only template-based ICEWS/Wikidata benchmarks"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

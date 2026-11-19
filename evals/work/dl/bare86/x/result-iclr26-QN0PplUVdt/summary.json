@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-QN0PplUVdt",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Evaluation protocol under-specified (instance counts, NL generation, train/test split, memory leakage); about 20 instances per domain with no variance",
+    "Internal inconsistencies: 85.8% vs 82.1% for the full system, Storage 80% vs 67%, feature counts do not match ablation configurations",
+    "Statistical claims invalid: Wilcoxon on 6 domains, 'confidence = 1-p', and p=0.078 vs LLM+P is not significant yet superiority is claimed",
+    "Weak, self-reimplemented baselines; missing the key ablation of a simple LLM+planner-feedback PDDL refinement loop; contribution of GNN/causal components not isolated",
+    "Worked 'optimal plan' example is invalid (hand full at step 2, put-down(D) last), and guarantee/optimality claims are unsupported with LLM-generated PDDL"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

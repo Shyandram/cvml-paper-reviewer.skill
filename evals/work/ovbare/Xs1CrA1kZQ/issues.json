@@ -1,0 +1,828 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Paper lacks sufficient details to explain the methodology",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Offline-compiled reusable function idea not explicitly framed; positioning in program synthesis weak",
+   "minor": true
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Success depends on exhaustive domain-specific prompts including environment code; generality and cost questionable",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No principles for building prompts and no generated functions reported",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Unclear why weighting multiple goals helps exploration; needs single-goal ablation",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "phi described as per-timestep but updated every 2M steps; inconsistent",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "'Structured goal-generation function' is vaguely defined",
+   "minor": true
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "How priority weights are used to sample goals is not specified",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Unclear how goal-weight set is encoded into single goal embedding",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Differences between JAX and PyTorch implementations not explained",
+   "minor": true
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Only Crafter and Craftax-Classic, nearly identical; need diverse environments",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Goals restricted to predefined achievements; LLM reweights rather than generates novel goals",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "Ablations on Craftax-Classic exclude ELLM and AdaRefiner baselines",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "How g_emb is computed and fed to the policy is not specified",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Inconsistent notation, crowded tiny-font figures, many copy-editing artifacts",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Eq. 6 confusingly mixes replay buffer and on-policy language in PPO",
+   "minor": true
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Masking via large constant C in Eq. 5 lacks stability discussion",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "SGRL much slower than PPO; 'faster' should be qualified as relative",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "No world-model or intrinsic-motivation baselines on Crafter/Craftax",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "ELLM/AdaRefiner partially reproduced; Crafter numbers copied from papers",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "Planner uses rich environment-specific text renderer; unclear if baselines had equal access",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Restricted to Crafter variants; generalization to Minecraft or robotics unclear",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "ELLM and AdaRefiner only evaluated to 5M steps, weakening comparison",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Multiple components need careful tuning, hindering reproduction and adaptation",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "LLM-written code and action masking are established; contribution is a combination",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Goal function relies on task rules and human iteration; LLM prior vs human curriculum confounded",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No variance across LLM generation runs; discarded runs not reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "DeepSeek-R1 may have memorized Crafter's tech tree",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "ELLM/AdaRefiner queried only every 200 steps, handicapping them",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Crafter baseline numbers copied from original papers with different settings",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "No PPO/ELLM with same mask or hand-written goal heuristic to isolate LLM contribution",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "No comparison with DreamerV3, curiosity methods, SPRING or other Craftax baselines",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Gains modest, reward not significantly better; speculative explanation untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Ablation at 10M vs baselines at 5M; diamond claim unsupported at equal budgets",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "'Unlocks diamond after 3.7M steps' rests on uninspectable curves",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Ablation differences small relative to std; no significance tests",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Text says Figure 5 is Crafter but caption/table say Craftax-Classic",
+   "minor": true
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Crafter and Craftax experiments run on different hardware",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Geometric mean score formula in A.2 is nonstandard",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Achievement depth is coarse; depth-8 result is a binary effect",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "SGRL 7x slower than PPO despite efficiency claims",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Number of LLM calls, tokens and total cost vs ELLM never reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Single environment family; no other open-world domains; real-world claims overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No study of sensitivity to LLM choice, prompts or hyperparameters",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Craftax-Classic is nearly saturated on some metrics",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Eq. 5 multiplies logits by mask and subtracts C; nonstandard, may cause artifacts",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Mask relaxed from 0.8T so final policy unmasked; xi semantics contradict text",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "PPO ratio computed under stochastically relaxed mask changes support",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "How goal weights are encoded in embedding unspecified, crucial for w/o Priority ablation",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Goal planner given unlocked achievements, which is privileged feedback",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Behavioral claims read from curves lack causal evidence",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Related-work characterizations are sweeping",
+   "minor": true
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Main results are mostly placed in the appendix",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Insufficient methodology detail",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Contribution not framed as offline compilation of LLM knowledge",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Heavy domain-specific prompt engineering limits generality",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No prompt-construction method or generated functions reported",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Motivation for goal prioritization unclear; single-goal ablation missing",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Definition and update schedule of phi inconsistent/vague",
+    "points": [
+     "P2.2",
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "How priority weights sample goals unspecified",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Encoding of goal-weight set into embedding unclear",
+    "points": [
+     "P2.5",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "JAX vs PyTorch implementation differences unexplained",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Evaluation limited to Crafter variants; generality unclear",
+    "points": [
+     "P2.7",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "LLM only reweights predefined achievements",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Ablations lack prior-method baselines",
+    "points": [
+     "P2.9"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Poor readability: notation, crowded figures, copy-editing",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Eq. 6 mixes on-policy and replay buffer language",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Masking with large negative constant lacks justification",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "'Faster training' claim misleading versus PPO",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Missing strong non-LLM exploration baselines",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "LLM baselines only partially reproduced or copied",
+    "points": [
+     "P3.7",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Environment-specific text interface gives oracle-like advantage",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Many interacting components hard to tune and reproduce",
+    "points": [
+     "P4.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Limited novelty; combination of known ideas",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Heavy domain knowledge and unquantified human prompt engineering",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No variance across LLM-generation runs",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Possible LLM memorization of Crafter",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "LLM baselines handicapped by query frequency",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Crafter baseline numbers copied, uncontrolled",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No controls with same action mask or hand-written heuristic",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing other Crafter/Craftax methods",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Modest gains; reward difference explained away",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Unequal training budgets for claims",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Diamond-at-3.7M claim rests on curves only",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Small ablation differences without significance tests",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Figure 5 environment labeled inconsistently",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Compute differs between experiments",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Nonstandard geometric mean score formula",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Achievement depth is a coarse metric",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Efficiency claims overstated; slower than PPO",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "LLM call cost and tokens unreported",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Generality not demonstrated; single environment family",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No sensitivity to LLM, prompts or hyperparameters",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Craftax-Classic nearly saturated",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Eq. 5 masking formulation nonstandard",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Annealing schedule leaves final policy unmasked; xi semantics conflict",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "PPO ratio under stochastic relaxed mask",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Goal weight encoding unspecified",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Planner receives privileged achievement feedback",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Claims asserted from curves with weak causal evidence",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Sweeping related-work claims",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Main results mostly in appendix",
+    "points": [
+     "Q1.29"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI25"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI19"
+   ],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI22"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI17"
+   ],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI6",
+    "QI10"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  }
+ ]
+}

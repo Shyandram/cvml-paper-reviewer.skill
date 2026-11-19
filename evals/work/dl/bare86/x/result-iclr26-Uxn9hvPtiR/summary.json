@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Uxn9hvPtiR",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Novelty is incremental over DFNO (Yang et al. 2023); the 'first resolution-agnostic surrogate' claim is unsupported",
+    "Navier-Stokes comparison uses DFNO numbers copied from a different task, and no neural-PDE baselines are run on the same data",
+    "CNN baselines on Copernicus are implausibly bad (MSE ~0.19, SSIM ~0.1); no bicubic, plain FNO or standard SR baselines",
+    "Tiny real dataset with unclear splits and possible leakage; single runs without seeds; results inconsistent across tables and nearly identical in Table 4",
+    "Synthetic average-pool degradation, no physical diagnostics (spectra, divergence), and under-specified diffusion and constraint components with no ablations"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

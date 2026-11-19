@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-FmLGEJEvJ9",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Error bound k/e^(eps/log k) (edit distance: e^(eps/(log k log n))) with polylog factors is worse than the trivial error k unless eps is roughly log^2 k or larger, so the guarantee is vacuous at eps = O(1)",
+    "No experiments, no lower bounds, and no comparison against simple baselines such as de-biased per-bit randomized response or Laplace noise on the sketch",
+    "Privacy notion protects only a one-bit change in one string, which does not match the motivating patient-record scenario",
+    "Proof gaps in DP-LCP/edit distance: XOR of O(log n) noisy node sketches inflates flip probability but is not accounted for; expectation vs high-probability mismatch in Theorem 5.1; query-side BuildTree called with eps=0 means flip prob 1/2; Lemma 4.7 conflates |z~-z| with a sum of flip indicators",
+    "Limited novelty: Pagh-Lugosi sketch plus randomized response, plugged into the Landau-Myers-Schmidt k^2 algorithm; weak fit for ICLR with no learning component"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

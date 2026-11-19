@@ -1,0 +1,798 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Theoretical analysis forced, restates setup, vague claims, unclear link to empirical results",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Pretraining baselines on same small dataset undercuts baselines designed for large unlabeled data",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Unseen sensor placement experiments need more detailed study",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Purpose of Figure 3 qualitative visualizations unclear",
+   "minor": true
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Redundant wording at line 348",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Unclear what the 'structural' factors actually are",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Paper opaque to readers outside the field",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Unclear why contrastive positive pairs share identical S and R elements",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Unclear if SPAR uses spatial info at evaluation while baselines don't; gain source confounded",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Generalization and ablation evidence for key claims relegated to appendix; task generalization not shown",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Experimental validation listed as separate contribution",
+   "minor": true
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Term 'duality' between positions and signals misused",
+   "minor": true
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Equation 6 bound lacks citation or novelty claim",
+   "minor": true
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Unclear whether embeddings are summed or concatenated",
+   "minor": true
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "Figures 4 and 5 referenced out of order",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Limited novelty: standard embeddings, LLM as preprocessing, known dual reconstruction",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Manual normalization of spatial inputs unjustified given learned embedding",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Structural position concept ill-defined; unclear embedding captures semantic placement",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Datasets with meaningful structural attributes unspecified; no analysis of structural effect",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Proposition 3.1 hard to follow and does not support stated claims; weak theory-method link",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "Baseline result provenance unclear; some baselines extremely poor without explanation",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "LLM component evaluated only on HAR with minimal improvement",
+   "minor": false
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "No runtime or computational complexity reported",
+   "minor": false
+  },
+  {
+   "id": "P5.1",
+   "reviewer": "P5",
+   "text": "Comparisons unfair since baselines do not use spatial information",
+   "minor": false
+  },
+  {
+   "id": "P5.2",
+   "reviewer": "P5",
+   "text": "Model size/complexity not reported, so gains may come from capacity",
+   "minor": false
+  },
+  {
+   "id": "P5.3",
+   "reviewer": "P5",
+   "text": "Ablation should report complexity impact of dropped components",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Proposition 3.1 relies on strong assumptions; bound does not show better representations",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Claim of avoiding redundant memorization not shown",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Proposition 3.2 is analogy, not theorem; image-patch argument may not transfer",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "'Solid theoretical foundations' overstated; theory unlinked to measurable properties",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Limited novelty relative to existing position-aware MAE variants",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Placement-aware MAE baselines and same-embedding controls missing",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Unclear whether baselines receive position/node info; comparison conflates access with objective",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Spatial-reconstruction objective may reduce to trivial scene/node identification",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Unclear whether structural embeddings are shared across scenes or tied to nodes",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Localization coordinate frame normalization and de-normalization unclear",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Unseen-placement test uses single similar held-out scene; no truly new layout",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "No test of transfer to new body placements or subjects on HAR",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Per-node learned embeddings cannot handle new nodes, contradicting arbitrary-placement claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Gains on Ridgecrest and HAR small and within noise; 'superior' unwarranted",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Clear gain only on authors' own M3N-VC dataset",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Ablations only on M3N-VC, missing for Ridgecrest and HAR",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Pretraining includes downstream scene, making unseen comparisons split-dependent",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Only frozen-encoder evaluation; full fine-tuning not tested",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Contrastive baselines extremely poor, suggesting poor tuning or fit",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Same epochs for all methods; no baseline hyperparameter search",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Noisy GPS labels may dominate localization error and compress differences",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No supervised, non-pretrained or classical localization comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "No cost analysis: parameter count, pretraining time",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "No scaling or transfer experiments despite foundation-model framing",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Structural-position interpretation heuristic; no probing of learned structural vectors",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Theory weak and not linked to method/results",
+    "points": [
+     "P1.1",
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Baselines restricted to small pretraining data",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Unseen placement analysis insufficient",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Figure 3 purpose unclear",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Redundant wording",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Structural position concept ill-defined",
+    "points": [
+     "P2.1",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Paper opaque to outsiders",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Contrastive pairs share S,R",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Spatial info access confounds baseline comparison",
+    "points": [
+     "P3.2",
+     "P5.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Key experiments in appendix",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Contribution list redundancy",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "'Duality' misused",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Eq 6 citation",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Sum vs concatenation unclear",
+    "points": [
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Figure order",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Limited novelty",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Input normalization unjustified",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "No analysis of structural attributes per dataset",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Baseline provenance and poor baseline results",
+    "points": [
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "LLM component weakly supported",
+    "points": [
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "No runtime/complexity/model size reporting",
+    "points": [
+     "P4.8",
+     "P5.2"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Ablation complexity impact",
+    "points": [
+     "P5.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Proposition 3.1 relies on strong assumptions; bound does not show better representations",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Claim of avoiding redundant memorization not shown",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Proposition 3.2 is analogy, not theorem; image-patch argument may not transfer",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "'Solid theoretical foundations' overstated; theory unlinked to measurable properties",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Limited novelty relative to existing position-aware MAE variants",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Placement-aware MAE baselines and same-embedding controls missing",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Unclear whether baselines receive position/node info; comparison conflates access with objective",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Spatial-reconstruction objective may reduce to trivial scene/node identification",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Unclear whether structural embeddings are shared across scenes or tied to nodes",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Localization coordinate frame normalization and de-normalization unclear",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Unseen-placement test uses single similar held-out scene; no truly new layout",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No test of transfer to new body placements or subjects on HAR",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Per-node learned embeddings cannot handle new nodes, contradicting arbitrary-placement claim",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Gains on Ridgecrest and HAR small and within noise; 'superior' unwarranted",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Clear gain only on authors' own M3N-VC dataset",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Ablations only on M3N-VC, missing for Ridgecrest and HAR",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Pretraining includes downstream scene, making unseen comparisons split-dependent",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Only frozen-encoder evaluation; full fine-tuning not tested",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Contrastive baselines extremely poor, suggesting poor tuning or fit",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Same epochs for all methods; no baseline hyperparameter search",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Noisy GPS labels may dominate localization error and compress differences",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No supervised, non-pretrained or classical localization comparison",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "No cost analysis: parameter count, pretraining time",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "No scaling or transfer experiments despite foundation-model framing",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Structural-position interpretation heuristic; no probing of learned structural vectors",
+    "points": [
+     "Q1.25"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1",
+    "QI2",
+    "QI4"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI25"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI16",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI25",
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI19"
+   ],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI23"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI16",
+    "QI23"
+   ]
+  }
+ ]
+}

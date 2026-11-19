@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-FmvBrKubtw",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "'Provable' RO-freedom holds only under idealized conditions (K→∞, finite actions, exact Q, α→0) that don't match the amortized continuous-action implementation or the non-vanishing tuned α used in experiments",
+    "Nested negotiation conditioning on other agents' noise requires shared randomness/communication at execution, so execution is not truly decentralized; no comparison with autoregressive/sequential joint-policy baselines",
+    "Experiments limited to toy differential games and one 4-agent particle task; no standard MARL benchmarks, no scalability or efficiency evidence, only 5 seeds",
+    "Baseline tuning fairness (SVNR gets 50 TPE trials) and contradictory statements about s² severity; ablation shows full negotiation works as well as the theoretically required nested structure",
+    "Limited novelty beyond combining SVGD/MPSVGD/amortized SVGD with soft Q-learning; Theorem 5.1 largely assumes its conclusion; proofs deferred to the appendix"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

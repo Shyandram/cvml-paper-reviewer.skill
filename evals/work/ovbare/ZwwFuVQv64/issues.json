@@ -1,0 +1,737 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Method-level novelty limited; loss, aggregation, distillation taken from DepthFL",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "'First' layerwise QFL claim lacks experimental comparison to eSQFL",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Self-built Q-HeteroFL baseline appears under-tuned, high variance, collapses",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Headline 12.4% gain is relative only to self-built baseline",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Missing stronger natural baselines (shared sub-circuit FedAvg, per-depth groups, no-KD variant)",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Unfair comparison: Quorus uses ensemble of per-layer classifiers, baselines single output",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Gains over Standalone/Vanilla QFL small, within std, sometimes negative",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "No statistical significance testing behind best-result markings",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Very small data (128 samples, 5 clients) makes federation benefits hard to measure",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Only binary tasks with PCA to 10 features and angle encoding",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Non-IID data, client drop-out, number of clients not studied",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Federated PCA emulated centrally; privacy not examined",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Depth saturation beyond 5-6 layers undercuts value of deeper circuits",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Error-awareness not evaluated in training; all training noiseless, no noisy simulation",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Hardware results on 100 test points, no repeated runs or confidence intervals",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Hardware shows deeper circuits hurt on noisy devices, contradicting premise",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Hardware runs only Funnel design; Layerwise and Ancilla/Blocking not run",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Gradient-norm/barren-plateau claims weakly supported, trivial locality effect, overclaimed",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Gradient figure: one task, one baseline, no seed variance",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Ancilla/Blocking not equivalent to Layerwise; training validity only hypothesized",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Shot-efficiency claims never quantified; no shot counts or finite-shot training",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Blocking design only theoretical; Funnel's Hilbert space restriction cost unmeasured",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Capacity framing and Tables 2/7 confusing",
+   "minor": true
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Classifier count (L-1) inconsistent with layer count elsewhere",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "12.4% average not reproducible; 'up to' vs 'on average' used inconsistently",
+   "minor": true
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "No theoretical convergence or aggregation analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Circular averaging of angles not justified",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Classical heterogeneous-FL and early-exit methods dismissed rather than evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Evaluation only binary classification, no multiclass",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Only simple MNIST/Fashion-MNIST; needs harder or quantum-native datasets to show generality",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No convergence theory or analysis of KL coupling effect on optimization",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Data encoding pipeline (PCA, reupload schedule) under-specified in main text",
+   "minor": true
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Baselines weak (shallow vanilla, standalone, self-implemented Q-HeteroFL), inflating gains",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Method appears limited to binary classification",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Unclear how ansatz enables single-shot outputs from all layers",
+   "minor": true
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No classical baseline compared",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Experimental gains seem very limited",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Scalability not studied",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Results limited to basic classification tasks",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Approach heuristic; no convergence or bias-variance analysis of partial aggregation",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Fairness gaps from seldom-updated layers not quantified or mitigated",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No comparison with communication-efficient FL methods (FedDrop, STC)",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Limited ablation on importance metric and hyperparameter sensitivity",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Method-level novelty limited; loss, aggregation, distillation taken from DepthFL",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "'First' layerwise QFL claim lacks experimental comparison to eSQFL",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Self-built Q-HeteroFL baseline appears under-tuned, high variance, collapses",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Headline 12.4% gain is relative only to self-built baseline",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Missing stronger natural baselines (shared sub-circuit FedAvg, per-depth groups, no-KD variant)",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Unfair comparison: Quorus uses ensemble of per-layer classifiers, baselines single output",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Gains over Standalone/Vanilla QFL small, within std, sometimes negative",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "No statistical significance testing behind best-result markings",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Very small data (128 samples, 5 clients) makes federation benefits hard to measure",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Only binary tasks with PCA to 10 features and angle encoding",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Non-IID data, client drop-out, number of clients not studied",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Federated PCA emulated centrally; privacy not examined",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Depth saturation beyond 5-6 layers undercuts value of deeper circuits",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Error-awareness not evaluated in training; all training noiseless, no noisy simulation",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Hardware results on 100 test points, no repeated runs or confidence intervals",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Hardware shows deeper circuits hurt on noisy devices, contradicting premise",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Hardware runs only Funnel design; Layerwise and Ancilla/Blocking not run",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Gradient-norm/barren-plateau claims weakly supported, trivial locality effect, overclaimed",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Gradient figure: one task, one baseline, no seed variance",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Ancilla/Blocking not equivalent to Layerwise; training validity only hypothesized",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Shot-efficiency claims never quantified; no shot counts or finite-shot training",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Blocking design only theoretical; Funnel's Hilbert space restriction cost unmeasured",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Capacity framing and Tables 2/7 confusing",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Classifier count (L-1) inconsistent with layer count elsewhere",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "12.4% average not reproducible; 'up to' vs 'on average' used inconsistently",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "No theoretical convergence or aggregation analysis",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Circular averaging of angles not justified",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Classical heterogeneous-FL and early-exit methods dismissed rather than evaluated",
+    "points": [
+     "P1.28"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Binary-only classification tasks",
+    "points": [
+     "Q1.1",
+     "Q2.1",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Simple datasets, limited diversity",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No convergence/theoretical analysis",
+    "points": [
+     "Q1.3",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Encoding pipeline under-specified",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Weak baselines inflate gains",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Single-shot ansatz mechanism unclear",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No classical baseline",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Limited gains",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Scalability not studied",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Client fairness gaps",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Missing communication-efficient FL baselines",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Limited ablations/hyperparameter sensitivity",
+    "points": [
+     "Q4.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI7",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI11"
+   ]
+  }
+ ]
+}

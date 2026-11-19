@@ -1,0 +1,603 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Weaknesses deferred to questions without detail",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "No systematic study of how mined parameter errors propagate to agent performance",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Weak detector recall for keyboard actions; effect on task categories unanalyzed",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Cursor-based video filtering may bias model toward pointer patterns",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Detailed data manifests not released, limiting reproducibility",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "No ablation on OCR enhancements or higher-resolution sampling",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Mobile and non-English UIs out of scope; adaptation not discussed",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Cross-dataset comparison table misses important datasets",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "Test-time scaling details missing",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Full video corpus and trajectory annotations not released",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Potential overlap between tutorial training data and benchmarks not quantified",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Only one vision-language model; generality across models untested",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Reliability of LLM-generated inner monologues not analyzed; human study suggested",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Temporal overlap threshold for detection hits unspecified",
+   "minor": true
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Undefined abbreviation and typo",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Headline 70% gain uses favorable 50-step budget rather than like-for-like number",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Single seed, no variance or CIs; test-time scaling evidence thin",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No compute- or data-matched control isolating value of video-mined labels",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No comparison with other 7B open agents; baseline calibration unclear",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Absolute OSWorld performance low",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "AgentNetBench is in-domain for stage 2; modest unreplicated gain",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Split of held-out IDM test set not described",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Cross-platform transfer from Windows/macOS videos to Ubuntu untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Low detector recall, especially press and drag, leaves trajectory gaps",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Parameterization accuracy low with lenient criterion; fidelity claims unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "No analysis of label noise versus downstream performance",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "In-the-wild evaluations tiny, no inter-annotator agreement",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Detection hit criterion of any temporal overlap is too loose",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Text/table inconsistencies in recall values and reliability claims",
+   "minor": true
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Long-horizon and test-time-scaling attributions speculative without trajectory analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Cursor-based filtering biases against keyboard interaction; validated only synthetically",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Inner monologues conditioned on outcomes create hindsight leakage; not ablated",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Stage-1 hyperparameters missing from main text",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Use of 39k of 55k candidate videos unexplained",
+   "minor": true
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No discussion of licensing, privacy, or data release",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Novelty moderate: VPT inverse-dynamics recipe applied to GUI videos",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No empirical comparison against alternatives like AgentTrek-style synthesis",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Promotional writing, mislabeled appendix model, broken figure references",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Vague deferral to questions",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Parameter error propagation unstudied",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Weak keyboard action recall",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Cursor filter bias",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Data/manifests not released",
+    "points": [
+     "P2.4",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No OCR/resolution ablation",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Mobile/non-English out of scope",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Incomplete cross-dataset comparison",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Test-time scaling details missing",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Data leakage unquantified",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Single VLM",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Inner monologue reliability",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Hit threshold unspecified",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Typos",
+    "points": [
+     "P4.4"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Headline gain not like-for-like",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No variance; thin scaling evidence",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No matched control",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No external 7B agent comparison",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Low absolute performance",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "In-domain offline benchmark",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "IDM test split undescribed",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Cross-platform transfer untested",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Low detector recall",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Low parameterization accuracy",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No noise-vs-performance analysis",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Tiny in-the-wild evaluations",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Loose hit criterion",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Text/table inconsistencies",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Speculative long-horizon attribution",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Cursor filtering bias",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Monologue hindsight leakage",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Missing hyperparameters",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Video count unexplained",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Licensing/privacy/release",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Moderate novelty",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No comparison to alternative data synthesis",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Presentation issues",
+    "points": [
+     "Q1.23"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI11"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI16"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI20"
+   ],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI23"
+   ],
+   "related": [
+    "QI14"
+   ]
+  }
+ ]
+}

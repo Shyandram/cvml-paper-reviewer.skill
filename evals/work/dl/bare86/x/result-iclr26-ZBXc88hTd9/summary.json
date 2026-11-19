@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-ZBXc88hTd9",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Stage-2 gain not isolated from extra training/second pass; no control with a cascaded separator without AVSR semantics or an equal fine-tuning budget",
+    "Unclear stage-2 training details (train-time coarse outputs, exposure bias, speaker-lip matching for 3-4 speakers, frozen AVSR) and possible Auto-AVSR pretraining overlap with test data",
+    "Implausibly large noisy-dataset gains (PESQ 2.72, eSTOI 0.91) vs baselines copied from another paper; compute/latency accounting for two passes unclear",
+    "SP fusion and MST are incremental with weak ablations; no analysis of what the enhanced semantics encode",
+    "No variance or seeds, coarse-stage margins ~0.2 dB, robustness claim for missing visual input partly contradicted by Fig. 5 caption"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

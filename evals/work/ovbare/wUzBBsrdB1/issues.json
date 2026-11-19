@@ -1,0 +1,679 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Toy model uses orthogonal features without superposition; very favorable setup",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Only a single toy configuration: one correlation matrix, frequency profile, true L0",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Feature recovery shown only via heatmaps without quantitative summary",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Robustness to non-orthogonal features or other correlation structures untested",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Metric s_n^dec heuristic, without theory or ablation against alternatives",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Metric depends on free parameter n with no principled selection rule",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Correct L0 located imprecisely and only after training full SAE sweep",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "LLM validation only against sparse-probing proxy",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Sensitivity to width, learning rate, training length not examined",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "LLM evidence from one model, layer, width, architecture; broad claim overreaches",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Sparse-probing variation small; agreement with metric weak evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No evidence latents at chosen L0 are more correct, e.g. SAEBench, autointerp",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Toy decoder patterns not shown to appear in LLM SAEs",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Assumption of single true L0 in real LLMs questionable",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "L1 and JumpReLU SAEs not tested",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Claim that sparsity-reconstruction tradeoff is misleading overreaches",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Remark about hinting at true number of features in superposition speculative",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Limited novelty: low-L0 failure is known feature hedging",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "No comparison with other L0 selection methods",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Caption/text inconsistencies and confusing notation",
+   "minor": true
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "High-L0 degenerate solution described qualitatively; local-minimum explanation speculative",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Automatic method shows no results; no practical procedure offered",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Missing toy training details and normalization definitions",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "No seeds or error bars anywhere; all single runs",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Lacks theoretical grounding; findings entirely empirical",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Toy models assume orthogonal linearly separable features unlike real LLMs",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Metric requires manual tuning of n and batch size",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Automatic optimization algorithm hard to use, limiting utility",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "LLM experiments limited to a few layers",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Contribution unclear beyond showing L0 hyperparameter matters",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Unclear what s_n^dec measures and its intended utility",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Computing s_n^dec requires training SAEs, so no search cost saving",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No added benefit of s_n^dec over sparse probing scores",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Missing related work on feature splitting and SAE latent norm metrics",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Novelty relative to prior feature hedging work unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Should validate heuristic on pretrained SAEBench SAEs across metrics",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Missing literature on estimating number of sources in ICA",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Presentation consistency: decoder plots for all models, high L0 alongside low, captions",
+   "minor": true
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Selection of n seems arbitrary; should average or fix n",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Feature frequency as alternative explanation for low-L0 results unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Presentation subpar; figures could be improved",
+   "minor": true
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Missing related MDL-SAE work",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Favorable orthogonal toy model",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Single toy configuration",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No quantitative recovery summary",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Toy robustness untested",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Metric heuristic, no theory",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Free parameter n",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Imprecise L0, needs full sweep",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Proxy-only LLM validation",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Sensitivity untested",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Narrow LLM evidence",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Small probing variation",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No evidence of more correct features",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Decoder patterns not shown in LLM",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Single true L0 assumption",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Other architectures untested",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Tradeoff-misleading overclaim",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Speculative superposition remark",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Limited novelty",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "No comparison to other L0 selection",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Notation/caption inconsistencies",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Degenerate solution speculation",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Automatic method lacks results",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Missing training details",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "No seeds/error bars",
+    "points": [
+     "P1.24"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No theory",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Unrealistic toy assumptions",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Choice of n / tuning arbitrary",
+    "points": [
+     "Q1.3",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Automatic method impractical",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Few LLM layers",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Novelty/contribution unclear",
+    "points": [
+     "Q2.1",
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Metric purpose and utility unclear",
+    "points": [
+     "Q2.2",
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Metric requires trained SAEs",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Missing related work",
+    "points": [
+     "Q2.5",
+     "Q3.2",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Validate on SAEBench SAEs",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Presentation/figures",
+    "points": [
+     "Q3.3",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Feature frequency alternative explanation",
+    "points": [
+     "Q3.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI6"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  }
+ ]
+}

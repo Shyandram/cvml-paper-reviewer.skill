@@ -1,0 +1,674 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Dataset has little novelty: pooled existing samples with open-model responses and labels",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Labelling ignores compositional text-image effects on harmfulness",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No category for harmful-topic inputs not seeking harmful responses",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Harm categories poorly motivated, e.g., merging child and animal abuse",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No inter-annotator agreement reported for human annotations",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Alignment of Qwen auto-labels with human test labels not reported",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Manual cleaning and annotation details missing: annotators, backgrounds, guidelines",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Training set fully auto-labelled without quality control",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Contribution incremental: aggregation, auto-labelling, small test set, fine-tuning",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Limited novelty; no original data, scenarios or annotation methodology",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Class imbalance hurts minority categories; no mitigation proposed",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Only accuracy reported; no precision, recall or F1",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "No results across multiple random seeds",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "No quantitative annotation reliability metric",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Data curation relies on MLLMs, capping quality at their capability",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "FalconEye weak on fine-grained category classification",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "In-domain test makes comparisons unfair; out-of-domain performance unclear",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Accuracy only metric on imbalanced data; need precision/recall/F1, AUROC, confusion matrices",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No inter-annotator agreement reported for Falcon-test",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Annotator count, adjudication procedure and guidelines not given",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Baselines not given same task/taxonomy; baseline prompts unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Llama-Guard-3-Vision missing from main comparison tables",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "GPT-4o refusals dropped from evaluation rather than counted",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "No confidence intervals or seeds; small gains over GPT-4o may be noise",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Train/test circularity: labels from same model family, in-distribution test; generalization unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Agreement between 72B auto-labels and human labels not reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Near-duplicate train/test leakage not addressed",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Small gain over text-only Llama-Guard on BeaverTails-V weakens visual-information thesis",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "FalconEye below baselines in many OOD categories; 'majority' claim false",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Base Qwen below chance on VLGuard suggests prompt/format failure",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "OOD benchmarks only partially evaluate tri-output",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No comparison with other recent multimodal evaluators or guard models",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "No ablation of image contribution (text-only evaluator)",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Category detection poor and metric undefined, contradicting claims",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Responses from weak jailbroken 7B models; artificial distribution, transfer untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Attack prompt unmentioned in main text and misreferenced",
+   "minor": true
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Harmful-heavy composition unrealistic; benign false-positive rate unreported",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Dataset and evaluator incremental novelty",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Table 1 compares only datasets; some entries unverified",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Taxonomy merges and loosely defined classes; fragmentation claim untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Numerical and naming inconsistencies across tables and text",
+   "minor": true
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Table 1 circularly lists FalconEye as eval method",
+   "minor": true
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Single training run with no validation split or model selection",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Rationale quality never evaluated despite headline claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "No ethics discussion for releasing harmful content",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Incremental dataset novelty",
+    "points": [
+     "P1.1",
+     "P2.3",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Compositional cross-modal effects ignored",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No benign harmful-topic category",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Poorly motivated taxonomy merges",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No inter-annotator agreement/reliability",
+    "points": [
+     "P1.5",
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Auto-label quality unverified",
+    "points": [
+     "P1.6",
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Annotation process details missing",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Class imbalance",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Accuracy-only metrics",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No multiple seeds",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Reliance on MLLMs for curation",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Weak fine-grained classification",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "In-domain test; OOD generalization unclear",
+    "points": [
+     "P4.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Accuracy only metric on imbalanced data; need precision/recall/F1, AUROC, confusion matrices",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No inter-annotator agreement reported for Falcon-test",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Annotator count, adjudication procedure and guidelines not given",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Baselines not given same task/taxonomy; baseline prompts unspecified",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Llama-Guard-3-Vision missing from main comparison tables",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "GPT-4o refusals dropped from evaluation rather than counted",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No confidence intervals or seeds; small gains over GPT-4o may be noise",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Train/test circularity: labels from same model family, in-distribution test; generalization unsupported",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Agreement between 72B auto-labels and human labels not reported",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Near-duplicate train/test leakage not addressed",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Small gain over text-only Llama-Guard on BeaverTails-V weakens visual-information thesis",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "FalconEye below baselines in many OOD categories; 'majority' claim false",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Base Qwen below chance on VLGuard suggests prompt/format failure",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "OOD benchmarks only partially evaluate tri-output",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No comparison with other recent multimodal evaluators or guard models",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "No ablation of image contribution (text-only evaluator)",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Category detection poor and metric undefined, contradicting claims",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Responses from weak jailbroken 7B models; artificial distribution, transfer untested",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Attack prompt unmentioned in main text and misreferenced",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Harmful-heavy composition unrealistic; benign false-positive rate unreported",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Dataset and evaluator incremental novelty",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Table 1 compares only datasets; some entries unverified",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Taxonomy merges and loosely defined classes; fragmentation claim untested",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Numerical and naming inconsistencies across tables and text",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Table 1 circularly lists FalconEye as eval method",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Single training run with no validation split or model selection",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Rationale quality never evaluated despite headline claim",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "No ethics discussion for releasing harmful content",
+    "points": [
+     "Q1.28"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI21"
+   ],
+   "related": [
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI23"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI11",
+    "QI12",
+    "QI10"
+   ]
+  }
+ ]
+}

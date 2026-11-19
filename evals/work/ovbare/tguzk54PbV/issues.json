@@ -1,0 +1,944 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Only harm studied is string-matched leakage of synthetic user data",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Training and evaluation attackers share generator; evaluation mostly in-distribution",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Average-over-attackers dominated by ARLAS attacker; baseline attackers weak",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No evaluation against independent attacks like static suites, GCG, human red-teaming",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No comparison with other defenses like instruction hierarchy, StruQ, spotlighting, detectors",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Seed standard errors may not capture training variance; unclear what seeds vary",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "AgentDojo gains about one point, matched by SPAG; generalization overclaimed",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "AgentDojo attack configuration and ASR definition unspecified; low base ASR suggests weak attack",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Task success under ARLAS attacker much lower; trade-off claim weakened",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "No-attack task success gain comes from SFT/RL, not the safety method",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Absolute ASR under ARLAS attacker remains high",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Embedding-distance diversity metric weak; cumulative set inflates it; collapse undetectable",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Attack diversity not compared with baselines",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "No semantic or strategy-level analysis of attacks; few qualitative views",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Over-refusal on tasks legitimately needing private data untested",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Robustness to other harms like unauthorized tool calls untested",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Baselines adapted and underspecified; tuning effort unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Baseline attackers suspiciously weak, suggesting implementation issues",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "ARLAS vs no-PBL effect modest and on one base model",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "No sensitivity analysis on population size or sampling; extra compute undiscussed",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Cycling in iterative baseline never measured, so PBL motivation untested",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Limited novelty: combination of known self-play, population, GRPO ingredients",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "No theoretical argument why past-checkpoint sampling avoids cycling",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Reward design gives poor incentives for attacker and agent",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Game not strictly zero-sum as claimed",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Imitation data from larger same-family models may pass on teacher patterns",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Training scale small: LoRA, short horizons, few tasks and iterations",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "No code release mentioned",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Missing RL steps, evaluation set sizes, test task counts",
+   "minor": false
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Only 12-14B models used; generality limited",
+   "minor": false
+  },
+  {
+   "id": "P1.31",
+   "reviewer": "P1",
+   "text": "Typos, mislabeled appendix prompt, sign error in Eq. 2",
+   "minor": true
+  },
+  {
+   "id": "P1.32",
+   "reviewer": "P1",
+   "text": "Main results shown only as dense heatmaps",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Limited novelty: combines known self-play, GRPO, population-based training",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Only synthetic web environments; no real-world security evidence",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Improvements small and lack statistical justification",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Attack diversity measured only by embedding distance",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No qualitative insights into emerging attacks or defenses",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "No ablations or theory on why population-based learning helps",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Task success gain stems from imitation learning; capability actually drops",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Task success under attack conflates leakage with capability; benign-task evaluation needed",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Imitation learning warm-up questionable; stronger base models would be fairer",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Improvements over ART baseline marginal",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Missing ethics statement and reproducibility section",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Typos and wrong figure references",
+   "minor": true
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Criteria for selecting attacker checkpoints unclear",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Problem setup unrealistic; private data could simply be withheld",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Code neither provided nor promised",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Requires white-box access to agent",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Only two small models tested",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Compute resources not reported",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Threat model unrealistic: attacker knows defender function names",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Injection setup contradicts indirect prompt injection definition",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Missing evaluation on spotlighting dataset and comparison with that method",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Differences between BrowserGym and AgentDojo need clarification",
+   "minor": true
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Missing comparison with instruction-detection defense",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Narrow harm",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "In-distribution attackers",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Aggregate dominated by ARLAS attacker",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No independent attacks",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No other defenses compared",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Seed variance unclear",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "AgentDojo gains negligible",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "AgentDojo setup unspecified",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "TSR under attack trade-off",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No-attack gain from SFT",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "ASR still high",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Diversity metric weak",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Diversity not compared with baselines",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No strategy-level attack analysis",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Over-refusal untested",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Other harms untested",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Baselines underspecified",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Baseline attackers suspiciously weak",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "PBL effect modest",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No population sensitivity/compute",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Cycling not measured",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Limited novelty",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No theory for PBL",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Reward design",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Not zero-sum",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Imitation data inheritance",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Small training scale",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "No code",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Missing experimental details",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Only 12-14B models",
+    "points": [
+     "P1.30"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Typos and equation errors",
+    "points": [
+     "P1.31"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "Dense heatmaps",
+    "points": [
+     "P1.32"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Limited novelty",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Synthetic environments only",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Small/marginal gains",
+    "points": [
+     "Q1.3",
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Embedding-only diversity",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No qualitative analysis",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No PBL ablation/theory",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "TSR gain from imitation learning",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "TSR under attack conflated; need benign eval",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Imitation learning stage questionable",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Missing ethics/reproducibility statements",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Typos",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Checkpoint selection unclear",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Unrealistic problem setup",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Code not released",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "White-box requirement",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Only small models",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Compute not reported",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Attacker knows function names",
+    "points": [
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Incorrect injection setup",
+    "points": [
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Missing defense baselines",
+    "points": [
+     "Q4.7",
+     "Q4.9"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Environment differences unclear",
+    "points": [
+     "Q4.8"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI13",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI20"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI17",
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI30",
+   "match": [
+    "QI16"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": []
+  }
+ ]
+}

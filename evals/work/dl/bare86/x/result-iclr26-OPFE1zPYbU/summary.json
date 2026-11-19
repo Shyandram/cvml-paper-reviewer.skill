@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-OPFE1zPYbU",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Sparsity analysis characterizes the empirical-optimum posterior mean, not the trained network; no evidence that networks fail to generalize or memorize, and the memorization/generalization literature is ignored",
+    "The degradation statistic is near-tautological (nearest training point to its own noised version in high dimension) and the equations contain errors (inverse-distance weights, p(x0) misuse)",
+    "Natural Inference unification is algebraically trivial (linear multistep unrolling) and only approximately/numerically verified; novelty over DEIS/UniPC-style views is unclear",
+    "Section 5 explanations (high-order speedups, CFG robustness, sharpness, over-enhancement) rest on single qualitative examples without ablations or metrics",
+    "Only CIFAR-10 FID at 3 step counts with hand-tuned matrices and weak baselines; no comparison with UniPC or learned-solver methods; optimization procedure unspecified"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

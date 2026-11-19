@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-avnKEvJk3O",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Overclaiming: 'transformers learn like brains' and 'genes unnecessary' do not follow from three coarse qualitative probes with no neural or behavioural newborn data",
+    "No baselines or controls (CNNs, other objectives, natural or non-wave smooth input), so specificity to retinal waves or transformers is unestablished; scrambling control is confounded",
+    "Weak or circular metrics: hand-built orientation RDM with arbitrary decay, 16-object shape/colour test that may reflect colour insensitivity, gradient-variance 'RF' ill-defined for global-attention ViTs and tested on a single stimulus; retinotopy untested",
+    "Insufficient statistical reporting (seeds, error bars, tests) and underspecified methods (loss, input rendering, layer definitions)",
+    "Limited novelty over prior retinal-wave and emergent-locality work; ViT patching and objective are inductive biases contradicting the 'no hardcoded priors' framing"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

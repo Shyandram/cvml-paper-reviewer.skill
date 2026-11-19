@@ -1,0 +1,808 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "High circuit errors mean variance of unfaithful circuits is weak evidence against EAP-IG",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Wording like 'critical vulnerability' overreaches the evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No other discovery method (ACDC, edge pruning) as reference for high variance",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No random-edge null model or expected Jaccard under sampling noise",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Greedy connectivity-based sizing confounds Jaccard; no fixed-size or matched-faithfulness control",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Edge overlap a debatable notion; equal-error different circuits suggest non-identifiability",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Deval equals D, so circuit error is in-sample",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Dataset size, replicate count and seeds not given in main text",
+   "minor": true
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Bootstrap effectively smaller data; more stable meta-dataset results weaken message",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Bootstrap validity for discrete selection undiscussed; no CIs or tests on stability numbers",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Datasets are templated, so effective diversity is small",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Different estimators need not agree; framing as sensitivity is weak",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Median circuit over rows varying along different axes is arbitrary",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Degenerate rows like size-1 circuits included in averages",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Table 1 averages incommensurate regimes and degenerate cases",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "IG steps, number of edges and threshold not varied",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Noise experiment only covers GPT-2 on two tasks",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Fixed-direction embedding noise unmotivated; scale depends on embedding norm",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Greater-Than error high across noise range; claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "No evidence noise instability predicts bootstrap instability or transfer failure",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "GPT-2 vs Llama comparison confounded by size, tokenization and faithfulness",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Instruction tuning conclusion based on one pair in unfaithful regime",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Reading multimodal Jaccard as distinct stable solutions is speculative; no clustering",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Sensitivity and non-identifiability already documented in prior work",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "No estimand, bias analysis, confidence sets or proposed method",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Single method family, small models, three templated tasks, yet broad claims",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "No demonstration that bootstrap Jaccard changes conclusions about published circuits",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Table 1 discussion appears twice nearly identically",
+   "minor": true
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Table references wrong in places, including noise results",
+   "minor": true
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Claims like no tighter clustering in Fig. 1 lack quantitative support",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Repeated paragraph on p.7 indicates lack of care, possible other errors",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Undefined abbreviation, repeated paragraphs, caption placement, wrong Table/Figure reference",
+   "minor": true
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "EAP-IG is a first-order approximation, so circuit variance is unsurprising",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Number of samples used for attribution scores not reported",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Focus solely on circuit discovery despite broad interpretability framing",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Other methods like Path Patching, Edge Pruning, Information Flow Routes neglected",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "No dedicated limitations section",
+   "minor": true
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Claim that circuits fail to transfer is unsupported and contradicted by prior work",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "Interpretability proxy metric description incomplete",
+   "minor": true
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "Experimental intervention noise procedure insufficiently described",
+   "minor": true
+  },
+  {
+   "id": "Q2.10",
+   "reviewer": "Q2",
+   "text": "Which model produced Table 1 not specified",
+   "minor": true
+  },
+  {
+   "id": "Q2.11",
+   "reviewer": "Q2",
+   "text": "Instruction tuning finding consistent with prior work, which should be cited",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Circuit error very high; EAP poorly calibrated; stability should be at fixed error",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Without identifiability, parallel pathways and self-repair make stability uninformative",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Identifiability depends on ablation method; circuits across variations may not be comparable",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Instability may be artifact of discretization and Jaccard; analyse scoring separately",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Experimental setup details lacking",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Analysed circuits largely unfaithful; should threshold error and compare sizes",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Comparing errors ignoring circuit size is misleading",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Central claim rests on unfaithful high-error circuits",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Overreaching wording about vulnerability",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No comparison with other circuit discovery methods",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No null model or sampling-noise baseline for Jaccard",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Jaccard confounded with circuit size and selection rule",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Edge overlap ignores functional equivalence / non-identifiability",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Circuit error evaluated in-sample",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Dataset size, replicates and seeds unreported",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Bootstrap inflates variance; meta-dataset weakens headline",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Bootstrap validity and confidence intervals missing",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Templated datasets with little diversity",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "EAP variants are distinct estimators, not hyperparameter sensitivity",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Median circuit is an arbitrary reference",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Degenerate cases and incommensurate regimes averaged",
+    "points": [
+     "P1.14",
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "True EAP-IG hyperparameters not varied",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Noise experiment limited scope",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Noise design unmotivated and scale non-transferable",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "'Without harming performance' claim unsupported",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Noise-induced instability not shown predictive",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Model-size comparison confounded",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Instruction-tuning conclusion rests on one pair",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Multiple-solutions interpretation speculative",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Limited novelty given prior work on sensitivity",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Statistical-estimator framing rhetorical",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Narrow scope versus broad claims",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Recommendations not validated",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Duplicated paragraph and wrong table references",
+    "points": [
+     "P1.28",
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Figure claims not backed quantitatively",
+    "points": [
+     "P1.30"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Analysis focuses on high-error unfaithful circuits",
+    "points": [
+     "Q3.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Comparing circuit error while ignoring size is misleading",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Lack of attention to detail; presentation errors",
+    "points": [
+     "Q1.1",
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Variance finding unsurprising given first-order approximation",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Number of samples for attribution unreported",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Scope limited to circuit discovery",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Only EAP-IG examined",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No limitations section",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Circuit-transfer claim unsupported",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Interpretability proxy metric incompletely described",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Noise intervention method underspecified",
+    "points": [
+     "Q2.9"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Model for Table 1 unspecified",
+    "points": [
+     "Q2.10"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Instruction-tuning finding lacks citations",
+    "points": [
+     "Q2.11"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Stability metrics require circuit identifiability",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Ablation method changes circuits' comparability",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Instability may stem from discretization, not scoring",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Experimental setup details lacking",
+    "points": [
+     "Q3.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI16"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI14"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  }
+ ]
+}

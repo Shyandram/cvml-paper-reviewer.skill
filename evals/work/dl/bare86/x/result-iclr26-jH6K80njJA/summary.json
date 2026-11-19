@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-jH6K80njJA",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Headline results use an oracle gold schema built with knowledge of the test questions; the realistic InferredSchema variant is much weaker and loses to VectorRAG and OAI on FinanceBench aggregative questions",
+    "Limited novelty: LLM schema induction plus text-to-SQL is close to Evaporate and prior text-to-table work, with no comparison to it or to agentic/map-reduce aggregation baselines",
+    "Benchmarks fit the method: synthetic HOTELS and a 22-document WorldCup are small and single-schema; only 50 FinanceBench aggregative queries, no variance or significance",
+    "Baselines are confounded or weak: GPT-4o for S-RAG vs o3 for baselines, a single VectorRAG configuration, a FullCorpus that cannot hold the corpus, an opaque OAI system",
+    "Unvalidated LLM-judge evaluation and no error analysis or ablations (record accuracy, SQL accuracy, schema-induction size, ingestion cost)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

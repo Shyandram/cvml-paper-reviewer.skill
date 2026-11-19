@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-qtjLwGTvGR",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Claim of maximal expressivity / distinguishing all non-isomorphic CCs is false: L reduces to the graph Laplacian at rank<=1 and cospectral graphs (e.g. strongly regular) share HKS; Thm 4.1/4.3 proofs conflate orthogonal similarity with permutation isomorphism",
+    "Laplacian definition ill-specified: incidence with an arbitrary +1 node per hyperedge breaks permutation invariance and the Dirichlet-form claim; 2^-i weights make higher ranks numerically negligible with no ablation",
+    "Missing controls: no transformer + standard LapPE/RWPE/heat-kernel PE baselines or strong graph transformers; MolHIV metric mislabeled as ACC; only ties SMCN on glycan tasks; no ablations",
+    "Efficiency claims appear to exclude the O(n^3) eigendecomposition preprocessing; 'constant footprint' is misleading; scale tested only up to 100 cells",
+    "Expressivity evidence limited to author-built torus pairs designed against SMCN; no BREC/EXP/CSL tests; weak novelty vs weighted hypergraph Laplacians and spectral PEs"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

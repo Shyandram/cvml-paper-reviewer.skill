@@ -1,0 +1,620 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Unclear whether sparse attention is applied in prefill or only decoding",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Missing Needle-in-a-Haystack stress tests to support recall claim",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Dynamic inference-time sparsity baselines limited mainly to Quest",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Efficiency evaluated only on RTX A6000; no A100/H100 results",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Figure 1 PPL/accuracy setup not specified in caption",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Hadamard smoothing before quantization borrowed from QuaRot; weak novelty",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Bucketization resembles standard quantization",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Baselines limited to StreamingLLM and Quest; SnapKV, MInference, DuoAttention etc. missing",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "No justification that Manhattan distance on 2-bit codes approximates dot products",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Choice of bucketization thresholds not explained",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "No sensitivity analysis of bucketization thresholds",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Kernel efficiency analysis lacks comparison with other sparse methods",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "No explanation or case analysis of why results match full attention",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Baselines thin; many related training-free sparse methods not compared or cited",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "8x sparsity claim relative to handicapped Quest; Quest configuration unstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "L1 estimator on 2-bit codes lacks theoretical bound or error analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No measurement of top-k or attention-mass recall versus exact or Quest",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No inner-product estimator on same codes compared to justify Manhattan distance",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "L1 vs L2 explanation speculative; Table 7 differences look like noise",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Thresholds B1-B3 choice, granularity and calibration unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Unspecified: RoPE order, query quantization thresholds, which layers stay dense",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "GQA not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "w/o Hadamard ablation uses untuned thresholds; strawman",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Only two old Llama-2-7B models; no GQA, larger or reasoning models",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Limited tasks: six LongBench tasks, no RULER/NIAH; passkey easy and saturated",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "No variance or seeds reported for small differences",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Claim of matching full attention at 64 tokens overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Perplexity lower than full attention unexplained; 2x claim undefined",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Fig. 1 single unspecified setup reads as evidence",
+   "minor": true
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Estimation remains O(s); Hadamard and bucketization overhead omitted",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Table 2 latency units likely wrong (us vs ms)",
+   "minor": true
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "End-to-end speedups modest",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Only one hardware configuration",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "No latency comparison against Quest or other sparse baselines",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No memory savings; extra 2-bit key copy added",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "No batched-serving throughput evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Prefill not addressed",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Cache growth 1/16 statement imprecise",
+   "minor": true
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Novelty moderate: Hadamard rotation and compressed-key scoring established",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Related work mislabels H2O and infLLM",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Prefill stage handling unclear",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Missing needle-in-a-haystack tests",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Limited sparse attention baselines",
+    "points": [
+     "P1.3",
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Single GPU type for efficiency",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Figure 1 setup unspecified",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Hadamard idea borrowed from QuaRot; novelty weak",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Bucketization is standard quantization",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Manhattan distance approximation unjustified",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Threshold choice unexplained",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No threshold sensitivity analysis",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No efficiency comparison with other sparse methods",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No explanation why sparse matches full attention",
+    "points": [
+     "P3.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Baselines thin; many related training-free sparse methods not compared or cited",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "8x sparsity claim relative to handicapped Quest; Quest configuration unstated",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "L1 estimator on 2-bit codes lacks theoretical bound or error analysis",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No measurement of top-k or attention-mass recall versus exact or Quest",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No inner-product estimator on same codes compared to justify Manhattan distance",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "L1 vs L2 explanation speculative; Table 7 differences look like noise",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Thresholds B1-B3 choice, granularity and calibration unspecified",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Unspecified: RoPE order, query quantization thresholds, which layers stay dense",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "GQA not discussed",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "w/o Hadamard ablation uses untuned thresholds; strawman",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Only two old Llama-2-7B models; no GQA, larger or reasoning models",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Limited tasks: six LongBench tasks, no RULER/NIAH; passkey easy and saturated",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No variance or seeds reported for small differences",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Claim of matching full attention at 64 tokens overstated",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Perplexity lower than full attention unexplained; 2x claim undefined",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Fig. 1 single unspecified setup reads as evidence",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Estimation remains O(s); Hadamard and bucketization overhead omitted",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Table 2 latency units likely wrong (us vs ms)",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "End-to-end speedups modest",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Only one hardware configuration",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "No latency comparison against Quest or other sparse baselines",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No memory savings; extra 2-bit key copy added",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "No batched-serving throughput evaluation",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Prefill not addressed",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Cache growth 1/16 statement imprecise",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Novelty moderate: Hadamard rotation and compressed-key scoring established",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Related work mislabels H2O and infLLM",
+    "points": [
+     "Q1.27"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI24"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI20"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI16"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI26"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI5",
+    "QI4",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI21"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI14",
+    "QI15"
+   ]
+  }
+ ]
+}

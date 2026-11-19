@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-SHAmQVifzK",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Frequency convergence inconsistency is shown only in one figure with a Canny-on-GT-disparity mask; causal claim untested and the proposed model's convergence is not quantified",
+    "Numbers inconsistent across tables (RAFT-Stereo 0.53/0.62, Wavelet-RAFT 0.46/0.52/0.467/0.53, non-monotonic Table 6, text percentages do not match Table 3)",
+    "Speed/convergence claim unsupported: RAFT-Stereo at 12 iterations matches Wavelet-RAFT at 8 iterations and is faster; model is about 1.8x slower at equal iterations",
+    "Leaderboard gains over MonSter are marginal (0.01-0.04), with no variance or seeds and no quantitative zero-shot results",
+    "Ablations do not isolate explicit wavelet decomposition from added capacity or the LSTM; limited novelty over Selective-Stereo/DLNR; unclear method description (cell state replaced by F_h)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

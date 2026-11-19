@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-6nxI3aELvc",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Theorem 1 is ill-posed and its proof a sketch; exact MI equality is degenerate for deterministic continuous layers, and the re-trainability claim is never tested",
+    "MI is replaced by a noisy MLP-loss-difference proxy (under-trained MLPs, 5 repeats), so masks are likely dominated by optimisation noise",
+    "No computational cost reported despite sequential per-node MLP re-training",
+    "Baselines are dated or unfairly adapted (unstructured GraSP/SynFlow, ThiNet with uniform ratio); ImageNet compared only to ThiNet with no FLOPs or published SOTA numbers; no ablation separating layer-wise allocation from the MI criterion",
+    "Evidence is plots only with no seeds or CIs and mixed wins/losses despite SOTA claims; CNN filters collapsed to one scalar undermines the MI-preservation claim"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

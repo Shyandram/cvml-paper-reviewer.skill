@@ -1,0 +1,636 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Tiny per-dataset samples give low power; no CIs or tests for margins and rankings",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Multilingual human scores rest on a single annotator without agreement estimates",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Small homogeneous annotator pool confounds claimed cultural advantage with annotator identity",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Claim that models reproduce arbitrary label patterns is untested; no error analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "In-distribution training or contamination as alternative explanation for model advantage not considered",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Classification protocol incomparable: models use trained probe, humans only guidelines",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Clustering protocol incomparable; human instructions on cluster number unclear; 30 items unstable",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Reranking scoring from binary labels unclear; agreement statistic odd; pool sizes missing",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "STS compares human integer ratings with model cosine similarity, different instruments",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Inferring dataset quality from two-annotator agreement is circular; thresholds applied loosely",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Recommendation to replace Emotion and ArXiv clustering not justified",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Inverse agreement-performance relationship asserted without correlation statistic",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Recommendations conflict regarding STS22",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Overall score averages heterogeneous metrics with uneven language weighting",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Inconsistent counts of task pairs across caption and text",
+   "minor": true
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Ill-defined statistics like 67% win rate and 185% of human performance",
+   "minor": true
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Framework contribution thin; essentially a small annotation study",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Protocol not reproducible: recruitment, payment, training, quality control undescribed",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Related work on label noise and human label variation brief",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Low-resource conclusions unsupported; English-only models confound multilingual comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Strongest recent multilingual embedding models omitted",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Small homogeneous annotator pool, single annotators for some languages",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Evaluation sets are small",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No confidence intervals reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Attributing low human agreement to dataset quality issues not rigorous",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Retrieval tasks not included",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Agreement-weighted evaluation idea underdeveloped",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Motivation for human evaluation of MTEB unconvincing",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Retrieval task not included in human evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Most tasks have only two annotations",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Only 20-50 instances annotated per task",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Comparing native low-resource speakers to English-trained models is unfair",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Only two annotators (sometimes one) make human performance unreliable",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "30-50 items per dataset too few for statistical power",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No analysis of causes like training data distribution or cultural mismatch for gaps",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No experiment with LLMs following the same annotation protocol",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Retrieval tasks omitted, limiting practical relevance",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Unclear whether human instructions align with original dataset annotation schemes",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "20-50 instances per task too few for reliable conclusions",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Retrieval task category missing",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No significance testing of performance comparisons",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Low statistical power, no uncertainty",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Single annotator for multilingual tasks",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Small homogeneous annotator pool",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Causal narrative untested",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Training/contamination alternative explanation ignored",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Classification protocol mismatch",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Clustering protocol mismatch",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Reranking protocol unclear",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "STS protocol mismatch",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Circular data-quality diagnosis",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Dataset replacement recommendation unjustified",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Inverse relationship lacks statistics",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Conflicting recommendations",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Heterogeneous aggregation",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Inconsistent counts",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Ill-defined statistics",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Framework contribution thin",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Protocol not reproducible",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Brief related work",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Low-resource claims confounded by English-only models",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Missing strong multilingual models",
+    "points": [
+     "P1.21"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Too few / homogeneous annotators",
+    "points": [
+     "Q1.1",
+     "Q2.3",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Too few annotated instances",
+    "points": [
+     "Q1.2",
+     "Q2.4",
+     "Q3.2",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No CIs or significance testing",
+    "points": [
+     "Q1.3",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Attribution to data quality not rigorous",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Retrieval missing",
+    "points": [
+     "Q1.5",
+     "Q2.2",
+     "Q3.5",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Agreement-weighted evaluation underdeveloped",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Weak motivation",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Unfair comparison with English-trained models",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No analysis of training-related causes of gaps",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No LLM annotator baseline",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Instruction alignment with original annotations unclear",
+    "points": [
+     "Q3.6"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI2",
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI1",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  }
+ ]
+}

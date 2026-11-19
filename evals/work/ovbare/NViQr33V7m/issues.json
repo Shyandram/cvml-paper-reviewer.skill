@@ -1,0 +1,621 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Limited novelty: combines sharpness-aware optimization with MTT with minor optimization changes.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "No comparison with other methods incorporating sharpness-aware minimization.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Missing recent SOTA baselines such as RDED, NRR-DD, SRe2L.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Missing decoupled, diffusion-based and optimization-free distillation baselines (SRe2L, RDED, DELT, etc.).",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Experiments limited to ConvNet; no VGG, ResNet or ViT.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Generalization accuracy improvements in Table 2 marginal (often below 1%).",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "No ablation of trajectory reusing and TUH approximations.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Runtime cost relative to TESLA high despite modest gains, weakening efficiency argument.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Several hyperparameters need careful tuning; setup and transferability to other datasets/architectures unclear.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Lacks discussion of related works on sharpness/generality and dataset bias in distillation.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Limited novelty: simple SAM application; truncated unrolling similar to k-step SGD.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Improvement over SOTA methods incremental.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Missing latest efficient distillation SOTA methods (KRR, M3D, model augmentation).",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "In-domain gains versus FTD marginal, within std, sometimes negative; 'noticeable margins' overstated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No significance testing; number of seeds unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No ablation separating SAM perturbation, input noise, TUH, TR and learning-rate rule.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No sensitivity analysis for rho, gamma, tau, iota.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Why pixel-space flatness of synthetic data improves generalization is not argued.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Fig. 2 gradient-norm evidence does not show flatter minima; no common sharpness or Hessian analysis.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Prop. 4.1 convergence/strong convexity assumptions do not hold in practical non-convex short-trajectory setting.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Confusing notation for iota and inconsistent bound factors.",
+   "minor": true
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Thm. 4.2 bound loose, depends on unspecified learning rate, not numerically checked.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Smoothness and continuity assumptions imprecisely stated.",
+   "minor": true
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Claims of rigorous theoretical support overstated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Learning-rate update described only qualitatively; second-order comparison deferred to appendix.",
+   "minor": true
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Table 8 shows extreme sensitivity to retained truncation fraction (27-point swing).",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Text describing Table 8 trend contradicts the table.",
+   "minor": true
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Truncation knob apparently tuned per dataset; unclear if baselines tuned comparably.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Memory claim overstated: SATM uses more memory than TESLA.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Runtime advantages over MTT/TESLA negligible.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Efficiency reporting inconsistent: identical ImageNet memory, two-GPU remark, complexity vs faster claim.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "ImageNet-1K claims rest only on TESLA comparison with small gains.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No comparison with modern ImageNet-scale methods like SRe2L and RDED.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Unclear whether TESLA numbers use soft labels; comparison possibly unequal.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "ImageNet subset results compare only to MTT and FTD.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Recent trajectory-matching methods such as DATM absent from main tables.",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "SATM-DA add-on results mixed with overlapping standard deviations.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "MTT numbers inconsistent across tables without reconciliation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Continual learning compares few baselines with curves only, no numbers or variance.",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Several typos.",
+   "minor": true
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Novelty limited: direct transplant of SAM to data; engineering contributions incremental.",
+   "minor": false
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Noise scaled by data norm motivated only by citations, without analysis.",
+   "minor": false
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Trajectory reuse means hypergradient not at perturbed point; 'sharpness-aware' label questionable.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited novelty: SAM applied to MTT",
+    "points": [
+     "P1.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No comparison with SAM-based methods",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing recent SOTA distillation baselines",
+    "points": [
+     "P1.3",
+     "P2.1",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "ConvNet-only architectures",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Marginal/incremental improvements",
+    "points": [
+     "P2.3",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No ablation of TR and TUH",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Runtime cost weakens efficiency claim",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Hyperparameter tuning burden and transferability",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Missing related-work discussion",
+    "points": [
+     "P3.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Marginal in-domain gains",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No significance testing / unclear seeds",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No component ablation",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No hyperparameter sensitivity",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Flatness-generalization link unargued",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Flatness evidence insufficient",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Theory assumptions mismatched",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Confusing notation",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Loose Thm 4.2 bound",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Imprecise assumptions",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Overstated theory claims",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "LR update underdescribed",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Fragility to truncation fraction",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Table 8 text inconsistent",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Per-dataset tuning, unequal baseline tuning",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Memory claim overstated",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Negligible runtime advantage",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Inconsistent efficiency reporting",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Thin ImageNet-1K evidence",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Missing ImageNet-scale baselines",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Soft-label comparison unclear",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Limited subset baselines",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Recent trajectory-matching baselines absent",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Mixed SATM-DA results",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Inconsistent MTT numbers",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Weak continual learning evaluation",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Typos",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Limited novelty",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Noise design unmotivated",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Trajectory reuse undermines sharpness-aware objective",
+    "points": [
+     "Q1.30"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI28"
+   ],
+   "related": [
+    "QI30"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI20",
+    "QI23"
+   ],
+   "related": [
+    "QI19",
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI16",
+    "QI17",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI13",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  }
+ ]
+}

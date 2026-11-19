@@ -1,0 +1,635 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Theorem assumes exact marginals; learned scores, schedules, discretisation and resampling not covered",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Molecular data mixed continuous/categorical, so guarantee doesn't cover experiment",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Converse only for strictly negative C_k; C_k=0 and diverging sums unaddressed",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "'Predicts exactly' only for compact support; unbounded support not covered",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Near-zero C_k yields huge variance, the regime where large B degrades",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Bump adds B-proportional FK weight term causing SMC degeneracy",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "No ESS traces, resampling stats, particle study or runtime/NFE comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "B selected by performance; 'B=30 works' rests only on synthetic study",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Choice of expert receiving bump and bump shape not ablated",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Few pockets and molecules; counts and subset selection not in main text",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Molecular tables lack confidence intervals or seeds",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "NR and FKC at w=1.0 should coincide but differ; FKC non-monotone",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Predicted collapse for w>1.1 not visible; 'catastrophic collapse' rests on noisy numbers",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "ACE reported at best w selected on benchmark while baselines fixed",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Different conditioning and training data; Vina a weak proxy",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No diversity, novelty, validity, SA/QED metrics in main text",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Only NR and FKC; no schedule reparameterisation or guidance clipping baselines",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Synthetic task constructed to exhibit failure, so gain is expected",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "'Provably guarantees' and 'complete solution' overstated given theory gaps",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "'Fundamental failure mode', general paradigm and COCO-MIG claims unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Novelty relative to CFG schedulers needs more discussion",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Proofs, setup, metrics, hyperparameters and counts deferred to long appendix",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Table 2 has odd variance entries and questionable validity marks",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Typos such as 'cooridnate'",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Figures 1-4 central but qualitative",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Origin of ratio-of-densities from CFG/contrastive decoding unclear; experts undefined",
+   "minor": true
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Feynman-Kac Correctors lack explicit mathematical formulation",
+   "minor": true
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Significance of Marginal Path Collapse not convincing",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Key experimental setup aspects unclear or unreasonable",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Nonstandard conditional independence notation and extra periods",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Evidence the phenomenon occurs in practice weak; frequency not measured",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Synthetic setup designed to trigger collapse; not a realistic testbed",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Unclear whether molecular gains stem from tuning or actual collapse",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Little explanation of which tasks fit framework; need mathematical derivations of use cases",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Missing references, incomplete proofs, contradictions and undefined symbols in appendix",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Several typos around lines 239, 263 and Section 3.1",
+   "minor": true
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Derivations heavy; Theorem 2.3 unclear; ACE pseudocode would help",
+   "minor": true
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No clear guidance on choosing bump coefficient B",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Theory covers idealised paths, not learned networks and samplers",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Categorical variables outside the theory",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Criterion boundary cases unaddressed",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Exact prediction holds only for compact-support experts",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Positive C_k does not imply good conditioning",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "ACE alters target path, increasing weight variance",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "No ESS, particle-count or runtime analysis",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Bump coefficient B chosen post hoc",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No ablation over bumped expert or bump shape",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Molecular experiments small; counts unreported",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No CIs or seeds for molecular tables",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Inconsistent numbers in molecular tables",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Collapse narrative not borne out by noisy results",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "ACE tuned on evaluation benchmark versus fixed baselines",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Comparison with task-specific models not like-for-like",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Diversity and validity metrics absent",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Limited steering baselines; schedule alignment untested",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Toy problem built to mirror the failure",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Overclaiming",
+    "points": [
+     "P1.19",
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Novelty versus time-varying guidance schedules",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Essential material deferred to appendix",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Odd entries in Table 2",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Typos",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Central figures only qualitative",
+    "points": [
+     "P1.25"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Insufficient background on ratio-of-densities problems",
+    "points": [
+     "Q1.1",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "FKC method lacks explicit formulation",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Practical significance of marginal path collapse unconvincing",
+    "points": [
+     "Q1.3",
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Experimental design unclear or unreasonable",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Minor notation issues and typos",
+    "points": [
+     "Q1.5",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Synthetic experiments designed adversarially",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Molecular gains may reflect tuning rather than collapse",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Errors and gaps in proofs and appendix math",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Heavy notation; pseudocode needed",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Choice of bump coefficient B unexplained",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI6"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Jw7khYzYzl",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Hyperparameters tuned at one near-Chinchilla horizon and frozen for longer runs; tuning effort is unequal across methods, and rankings flip with re-tuning of betas (SOAP vs AdEMAMix)",
+    "Single-seed validation losses with no confidence intervals, while many top-method gaps are only 0.01-0.03",
+    "Scale limited to <=720M parameters and about 50B tokens, with one small untuned MoE; claims about LLM pretraining and practitioner guidance may not extrapolate",
+    "Validation loss only, with no downstream evaluation and no cost (memory/time-to-target) normalization for AdEMAMix and SOAP",
+    "Some causal explanations (Muon vs D-Muon weight decay, Prodigy and Lion mechanisms) are asserted without isolating ablations; limited novelty and a 'first' benchmark claim"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

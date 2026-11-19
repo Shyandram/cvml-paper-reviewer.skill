@@ -1,0 +1,434 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Novelty weak: entropy reward hacking already known; no remedy offered",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Experiments only on small models; need more diverse base models",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No formal results in main paper for SimPO-MaxEnt connection; conditions unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Equivalence non-rigorous: length-normalized alpha prevents partition function cancellation",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Online failure claims rest on Pythia-1B/2.8B; larger models untested",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Only TL;DR summarization; more complex alignment tasks untested",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Response-dependent alpha breaks MaxEnt connection; length normalization unanalyzed",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Margin gamma not related to maximum-entropy RL",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Only small Pythia models; generalization to Qwen/LLaMA unclear",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Limited contribution; implications for preference algorithm design unclear",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Online failure of MaxEnt RL lacks theoretical explanation",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Theory largely a trivial relabelling of reward as log-likelihood",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Partition function cancellation fails with response-dependent alpha; Eq.15 to 16 not derived",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Margin gamma added by analogy, not derived",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Inherited DPO guarantees not checked for length-normalized case",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "MaxEnt observation already made by Liu et al.; incremental theory",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Online experiment tests a different objective than offline SimPO; asymmetry confounded",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "No SimPO-style online or unregularized RL baseline; limitation conclusion unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "KL and MaxEnt runs use different learning rates and coefficients; no matched sweep",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Admitted KL beta sensitivity weakens KL-stable narrative",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "No seeds, error bars or confidence intervals; single runs",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Several results described in text only without data",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Causal claim that entropy exacerbates reward hacking unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Missing zero-coefficient / plain RL control at same learning rates",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Section 4.3 mechanism rests on one DPO diagnostic",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No SimPO experiment, gamma ablation or other offline comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Chi-squared result not reproducible and undetailed",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Only Pythia 1B/2.8B on TL;DR with small RM and one judge; generality overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "No human evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Reproducibility claimed without code or configs",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Presentation: inconsistent hedging, figure order, typos",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited novelty and contribution",
+    "points": [
+     "P1.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Limited model scale and task generality",
+    "points": [
+     "P1.2",
+     "P2.2",
+     "P2.3",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No formal results for theoretical connection",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Length-normalized alpha breaks SimPO-MaxEnt equivalence",
+    "points": [
+     "P2.1",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Margin gamma unexplained",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Online failure lacks theoretical explanation",
+    "points": [
+     "P4.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Theory largely a trivial relabelling of reward as log-likelihood",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Partition function cancellation fails with response-dependent alpha; Eq.15 to 16 not derived",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Margin gamma added by analogy, not derived",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Inherited DPO guarantees not checked for length-normalized case",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "MaxEnt observation already made by Liu et al.; incremental theory",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Online experiment tests a different objective than offline SimPO; asymmetry confounded",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No SimPO-style online or unregularized RL baseline; limitation conclusion unsupported",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "KL and MaxEnt runs use different learning rates and coefficients; no matched sweep",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Admitted KL beta sensitivity weakens KL-stable narrative",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No seeds, error bars or confidence intervals; single runs",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Several results described in text only without data",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Causal claim that entropy exacerbates reward hacking unsupported",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Missing zero-coefficient / plain RL control at same learning rates",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Section 4.3 mechanism rests on one DPO diagnostic",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No SimPO experiment, gamma ablation or other offline comparison",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Chi-squared result not reproducible and undetailed",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Only Pythia 1B/2.8B on TL;DR with small RM and one judge; generality overstated",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No human evaluation",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Reproducibility claimed without code or configs",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Presentation: inconsistent hedging, figure order, typos",
+    "points": [
+     "Q1.20"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI4",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI12"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Zsb27kqtX5",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Guarantee is proven for idealised exact interpolant marginals with compact support; learned networks and mixed continuous/categorical molecule variables are outside the theory, so 'provably guarantees' is overstated",
+    "Missing baseline: re-parameterising experts to a common noise schedule (or clipping/annealing guidance) could remove heterogeneity and the need for ACE",
+    "Molecular evaluation is small and statistically thin (few pockets, no confidence intervals, no diversity/novelty/PoseBusters metrics); w chosen on the test benchmark; Vina rewards strong guidance",
+    "Internal inconsistencies in Table 3 (NR vs FKC at w=1.0 differ on SBDD Vina; non-monotone FKC at w=1.4; w=1.1 does not collapse as predicted)",
+    "ACE changes intermediate marginals; B is tuned post hoc, large B inflates weight variance, and no ESS/runtime/bump-placement ablations are given"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

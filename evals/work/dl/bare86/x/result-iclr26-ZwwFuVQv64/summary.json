@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-ZwwFuVQv64",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "12.4% headline gain is over a self-constructed, high-variance Q-HeteroFL baseline; vs Standalone/Vanilla QFL gains are ~0-2 pts, within std, and Quorus is sometimes worse",
+    "Quorus is evaluated as an ensemble of per-layer classifiers while baselines use a single output; no ensemble-matched or KD/no-KD ablation to isolate the federated layerwise loss",
+    "Noise-awareness never tested in training (noiseless simulation only); hardware eval is Funnel-only, one task, 100 test points, and shows accuracy falling with depth",
+    "Gradient-norm / barren-plateau claim is trivially explained by local per-layer losses, single task, no seeds, depths <=6; shot-efficiency never measured",
+    "Narrow scope: binary tasks, PCA-10, IID 5 clients with 128 samples each, no non-IID or privacy analysis; method mostly adapts DepthFL"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

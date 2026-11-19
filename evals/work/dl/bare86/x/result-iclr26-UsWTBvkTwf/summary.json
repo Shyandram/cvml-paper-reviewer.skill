@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-UsWTBvkTwf",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Per-concept/per-task hyperparameters (r2, alpha) tuned on the reported forgetting metric; 'plug-and-play, minimal tuning' claim unsupported and baselines not tuned equally",
+    "Weak evaluation: templated prompt overlap between mask construction and test, ResNet accuracy, CLIPa/FSR for style, no neighbouring-concept preservation, no Imagenette FID; CLIP drop vs SD understated",
+    "Internal inconsistencies (CLIP 29.56 vs 29.46, 31.18 vs 31.38 for the same config; mislabeled Table 10; CP average) and implausible 0.0 std for FIA/CP/UCE",
+    "Limited novelty over ConceptPrune/sparsity unlearning; saliency vs fusion not isolated; ad hoc Eq. 1-2 and agnostic-neuron rule",
+    "Pruning-based erasure robustness weak (UnlearnDiffAtk 61.7%), only SD1.4/1.5, code not released"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,583 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Benchmark small and curated for perfect agreement; may hide preference diversity and inflate metrics",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Reproducibility brittle since candidate pool depends on proprietary editors",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Online RL shown on one editor with one algorithm",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No hyperparameter ablations or out-of-distribution edit-type stress tests",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Self-ensemble cost, latency and memory not reported; no equal-budget comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Claim that reward variance aids optimization not causally established",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "RL experiments only on OmniGen2; other editors untested",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Limited novelty: Flow-GRPO editing, variance-over-accuracy idea, self-ensemble all prior",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Training data not released; hinders reproduction",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Labeling with current models' candidates caps supervision where all models struggle",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Section 6.4.1 compares different base models; reward model effect confounded",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "RL only on OmniGen2",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Self-ensembling increases inference cost; trade-off not discussed",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "No comparison with other open-source reward models such as HPSv3, ImageReward",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Claims of surpassing GPT-5 overstated; no confidence intervals or significance tests",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Asymmetric comparison: EditScore ensembled K=4, proprietary models single-pass",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Single-pass EditScore only matches its GPT-4.1 teacher",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Circular evaluation: reward and metric share GPT-4.1 rubric; reward hacking not excluded",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No human evaluation or reward-hacking checks of RL policy",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Judge used for ImgEdit-Bench not stated",
+   "minor": true
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Causal claim that reward fidelity unlocks RL under-supported",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Missing baseline RL with teacher model as reward on same setup",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "UniPic2 comparison uses different base model and recipe; not controlled",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Table 4 equal RM accuracy with different RL outcomes contradicts narrative",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "No seeds or error bars for RL results",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Pairwise accuracy metric under-specified: ties, chance level, below-chance consistency",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Pairs not independent; effective sample size small; per-category numbers noisy",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Benchmark tasks curated from same benchmarks used to evaluate RL",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Possible overlap of training instructions/images with evaluation; no decontamination",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Benchmark candidate pool includes outputs of RL base model OmniGen2",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Novelty modest: assembled from existing components",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "No other editing reward model evaluated on new benchmark",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "No comparison to pairwise or Bradley-Terry reward model",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Data filtering barely described and not ablated",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Training and RL hyperparameter details insufficient",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Efficiency claimed but unmeasured; Avg@4 multiplies reward cost",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "No analysis linking RM accuracy to RL outcomes across model sizes",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "RL tested on one base model and one algorithm",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Presentation inconsistencies and typos",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Small consensus-curated benchmark",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Proprietary candidate pool hurts reproducibility",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "RL limited to one editor/algorithm",
+    "points": [
+     "P1.3",
+     "P2.1",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No hyperparameter/OOD ablations",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Self-ensemble cost not analyzed",
+    "points": [
+     "P1.5",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Variance claim not causal",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Limited methodological novelty",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Training data not released",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Candidate-based labeling ceiling",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Optimization comparison uses different base models",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Missing other reward model baselines",
+    "points": [
+     "P4.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Claims of surpassing GPT-5 overstated; no confidence intervals or significance tests",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Asymmetric comparison: EditScore ensembled K=4, proprietary models single-pass",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Single-pass EditScore only matches its GPT-4.1 teacher",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Circular evaluation: reward and metric share GPT-4.1 rubric; reward hacking not excluded",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No human evaluation or reward-hacking checks of RL policy",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Judge used for ImgEdit-Bench not stated",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Causal claim that reward fidelity unlocks RL under-supported",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing baseline RL with teacher model as reward on same setup",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "UniPic2 comparison uses different base model and recipe; not controlled",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Table 4 equal RM accuracy with different RL outcomes contradicts narrative",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No seeds or error bars for RL results",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Pairwise accuracy metric under-specified: ties, chance level, below-chance consistency",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Pairs not independent; effective sample size small; per-category numbers noisy",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Benchmark tasks curated from same benchmarks used to evaluate RL",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Possible overlap of training instructions/images with evaluation; no decontamination",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Benchmark candidate pool includes outputs of RL base model OmniGen2",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Novelty modest: assembled from existing components",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No other editing reward model evaluated on new benchmark",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No comparison to pairwise or Bradley-Terry reward model",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Data filtering barely described and not ablated",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Training and RL hyperparameter details insufficient",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Efficiency claimed but unmeasured; Avg@4 multiplies reward cost",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "No analysis linking RM accuracy to RL outcomes across model sizes",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "RL tested on one base model and one algorithm",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Presentation inconsistencies and typos",
+    "points": [
+     "Q1.25"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI24"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI22"
+   ],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI18"
+   ],
+   "related": [
+    "QI19"
+   ]
+  }
+ ]
+}

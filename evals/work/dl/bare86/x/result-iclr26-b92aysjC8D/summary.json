@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-b92aysjC8D",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No baselines beyond the unmodified model: no temperature/greedy, DeepConf, entropy-branching or compute-matched voting comparison, despite claims over post-hoc and RL self-correction",
+    "Small-sample evaluation (30-problem sets, 5 samples, no seeds or CIs); noisy Cons@5; inconsistent table entries and text; low or non-standard base numbers",
+    "Gains may stem from entropy sharpening or truncation effects (4k cap on Qwen2.5-Math) rather than reflection; no mechanistic analysis; lambda=0 ablation already gives large gains",
+    "Theorem 1 is a textbook scalarization/Lagrangian equivalence with epsilon defined post hoc, oversold as theoretical grounding",
+    "Efficiency (+50%) measured only in a 4k greedy setting for one model, not on 32k reasoning traces; ablations only on 100 MATH500 problems with one model; math-only scope"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

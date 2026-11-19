@@ -1,0 +1,758 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Methods described in Section 3 are hard to map to methods evaluated in Section 4",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Unclear which techniques are novel versus existing (max-activation descriptions, logit lens)",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Needs qualitative examples of annotator inputs and resulting labels per method",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Sentences are long and hard to read",
+   "minor": true
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Paper lacks clear narrative and stated claims; bolded takeaway format ineffective",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Puri et al. evaluation metrics described too briefly",
+   "minor": true
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "LLM-as-judge metrics not validated against human annotations",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Baselines Neuronpedia and MaxAct* insufficiently described",
+   "minor": true
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Unclear whether method works on other sparse dictionaries such as SAEs",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Computational cost of techniques, especially circuit analyses, not reported",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "No implementation available for nontrivial methods",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Techniques may be too niche and expensive for practical use",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Motivation and explanation of Assumption 2 unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Motivation and explanation of circuit-based clustering unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Faithfulness scores very low, questioning whether interpretations reflect feature behavior",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "CircuitLens still requires secondary LLM and large dataset, contradicting core motivation",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Figure 1 uninformative; should be expanded with subfigures for each step",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Section 3.2 circuit analysis poorly contextualized relative to overall goal",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Section 3.2 workflow hard to follow; should be reorganized in logical order",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Evaluation reported for only four layers; need all layers",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Evaluation criteria not aggregated into single score for comparing configurations",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Headline 'matches or exceeds' claims overstated; purity worse for WeightLens in Table 1",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "CircuitLens with full-distribution sampling below baselines in parts of Table 2",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Best CircuitLens results use top-activation sampling, undercutting full-distribution argument",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Claim that circuits uncover patterns invisible to activation methods weakly supported",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Evaluation scale small: ~250 features per layer, four layers, one model",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "No confidence intervals, seeds or significance tests; small differences treated as meaningful",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Feature selection procedure unclear, possibly including dead features",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "FADE metrics are LLM-in-the-loop with possible format bias; no human evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "WeightLens comparison subset unclear, risking circularity or unfair comparison; report covered/uncovered separately",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Assumptions 1 and 2 asserted but not tested",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Z-score outlier threshold value and sensitivity unjustified for non-Gaussian projections",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Validation step reintroduces dataset dependence, weakening data-free claim",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "'Semantically aligned' part of Assumption 2 not operationalised",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "RoPE explanation for mid-layer drop speculative and untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Attention attributions not causally validated by ablation or patching",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "No evaluation of cluster quality or comparison with embedding-based clustering",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "No ablation of rho, DBSCAN parameters or sample count",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Cluster counts not shown to reflect real polysemanticity",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Gains from combining WeightLens and CircuitLens small",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Method improvement confounded with prompt change; no prompt-matched baseline",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Faithfulness near zero everywhere, non-discriminative; explanation untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Output-centric component costly and its benefit shown only anecdotally",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Proposed metric modification for circuits not carried out",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Missing baselines: other weight-based or logit-lens methods",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Scalability and efficiency claims not quantified",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "24M-token versus large-corpus comparison confounds method with dataset",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Typos such as 'WeigthLens' and table value errors",
+   "minor": true
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Much key evidence relegated to appendix",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Mapping between Section 3 methods and Section 4 evaluated methods unclear",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Novelty of individual techniques unclear",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing qualitative examples of inputs and labels",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Long hard-to-read sentences",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No clear narrative or stated claims",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Evaluation metrics described too briefly",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "LLM-judge metrics not validated by humans",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Baselines insufficiently described",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Generalization beyond transcoders to SAEs unknown",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Cost and practicality of methods not reported",
+    "points": [
+     "P1.10",
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No code implementation available",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Circuit-based analysis/clustering motivation and context unclear",
+    "points": [
+     "P2.2",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Section 3.2 workflow ordering hard to follow",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Assumption 2 unclear",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Faithfulness scores very low",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "CircuitLens still depends on LLM and large data",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Figure 1 uninformative",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Only four layers evaluated",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "No aggregated evaluation score",
+    "points": [
+     "P3.6"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Headline 'matches or exceeds' claims overstated; purity worse for WeightLens in Table 1",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "CircuitLens with full-distribution sampling below baselines in parts of Table 2",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Best CircuitLens results use top-activation sampling, undercutting full-distribution argument",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Claim that circuits uncover patterns invisible to activation methods weakly supported",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Evaluation scale small: ~250 features per layer, four layers, one model",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No confidence intervals, seeds or significance tests; small differences treated as meaningful",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Feature selection procedure unclear, possibly including dead features",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "FADE metrics are LLM-in-the-loop with possible format bias; no human evaluation",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "WeightLens comparison subset unclear, risking circularity or unfair comparison; report covered/uncovered separately",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Assumptions 1 and 2 asserted but not tested",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Z-score outlier threshold value and sensitivity unjustified for non-Gaussian projections",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Validation step reintroduces dataset dependence, weakening data-free claim",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "'Semantically aligned' part of Assumption 2 not operationalised",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "RoPE explanation for mid-layer drop speculative and untested",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Attention attributions not causally validated by ablation or patching",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "No evaluation of cluster quality or comparison with embedding-based clustering",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No ablation of rho, DBSCAN parameters or sample count",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Cluster counts not shown to reflect real polysemanticity",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Gains from combining WeightLens and CircuitLens small",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Method improvement confounded with prompt change; no prompt-matched baseline",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Faithfulness near zero everywhere, non-discriminative; explanation untested",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Output-centric component costly and its benefit shown only anecdotally",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Proposed metric modification for circuits not carried out",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Missing baselines: other weight-based or logit-lens methods",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Scalability and efficiency claims not quantified",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "24M-token versus large-corpus comparison confounds method with dataset",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Typos such as 'WeigthLens' and table value errors",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Much key evidence relegated to appendix",
+    "points": [
+     "Q1.28"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI27"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI25"
+   ],
+   "related": [
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI21"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  }
+ ]
+}

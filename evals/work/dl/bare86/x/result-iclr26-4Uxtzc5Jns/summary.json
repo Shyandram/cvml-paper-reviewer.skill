@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-4Uxtzc5Jns",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Global score is close to H2O accumulated attention with exponential decay; no H2O/decayed-H2O/TOVA baseline or ablation isolating the contribution",
+    "Motivating overlap analysis (Fig. 1) is not size-controlled, uses a single model/benchmark and last 512 tokens, and does not support the specific max/decay design",
+    "No seed variance or confidence intervals; alpha tuned on AMC23 which is also a headline benchmark; AIME24 has only 30 problems; AMC 2023 cites AMC 8 page",
+    "Training evaluated only at 4k tokens (not long-generation regime), no control with baseline eviction under RL-Sparse, single run, small gains within noise",
+    "Token retention ratio and throughput claims are confounded: ratio on correct samples only, generation length under compression not reported, 12-20x speedup compares against OOM Full-KV and equals R-KV at same budget"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

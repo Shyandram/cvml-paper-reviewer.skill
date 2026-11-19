@@ -1,0 +1,698 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Model equals anisotropic RBF or Gaussian-mixture regression; novelty limited",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Related work ignores RBF networks, free-knot splines, adaptive-grid methods",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Universal approximation result is an immediate corollary of Cybenko",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Wasserstein gradient in Theorem 1 is just ordinary parameter gradient; theory thin",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Experiments use Adam/GD, never WFR or Fisher-Rao; WFR crucial-claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No convergence result established for this geometry",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Several displayed gradient formulas look questionable",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Gaussian Splatting special-case claim unsubstantiated; real 3DGS pipeline and opacity not covered",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Interpretations of splatting heuristics as regularization or pruning are speculative",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "No novel-view-synthesis experiment despite being stated motivation",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Experiments are small 1D/2D toy problems",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No seeds, error bars, or repeated runs",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "MLP and KAN baselines poorly configured and not tuned",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Missing stronger low-dimensional baselines like RBF, GP, SIREN, Fourier features",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Allen-Cahn setting mild; no comparison with standard numerical solver",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Parameter-count comparisons not like-for-like; separable test function favours method",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "PINN error metric not clearly defined",
+   "minor": true
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Bound implies curse of dimensionality; no evidence for d>=3",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Per-step computational cost not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Numerical stability of matrices A_i not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Overfitting acknowledged but not studied; no regularization proposed",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "No ablation on mother splat, k, initialization, or optimizer",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Many typos, garbled text, duplicated references",
+   "minor": true
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Theorem 3 stated informally, not rigorous",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Promised instruction manual contribution not delivered",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Over-claiming throughout, e.g. vastly outperforming, competing with Chebyshev",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Only 1D/2D experiments; bound shows curse of dimensionality limiting applicability",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No memory and runtime comparison with MLP and KAN baselines",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Definition of low dimensionality not clarified",
+   "minor": true
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Only synthetic toy PDEs; no real-world data validation",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Not contrasted with adaptive RBF networks, mixture density networks, mesh-free methods",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "No concrete regularization strategies against overfitting in experiments",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Very little numerical evidence presented",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Experiments limited; missing baselines like random Fourier features plus MLP",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Need more complex settings like 3D regression or higher-order PDEs",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No empirical Gaussian splatting / novel view synthesis validation",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Inner matrix map T may need different form to be positive definite",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Bound on k is likely loose",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "More ablations needed for low-dimensional tasks",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No principled regularizer or regularization experiments for overfitting",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Baselines should include tuned classical kernels and more PDE regimes",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "No high-dimensional or deep splat network experiments",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Novelty vs RBF/Gaussian mixtures",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Related work omits classical adaptive methods",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Universal approximation trivial",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "WFR gradient is standard backprop",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "WFR not used in experiments",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No convergence result",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Questionable formulas",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Gaussian Splatting unification unsubstantiated",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Speculative heuristic interpretations",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No NVS experiment",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Toy low-dimensional experiments",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No seeds/error bars",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Under-tuned baselines",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Missing strong baselines",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No numerical solver comparison",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Unfair parameter comparisons/test function",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "PINN metric undefined",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Curse of dimensionality, no d>=3",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Cost per step undiscussed",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Stability of A_i",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Overfitting/regularization unaddressed",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Missing ablations",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Typos",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Informal Theorem 3",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Instruction manual not delivered",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Over-claiming",
+    "points": [
+     "P1.26"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Limited to low dimensions; no high-dim experiments",
+    "points": [
+     "Q1.1",
+     "Q3.2",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No runtime/memory comparison",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Low dimensionality undefined",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No real-world data",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Little numerical evidence",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Related methods not contrasted",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No regularization for overfitting",
+    "points": [
+     "Q1.6",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Baselines limited",
+    "points": [
+     "Q3.1",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No NVS experiment",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Possible error in T map",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Loose bound on k",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "More ablations needed",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI5",
+    "QI4"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI11",
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-2Jyb1yu3nN",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Headline 'matches or exceeds' claim holds only for Clarity/Responsiveness; Purity is worse and Faithfulness is ~0 for all methods",
+    "Small evaluation (~250 features x 4 layers, one model), no variance or significance tests, LLM-based FADE metrics",
+    "Possible selection bias: WeightLens covers only 25-59% of features, and it is unclear whether baselines are compared on the same subset",
+    "CircuitLens full-distribution results are often below baselines; best results use top-activation sampling; no ablation of clustering, hyperparameters or prompt effects",
+    "Circuit attributions are not causally validated and compute and scalability claims are not quantified"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

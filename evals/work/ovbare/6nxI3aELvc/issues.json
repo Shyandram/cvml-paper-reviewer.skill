@@ -1,0 +1,1322 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Problem statement should be tighter; structured pruning task not stated precisely early.",
+   "minor": true
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Core insight on which MI is preserved and how it is estimated is stated imprecisely and late.",
+   "minor": true
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Figure 1 uses undefined notation; caption should contain needed information.",
+   "minor": true
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No explanation of why this was not already done or which failure mode is addressed.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Precise method and implementation choices not clearly stated; needs algorithm or master equation.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "MI-preservation insight is not new; contribution beyond earlier approaches unclear.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Unclear why layerwise MI maintenance matters versus output-target MI.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Preserving information does not ensure preserving representation; this aspect is not addressed.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Theorem 1 is ill-defined, imprecise, wrong as stated, with incomplete proof.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Theorem 1 provides no practical value; existence of g does not mean it is attainable.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Theorem 2 merely restates the data processing inequality and is unused.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Missing related information-theoretic pruning work (Dai VIB, Isik, Battiti).",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Exact MI equality requirement too strong and not what is actually implemented.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Implemented method seems to be ordinary layerwise reconstruction-loss pruning like other methods.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Term h_{l-1} in Eq. 1 defined too late.",
+   "minor": true
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "MI approximation formula is cryptic, undefined, and likely a poor MI estimator.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Expectation in estimator cannot be computed from finite data; unaddressed.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Claim that estimate equals true MI for discrete targets with cross-entropy is questionable.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Layerwise optimization ignores output sensitivity to perturbations.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Results are not clearly better than other methods.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Experimental methods are inconsistently applied across models.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Experiments use outdated settings like LeNet/MNIST and VGG.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Experimental details unclear: losses, thresholds, per-layer choices, competitor setup.",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Competitors may not have had comparable fine-tuning or compute.",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Missing baseline of a directly trained small model of matched size.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Models and datasets too simple; no ViT or ImageNet-1K.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Baselines outdated; missing recent structured pruning like LLMPruner and SliceGPT.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Results only shown as figures; tables would be clearer.",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Method has a high discovery (mask computation) cost.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Figure 2a does not state whether train or test accuracy.",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Unexplained performance drop between MI 10 and 15 in Figure 2a.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Figure 2c sparsity ratios and best-of-rest selection unspecified.",
+   "minor": true
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Figure 2b does not show masks are useful since no performance is shown.",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Re-trainability claim contradicted by layer collapse in Figure 5.",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Type of average, number of runs, and meaning of error bars unspecified.",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "Meaning of \"20 batches of activations\" in retraining unclear.",
+   "minor": true
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Long PaT retraining makes comparison computationally non-equivalent with other methods.",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "Retraining hyperparameters and epoch counts are unjustified; baselines might do better with tuning.",
+   "minor": false
+  },
+  {
+   "id": "P3.11",
+   "reviewer": "P3",
+   "text": "Figure 3 unclear; needs colours and train/test specification.",
+   "minor": true
+  },
+  {
+   "id": "P3.12",
+   "reviewer": "P3",
+   "text": "Red lines in Figure 6 are unexplained.",
+   "minor": true
+  },
+  {
+   "id": "P3.13",
+   "reviewer": "P3",
+   "text": "Table 2 notation unclear.",
+   "minor": true
+  },
+  {
+   "id": "P3.14",
+   "reviewer": "P3",
+   "text": "Appendix figures placed in wrong sections.",
+   "minor": true
+  },
+  {
+   "id": "P3.15",
+   "reviewer": "P3",
+   "text": "Typos and citation issues: \"loss 1\", undefined MACS, wrong Fahlman year.",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Line 172 should use a Hadamard product.",
+   "minor": true
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Only column-wise (node) masks considered, a very special kind of pruning.",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "\"By gradient ascent\" and function class F undefined at line 207.",
+   "minor": true
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Theorem 1 proof unconvincing; Donsker-Varadhan representation misstated.",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Theorem 2 statement incorrect (should be equality) and proof unconvincing.",
+   "minor": false
+  },
+  {
+   "id": "P4.6",
+   "reviewer": "P4",
+   "text": "MI estimator paragraph sloppy; approximation not supported by Covert et al.",
+   "minor": false
+  },
+  {
+   "id": "P4.7",
+   "reviewer": "P4",
+   "text": "Variable h introduced ten lines after use.",
+   "minor": true
+  },
+  {
+   "id": "P4.8",
+   "reviewer": "P4",
+   "text": "Figures 5-6 are nearly unreadable.",
+   "minor": true
+  },
+  {
+   "id": "P4.9",
+   "reviewer": "P4",
+   "text": "Claim that each layer is injective in its predecessor seems untrue.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Theorem 1 ill-formed: supremum of functions equated with random variable; F undefined.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Theorem 1 proof is a sketch; equality unjustified, learnability not shown.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Claim that MIPP implies re-trainability is untested.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "For deterministic continuous layers MI is degenerate, so target MI equality ill-defined.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "MI estimator is a heuristic MLP loss difference without guarantees for continuous MSE.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Decisions rely on under-trained MLPs with few repeats; confidence meaning unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Stopping test conflates estimator variance with node effect.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Computational cost not reported and likely high; no wall-clock or FLOP comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Sweeping sparsity hyperparameter requires full pruning run per plotted point.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "GraSP and SynFlow are unstructured, adapted to structured via ad hoc aggregation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Modern structured-pruning baselines missing (HRank, CHIP, FPGM, DepGraph, etc.).",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "ThiNet given uniform ratio while MIPP uses learned layerwise ratios; confounded comparison.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "ImageNet result reports only neuron reduction; no FLOPs, parameters, or published comparisons.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Results only as plots with varying y-axes; no tables.",
+   "minor": true
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No seeds or confidence intervals; results acknowledged noisy.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "State-of-the-art claims overstated; MIPP outperformed in several settings.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Baselines matched on neuron reduction, not FLOPs or parameters.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Method inapplicable with task-irrelevant inputs, limiting prune-at-initialization claim.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Layer-collapse percentages coarse due to few runs per sparsity bin.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "How layer collapse is detected is not specified.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "No guarantee against layer collapse; argument is informal.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Output-to-input order and MI ordering not ablated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Collapsing conv filters to scalar discards spatial information, voiding MI claim for CNNs.",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Skip connections unpruned and batch-norm handling ad hoc.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Novelty thin: combines TERC with Covert et al. estimator.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Notation slips and reference errors.",
+   "minor": true
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Several explanatory claims asserted without evidence.",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Feature-selection experiment lacks feature-selection baselines.",
+   "minor": false
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Code not available.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Problem statement not precise early",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Core MI insight stated imprecisely",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Figure 1 notation/caption",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Failure mode addressed not stated",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Precise method/implementation unclear",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Insight not novel",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Why layerwise MI rather than output MI",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Information vs representation preservation",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Theorem 1 ill-defined, proof wrong/unconvincing",
+    "points": [
+     "P1.9",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Theorem 1 of no practical value",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Theorem 2 restates DPI, unused",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Theorem 2 statement incorrect",
+    "points": [
+     "P4.5"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Missing information-theoretic pruning related work",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Exact MI equality requirement unrealistic / not implemented",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Implemented method like ordinary layerwise pruning",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "h defined too late",
+    "points": [
+     "P1.15",
+     "P4.7"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "MI estimator formula cryptic and unsupported",
+    "points": [
+     "P1.16",
+     "P4.6"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Finite-data estimation of expectation unaddressed",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Exactness claim for cross-entropy questionable",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Layerwise loss ignores output sensitivity",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Results not clearly better than others",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Inconsistent experimental methods across models",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Outdated/simple models and datasets",
+    "points": [
+     "P1.22",
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Experimental setup details unclear",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Unequal compute/fine-tuning across compared methods",
+    "points": [
+     "P1.24",
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Missing directly-trained small model baseline",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Outdated baselines, missing recent structured pruning",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Results only in figures, no tables",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "High mask discovery cost",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Fig 2a train or test accuracy",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Unexplained drop in Fig 2a",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "Fig 2c ratios/best-of-rest unspecified",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI33",
+    "summary": "Fig 2b usefulness claim unsupported",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI34",
+    "summary": "Re-trainability claim contradicted by collapse",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI35",
+    "summary": "Averages, runs, error bars unspecified",
+    "points": [
+     "P3.7"
+    ]
+   },
+   {
+    "id": "PI36",
+    "summary": "\"20 batches of activations\" unclear",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI37",
+    "summary": "Retraining hyperparameters unjustified",
+    "points": [
+     "P3.10"
+    ]
+   },
+   {
+    "id": "PI38",
+    "summary": "Figure 3 unclear",
+    "points": [
+     "P3.11"
+    ]
+   },
+   {
+    "id": "PI39",
+    "summary": "Figure 6 red lines unexplained",
+    "points": [
+     "P3.12"
+    ]
+   },
+   {
+    "id": "PI40",
+    "summary": "Table 2 notation unclear",
+    "points": [
+     "P3.13"
+    ]
+   },
+   {
+    "id": "PI41",
+    "summary": "Appendix figures misplaced",
+    "points": [
+     "P3.14"
+    ]
+   },
+   {
+    "id": "PI42",
+    "summary": "Typos and citation errors",
+    "points": [
+     "P3.15"
+    ]
+   },
+   {
+    "id": "PI43",
+    "summary": "Should be Hadamard product",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI44",
+    "summary": "Only column-wise masks considered",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI45",
+    "summary": "Gradient ascent and F undefined",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI46",
+    "summary": "Figures 5-6 unreadable",
+    "points": [
+     "P4.8"
+    ]
+   },
+   {
+    "id": "PI47",
+    "summary": "Injectivity claim implausible",
+    "points": [
+     "P4.9"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Theorem 1 ill-formed, F undefined",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Theorem 1 proof sketchy, learnability not shown",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Re-trainability claim untested",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "MI equality degenerate for deterministic layers",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "MI estimator heuristic without guarantee",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Noisy MLP-based pruning decisions",
+    "points": [
+     "Q1.6",
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Computational cost unreported and high",
+    "points": [
+     "Q1.8",
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Unstructured baselines adapted ad hoc",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Missing modern structured baselines",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Layerwise ratio confound with ThiNet",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "ImageNet reports only neuron reduction",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Plots only, no tables",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No seeds or confidence intervals",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "SOTA claims overstated",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Baselines not matched in FLOPs/params",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Inapplicable with task-irrelevant inputs",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Collapse measurement coarse",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Collapse detection unspecified",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No guarantee against collapse",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Ordering choices not ablated",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Conv filter scalar collapse voids MI claim",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Skip connections/BN handling",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Thin novelty",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Notation and reference errors",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Unsupported explanatory claims",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Feature-selection experiment lacks baselines",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Code unavailable",
+    "points": [
+     "Q1.29"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI23"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI1",
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI23"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI23"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI33",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI34",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI35",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI36",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI37",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI38",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI39",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI40",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI41",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI42",
+   "match": [
+    "QI24"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI43",
+   "match": [],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI44",
+   "match": [],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI45",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI46",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI47",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  }
+ ]
+}

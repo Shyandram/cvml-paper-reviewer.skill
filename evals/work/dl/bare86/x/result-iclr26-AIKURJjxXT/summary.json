@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-AIKURJjxXT",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Single-run results with no seeds or variance; out-of-domain gains over GRPO/DAPO are under 1 point on average; headline percentages are relative to gains rather than accuracy",
+    "No compute- or sample-matched baselines (larger G, DAPO with dynamic sampling, curriculum or off-policy methods); method costs 1.35x time per step and uses up to 25 samples on hard prompts",
+    "Theory is heuristic: tabular NPG entropy result from a blog post applied to clipped transformer RL; entropy increase and decrease are both presented as beneficial and the covariance term is never measured",
+    "Off-policy handling for replayed and temperature-1.2 samples is unspecified; the positive-only filtering and the claim that negatives are harmful rest on correlational curves from one dataset",
+    "Narrow scope (one 7B model, mostly Geo3K), no pass@k evidence for 'deeper reasoning', acknowledged hyperparameter sensitivity, ablations shown only as curves"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

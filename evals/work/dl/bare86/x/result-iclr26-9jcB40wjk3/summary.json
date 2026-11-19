@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-9jcB40wjk3",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Baseline comparison possibly uneven: SAFA-SNN base-session accuracy is 10-20 points above baselines, so last-session gains largely reflect base training; no matched-recipe control",
+    "No matched ANN baseline; the SNN-specific components (ZOO only in base session, threshold alignment) are not shown to matter for incremental learning or on-device efficiency",
+    "Energy claim (20%) is weak: measured as power x time on a GPU device, Fig. 4 differences are about 10%, no memory/latency measurement despite on-device motivation",
+    "Subspace projection (Eq. 14-15) has dimension/invertibility problems; convergence theory (Eq. 11-12) mixes non-convex and convex rates and is inherited from prior work",
+    "ZOO vs surrogate gradient not isolated in ablation; inconsistent notation/algorithm (mask, threshold update needing base firing rates); odd parameter counts in Table 3"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

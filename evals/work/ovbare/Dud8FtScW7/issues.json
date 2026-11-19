@@ -1,0 +1,671 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Teacher models improve quickly; observations may not hold in future",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Teacher diversity limited; no analysis by architectural differences",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Notation M in Section 3.1 unclear (framework or network)",
+   "minor": true
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Figures 1-4 not referenced in main text",
+   "minor": true
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Typo at lines 112-113: should be D^target",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Boundary between data-centric CoT distillation and general data synthesis unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Closed-source teacher traces with limited transparency on prompts and settings; reproducibility",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "LLM-as-a-Judge filtering not validated against human judgments",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Visual and agentic tasks underrepresented (one benchmark each)",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "OOD transfer pairs not systematically justified",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Conclusions tied to specific teacher-student pairs; generalization to new architectures unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "No comparison with non-data-centric distillation such as logit distillation",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Only basic augmentation/selection/mixing methods; no SOTA techniques",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "No rigorous discussion of when strategies generalize versus task-specific",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "No quantitative inference efficiency metrics (throughput, latency, memory)",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Augmentation vs selection vs mixing confounded by training-set size; no size-matched control",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "LLM-as-a-Judge effectiveness claims contradicted by own tables",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Teacher-correctness filtering consistent-improvement claim contradicted",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Recommended augment-filter-mix pipelines never evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No Selection/No Mixing baseline rows inconsistent with Vanilla CoT",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Vanilla CoT below No CoT and zero-shot; weak fine-tuning recipe",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Table 4 swings suggest training instability, not data volume",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Table 4 Vanilla CoT numbers inconsistent with Table 1",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "No variance, CIs or significance tests; single runs for visual/agentic",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Teacher models inconsistently specified across abstract, text and tables",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Different teachers and judges per task; cross-task comparison uncontrolled",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Textual judge Llama-2-70B weak and outdated",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Missing details: judge prompt, thresholds, hyperparameters, dataset sizes, training target",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Visual+Agentic average defined only for some rows",
+   "minor": true
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Learnability-gap claim over-claimed from single small experiment",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Architectural alignment explanation for teacher differences speculative",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Prior distillation history claim rests on small uncontrolled differences",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Table 3 Llama results only on WebArena",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "OOD 'consistently improves' claim contradicted by flat/negative rows",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "OOD gains likely format adaptation; controls missing",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "GSM8K 80.74 after MATH training irreconcilable with low MATH accuracy",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Some OOD pairs are near-distribution",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "OOD analysis cites Table 4 instead of Table 5",
+   "minor": true
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "No new method; only existing techniques evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "'First benchmark' claim strong; no new eval set or protocol",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Benchmarks small and old; teachers dated",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Modern long-CoT R1-style distillation not studied",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Many typos and errors, including Dsource for Dtarget",
+   "minor": true
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Analysis uses hedged, untested mechanistic explanations",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Findings may not hold as teachers improve",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Limited teacher/architecture diversity limits generalization",
+    "points": [
+     "P1.2",
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Notation M unclear",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Figures not referenced",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "D^target typo",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Data-centric scope fuzzy",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Closed-source CoT generation reproducibility",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "LLM judge not human-validated",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Visual/agentic tasks underrepresented",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "OOD pairs unjustified",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No non-data-centric distillation comparison",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Only basic data strategies",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Generalizability of strategies across tasks undiscussed",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No inference efficiency metrics",
+    "points": [
+     "P3.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Augmentation vs selection vs mixing confounded by training-set size; no size-matched control",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "LLM-as-a-Judge effectiveness claims contradicted by own tables",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Teacher-correctness filtering consistent-improvement claim contradicted",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Recommended augment-filter-mix pipelines never evaluated",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No Selection/No Mixing baseline rows inconsistent with Vanilla CoT",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Vanilla CoT below No CoT and zero-shot; weak fine-tuning recipe",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Table 4 swings suggest training instability, not data volume",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Table 4 Vanilla CoT numbers inconsistent with Table 1",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No variance, CIs or significance tests; single runs for visual/agentic",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Teacher models inconsistently specified across abstract, text and tables",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Different teachers and judges per task; cross-task comparison uncontrolled",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Textual judge Llama-2-70B weak and outdated",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Missing details: judge prompt, thresholds, hyperparameters, dataset sizes, training target",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Visual+Agentic average defined only for some rows",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Learnability-gap claim over-claimed from single small experiment",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Architectural alignment explanation for teacher differences speculative",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Prior distillation history claim rests on small uncontrolled differences",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Table 3 Llama results only on WebArena",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "OOD 'consistently improves' claim contradicted by flat/negative rows",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "OOD gains likely format adaptation; controls missing",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "GSM8K 80.74 after MATH training irreconcilable with low MATH accuracy",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Some OOD pairs are near-distribution",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "OOD analysis cites Table 4 instead of Table 5",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "No new method; only existing techniques evaluated",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "'First benchmark' claim strong; no new eval set or protocol",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Benchmarks small and old; teachers dated",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Modern long-CoT R1-style distillation not studied",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Many typos and errors, including Dsource for Dtarget",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Analysis uses hedged, untested mechanistic explanations",
+    "points": [
+     "Q1.29"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI15",
+    "QI16",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI28"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI22"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI24",
+    "QI27"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-4fhbxglvYs",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Non-standard self-built six-task protocol with retrained baselines that look under-trained (e.g., Restormer 20.4 dB denoising, AirNet 8.9 dB low-light); no results on standard AIR benchmarks with official checkpoints",
+    "Latent encoder is pretrained on the same degradations as the test set with a discriminative regularizer, so it is not truly label-free; 'unseen' degradations are compositions of seen ones",
+    "Numbers inconsistent between abstract (1.68 dB), tables (+2.78 dB) and text (+5.64 dB desnowing vs +4.42 in Table 1)",
+    "Ablation shows the 3WD decoder gating accounts for most of the gain, not the latent prior; variants are undefined; Table 5 SA/CA baselines (7.7 dB worse) are implausible",
+    "'Linear attention' 3WD is just a sigmoid-gated Hadamard product with no token mixing; efficiency and 'reasoning' claims are overstated"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

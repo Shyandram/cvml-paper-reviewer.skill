@@ -1,0 +1,684 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Central claim that AR avoids spurious edits unsupported; GPT-Over not superior",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "No locality/preservation metric outside edit region",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No controlled AR-vs-diffusion comparison with same data and backbone",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Baselines old and weak; recent strong editors missing",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Primary GPT-Balance metric self-constructed, single judge run, quantised, no variance",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No human evaluation or agreement with GPT scores",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Resolution differences and resizing for judge unstated",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Headline gains relative on custom metric; CLIP gains small or absent",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "GPT judge may favour outputs resembling GPT-4o-derived training data",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "SAR motivation rests on single attention heatmap example",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "No ablation of SAR layer placement or simpler alternatives",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "SAR ablation single setting and seed, modest gains, no error bars",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Scale-mismatch explanation unverified; non-scale-aligned control missing; abstract overclaims",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Efficiency comparison at unequal settings; timing setup undescribed",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Memory and token counts not reported",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No comparison to distilled or few-step diffusion editors",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Scaling claim confounded by codebook dimension and training schedule differences",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Limitations (resolution, multi-turn edits, failures) not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Tokenizer reconstruction error on preserved regions not measured",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Novelty moderate: Infinity fine-tuning plus one extra first-layer reference",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Training-free VAR editing cited but not compared",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Effect of VLM data filtering not ablated",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Reproducibility depends on model release; filtered data not released",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "No reasoning-based or multi-step editing experiments (e.g., WISE, GEdit)",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Attention heatmap analysis missing for the tuned model",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "GPT-score evaluation may be biased; human study needed to validate",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No comparison against frontier editors (GPT-4o-Image, FLUX.1 Kontext, Qwen-Image)",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "'First tuning-based VAR editor' claim false given NEP; VAR term misleading",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Related work omits closely related contemporaneous editing models",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No evaluation of generalization to unseen edit types or few-shot adaptation",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Limited analysis of failure modes, e.g., global/text edits",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Only CLIP and GPT metrics; no user study or error typology",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Only two academic datasets; no out-of-distribution or real-world images",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "SAR formulation not mathematically precise (Down operator, masking, positional encoding)",
+   "minor": true
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Figure 2 omits components; heatmap colour scale unclear",
+   "minor": true
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "Data filtering details and release unclear; code only after acceptance",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "No comparison with MLLM-based editing frameworks",
+   "minor": false
+  },
+  {
+   "id": "Q3.10",
+   "reviewer": "Q3",
+   "text": "SAR novelty modest, incremental extension",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "GPT-4o judge costly and proprietary; open-source VLM evaluation needed",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Missing standard editing benchmarks ImgEdit and GEdit-Bench",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Kimi-VL filtering non-reproducible; model quality may depend on it",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Central claim that AR avoids spurious edits unsupported; GPT-Over not superior",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No locality/preservation metric outside edit region",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No controlled AR-vs-diffusion comparison with same data and backbone",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Baselines old and weak; recent strong editors missing",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Primary GPT-Balance metric self-constructed, single judge run, quantised, no variance",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No human evaluation or agreement with GPT scores",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Resolution differences and resizing for judge unstated",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Headline gains relative on custom metric; CLIP gains small or absent",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "GPT judge may favour outputs resembling GPT-4o-derived training data",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "SAR motivation rests on single attention heatmap example",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No ablation of SAR layer placement or simpler alternatives",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "SAR ablation single setting and seed, modest gains, no error bars",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Scale-mismatch explanation unverified; non-scale-aligned control missing; abstract overclaims",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Efficiency comparison at unequal settings; timing setup undescribed",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Memory and token counts not reported",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No comparison to distilled or few-step diffusion editors",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Scaling claim confounded by codebook dimension and training schedule differences",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Limitations (resolution, multi-turn edits, failures) not discussed",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Tokenizer reconstruction error on preserved regions not measured",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Novelty moderate: Infinity fine-tuning plus one extra first-layer reference",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Training-free VAR editing cited but not compared",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Effect of VLM data filtering not ablated",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Reproducibility depends on model release; filtered data not released",
+    "points": [
+     "P1.23"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No reasoning/multi-step editing experiments",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No heatmap for tuned model",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "GPT/CLIP metrics without human study",
+    "points": [
+     "Q2.2",
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Missing frontier editor comparisons",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "'First' claim false",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Related work omissions",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No unseen-task/few-shot generalization",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Limited failure analysis",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No out-of-distribution data",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "SAR formulation imprecise",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Figure 2/heatmap clarity",
+    "points": [
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Data filtering reproducibility and release",
+    "points": [
+     "Q3.8",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No MLLM-based editor comparison",
+    "points": [
+     "Q3.9"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "SAR novelty modest",
+    "points": [
+     "Q3.10"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Proprietary GPT-4o judge",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Missing standard benchmarks",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  }
+ ]
+}

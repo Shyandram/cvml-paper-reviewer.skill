@@ -1,0 +1,806 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Missing related work on Fourier/wavelet spectral descriptors for Gaussian processes on graphs and complexes",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Theory section 4.1 takes too much main-text space",
+   "minor": true
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Most theoretical content is already known or follows from prior results",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Experiments not comprehensive; need more on higher-order combinatorial complexes",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No experiments verifying theory or comparing Hodge Laplacian versus CC Laplacian performance",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Unspecified remaining questions deferred to the questions section",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Cannot distinguish isospectral non-isomorphic complexes, limiting expressiveness",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Eigendecomposition bottleneck for large complexes; Nystr\u00f6m approximation not implemented or evaluated",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Only classification tasks evaluated; other tasks like regression missing",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "No ablations or visualisations of what learned HKS descriptors capture",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "No direct comparison of TopoHKS against standard HKS on graphs",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Many unclear passages, typos, and undefined central definitions and notation",
+   "minor": true
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Theoretical results are trivial",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Theoretical results misleadingly framed or possibly incorrect",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Datasets used in experiments are small",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Experimental comparisons are incomplete",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Maximal expressivity claim wrong: cospectral non-isomorphic graphs share HKS",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Theorem 4.1 conflates orthogonal similarity with permutation equivalence; proof hand-waved",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Theorem 4.3 confuses heat kernel matrix with its diagonal; mishandles repeated eigenvalues",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Corollary 4.3 universal approximation ignores permutation invariance and is existence-only",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Expressivity not positioned against WL hierarchy or known-incomplete spectral positional encodings",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Laplacian keeps only node-membership, losing CC structure; expressivity gap to SMCN doubtful",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Incidence sign convention arbitrary, so L not permutation-equivariant; equivariance claims unjustified",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Theorem 4.2 proof assumes standard Laplacian form never derived from Definition 3.1",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Inconsistent indices, symbols, and broken equation references",
+   "minor": true
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Section 3.2 rank-1 kernel statement contradicts rank-0 descriptors",
+   "minor": true
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Exponential 2^-i weights make higher-rank signal negligible or numerically lost",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Weak baselines; missing strong graph models like GraphGPS, Graphormer, virtual-node GIN",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "No control with same transformer using standard graph spectral positional encodings",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "MolHIV reported as accuracy instead of standard ROC-AUC",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Gains within std or ties with SMCN; SOTA claims unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "CIN NaN entries not investigated; baseline tuning unclear",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Unclear whether hyperparameters tuned on validation data per dataset and comparably for baselines",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "No real-data comparison with Hodge Laplacian; difference shown only on toy pair",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "No ablation of time count, time range, weights B, descriptor type, Mixer vs Transformer",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Expressivity benchmark narrow: author-built rank-4 set designed for SMCN failure",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Standard expressivity benchmarks (EXP, CSL, BREC, strongly regular graphs) missing",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Speed comparisons use different units, hardware, batch sizes, reimplemented baselines",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Eigendecomposition preprocessing cost excluded; scaling claims misleading; Fig 6 only to 100 cells",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Scalability not compared with cheaper baselines; much slower than GCN/GIN",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "6,000 GPU-hour budget inconsistent with efficiency narrative",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Missing hypergraph Laplacian and clique-expansion related work",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Missing related work on spectral/heat-kernel positional encodings for graph transformers",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "CC Laplacian is essentially weighted hypergraph Laplacian, not a new topological operator",
+   "minor": false
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Lemma 4.1 on Hodge limitation is shallow consequence of definitions",
+   "minor": false
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Proofs are informal sketches",
+   "minor": false
+  },
+  {
+   "id": "Q1.31",
+   "reviewer": "Q1",
+   "text": "Table 1 check marks undefined; isomorphism mark incorrect",
+   "minor": true
+  },
+  {
+   "id": "Q1.32",
+   "reviewer": "Q1",
+   "text": "Typos and inconsistent names throughout",
+   "minor": true
+  },
+  {
+   "id": "Q1.33",
+   "reviewer": "Q1",
+   "text": "MLP-Mixer performance claims made without shown results",
+   "minor": false
+  },
+  {
+   "id": "Q1.34",
+   "reviewer": "Q1",
+   "text": "Code not released",
+   "minor": false
+  },
+  {
+   "id": "Q1.35",
+   "reviewer": "Q1",
+   "text": "Fig 5a and Table 2 report inconsistent speed numbers",
+   "minor": true
+  },
+  {
+   "id": "Q1.36",
+   "reviewer": "Q1",
+   "text": "Missing training details: layers, width, optimizer, seeds, batching",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Missing related spectral wavelet/Fourier descriptor work",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Theory section too long",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Theory mostly known or trivial",
+    "points": [
+     "P1.3",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Theory misleading or incorrect",
+    "points": [
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Need more experiments on higher-order complexes",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No empirical Hodge vs CC Laplacian comparison / theory verification",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Vague unspecified questions",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Cannot distinguish isospectral complexes",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Eigendecomposition scalability bottleneck",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Only classification tasks",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No ablations/visualisations of descriptors",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No comparison to standard graph HKS",
+    "points": [
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Clarity, typos, undefined notation",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Small datasets",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Incomplete comparisons",
+    "points": [
+     "P4.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Maximal expressivity claim wrong (cospectral graphs)",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Theorem 4.1 flawed",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Theorem 4.3 flawed",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Corollary 4.3 universal approximation flawed",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No WL / spectral PE positioning",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Laplacian loses CC structure",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Incidence signs break equivariance",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Theorem 4.2 proof gap",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Notation/index inconsistencies",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Rank-1 vs rank-0 contradiction",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Exponential weights make high ranks negligible",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Missing strong graph baselines",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No same-transformer spectral PE control",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Wrong MolHIV metric",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "SOTA claims unsupported by small gains",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "CIN NaN failures uninvestigated",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Hyperparameter tuning unclear",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No real-data Hodge Laplacian comparison",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No component/hyperparameter ablations",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Narrow author-built expressivity benchmark",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Standard expressivity benchmarks missing",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Speed comparisons not comparable",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Preprocessing cost excluded; scaling overclaimed",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Slower than cheap baselines",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "GPU-hour budget inconsistent",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Missing hypergraph Laplacian related work",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Missing spectral PE related work",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Laplacian novelty overclaimed",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Lemma 4.1 shallow",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Informal proofs",
+    "points": [
+     "Q1.30"
+    ]
+   },
+   {
+    "id": "QI31",
+    "summary": "Table 1 marks undefined/incorrect",
+    "points": [
+     "Q1.31"
+    ]
+   },
+   {
+    "id": "QI32",
+    "summary": "Typos and naming",
+    "points": [
+     "Q1.32"
+    ]
+   },
+   {
+    "id": "QI33",
+    "summary": "MLP-Mixer claims unsupported",
+    "points": [
+     "Q1.33"
+    ]
+   },
+   {
+    "id": "QI34",
+    "summary": "Code not released",
+    "points": [
+     "Q1.34"
+    ]
+   },
+   {
+    "id": "QI35",
+    "summary": "Inconsistent speed numbers Fig 5a/Table 2",
+    "points": [
+     "Q1.35"
+    ]
+   },
+   {
+    "id": "QI36",
+    "summary": "Missing training details",
+    "points": [
+     "Q1.36"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI26",
+    "QI27"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI29"
+   ],
+   "related": [
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI1",
+    "QI2",
+    "QI3"
+   ],
+   "related": [
+    "QI4",
+    "QI7",
+    "QI8",
+    "QI30"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI18"
+   ],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI23"
+   ],
+   "related": [
+    "QI24"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI19",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI13"
+   ],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI9",
+    "QI32"
+   ],
+   "related": [
+    "QI10",
+    "QI31"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI12"
+   ],
+   "related": [
+    "QI13"
+   ]
+  }
+ ]
+}

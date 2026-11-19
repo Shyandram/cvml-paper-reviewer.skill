@@ -1,0 +1,672 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Neural-field head evidence thin: one linear-head baseline, loss curves, no matched FID table.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Other cheap decoder heads at equal compute not compared.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Linear vs hypernetwork comparison does not isolate per-patch weights from added capacity.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Lower flow-matching loss does not imply better samples.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "VAE-free claim overstated: REPA with frozen DINOv2, no ablation without REPA.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Text-to-image model relies on frozen Qwen encoders and recaptioning, undermining end-to-end claim.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Sampling, guidance, and training budgets of baselines unstated; CFG tuned on FID-10k.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Claim of comparability to latent diffusion overstated given stronger latent models.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Better-sFID claim holds only against pixel models.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Table 1 per-step and total latency arithmetically inconsistent.",
+   "minor": true
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Higher training memory than baseline not discussed.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "\"Nearly 8x faster\" claim unsupported; hardware and settings for baselines unstated.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Unclear whether latent baseline training speed includes VAE encoding.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Placeholder \"abc steps\" left for 512 fine-tuning schedule.",
+   "minor": true
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Inconsistent numbers and model naming between text, tables, abstract.",
+   "minor": true
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Sloppy or incorrect expressions in preliminaries.",
+   "minor": true
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Eq. 12 and neural-field dimensions underspecified; normalization description inconsistent.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "FIDs appear single-run with no variance.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "No code release mentioned.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Text-to-image comparison has few, old, incomplete baselines; recent models missing.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Surprisingly high GenEval Position score undiscussed; possible SFT data overlap.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Text-to-image qualitative claims lack FID, CLIP, aesthetic, or human evaluation.",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Generated images show acknowledged blur and artifacts.",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Possible patch-boundary seams not examined.",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Only patch size 16 studied despite upper-bound claim.",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Arbitrary-resolution generation only qualitative; no 1024 FID or upsampling comparison.",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Novelty moderate; prior coordinate/hypernetwork decoders not empirically compared.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "512 resolution results less convincing; degradation unexplained.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No comparisons at higher resolutions like 768 or 1024.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "8x latency claim lacks comparison model and is not achieved versus latent methods.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Training memory nearly double the latent diffusion counterpart.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Gains diminish at 512, falling behind SiT-XL.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Rectified flow citation missing.",
+   "minor": true
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Table 4 should state it is on ImageNet256.",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Necessity unclear given distilled diffusion; unclear whether usable as distillation teacher.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Claimed speedup still slower than VAE plus diffusion pipelines.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Missing baselines like StyleGAN-XL, CDM, Simple Diffusion, VDM++, PaGoDA.",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No quantitative and latency comparisons with one-step generators.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Model introduces its own blurry or unnatural artifacts.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Neural field head adds complexity and performance is sensitive to its configuration.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Training needs specific normalization to avoid instability and loss spikes.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Unclear what designs differ from original NeRF MLP head.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Thin evidence for neural-field head vs baseline",
+    "points": [
+     "P1.1",
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Missing alternative decoder heads",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Per-patch weights not isolated from capacity",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "VAE-free/end-to-end claims overstated",
+    "points": [
+     "P1.5",
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Comparison protocol unclear/unfair",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Comparability to latent diffusion overstated",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "sFID claim limited",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Latency numbers inconsistent",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Higher training memory",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "8x speed claim unsupported",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Latent baseline training speed unclear",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Placeholder in text",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Inconsistent numbers and sloppy expressions",
+    "points": [
+     "P1.15",
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Neural-field details underspecified",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Single-run FIDs",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No code release",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Weak T2I baselines",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Suspicious GenEval Position score",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "T2I lacks quantitative evaluation",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Blur and artifacts",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Patch seams unexamined",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Only patch size 16",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Arbitrary resolution qualitative only",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Moderate novelty vs prior INR decoders",
+    "points": [
+     "P1.27"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Weaker results at 512 resolution",
+    "points": [
+     "Q1.1",
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No comparisons at higher resolutions like 768 or 1024.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Latency speedup claim unclear/unsupported",
+    "points": [
+     "Q1.3",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Training memory nearly double the latent diffusion counterpart.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Rectified flow citation missing.",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Table 4 should state it is on ImageNet256.",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Necessity unclear given distilled diffusion; unclear whether usable as distillation teacher.",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing baselines like StyleGAN-XL, CDM, Simple Diffusion, VDM++, PaGoDA.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No quantitative and latency comparisons with one-step generators.",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Model introduces its own blurry or unnatural artifacts.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Neural field head adds complexity and performance is sensitive to its configuration.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Training needs specific normalization to avoid instability and loss spikes.",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Unclear what designs differ from original NeRF MLP head.",
+    "points": [
+     "Q4.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  }
+ ]
+}

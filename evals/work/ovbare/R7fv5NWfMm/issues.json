@@ -1,0 +1,642 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No ablation of RLT stability across random seeds.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Advantage diminishes with more workers; scalability unexplained.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "A notation table in Section 3 would improve readability.",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Improvement claims not qualified or segmented by model type, size, context length, memory.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Some recent relevant literature missing.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Figures could be improved; Figure 5 violates margin.",
+   "minor": true
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "MIP formulation is barely used, making the framing incomplete.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Some assumptions are under-discussed.",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "No evaluation across different query length distributions.",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Eviction and routing times in ablation not compared to baselines.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Theory covers only single-worker eviction; LBGR routing has no guarantee.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Routing-eviction coupling not exploited; unified model claims overstated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Analysis model omits hit cost, decoding, batching, queueing dynamics.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Eviction theory largely classical paging; novelty versus known bounds unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Worst-case LRU bound may not reflect real traces.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Theorem 8 lower-bound phrasing is loose.",
+   "minor": true
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Batch result assumptions exclude shared-prefix queries.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Token-miss competitive ratio not linked to latency.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Large latency gains may reflect saturated baseline at default load.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Load sweep lacks quantitative breakdown.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Averaged ratios dominated by outliers; need per-benchmark absolute numbers with intervals.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "No variance, seeds or repeated runs reported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "6.92x hit-rate figure comes from synthetic atypical ordering.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "No other KV-aware routers or schedulers compared.",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No other eviction policies compared beyond LRU.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Tuning of SGLang router threshold not described.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "No Belady-style oracle upper bound on hit rate.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Handcrafted worst-case order is not formally adversarial.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "No ablation of LBGR residual regression components.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No service-time plus decay-only control to isolate learning.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Limited sensitivity analysis; alpha calibration unexplained.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Online regression stability under nonstationary load unanalyzed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Staleness of global radix tree hit estimates not measured.",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Delayed latency feedback handling not discussed.",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Only homogeneous workers evaluated.",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Short output lengths de-emphasize decode-heavy workloads.",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Prompts limited to 8k tokens and at most 10 workers.",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "No production traces used.",
+   "minor": false
+  },
+  {
+   "id": "Q1.29",
+   "reviewer": "Q1",
+   "text": "Interaction with disaggregation, chunked prefill, priority scheduling unexamined.",
+   "minor": false
+  },
+  {
+   "id": "Q1.30",
+   "reviewer": "Q1",
+   "text": "Abstract headline numbers mix different settings and baselines.",
+   "minor": true
+  },
+  {
+   "id": "Q1.31",
+   "reviewer": "Q1",
+   "text": "Intro speedup numbers inconsistent with ablation text.",
+   "minor": true
+  },
+  {
+   "id": "Q1.32",
+   "reviewer": "Q1",
+   "text": "Heavy notation; Algorithm 1 hard to follow.",
+   "minor": true
+  },
+  {
+   "id": "Q1.33",
+   "reviewer": "Q1",
+   "text": "Some citations misplaced.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "No seed-stability analysis.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Diminishing advantage with more workers.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Notation table needed.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Improvement claims not segmented by setting.",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Missing recent literature.",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Figure quality and margin violation.",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "MIP formulation underused.",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Assumptions under-discussed.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No evaluation across query length distributions.",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Ablation timings lack baseline comparison.",
+    "points": [
+     "P4.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No guarantees for routing or combined system.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Unified model coupling not exploited.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Simplified analysis model.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Classical eviction theory, limited novelty.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Worst-case bounds irrelevant to real traces.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Loose theorem phrasing.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Restrictive batch assumptions.",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Competitive ratio not linked to latency.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Gains may reflect overload regime.",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Load sweep lacks numbers.",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Outlier-dominated averaged ratios.",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No variance or repeated runs.",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Atypical synthetic hit-rate setting.",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Missing KV-aware router baselines.",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Missing eviction policy baselines.",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Baseline tuning undescribed.",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No oracle upper bound.",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Worst-case order not adversarial.",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No residual regression ablation.",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No decay-only control.",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Limited sensitivity and calibration details.",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Online regression stability.",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Hit estimate staleness.",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Delayed feedback handling.",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Homogeneous workers only.",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Short outputs only.",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Limited prompt length and worker count.",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "No production traces.",
+    "points": [
+     "Q1.28"
+    ]
+   },
+   {
+    "id": "QI29",
+    "summary": "Interaction with other serving techniques.",
+    "points": [
+     "Q1.29"
+    ]
+   },
+   {
+    "id": "QI30",
+    "summary": "Confusing headline numbers.",
+    "points": [
+     "Q1.30"
+    ]
+   },
+   {
+    "id": "QI31",
+    "summary": "Inconsistent reported speedups.",
+    "points": [
+     "Q1.31"
+    ]
+   },
+   {
+    "id": "QI32",
+    "summary": "Heavy notation and hard algorithm.",
+    "points": [
+     "Q1.32"
+    ]
+   },
+   {
+    "id": "QI33",
+    "summary": "Misplaced citations.",
+    "points": [
+     "Q1.33"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI27",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI32"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI30",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI26",
+    "QI27",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  }
+ ]
+}

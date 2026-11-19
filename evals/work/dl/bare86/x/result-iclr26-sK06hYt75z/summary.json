@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-sK06hYt75z",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Binary, small, synthetic benchmark with an always-American option; the steering vector may just learn 'pick non-American'",
+    "EI-Gap confounds language and context effects; a single cultural word closes the gap, which suggests prompt sensitivity rather than knowledge",
+    "Diversity and stereotype claims rest on tiny embedding-similarity differences and unvalidated LLM-judge rankings; steering may simply localize less",
+    "Mechanistic and steering analysis is on one model (Gemma-2-9b-it) with no random-vector or non-cultural controls, and unclear hyperparameter selection",
+    "Universal-vector and 'conserved across languages' claims are overstated: modest gains, only 5 languages, and the authors admit no rigorous evaluation"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-KtocialdxS",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Limited novelty over CDM truncation-augmented cascades and Matryoshka/Relay diffusion; no empirical comparison to MDM",
+    "Efficiency baselines are weak: default EDM/LightningDiT step counts, no comparison to fast solvers or distillation, no test of combining with them",
+    "FID differences (about 0.01-0.1) are within noise; no seeds or variance; Te and sigma ranges tuned on test FID",
+    "Unfair or inconsistent comparisons: 75% training images, ImageNet speedup measured vs 100-NFE baseline while 50-NFE baseline is similar cost, unexplained IS jump",
+    "Small-scale evidence only (CIFAR/FFHQ-64/DiT-B 16x16 latent); memory claims and DiT variant unsupported or undescribed"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

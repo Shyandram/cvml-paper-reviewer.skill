@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-tlYSbw5GXY",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "VARE trains on teacher-forced original-model tokens but inference uses self-generated tokens; the mismatch is unaddressed and error accumulation is shown only qualitatively",
+    "Baselines are self-ported diffusion losses that collapse by construction; the closest AR erasure work (EAR) is not compared, so 'first effective' is unsupported",
+    "'Surgical'/'robust' overstated: common-content count roughly halves (112->57), training and test use one fixed lexical form ('naked'), no synonym or adaptive-attack evaluation",
+    "Thin evaluation: single model (Infinity-2B), one main concept per type, no seeds or variance, single detectors",
+    "Eq. 7-10 are ill-defined or sign/direction-inconsistent, and the CE-vs-KL and KL-direction choices are justified only by speculation"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,645 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Chance correction assumes uniform guessing and pre/post independence, unrealistic for LLMs",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Chance correction not empirically validated (logit/multi-sample estimates, simulation)",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Dataset-level correction cannot identify individually forgotten items, undermining per-sample motivation",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "F_true is not the conditional rate the introduction claims to measure",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Worked example does not match the formulas",
+   "minor": true
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Clipping at zero biases small-effect estimates upward",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Benchmarks not all pure k-way MCQ; varying k applicability not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Stochastic single-sample decoding creates flips; no same-checkpoint noise control",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "No confidence intervals, bootstrap or seed variance",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "'Low/moderate/high' never defined by thresholds",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Base few-shot vs post-trained chat prompting confounds pre/post comparison",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Format/extraction failures counted as forgetting; no robust answer extraction",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Different length caps may truncate long CoT",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Public checkpoints with uncontrolled recipes confound stage and size comparisons",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Scaling and causal claims rest on few non-matched points without statistics",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No controlled data-scale study; 'map at scale' framing overstated",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Forgetting measured only on MCQ; generation and other capabilities not covered",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Headline conclusion over-reaching; Table 1 compares studies with different protocols",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Table 1 Level labels subjective",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Merging section thin: few models, two-checkpoint interpolation, no \u03b1 ablation; conclusion too general",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Metric novelty limited relative to existing flip analysis and guessing correction",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Inconsistent claims between abstract, captions and results",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Typos and duplicate references",
+   "minor": true
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Results mostly in figures with numbers only in appendix",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Category clustering procedure undescribed; grouping may be post hoc",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Explains what causes forgetting/transfer but not why (e.g. culture, reasoning)",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Mixed large-scale effects unresolved; data diversity, duration, objective not tested",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Merging conclusion based only on two-checkpoint merging; no multi-checkpoint or TIES",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "MCQ-only evaluation; generative settings not validated",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Extensive experimental report with limited conceptual or theoretical insight",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Findings described with vague qualitative terms",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Training variables (learning rate, data volume) uncontrolled; findings may reflect confounds",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Uniform independent guessing assumption idealistic; robustness checks needed",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No variance, confidence intervals, significance or multiple-comparison correction for flips",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Temperature 0.6 single run; flip stability across seeds not evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Evaluation mostly MCQ; no open generation, code or tool tasks",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "MCQ focus may not generalize to open-ended tasks",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Uniform guessing correction oversimplifies and may distort forgetting",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No deep analysis of why stages cause particular effects",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Chance correction assumes uniform guessing and pre/post independence, unrealistic for LLMs",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Chance correction not empirically validated (logit/multi-sample estimates, simulation)",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Dataset-level correction cannot identify individually forgotten items, undermining per-sample motivation",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "F_true is not the conditional rate the introduction claims to measure",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Worked example does not match the formulas",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Clipping at zero biases small-effect estimates upward",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Benchmarks not all pure k-way MCQ; varying k applicability not discussed",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Stochastic single-sample decoding creates flips; no same-checkpoint noise control",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No confidence intervals, bootstrap or seed variance",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "'Low/moderate/high' never defined by thresholds",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Base few-shot vs post-trained chat prompting confounds pre/post comparison",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Format/extraction failures counted as forgetting; no robust answer extraction",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Different length caps may truncate long CoT",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Public checkpoints with uncontrolled recipes confound stage and size comparisons",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Scaling and causal claims rest on few non-matched points without statistics",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No controlled data-scale study; 'map at scale' framing overstated",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Forgetting measured only on MCQ; generation and other capabilities not covered",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Headline conclusion over-reaching; Table 1 compares studies with different protocols",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Table 1 Level labels subjective",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Merging section thin: few models, two-checkpoint interpolation, no \u03b1 ablation; conclusion too general",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Metric novelty limited relative to existing flip analysis and guessing correction",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Inconsistent claims between abstract, captions and results",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Typos and duplicate references",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Results mostly in figures with numbers only in appendix",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Category clustering procedure undescribed; grouping may be post hoc",
+    "points": [
+     "P1.25"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No mechanistic explanation of why effects occur",
+    "points": [
+     "Q1.1",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Uncontrolled training variables / confounds",
+    "points": [
+     "Q1.2",
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Merging conclusion limited",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "MCQ-only evaluation",
+    "points": [
+     "Q1.4",
+     "Q3.4",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Limited conceptual contribution",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Vague qualitative descriptors",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Guessing correction assumptions",
+    "points": [
+     "Q3.1",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No statistical uncertainty reporting",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Decoding randomness, single run",
+    "points": [
+     "Q3.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  }
+ ]
+}

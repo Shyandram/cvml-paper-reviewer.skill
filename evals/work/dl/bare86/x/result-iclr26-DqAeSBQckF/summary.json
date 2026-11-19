@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-DqAeSBQckF",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Gains over MATES (0.2-0.6 avg points; 1.4 at 2.8B) are within reported standard errors and round-1 run-to-run variation; single runs, no seeds or significance tests",
+    "1.7x speedup claim is read from single-run curves with tiny separation, against one baseline, at 1B only",
+    "Headline tables compare only Random and MATES; MATES also trains from scratch, so the 'no external model' framing is weak and the long-term-influence benefit is not isolated by ablation",
+    "Number inconsistencies (1B BLISS FLOPs 8.08 vs 19.53, 2.5B vs 2.8B, Table 2 round-1 mismatch, Table 5 per-task values) and an approximate softmax/hypergradient with no analysis",
+    "Validation sets (LAMBADA/ARC-E/PIQA) overlap with evaluation tasks; limited scale and corpora; compute advantage holds only at 1B"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,643 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "LQD(F+N) below DNS/ME; robotics gain over GA not significant; SOTA claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Robotics lacks QD score and coverage; novelty only relative to ME",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Comparing fitness-trained learner to QD methods on max fitness is a mismatch",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No CMA-ES, Sep-CMA-ES or tuned diversity-preserving GA baseline",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Higher novelty than truncation GA expected; no control isolating diversity as causal",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Novelty evaluated with same descriptor space and metric used for LQD(N) training",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Claim that partial archives inflate ME novelty is asserted without quantification",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "No mechanistic characterization, input ablation or comparison with DNS rule",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Dimension and population generalization shown on two functions without variance",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "'Far outside training' overstated; OOD functions similar synthetic landscapes",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Training descriptors are random linear projections of genotype",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Need table-level robotics results with CIs and more tasks",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Massive meta-training compute and O(N^2) inner-loop attention cost not compared",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "GA tuning and reproduction operator unspecified in main text",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Baseline hyperparameters not described or tuned with comparable budget",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "LQD benefits from held-out model selection unavailable to baselines",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Mixed medians/means, log normalization distorts differences",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Robotics aggregate p-value and normalization poorly detailed; few tasks drive it",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Recipe and architecture inherited from Lange et al.; modest methodological novelty",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "No ablation against existing learned-GA architecture",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "'Can represent any QD algorithm' false given fixed truncation and features",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Recent MetaBBO and QD works omitted from review and comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Learning selection via transformer exists (Lange et al., GLHF); novelty undiscussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Controlling only selection pressure is too inflexible to discover new algorithms",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "If LQD(Q) keeps diversity, why worse than LQD(QD); training may be inadequate",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "No comparison with existing fitness-based MetaBBO approaches",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Why robot control needs QD is unexplained",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Descriptor dimension D unspecified; distance-preservation claim unproven",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Reproduction size B not defined",
+   "minor": true
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "8 H100s for results only competitive with GA and MAP-Elites",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Some method elements and results unclear",
+   "minor": true
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "A few claims are unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Some figures have issues",
+   "minor": true
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Relevant variants and ablations missing",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Should compare with descriptor-learning approaches like AURORA",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "QD viewed only as GA-based; no PGA-ME, PPGA, BOP-Elites or CMA-MAE baselines",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Should discuss or show how LQD integrates with methods like CMA-MAE",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Ablation limited; transformer architecture and size impact unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Table 4 lacks p-values or variance",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No analysis of performance scaling with problem dimension",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No comparison with state-of-the-art BBO such as CMA-ES",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Headline outperformance and SOTA claims overstated",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Robotics evaluated on fitness, not QD metrics",
+    "points": [
+     "P1.2",
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing strong fitness-only baselines",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Emergent diversity overinterpreted",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Novelty measured in same space LQD(N) was trained on",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "ME novelty inflation explanation unquantified",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Discovered algorithm not interpretable",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Generalization claims rest on thin evidence",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "OOD functions closely related to training",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Training descriptors lack behavioural information",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "More robotics tasks and tabulated results needed",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Compute cost of meta-training and inference uncompared",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Baseline hyperparameters and tuning unspecified",
+    "points": [
+     "P1.14",
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "LQD gets model selection baselines lack",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Statistical reporting inconsistent and aggregate unclear",
+    "points": [
+     "P1.17",
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Incremental relative to LGA/LES",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "No ablation against learned-GA architecture",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Expressivity claims overstated",
+    "points": [
+     "P1.21"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Recent MetaBBO and QD related work neglected",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Learned transformer scoring not novel",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Controlling only selection limits flexibility",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Emergent-diversity conclusion questionable",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "No comparison with MetaBBO baselines",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Motivation of QD for robot control unclear",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Descriptor dimension and distance-preservation claim unclear",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Reproduction size B undefined",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Huge compute for competitive results",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Methods and results insufficiently clear",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Unsupported claims",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Figure issues",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Missing ablations and variants",
+    "points": [
+     "Q2.4",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "No comparison with learned-descriptor QD methods",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Narrow GA-only view of QD; modern QD baselines missing",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "No discussion of integrating LQD with modern QD",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No statistical tests or variance in Table 4",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No scalability analysis with problem dimension",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "No comparison with CMA-ES",
+    "points": [
+     "Q4.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI19"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI11"
+   ]
+  }
+ ]
+}

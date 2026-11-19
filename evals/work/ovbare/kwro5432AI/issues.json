@@ -1,0 +1,632 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Single-event accuracy below multi-event, unlike baselines; method may over-complicate simple questions",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Too few temporal GraphRAG baselines",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Lack of in-depth experiments",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Limitations of the model not explained",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Apriori-based entity typing may fail on sparse/noisy relations and long-tail graphs",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Template-generated QA may align with rule graph, overstating gains; no out-of-template tests",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Retrieval latency, memory and rule-graph build time not quantified",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Static entity labels ignore temporal dynamics of entity roles",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Baselines omit prominent LLM+KG approaches",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Recent temporal RAG works not discussed",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "MDL graph summarization dense; needs intuition or illustrative example",
+   "minor": true
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Fixed equal weighting of coverage/time and Hamming terms cannot adapt to query types",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Scalability to million-event TKGs unclear given Apriori mining",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "No runtime/memory comparison on large graphs or complexity analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Method does not enforce temporal constraints; time-consistency claims unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No analysis showing retrieved events are more time-consistent",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Transition matrix edge weights never defined",
+   "minor": true
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Unclear why propagation over type-level rule nodes favours correct time",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "L_cov formula contradicts stated cost behaviour",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Edge acceptance criterion \u0394L<0 seemingly never satisfiable; MDL ill-posed",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "MDL edge selection effect not demonstrated; rule-graph size/sparsity unreported",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Greedy fixed-order edge selection makes result order-dependent",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Ablations omit MDL selection, temporal term, labeling, K_type, Hamming threshold",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Token reduction stems from small top-10 context, not rule graph; no matched budget",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Offline construction costs unreported; deployment simplicity claim unbacked",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Retrieval latency high and unexplained",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "No discussion of updating rule graph as TKG grows",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Missing simple time-filtering or time-aware reranking baseline",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No comparison to established TKGQA methods on same benchmarks",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Very low absolute numbers suggest evaluation setting is the bottleneck",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Baseline tuning, context sizes and Hit@k extraction undescribed",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "No variance, confidence intervals or significance; small gaps",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Hyperparameters chosen on test-set sensitivity; no validation split",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Puzzling single vs multi-event results; no per-type breakdown or failure analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Retrieval recall/precision against gold evidence never reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No-rule ablation below best static baseline not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Hit@k conflated with LLM generation quality",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Backbone-robustness claim made without varying baseline backbones",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Limited novelty: components borrowed from KGist, HippoRAG, GenTKG",
+   "minor": false
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Only template questions over structured KGs; generalization untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Possible test-period leakage into rule graph on Forecast",
+   "minor": false
+  },
+  {
+   "id": "Q1.28",
+   "reviewer": "Q1",
+   "text": "Presentation issues: undefined acronym, deferred definitions, mixed algorithm, terminology",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Single vs multi-event accuracy pattern unexplained",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Insufficient baselines (temporal GraphRAG, LLM+KG)",
+    "points": [
+     "P2.1",
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Lack of in-depth experiments",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Limitations not discussed",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Apriori typing fragile on sparse/noisy graphs",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Template-generated datasets may overstate gains",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Construction/retrieval runtime and memory not quantified",
+    "points": [
+     "P3.3",
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Static entity labels",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Missing temporal RAG related work",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "MDL summarization hard to follow",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Fixed global weights in edge criterion",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Scalability to large TKGs",
+    "points": [
+     "P4.3"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Method does not enforce temporal constraints; time-consistency claims unsupported",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No analysis showing retrieved events are more time-consistent",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Transition matrix edge weights never defined",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Unclear why propagation over type-level rule nodes favours correct time",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "L_cov formula contradicts stated cost behaviour",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Edge acceptance criterion \u0394L<0 seemingly never satisfiable; MDL ill-posed",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "MDL edge selection effect not demonstrated; rule-graph size/sparsity unreported",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Greedy fixed-order edge selection makes result order-dependent",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Ablations omit MDL selection, temporal term, labeling, K_type, Hamming threshold",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Token reduction stems from small top-10 context, not rule graph; no matched budget",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Offline construction costs unreported; deployment simplicity claim unbacked",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Retrieval latency high and unexplained",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No discussion of updating rule graph as TKG grows",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Missing simple time-filtering or time-aware reranking baseline",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No comparison to established TKGQA methods on same benchmarks",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Very low absolute numbers suggest evaluation setting is the bottleneck",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Baseline tuning, context sizes and Hit@k extraction undescribed",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No variance, confidence intervals or significance; small gaps",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Hyperparameters chosen on test-set sensitivity; no validation split",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Puzzling single vs multi-event results; no per-type breakdown or failure analysis",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Retrieval recall/precision against gold evidence never reported",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No-rule ablation below best static baseline not discussed",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Hit@k conflated with LLM generation quality",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Backbone-robustness claim made without varying baseline backbones",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Limited novelty: components borrowed from KGist, HippoRAG, GenTKG",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Only template questions over structured KGs; generalization untested",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Possible test-period leakage into rule graph on Forecast",
+    "points": [
+     "Q1.27"
+    ]
+   },
+   {
+    "id": "QI28",
+    "summary": "Presentation issues: undefined acronym, deferred definitions, mixed algorithm, terminology",
+    "points": [
+     "Q1.28"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI20"
+   ],
+   "related": [
+    "QI22"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI15"
+   ],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI26"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI11",
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI6",
+    "QI28"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI13"
+   ]
+  }
+ ]
+}

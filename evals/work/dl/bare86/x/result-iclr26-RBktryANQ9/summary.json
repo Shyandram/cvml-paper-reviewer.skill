@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-RBktryANQ9",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "No comparison to standard noisy-label learning methods or equal-size random/coreset/early-stopping baselines; the full-data baseline is weak",
+    "Privacy and efficiency claims are asserted with no analysis or measurements",
+    "Corollaries I and II are trivial or unrigorous (no assumptions or proof) and untested empirically",
+    "Small-scale experiments (ConvNet, CIFAR/Tiny-ImageNet), no seeds or variance, no real-world datasets, mixed results (fails on asymmetric and low noise)",
+    "No mechanistic analysis of why distillation denoises; the tail-class claim is only hypothesized"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

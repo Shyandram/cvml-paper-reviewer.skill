@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-65iFtHZ8Cu",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Uniform discounted regret appears to follow from strongly adaptive regret of SOGD via Abel summation, so the novelty claim is overstated and unaddressed",
+    "Lemma 1 proof uses n>=32 in the wrong direction, so the claimed novel complete proof is invalid as written",
+    "Largely an adaptation of Zhang et al. 2022a and Kapralov-Panigrahy with key steps imported by citation; incremental contribution",
+    "No lower bound or discussion of necessity of the sqrt(log T) cost; needs T known and tau = Omega(log T)",
+    "No experiments despite motivating applications; several inconsistent constants and typos"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

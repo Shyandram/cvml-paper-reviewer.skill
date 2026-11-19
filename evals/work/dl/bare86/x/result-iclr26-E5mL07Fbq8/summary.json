@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-E5mL07Fbq8",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Only baseline is semantic entropy; no likelihood/logit-based baselines (sequence NLL, max-logit, token entropy, LogTokU, discrete SE), so the gain cannot be attributed to 'energy'",
+    "Headline +13% AUROC is vs. a constant score (SE=0) in the single-cluster subset, which is chance by construction",
+    "Boltzmann/energy theory is weak (constant Z assumption, logits shift-invariant under softmax, epistemic-uncertainty claim untested) and Eq. 18/19 estimator is ill-specified, with cluster size confounded",
+    "Narrow, under-specified evaluation: two datasets, two ~8-21B models, no seeds/CIs, unspecified n, temperature, clusterer, correctness judge",
+    "Semantic-clustering ablation lacks control for plain multi-sample averaging; no calibration or selective-prediction analysis despite calibration claims"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

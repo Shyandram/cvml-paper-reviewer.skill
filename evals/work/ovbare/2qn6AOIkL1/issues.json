@@ -1,0 +1,845 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Theorem is a Gaussian toy model where infinite weight norm trivially dominates; irrelevant to trained MoEs",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Gaussian hidden-state assumption justified only by a blog notebook citation",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "KL expression in Eq. 9 inconsistent and Definition 1 not meaningful",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Extension of theory to more experts only asserted in one sentence",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Theory not connected to actual fine-tuning mechanism; 'theoretical foundation' overstated",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Implementation inconsistent with method: unclear whether LoRA on attention or dormant experts trained",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Baselines may get fewer trainable parameters; missing matched-parameter, optimized-trigger control",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Ablations show dormant-expert selection adds about one ASR point; architectural claim undemonstrated",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Baselines appear poorly tuned (near-zero Samsum, chance-level IMDB ASR)",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Single run reported with no variance or seeds",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "No measurement of whether triggered inputs actually route to dormant experts",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Only one layer attacked; trigger effect at other layers untested",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "t-SNE evidence qualitative; no inference-time expert ablation to verify control",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Token-ID routing and query-independence not verified; position/context sensitivity not shown",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Clean baseline is untuned base model; clean fine-tuned comparison missing",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Substantial side-effect degradation on unrelated tasks; no standard benchmarks like MMLU",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Stealthiness expert-usage measure cannot detect modified dormant experts",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Defense evaluation lacks MoE-specific defenses (expert pruning, weight diffing) and trigger-inversion/scanning",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "ONION resistance expected given perplexity-constrained trigger",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Fine-tuning resistance not tested for other tasks, hyperparameters or router/expert tuning",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Abstract claim of >80% ASR under defenses holds only for subset of settings",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Hidden-state separability defense evaluated on one model and dataset",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Trigger stealthiness overstated: poisoned-input perplexities very high",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Trigger naturalness not evaluated by humans or detectors; trigger text not shown",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Threat model identical to dense backdoors; routing-based triggers unnecessary",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Stealth from dormant experts not tested against adaptive defender",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Only base models, simple targets; no instruction-tuned, chat or larger MoEs",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Prompt-format robustness only partial; AGNews ASR drops 25 points",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Template headers, typos and misattributed citations",
+   "minor": true
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Code and data released only upon acceptance; not reproducible now",
+   "minor": false
+  },
+  {
+   "id": "P1.31",
+   "reviewer": "P1",
+   "text": "Many key details placed in appendices",
+   "minor": true
+  },
+  {
+   "id": "P1.32",
+   "reviewer": "P1",
+   "text": "'First MoE backdoor' claim not checked against concurrent work",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Dominating expert definition ignores other experts",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Theorem 4.1 trivial: large enough additive output dominates others",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Infection step trains much of model; unclear how much remains untrained",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Training objective symmetric; nothing enforces stated roles of theta_0 and theta_a",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "MoE-specific defenses not explored; dormant expert pruning discussion shallow",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Persistence under domain adaptation or large-scale instruction tuning not assessed",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Limited evidence attack is feasible in real model supply chains with upload verification",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "No demonstration in complete deployment pipeline such as hosted API",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Persistence under model updates or reinforcement fine-tuning unclear",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Utility evaluation sparse; should use standard LLM benchmarks",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Clean accuracy untested on tasks where dormant experts are actually active",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Gaussian assumption unrealistic given activation outliers in LLMs",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Attack components do not leverage Theorem 4.1; loss is standard backdoor loss",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Results only incrementally better than prior baselines",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Motivation weak: framed mainly as not done before",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Simple per-expert testing defenses could easily fix the attack",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Unclear whether attack works on MoEs with many fine-grained experts like DeepSeek",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Theorem is a Gaussian toy model where infinite weight norm trivially dominates; irrelevant to trained MoEs",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Gaussian hidden-state assumption justified only by a blog notebook citation",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "KL expression in Eq. 9 inconsistent and Definition 1 not meaningful",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Extension of theory to more experts only asserted in one sentence",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Theory not connected to actual fine-tuning mechanism; 'theoretical foundation' overstated",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Implementation inconsistent with method: unclear whether LoRA on attention or dormant experts trained",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Baselines may get fewer trainable parameters; missing matched-parameter, optimized-trigger control",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Ablations show dormant-expert selection adds about one ASR point; architectural claim undemonstrated",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Baselines appear poorly tuned (near-zero Samsum, chance-level IMDB ASR)",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Single run reported with no variance or seeds",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No measurement of whether triggered inputs actually route to dormant experts",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Only one layer attacked; trigger effect at other layers untested",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "t-SNE evidence qualitative; no inference-time expert ablation to verify control",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Token-ID routing and query-independence not verified; position/context sensitivity not shown",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Clean baseline is untuned base model; clean fine-tuned comparison missing",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Substantial side-effect degradation on unrelated tasks; no standard benchmarks like MMLU",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Stealthiness expert-usage measure cannot detect modified dormant experts",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Defense evaluation lacks MoE-specific defenses (expert pruning, weight diffing) and trigger-inversion/scanning",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "ONION resistance expected given perplexity-constrained trigger",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Fine-tuning resistance not tested for other tasks, hyperparameters or router/expert tuning",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Abstract claim of >80% ASR under defenses holds only for subset of settings",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Hidden-state separability defense evaluated on one model and dataset",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Trigger stealthiness overstated: poisoned-input perplexities very high",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Trigger naturalness not evaluated by humans or detectors; trigger text not shown",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Threat model identical to dense backdoors; routing-based triggers unnecessary",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Stealth from dormant experts not tested against adaptive defender",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Only base models, simple targets; no instruction-tuned, chat or larger MoEs",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Prompt-format robustness only partial; AGNews ASR drops 25 points",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Template headers, typos and misattributed citations",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "Code and data released only upon acceptance; not reproducible now",
+    "points": [
+     "P1.30"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "Many key details placed in appendices",
+    "points": [
+     "P1.31"
+    ]
+   },
+   {
+    "id": "PI32",
+    "summary": "'First MoE backdoor' claim not checked against concurrent work",
+    "points": [
+     "P1.32"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Dominating expert definition ignores other experts",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Theorem 4.1 trivial",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Extent of trained parameters in infection step unclear",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Objective does not enforce stated parameter roles",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "MoE-specific/per-expert defenses not explored",
+    "points": [
+     "Q2.1",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Persistence under further adaptation or tuning not assessed",
+    "points": [
+     "Q2.2",
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Real-world supply-chain feasibility unsupported",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "No end-to-end deployment demonstration",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Utility evaluation sparse; no standard benchmarks",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Clean accuracy on tasks using dormant experts untested",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Gaussian assumption unrealistic",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Attack does not use theoretical insight",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Gains over baselines incremental",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Weak motivation",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Many-expert MoE settings untested",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI1",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI9",
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI31",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI32",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  }
+ ]
+}

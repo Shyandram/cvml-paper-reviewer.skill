@@ -1,0 +1,564 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Paper is mainly a dataset introduction without technical advances.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Variability limited: network structure, node count, connectivity and contingencies not varied enough.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Only OPF problems; limited fit and generalization for broad ML/OR audience.",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Does not go beyond releasing data; lacks scientific or methodological contribution.",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "ICLR is not a dataset-only venue.",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Paper needs polishing.",
+   "minor": true
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Demand sampling method is a marginal contribution with little effect on variability.",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "Status and time-series sampling repeat prior works.",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Not convincing that datasets actually capture the claimed load variability.",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "Global scaling of bus demands imposes unrealistic linear correlation.",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Data is still synthetic rather than real-world.",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "No ML-OPF benchmark results reported on the dataset.",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Limited intellectual merit; no new insights on ML for physical systems.",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Questionable fit for ICLR; impact limited to narrow ML+OPF community.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "No baseline results, leaderboard or reference numbers despite benchmark claims.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No evidence correlated sampling improves model generalization or changes conclusions.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Sampling simplistic; no spatial/temporal correlation or comparison with real load statistics.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Global range heuristic unjustified and differs per case.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Renewable generation variability not modelled; only demand varies.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Spline-interpolated time series overstate realism of sub-hourly dynamics.",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Train/test splitting of time series unspecified; risk of leakage.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "No statistics on feasibility rates, infeasible split, solver failures or tolerances.",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "No solve-time distributions or total compute reported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "No verification of AC-OPF local optimality; ground truth may be ambiguous.",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Keeping only samples feasible for all formulations biases toward easy instances.",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "No information on how often instances lie near infeasibility boundary.",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Limited novelty over OPFData; N-1 sampling copied.",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "No head-to-head comparison with OPFData.",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Claims of being first and others not maintained are unsupported.",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Narrow problem scope: single-period, linear-cost, only demand varies, no market features.",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Topology variation limited to a single removed element.",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Metrics lack formal definitions, normalization and aggregation.",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Distance-to-feasible-set metric implementation and cost not described.",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No aggregate scoring or feasibility tolerance standard.",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "No recommendation for fair wall-clock comparison against solvers.",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Mainly engineering/data contribution with little ML content; poor ICLR fit.",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Typos and loosely worded sentences.",
+   "minor": true
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Possibly incorrect attribution of SOC relaxation to Jabr 2006a.",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Dataset-only contribution without technical or scientific novelty.",
+    "points": [
+     "P1.1",
+     "P2.1",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Network-structure/topology variability insufficient.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Narrow OPF focus and poor fit for ICLR/broad ML audience.",
+    "points": [
+     "P1.3",
+     "P2.2",
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Paper needs polishing.",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Demand sampling is a marginal contribution.",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Status and time-series sampling repeat prior work.",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "No convincing evidence datasets capture claimed variability.",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Global scaling gives unrealistic linear demand correlation.",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Data remains synthetic.",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No ML benchmark results on dataset.",
+    "points": [
+     "P3.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No baseline results.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No evidence correlated sampling matters for ML.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Simplistic sampling lacking realistic correlation and validation against real data.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Global range heuristic unjustified.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Renewable variability not modelled.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Interpolated time series overstate realism.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Time-series split unspecified, leakage risk.",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing feasibility and solver failure statistics.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Missing solve-time and compute statistics.",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No AC-OPF local optimality verification.",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Feasible-for-all filtering biases dataset.",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No near-infeasibility statistics.",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Limited novelty over OPFData.",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "No head-to-head comparison with OPFData.",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Unsupported priority/maintenance claims.",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Narrow OPF formulation scope.",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Topology variation limited.",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Metrics not formally defined.",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Distance-to-feasible metric cost undescribed.",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No aggregate scoring or tolerance standard.",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "No fair runtime baseline guidance.",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Little ML content; ICLR fit.",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Typos and wording.",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Possibly incorrect citation.",
+    "points": [
+     "Q1.24"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI22",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI17"
+   ],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI22"
+   ],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI23"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI13"
+   ],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI2",
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI3",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  }
+ ]
+}

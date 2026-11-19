@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-SAOhTI3yHW",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Realism is measured only by Shapiro-Wilk normality and Wasserstein distance to a target speed, with no comparison to real logs (no WOSAC-style metrics) and no diversity/multimodality measurement, so the realism and multimodality-preservation claims are unsupported",
+    "Headline claims overstate Table 1: Pluto has lower ORR/CPK than RIFT, the PPO-Clip ablation has much better ORR/CPK, and many safety differences are within the standard deviations",
+    "Novelty is modest (GRPO group advantage over candidate trajectories plus existing Dual-Clip, only the scoring head fine-tuned); the dual-clip stability benefit and KL removal lack ablations or training-stability evidence, and the Appendix A theory (binary reward, assumed contraction) does not apply to the real setting",
+    "AV-evaluation experiment equates easiest or least-blocking traffic with best simulation; RIFT is not best on PlanT; BR is coarse with only 10 routes and 3 seeds",
+    "Limited evaluation scope: one generator (Pluto), one benchmark (Bench2Drive dev10, same families as training), one reward family, no held-out towns or other datasets, and controllability shown only through a single reward variant"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

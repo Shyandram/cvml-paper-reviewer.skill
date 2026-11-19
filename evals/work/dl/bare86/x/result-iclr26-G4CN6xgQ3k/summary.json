@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-G4CN6xgQ3k",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "SimPO-as-MaxEnt derivation is a relabeling; length-dependent alpha=beta/|y| breaks Z(x) cancellation and the MaxEnt optimality claim",
+    "Online experiment (per-sample entropy bonus with RLOO) does not test SimPO's offline objective; no SimPO or plain-RL baseline, so the offline/online asymmetry is not established",
+    "Confounded comparisons: very different LRs and coefficients between KL and MaxEnt runs, single seeds, no error bars, GPT-4o-mini judge only",
+    "Causal claim that entropy causes reward hacking rests on correlation; rising entropy is a symptom of degeneration; key results (min-entropy, clipping) reported only in text",
+    "Explanation of SimPO's offline success (margins/dataset constraints) is speculative, supported only by one DPO diagnostic; small scale (Pythia 1B/2.8B, TL;DR)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

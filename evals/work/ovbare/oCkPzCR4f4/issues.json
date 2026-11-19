@@ -1,0 +1,696 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "LMM-score judge lacks human-agreement study, robustness check or alternative judge",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "GPT-5-mini judging GPT-5 raises self-preference and calibration concerns",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Listed metric anomalies left unresolved",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "LMM-score scale uninterpretable; 'pixel-accurate' claims unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Code-level vs visual-fidelity conclusion compares incommensurable, saturated scores",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Treatment of non-executable outputs unclear; scores likely over different subsets",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Level 3 compares only five proprietary models",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Level 3 confounds chart generation with context-window and table processing; no ablation",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Level 3 small (85 charts, 150 instructions); low statistical power",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Pervasive numerical inconsistencies between tables, text and appendix",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Several anomalous table entries unexplained",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Inconsistent naming and unclear model count",
+   "minor": true
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "No variance, seeds or confidence intervals despite fine-grained conclusions",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Low open-source execution rates may reflect evaluation setup (V100, token limits, temperature)",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "'Thinking helps' claim rests on few model pairs without variance",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Prompt sensitivity, dependency versions and sandbox failures not analysed",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "No failure taxonomy explaining why models fail",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Novelty mainly bundles ChartMimic-style, ChartEdit-style and long-table tasks",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Hierarchy of levels not validated; levels not comparable; tiny difficulty analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Level 2 reuses Level 1 charts, bounding diversity",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "L2 instruction filtering unclear; LLM-assisted ground truth correctness unquantified",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "No contamination analysis despite public chart sources and ChartMimic reuse",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "L1 figure-data and raw-data settings tiny (108, 36 items)",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Dataset counting units and statistics confusing",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Inter-rater agreement statistic unspecified",
+   "minor": true
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Typos, cut-off sentence, abstract numbers not matching tables",
+   "minor": true
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Saturation motivation uses GPT-4o scores not evaluated here",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "No qualitative model-level analysis; few insights",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Incremental over ChartMimic: adds Level 3 and scale; insufficient for top venue",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Near-identical phrasing, figures and design to ChartMimic",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "ChartMimic cited only in passing; potential plagiarism/integrity issue",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Reuses ChartMimic data sources and evaluation protocols; minimal advancement",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Overlap raises data ownership and double-submission concerns",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "Full dataset not released; limits reproducibility",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "GPT-5-mini judge may introduce bias; limited human validation",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Surprising metric results (Seed, MiMo vs GPT-5) unexamined; LMM-score may not reflect correctness",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Level 3 has only 150 tasks from 39 files",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Level 3 tests long-context retrieval, not complex data wrangling",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Only Matplotlib; no interactive or declarative libraries",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "No unified composite metric for model ranking",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "LMM-score judge lacks human-agreement study, robustness check or alternative judge",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "GPT-5-mini judging GPT-5 raises self-preference and calibration concerns",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Listed metric anomalies left unresolved",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "LMM-score scale uninterpretable; 'pixel-accurate' claims unsupported",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Code-level vs visual-fidelity conclusion compares incommensurable, saturated scores",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Treatment of non-executable outputs unclear; scores likely over different subsets",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Level 3 compares only five proprietary models",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Level 3 confounds chart generation with context-window and table processing; no ablation",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Level 3 small (85 charts, 150 instructions); low statistical power",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Pervasive numerical inconsistencies between tables, text and appendix",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Several anomalous table entries unexplained",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Inconsistent naming and unclear model count",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "No variance, seeds or confidence intervals despite fine-grained conclusions",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Low open-source execution rates may reflect evaluation setup (V100, token limits, temperature)",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "'Thinking helps' claim rests on few model pairs without variance",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Prompt sensitivity, dependency versions and sandbox failures not analysed",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "No failure taxonomy explaining why models fail",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Novelty mainly bundles ChartMimic-style, ChartEdit-style and long-table tasks",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Hierarchy of levels not validated; levels not comparable; tiny difficulty analysis",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Level 2 reuses Level 1 charts, bounding diversity",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "L2 instruction filtering unclear; LLM-assisted ground truth correctness unquantified",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "No contamination analysis despite public chart sources and ChartMimic reuse",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "L1 figure-data and raw-data settings tiny (108, 36 items)",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Dataset counting units and statistics confusing",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Inter-rater agreement statistic unspecified",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Typos, cut-off sentence, abstract numbers not matching tables",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Saturation motivation uses GPT-4o scores not evaluated here",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "No qualitative model-level analysis; few insights",
+    "points": [
+     "P1.28"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Incremental novelty over ChartMimic",
+    "points": [
+     "Q1.1",
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Textual and figure overlap with ChartMimic",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Insufficient citation/differentiation of ChartMimic",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Ethics: data ownership, double submission",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Dataset not released",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Judge LMM reliability and human validation",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Metric anomalies unexamined",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Level 3 small",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Level 3 shallow reasoning",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Matplotlib-only scope",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "No composite metric",
+    "points": [
+     "Q3.6"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  }
+ ]
+}

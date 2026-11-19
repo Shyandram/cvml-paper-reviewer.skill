@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-2qn6AOIkL1",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Section 5 'proof' of dominating experts relies on unbounded expert weight norms and a Gaussian toy model; it does not support dormant-expert dominance in trained MoEs",
+    "Ablations show expert probing and trigger optimization add only ~1-10 ASR points; baselines are not parameter-matched (LoRA on attention only vs. extra trained experts) and look broken (~50% on IMDB, ~0% on Samsum), with no seeds/variance",
+    "Method/implementation inconsistency (LoRA on attention 'avoiding experts' vs. tuning dormant experts) and no direct evidence that triggered inputs route to and depend on the infected experts",
+    "Defense evaluation is narrow (ONION, fine-prune, fine-tune); no MoE-specific or adaptive defenses; the >80% ASR claim covers only some settings",
+    "Utility/stealth claims overstated: 'clean' is untuned base, unrelated-task degradation, trigger PPL in the hundreds to thousands; only base models and one layer tested"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

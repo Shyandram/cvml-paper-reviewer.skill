@@ -1,0 +1,780 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No attention analysis showing model uses nearest RULER token; mechanism untested",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "No error analysis, e.g. error versus distance to nearest RULER token",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No controlled resolution-extrapolation experiment",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "ScreenSpot-Pro differs in domain too, so resolution generalization not isolated",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Gains small with single runs, no significance; sub-split regressions; consistency claim overstated",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Unclear whether fine-tuning baseline is off-the-shelf or fine-tuned without RULER",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Introduction compares models with different base models and data",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Distribution-shift cost of adding RULER only at fine-tuning unexamined",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "No baselines against alternative explicit-coordinate designs under identical settings",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "No ablation with shuffled or misaligned RULER tokens",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "I-MRoPE novelty overclaimed given Qwen3-VL and frequency-allocation work",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Evidence for I-MRoPE benefit is tiny gain without variance",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Confusing h/t notation in Eq. 8",
+   "minor": true
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "I-MRoPE never tested in fine-tuning setting",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Results well below UI-TARS and GUI-Actor; benefit in competitive regime unshown",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Baseline numbers mix copied and reproduced results with unspecified transformations",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Scope narrow: only 7B models, web-only data, one high-resolution benchmark",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "No agentic end-to-end evaluation like OSWorld or AndroidWorld",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Claim of preserved general VLM capability unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Square-patch and shared h/w assumptions limit aspect-ratio handling",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Large residual offsets with s=8 do not fit bounded-arithmetic story for small icons",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Multi-image and multi-turn behavior barely discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Inference latency reported only as token ratios, not wall-clock",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Interval analysis inconclusive; gains may be generic extra-token effect",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Presentation errors: wrong symbol, contradicted percentage, garbled benchmark description",
+   "minor": true
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Hyperparameters only in appendix",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Models underperform UI-TARS and GUI-Actor; data explanation insufficient",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Core idea is variation of explicit coordinate tokens explored elsewhere",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No attention probing proving reference-and-adjust mechanism",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Refers to questions without specifying weakness",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "New tokens and encoding add complexity and resource cost",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Performance may be limited by training data quality and diversity",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Explicit mappings may overfit specific tasks or resolutions",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Motivation weak; I-MRoPE rationale under-developed",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Results not situated within latest leaderboard trends",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "No investigation of why some methods outperform the proposed approach",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Evaluation on few MLLM foundation models, e.g. no MiniCPM",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "I-MRoPE contribution marginal; combining both methods unjustified",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "No interpretability analysis such as attention or grounding heatmaps",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "No downstream GUI agent task evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q3.8",
+   "reviewer": "Q3",
+   "text": "No scaling study over model size and data volume",
+   "minor": false
+  },
+  {
+   "id": "Q3.9",
+   "reviewer": "Q3",
+   "text": "Needs step-by-step case study of workflow",
+   "minor": true
+  },
+  {
+   "id": "Q3.10",
+   "reviewer": "Q3",
+   "text": "Computational implications like inference latency not analyzed",
+   "minor": false
+  },
+  {
+   "id": "Q3.11",
+   "reviewer": "Q3",
+   "text": "Advantage over OCR locations plus CoT layout reasoning unclear",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Generalization to grounding tasks beyond GUI unclear",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No evaluation on GUI agent tasks like AndroidWorld, WebArena",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "No experiments on impact on general VLM abilities",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Fails to match GUI-Actor on similar problem",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Missing recent strong baselines on ScreenSpot benchmarks",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "No attention analysis of mechanism",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No error analysis",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No resolution-extrapolation experiment",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "ScreenSpot-Pro domain confound",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Small gains, no statistics",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Fine-tuning baseline unclear",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Mismatched intro comparison",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Fine-tune-time distribution shift",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No alternative coordinate-design baselines",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "No shuffled-token ablation",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "I-MRoPE novelty overclaimed",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "I-MRoPE evidence tiny",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Eq. 8 notation",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "I-MRoPE not in fine-tuning",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Below SOTA",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Mixed baseline sources",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Narrow scope",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "No agentic evaluation",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "General capability unsupported",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Square-patch limitation",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Large residual offsets",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Multi-image/multi-turn",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No wall-clock latency",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Inconclusive interval analysis",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Presentation errors",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Hyperparameters in appendix",
+    "points": [
+     "P1.26"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Underperforms SOTA, unexplained",
+    "points": [
+     "Q1.1",
+     "Q3.3",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Novelty vs explicit coordinate tokens",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No mechanism/interpretability analysis",
+    "points": [
+     "Q1.3",
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Vague reference to questions",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Added complexity and latency",
+    "points": [
+     "Q2.1",
+     "Q3.10"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Training data dependency",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Potential overfitting",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Weak motivation",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Missing recent baselines/leaderboard context",
+    "points": [
+     "Q3.2",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Few foundation models",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "I-MRoPE marginal",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No downstream agent tasks",
+    "points": [
+     "Q3.7",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No scaling study",
+    "points": [
+     "Q3.8"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Case study needed",
+    "points": [
+     "Q3.9"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Comparison with OCR+CoT",
+    "points": [
+     "Q3.11"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Beyond-GUI generalization",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "General VLM ability untested",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI9",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI10"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  }
+ ]
+}

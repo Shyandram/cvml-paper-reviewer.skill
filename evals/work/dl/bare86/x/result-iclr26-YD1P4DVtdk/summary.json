@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-YD1P4DVtdk",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Instability measured largely on unfaithful circuits (circuit error 0.44 avg; 0.66-0.80 for Llama IOI/SVA; no faithful Greater-Than circuit on Llama), so 'high variance' is not tied to the regime where EAP-IG works",
+    "No baselines or null: no other discovery method or random/size-matched control, so Jaccard 0.56 cannot be called high; Jaccard confounded with circuit size (1 to 448 edges) set by greedy connectivity rule",
+    "Evaluation is in-sample (Deval = D); bootstrap validity for discrete selection unexamined; dataset sizes, replicates and CIs missing; meta-dataset resampling (Jaccard 0.79) weakens the headline",
+    "Hyperparameter sensitivity compares different estimators; noise experiment is thin (GPT-2, 2 tasks) and the 0.2 recommendation is unjustified; GPT-2 vs Llama conclusions confounded",
+    "Statistical-estimator framing is rhetorical (no estimand, no bias analysis, no method), limited novelty vs prior non-identifiability work; presentation issues (duplicated text, wrong table refs)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

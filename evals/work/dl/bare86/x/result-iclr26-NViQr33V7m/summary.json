@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-NViQr33V7m",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No ablation isolating the sharpness (SAM) term from truncation, noise smoothing, and trajectory reuse; gains cannot be attributed to flatness",
+    "In-domain gains over FTD/TESLA are marginal (0.1-0.5 pts) and often within standard deviation; ImageNet-1K compared only to TESLA, with no modern large-scale baselines",
+    "Theory (Prop 4.1 convexity/convergence assumptions, loose linear-in-tau Thm 4.2) does not match the non-converged practical setting; trajectory reusing changes the SAM objective",
+    "Evidence for flatness is indirect (hypergradient norm, sharpness during training), with no final-sharpness comparison; Table 8 shows extreme sensitivity to the truncation fraction (23.4 vs 50.9)",
+    "Efficiency claims overstated: memory above TESLA (5.7 vs 3.6 GB), runtime about equal to MTT, identical ImageNet-1K memory entries"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

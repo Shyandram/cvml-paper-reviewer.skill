@@ -1,0 +1,482 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Headline gains computed at favourable budgets; selection of 58.4% figure unstated",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "SeerAttn-R comparison not matched in training data/compute; setup and budget semantics unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Missing learned-eviction baselines (Locret, NACL) or simple trained gate ablation",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "SnapKV/H2O run in prefill-compression setting may not be intended use",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No confidence intervals; 'surpasses full cache' claims rest on single runs",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Low full-cache scores suggest truncation; regularisation explanation untested; generation lengths unreported",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Training soft logit modulation vs inference hard eviction mismatch unanalysed",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Multiplicative logit decay parameterisation unjustified; up-weights negative q\u00b7k",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Capacity loss M=512 vs wide inference budgets; sensitivity only in appendix",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Query-independent retention cannot capture future-query dependence; SCBench retrieval failures unanalysed",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "'Consistently outperforms' overstated; LongBenchV2 only in appendix",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Interpretability claims rest on hand-picked heads without quantitative or causal validation",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Efficiency evidence thin: single setup, no memory or gate overhead",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Budget uniform across heads; heterogeneous allocation benefits not realised",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Gates trained per model and domain; retraining cost unacknowledged",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Limited to 14B/128K; quantisation and multi-turn prefix caching not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "'Globally optimal caching policy' claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Typos, reliance on appendix, gains hard to verify from figures",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Why not fold into normal model training; integration path not addressed",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Interaction of learned decay with positional encoding unclear; may be recency bias",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Fixed memory budget; adaptive per-layer/head/task budgets unexplored",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Missing comparison with Locret",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No evaluation on RULER and LongBench-V2",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Exponential decay aggressive; may degenerate into sliding window",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Query-agnostic baselines InfiniPot and Locret not discussed or compared",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "General long-context benchmarks (RULER, LongBench) missing; retrieval weakness undiscussed",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Training setup and training cost unclear",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Unclear whether multi-turn conversation supported",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Writing: long Appendix C, uninformative Figure 4, conclusion uses model output",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Headline gains computed at favourable budgets; selection of 58.4% figure unstated",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "SeerAttn-R comparison not matched in training data/compute; setup and budget semantics unclear",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing learned-eviction baselines (Locret, NACL) or simple trained gate ablation",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "SnapKV/H2O run in prefill-compression setting may not be intended use",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No confidence intervals; 'surpasses full cache' claims rest on single runs",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Low full-cache scores suggest truncation; regularisation explanation untested; generation lengths unreported",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Training soft logit modulation vs inference hard eviction mismatch unanalysed",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Multiplicative logit decay parameterisation unjustified; up-weights negative q\u00b7k",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Capacity loss M=512 vs wide inference budgets; sensitivity only in appendix",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Query-independent retention cannot capture future-query dependence; SCBench retrieval failures unanalysed",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "'Consistently outperforms' overstated; LongBenchV2 only in appendix",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Interpretability claims rest on hand-picked heads without quantitative or causal validation",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Efficiency evidence thin: single setup, no memory or gate overhead",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Budget uniform across heads; heterogeneous allocation benefits not realised",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Gates trained per model and domain; retraining cost unacknowledged",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Limited to 14B/128K; quantisation and multi-turn prefix caching not discussed",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "'Globally optimal caching policy' claim unsupported",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Typos, reliance on appendix, gains hard to verify from figures",
+    "points": [
+     "P1.18"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Integration into standard training",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Learned decay may reduce to recency/sliding window",
+    "points": [
+     "Q1.2",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Fixed memory budget",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Missing Locret/InfiniPot comparisons",
+    "points": [
+     "Q3.1",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Missing general long-context benchmarks",
+    "points": [
+     "Q3.2",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Training setup and cost unclear",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Multi-turn support",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Writing issues",
+    "points": [
+     "Q4.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI5",
+    "QI4",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-9R2iUHhVfr",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Contamination resistance is asserted via GPL licensing with no empirical contamination test; public set is openly crawlable; held-out set results are never reported",
+    "Numerous inconsistencies between Table 1/Table 3 and the text (e.g. Sonnet 4 17.6 vs 16.3, Opus failure rates 48.5 vs 35.9, counts exceeding N=731)",
+    "Single scaffold (SWE-Agent), single run, no confidence intervals; GPT-5's 63% non-submission suggests scaffold mismatch confounds the ranking",
+    "Commercial set is unverifiable, from the authors' affiliated sources, with undocumented stats and ~15 tasks/repo contradicting the stated 50-100 constraint",
+    "Requirements/interface written from gold patch and tests make tasks spec-following; no false-negative audit or unaugmented ablation; LLM-judge failure analysis weakly validated"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

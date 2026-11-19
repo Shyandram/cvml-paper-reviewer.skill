@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-zWRmev5IQ4",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Baselines are U-Net methods on weaker backbones; no baseline ported to the same DiT, so the DiT-specific benefit is confounded with the backbone",
+    "Small, self-designed 56-prompt single-object evaluation judged by one detector (OWL-ViT); no multi-object cases, no variance; t_a/t_b tuned on the test set",
+    "RoPE-attention mechanism supported by a single qualitative attention visualization; no quantitative analysis, and no ablation of the R-token mask or the LLM prompt split (prompt enrichment confound)",
+    "3D-aware control via position density only shown qualitatively, with no quantitative evaluation",
+    "Some claims overstated: 'best across all metrics' is not supported by Table 1 (e.g., CogVideoX variant), and Tora is compared with point rather than box conditioning"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

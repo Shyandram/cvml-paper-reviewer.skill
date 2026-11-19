@@ -1,0 +1,663 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Generalization to unseen unconventional motions untested; no held-out-motion or novel-combination test",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Baselines not matched in data exposure; missing plain fine-tuning on same synthetic videos",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Synthetic vs real comparison uses RealEstate10K lacking target motions; small and weak",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "'Optical-flow' loss is actually appearance-dependent frame-difference loss",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Optical-flow loss not ablated; \u03bb and latent/pixel space unspecified",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "FVD unreliable at this sample size; reference set unstated",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Camera pose metric estimation details missing; unfair in text setting; pose failures likely",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "VividCam not uniformly better in Table 2; text glosses over losses",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Human study small with no statistics, agreement, or blinding details",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Evidence that style-aligned prompt matters is thin",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Missing ablations on data size/diversity, scene complexity, LoRA rank, single-LoRA design",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No quantitative measure of residual synthetic-style leakage",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Only one base model family",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "No analysis of transfer to content far from training scenes",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Failure cases and limitations discussion missing",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Unclear whether semantic-target prompts are learned or motion merely replayed",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Novelty moderate: AnimateDiff-style split and prior synthetic camera data",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "No analysis of why discarding appearance LoRA suffices for disentanglement",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Notation hard to follow; Eq. 1-2 missing norm",
+   "minor": true
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Several listed motions lack quantitative breakdown",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Key results only in webpage videos",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Only tested on one base model (CogVideoX-5B)",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "No failure case analysis",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Baselines not trained on same synthetic data; unfair comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Only FVD for appearance; more metrics such as dynamic degree needed",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "LoRA tuning to avoid appearance leakage widely used; limited innovation",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Single-domain dataset limits generalization to other domains",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Contribution of each of four disentanglement techniques not shown",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Training settings/data of compared methods differ",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Train/test motion combinations unclear; generalization to unseen motions unknown",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Limited novelty: combines existing techniques without new insight",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Dual LoRA identical to AnimateDiff's strategy; contribution overstated",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Uses vague text prompts instead of precise synthetic trajectories",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Table 1 motions are conventional; 'unconventional' rationale unconvincing",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Figure 5 ablation unconvincing: static frames, minimal differences",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "No side-by-side video comparisons with baselines",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Visual fidelity regresses relative to baselines",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Requires curated synthetic data; real gaming/movie videos could be mined instead",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Missing related work on synthetic video fine-tuning",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "'Optical-flow-based' naming misleading; actually temporal derivative loss",
+   "minor": true
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No ablation of optical-flow loss",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Generalization to unseen unconventional motions untested; no held-out-motion or novel-combination test",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Baselines not matched in data exposure; missing plain fine-tuning on same synthetic videos",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Synthetic vs real comparison uses RealEstate10K lacking target motions; small and weak",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "'Optical-flow' loss is actually appearance-dependent frame-difference loss",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Optical-flow loss not ablated; \u03bb and latent/pixel space unspecified",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "FVD unreliable at this sample size; reference set unstated",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Camera pose metric estimation details missing; unfair in text setting; pose failures likely",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "VividCam not uniformly better in Table 2; text glosses over losses",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Human study small with no statistics, agreement, or blinding details",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Evidence that style-aligned prompt matters is thin",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Missing ablations on data size/diversity, scene complexity, LoRA rank, single-LoRA design",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No quantitative measure of residual synthetic-style leakage",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Only one base model family",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No analysis of transfer to content far from training scenes",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Failure cases and limitations discussion missing",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Unclear whether semantic-target prompts are learned or motion merely replayed",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Novelty moderate: AnimateDiff-style split and prior synthetic camera data",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "No analysis of why discarding appearance LoRA suffices for disentanglement",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Notation hard to follow; Eq. 1-2 missing norm",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Several listed motions lack quantitative breakdown",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Key results only in webpage videos",
+    "points": [
+     "P1.21"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Single base model",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No failure cases",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Baselines not matched in training data",
+    "points": [
+     "Q1.3",
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Insufficient appearance metrics",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Limited novelty over AnimateDiff/LoRA techniques",
+    "points": [
+     "Q1.5",
+     "Q2.4",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Single-domain data limits generalization",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Missing per-component ablations (incl. flow loss)",
+    "points": [
+     "Q2.1",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Train/test motion overlap; unseen motion generalization",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Text prompts instead of trajectories",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Motions are conventional",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Figure 5 ablation unconvincing",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No side-by-side video comparisons",
+    "points": [
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Poor visual fidelity",
+    "points": [
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Synthetic data curation cost vs real data mining",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Missing related work",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Optical-flow loss misnamed",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI16"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  }
+ ]
+}

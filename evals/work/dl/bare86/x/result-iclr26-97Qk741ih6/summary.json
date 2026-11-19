@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-97Qk741ih6",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Core claim of test-time budget/price control from one checkpoint is never shown: no budget/price sweeps or Pareto curves",
+    "Constraint-satisfaction experiment is weak (feasibility 0.34, infeasible budgets, dual value as a quality metric); latency is above Vanilla RAG in most settings despite the abstract's latency-reduction claim",
+    "Baseline fairness and setup unclear: RL-trained CLAUSE vs. mostly zero-shot baselines, KG construction for HotpotQA, no specialised KGQA/LLM+KG baselines, no seeds or variance",
+    "Missing training and implementation details; appendix with algorithms, convergence and shadow-price proof is unresolved ('Appendix ??')",
+    "Algorithmic novelty is a combination of MAPPO, QMIX mixer, COMA and Lagrangian duals; ablations do not isolate these components or the provenance claims"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

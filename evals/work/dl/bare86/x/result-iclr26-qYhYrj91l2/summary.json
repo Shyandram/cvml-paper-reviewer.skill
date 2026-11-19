@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-qYhYrj91l2",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Test motions are the same types as the training motions, so generalization to unseen unconventional motions is never tested",
+    "No control baseline fine-tuned on the same synthetic data without the disentanglement components; the real-data comparison uses RealEstate10K, which lacks these motions",
+    "The 'optical-flow' loss is a frame-difference loss with no ablation and no lambda reported, and is not appearance-invariant",
+    "Metrics are weak: FVD around 2000 on 100 prompts, undescribed pose-estimation protocol, mixed results in Table 2, and a small MTurk study with no variance or significance",
+    "Limited novelty (AnimateDiff-style appearance LoRA plus a style tag) and a limited ablation set (no data scale, scene complexity or backbone variation)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

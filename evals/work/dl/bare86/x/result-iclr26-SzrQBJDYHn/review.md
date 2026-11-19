@@ -1,0 +1,41 @@
+# Review: Detecting Post-generation Edits to Watermarked LLM Outputs via Combinatorial Watermarking
+
+(Text-only review; figures were not available, so Figs. 4–8 are judged from captions and surrounding text. I read the main body and the appendix through B.3, which is lines 1–952 of the extracted file. The remaining lines, presumably references, were not read.)
+
+## Summary
+The paper proposes the task of localizing local post-generation edits (replace, insert or delete spans of 1–6 tokens) in watermarked LLM text. The watermark partitions the vocabulary into r subsets. Generation cyclically boosts the logits of subset T_{t mod R} by δ, following a fixed pattern (ABAB… or ACADBCBD…). Detection uses a sliding-window indicator I_w(t) that checks whether w consecutive tokens match a cyclic shift of the pattern. The global statistic is the mean of this indicator. The local edit statistic is a per-token average over the w windows covering the token, and positions below a threshold are flagged as edits. Theorem 3.1 gives a Janson-type bound on the per-token false alarm rate. Experiments use LLaMA-2-7B and OPT-1.3B, 64-token generations from WikiText prompts, and synthetic random edits. The paper reports higher localization accuracy than KGW and Unigram adapted with a degenerate "AA" pattern, at Type-I rate 0.1 and tolerance L=3. It also reports a detectability-vs-perplexity trade-off and a small Gemini-generated misinformation test.
+
+## Strengths
+- Localizing edits to watermarked text, rather than only detecting the watermark, is a well-motivated and under-explored problem. It connects to provenance and spoofing concerns.
+- The idea is simple and cheap: a deterministic local structure makes pattern violations visible, and detection takes under a second per batch.
+- The limitations are stated candidly. One- and two-token edits are hard, and 2-aligned deletions are undetectable for AB. The sensitivity analysis and the looseness of the theory are discussed.
+- The task-specific metrics (local Type-I error and accuracy with tolerance L) are reasonable. The multinomial-sampling and misinformation experiments in the appendix add some breadth.
+
+## Weaknesses
+1. **Threat model and security are not addressed.** The watermark has a low-entropy structure: a fixed 2- or 8-periodic template, with the key determining only the vocabulary partition. Anyone who sees a few watermarked texts can estimate the partition and pattern, as in the known attacks on KGW/Unigram that the paper cites. Such a party can make pattern-preserving edits that the detector cannot see, or forge pattern-consistent text. The paper evaluates only edits made without knowledge of the scheme, yet the abstract and introduction motivate the work with spoofing attackers. Even for unaware editors, the paper concedes that 2-, 4- and 6-token deletions are invisible for AB. Short edits also match the pattern by chance with probability about 2^-k.
+2. **The evaluation is narrow and synthetic.** The main results use 64-token texts, small or old models, and 4-beam deterministic decoding, which is unusual for a watermark whose strength depends on entropy. Edits are random tokens at random positions. There are no human edits, no paraphrase or LLM rewriting (which the introduction names as the central real-world case), and no multiple scattered edits, although the problem setup allows them. The main text shows one δ (5.8), a very strong setting that is nearly a hard constraint. There are no instruction-tuned or larger models, no longer texts, and no low-entropy domains such as code. No variance or confidence intervals are reported anywhere (200 samples per cell in Fig. 7).
+3. **The baselines are weak or ill-posed.** KGW and Unigram are forced into an "AA…" pattern with w=2 and the same sliding-window statistic. KGW's context-hashed list was not designed for this, so the comparison is against handicapped baselines. Missing are a token-level green-list score with a scan or change-point statistic, the likelihood-ratio statistic the paper itself proposes in Remark B.1, the HC test [25], and the segment-level approach [30]. Using w=8 for the long pattern but w=2 for the baselines also confounds the comparison.
+4. **The metrics are lenient and the calibration is unclear.** The per-position Type-I rate of 0.1 is high. It is not stated how τ_e is calibrated (which δ, which length, which model). With roughly 6 expected false flags in 64 tokens, Algorithm 3's "edited or not" decision (min over positions below τ_e) probably has a near-1 text-level false positive rate, and this is never reported. A tolerance of L=3 on short texts means a coincidental flag can count as a hit. No precision, recall, F1 or AUROC is reported. Accuracy rising with edit length is partly mechanical.
+5. **The theory is thin and partly mis-specified.** Theorem 3.1 bounds only the clean-text false alarm rate, and it takes the alignment probability μ1 as given and unknown, so it yields no usable threshold. The μ1=1 case is vacuous. The proof uses Janson's inequality with the joint probability μ1^(w+k), which implicitly assumes independence structure that does not hold for LLM tokens. The bound is loose in the regime of interest. There is no miss-detection guarantee in the main paper, and the appendix bound is admitted to be uninformative. The "provable" language in the introduction is overstated.
+6. **The quality and detectability trade-off is not competitive.** Fig. 6 reports that the longer pattern has the weakest trade-off, and this is the pattern that gives the best edit detection. Perplexity is the only quality metric. There is no downstream, diversity or human evaluation, and no matched-PPL comparison with KGW/Unigram in the main text. The appendix shows the robustness of the watermark to edits is at best comparable to the baselines, and the long pattern degrades more.
+7. **Novelty is moderate.** AB is a special case of [9], as acknowledged. The longer patterns are hand-picked, with at most four tags and no principled design or optimization.
+8. **Claims exceed evidence in the misinformation test.** Table 1 uses 139 OPT-2.7B texts with no baseline, and the human check covers 50 samples. It is described as testing "robustness of our watermark against realistic threats", but it tests only localization of word-level substitutions made by an LLM unaware of the pattern.
+9. **Presentation.** The paper is mostly clear. However, the definitions of detection accuracy and Type-I error are loose, especially how positions are defined for insertions and deletions. There are also no implementation details such as key handling, seeds and threshold fitting.
+
+## Questions
+1. What happens when the editor knows or learns the pattern? How easily can pattern-consistent edits be crafted, and how does the scheme compare with KGW's spoofing vulnerability?
+2. What is the text-level false positive rate of Algorithm 3 at the thresholds used, and how is τ_e calibrated?
+3. How do precision, recall and AUROC compare with a windowed likelihood-ratio or scan statistic on standard KGW, with HC [25], and with [30]?
+4. How does performance hold up with LLM paraphrase, multiple scattered edits, longer texts (200 tokens or more), instruction-tuned models, and standard sampling?
+5. At matched perplexity and with additional quality metrics, how do detection power and edit robustness compare with KGW/Unigram?
+6. Could key-dependent or non-periodic patterns remove both the 2-aligned-deletion blind spot and the pattern-learning weakness?
+
+## Scores
+- Soundness: 2
+- Presentation: 3
+- Contribution: 2
+- **Rating: 4** (marginally below the acceptance threshold)
+- Confidence: 4
+
+## Justification
+The task is interesting and the idea is simple and sensible. But the contribution is a hand-designed periodic watermark whose edit-detection advantage is shown only against weakened baselines and on synthetic random edits with lenient metrics. The adversary-aware setting that motivates the paper is neither analyzed nor tested. The theory does not support the evaluation, and the quality trade-off worsens as edit detection improves. A revision with a proper threat model, stronger baselines, realistic edits, larger models and text-level error rates would be considerably stronger.

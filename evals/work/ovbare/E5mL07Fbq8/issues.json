@@ -1,0 +1,734 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Missing simple logit/likelihood-based baselines such as sequence NLL, token entropy",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Missing other UQ baselines: discrete SE, P(True), verbalized confidence, LogTokU",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "13% improvement over constant zero SE is uninformative and misleading",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Boltzmann derivation assumes constant partition function; justification circular",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Eqs. 13-16 unused and do not derive Eq. 19",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Epistemic uncertainty claim asserted but never tested",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Softmax shift-invariance undermines energy framing; penultimate-layer terminology confused",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Estimator ill-specified; unclear how cluster energies yield a single score",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Summed cluster energy confounds cluster size with logit magnitude; no ablation",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Protocol under-specified: sample count, temperature, clustering method, correctness labeling",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "No seeds, confidence intervals or significance tests",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "AUPR convention unstated; dataset names inconsistent",
+   "minor": true
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Narrow scope: two factoid QA datasets, two models, no other families or tasks",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Think-mode result not quantified",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Semantic-clustering ablation thin; needs unclustered averaging control",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Failure modes such as overconfident logits not analyzed",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "No calibration analysis despite calibration claim",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "No error analysis of single-cluster wrong-answer cases",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "No ablations on sample count, temperature or length normalization",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Overstated statements lack evidence, e.g. 'approaches 50%'",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Typos and grammar issues",
+   "minor": true
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Related work lists citations without positioning",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Too few models and datasets evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Only semantic entropy compared; logit-based approaches missing",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Which semantic entropy implementation is used is unspecified",
+   "minor": true
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Number of samples and clustering method unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Claim that half of zero-SE questions are wrong lacks numbers",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Accuracy in single-cluster results not reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "FPR@TPR=0.95 computation for single-cluster results unclear",
+   "minor": true
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Parameter uncertainty discussion unclear for non-Bayesian model",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Z and vocabulary subset not defined",
+   "minor": true
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Eq. 19 does not specify how multiple clusters are combined",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Contribution incremental given semantic entropy and LogTokU",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Missing comparisons to LogTokU and KLE in main tables",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "More models needed",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "More datasets needed",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "No confidence intervals",
+   "minor": false
+  },
+  {
+   "id": "Q2.6",
+   "reviewer": "Q2",
+   "text": "Vague descriptions disguised in technical terminology",
+   "minor": true
+  },
+  {
+   "id": "Q2.7",
+   "reviewer": "Q2",
+   "text": "Aleatoric/epistemic discussion unsupported by citations or evidence",
+   "minor": false
+  },
+  {
+   "id": "Q2.8",
+   "reviewer": "Q2",
+   "text": "'True' partition function undefined",
+   "minor": true
+  },
+  {
+   "id": "Q2.9",
+   "reviewer": "Q2",
+   "text": "Symbol for vocabulary set unclear",
+   "minor": true
+  },
+  {
+   "id": "Q2.10",
+   "reviewer": "Q2",
+   "text": "Eq. 13 wrongly states joint distribution over token and parameters",
+   "minor": false
+  },
+  {
+   "id": "Q2.11",
+   "reviewer": "Q2",
+   "text": "Eqs. 14-16 mathematically incorrect; Sec 3.2.2 superfluous to Eq. 19",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Narrow scope: two models and two QA datasets",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Comparisons limited to semantic entropy; many baselines missing",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Computational cost of sampling and clustering not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Think-mode experiment underexplored",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Missing logit-based baselines",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Missing other UQ baselines including LogTokU",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Headline improvement versus constant SE misleading",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Constant partition function assumption circular",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Bayesian derivation unused, does not yield Eq. 19",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Epistemic claim untested",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Energy framing and terminology flawed",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Estimator ill-specified across clusters",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Cluster-size confound",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Experimental protocol under-specified",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No seeds/CIs/significance",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "AUPR convention and dataset naming",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Narrow models/datasets scope",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Think-mode not quantified",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Clustering ablation lacks averaging control",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Failure modes unanalyzed",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "No calibration analysis",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "No error analysis of single-cluster errors",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Missing hyperparameter ablations",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Unsupported overstated statements",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Typos and grammar",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Related work lacks positioning",
+    "points": [
+     "P1.22"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Narrow empirical scope: few models and datasets",
+    "points": [
+     "Q1.1",
+     "Q2.3",
+     "Q2.4",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Baselines limited to semantic entropy",
+    "points": [
+     "Q1.2",
+     "Q2.2",
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "SE implementation unspecified",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Sample count and clustering method unspecified",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Half-wrong zero-SE claim lacks numbers",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Single-cluster accuracy not reported",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "FPR95 computation unclear",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Parameter-uncertainty/Bayesian treatment incoherent",
+    "points": [
+     "Q1.8",
+     "Q2.10"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Undefined notation in estimator section",
+    "points": [
+     "Q1.9",
+     "Q2.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Eq. 19 cluster combination unclear",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Incremental contribution",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "No confidence intervals",
+    "points": [
+     "Q2.5"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Vague technical terminology",
+    "points": [
+     "Q2.6"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Aleatoric/epistemic discussion unsupported",
+    "points": [
+     "Q2.7"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "True partition function undefined",
+    "points": [
+     "Q2.8"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Eqs. 14-16 incorrect and superfluous",
+    "points": [
+     "Q2.11"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Computational cost not discussed",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Think mode underexplored",
+    "points": [
+     "Q3.4"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI16"
+   ],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  }
+ ]
+}

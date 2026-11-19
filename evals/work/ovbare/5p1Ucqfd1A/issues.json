@@ -1,0 +1,737 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Dataset statistics inconsistent across text and tables",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "'<5% margin of error' claim unsupported; many slices very small",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Headline +28% compares winners on private split with baseline on public split",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Winning gain mainly reflects shift to abstention; accuracy actually dropped",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Truthfulness metric dominated by abstention; no 'always I don't know' baseline or coverage analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Commercial system details (search, prompts, versions, dates) missing; not reproducible",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Commercial systems use live web, unfair comparison with mock-corpus solutions",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Time-sensitive ground truth may go stale; dynamism results not shown",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Model and system names and versions ambiguous",
+   "minor": true
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Single runs with no confidence intervals, seeds or error bars",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "GPT-4o judge validation weak: low Incorrect precision, sample size and kappa unreported",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Truncating answers to 75 tokens may bias against longer answers",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Models compared using different prompts regarding abstention",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Multi-turn early-stop scoring rule sensitivity unanalyzed",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Llama-generated multi-turn conversations risk model-family bias",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No annotator agreement or verification statistics reported",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Natural topic drift claim not compared with real user conversations",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Egocentric questions written by annotators, not real users; image source fractions unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Retrieval recall properties result from corpus construction, not realistic retrieval",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Only straightforward baselines; stronger MM-RAG baselines and model sizes missing",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "No ablations verifying claimed benchmark properties matter",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Insights expected and correlational; no failure-mode taxonomy",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Leakage and contamination not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Limited methodological novelty; mostly engineering and data collection",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Key details relegated to appendices; main text dense",
+   "minor": true
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Consent, PII blurring and data/web licensing not addressed",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Hidden test split creates gap between released data and headline numbers",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Evaluation of closed commercial systems should be reproducible by outsiders",
+   "minor": false
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Typos and inconsistent use of accuracy versus truthfulness",
+   "minor": true
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "Figure 4 hard to read",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Dataset creation and question quality control (annotators, agreement) undocumented",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Auto-evaluator validation insufficiently documented",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Low retriever recall bounds accuracy; retrieval versus reasoning failures not disentangled",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Bystander privacy risks; anonymization and consent protocols undocumented",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Benchmark yields little significant analysis or insight",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No methodology proposed to improve model capabilities",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Truthfulness definition inconsistent across paper",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Unclear whether benchmark is RAG, search-augmented or long-context",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Unclear whether benchmark targets wearable use or comprehensive scenarios",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Question distribution, intentions and examples not detailed",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Semi-synthetic or LLM-generated questions may differ from real human queries",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Low image-search recall biases conclusions such as entity recognition claim",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "Prompts and definitions of truthfulness, missing, hallucination unclear; negative truthfulness confusing",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "Unclear whether multi-round search avoids returning same content",
+   "minor": true
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Initial experiments and analyses need strengthening",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Inconsistent dataset statistics",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Margin-of-error claim unsupported",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Headline +28% compares different splits",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Truthfulness metric and gains dominated by abstention",
+    "points": [
+     "P1.4",
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Commercial system evaluation undocumented and irreproducible",
+    "points": [
+     "P1.6",
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Unfair live-web comparison",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Ground-truth staleness and dynamism",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Ambiguous system names",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No statistical uncertainty",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "LLM judge validation weak",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Answer truncation bias",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Different prompts across models",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Multi-turn scoring rule sensitivity",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "LLM-generated conversations risk bias",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No annotator agreement statistics",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Topic drift realism unvalidated",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Questions not from real wearable users",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Retrieval difficulty by construction",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Only weak baselines",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No ablations of benchmark properties",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Shallow correlational insights; no failure taxonomy",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Leakage/contamination",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Limited methodological novelty",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Details in appendices",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Privacy, consent and licensing",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Hidden test split gap",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Typos and inconsistent terminology",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Figure 4 readability",
+    "points": [
+     "P1.30"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Dataset construction and quality control undocumented",
+    "points": [
+     "Q1.1",
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Auto-evaluator validation missing",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Low retrieval recall confounds conclusions",
+    "points": [
+     "Q1.3",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Privacy and consent",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Limited analysis and insights",
+    "points": [
+     "Q3.1",
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "No improvement method",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Metric definitions and prompts unclear",
+    "points": [
+     "Q3.3",
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Benchmark type unclear",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Target scenario unclear",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Synthetic questions versus real user queries",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Multi-round search content handling unclear",
+    "points": [
+     "Q4.7"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI2"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI10"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-RgOHRYHX5L",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Settings are small, synthetic SFT setups with a known, nameable behavior; no RL or naturally occurring reward hacking or sycophancy despite the oversight-failure motivation",
+    "Inoculation and evaluation prompts appear tuned on the held-out metrics (best-of-N); no validation split or regret analysis for the selection heuristic",
+    "Selection heuristic is weak: correlations of 0.57-0.90 over few prompts, no CIs, fails on Qwen-2 base, and is not shown to select good prompts",
+    "Mechanism untested and conditional-policy/backdoor explanation not ruled out; IP increases compliance with undesired requests for some models (Qwen 2.5); effect brittle and decays with longer training",
+    "Limited baselines (only PTST); no comparison to persona-vector steering, gradient routing or data filtering; narrow capability evaluation"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

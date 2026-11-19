@@ -1,0 +1,583 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Insufficient discussion and comparison with recent VLM debiasing methods such as B2T",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Supervision assumed by each method (spurious, target or validation labels) unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Important details deferred to appendix, harder to follow",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Only image-encoder attention heads addressed; text-encoder biases ignored",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Requires transformer image encoder; not applicable to CLIP-ResNet",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Derivation from inequalities to V_S in Eq. 10 unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "More analysis of spurious association Z_SY in main paper; could it be suppressed too",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Locate-and-correct idea not unique; missing related works and benchmark comparisons against them",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Direct Effect is not synonymous with an importance score",
+   "minor": true
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Theoretical validity of applying causal mediation analysis to neural networks questionable",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Paper difficult to read; dense methodology needs diagrams or toy examples",
+   "minor": true
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Generalization of located heads across tasks, classes and spurious types underexplored",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Protocol needs group/class labels; not truly zero-shot, more supervision than other training-free methods",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Label-free LTC-\u015c results mixed; should be main result with labeled as oracle",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Comparison with supervised-label baselines (JTT) unfair, best-configuration reporting",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Gender worst-group selection on evaluation set is circular (regression to mean)",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Gender evaluation lacks accuracy/utility metric",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Anomalous Ortho-Cali ViT-H result uninvestigated",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "RoboShot gender failure attributed to LLM safeguards without test",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "LTC equals TextSpan exactly in Table 3; suspicious, no gain",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "CounterAnimal gains tiny, likely within noise",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Ad hoc class pairing and pseudo-label retrieval depart from general framing",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Only 45 ImageNet classes evaluated; general performance damage unknown",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Linear mixture in Eq. 8 lacks meaning for one-hot votes",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Eq. 10 isolation argument heuristic; not validated in controlled setting",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Top-1 head votes ignore indirect/MLP effects; direct logit effects not causal; no patching",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Threshold \u03b3 heuristic with partial sensitivity; \u03bb/\u03b3 notation mismatch",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Interpretability claims rest on few examples; no quantitative or human evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Explanation of gender S/SY discrepancy speculative",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Head-level ablation hides redundancy; concentration of concepts in few heads untested",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Only OpenCLIP ViTs; missing CelebA, other spurious benchmarks and CLIP variants",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Missing comparisons to recent training-free methods (FairerCLIP, SANER, Kim et al.)",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Missing simple head-selection baselines (gradients, activation patching)",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No seeds or confidence intervals; small noisy validation set",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Headline >50% worst-group gain claim vague and overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Minor numeric inconsistencies between tables",
+   "minor": true
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Typos and unclear notation",
+   "minor": true
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Experimental setup defined late/appendix; key details hard to follow",
+   "minor": true
+  },
+  {
+   "id": "Q1.27",
+   "reviewer": "Q1",
+   "text": "Several claims asserted without supporting table",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Missing related work and comparisons to recent debiasing methods",
+    "points": [
+     "P1.1",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Supervision assumptions of methods unclear",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Readability; details deferred to appendix",
+    "points": [
+     "P1.3",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Text encoder biases not addressed",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Restricted to transformer image encoders",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Eq. 10 derivation unclear",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "More Z_SY interpretation analysis",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Direct Effect called importance score",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Validity of CMA for neural networks",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Generalizability of located heads",
+    "points": [
+     "P4.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Protocol needs group/class labels; not truly zero-shot, more supervision than other training-free methods",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Label-free LTC-\u015c results mixed; should be main result with labeled as oracle",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Comparison with supervised-label baselines (JTT) unfair, best-configuration reporting",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Gender worst-group selection on evaluation set is circular (regression to mean)",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Gender evaluation lacks accuracy/utility metric",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Anomalous Ortho-Cali ViT-H result uninvestigated",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "RoboShot gender failure attributed to LLM safeguards without test",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "LTC equals TextSpan exactly in Table 3; suspicious, no gain",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "CounterAnimal gains tiny, likely within noise",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Ad hoc class pairing and pseudo-label retrieval depart from general framing",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Only 45 ImageNet classes evaluated; general performance damage unknown",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Linear mixture in Eq. 8 lacks meaning for one-hot votes",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Eq. 10 isolation argument heuristic; not validated in controlled setting",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Top-1 head votes ignore indirect/MLP effects; direct logit effects not causal; no patching",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Threshold \u03b3 heuristic with partial sensitivity; \u03bb/\u03b3 notation mismatch",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Interpretability claims rest on few examples; no quantitative or human evaluation",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Explanation of gender S/SY discrepancy speculative",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Head-level ablation hides redundancy; concentration of concepts in few heads untested",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Only OpenCLIP ViTs; missing CelebA, other spurious benchmarks and CLIP variants",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Missing comparisons to recent training-free methods (FairerCLIP, SANER, Kim et al.)",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Missing simple head-selection baselines (gradients, activation patching)",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No seeds or confidence intervals; small noisy validation set",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Headline >50% worst-group gain claim vague and overstated",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Minor numeric inconsistencies between tables",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Typos and unclear notation",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Experimental setup defined late/appendix; key details hard to follow",
+    "points": [
+     "Q1.26"
+    ]
+   },
+   {
+    "id": "QI27",
+    "summary": "Several claims asserted without supporting table",
+    "points": [
+     "Q1.27"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI20"
+   ],
+   "related": [
+    "QI21"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI26"
+   ],
+   "related": [
+    "QI25"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI19",
+    "QI10"
+   ]
+  }
+ ]
+}

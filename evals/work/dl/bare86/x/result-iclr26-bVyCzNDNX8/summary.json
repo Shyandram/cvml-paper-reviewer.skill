@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-bVyCzNDNX8",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Software/library description with no new method or scientific contribution; weak fit for ICLR main track",
+    "Generality claim (all model families, custom architectures) untested: only Gemma3-4B with BTX is evaluated; regex patching admitted to be brittle",
+    "BTS and Traditional MoE never evaluated; load-balancing loss and visualizer claims unsupported by evidence",
+    "Single case study is a reproduction with confounded baselines (extra SFT/DPO, no MergeKit/Mergoo/weight-averaging comparison, no variance); dense 12B wins on Arabic",
+    "No systems evaluation (build time, memory, throughput, latency) despite efficiency motivation; no quantitative comparison with MergeKit/Mergoo"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

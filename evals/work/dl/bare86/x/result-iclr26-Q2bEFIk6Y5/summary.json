@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Q2bEFIk6Y5",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "No baseline ML experiments or reference results, so the claim of standardized, fair benchmarking is unsupported",
+    "Claimed benefit of correlated sampling shown only by distribution illustration, not by effect on model performance or comparison with OPFData",
+    "Realism of sampling/time series is weakly validated (uniform scale plus iid noise, spline-interpolated hourly data, no renewable variability, possible temporal leakage in the random split)",
+    "Data quality under-documented (feasibility rates, local-optimality of Ipopt AC solutions, all-formulation feasibility filter bias)",
+    "Evaluation metrics given as prose recommendations without operational definitions or tooling; narrow scope (linear cost, only demand varies, single-element N-1)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

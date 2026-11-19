@@ -1,0 +1,704 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "CT-KV is Prefix Tuning with demonstration-KV initialization plus borrowed LOO masking; moderate novelty",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "ICO framework is a taxonomy defined to fit TTT and Context Tuning; little insight",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Related work thin on KV distillation, task vectors, gist tokens; no comparisons",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Efficiency gap partly systems artifact from different batch sizes and checkpointing",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No iteration- or FLOPs-matched comparison; measured speedup not reconciled with complexity analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Memory not reported; fewer-parameters claim not quantified against same-rank LoRA",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Inference cost of long optimized KV prefix not discussed",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Efficiency evidence thin at realistic model sizes; NLP-LR uses GPT-2 and different hardware",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Unclear whether hyperparameter selection uses validation split or evaluation queries",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Tuning budgets differ: CT-KV swept, TTT uses original settings; budget parity needed",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "ARC is a single run; differences of 1-2 tasks over-interpreted",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Dropping LOO on ARC is post hoc, chosen on evaluation set",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Claim that initialization lowers standard deviation untested",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Table 4 retrieval diagnostic does not show KV cache fails to encode task",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "No experiment links Table 4 deficit to CT-KV gains",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Alternative explanations (more gradient steps, label/format calibration) untested",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Missing plain few-shot LoRA fine-tuning baseline without leave-one-out",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Missing ICL baselines with more/better-selected demonstrations or calibration",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Missing ICL + CoT baseline on BBH",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "NLP-LR with GPT-2 has near-zero-shot ICL; gains uninformative for modern LLMs",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Benchmarks mostly multiple-choice with small k; generation and larger models untested",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "MetaICL comparison across different regimes and base models is loosely informative",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "TTT evaluated without augmentation or voting, weaker than original recipe",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Table 1/2 ARC entries easy to misread; unexplained Table 10 row",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Tens of millions of trainable parameters not 'lightweight'; framing should be calibrated",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "No variance or significance for TTT vs CT-KV differences",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "Figure 1 described only in text",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Incremental: mainly replaces LoRA in TTT with prompt/prefix tuning",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Prior few-shot prompt/prefix tuning initialization work not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Model-benchmark pairing arbitrary, hampering cross-task comparison",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Some benchmarks such as NLP-LR are dated for modern LLM evaluation",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Requires explicit (x,y) pairs, no CoT; limits use on math or coding",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Requiring curated few-shot pairs at test time reduces real-world relevance",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Mechanism mainly an improved initialization of prompt/prefix tuning",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "TTT+CT-KV presented as contribution; need clearer separation and ablations isolating gains",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Robustness to label noise suggests method not learning from labels",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Leave-one-out masking implementation underspecified",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Too incremental relative to TTT",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No analysis of why gains over prompt/prefix tuning (initialization vs LOO)",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Test-time per-task tuning trade-off (overfitting, parameter copies) questionable vs ICL paradigm",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No comparison with optimized natural-language prompts at comparable effort",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Should compare with traditional fine-tuning methods",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "CT-KV is Prefix Tuning with demonstration-KV initialization plus borrowed LOO masking; moderate novelty",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "ICO framework is a taxonomy defined to fit TTT and Context Tuning; little insight",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Related work thin on KV distillation, task vectors, gist tokens; no comparisons",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Efficiency gap partly systems artifact from different batch sizes and checkpointing",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No iteration- or FLOPs-matched comparison; measured speedup not reconciled with complexity analysis",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Memory not reported; fewer-parameters claim not quantified against same-rank LoRA",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Inference cost of long optimized KV prefix not discussed",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Efficiency evidence thin at realistic model sizes; NLP-LR uses GPT-2 and different hardware",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Unclear whether hyperparameter selection uses validation split or evaluation queries",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Tuning budgets differ: CT-KV swept, TTT uses original settings; budget parity needed",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "ARC is a single run; differences of 1-2 tasks over-interpreted",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Dropping LOO on ARC is post hoc, chosen on evaluation set",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Claim that initialization lowers standard deviation untested",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Table 4 retrieval diagnostic does not show KV cache fails to encode task",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No experiment links Table 4 deficit to CT-KV gains",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Alternative explanations (more gradient steps, label/format calibration) untested",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Missing plain few-shot LoRA fine-tuning baseline without leave-one-out",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Missing ICL baselines with more/better-selected demonstrations or calibration",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Missing ICL + CoT baseline on BBH",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "NLP-LR with GPT-2 has near-zero-shot ICL; gains uninformative for modern LLMs",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Benchmarks mostly multiple-choice with small k; generation and larger models untested",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "MetaICL comparison across different regimes and base models is loosely informative",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "TTT evaluated without augmentation or voting, weaker than original recipe",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Table 1/2 ARC entries easy to misread; unexplained Table 10 row",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Tens of millions of trainable parameters not 'lightweight'; framing should be calibrated",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "No variance or significance for TTT vs CT-KV differences",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Figure 1 described only in text",
+    "points": [
+     "P1.27"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Incremental novelty over TTT / prompt tuning",
+    "points": [
+     "Q1.1",
+     "Q2.1",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Missing prior prompt-initialization literature",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Arbitrary model-task pairing",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Dated benchmarks such as NLP-LR",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Needs explicit pairs; no CoT applicability",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Test-time per-task tuning conflicts with modern LLM usage",
+    "points": [
+     "Q1.6",
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "TTT+CT-KV positioning and gain isolation",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Label-noise robustness interpretation",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "LOO masking underspecified",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Source of gains over prompt/prefix tuning unanalysed",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Missing prompt optimization baseline",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Missing traditional fine-tuning comparison",
+    "points": [
+     "Q3.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  }
+ ]
+}

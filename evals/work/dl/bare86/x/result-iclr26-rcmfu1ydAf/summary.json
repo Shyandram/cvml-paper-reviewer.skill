@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-rcmfu1ydAf",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Only 20-50 items per dataset and no confidence intervals; 77.6 vs 80.1 and the 4th-place ranking are within noise",
+    "Multilingual human baselines (Arabic/Russian/Norwegian wins) come from a single annotator; annotator identity is confounded with language/cultural claims",
+    "Human and model protocols are not truly aligned (probe-trained classification, clustering with unspecified k, binary-to-ranking reranking, 0-5 STS)",
+    "Claim that models exploit label patterns where humans disagree, and that datasets should be replaced, is asserted not tested (no contamination, error or noise analysis)",
+    "Aggregation and reporting inconsistencies (26 vs 14 pairs, unweighted mixed-metric averages, English-only models in multilingual comparisons)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

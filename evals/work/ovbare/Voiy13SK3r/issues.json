@@ -1,0 +1,662 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Heavy compute and simulation time requirements limit real-world scalability",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Only 62.5% of tasks ran fully automatically; true autonomy not achieved",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "No comparison with other meta-agent systems that could design FL setups",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No standard deviations reported despite LLM and simulation stochasticity",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "No comparison with code-synthesis pipelines such as SWE-Agent, AutoGPT, Voyager, CodeAct",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No quantitative comparison to simple tools like Copilot or Cursor given human verification",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "No confidence intervals, standard deviations or number of runs for reported results",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Architecture is generic multi-agent code synthesis; FL framing comes only from templates",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "No new mechanism beyond prior agent frameworks, which are not referenced; novelty unjustified",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "AgentFL-Bench uses the same structured schema Helmsman expects, creating evaluation circularity",
+   "minor": false
+  },
+  {
+   "id": "P2.7",
+   "reviewer": "P2",
+   "text": "No test with paraphrased, incomplete or out-of-schema prompts",
+   "minor": false
+  },
+  {
+   "id": "P2.8",
+   "reviewer": "P2",
+   "text": "FedAvg/FedProx baselines measure learning accuracy, not synthesis performance; not comparable",
+   "minor": false
+  },
+  {
+   "id": "P2.9",
+   "reviewer": "P2",
+   "text": "No ablations on prompt wording, number of agents, LLM choice or agent roles",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Runtime, LLM API usage and memory costs not quantified relative to alternatives",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "No variances, error bars, run counts or significance tests in main tables",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Whether baselines used identical splits, models, hyperparameters is deferred to appendix",
+   "minor": true
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Data splits, client counts and configuration not summarized in main paper",
+   "minor": true
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Human-in-the-loop makes experiments manipulable and unfair versus fully automated methods",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Paper is a system report; needs ablations to justify each design component",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "No baselines against single strong LLM, Claude Code, OpenHands or AIDE-style systems",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Multi-agent design, L2 diagnosis, RAG, self-reflection, HITL are not ablated",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Claim that single-agent approaches exceed capacity is unsupported",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Unclear which results were autonomous vs human-assisted; human input not quantified",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Baselines appear untuned off-the-shelf methods, loosely matched to tasks",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Q7 and Q8 specialized values identical (63.62), likely copy error",
+   "minor": true
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Iterative selection criterion unclear; human approval may use test accuracy, risking leakage",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Helmsman loses to specialized methods in about half the tasks; 'often superior' overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Small differences without variance; tables report no seeds, CIs or run counts",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Q16 gain implausible; replay violates exemplar-free setting, no replay baseline",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Generated code not shown; privacy constraints and leakage cannot be verified",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Replay plus distillation is well known, so algorithmic novelty not demonstrated",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "No per-task success rate, attempts or specification-faithfulness measures",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "No token, dollar or wall-clock cost reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No robustness evaluation across LLM backbones or seeds",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "'Rigorous and reproducible' claim lacks stated protocol release",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "Benchmark designed by same group, no held-out tasks; some baselines are authors' own",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Tasks are small image datasets with Flower strategies; system-level claim weak",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "No tests of robustness to changing conditions and no user study of effort",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Deployment-ready claims and production framework contrast untested; simulator only",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "L2 heuristics on 5-round logs cannot certify semantic correctness",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "No analysis of failure modes, iteration statistics or plan-ignoring code",
+   "minor": false
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Promotional tone; intro and related work spend space on generic agent narrative",
+   "minor": true
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "Section 6 title typo 'Disucssion'",
+   "minor": true
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Hyperparameters, baseline tuning, selection and run counts in appendix or absent",
+   "minor": true
+  },
+  {
+   "id": "Q1.26",
+   "reviewer": "Q1",
+   "text": "Generic baselines limited to FedAvg/FedProx; stronger methods omitted",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "High computational/simulation cost unquantified, limiting scalability",
+    "points": [
+     "P1.1",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Only 62.5% of tasks fully automatic; autonomy not achieved",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Human-in-the-loop makes comparisons manipulable or unfair",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "No comparison with other agent or code-generation systems",
+    "points": [
+     "P1.3",
+     "P2.1",
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No variance, confidence intervals or number of runs reported",
+    "points": [
+     "P1.4",
+     "P2.3",
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Architecture is generic, not intrinsically tied to federated learning",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Limited novelty versus prior agent frameworks, not referenced",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Benchmark circular: tasks share schema Helmsman is designed for",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "No robustness test to paraphrased or unstructured prompts",
+    "points": [
+     "P2.7"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "FL baselines measure accuracy, not system-synthesis performance",
+    "points": [
+     "P2.8"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Missing ablations of design components",
+    "points": [
+     "P2.9",
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Baseline fairness details scattered in appendix",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Key configuration details missing from main text",
+    "points": [
+     "P3.4"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "No agent or code-generation system baselines",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No ablations of system components",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Single-agent capacity claim unsupported",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Human-in-the-loop confounds main results",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Baselines untuned, off-the-shelf and loosely matched",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Identical values for Q7 and Q8 suggest copy error",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Possible test-set leakage in selection",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Results overstated relative to abstract",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "No seeds, variance or run counts in performance tables",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Q16 result implausible; replay conflicts with exemplar-free setting",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Generated code not shown",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Q16 'novel combination' is a known recipe",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Benchmark lacks agent-quality metrics",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "No cost reporting",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No robustness across LLM backbones or seeds",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Reproducibility claim unsupported",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Benchmark built by same authors, no held-out tasks",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Tasks narrow; system-level claim weak",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Motivation claims untested (dynamic robustness, effort reduction)",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Deployment-ready claims untested; simulator only",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "'Certified correct' claim overstated",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "No failure-mode analysis",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Promotional tone and generic narrative",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "Typo in section title",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Key experimental details in appendix or absent",
+    "points": [
+     "Q1.25"
+    ]
+   },
+   {
+    "id": "QI26",
+    "summary": "Generic baselines only FedAvg and FedProx",
+    "points": [
+     "Q1.26"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI26"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI17",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI26",
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI2"
+   ],
+   "related": [
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI25"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI25"
+   ],
+   "related": []
+  }
+ ]
+}

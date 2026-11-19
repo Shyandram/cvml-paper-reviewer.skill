@@ -1,0 +1,724 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Claims of consistently outperforming all baselines contradicted by RES, FLU, COV scores",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Abstract says 17 LLMs, Section 4.1 says 18 baselines",
+   "minor": true
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "34,250 sessions includes 20,550 preference pairs, not sessions",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Table 3 complete-model scores do not match Table 2 EduDial-LLM row",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Training principles mirror evaluation dimensions; baselines may lack scaffold and profiles",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "GPT-4o filters training data and is the primary evaluator",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Test students simulated by models trained on same distribution, favouring EduDial-LLM",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "No evaluation with real students or teachers and no learning gain",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Only 36 scenarios; no CIs, seeds or significance tests despite 'significantly'",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Correlation of 0.90 over 18 model means tests ranking, not per-dialogue agreement",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Large machine-human gaps on some dimensions, yet machine ratings adopted",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "No inter-annotator agreement, expert qualifications, blinding or rubric anchors",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Number of experts, items reviewed, rejection rate and regeneration cycles not given",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "No strategy distribution, diversity analysis or math error rate for o1 content",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "No check that simulated struggling students resemble real students",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Grid search and checkpoint selection on the test set",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Dated base model; no base or stronger model prompted with scaffold; no generic SFT baseline",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Chosen responses from stronger LLM with strategy; length/style bias uncontrolled",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Equations 3-5 omit reference model and beta",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Test split small and requires specific simulator and GPT-4o judge",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Only K-12 math, unstated language; no cross-subject or cross-lingual tests",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Drops on Math500 and AIME24 dismissed; teacher statement correctness not measured",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Socratic/Bloom tutoring data exists; claims about prior datasets untested",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Related work lacks quantitative comparison with prior dialogue datasets",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "MT-Bench citation appears to be MT-Bench-101; AlpacaEval not multi-turn",
+   "minor": true
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Typos and truncated Section 3.5",
+   "minor": true
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "The 11 dimensions overlap and distinctness is not validated",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Data and code not available for assessment",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Unclear whether scores from 1v3 or 1v1 setting; Table 2/3 differences unexplained",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Teacher may interact with same student model it trained with, reflecting familiarity",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Student profiles identically distributed in train and test; OOD performance unknown",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Split into 1v3 and 1v1 stages not justified",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Differentiated instruction absent from SFT data without rationale",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "1024-token maximum may be insufficient for long dialogues",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Datasets inconsistent between one-on-one and classroom settings; tailoring unclear",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Quality of student agent simulation not evaluated",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No information on evaluators' qualifications",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Similarity of human and machine evaluation cannot rule out expert bias",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "How the work addresses the cognitive-flow challenge is unclear",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "SFT+DPO validation cannot separate dataset quality from model training",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Base model used for EduDial training not identified",
+   "minor": true
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "No real-teacher/student data calibration to show classroom logic is reflected",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "'Outperforms all baselines' claim contradicted by Table 2",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Inconsistent count of evaluated LLMs",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Dialogue session count inflated",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Table 3 scores inconsistent with Table 2",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Circular evaluation mirroring training principles",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "GPT-4o is both data filter and evaluator",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Simulated test students in-distribution for EduDial-LLM",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "No real students or learning-gain measurement",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Small evaluation without significance testing",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Machine-human agreement computed on model-level means",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Large machine-human gaps yet machine ratings primary",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Human evaluation lacks IAA, qualifications, blinding, rubric",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Data validation process unquantified",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "No dataset analysis beyond counts",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Realism of simulated students unchecked",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Hyperparameters tuned on the test set",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Weak base model and missing prompted/SFT baselines",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "DPO pairs have uncontrolled length and style bias",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "DPO equations nonstandard",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Benchmark small and not standardized",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Scope limited to K-12 math; generalization unsupported",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Reasoning degradation unjustified; content correctness unmeasured",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Limited novelty versus existing tutoring datasets",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "No quantitative comparison with prior educational datasets",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Citation errors for benchmarks",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Typos and truncated text",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "Overlapping evaluation dimensions",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Data and code unavailable",
+    "points": [
+     "P1.28"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Evaluation setting ambiguous; Table 2 vs 3 differences unexplained",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Student model role unclear; gains may reflect familiarity",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "OOD student generalization untested",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Two-stage split unjustified",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Differentiated teaching only in DPO data",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "DPO max length may be too short",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Unclear whether dialogues are one-to-one or one-to-many",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Student agent simulation quality not evaluated",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Human evaluator qualifications not reported",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Human-machine evaluation discussion insufficient; expert bias",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Stated challenges not addressed",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Dataset vs training contribution confounded",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Base model not stated",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "No calibration with real teachers and students",
+    "points": [
+     "Q3.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI2",
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI14"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI12",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-sKvo9ZZfpe",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Node-only baselines are not retrained and cannot see the asymmetric matrices, so the large reported gaps are uninformative; only MatNet and GCN are fair comparisons and the margin over them is small.",
+    "'Real-world' claim is weak: 3x3 km city-centre boxes, static OSRM durations, synthetic demands and time windows, no quantification of asymmetry, no validation on external real benchmarks.",
+    "Incremental architecture (MatNet encoding + ICAM AAFM with learned bias + ReLD decoder + gating); ablations show small differences with no seeds or variance.",
+    "Under-specified setup: problem sizes, objective (distance vs duration), cluster OOD definition and time-window generation are unclear; runtime and compute are not matched across baselines.",
+    "Presentation errors in Table 1 (duplicated value for POMO OOD-cluster cost) and an unreadable architecture figure and ablation panel."
+  ],
+  "recognized": false,
+  "injection_found": null
+}

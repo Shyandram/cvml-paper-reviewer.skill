@@ -1,0 +1,722 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Table 1 shows OCR mostly helps; Observation 1 that OCR impairs performance overstated",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Structured text not clearly better than plain OCR plus image",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Percentage gains computed relative to weakest image-only baseline",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Structuring model and prompt not identified",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Extra MLLM structuring pass confounds structure with denoising, summarization or hallucination",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Missing control rewriting OCR into plain text, Markdown, HTML or JSON",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Missing length-matched control",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Attention analysis rests on limited evidence and under-specified procedure",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Attention patterns not quantified (evidence mass, entropy, correct vs incorrect)",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Attention not shown causal; no intervention, so 'structured attention is key' unsupported",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Attention under OCR-text condition never analyzed",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Llama-3.1-8B judge not validated; baseline judge consistency unclear",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "No seeds, confidence intervals or significance tests for 1-2 point effects",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Only 7B models tested; larger or proprietary models untested",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Open-domain top-1 retrieval mixes retrieval quality with format effects",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Numbers in text and Table 3 averages inconsistent with tables",
+   "minor": true
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Table 2 text-only results support need for images, not structure-image synergy",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Claimed larger gains on charts/tables not clear; Table 3 comparisons confusing",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Explanation for MMLongBench improvements speculative",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Overclaiming words like 'proves' and 'fully demonstrates'",
+   "minor": true
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Limited novelty; no comparison or citation of Nougat/MinerU-style structured parsing",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Methodology lacks algorithm, prompts and code",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Noisy OCR baseline may inflate benefit of any rewrite",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Writing repetitive",
+   "minor": true
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "No failure or error analysis of structuring step",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "No cost analysis of extra MLLM pass",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Main conclusion too simple for top-tier contribution",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Input variables not controlled; resolution and formatting change token counts",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Attention analysis shallow",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Figure 4 attention scores not normalized; left comparison unclear",
+   "minor": true
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Observation that plain PDF text hurts is not novel",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "LaTeX method is prompt engineering without technical novelty",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Only 7B open-source models; no larger or proprietary models",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Assumes LaTeX representations; MLLM-generated LaTeX error-prone and unscalable",
+   "minor": false
+  },
+  {
+   "id": "Q2.5",
+   "reviewer": "Q2",
+   "text": "No comparison with other structured formats (HTML, XML, Markdown)",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Converting content to structure-preserving markup not new",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "No principled justification for LaTeX over simpler structured formats",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Structuring MLLM, prompts and settings unspecified; possible unfair stronger generator",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "No accounting of latency, context budget or cost of expanded tokens",
+   "minor": false
+  },
+  {
+   "id": "Q3.5",
+   "reviewer": "Q3",
+   "text": "Stronger structured-evidence baselines (HTML/Markdown with boxes, doc tools) missing",
+   "minor": false
+  },
+  {
+   "id": "Q3.6",
+   "reviewer": "Q3",
+   "text": "Attention analysis over-interpreted without causal evidence",
+   "minor": false
+  },
+  {
+   "id": "Q3.7",
+   "reviewer": "Q3",
+   "text": "Structured LaTeX degrades performance on several Table 3 subsets; gains inconsistent",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "LaTeX may not encode complex structures like irregular layouts or handwriting",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Structured text alone performs poorly; method requires image input",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Effect of OCR errors on structured text quality not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "No study of how effectiveness varies with model size",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "OCR mostly helps; Observation 1 overstated",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Structured text not clearly better than OCR",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Gains relative to weakest baseline",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Method underspecified: structuring model, prompts, code",
+    "points": [
+     "P1.4",
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Extra MLLM pass confounds structure effect",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No control with other structured formats",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "No length-matched control",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Attention analysis limited and unquantified",
+    "points": [
+     "P1.8",
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Attention not causally linked to performance",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "OCR-text attention not analyzed",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "LLM judge not validated",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "No statistical significance",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Only 7B models",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Retrieval confound in open-domain setting",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Numerical inconsistencies",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Text-only results do not support synergy",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Chart/table gain claim unclear",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Speculative MMLongBench explanation",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Overclaiming language",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Limited novelty versus structured document parsing work",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Noisy OCR baseline",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Repetitive writing",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "No error analysis of structuring step",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "No cost analysis",
+    "points": [
+     "P1.26"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Main observation simple and not novel",
+    "points": [
+     "Q1.1",
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Token count and input format not controlled",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Attention analysis shallow and over-interpreted",
+    "points": [
+     "Q1.3",
+     "Q3.6"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Figure 4 normalization and clarity",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Method lacks technical novelty; markup conversion known",
+    "points": [
+     "Q2.2",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Only 7B models; scale generalization untested",
+    "points": [
+     "Q2.3",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "LaTeX availability/generation impractical",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing comparison with other structured formats and baselines",
+    "points": [
+     "Q2.5",
+     "Q3.2",
+     "Q3.5"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Structuring model unspecified",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No efficiency reporting",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Inconsistent gains across subsets",
+    "points": [
+     "Q3.7"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "LaTeX limits for complex layouts",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Method depends on image input",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "OCR error effects not discussed",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI9"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI9",
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI5"
+   ],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  }
+ ]
+}

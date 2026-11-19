@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-qCaq3jGb0S",
+  "rating": 6,
+  "confidence": 4,
+  "top_concerns": [
+    "Gates trained in-domain (OpenR1-Math) vs training-free baselines; headline gains (198%, 58.4%) tied to selected budgets and unclear baseline setup",
+    "No variance/CIs; 'surpasses full cache' claims (Qwen3-4B AIME 74.0 vs 65.5) unexplained, regularization story untested (generation length/truncation/loops)",
+    "Missing learned decode-time eviction baselines (Locret, NACL-style) and no ablation of the decay design",
+    "Soft multiplicative logit modulation in training vs hard eviction at inference: mismatch not analyzed",
+    "Interpretability and 'emergent heuristics' claims rest on hand-picked heads from one example; SCBench retrieval tasks fail (Retr.KV 0.0)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

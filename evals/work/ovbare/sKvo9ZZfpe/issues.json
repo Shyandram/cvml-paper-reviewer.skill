@@ -1,0 +1,615 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Computation of NAB angle matrix not defined in main paper",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Runtime parameters, configurations, and time limits of traditional solvers unspecified",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Dynamic features D^t not specified for each problem type",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Decoder uses only last node embedding without justification",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No granular ablation of NAB inputs (distance, duration, angle)",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Works underlying encoder (AAFM) and decoder not included as baselines",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Minor typos and naming/equation inconsistencies",
+   "minor": true
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Unclear whether module handles shared contextual features like time of day or weather",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Real-world VRP definition narrowly limited to asymmetric cost matrices",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Google OR-Tools missing from ATSP baselines",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Computation time protocol for baselines unclear",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Generalization to more complex cases and established benchmarks not shown",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Limited novelty: ANE and NAB built from existing attention and gating",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "No robustness evaluation under dynamic or stochastic traffic conditions",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Instances from small 3x3 km boxes, unrealistic spatial scale",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Demands, time windows, and clusters are synthetic",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Durations from static OSRM profiles without traffic or time dependence",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Degree of asymmetry not quantified or compared with real data",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Removing points near bridges, tunnels, highways biases data",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Node-only baselines not retrained and blind to asymmetric matrices",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Margin over MatNet small; outperforming claim overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Architecture is incremental combination of standard components",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Angle feature from coordinates has unclear relation to asymmetric costs",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Inverse-distance neighbour sampling not ablated",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Ablation lacks seeds or variance; differences narrow",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Training and testing problem sizes not clearly stated",
+   "minor": true
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "No scaling results to larger problem sizes",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Unclear whether cost is distance or duration and how duration enters constraints",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Demand, time-window generation and cluster distribution not described in main text",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Baseline training budgets not matched",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "No multiple training seeds or confidence intervals",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Efficiency claims unsupported; RRNCO slower than some baselines",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Time limits and threads for classical solvers unspecified",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Apparent copy error in Table 1 POMO values",
+   "minor": true
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Architecture and ablation figures hard to read",
+   "minor": true
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Section 5 notation heavy and inconsistently named",
+   "minor": true
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "MatNet trained on ATSP generator is a weak control",
+   "minor": false
+  },
+  {
+   "id": "Q1.24",
+   "reviewer": "Q1",
+   "text": "No tests on external real asymmetric benchmarks or traffic-dependent durations",
+   "minor": false
+  },
+  {
+   "id": "Q1.25",
+   "reviewer": "Q1",
+   "text": "Held-out test cities from same pipeline give mild distribution shift",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Angle matrix undefined",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Classical solver settings/timing unspecified",
+    "points": [
+     "P1.2",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Dynamic features unspecified",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Decoder context design unjustified",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No NAB input ablation",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Missing component-source baselines",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Typos and inconsistencies",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Other contextual features",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Narrow real-world definition",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "OR-Tools missing on ATSP",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Generalization to established benchmarks",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Limited novelty",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "No dynamic traffic robustness",
+    "points": [
+     "P4.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Small spatial scale",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Synthetic demands/time windows",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Static durations, no traffic",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Asymmetry not quantified",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Data filtering bias",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Baselines not retrained, matrix-blind",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Small margin over MatNet; overclaim",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Incremental architecture",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Angle feature unclear",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Neighbour sampling not ablated",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Ablation lacks variance",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Problem sizes unstated",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "No scaling results",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Cost definition unclear",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Instance generation undescribed",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Baseline budgets unmatched",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No seeds/CIs",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Efficiency claims unsupported",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Solver time limits unspecified",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Table 1 copy error",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Figures hard to read",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Notation inconsistencies",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Weak MatNet control",
+    "points": [
+     "Q1.23"
+    ]
+   },
+   {
+    "id": "QI24",
+    "summary": "No external benchmarks",
+    "points": [
+     "Q1.24"
+    ]
+   },
+   {
+    "id": "QI25",
+    "summary": "Mild test distribution shift",
+    "points": [
+     "Q1.25"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI19"
+   ],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI22"
+   ],
+   "related": [
+    "QI20"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI1",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [
+    "QI24"
+   ],
+   "related": [
+    "QI25",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI3"
+   ],
+   "related": [
+    "QI24"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-5Y8PMEeAkv",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Marginal novelty: relevance top-k plus DivPrune-style greedy diversity; no comparison with other prompt-aware or standard pruning methods (FastV, SparseVLM, VisionZip, PAR, GlimpsePrune)",
+    "Gains over DivPrune are negligible or mixed; Table 2 shows relevance hurts on GQA/POPE, undercutting the prompt-aware claim",
+    "Per-benchmark k tuned on the test set (oracle), weakening the zero-shot claim and the fairness of the DivPrune comparison",
+    "Implausible baseline numbers (LLaVA-1.5 AI2D 29.1, MMMU test split, ChartQA +22.7% from pruning) suggest an unreliable evaluation pipeline; no variance or significance testing",
+    "Weak efficiency analysis and narrow scope: one model/benchmark for latency, slower than DivPrune, image-only, single 90% ratio"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

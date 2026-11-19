@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-qCIg2WGudx",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Chance-correction relies on unvalidated assumptions (uniform guessing, pre/post independence) and the worked example (80%->70%, k=4 gives ~6%) does not match the formulas",
+    "No noise-floor controls or confidence intervals: single sampled generations at T=0.6 create spurious flips; low/moderate/high labels undefined",
+    "Forgetting and backward transfer are confounded by prompting/format (few-shot base vs chat post-trained) and answer-extraction failures the authors themselves document",
+    "Uncontrolled public checkpoints cannot support causal claims about data scale, model scale or stage; high-data regime is admittedly inconclusive",
+    "MCQ-only probes and thin merging experiments over-reach relative to the claim that post-training does not erode pretrained knowledge"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

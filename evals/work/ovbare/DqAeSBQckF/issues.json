@@ -1,0 +1,789 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No convergence or approximation analysis of surrogate fidelity to full LLM",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "No quantitative metrics of proxy fidelity to LLM across domains",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Memory and runtime scalability of extra models not analyzed",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Validation set choice (LAMBADA) may bias selection; no robustness analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "No analysis of what kinds of data the learned scores prefer",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Ablation gains marginal; statistical significance not substantiated",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Missing comparison with ALinFiK influence estimation method",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "Differences and advantages versus ALinFiK not discussed",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Motivation for proxy model instead of original LLM not justified",
+   "minor": false
+  },
+  {
+   "id": "P2.4",
+   "reviewer": "P2",
+   "text": "Experiments only on C4; generalizability to other corpora unclear",
+   "minor": false
+  },
+  {
+   "id": "P2.5",
+   "reviewer": "P2",
+   "text": "No ablation on number of rounds or other key hyperparameters",
+   "minor": false
+  },
+  {
+   "id": "P2.6",
+   "reviewer": "P2",
+   "text": "Functions F and G mentioned but not introduced",
+   "minor": true
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "From-scratch claim contradicted by random warm-up and KL with partially trained LLM",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Proxy not trained to convergence (3000 steps, reset); long-term impact claim unsupported",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "No convergence guarantees, approximation bounds or theory for bilevel formulation",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "FLOPs comparison with MATES unreasonable given differing operations and parallelization",
+   "minor": false
+  },
+  {
+   "id": "P3.5",
+   "reviewer": "P3",
+   "text": "Memory overhead of two additional models not accounted",
+   "minor": false
+  },
+  {
+   "id": "P3.6",
+   "reviewer": "P3",
+   "text": "Wall-clock time comparisons absent",
+   "minor": false
+  },
+  {
+   "id": "P3.7",
+   "reviewer": "P3",
+   "text": "Many main improvements within standard error margins",
+   "minor": false
+  },
+  {
+   "id": "P3.8",
+   "reviewer": "P3",
+   "text": "No analysis with differing proxy and target architectures",
+   "minor": false
+  },
+  {
+   "id": "P3.9",
+   "reviewer": "P3",
+   "text": "Recent data selection methods (DCLM, QuRating, Meta-rater, QUAD) not compared",
+   "minor": false
+  },
+  {
+   "id": "P3.10",
+   "reviewer": "P3",
+   "text": "Cost of external-model methods not fairly accounted versus bilevel optimization",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Average improvements over MATES within reported errors",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Experiment scale insufficient for pretraining; generalization to larger models questionable",
+   "minor": false
+  },
+  {
+   "id": "P4.3",
+   "reviewer": "P4",
+   "text": "Manually specified validation set in pretraining may hurt generalization",
+   "minor": false
+  },
+  {
+   "id": "P4.4",
+   "reviewer": "P4",
+   "text": "Practical relevance of small-scale from-scratch pretraining setting questionable",
+   "minor": false
+  },
+  {
+   "id": "P4.5",
+   "reviewer": "P4",
+   "text": "Need for quality subset selection versus coarse filtering not motivated",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Gains small relative to noise; no seed variance or significance tests",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "1.7x speedup claim loosely defined, single run, one baseline",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Reported number inconsistencies (FLOPs entry, 2.8B vs 2.5B)",
+   "minor": true
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Differing Round 1 random rows imply run variance as large as gains",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Ablation (Table 5) gaps within noise and inconsistent with Table 1",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Baseline framing questionable: MATES also trains from scratch without external LLMs",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "No evidence that long-term influence is source of gain",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Proxy trained only 3000 steps; not trained to convergence",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Named baselines (DsDm, LESS, QuRating, DSIR, SemDeDup) not reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Validation tasks overlap evaluation tasks; leakage not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Downstream-aligned validation data acts as oracle; from-scratch qualified",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Softmax partial-sum approximation changes objective; only in appendix",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Run algorithm differs from analyzed; no convergence or hypergradient checks",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Non-convex lower level; implicit gradient formula does not apply",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "No analysis of what data is selected",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Compute advantage holds only at 1B; inference FLOPs exceed MATES",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "No wall-clock or GPU-hours reported",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "Missing cheap same-proxy baseline such as perplexity-based selection",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Scale limited: 2.8B with 15B tokens on data selected for 1B",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "Only C4 and top-20% selection used",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Zero-shot evaluation near chance; no held-out perplexity",
+   "minor": false
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "State-of-the-art claim overstated",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Lack of theoretical convergence/approximation analysis",
+    "points": [
+     "P1.1",
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No proxy fidelity metrics",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Memory/runtime overhead of extra models unanalyzed",
+    "points": [
+     "P1.3",
+     "P3.5"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Validation set choice may bias selection or generalization",
+    "points": [
+     "P1.4",
+     "P4.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No interpretation of selected data",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Ablation gains lack significance",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Missing ALinFiK comparison",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Differences from ALinFiK not discussed",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Proxy model motivation not justified",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Only C4 corpus",
+    "points": [
+     "P2.4"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "No hyperparameter/rounds ablation",
+    "points": [
+     "P2.5"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "F and G undefined",
+    "points": [
+     "P2.6"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "From-scratch claim contradicted",
+    "points": [
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Convergence/long-term claim unsupported by 3000-step proxy",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "FLOPs comparison with MATES unfair",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No wall-clock comparisons",
+    "points": [
+     "P3.6"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Main gains within standard error",
+    "points": [
+     "P3.7",
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "No cross-architecture proxy/target analysis",
+    "points": [
+     "P3.8"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Recent data selection baselines missing",
+    "points": [
+     "P3.9"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "External-model cost not fairly accounted",
+    "points": [
+     "P3.10"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Insufficient model scale",
+    "points": [
+     "P4.2"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Practical relevance of setting questionable",
+    "points": [
+     "P4.4"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Subset selection vs coarse filtering not motivated",
+    "points": [
+     "P4.5"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Gains small relative to noise; no seed variance or significance tests",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "1.7x speedup claim loosely defined, single run, one baseline",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Reported number inconsistencies (FLOPs entry, 2.8B vs 2.5B)",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Differing Round 1 random rows imply run variance as large as gains",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Ablation (Table 5) gaps within noise and inconsistent with Table 1",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Baseline framing questionable: MATES also trains from scratch without external LLMs",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "No evidence that long-term influence is source of gain",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Proxy trained only 3000 steps; not trained to convergence",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Named baselines (DsDm, LESS, QuRating, DSIR, SemDeDup) not reported",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Validation tasks overlap evaluation tasks; leakage not discussed",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Downstream-aligned validation data acts as oracle; from-scratch qualified",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Softmax partial-sum approximation changes objective; only in appendix",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Run algorithm differs from analyzed; no convergence or hypergradient checks",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Non-convex lower level; implicit gradient formula does not apply",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No analysis of what data is selected",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Compute advantage holds only at 1B; inference FLOPs exceed MATES",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No wall-clock or GPU-hours reported",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "Missing cheap same-proxy baseline such as perplexity-based selection",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Scale limited: 2.8B with 15B tokens on data selected for 1B",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "Only C4 and top-20% selection used",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Zero-shot evaluation near chance; no held-out perplexity",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "State-of-the-art claim overstated",
+    "points": [
+     "Q1.22"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI13"
+   ],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI17",
+    "QI16"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI15"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [
+    "QI20"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI11",
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI8"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI16"
+   ],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [
+    "QI9"
+   ],
+   "related": [
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI19"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": [
+    "QI18"
+   ]
+  }
+ ]
+}

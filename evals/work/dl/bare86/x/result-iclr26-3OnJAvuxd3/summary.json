@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-3OnJAvuxd3",
+  "rating": 2,
+  "confidence": 4,
+  "top_concerns": [
+    "Own Table 1 contradicts the claims: OCR+image beats image-only on average for all models, and for Qwen2.5-VL structured text (avg 0.371) is below plain OCR+image (0.427; LongDocUrl 0.221 vs 0.399)",
+    "Confounded comparison: structured text comes from an extra MLLM pass (model and prompt unspecified), with no plain-text/Markdown/length-matched/layout-aware OCR controls to isolate LaTeX structure",
+    "Attention analysis is qualitative and under-specified with no causal intervention; 'structured attention is the key' is unsupported",
+    "Weak evaluation: Llama-3.1-8B judge unvalidated, no variance or significance on 1-2 point effects, only 7B models, top-1 retrieval mixes in retrieval quality",
+    "Numeric inconsistencies (0.389 to 0.370 in text vs 0.375 in table; Table 3 averages) and limited novelty versus document parsing/serialization work"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

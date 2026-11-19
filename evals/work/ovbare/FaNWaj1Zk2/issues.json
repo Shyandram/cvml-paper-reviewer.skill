@@ -1,0 +1,596 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Causal augmentation claim supported only by correlational evidence; no intervention",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "No quantitative link between consistency and test generalization gap",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Consistency expected from slow drift and residuals; convergence-artifact rebuttal weak",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "No control baselines such as independent-run composites or matched noise",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Consistency measured mostly on training set; agreement is not accuracy; test evidence weak",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Random/noisy-label comparisons confounded by different training dynamics",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Statistical tests with large samples give uninformative p-values",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Anisotropic SGD noise claim not novel; prior literature barely engaged",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Sphericity test and isotropic baseline are straw-man evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Claimed correlation of anisotropy with consistency not quantified",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Link from one-step noise to multi-epoch checkpoint drift not established",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Theorem 1 informal; TV bound likely vacuous and non-predictive",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "NTK no-forgetting argument unconvincing",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Main evidence mostly ResNet-20 on CIFAR-10 with one split depth",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "No seeds or error bars",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "No sensitivity to split depth, learning rate, weight decay, batch size",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "No ImageNet or transformer experiments",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Induction experiment is qualitative visualization",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Augmentation interpretation not distinguished from alternative explanations",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Thin relation to SWA/EMA, snapshot ensembles, CKA, model stitching",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Presentation issues: duplicated headings, inconsistent definitions, vague wording",
+   "minor": true
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Not prescriptive; no new training algorithm derived",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Source code not released",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Limited experimental scope: bigger datasets, architectures, domains untested",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Effect of hyperparameters on phenomena not studied",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No comparison or discussion with Tunnel Effect works",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Many formatting and presentation errors (terminology, abbreviations, citations, references)",
+   "minor": true
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "SGD stochasticity as implicit augmentation argument questionable for single network",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Section 4 results on training set may be convergence artifact; need test set",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Relation of NTK discussion to main claim unclear",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "TV bound not computable; surrogates untested",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No ImageNet or large transformer experiments",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "BatchNorm handling in composites not described",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Optimizer sensitivity not analyzed; anisotropy only for SGD",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "Difference from SWA/SWAG/temporal ensembling unclear",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Causal claim lacks intervention",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "No quantitative consistency-generalization link",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Convergence-artifact concern unresolved",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Missing control baselines",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Training-set measurement; weak test evidence",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Noisy-label comparison confounded",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Uninformative p-values",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Anisotropy claim not novel",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Sphericity test straw-man",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Anisotropy-consistency correlation unquantified",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Noise-to-drift link missing",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Vacuous informal theorem",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "NTK argument unconvincing",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Narrow main-text experiments",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No seeds/error bars",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "No hyperparameter sensitivity",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "No large-scale experiments",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Qualitative induction experiment",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Alternative explanations unaddressed",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Thin related-work positioning",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Presentation issues",
+    "points": [
+     "P1.21"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Not prescriptive",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Code not released",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Limited scope and scale",
+    "points": [
+     "Q2.1",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Hyperparameter effects unstudied",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Tunnel Effect works not discussed",
+    "points": [
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Formatting/presentation errors",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "SGD-as-augmentation argument questionable",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Training-set results may be convergence artifact",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "NTK discussion relevance unclear",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "TV bound not computable",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "BatchNorm handling undescribed",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Optimizer sensitivity unanalyzed",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Relation to SWA/ensembling unclear",
+    "points": [
+     "Q4.5"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [
+    "QI4"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [
+    "QI13"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [
+    "QI6"
+   ],
+   "related": []
+  }
+ ]
+}

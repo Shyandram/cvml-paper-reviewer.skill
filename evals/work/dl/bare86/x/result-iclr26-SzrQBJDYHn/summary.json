@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-SzrQBJDYHn",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No analysis of pattern-aware or spoofing adversaries; the fixed periodic pattern is easy to learn and pattern-preserving edits (e.g. even-length deletions for AB) are invisible",
+    "Evaluation is synthetic: random 1-6 token edits on 64-token texts, small models, beam search; no paraphrase, human edits, multiple edits or longer texts",
+    "Weak or ill-posed baselines (KGW/Unigram forced into an AA pattern with w=2); no scan-statistic/LLR, HC or segment-level comparison",
+    "Lenient metrics: per-position Type-I 0.1, tolerance L=3, no precision/recall or text-level false positive rate, no error bars",
+    "Thin theory (Janson bound with unknown mu, no miss-detection guarantee) and the longer pattern worsens the PPL/detectability trade-off"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

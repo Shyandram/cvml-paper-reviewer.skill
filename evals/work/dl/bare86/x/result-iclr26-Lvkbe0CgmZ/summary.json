@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Lvkbe0CgmZ",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Thm 4.3 constant M = exp(2c1*D/sqrt(c2)) with D = max||grad phi(u)-grad phi(v)||^2 is infinite for barrier mirror maps (e.g. entropic map used in experiments), so the discretization bound is vacuous in the constrained setting.",
+    "Mirror LSI (Assump. 4, stated with Euclidean Fisher info but used as mirror) and uniform-in-N mirror LSI (Assump. 8) are assumed with no verified example or mirror analogue of Bakry-Emery/Holley-Stroock; the hard part of uniform-in-time propagation of chaos is assumed.",
+    "Proofs are largely a substitution into NWS22/Jia21/Nit24, with inconsistencies: assumption lists mismatched (Assump. 2 vs 5), G0 vs Gt factor M not tracked in rate, errors in Lemma B.2 and delta_eta.",
+    "Experiments are a single 3-dimensional toy problem vs projected MFLD only, with no error bars, no neural network application, and no test of the predicted N/eta dependence; the baseline comparison with the barrier is partly unfair.",
+    "Overstated novelty ('first algorithm with global convergence guarantees') and analysis covers exact-diffusion Algorithm 1 rather than the one-step version actually run."
+  ],
+  "recognized": false,
+  "injection_found": null
+}

@@ -1,0 +1,508 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Features from a discrete set make optimal attention trivially attend to identical vectors",
+   "minor": false
+  },
+  {
+   "id": "P2.1",
+   "reviewer": "P2",
+   "text": "Experiments use only a simple setting; need practical real-world settings",
+   "minor": false
+  },
+  {
+   "id": "P2.2",
+   "reviewer": "P2",
+   "text": "No empirical validation on realistic architectures such as deeper Transformers",
+   "minor": false
+  },
+  {
+   "id": "P2.3",
+   "reviewer": "P2",
+   "text": "Analysis limited to population risk; no finite-sample landscape or generalization analysis",
+   "minor": false
+  },
+  {
+   "id": "P3.1",
+   "reviewer": "P3",
+   "text": "Contribution insignificant: well-separated noiseless features make known matching mechanism straightforward",
+   "minor": false
+  },
+  {
+   "id": "P3.2",
+   "reviewer": "P3",
+   "text": "Does not address case where no context input is close to query",
+   "minor": false
+  },
+  {
+   "id": "P3.3",
+   "reviewer": "P3",
+   "text": "Experiments contradict theory: sharp regime converges faster than flat in Figure 1",
+   "minor": false
+  },
+  {
+   "id": "P3.4",
+   "reviewer": "P3",
+   "text": "Relation to and reduction to existing linear-case analyses not discussed",
+   "minor": false
+  },
+  {
+   "id": "P4.1",
+   "reviewer": "P4",
+   "text": "Analysis limited to single-layer Transformer; no multi-layer extension",
+   "minor": false
+  },
+  {
+   "id": "P4.2",
+   "reviewer": "P4",
+   "text": "Technical approach overlaps with Huang et al. 2023, reducing originality",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Nonlinear claim cosmetic: discrete features reduce task to lookup over K values",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "'Curvature' and flat/sharp terminology misleading; L is a Lipschitz constant",
+   "minor": true
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Learned ICL is exact-match copy lookup; generalization to unseen functions trivial",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "No analysis of inputs off the finite feature set, e.g. noisy or intermediate x",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Restrictive assumptions (only Q trained, zero init, population gradients, N>=K^3) underplayed",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Separation condition not mild; claim it excludes only degenerate cases unjustified",
+   "minor": false
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Regime threshold depends on concentration parameter delta, not function class",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Stated bounds do not support claim that sharp regime is faster",
+   "minor": false
+  },
+  {
+   "id": "Q1.9",
+   "reviewer": "Q1",
+   "text": "Phase transition not demonstrated; only upper bounds, no lower bounds or tightness",
+   "minor": false
+  },
+  {
+   "id": "Q1.10",
+   "reviewer": "Q1",
+   "text": "Regime differences may be artifacts of step-size choices",
+   "minor": false
+  },
+  {
+   "id": "Q1.11",
+   "reviewer": "Q1",
+   "text": "Loss scale not normalized across L, so convergence times not comparable",
+   "minor": false
+  },
+  {
+   "id": "Q1.12",
+   "reviewer": "Q1",
+   "text": "Oscillatory and irrelevant-feature claims thinly supported with loose rates",
+   "minor": false
+  },
+  {
+   "id": "Q1.13",
+   "reviewer": "Q1",
+   "text": "Experimental architecture differs from analyzed single-matrix attention model",
+   "minor": false
+  },
+  {
+   "id": "Q1.14",
+   "reviewer": "Q1",
+   "text": "Experiments small: one function family, K=4, single seed, no error bars",
+   "minor": false
+  },
+  {
+   "id": "Q1.15",
+   "reviewer": "Q1",
+   "text": "Threshold, 1/L^2 scaling and 1/epsilon factor not tested empirically",
+   "minor": false
+  },
+  {
+   "id": "Q1.16",
+   "reviewer": "Q1",
+   "text": "Three-phase curve claim read from few epoch values",
+   "minor": false
+  },
+  {
+   "id": "Q1.17",
+   "reviewer": "Q1",
+   "text": "No tests on unseen functions, noisy inputs or non-orthogonal features",
+   "minor": false
+  },
+  {
+   "id": "Q1.18",
+   "reviewer": "Q1",
+   "text": "No comparison with standard transformers on realistic nonlinear regression",
+   "minor": false
+  },
+  {
+   "id": "Q1.19",
+   "reviewer": "Q1",
+   "text": "Technical novelty over Huang et al. 2023 not explained; positioning overstated",
+   "minor": false
+  },
+  {
+   "id": "Q1.20",
+   "reviewer": "Q1",
+   "text": "No limitations section; gap to practical ICL not discussed",
+   "minor": false
+  },
+  {
+   "id": "Q1.21",
+   "reviewer": "Q1",
+   "text": "Notation slips and loosely defined sampling of x",
+   "minor": true
+  },
+  {
+   "id": "Q1.22",
+   "reviewer": "Q1",
+   "text": "Theorem 2 condition on L stated informally",
+   "minor": true
+  },
+  {
+   "id": "Q1.23",
+   "reviewer": "Q1",
+   "text": "Experiments section brief; captions lack reproduction details",
+   "minor": true
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Discrete well-separated features make learned mechanism trivial and not novel",
+    "points": [
+     "P1.1",
+     "P3.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Experiments too simple; need practical settings",
+    "points": [
+     "P2.1"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "No validation on realistic deeper architectures",
+    "points": [
+     "P2.2"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Population risk only; no finite-sample generalization",
+    "points": [
+     "P2.3"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "No treatment of queries without close context examples",
+    "points": [
+     "P3.2"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Convergence experiments inconsistent with theoretical regime bounds",
+    "points": [
+     "P3.3"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Relation to linear-case analyses unclear",
+    "points": [
+     "P3.4"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Single-layer Transformer only",
+    "points": [
+     "P4.1"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Technical overlap with Huang et al. 2023",
+    "points": [
+     "P4.2"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Nonlinear claim cosmetic: discrete features reduce task to lookup over K values",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "'Curvature' and flat/sharp terminology misleading; L is a Lipschitz constant",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Learned ICL is exact-match copy lookup; generalization to unseen functions trivial",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "No analysis of inputs off the finite feature set, e.g. noisy or intermediate x",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Restrictive assumptions (only Q trained, zero init, population gradients, N>=K^3) underplayed",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Separation condition not mild; claim it excludes only degenerate cases unjustified",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Regime threshold depends on concentration parameter delta, not function class",
+    "points": [
+     "Q1.7"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Stated bounds do not support claim that sharp regime is faster",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Phase transition not demonstrated; only upper bounds, no lower bounds or tightness",
+    "points": [
+     "Q1.9"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Regime differences may be artifacts of step-size choices",
+    "points": [
+     "Q1.10"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Loss scale not normalized across L, so convergence times not comparable",
+    "points": [
+     "Q1.11"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Oscillatory and irrelevant-feature claims thinly supported with loose rates",
+    "points": [
+     "Q1.12"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Experimental architecture differs from analyzed single-matrix attention model",
+    "points": [
+     "Q1.13"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "Experiments small: one function family, K=4, single seed, no error bars",
+    "points": [
+     "Q1.14"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "Threshold, 1/L^2 scaling and 1/epsilon factor not tested empirically",
+    "points": [
+     "Q1.15"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Three-phase curve claim read from few epoch values",
+    "points": [
+     "Q1.16"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "No tests on unseen functions, noisy inputs or non-orthogonal features",
+    "points": [
+     "Q1.17"
+    ]
+   },
+   {
+    "id": "QI18",
+    "summary": "No comparison with standard transformers on realistic nonlinear regression",
+    "points": [
+     "Q1.18"
+    ]
+   },
+   {
+    "id": "QI19",
+    "summary": "Technical novelty over Huang et al. 2023 not explained; positioning overstated",
+    "points": [
+     "Q1.19"
+    ]
+   },
+   {
+    "id": "QI20",
+    "summary": "No limitations section; gap to practical ICL not discussed",
+    "points": [
+     "Q1.20"
+    ]
+   },
+   {
+    "id": "QI21",
+    "summary": "Notation slips and loosely defined sampling of x",
+    "points": [
+     "Q1.21"
+    ]
+   },
+   {
+    "id": "QI22",
+    "summary": "Theorem 2 condition on L stated informally",
+    "points": [
+     "Q1.22"
+    ]
+   },
+   {
+    "id": "QI23",
+    "summary": "Experiments section brief; captions lack reproduction details",
+    "points": [
+     "Q1.23"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI1",
+    "QI3"
+   ],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI2",
+   "match": [
+    "QI14",
+    "QI18"
+   ],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI13",
+    "QI18"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI17"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI8",
+    "QI15"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI19"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [
+    "QI19"
+   ],
+   "related": []
+  }
+ ]
+}

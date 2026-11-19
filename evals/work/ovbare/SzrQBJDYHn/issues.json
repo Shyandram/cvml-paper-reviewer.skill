@@ -1,0 +1,555 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No threat model; adversary can estimate low-entropy pattern to evade or forge.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Some deletions are invisible and short edits match pattern by chance.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Narrow setup: 64-token texts, small old models, beam decoding, no larger models or code.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Only random token edits; no human edits, paraphrasing, LLM rewriting or scattered edits.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Main text shows only one very strong delta setting.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "No variance or confidence intervals reported.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Baselines handicapped by forcing KGW/Unigram into the pattern framework.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Missing baselines: change-point scans, likelihood-ratio statistic, HC test, segment-level method.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Different window sizes for proposed method and baselines confound comparison.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "High per-position Type-I rate; threshold calibration unclear.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Text-level false positive rate likely near 1 and unreported.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Lenient tolerance; no precision, recall, F1 or AUROC.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Theory thin: false-alarm bound unusable, unjustified independence, no miss guarantee; provable overstated.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Long pattern has weakest quality-detectability trade-off.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Perplexity only quality metric; no matched-perplexity baseline comparison.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Robustness to edits at best comparable to baselines.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Novelty moderate; AB a special case of prior work; hand-picked patterns.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Misinformation test small, without baseline, and overclaimed as realistic threat.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Detection accuracy and Type-I definitions loose for insertions and deletions.",
+   "minor": true
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Missing implementation details: key handling, seeds, threshold fitting.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Unclear extension to newer watermarking schemes like embedding-level watermarks.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Should validate on more advanced state-of-the-art LLMs.",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "No robustness evaluation against full LLM paraphrasing.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Method sacrifices text quality and global detection accuracy for edit detection.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Cyclic deterministic watermark vulnerable to knowledgeable adversary.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Figure 5 hard to read; exact values table needed.",
+   "minor": true
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Hard watermark with delta 5.8 likely degrades quality; no quality evaluation.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Missing comparison to watermarked-segment detection methods.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Related multi-bit watermarking work not cited or compared.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Core watermark incremental; benefit of cyclic pattern over arbitrary partitions unclear.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Experiments only on short synthetic WikiText prompts.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Realistic post-edit scenarios like paraphrasing untested.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "No threat model against knowledgeable adversaries.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Undetectable deletions and chance matches.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Narrow models and text setup.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Unrealistic random edits only.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Single strong delta.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "No variance reporting.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Handicapped baselines.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Missing localization baselines.",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Window-size confound.",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Unclear calibration and high Type-I rate.",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Unreported text-level false positives.",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Lenient metrics.",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Thin theory.",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Poor quality-detectability trade-off.",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Limited quality evaluation.",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Robustness not better than baselines.",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Moderate novelty.",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Overclaimed misinformation test.",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Loose metric definitions.",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Missing implementation details.",
+    "points": [
+     "P1.20"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Extension to other watermark schemes unclear.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "No advanced LLMs.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "No paraphrase or realistic edit evaluation.",
+    "points": [
+     "Q1.3",
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Quality and detection trade-off.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Vulnerable to knowledgeable adversary.",
+    "points": [
+     "Q2.2"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Imprecise Figure 5 presentation.",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Strong delta harms quality; no quality evaluation.",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Missing segment-detection baselines.",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Missing multi-bit watermark related work.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "Incremental core watermark.",
+    "points": [
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Short synthetic prompts only.",
+    "points": [
+     "Q4.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [
+    "QI2",
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI8",
+   "match": [
+    "QI8"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI7"
+   ],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI4"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [
+    "QI10"
+   ],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  }
+ ]
+}

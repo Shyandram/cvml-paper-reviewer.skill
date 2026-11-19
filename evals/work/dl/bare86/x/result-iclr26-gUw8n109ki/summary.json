@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-gUw8n109ki",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Intent-perception and refusal metrics (Eqs. 3-6) are ill-defined, use token positions opposite to Sec. 3.1, and are averaged over all layers; Fig. 4 compares unnormalised quantities.",
+    "The pre-training vs. alignment-gap 'theory' is assumed constraints with no proof or intervention; Table 2 shows no non-monotonic peak and its harm accuracy is only about 35-39%.",
+    "The mechanism analysis uses Qwen2.5-VL-7B and GPT-4o-mini, not the models where weak-OOD was observed; no variance, seeds or CIs, with GPT-4o as both target and judge.",
+    "JOCR is FigStep plus random typography; the claim of 10%+ over baselines is not true for GPT-4o and Gemini on RedTeam-2K. Baselines are incomplete (no SI-Attack/JOOD), and attempts per query are not stated.",
+    "Circular validation (a better attack is said to confirm the explanation); the ablations do not match the theory; wrong or duplicate citations and the Eq. 8-9 vs Eq. 1-2 mismatch; a weak dual-use/ethics statement."
+  ],
+  "recognized": false,
+  "injection_found": null
+}

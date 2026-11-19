@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-be4ey66fhk",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Theory (Props 3.1/3.2) rests on strong assumptions, only bounds the training loss, and does not support the claimed benefits",
+    "Baselines are not placement-aware; no control isolating dual reconstruction from simply adding position/node-ID embeddings to MAE; no spatio-temporal/geometry-aware MAE baselines",
+    "Gains on Ridgecrest and HAR are within noise; large gains and all ablations only on M3N-VC (authors' own dataset)",
+    "Generalization to unseen placements tested on a single held-out scene with randomly reused structural embeddings; learned per-node embeddings conflict with arbitrary-placement claim",
+    "Weak baseline tuning and missing non-pretrained/classical localization references limit practical significance"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

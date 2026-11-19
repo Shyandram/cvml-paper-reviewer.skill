@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Voiy13SK3r",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "No ablations or comparisons against other coding agents or a single-LLM baseline, so component contributions are unsupported",
+    "Human-in-the-loop intervention confounds headline results; which results are autonomous is unclear",
+    "Baseline tuning and selection unspecified (possible test-set selection), no seeds or variance, and Helmsman wins only about half the tasks despite 'often superior' claim",
+    "Q16 gain (51.04 vs 28.56) likely comes from replay, which exemplar-free baselines do not use; generated code not inspected",
+    "Small author-built benchmark with no cost, success-rate or robustness metrics; deployment and robustness claims untested"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

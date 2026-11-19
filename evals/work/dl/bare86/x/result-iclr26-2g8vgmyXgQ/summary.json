@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-2g8vgmyXgQ",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Queries and prompt inputs are exactly one of K discrete features, so f is evaluated only at K points; the 'nonlinear regression' is effectively a label lookup and nonlinearity never enters the analysis",
+    "ICL for unseen functions is trivial copy/match attention with noiseless labels and identical input distribution; no generalization to off-feature inputs",
+    "Flat/sharp 'curvature' regime and phase transition rest on upper bounds with step-size choices and a proof-parameter threshold (1/(Delta*delta)); no lower bounds or tightness; L is a Lipschitz constant not curvature",
+    "Heavily restricted setup: only Q trained, zero init, population gradient, fixed value readout, uniform features, strong partner-separation assumption presented as mild",
+    "Experiments use a different architecture (FFN, LN, ReLU), one function family, small scale, single run, qualitative only; threshold and scaling laws not tested"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

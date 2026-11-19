@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-Z6z4AnXGhw",
+  "rating": 4,
+  "confidence": 3,
+  "top_concerns": [
+    "Claims of outperforming QD baselines are not supported: LQD(F+N) is below DNS, robotics uses fitness-only LQD(F), and no QD score/coverage is reported there",
+    "Robotics gain over GA is not statistically significant; missing strong fitness-only baselines (e.g., CMA-ES, tuned GA, fitness sharing) and baseline tuning details",
+    "Emergent diversity claim is overinterpreted; no causal control and novelty metric is partially circular",
+    "Discovered algorithm is a black-box transformer with only qualitative heatmap interpretation; expressivity claims ('any QD algorithm') unsupported",
+    "Incremental over LGA/LES; generalization evidence thin (two functions in scaling study, closely related OOD functions, single selected meta-trained model)"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

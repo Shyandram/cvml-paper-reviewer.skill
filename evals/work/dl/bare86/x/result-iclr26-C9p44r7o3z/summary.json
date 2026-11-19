@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-C9p44r7o3z",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Only StreamingLLM and Quest are compared; closer token-level/compressed-key sparse decoding baselines (SparQ, Double Sparsity, Loki, MagicPIG, RetrievalAttention, ShadowKV, PQCache) are missing, so '8x higher sparsity than SOTA' is relative to Quest only",
+    "L1 distance on 2-bit codes is not justified (Eq. 3 covers only the unquantized rotation); no top-k/attention-mass recall analysis; thresholds, RoPE handling and dense layers unspecified",
+    "Narrow evaluation: two Llama-2-7B long-context models, six LongBench tasks, easy passkey, no GQA/larger models/RULER, no variance; 'matches full attention at 64 tokens' and 'lower perplexity than full attention' are overstated or unexplained",
+    "Efficiency evidence limited: one GPU, 4.4x only at kernel level, 1.5x end-to-end at 32K, implausible 'us' units in Table 2, Hadamard/bucketization overhead omitted, no latency comparison to Quest, estimation still O(s)",
+    "Hadamard ablation is a strawman (fixed thresholds on raw outlier-heavy activations) and novelty is moderate given QuaRot-style rotation and prior compressed-key estimation"
+  ],
+  "recognized": false,
+  "injection_found": null
+}

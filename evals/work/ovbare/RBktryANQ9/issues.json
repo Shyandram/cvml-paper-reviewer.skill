@@ -1,0 +1,705 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "No comparison with noisy-label learning methods or simple LNL baselines.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Full-data baseline is weak: plain cross-entropy ConvNet.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Missing equal-size random or coreset subset control; gains may be generic low-data effect.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Avoiding vicious cycle is argued, not shown; distillers also trained on noisy data.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Methods worse at low noise and fail under asymmetric noise, the practical regimes.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Distillation far costlier than LNL; efficiency claim not measured.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Evaluation limited to tiny ConvNets and small images; in-the-wild claim unsupported.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Real-world noisy datasets Clothing1M and WebVision mentioned but never used.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Best high-noise accuracies remain low in absolute terms.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Privacy protection claim unsupported by any analysis or guarantee.",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Corollary I is trivial clean-sample counting, not tied to distillation.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Corollary II lacks assumptions, proof and probability space; likely incorrect.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Corollaries not validated empirically.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Using distillation to estimate noise rate suggested but untested.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Results only as curves; no tables, variance, seeds, significance or baseline numbers.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Key hyperparameters and evaluation details not reported.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Soft or learned labels in DD methods may confound label denoising claims.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Tail-class/imbalance claim only hypothesized yet stated in abstract.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "No mechanism analysis of why distillation denoises.",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "Cross-method differences, e.g. DATM on asymmetric noise, unexplained.",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Framed as novel approach though exploratory benchmark; insights overstated.",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Typos.",
+   "minor": true
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "Missing related work on subset selection under noise and DD robustness.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Theoretical IPC bounds need quantitative empirical validation and theory-practice gap analysis.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Relation between semantic diversity and bound in Corollary II unclear.",
+   "minor": true
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Implementation of similarity-based flip probability unexplained.",
+   "minor": true
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "CIFAR-100N results show only one noise setting.",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Theory-to-practice section gives only macro-level, repetitive analysis.",
+   "minor": false
+  },
+  {
+   "id": "Q1.6",
+   "reviewer": "Q1",
+   "text": "Figures 5 and 7 substantially repetitive.",
+   "minor": true
+  },
+  {
+   "id": "Q1.7",
+   "reviewer": "Q1",
+   "text": "Need validation on more datasets beyond CIFAR.",
+   "minor": false
+  },
+  {
+   "id": "Q1.8",
+   "reviewer": "Q1",
+   "text": "Need validation on more distillation methods.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Denoising phenomenon inconsistent across datasets, noise types and methods; limited applicability.",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Only small-scale benchmarks; no larger datasets.",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "No comparison with noise-robust training or label correction methods.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Only basic ConvNets; modern architectures not tested.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Only CIFAR and Tiny ImageNet; scalability to larger datasets unknown.",
+   "minor": false
+  },
+  {
+   "id": "Q4.3",
+   "reviewer": "Q4",
+   "text": "Class imbalance not studied; bounds may not extend.",
+   "minor": false
+  },
+  {
+   "id": "Q4.4",
+   "reviewer": "Q4",
+   "text": "Failure under asymmetric noise not further explored.",
+   "minor": false
+  },
+  {
+   "id": "Q4.5",
+   "reviewer": "Q4",
+   "text": "No dedicated label-denoising baselines.",
+   "minor": false
+  },
+  {
+   "id": "Q4.6",
+   "reviewer": "Q4",
+   "text": "No comparison with strong data augmentation on full noisy data.",
+   "minor": false
+  },
+  {
+   "id": "Q4.7",
+   "reviewer": "Q4",
+   "text": "No analysis of whether distilled images are semantically meaningful.",
+   "minor": false
+  },
+  {
+   "id": "Q4.8",
+   "reviewer": "Q4",
+   "text": "Cross-architecture generalization of distilled data not examined.",
+   "minor": false
+  },
+  {
+   "id": "Q4.9",
+   "reviewer": "Q4",
+   "text": "Computational cost of distillation plus training not analyzed.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "No noisy-label learning baselines.",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Weak full-data baseline.",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Missing random/coreset subset control.",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Vicious-cycle premise not demonstrated.",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Failure at low and asymmetric noise.",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Cost and efficiency unmeasured.",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Small models and images only.",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Real-world noisy datasets unused.",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Low absolute accuracy.",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Unsupported privacy claim.",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Trivial Corollary I.",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Non-rigorous Corollary II.",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Corollaries not empirically validated.",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Noise-rate estimation untested.",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "No tables, variance or significance.",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Missing hyperparameters.",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Soft-label confound.",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Imbalance claim untested.",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "No mechanism analysis.",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "Cross-method differences unexplained.",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Overstated framing.",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Typos.",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "Missing related work.",
+    "points": [
+     "P1.23"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Bounds lack quantitative validation.",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Semantic diversity unclear.",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Flip probability implementation unclear.",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Incomplete CIFAR-100N settings.",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Shallow theory-to-practice analysis.",
+    "points": [
+     "Q1.5"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Repetitive figures.",
+    "points": [
+     "Q1.6"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Limited dataset scale and variety.",
+    "points": [
+     "Q1.7",
+     "Q2.2",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Limited distillation methods.",
+    "points": [
+     "Q1.8"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Inconsistent phenomenon across settings.",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No noisy-label baselines.",
+    "points": [
+     "Q2.3",
+     "Q4.5"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Only basic ConvNets.",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Class imbalance not studied.",
+    "points": [
+     "Q4.3"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Asymmetric noise failure unexplored.",
+    "points": [
+     "Q4.4"
+    ]
+   },
+   {
+    "id": "QI14",
+    "summary": "No augmentation comparison.",
+    "points": [
+     "Q4.6"
+    ]
+   },
+   {
+    "id": "QI15",
+    "summary": "No distilled image analysis.",
+    "points": [
+     "Q4.7"
+    ]
+   },
+   {
+    "id": "QI16",
+    "summary": "Cross-architecture generalization unexamined.",
+    "points": [
+     "Q4.8"
+    ]
+   },
+   {
+    "id": "QI17",
+    "summary": "Cost not analyzed.",
+    "points": [
+     "Q4.9"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI10"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI14"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI9",
+    "QI13"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [
+    "QI17"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [
+    "QI7",
+    "QI11"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": [
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI1",
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI15",
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": [
+    "QI9"
+   ]
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [],
+   "related": []
+  }
+ ]
+}

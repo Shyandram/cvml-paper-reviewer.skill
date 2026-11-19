@@ -1,0 +1,497 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Limited novelty: objective is SOMBRL/MaxInfoRL in continuous time; theory reuses OCORL components.",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Regret bound requires exponentially large lambda, but experiments hand-tune or auto-tune lambda.",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Main-text Theorem 1 hides lambda factor containing beta_N and e^{LT}; constants undiscussed.",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Bounds for Theorems 1 and 2 differ between main text and appendix.",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Theorem 1 proof is GP-specific (RKHS); calibration assumption for BNN ensembles unverified.",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "Practical algorithm uses mean model outside confidence set, so theory does not cover it.",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Theorem 2 statement for lambda to infinity inconsistent with proof whose bound diverges.",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Proof gaps: missing 1/N, unexplained Cauchy-Schwarz step, assumed variance monotonicity.",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Theorem 2 bounds uncertainty only; no dynamics-error or downstream-task guarantee.",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "Inconsistent Lipschitz constants and sigma indices across equations and lemmas.",
+   "minor": true
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "Scalability claim weak: OCORL comparison only on two small GP tasks.",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Missing baselines: SOMBRL/MaxInfoRL, modern MBRL, intrinsic-motivation methods, discrete-time COMBRL.",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Experiments use fixed-rate equidistant control; continuous time barely exercised.",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "Adaptive-sampling experiment only two tasks with final returns; sample-efficiency claim unverifiable.",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Few seeds, standard-error bands only, no significance analysis; overlapping curves.",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Lambda tuning budgets for COMBRL and baselines undescribed; possible unfair tuning.",
+   "minor": false
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "Model quality never measured directly; globally accurate model claim untested.",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "Inflated claims (state of the art, largest gains in sparse tasks) without analysis.",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Strong assumptions (noise-free derivatives, deterministic systems); no noisy or hardware experiments.",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Primary-task gains modest; error bars overlap Mean Planning in 5 of 7 tasks.",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Assumes familiarity with SAC, iCEM, TaCoS without introduction.",
+   "minor": true
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "Novelty unclear: reward plus epistemic uncertainty objective not new; integration of existing components.",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "Algorithm 1 lacks detail on optimistic objective solving, rollouts and model updates.",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Evaluation should report coverage of true values, not only average returns and std.",
+   "minor": false
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Benchmarks limited; no hard (Humanoid, Dog) or sparse-reward environments.",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Missing modern exploration-focused baselines such as BRO.",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "Lambda sensitivity and exploration role insufficiently explored; contradictory results.",
+   "minor": false
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Continuous-time model-based RL with GP ODE models already studied (OCORL); incremental.",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "Figure 2 baselines only mean planner and PETS; need more SOTA comparisons.",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Limited novelty over SOMBRL/OCORL",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Theoretical lambda not used in practice",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Hidden constants in Theorem 1",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Main-text vs appendix bound discrepancies",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "GP-specific theory; BNN calibration unverified",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "Theory does not cover practical mean-model algorithm",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Theorem 2 inconsistent with proof",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Proof gaps",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Theorem 2 lacks downstream guarantee",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "Notation inconsistencies",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "Scalability claim weakly supported",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Missing deep RL baselines",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Continuous time not exercised",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "Limited adaptive-sampling evidence",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Weak statistics; overlapping curves",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Tuning fairness",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "Model quality not measured",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "Inflated claims",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Strong assumptions untested in real settings",
+    "points": [
+     "P1.19"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Modest gains with overlapping error bars",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Assumed familiarity with methods",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "Limited/incremental novelty",
+    "points": [
+     "Q1.3",
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "Algorithm 1 underspecified",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Evaluation lacks true-value coverage",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Limited benchmark scope",
+    "points": [
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Missing modern baselines",
+    "points": [
+     "Q3.2",
+     "Q4.2"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Lambda sensitivity underexplored",
+    "points": [
+     "Q3.3"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI6",
+    "QI7"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [
+    "QI7"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": [
+    "QI3"
+   ]
+  },
+  {
+   "p_issue": "PI14",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [
+    "QI1"
+   ],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": [
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": [
+    "QI5"
+   ]
+  },
+  {
+   "p_issue": "PI18",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  }
+ ]
+}

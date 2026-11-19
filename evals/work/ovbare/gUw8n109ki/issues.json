@@ -1,0 +1,791 @@
+{
+ "points": [
+  {
+   "id": "P1.1",
+   "reviewer": "P1",
+   "text": "Intent-perception score measures representation stability, averaged over trivial early layers",
+   "minor": false
+  },
+  {
+   "id": "P1.2",
+   "reviewer": "P1",
+   "text": "Token assignment for intent and refusal metrics contradicts Section 3.1",
+   "minor": false
+  },
+  {
+   "id": "P1.3",
+   "reviewer": "P1",
+   "text": "Refusal score ill-defined: output-head projections compared with token embeddings, near-zero values",
+   "minor": false
+  },
+  {
+   "id": "P1.4",
+   "reviewer": "P1",
+   "text": "Fig. 4 compares quantities with different scales; no normalisation, error bars or tests",
+   "minor": false
+  },
+  {
+   "id": "P1.5",
+   "reviewer": "P1",
+   "text": "Pre-training vs alignment attribution untested; no theorem, distances or alignment interventions",
+   "minor": false
+  },
+  {
+   "id": "P1.6",
+   "reviewer": "P1",
+   "text": "GPT-4o-mini harm accuracy too low to measure intent perception",
+   "minor": false
+  },
+  {
+   "id": "P1.7",
+   "reviewer": "P1",
+   "text": "Key-phrase similarity differences tiny with no variance",
+   "minor": false
+  },
+  {
+   "id": "P1.8",
+   "reviewer": "P1",
+   "text": "Table 2 shows monotonic trends, no peak; does not reproduce trade-off",
+   "minor": false
+  },
+  {
+   "id": "P1.9",
+   "reviewer": "P1",
+   "text": "Different models used for analysis and ASR; explanation not tested on target models",
+   "minor": false
+  },
+  {
+   "id": "P1.10",
+   "reviewer": "P1",
+   "text": "PCA argument read from 2-D plot without quantitative measure or probe",
+   "minor": false
+  },
+  {
+   "id": "P1.11",
+   "reviewer": "P1",
+   "text": "PCA ordering does not exclude alternatives like readability or prompt length",
+   "minor": false
+  },
+  {
+   "id": "P1.12",
+   "reviewer": "P1",
+   "text": "Analysed layers chosen by citation, not validated on this model",
+   "minor": false
+  },
+  {
+   "id": "P1.13",
+   "reviewer": "P1",
+   "text": "Weak-OOD phenomenon based on small samples without CIs or repeated runs",
+   "minor": false
+  },
+  {
+   "id": "P1.14",
+   "reviewer": "P1",
+   "text": "GPT-4o serves as both target model and judge",
+   "minor": false
+  },
+  {
+   "id": "P1.15",
+   "reviewer": "P1",
+   "text": "Perturbation axes not comparable and grid points few",
+   "minor": false
+  },
+  {
+   "id": "P1.16",
+   "reviewer": "P1",
+   "text": "Some plotted ranges hard to read",
+   "minor": true
+  },
+  {
+   "id": "P1.17",
+   "reviewer": "P1",
+   "text": "'Universal' trend claim stronger than evidence",
+   "minor": false
+  },
+  {
+   "id": "P1.18",
+   "reviewer": "P1",
+   "text": "JOCR novelty limited over FigStep and typographic attacks; gain mostly from perturbation",
+   "minor": false
+  },
+  {
+   "id": "P1.19",
+   "reviewer": "P1",
+   "text": "Claim of >10% ASR gain over baselines not true everywhere",
+   "minor": false
+  },
+  {
+   "id": "P1.20",
+   "reviewer": "P1",
+   "text": "No variance across perturbation seeds; attempts per query unspecified",
+   "minor": false
+  },
+  {
+   "id": "P1.21",
+   "reviewer": "P1",
+   "text": "Baselines likely not given matched query budget",
+   "minor": false
+  },
+  {
+   "id": "P1.22",
+   "reviewer": "P1",
+   "text": "Missing baselines: SI-Attack, JOOD, HADES, recent typographic attacks",
+   "minor": false
+  },
+  {
+   "id": "P1.23",
+   "reviewer": "P1",
+   "text": "LLM judge only; no human validation or judge-sensitivity analysis",
+   "minor": false
+  },
+  {
+   "id": "P1.24",
+   "reviewer": "P1",
+   "text": "Defences such as input filtering or safety-tuned VLMs not tested",
+   "minor": false
+  },
+  {
+   "id": "P1.25",
+   "reviewer": "P1",
+   "text": "Ablation shows font size dominates, suggesting generic robustness effect over proposed theory",
+   "minor": false
+  },
+  {
+   "id": "P1.26",
+   "reviewer": "P1",
+   "text": "Contradictory shuffle results explained post hoc",
+   "minor": false
+  },
+  {
+   "id": "P1.27",
+   "reviewer": "P1",
+   "text": "JOCR success circularly taken as validation; weak-OOD analysis not applied to JOCR",
+   "minor": false
+  },
+  {
+   "id": "P1.28",
+   "reviewer": "P1",
+   "text": "Citation errors and wrong equation references",
+   "minor": true
+  },
+  {
+   "id": "P1.29",
+   "reviewer": "P1",
+   "text": "Ethics statement irrelevant; no dual-use or disclosure discussion",
+   "minor": false
+  },
+  {
+   "id": "P1.30",
+   "reviewer": "P1",
+   "text": "'First feature-perspective' claim poorly positioned against prior mechanistic work",
+   "minor": false
+  },
+  {
+   "id": "P1.31",
+   "reviewer": "P1",
+   "text": "No defence or alignment recommendation despite stated goal",
+   "minor": false
+  },
+  {
+   "id": "Q1.1",
+   "reviewer": "Q1",
+   "text": "Theory heuristic; latent assumptions debated; evidence correlational not causal",
+   "minor": false
+  },
+  {
+   "id": "Q1.2",
+   "reviewer": "Q1",
+   "text": "Heavy reliance on shuffle perturbations to define OOD magnitude",
+   "minor": false
+  },
+  {
+   "id": "Q1.3",
+   "reviewer": "Q1",
+   "text": "GPT-4o judge may introduce bias",
+   "minor": false
+  },
+  {
+   "id": "Q1.4",
+   "reviewer": "Q1",
+   "text": "JOCR novelty limited: typography plus stochastic perturbation",
+   "minor": false
+  },
+  {
+   "id": "Q1.5",
+   "reviewer": "Q1",
+   "text": "Defences not explored",
+   "minor": false
+  },
+  {
+   "id": "Q2.1",
+   "reviewer": "Q2",
+   "text": "Alternative explanation: generic non-robustness to low-level perturbations, not semantic shift",
+   "minor": false
+  },
+  {
+   "id": "Q2.2",
+   "reviewer": "Q2",
+   "text": "Weak-OOD notion close to existing robustness ideas; novelty unclear",
+   "minor": false
+  },
+  {
+   "id": "Q2.3",
+   "reviewer": "Q2",
+   "text": "Unclear whether robustness training against perturbations would solve the issue",
+   "minor": false
+  },
+  {
+   "id": "Q2.4",
+   "reviewer": "Q2",
+   "text": "Unclear why phenomenon happens in practice; evaluations need interpretation",
+   "minor": true
+  },
+  {
+   "id": "Q3.1",
+   "reviewer": "Q3",
+   "text": "Pre-training/alignment mismatch hypothesis not new (mismatched generalization)",
+   "minor": false
+  },
+  {
+   "id": "Q3.2",
+   "reviewer": "Q3",
+   "text": "Weak-OOD phenomenon already observed empirically in JOOD",
+   "minor": false
+  },
+  {
+   "id": "Q3.3",
+   "reviewer": "Q3",
+   "text": "JOCR lacks principled procedure to generate weak-OOD inputs; intent preservation not guaranteed",
+   "minor": false
+  },
+  {
+   "id": "Q3.4",
+   "reviewer": "Q3",
+   "text": "Typos",
+   "minor": true
+  },
+  {
+   "id": "Q4.1",
+   "reviewer": "Q4",
+   "text": "Averaging layer-wise similarities ignores layer heterogeneity",
+   "minor": false
+  },
+  {
+   "id": "Q4.2",
+   "reviewer": "Q4",
+   "text": "No ablation of perturbation settings' effect on intent perception and refusal",
+   "minor": false
+  }
+ ],
+ "issues": {
+  "P": [
+   {
+    "id": "PI1",
+    "summary": "Intent-perception score measures representation stability, averaged over trivial early layers",
+    "points": [
+     "P1.1"
+    ]
+   },
+   {
+    "id": "PI2",
+    "summary": "Token assignment for intent and refusal metrics contradicts Section 3.1",
+    "points": [
+     "P1.2"
+    ]
+   },
+   {
+    "id": "PI3",
+    "summary": "Refusal score ill-defined: output-head projections compared with token embeddings, near-zero values",
+    "points": [
+     "P1.3"
+    ]
+   },
+   {
+    "id": "PI4",
+    "summary": "Fig. 4 compares quantities with different scales; no normalisation, error bars or tests",
+    "points": [
+     "P1.4"
+    ]
+   },
+   {
+    "id": "PI5",
+    "summary": "Pre-training vs alignment attribution untested; no theorem, distances or alignment interventions",
+    "points": [
+     "P1.5"
+    ]
+   },
+   {
+    "id": "PI6",
+    "summary": "GPT-4o-mini harm accuracy too low to measure intent perception",
+    "points": [
+     "P1.6"
+    ]
+   },
+   {
+    "id": "PI7",
+    "summary": "Key-phrase similarity differences tiny with no variance",
+    "points": [
+     "P1.7"
+    ]
+   },
+   {
+    "id": "PI8",
+    "summary": "Table 2 shows monotonic trends, no peak; does not reproduce trade-off",
+    "points": [
+     "P1.8"
+    ]
+   },
+   {
+    "id": "PI9",
+    "summary": "Different models used for analysis and ASR; explanation not tested on target models",
+    "points": [
+     "P1.9"
+    ]
+   },
+   {
+    "id": "PI10",
+    "summary": "PCA argument read from 2-D plot without quantitative measure or probe",
+    "points": [
+     "P1.10"
+    ]
+   },
+   {
+    "id": "PI11",
+    "summary": "PCA ordering does not exclude alternatives like readability or prompt length",
+    "points": [
+     "P1.11"
+    ]
+   },
+   {
+    "id": "PI12",
+    "summary": "Analysed layers chosen by citation, not validated on this model",
+    "points": [
+     "P1.12"
+    ]
+   },
+   {
+    "id": "PI13",
+    "summary": "Weak-OOD phenomenon based on small samples without CIs or repeated runs",
+    "points": [
+     "P1.13"
+    ]
+   },
+   {
+    "id": "PI14",
+    "summary": "GPT-4o serves as both target model and judge",
+    "points": [
+     "P1.14"
+    ]
+   },
+   {
+    "id": "PI15",
+    "summary": "Perturbation axes not comparable and grid points few",
+    "points": [
+     "P1.15"
+    ]
+   },
+   {
+    "id": "PI16",
+    "summary": "Some plotted ranges hard to read",
+    "points": [
+     "P1.16"
+    ]
+   },
+   {
+    "id": "PI17",
+    "summary": "'Universal' trend claim stronger than evidence",
+    "points": [
+     "P1.17"
+    ]
+   },
+   {
+    "id": "PI18",
+    "summary": "JOCR novelty limited over FigStep and typographic attacks; gain mostly from perturbation",
+    "points": [
+     "P1.18"
+    ]
+   },
+   {
+    "id": "PI19",
+    "summary": "Claim of >10% ASR gain over baselines not true everywhere",
+    "points": [
+     "P1.19"
+    ]
+   },
+   {
+    "id": "PI20",
+    "summary": "No variance across perturbation seeds; attempts per query unspecified",
+    "points": [
+     "P1.20"
+    ]
+   },
+   {
+    "id": "PI21",
+    "summary": "Baselines likely not given matched query budget",
+    "points": [
+     "P1.21"
+    ]
+   },
+   {
+    "id": "PI22",
+    "summary": "Missing baselines: SI-Attack, JOOD, HADES, recent typographic attacks",
+    "points": [
+     "P1.22"
+    ]
+   },
+   {
+    "id": "PI23",
+    "summary": "LLM judge only; no human validation or judge-sensitivity analysis",
+    "points": [
+     "P1.23"
+    ]
+   },
+   {
+    "id": "PI24",
+    "summary": "Defences such as input filtering or safety-tuned VLMs not tested",
+    "points": [
+     "P1.24"
+    ]
+   },
+   {
+    "id": "PI25",
+    "summary": "Ablation shows font size dominates, suggesting generic robustness effect over proposed theory",
+    "points": [
+     "P1.25"
+    ]
+   },
+   {
+    "id": "PI26",
+    "summary": "Contradictory shuffle results explained post hoc",
+    "points": [
+     "P1.26"
+    ]
+   },
+   {
+    "id": "PI27",
+    "summary": "JOCR success circularly taken as validation; weak-OOD analysis not applied to JOCR",
+    "points": [
+     "P1.27"
+    ]
+   },
+   {
+    "id": "PI28",
+    "summary": "Citation errors and wrong equation references",
+    "points": [
+     "P1.28"
+    ]
+   },
+   {
+    "id": "PI29",
+    "summary": "Ethics statement irrelevant; no dual-use or disclosure discussion",
+    "points": [
+     "P1.29"
+    ]
+   },
+   {
+    "id": "PI30",
+    "summary": "'First feature-perspective' claim poorly positioned against prior mechanistic work",
+    "points": [
+     "P1.30"
+    ]
+   },
+   {
+    "id": "PI31",
+    "summary": "No defence or alignment recommendation despite stated goal",
+    "points": [
+     "P1.31"
+    ]
+   }
+  ],
+  "Q": [
+   {
+    "id": "QI1",
+    "summary": "Theory heuristic and correlational",
+    "points": [
+     "Q1.1"
+    ]
+   },
+   {
+    "id": "QI2",
+    "summary": "Reliance on shuffle perturbations",
+    "points": [
+     "Q1.2"
+    ]
+   },
+   {
+    "id": "QI3",
+    "summary": "GPT-4o judge bias",
+    "points": [
+     "Q1.3"
+    ]
+   },
+   {
+    "id": "QI4",
+    "summary": "JOCR novelty limited",
+    "points": [
+     "Q1.4"
+    ]
+   },
+   {
+    "id": "QI5",
+    "summary": "Defences not explored",
+    "points": [
+     "Q1.5",
+     "Q2.3"
+    ]
+   },
+   {
+    "id": "QI6",
+    "summary": "Generic robustness alternative explanation",
+    "points": [
+     "Q2.1"
+    ]
+   },
+   {
+    "id": "QI7",
+    "summary": "Weak-OOD hypothesis not new",
+    "points": [
+     "Q2.2",
+     "Q3.1"
+    ]
+   },
+   {
+    "id": "QI8",
+    "summary": "Phenomenon previously observed (JOOD)",
+    "points": [
+     "Q3.2"
+    ]
+   },
+   {
+    "id": "QI9",
+    "summary": "Practical interpretation unclear",
+    "points": [
+     "Q2.4"
+    ]
+   },
+   {
+    "id": "QI10",
+    "summary": "No principled weak-OOD generation in JOCR",
+    "points": [
+     "Q3.3"
+    ]
+   },
+   {
+    "id": "QI11",
+    "summary": "Typos",
+    "points": [
+     "Q3.4"
+    ]
+   },
+   {
+    "id": "QI12",
+    "summary": "Layer averaging ignores heterogeneity",
+    "points": [
+     "Q4.1"
+    ]
+   },
+   {
+    "id": "QI13",
+    "summary": "Perturbation-setting ablation missing",
+    "points": [
+     "Q4.2"
+    ]
+   }
+  ]
+ },
+ "cross": [
+  {
+   "p_issue": "PI1",
+   "match": [
+    "QI12"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI2",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI3",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI4",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI5",
+   "match": [
+    "QI1"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI6",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI7",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI8",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI9",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI10",
+   "match": [],
+   "related": [
+    "QI1"
+   ]
+  },
+  {
+   "p_issue": "PI11",
+   "match": [],
+   "related": [
+    "QI6"
+   ]
+  },
+  {
+   "p_issue": "PI12",
+   "match": [],
+   "related": [
+    "QI12"
+   ]
+  },
+  {
+   "p_issue": "PI13",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI14",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI15",
+   "match": [],
+   "related": [
+    "QI2"
+   ]
+  },
+  {
+   "p_issue": "PI16",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI17",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI18",
+   "match": [
+    "QI4"
+   ],
+   "related": [
+    "QI10"
+   ]
+  },
+  {
+   "p_issue": "PI19",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI20",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI21",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI22",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI23",
+   "match": [
+    "QI3"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI24",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  },
+  {
+   "p_issue": "PI25",
+   "match": [
+    "QI6"
+   ],
+   "related": [
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI26",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI27",
+   "match": [],
+   "related": [
+    "QI10",
+    "QI13"
+   ]
+  },
+  {
+   "p_issue": "PI28",
+   "match": [],
+   "related": [
+    "QI11"
+   ]
+  },
+  {
+   "p_issue": "PI29",
+   "match": [],
+   "related": []
+  },
+  {
+   "p_issue": "PI30",
+   "match": [],
+   "related": [
+    "QI7",
+    "QI8"
+   ]
+  },
+  {
+   "p_issue": "PI31",
+   "match": [
+    "QI5"
+   ],
+   "related": []
+  }
+ ]
+}

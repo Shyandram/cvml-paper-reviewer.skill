@@ -1,0 +1,14 @@
+{
+  "id": "iclr26-g4HpTtgsn2",
+  "rating": 4,
+  "confidence": 4,
+  "top_concerns": [
+    "Accuracy-only evaluation on heavily imbalanced data; no CIs, F1 or majority/text-only baselines; GPT-4o gains of 1-2 points are likely within noise",
+    "Training labels come from Qwen2.5-VL-72B (same family as the base model); no human-vs-teacher or inter-annotator agreement reported; possible train/test leakage",
+    "Weak OOD evidence: +2 points over text-only Llama-Guard-3-8B on BeaverTails-V, big losses in many categories, odd 47.96% Qwen baseline on VLGuard, Llama-Guard-3-Vision missing from main tables",
+    "Category detection is poor (below GPT-4o in 9/13 categories), contradicting the claims of fine-grained classification and outperforming all baselines; no ablation showing the image is needed",
+    "Responses from weak 7B models under a jailbreak attack prompt are unrepresentative; incremental novelty; no ethics/release discussion"
+  ],
+  "recognized": false,
+  "injection_found": null
+}
